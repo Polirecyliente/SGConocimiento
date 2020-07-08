@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-11-24" view-index="0" gantt-divider-location="631" resource-divider-location="300" version="2.8.10" locale="en_US">
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Name" width="376" order="0"/>
+        <field id="tpd4" name="Begin date" width="92" order="1"/>
+        <field id="tpd7" name="Completion" width="62" order="2"/>
+        <field id="tpd5" name="End date" width="97" order="3"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+        <description>This is a modification to the original project.</description>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Proyecto Polirecyl" color="#000000" meeting="false" project="true" start="2019-08-12" duration="121" complete="57" thirdDate="2019-08-02" thirdDate-constraint="0" expand="true">
+            <task id="453" name="Hacer tutos de C" meeting="false" start="2019-08-12" duration="9" complete="0" expand="false">
+                <depend id="454" type="2" difference="0" hardness="Strong"/>
+                <task id="42" name="Hacer tuto básico de C" color="#000000" meeting="false" start="2019-08-12" duration="1" complete="0" thirdDate="2019-08-01" thirdDate-constraint="0" expand="false">
+                    <depend id="155" type="2" difference="0" hardness="Strong"/>
+                    <task id="46" name="Terminar 27/27 tutos de C básico" meeting="false" start="2019-08-12" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="155" name="Hacer tuto básico de Makefile" meeting="false" start="2019-08-13" duration="3" complete="0" expand="false">
+                    <depend id="54" type="2" difference="0" hardness="Strong"/>
+                    <task id="156" name="Hacer 3/8 tutos de Makefile básico" meeting="false" start="2019-08-13" duration="1" complete="0" expand="true">
+                        <depend id="157" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="157" name="Hacer 6/8 tutos de Makefile básico" meeting="false" start="2019-08-14" duration="1" complete="0" expand="true">
+                        <depend id="159" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="159" name="Terminar 8/8 tutos de Makefile básico" meeting="false" start="2019-08-15" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="54" name="Hacer tuto avanzado de GNU coreutils build" meeting="false" start="2019-08-16" duration="5" complete="0" expand="false">
+                    <task id="55" name="Hacer 3/14 tutos de GNU coreutils build" meeting="false" start="2019-08-16" duration="1" complete="0" expand="true">
+                        <depend id="57" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="57" name="Hacer 6/14 tutos de GNU coreutils build" meeting="false" start="2019-08-17" duration="1" complete="0" expand="true">
+                        <depend id="58" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="58" name="Hacer 9/14 tutos de GNU coreutils build" meeting="false" start="2019-08-18" duration="1" complete="0" expand="true">
+                        <depend id="60" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="60" name="Hacer 12/14 tutos de GNU coreutils build" meeting="false" start="2019-08-19" duration="1" complete="0" expand="true">
+                        <depend id="61" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="61" name="Terminar 14/14 tutos de GNU coreutils build" meeting="false" start="2019-08-20" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="454" name="Hacer tutos de C++" meeting="false" start="2019-08-21" duration="11" complete="0" expand="false">
+                <depend id="455" type="2" difference="0" hardness="Strong"/>
+                <task id="92" name="Hacer tuto básico de C++" meeting="false" start="2019-08-21" duration="8" complete="0" expand="false">
+                    <depend id="170" type="2" difference="0" hardness="Strong"/>
+                    <task id="95" name="Hacer 7/27 tutos de C++ básico" meeting="false" start="2019-08-21" duration="1" complete="0" expand="true">
+                        <depend id="97" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="97" name="Hacer 10/27 tutos de C++ básico" meeting="false" start="2019-08-22" duration="1" complete="0" expand="true">
+                        <depend id="98" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="98" name="Hacer 13/27 tutos de C++ básico" meeting="false" start="2019-08-23" duration="1" complete="0" expand="true">
+                        <depend id="100" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="100" name="Hacer 16/27 tutos de C++ básico" meeting="false" start="2019-08-24" duration="1" complete="0" expand="true">
+                        <depend id="101" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="101" name="Hacer 19/27 tutos de C++ básico" meeting="false" start="2019-08-25" duration="1" complete="0" expand="true">
+                        <depend id="103" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="103" name="Hacer 22/27 tutos de C++ básico" meeting="false" start="2019-08-26" duration="1" complete="0" expand="true">
+                        <depend id="104" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="104" name="Hacer 25/27 tutos de C++ básico" meeting="false" start="2019-08-27" duration="1" complete="0" expand="true">
+                        <depend id="106" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="106" name="Terminar 27/27 tutos de C++ básico" meeting="false" start="2019-08-28" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="170" name="Hacer tuto avanzado de C++" meeting="false" start="2019-08-29" duration="3" complete="0" expand="false">
+                    <task id="171" name="Hacer 3/9 tutos de C++ avanzado" meeting="false" start="2019-08-29" duration="1" complete="0" expand="true">
+                        <depend id="174" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="174" name="Hacer 6/9 tutos de C++ avanzado" meeting="false" start="2019-08-30" duration="1" complete="0" expand="true">
+                        <depend id="176" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="176" name="Terminar 9/9 tutos de C++ avanzado" meeting="false" start="2019-08-31" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="455" name="Hacer tutos de Java" meeting="false" start="2019-09-01" duration="11" complete="0" expand="false">
+                <depend id="456" type="2" difference="0" hardness="Strong"/>
+                <task id="108" name="Hacer tuto básico de Java" meeting="false" start="2019-09-01" duration="8" complete="0" expand="false">
+                    <depend id="195" type="2" difference="0" hardness="Strong"/>
+                    <task id="110" name="Hacer 5/26 tutos de Java básico" meeting="false" start="2019-09-01" duration="1" complete="0" expand="true">
+                        <depend id="112" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="112" name="Hacer 8/26 tutos de Java básico" meeting="false" start="2019-09-02" duration="1" complete="0" expand="true">
+                        <depend id="113" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="113" name="Hacer 11/26 tutos de Java básico" meeting="false" start="2019-09-03" duration="1" complete="0" expand="true">
+                        <depend id="115" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="115" name="Hacer 14/26 tutos de Java básico" meeting="false" start="2019-09-04" duration="1" complete="0" expand="true">
+                        <depend id="116" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="116" name="Hacer 17/26 tutos de Java básico" meeting="false" start="2019-09-05" duration="1" complete="0" expand="true">
+                        <depend id="118" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="118" name="Hacer 20/26 tutos de Java básico" meeting="false" start="2019-09-06" duration="1" complete="0" expand="true">
+                        <depend id="119" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="119" name="Hacer 23/26 tutos de Java básico" meeting="false" start="2019-09-07" duration="1" complete="0" expand="true">
+                        <depend id="121" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="121" name="Terminar 26/26 tutos de Java básico" meeting="false" start="2019-09-08" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="195" name="Hacer tuto avanzado de Java" meeting="false" start="2019-09-09" duration="3" complete="0" expand="false">
+                    <task id="196" name="Hacer 3/9 tutos de Java avanzado" meeting="false" start="2019-09-09" duration="1" complete="0" expand="true">
+                        <depend id="198" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="198" name="Hacer 6/9 tutos de Java avanzado" meeting="false" start="2019-09-10" duration="1" complete="0" expand="true">
+                        <depend id="200" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="200" name="Terminar 9/9 tutos de Java avanzado" meeting="false" start="2019-09-11" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="456" name="Hacer tutos de Octave" meeting="false" start="2019-09-12" duration="6" complete="0" expand="false">
+                <depend id="457" type="2" difference="0" hardness="Strong"/>
+                <task id="12" name="Hacer tuto básico de Octave" meeting="false" start="2019-09-12" duration="3" complete="0" expand="false">
+                    <depend id="48" type="2" difference="0" hardness="Strong"/>
+                    <task id="16" name="Hacer 12/17 tutos de Octave básico" meeting="false" start="2019-09-12" duration="1" complete="0" expand="true">
+                        <depend id="18" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="18" name="Hacer 15/17 tutos de Octave básico" meeting="false" start="2019-09-13" duration="1" complete="0" expand="true">
+                        <depend id="19" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="19" name="Terminar 17/17 tutos de Octave básico" meeting="false" start="2019-09-14" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="48" name="Hacer tuto avanzado de Octave" meeting="false" start="2019-09-15" duration="3" complete="0" expand="false">
+                    <task id="49" name="Hacer 3/9 tutos de Octave avanzado" meeting="false" start="2019-09-15" duration="1" complete="0" expand="true">
+                        <depend id="51" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="51" name="Hacer 6/9 tutos de Octave avanzado" meeting="false" start="2019-09-16" duration="1" complete="0" expand="true">
+                        <depend id="53" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="53" name="Terminar 9/9 tutos de Octave avanzado" meeting="false" start="2019-09-17" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="457" name="Hacer tutos de HTML" meeting="false" start="2019-09-18" duration="7" complete="100" expand="false">
+                <depend id="458" type="2" difference="0" hardness="Strong"/>
+                <task id="62" name="Hacer tuto básico de HTML" meeting="false" start="2019-09-18" duration="2" complete="100" expand="false">
+                    <depend id="214" type="2" difference="0" hardness="Strong"/>
+                    <task id="65" name="Hacer 7/10 tutos de HTML básico" color="#8cb6ce" meeting="false" start="2019-09-18" duration="1" complete="100" thirdDate="2019-08-12" thirdDate-constraint="0" expand="true">
+                        <depend id="67" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="67" name="Terminar 10/10 tutos de HTML básico" color="#8cb6ce" meeting="false" start="2019-09-19" duration="1" complete="100" thirdDate="2019-08-13" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="214" name="Hacer tuto intermedio de HTML" meeting="false" start="2019-09-20" duration="2" complete="100" expand="false">
+                    <depend id="236" type="2" difference="0" hardness="Strong"/>
+                    <task id="215" name="Hacer 3/7 tutos de HTML intermedio" color="#8cb6ce" meeting="false" start="2019-09-20" duration="1" complete="100" thirdDate="2019-09-20" thirdDate-constraint="0" expand="true">
+                        <depend id="218" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="218" name="Terminar 7/7 tutos de HTML intermedio" color="#8cb6ce" meeting="false" start="2019-09-21" duration="1" complete="100" thirdDate="2019-09-21" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="236" name="Hacer tuto avanzado de HTML" meeting="false" start="2019-09-22" duration="3" complete="100" expand="false">
+                    <task id="237" name="Hacer 3/8 tutos de HTML avanzado" color="#8cb6ce" meeting="false" start="2019-09-22" duration="1" complete="100" thirdDate="2019-09-22" thirdDate-constraint="0" expand="true">
+                        <depend id="239" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="239" name="Hacer 6/8 tutos de HTML avanzado" color="#8cb6ce" meeting="false" start="2019-09-23" duration="1" complete="100" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true">
+                        <depend id="240" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="240" name="Termina 8/8 tutos de HTML avanzado" color="#8cb6ce" meeting="false" start="2019-09-24" duration="1" complete="100" thirdDate="2019-09-24" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+            <task id="458" name="Hacer tutos de CSS" meeting="false" start="2019-09-25" duration="8" complete="100" expand="false">
+                <depend id="459" type="2" difference="0" hardness="Strong"/>
+                <task id="68" name="Hacer tuto básico de CSS" meeting="false" start="2019-09-25" duration="1" complete="100" expand="false">
+                    <depend id="219" type="2" difference="0" hardness="Strong"/>
+                    <task id="71" name="Terminar 6/6 tutos de CSS básico" color="#8cb6ce" meeting="false" start="2019-09-25" duration="1" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="219" name="Hacer tuto intermedio de CSS" meeting="false" start="2019-09-26" duration="3" complete="100" expand="false">
+                    <depend id="241" type="2" difference="0" hardness="Strong"/>
+                    <task id="220" name="Hacer 3/9 tutos de CSS intermedio" color="#8cb6ce" meeting="false" start="2019-09-26" duration="1" complete="100" thirdDate="2019-09-26" thirdDate-constraint="0" expand="true">
+                        <depend id="222" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="222" name="Hacer 6/9 tutos de CSS intermedio" color="#8cb6ce" meeting="false" start="2019-09-27" duration="1" complete="100" thirdDate="2019-09-27" thirdDate-constraint="0" expand="true">
+                        <depend id="224" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="224" name="Terminar 9/9 tutos de CSS intermedio" color="#8cb6ce" meeting="false" start="2019-09-28" duration="1" complete="100" thirdDate="2019-09-28" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="241" name="Hacer tuto avanzado de CSS" meeting="false" start="2019-09-29" duration="4" complete="100" expand="false">
+                    <task id="242" name="Hacer 3/11 tutos de CSS avanzado" color="#8cb6ce" meeting="false" start="2019-09-29" duration="1" complete="100" thirdDate="2019-09-29" thirdDate-constraint="0" expand="true">
+                        <depend id="244" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="244" name="Hacer 6/11 tutos de CSS avanzado" color="#8cb6ce" meeting="false" start="2019-09-30" duration="1" complete="100" thirdDate="2019-09-30" thirdDate-constraint="0" expand="true">
+                        <depend id="245" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="245" name="Hacer 9/11 tutos de CSS avanzado" color="#8cb6ce" meeting="false" start="2019-10-01" duration="1" complete="100" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true">
+                        <depend id="247" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="247" name="Terminar 11/11 tutos de CSS avanzado" color="#8cb6ce" meeting="false" start="2019-10-02" duration="1" complete="100" thirdDate="2019-10-02" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+            <task id="459" name="Hacer tutos de JavaScript" meeting="false" start="2019-10-03" duration="9" complete="100" expand="false">
+                <depend id="122" type="2" difference="0" hardness="Strong"/>
+                <task id="72" name="Hacer tuto básico de JavaScript" meeting="false" start="2019-10-03" duration="2" complete="100" expand="false">
+                    <depend id="206" type="2" difference="0" hardness="Strong"/>
+                    <task id="74" name="Hacer 5/9 tutos de JavaScript básico" color="#8cb6ce" meeting="false" start="2019-10-03" duration="1" complete="100" thirdDate="2019-10-03" thirdDate-constraint="0" expand="true">
+                        <depend id="77" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="77" name="Terminar 9/9 tutos de JavaScript básico" color="#8cb6ce" meeting="false" start="2019-10-04" duration="1" complete="100" thirdDate="2019-10-04" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="206" name="Hacer tuto intermedio de JavaScript" meeting="false" start="2019-10-05" duration="3" complete="100" expand="false">
+                    <depend id="248" type="2" difference="0" hardness="Strong"/>
+                    <task id="207" name="Hacer 3/9 tutos de JavaScript intermedio" color="#8cb6ce" meeting="false" start="2019-10-05" duration="1" complete="100" thirdDate="2019-10-05" thirdDate-constraint="0" expand="true">
+                        <depend id="209" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="209" name="Hacer 6/9 tutos de JavaScript intermedio" color="#8cb6ce" meeting="false" start="2019-10-06" duration="1" complete="100" thirdDate="2019-10-06" thirdDate-constraint="0" expand="true">
+                        <depend id="211" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="211" name="Terminar 9/9 tutos de JavaScript intermedio" color="#8cb6ce" meeting="false" start="2019-10-07" duration="1" complete="100" thirdDate="2019-10-07" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="248" name="Hacer tuto avanzado de JavaScript" meeting="false" start="2019-10-08" duration="4" complete="100" expand="false">
+                    <task id="249" name="Hacer 3/11 tutos de JavaScript avanzado" color="#8cb6ce" meeting="false" start="2019-10-08" duration="1" complete="100" thirdDate="2019-10-08" thirdDate-constraint="0" expand="true">
+                        <depend id="251" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="251" name="Hacer 6/11 tutos de JavaScript avanzado" color="#8cb6ce" meeting="false" start="2019-10-09" duration="1" complete="100" thirdDate="2019-10-09" thirdDate-constraint="0" expand="true">
+                        <depend id="252" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="252" name="Hacer 9/11 tutos de JavaScript avanzado" color="#8cb6ce" meeting="false" start="2019-10-10" duration="1" complete="100" thirdDate="2019-10-10" thirdDate-constraint="0" expand="true">
+                        <depend id="254" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="254" name="Terminar 11/11 tutos de JavaScript avanzado" color="#8cb6ce" meeting="false" start="2019-10-11" duration="1" complete="100" thirdDate="2019-10-11" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+            <task id="122" name="Hacer tuto básico de Regex" meeting="false" start="2019-10-12" duration="6" complete="100" expand="false">
+                <depend id="641" type="2" difference="0" hardness="Strong"/>
+                <task id="125" name="Hacer 7/21 tutos de Regex básico" color="#8cb6ce" meeting="false" start="2019-10-12" duration="1" complete="100" thirdDate="2019-10-12" thirdDate-constraint="0" expand="true">
+                    <depend id="127" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="127" name="Hacer 10/21 tutos de Regex básico" color="#8cb6ce" meeting="false" start="2019-10-13" duration="1" complete="100" thirdDate="2019-10-13" thirdDate-constraint="0" expand="true">
+                    <depend id="128" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="128" name="Hacer 13/21 tutos de Regex básico" color="#8cb6ce" meeting="false" start="2019-10-14" duration="1" complete="100" thirdDate="2019-10-14" thirdDate-constraint="0" expand="true">
+                    <depend id="130" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="130" name="Hacer 16/21 tutos de Regex básico" color="#8cb6ce" meeting="false" start="2019-10-15" duration="1" complete="100" thirdDate="2019-10-15" thirdDate-constraint="0" expand="true">
+                    <depend id="131" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="131" name="Hacer 19/21 tutos de Regex básico" color="#8cb6ce" meeting="false" start="2019-10-16" duration="1" complete="100" thirdDate="2019-10-16" thirdDate-constraint="0" expand="true">
+                    <depend id="133" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="133" name="Terminar 21/21 tutos de Regex básico" color="#8cb6ce" meeting="false" start="2019-10-17" duration="1" complete="100" thirdDate="2019-10-17" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="641" name="Hacer tutos de MySQL" meeting="false" start="2019-10-18" duration="17" complete="100" expand="false">
+                <depend id="460" type="2" difference="0" hardness="Strong"/>
+                <task id="21" name="Hacer tuto básico de MySQL" meeting="false" start="2019-10-18" duration="14" complete="100" expand="false">
+                    <depend id="637" type="2" difference="0" hardness="Strong"/>
+                    <task id="26" name="Hacer 38/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-18" duration="1" complete="100" thirdDate="2019-10-18" thirdDate-constraint="0" expand="true">
+                        <depend id="27" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="27" name="Hacer 41/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-19" duration="1" complete="100" thirdDate="2019-10-19" thirdDate-constraint="0" expand="true">
+                        <depend id="28" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="28" name="Hacer 44/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-20" duration="1" complete="100" thirdDate="2019-10-20" thirdDate-constraint="0" expand="true">
+                        <depend id="29" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="29" name="Hacer 47/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                        <depend id="30" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="30" name="Hacer 50/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-22" duration="1" complete="100" thirdDate="2019-10-22" thirdDate-constraint="0" expand="true">
+                        <depend id="31" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="31" name="Hacer 53/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-23" duration="1" complete="100" thirdDate="2019-10-23" thirdDate-constraint="0" expand="true">
+                        <depend id="32" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="32" name="Hacer 56/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-24" duration="1" complete="100" thirdDate="2019-10-24" thirdDate-constraint="0" expand="true">
+                        <depend id="33" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="33" name="Hacer 59/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-25" duration="1" complete="100" thirdDate="2019-10-25" thirdDate-constraint="0" expand="true">
+                        <depend id="34" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="34" name="Hacer 62/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-26" duration="1" complete="100" thirdDate="2019-10-26" thirdDate-constraint="0" expand="true">
+                        <depend id="35" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="35" name="Hacer 65/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-27" duration="1" complete="100" thirdDate="2019-10-27" thirdDate-constraint="0" expand="true">
+                        <depend id="36" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="36" name="Hacer 68/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-28" duration="1" complete="100" thirdDate="2019-10-28" thirdDate-constraint="0" expand="true">
+                        <depend id="37" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="37" name="Hacer 71/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-29" duration="1" complete="100" thirdDate="2019-10-29" thirdDate-constraint="0" expand="true">
+                        <depend id="38" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="38" name="Hacer 74/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-30" duration="1" complete="100" thirdDate="2019-10-30" thirdDate-constraint="0" expand="true">
+                        <depend id="39" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="39" name="Terminar 77/77 tutos de MySQL básico" color="#8cb6ce" meeting="false" start="2019-10-31" duration="1" complete="100" thirdDate="2019-10-31" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="637" name="Hacer tuto avanzado de MySQL" meeting="false" start="2019-11-01" duration="3" complete="100" expand="false">
+                    <task id="638" name="Hacer 3/8 tutos de MySQL avanzado" color="#8cb6ce" meeting="false" start="2019-11-01" duration="1" complete="100" thirdDate="2019-11-01" thirdDate-constraint="0" expand="true">
+                        <depend id="639" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="639" name="Hacer 6/8 tutos de MySQL avanzado" color="#8cb6ce" meeting="false" start="2019-11-02" duration="1" complete="100" thirdDate="2019-11-02" thirdDate-constraint="0" expand="true">
+                        <depend id="640" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="640" name="Terminar 8/8 tutos de MySQL avanzado" color="#8cb6ce" meeting="false" start="2019-11-03" duration="1" complete="100" thirdDate="2019-11-03" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+            <task id="460" name="Hacer tutos de XML" meeting="false" start="2019-11-04" duration="7" complete="100" expand="false">
+                <depend id="491" type="2" difference="0" hardness="Strong"/>
+                <task id="134" name="Hacer tuto básico y herramientas de XML" meeting="false" start="2019-11-04" duration="5" complete="100" expand="false">
+                    <depend id="191" type="2" difference="0" hardness="Strong"/>
+                    <task id="136" name="Hacer 5/17 tutos de XML básico" color="#8cb6ce" meeting="false" start="2019-11-04" duration="1" complete="100" thirdDate="2019-11-01" thirdDate-constraint="0" expand="true">
+                        <depend id="138" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="138" name="Hacer 8/17 tutos de XML básico" color="#8cb6ce" meeting="false" start="2019-11-05" duration="1" complete="100" thirdDate="2019-11-02" thirdDate-constraint="0" expand="true">
+                        <depend id="140" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="140" name="Hacer 11/17 tutos de XML básico" color="#8cb6ce" meeting="false" start="2019-11-06" duration="1" complete="100" thirdDate="2019-11-03" thirdDate-constraint="0" expand="true">
+                        <depend id="141" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="141" name="Hacer 14/17 tutos de XML básico y herramientas" color="#8cb6ce" meeting="false" start="2019-11-07" duration="1" complete="100" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true">
+                        <depend id="143" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="143" name="Terminar 17/17 tutos de XML básico y herramientas" color="#8cb6ce" meeting="false" start="2019-11-08" duration="1" complete="100" thirdDate="2019-11-05" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="191" name="Hacer tuto avanzado de XML" meeting="false" start="2019-11-09" duration="2" complete="100" expand="false">
+                    <task id="192" name="Hacer 3/6 tutos de XML avanzado" color="#8cb6ce" meeting="false" start="2019-11-09" duration="1" complete="100" thirdDate="2019-11-06" thirdDate-constraint="0" expand="true">
+                        <depend id="194" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="194" name="Terminar 6/6 tutos de XML avanzado" color="#8cb6ce" meeting="false" start="2019-11-10" duration="1" complete="100" thirdDate="2019-11-07" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+            <task id="491" name="Hacer tutos de PHP" meeting="false" start="2019-11-11" duration="14" complete="0" expand="false">
+                <depend id="630" type="2" difference="0" hardness="Strong"/>
+                <task id="78" name="Hacer tuto básico de PHP" meeting="false" start="2019-11-11" duration="5" complete="0" expand="false">
+                    <depend id="480" type="2" difference="0" hardness="Strong"/>
+                    <task id="83" name="Hacer 5/18 tutos de PHP básico" meeting="false" start="2019-11-11" duration="1" complete="0" expand="true">
+                        <depend id="85" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="85" name="Hacer 8/18 tutos de PHP básico" meeting="false" start="2019-11-12" duration="1" complete="0" expand="true">
+                        <depend id="86" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="86" name="Hacer 11/18 tutos de PHP básico" meeting="false" start="2019-11-13" duration="1" complete="0" expand="true">
+                        <depend id="88" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="88" name="Hacer 14/18 tutos de PHP básico" meeting="false" start="2019-11-14" duration="1" complete="0" expand="true">
+                        <depend id="90" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="90" name="Terminar 18/18 tutos de PHP básico" meeting="false" start="2019-11-15" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="480" name="Hacer tuto avanzado de PHP" meeting="false" start="2019-11-16" duration="9" complete="0" expand="false">
+                    <task id="482" name="Hacer 3/27 tutos de PHP avanzado" meeting="false" start="2019-11-16" duration="1" complete="0" expand="true">
+                        <depend id="483" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="483" name="Hacer 6/27 tutos de PHP avanzado" meeting="false" start="2019-11-17" duration="1" complete="0" expand="true">
+                        <depend id="484" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="484" name="Hacer 9/27 tutos de PHP avanzado" meeting="false" start="2019-11-18" duration="1" complete="0" expand="true">
+                        <depend id="485" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="485" name="Hacer 12/27 tutos de PHP avanzado" meeting="false" start="2019-11-19" duration="1" complete="0" expand="true">
+                        <depend id="486" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="486" name="Hacer 15/27 tutos de PHP avanzado" meeting="false" start="2019-11-20" duration="1" complete="0" expand="true">
+                        <depend id="487" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="487" name="Hacer 18/27 tutos de PHP avanzado" meeting="false" start="2019-11-21" duration="1" complete="0" expand="true">
+                        <depend id="488" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="488" name="Hacer 21/27 tutos de PHP avanzado" meeting="false" start="2019-11-22" duration="1" complete="0" expand="true">
+                        <depend id="489" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="489" name="Hacer 24/27 tutos de PHP avanzado" meeting="false" start="2019-11-23" duration="1" complete="0" expand="true">
+                        <depend id="490" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="490" name="Terminar 27/27 tutos de PHP avanzado" meeting="false" start="2019-11-24" duration="1" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="630" name="Hacer tutos de Perl" meeting="false" start="2019-11-25" duration="9" complete="100" expand="false">
+                <depend id="461" type="2" difference="0" hardness="Strong"/>
+                <task id="144" name="Hacer tuto básico de Perl" meeting="false" start="2019-11-25" duration="6" complete="100" expand="false">
+                    <depend id="626" type="2" difference="0" hardness="Strong"/>
+                    <task id="146" name="Hacer 5/20 tutos de Perl básico" color="#8cb6ce" meeting="false" start="2019-11-25" duration="1" complete="100" thirdDate="2019-11-25" thirdDate-constraint="0" expand="true">
+                        <depend id="148" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="148" name="Hacer 8/20 tutos de Perl básico" color="#8cb6ce" meeting="false" start="2019-11-26" duration="1" complete="100" thirdDate="2019-11-26" thirdDate-constraint="0" expand="true">
+                        <depend id="149" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="149" name="Hacer 11/20 tutos de Perl básico" color="#8cb6ce" meeting="false" start="2019-11-27" duration="1" complete="100" thirdDate="2019-11-27" thirdDate-constraint="0" expand="true">
+                        <depend id="151" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="151" name="Hacer 14/20 tutos de Perl básico" color="#8cb6ce" meeting="false" start="2019-11-28" duration="1" complete="100" thirdDate="2019-11-28" thirdDate-constraint="0" expand="true">
+                        <depend id="152" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="152" name="Hacer 17/20 tutos de Perl básico" color="#8cb6ce" meeting="false" start="2019-11-29" duration="1" complete="100" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true">
+                        <depend id="154" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="154" name="Terminar 20/20 tutos de Perl básico" color="#8cb6ce" meeting="false" start="2019-11-30" duration="1" complete="100" thirdDate="2019-11-30" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="626" name="Hacer tuto avanzado de Perl" meeting="false" start="2019-12-01" duration="3" complete="100" expand="false">
+                    <task id="627" name="Hacer 3/8 tutos de Perl avanzado" color="#8cb6ce" meeting="false" start="2019-12-01" duration="1" complete="100" thirdDate="2019-12-01" thirdDate-constraint="0" expand="true">
+                        <depend id="628" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="628" name="Hacer 6/8 tutos de Perl avanzado" color="#8cb6ce" meeting="false" start="2019-12-02" duration="1" complete="100" thirdDate="2019-12-02" thirdDate-constraint="0" expand="true">
+                        <depend id="629" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="629" name="Terminar 8/8 tutos de Perl avanzado" color="#8cb6ce" meeting="false" start="2019-12-03" duration="1" complete="100" thirdDate="2019-12-03" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+            <task id="461" name="Hacer tutos de Python" meeting="false" start="2019-12-04" duration="7" complete="100" expand="true">
+                <task id="2" name="Hacer tuto básico de Python" meeting="false" start="2019-12-04" duration="4" complete="100" expand="false">
+                    <depend id="227" type="2" difference="0" hardness="Strong"/>
+                    <task id="5" name="Hacer 7/16 tutos de Python básico" color="#8cb6ce" meeting="false" start="2019-12-04" duration="1" complete="100" thirdDate="2019-12-04" thirdDate-constraint="0" expand="true">
+                        <depend id="7" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="7" name="Hacer 10/16 tutos de Python básico" color="#8cb6ce" meeting="false" start="2019-12-05" duration="1" complete="100" thirdDate="2019-12-05" thirdDate-constraint="0" expand="true">
+                        <depend id="8" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="8" name="Hacer 13/16 tutos de Python básico" color="#8cb6ce" meeting="false" start="2019-12-06" duration="1" complete="100" thirdDate="2019-12-06" thirdDate-constraint="0" expand="true">
+                        <depend id="10" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="10" name="Terminar 16/16 tutos de Python básico" color="#8cb6ce" meeting="false" start="2019-12-07" duration="1" complete="100" thirdDate="2019-12-07" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="227" name="Hacer tuto avanzado de Python" meeting="false" start="2019-12-08" duration="3" complete="100" expand="true">
+                    <task id="228" name="Hacer 3/10 tutos de Python avanzado" color="#8cb6ce" meeting="false" start="2019-12-08" duration="1" complete="100" thirdDate="2019-12-08" thirdDate-constraint="0" expand="true">
+                        <depend id="230" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="230" name="Hacer 6/10 tutos de Python avanzado" color="#8cb6ce" meeting="false" start="2019-12-09" duration="1" complete="100" thirdDate="2019-12-09" thirdDate-constraint="0" expand="true">
+                        <depend id="232" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="232" name="Terminar 10/10 tutos de Python avanzado" color="#8cb6ce" meeting="false" start="2019-12-10" duration="1" complete="100" thirdDate="2019-12-10" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="jul" function="Default:0" contacts="" phone="">
+            <rate name="standard" value="32000"/>
+        </resource>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous>
+        <previous-tasks name="threeTaskBaselining">
+            <previous-task id="0" start="2019-08-12" duration="106" meeting="false" super="true"/>
+            <previous-task id="453" start="2019-08-12" duration="9" meeting="false" super="true"/>
+            <previous-task id="42" start="2019-08-12" duration="1" meeting="false" super="true"/>
+            <previous-task id="46" start="2019-08-12" duration="1" meeting="false" super="false"/>
+            <previous-task id="155" start="2019-08-13" duration="3" meeting="false" super="true"/>
+            <previous-task id="156" start="2019-08-13" duration="1" meeting="false" super="false"/>
+            <previous-task id="157" start="2019-08-14" duration="1" meeting="false" super="false"/>
+            <previous-task id="159" start="2019-08-15" duration="1" meeting="false" super="false"/>
+            <previous-task id="54" start="2019-08-16" duration="5" meeting="false" super="true"/>
+            <previous-task id="55" start="2019-08-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="57" start="2019-08-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="58" start="2019-08-18" duration="1" meeting="false" super="false"/>
+            <previous-task id="60" start="2019-08-19" duration="1" meeting="false" super="false"/>
+            <previous-task id="61" start="2019-08-20" duration="1" meeting="false" super="false"/>
+            <previous-task id="454" start="2019-08-21" duration="11" meeting="false" super="true"/>
+            <previous-task id="92" start="2019-08-21" duration="8" meeting="false" super="true"/>
+            <previous-task id="95" start="2019-08-21" duration="1" meeting="false" super="false"/>
+            <previous-task id="97" start="2019-08-22" duration="1" meeting="false" super="false"/>
+            <previous-task id="98" start="2019-08-23" duration="1" meeting="false" super="false"/>
+            <previous-task id="100" start="2019-08-24" duration="1" meeting="false" super="false"/>
+            <previous-task id="101" start="2019-08-25" duration="1" meeting="false" super="false"/>
+            <previous-task id="103" start="2019-08-26" duration="1" meeting="false" super="false"/>
+            <previous-task id="104" start="2019-08-27" duration="1" meeting="false" super="false"/>
+            <previous-task id="106" start="2019-08-28" duration="1" meeting="false" super="false"/>
+            <previous-task id="170" start="2019-08-29" duration="3" meeting="false" super="true"/>
+            <previous-task id="171" start="2019-08-29" duration="1" meeting="false" super="false"/>
+            <previous-task id="174" start="2019-08-30" duration="1" meeting="false" super="false"/>
+            <previous-task id="176" start="2019-08-31" duration="1" meeting="false" super="false"/>
+            <previous-task id="455" start="2019-09-01" duration="11" meeting="false" super="true"/>
+            <previous-task id="108" start="2019-09-01" duration="8" meeting="false" super="true"/>
+            <previous-task id="110" start="2019-09-01" duration="1" meeting="false" super="false"/>
+            <previous-task id="112" start="2019-09-02" duration="1" meeting="false" super="false"/>
+            <previous-task id="113" start="2019-09-03" duration="1" meeting="false" super="false"/>
+            <previous-task id="115" start="2019-09-04" duration="1" meeting="false" super="false"/>
+            <previous-task id="116" start="2019-09-05" duration="1" meeting="false" super="false"/>
+            <previous-task id="118" start="2019-09-06" duration="1" meeting="false" super="false"/>
+            <previous-task id="119" start="2019-09-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="121" start="2019-09-08" duration="1" meeting="false" super="false"/>
+            <previous-task id="195" start="2019-09-09" duration="3" meeting="false" super="true"/>
+            <previous-task id="196" start="2019-09-09" duration="1" meeting="false" super="false"/>
+            <previous-task id="198" start="2019-09-10" duration="1" meeting="false" super="false"/>
+            <previous-task id="200" start="2019-09-11" duration="1" meeting="false" super="false"/>
+            <previous-task id="456" start="2019-09-12" duration="6" meeting="false" super="true"/>
+            <previous-task id="12" start="2019-09-12" duration="3" meeting="false" super="true"/>
+            <previous-task id="16" start="2019-09-12" duration="1" meeting="false" super="false"/>
+            <previous-task id="18" start="2019-09-13" duration="1" meeting="false" super="false"/>
+            <previous-task id="19" start="2019-09-14" duration="1" meeting="false" super="false"/>
+            <previous-task id="48" start="2019-09-15" duration="3" meeting="false" super="true"/>
+            <previous-task id="49" start="2019-09-15" duration="1" meeting="false" super="false"/>
+            <previous-task id="51" start="2019-09-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="53" start="2019-09-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="457" start="2019-09-18" duration="7" meeting="false" super="true"/>
+            <previous-task id="62" start="2019-09-18" duration="2" meeting="false" super="true"/>
+            <previous-task id="65" start="2019-09-18" duration="1" meeting="false" super="false"/>
+            <previous-task id="67" start="2019-09-19" duration="1" meeting="false" super="false"/>
+            <previous-task id="214" start="2019-09-20" duration="2" meeting="false" super="true"/>
+            <previous-task id="215" start="2019-09-20" duration="1" meeting="false" super="false"/>
+            <previous-task id="218" start="2019-09-21" duration="1" meeting="false" super="false"/>
+            <previous-task id="236" start="2019-09-22" duration="3" meeting="false" super="true"/>
+            <previous-task id="237" start="2019-09-22" duration="1" meeting="false" super="false"/>
+            <previous-task id="239" start="2019-09-23" duration="1" meeting="false" super="false"/>
+            <previous-task id="240" start="2019-09-24" duration="1" meeting="false" super="false"/>
+            <previous-task id="458" start="2019-09-25" duration="8" meeting="false" super="true"/>
+            <previous-task id="68" start="2019-09-25" duration="1" meeting="false" super="true"/>
+            <previous-task id="71" start="2019-09-25" duration="1" meeting="false" super="false"/>
+            <previous-task id="219" start="2019-09-26" duration="3" meeting="false" super="true"/>
+            <previous-task id="220" start="2019-09-26" duration="1" meeting="false" super="false"/>
+            <previous-task id="222" start="2019-09-27" duration="1" meeting="false" super="false"/>
+            <previous-task id="224" start="2019-09-28" duration="1" meeting="false" super="false"/>
+            <previous-task id="241" start="2019-09-29" duration="4" meeting="false" super="true"/>
+            <previous-task id="242" start="2019-09-29" duration="1" meeting="false" super="false"/>
+            <previous-task id="244" start="2019-09-30" duration="1" meeting="false" super="false"/>
+            <previous-task id="245" start="2019-10-01" duration="1" meeting="false" super="false"/>
+            <previous-task id="247" start="2019-10-02" duration="1" meeting="false" super="false"/>
+            <previous-task id="459" start="2019-10-03" duration="9" meeting="false" super="true"/>
+            <previous-task id="72" start="2019-10-03" duration="2" meeting="false" super="true"/>
+            <previous-task id="74" start="2019-10-03" duration="1" meeting="false" super="false"/>
+            <previous-task id="77" start="2019-10-04" duration="1" meeting="false" super="false"/>
+            <previous-task id="206" start="2019-10-05" duration="3" meeting="false" super="true"/>
+            <previous-task id="207" start="2019-10-05" duration="1" meeting="false" super="false"/>
+            <previous-task id="209" start="2019-10-06" duration="1" meeting="false" super="false"/>
+            <previous-task id="211" start="2019-10-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="248" start="2019-10-08" duration="4" meeting="false" super="true"/>
+            <previous-task id="249" start="2019-10-08" duration="1" meeting="false" super="false"/>
+            <previous-task id="251" start="2019-10-09" duration="1" meeting="false" super="false"/>
+            <previous-task id="252" start="2019-10-10" duration="1" meeting="false" super="false"/>
+            <previous-task id="254" start="2019-10-11" duration="1" meeting="false" super="false"/>
+            <previous-task id="122" start="2019-10-12" duration="6" meeting="false" super="true"/>
+            <previous-task id="125" start="2019-10-12" duration="1" meeting="false" super="false"/>
+            <previous-task id="127" start="2019-10-13" duration="1" meeting="false" super="false"/>
+            <previous-task id="128" start="2019-10-14" duration="1" meeting="false" super="false"/>
+            <previous-task id="130" start="2019-10-15" duration="1" meeting="false" super="false"/>
+            <previous-task id="131" start="2019-10-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="133" start="2019-10-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="21" start="2019-10-18" duration="14" meeting="false" super="true"/>
+            <previous-task id="26" start="2019-10-18" duration="1" meeting="false" super="false"/>
+            <previous-task id="27" start="2019-10-19" duration="1" meeting="false" super="false"/>
+            <previous-task id="28" start="2019-10-20" duration="1" meeting="false" super="false"/>
+            <previous-task id="29" start="2019-10-21" duration="1" meeting="false" super="false"/>
+            <previous-task id="30" start="2019-10-22" duration="1" meeting="false" super="false"/>
+            <previous-task id="31" start="2019-10-23" duration="1" meeting="false" super="false"/>
+            <previous-task id="32" start="2019-10-24" duration="1" meeting="false" super="false"/>
+            <previous-task id="33" start="2019-10-25" duration="1" meeting="false" super="false"/>
+            <previous-task id="34" start="2019-10-26" duration="1" meeting="false" super="false"/>
+            <previous-task id="35" start="2019-10-27" duration="1" meeting="false" super="false"/>
+            <previous-task id="36" start="2019-10-28" duration="1" meeting="false" super="false"/>
+            <previous-task id="37" start="2019-10-29" duration="1" meeting="false" super="false"/>
+            <previous-task id="38" start="2019-10-30" duration="1" meeting="false" super="false"/>
+            <previous-task id="39" start="2019-10-31" duration="1" meeting="false" super="false"/>
+            <previous-task id="460" start="2019-11-01" duration="7" meeting="false" super="true"/>
+            <previous-task id="134" start="2019-11-01" duration="5" meeting="false" super="true"/>
+            <previous-task id="136" start="2019-11-01" duration="1" meeting="false" super="false"/>
+            <previous-task id="138" start="2019-11-02" duration="1" meeting="false" super="false"/>
+            <previous-task id="140" start="2019-11-03" duration="1" meeting="false" super="false"/>
+            <previous-task id="141" start="2019-11-04" duration="1" meeting="false" super="false"/>
+            <previous-task id="143" start="2019-11-05" duration="1" meeting="false" super="false"/>
+            <previous-task id="191" start="2019-11-06" duration="2" meeting="false" super="true"/>
+            <previous-task id="192" start="2019-11-06" duration="1" meeting="false" super="false"/>
+            <previous-task id="194" start="2019-11-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="78" start="2019-11-08" duration="5" meeting="false" super="true"/>
+            <previous-task id="83" start="2019-11-08" duration="1" meeting="false" super="false"/>
+            <previous-task id="85" start="2019-11-09" duration="1" meeting="false" super="false"/>
+            <previous-task id="86" start="2019-11-10" duration="1" meeting="false" super="false"/>
+            <previous-task id="88" start="2019-11-11" duration="1" meeting="false" super="false"/>
+            <previous-task id="90" start="2019-11-12" duration="1" meeting="false" super="false"/>
+            <previous-task id="144" start="2019-11-13" duration="6" meeting="false" super="true"/>
+            <previous-task id="146" start="2019-11-13" duration="1" meeting="false" super="false"/>
+            <previous-task id="148" start="2019-11-14" duration="1" meeting="false" super="false"/>
+            <previous-task id="149" start="2019-11-15" duration="1" meeting="false" super="false"/>
+            <previous-task id="151" start="2019-11-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="152" start="2019-11-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="154" start="2019-11-18" duration="1" meeting="false" super="false"/>
+            <previous-task id="461" start="2019-11-19" duration="7" meeting="false" super="true"/>
+            <previous-task id="2" start="2019-11-19" duration="4" meeting="false" super="true"/>
+            <previous-task id="5" start="2019-11-19" duration="1" meeting="false" super="false"/>
+            <previous-task id="7" start="2019-11-20" duration="1" meeting="false" super="false"/>
+            <previous-task id="8" start="2019-11-21" duration="1" meeting="false" super="false"/>
+            <previous-task id="10" start="2019-11-22" duration="1" meeting="false" super="false"/>
+            <previous-task id="227" start="2019-11-23" duration="3" meeting="false" super="true"/>
+            <previous-task id="228" start="2019-11-23" duration="1" meeting="false" super="false"/>
+            <previous-task id="230" start="2019-11-24" duration="1" meeting="false" super="false"/>
+            <previous-task id="232" start="2019-11-25" duration="1" meeting="false" super="false"/>
+        </previous-tasks>
+    </previous>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

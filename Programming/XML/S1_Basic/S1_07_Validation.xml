@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Validation
+-->
+
+<!-- #T# Document Type Definition (DTD) with <!DOCTYPE []> -->
+<!DOCTYPE root[
+
+<!-- #T# Element definition with <!ELEMENT> -->
+    <!ELEMENT root (elem1,elem2)>
+
+<!-- #T# Element may have mixed content with Parsed Char Data #PCDATA-->
+    <!ELEMENT elem1 (#PCDATA)>
+    <!ELEMENT elem2 (#PCDATA)>
+
+<!-- #T# Attributes with <!ATTLIST> -->
+    <!ATTLIST elem2 attr1 CDATA #REQUIRED>
+
+]>
+
+<!-- #T# XML file is valid if DTD has its elements, attributes, etc. -->
+<root>
+    <elem1>ContentElem1</elem1>
+    <elem2 attr1="char data">ContentElem2</elem2>
+</root>

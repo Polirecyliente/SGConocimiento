@@ -1,0 +1,17 @@
+/*
+    Class, id
+*/
+
+/* #T# class selector */
+span.class1
+{
+    color: chartreuse;
+    font-style: italic;
+}
+
+/* #T# id selector */
+#id1
+{
+    background-color: darkolivegreen;
+    font-weight: bold;
+}

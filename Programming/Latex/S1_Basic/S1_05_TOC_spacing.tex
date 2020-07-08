@@ -1,0 +1,58 @@
+
+%   TOC, spacing
+
+%T% TOC stands for Table Of Contents
+
+\documentclass{article}
+
+%T% use the setspace package to change the spacing in the document
+\usepackage{setspace}
+
+%T% in the preamble, state the depth of the toc (table of contents)
+%T% with \setcounter{tocdepth}{nDepth}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+%T% set the spacing to double with \doublespacing
+\doublespacing
+
+%T% display the table of contents with \tableofcontents
+\tableofcontents
+
+%T% set the spacing to single with \singlespacing
+\singlespacing
+
+\section{first}
+\subsection{firSecFirSub}
+
+%T% override the general setting for the toc depth locally for following
+%T% sections with \addtocontents{toc}{\setcounter{tocdepth}{nDepth}}
+\addtocontents{toc}{\setcounter{tocdepth}{5}}
+
+%T% change the section numbering with \setcounter{section}{number}
+\setcounter{section}{7}
+
+\section{secondSec}
+\subsection{secSecFirSub}
+
+\begin{figure}
+    \caption{fig1}
+\end{figure}
+
+%T% create a table with the table tag
+\begin{table}
+    \caption{tbl1}
+\end{table}
+
+%T% create an appendix with the appendix tag
+\begin{appendix}
+%T% display the list of tables and figures with \listoftables and 
+%T% \listoffigures
+    \listoftables
+    \listoffigures
+\end{appendix}
+
+Text before EOF.
+
+\end{document}

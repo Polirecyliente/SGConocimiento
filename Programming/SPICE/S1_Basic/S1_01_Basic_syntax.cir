@@ -1,0 +1,69 @@
+
+*   Basic syntax
+
+*T* the first non comment line has to be the .title of the circuit
+.title Test Circuit One
+
+*T* components are written in this order, COMPNAME1 plusNode minusNode Value, the special node 0 is the same as GND for ground, special components are V, R, L, C
+V1 node1 0 1
+R1 node2 node1 1k
+VAmm nodeMeasu node2 0
+R2 0 nodeMeasu 2k
+
+*T* use ".options" to set extra options, "savecurrents" option saves the currents in the devices
+.options savecurrents
+
+*T* the end of the circuit is signaled by .end
+* .end
+*T* execute a .cir file1 in a terminal with ngspice path/to/file1.cir, .cir is for circuit
+
+*T* run ngspice commands inside a .control .endc block
+.control
+
+*T* run operating point analysis with "op"
+    op
+
+*T* use "print node1" to see the value of node1 (in Volts?) after op
+* print node2
+
+*T* see voltage drop to GND in a given node with v()
+    print v(node2)
+
+*T* measure current through a voltage source with i() can be used as ammeter
+    print i(VAmm)
+
+*T* get the current through a device if it was saved with @DeviceName[i]
+    print @R1[i]
+
+*T* echo "string1" to echo string1 to standard output
+* echo "Code Finished"
+.endc
+
+* R1 midN inN 10k
+
+*T* The PULSE() command is for a DC pulse,
+*T* ac is to set an AC signal after? the transient DC pulse
+* V1 inN 0 dc 0 ac 1 PULSE(0 5 1u 1u 1u 1 1)
+
+*T* keyword args may also be used, e.g. r=1k for the resistance
+* R2 outN midN r=1k
+* C1 midN 0 c=1u
+* C2 outN 0 c=100n
+
+* .control
+
+*T* use "tran stepTime durationTime" to make a transient analysis
+* tran 50u 50m
+
+*T* use "ac [dec/oct] pointsPerDecOct iniHz finalHz" to do an ac simulation
+* ac dec 10 1 100k
+
+*T* use "plot node1" to plot (the Voltage?) a given node
+* plot inN midN outN
+
+*T* see voltage gain in db with vdb(), phase with ph()
+* plot vdb(outN) ph(outN)
+
+* .endc
+
+.end

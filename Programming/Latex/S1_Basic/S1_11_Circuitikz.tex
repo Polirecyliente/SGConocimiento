@@ -1,0 +1,43 @@
+
+%   Circuitikz
+
+\documentclass{article}
+
+\usepackage{tikz}
+%T% use the package circuitikz to draw circuits
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{figure}
+
+%T% draw the circuit with the circuitikz tag
+    \begin{circuitikz}
+        
+%T% draw the circuit with lines, create components inside the options
+%T% create a voltage source with [V,v=voltageQuantity]
+%T% create a resistor with [R=resistanceQuantity]
+%T% create a capacitor with [C=capacitanceQuantity]
+%T% create an inductor with [L=inductanceQuantity]
+%T% add a current or voltage arrow with [(i|v|l)(POS)=symbolText],
+%T% in (i|v|l) select only one, i for current, v for voltage, l for label
+%T% where (POS) indicates positioning though the symbols _ (down), ^ (up)
+%T% < (left), > (right)
+        \draw (0,0) to[V,v<=5V] (0,2) to[L=k] (3,2) to[R=1$\Omega$] (3,0)
+        to[C=3mF,i<_=i] (0,0);
+
+%T% establish that a line is a short with [short]
+%T% change the endings of a line in the options, e.g. [o-*]
+        \draw (4,4) to[short,o-*] (7,4);
+
+%T% create a ground connection with node[ground]{GNDName}
+        \draw (0,-1) to (0,-2) node[ground]{GND};
+
+%T% create a BJT with
+        \draw (2,-2) node[pnp,rotate=90](bjt1){BJT} (bjt1.base) node {B}
+        (bjt1.collector) node {Coll} (bjt1.emitter) node {emi};
+
+    \end{circuitikz}
+\end{figure}
+
+\end{document}

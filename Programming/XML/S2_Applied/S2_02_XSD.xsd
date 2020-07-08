@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    XSD
+-->
+
+<!-- #T# XSD stands for XML Schema Definition -->
+
+<!-- #T# xmlns:pfx where pfx is the namespace prefix -->
+<!-- #T# define schema with <schema> -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- #T# define element with <element> -->
+    <xs:element name="root">
+
+<!-- #T# contain child elements with <complexType> -->
+        <xs:complexType>
+
+<!-- #T# define the sequence of child elements with <sequence> -->
+            <xs:sequence>
+
+<!-- #T# type="xs:[int|string|boolean|date|decimal]" -->
+                <xs:element name="elem1" type="xs:string" />
+                <xs:element name="elem2" type="xs:string">
+                    <xs:complexType>
+
+<!-- #T# define attribute with <attribute> -->
+                        <xs:attribute name="attr1" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!-- #T# define global element types -->
+    <xs:complexType name="globalType">
+        <xs:element name="elem1ofGlobalType" />
+        <xs:element name="elem2ofGlobalType" />
+    </xs:complexType>
+
+<!-- #T# define element with global type -->
+    <xs:element name="instanceElem1" type="globalType" />
+
+</xs:schema>

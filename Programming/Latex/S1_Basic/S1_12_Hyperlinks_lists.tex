@@ -1,0 +1,39 @@
+
+%   Hyperlinks, lists
+
+\documentclass{article}
+
+%T% use the hyperref package to be able to use hyperlinks
+\usepackage{hyperref}
+
+%T% use the enumitem package to change the enum symbol
+\usepackage{enumitem}
+
+\begin{document}
+
+%T% make a word clickable with \href{link}{words to click}
+    Text pre link \href{https://www.google.com}{Google Search Engine}
+    Text post link
+
+%T% insert a bare URL with \url{link}
+    Same link: \url{https://www.google.com}
+
+%T% create items for any kind of list with \item textOfItem
+%T% create unordered lists with the itemize tag
+    \begin{itemize}
+        \item unordered element one
+        \item unordered element also
+%T% change the bullet symbol with \item[symbol]
+        \item[--] dashed
+        \item[$-$] other dash
+        \item[$\ast$] asterisk
+        \item[$\aleph$] aleph
+    \end{itemize}
+
+%T% create ordered lists with the enumerate tag
+    \begin{enumerate}[label=(\alph*]
+        \item first element
+        \item second element
+    \end{enumerate}
+
+\end{document}

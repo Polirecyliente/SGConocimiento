@@ -1,0 +1,29 @@
+
+*   Circuit analysis
+
+*T* each line in an SPICE program is called a card, the whole file is called a deck
+
+.title Circuit for Analysis
+V1 0 1
+R1 0 1 5
+
+.control
+
+*T* make a DC sweep with .dc sourceName initV finalV stepV
+    dc V1 0 100 5
+
+*T* print several variables together to make a table
+    print v(1) i(V1)
+
+*T* make an AC sweep with .ac lin|oct|dec points initFreq finalFreq, points means the amount of points or samples between frequencies, points is the total amount of frequencies to sweep through
+    ac lin 7 100 700
+
+*T* make a transient analysis with .tran stepT durationT uic startDelay, uic stands for use initial conditions
+    tran 0.1 10 uic 2 
+
+*T* make a fourier analysis on transient analysis output with, .four fundFreq outputVolt1 outputVoltN, outputVolt can be another type of vector
+    four 60 V2 V3
+
+.endc
+
+.end

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Declaration
+-->
+
+<!-- #T# document declaration -->
+<!-- #
+    <?xml
+        version="1.0" (version number of XML)
+        encoding="UTF-8" ("UTF-16","ISO-10646-UCS-4","EUC-JP")
+        standalone="no" (depends on external DOCTYPE Definitions or not)
+    ?>
+-->
+<root>
+    <elem1>
+        Texts
+    </elem1>
+</root>

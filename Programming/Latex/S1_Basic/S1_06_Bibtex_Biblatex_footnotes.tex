@@ -1,0 +1,33 @@
+
+%   Bibtex, Biblatex, footnotes
+
+%T% to compile with bibtex and pdflatex, file1.tex, file1.bib (same name)
+%T% execute in order pdflatex file1.tex, bibtex file1.aux, pdflatex file.tex
+%T% and a last pdflatex file1.tex
+
+%T% NOTE: Do NOT use underscore in the bib file (pdflatex accuses 
+%T% unbalanced dollar sign $ like it was an inline equation)
+
+\documentclass{article}
+
+%T% use the biblatex package to manage the bibliography
+%T% use style=verbose-trad2 to make citations as footnotes
+%T% use sorting=none to avoid alphabetical sort (so, in order of appearance)
+\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+%T% specify the bib file with \bibliography{path/to/bibFile} in preamble
+\bibliography{Section1_6}
+
+\begin{document}
+%T% create citation with \autocite{bookLabelInBibtexFile}
+    Text \autocite{bookLabel1} of citation.
+
+%T% create a footnote with \footnote{\label{lblFoot}Footnote Text}
+    Text before footnote \footnote{\label{ft1}Text in footnote}
+    Refers to footnote \ref{ft1}
+
+%T% display the bibliography with \printbibliography
+%T% use heading=none to remove heading word "References"
+    \printbibliography[heading=none]
+
+    Text before EOF.
+\end{document}

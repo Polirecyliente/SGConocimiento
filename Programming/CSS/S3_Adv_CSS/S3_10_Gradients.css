@@ -1,0 +1,28 @@
+/*
+    Gradients
+*/
+
+p:nth-of-type(1)
+{
+/* #T# linear-gradient(to direction, colors...) */
+    background: linear-gradient(to right, yellow, rgb(255, 51, 0));
+}
+p:nth-of-type(2)
+{
+/* #T# linear-gradient(deg, color stop...) */
+    background: linear-gradient(45deg, red 10%, green 20%, blue 90%);
+}
+p:nth-of-type(3)
+{
+/* #T# radial-gradient() */
+    background: radial-gradient(circle closest-side, yellow, black);
+}
+p:nth-of-type(4)
+{
+    background: radial-gradient(circle at top left, darkorchid, blue);
+}
+/* #T# repeating-linear-gradient() */
+p:nth-of-type(5)
+{
+    background: repeating-linear-gradient(black 5px, azure 10px);
+}

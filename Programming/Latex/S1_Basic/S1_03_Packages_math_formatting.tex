@@ -1,0 +1,85 @@
+
+%   Packages, math formatting
+
+\documentclass{article}
+
+%T% use a package with the \usepackage{packageName} directive
+\usepackage{amsmath}
+
+\begin{document}
+
+%T% create an equation with the \begin{equation}, \end{equation} tags
+    \begin{equation}
+        f_1(x) = y
+    \end{equation}
+    
+%T% create unnumbered amsmath equation with the 
+%T% \begin{equation*}, \end{equation*} tags
+    \begin{equation*}
+        f_2(x) = N*n
+    \end{equation*}
+
+%T% create an inline equation by enclosing it in $ dollar signs
+    textPre $equation = a$ textPost
+
+%T% create several equations with the align* or align tags
+%T% the alignment is done around the & ampersand
+    \begin{align*}
+        &f_1\\
+        f_2&\\
+        f&_3
+    \end{align*}
+
+%T% typesetting mathematical notation is as follows,
+%T% sum +, subtraction -, multiplication *, division /, power ^
+%T% fractions \frac{num}{den}, integrals \int_infLim^supLim, 
+%T% square root \sqrt{}, summation \sum_{}^{}, infinity symbol \infty
+    \begin{align}
+        a + b - c = x * y / z ^z\\
+        \frac{a}{b} = \int_x^y Z\\
+        \sqrt{x_1}\\
+        \sum_{u \in U_{s}}^{\infty} Z_{i,u,s} = 1
+
+%T% less than and greater than or equal to with \leq, \geq
+%T% insert spaces in equations with \quad and \qquad
+        a \leq \quad x \qquad \geq b\\
+        
+%T% put a tilde on top of a text with \tilde{text}
+        \tilde{A}\\
+
+%T% put a tilde that covers the whole text with \widetilde{text}
+        \widetilde{long Text}\\
+        
+%T% create special symbols like the forall symbol, in set, ellipsis,
+%T% curly braces
+        \forall \in \dots \{ \}\\
+
+%T% define a function by parts with the cases environment
+        \begin{cases}
+            val1,  & range1\\
+            v2,    & range2
+        \end{cases}
+
+%T% create matrices with the matrix tag, within an align environment
+%T% scale brackets and parentheses with \left(, \right), \left[, \right]
+        \left[
+        \begin{matrix}
+            1 & x & y\\
+            z & & t*\lambda
+        \end{matrix}    
+        \right]
+
+%T% use ceil and floor delimiters with \lceil, \rceil, \lfloor, \rfloor
+        \lceil k \rceil = \lfloor\frac{N}{2}\rfloor
+
+%T% create a single multiline equation inside an align environment,
+%T% with the split environment
+        \begin{split}
+            \widetilde{Tf}_{i,s} + M*(2-Z_{i,u,s}-&Z_{j,u,s}) \leq 
+            \widetilde{Ts}_{j,s} \\
+            \forall i \in I, j \in I, i < j,& s \in S, u \in U_{s}    
+        \end{split}
+
+    \end{align}
+
+\end{document}

@@ -1,0 +1,29 @@
+/*
+    Margins, padding
+*/
+
+/* #T# properties: margin, padding */
+h1
+{
+    background-color:rgb(47, 25, 2);
+    margin: 20px;
+    padding: 40px;
+}
+/* #T# properties: margin-top, margin-left, margin-right, margin-bottom */
+h2
+{
+    background-color: blueviolet;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+/* #T# properties: padding-top, padding-left, padding-right, padding-bottom */
+h3
+{
+    background-color: chocolate;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right:20px;
+    padding-bottom: 30px;
+}

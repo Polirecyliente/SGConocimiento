@@ -1,0 +1,63 @@
+
+*   Circuit topology
+
+*T* series, parallel and complex circuits
+
+.title Series, parallel and complex circuits
+.options savecurrents
+
+*T* series circuit
+V1 1 0
+R1 2 1 3k
+R2 3 2 10k
+R3 0 3 5k
+
+*T* parallel circuit
+V2 4 0
+R4 4 0 10k
+R5 4 0 2k
+R6 4 0 1k
+
+*T* series and parallel circuit
+V3 5 0
+R7 5 6 100
+R8 5 6 250
+R9 6 0 350
+R10 6 0 200
+
+*T* complex circuit1: two batteries
+V4 7 0
+V5 9 0 dc 7
+R11 7 8 4
+R12 8 0 2
+R13 8 9 1
+
+*T* complex circuit2: unbalanced bridge
+V6 10 0
+R14 10 11 150
+R15 10 12 50
+R16 11 12 100
+R17 11 0 300
+R18 12 0 250
+
+.control
+dc V1 9 9 1
+
+*T* print the voltage drop across two nodes with v(n1,n2), print the product of different quantities with *
+print v(2,1) v(2,3) v(3) i(V1) i(V1)*v(1)
+
+dc V2 9 9 1
+print v(4) @R4[i] @R5[i] @R6[i]
+
+dc V3 24 24 1
+print v(5,6) v(6) @R7[i] @R8[i] @R9[i] @R10[i]
+
+dc V4 28 28 1
+print v(7,8) v(8,9) v(8) @R11[i] @R12[i] @R13[i]
+
+dc V6 24 24 1
+print v(10,11) v(10,12) v(11,12) v(11) v(12) 
+print @R14[i] @R15[i] @R16[i] @R17[i] @R18[i]
+.endc
+
+.end

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Tags
+-->
+
+<root>
+<!-- #T# normal tag, empty tag  -->
+    <normal>Content</normal>
+    <empty/>
+</root>

@@ -1,0 +1,53 @@
+
+%   CSV
+
+%T% CSV stands for Comma Separated Values
+
+%T% CSV data import
+
+\documentclass{article}
+
+%T% use the pgfplotstable package to use CSV files for tables
+\usepackage{pgfplotstable}
+
+%T% use the tikz package to create tikz pictures
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{table}
+
+%T% works for one page tables
+%T% inside a table select the CSV file and the read parameter options
+%T% with \pgfplotstabletypeset[options]{path/to/csvFile}
+    \pgfplotstabletypeset[
+%T% set the column separator
+      col sep=comma,
+%T% set the way columns will be displayed
+      display columns/0/.style={
+		column name=Col1 Header, % name of first column
+		column type={r|},string type},  % use siunitx for formatting
+      display columns/1/.style={
+		column name=Col2 Header,
+		column type={|l},string type},
+    ]{Section1_8Aux.csv}
+
+\end{table}
+
+\begin{figure}
+    
+%T% create a figure for the plot with the tikzpicture tag
+    \begin{tikzpicture}
+        
+%T% create the axes for the plot with the axis tag
+        \begin{axis}[width=\linewidth]
+
+%T% plot the actual data with \addplot table[opts]{path/to/csv};
+%T% in opts x and y are the header names in the CSV file
+            \addplot table[x=col1,y=col2,col sep=comma]{Section1_8Aux.csv};
+        \end{axis}
+    \end{tikzpicture}
+
+\end{figure}
+
+\end{document}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+     DTD
+-->
+
+<!-- #T# DTD stands for Document Type Definition -->
+
+<!-- #T# standalone="no", external DTD with SYSTEM "file.dtd" -->
+<!DOCTYPE root SYSTEM "Section2_1Aux.dtd">
+
+<root>
+    <elem1>Text1</elem1>
+    <elem2 attr1="value1">Text2</elem2>
+</root>

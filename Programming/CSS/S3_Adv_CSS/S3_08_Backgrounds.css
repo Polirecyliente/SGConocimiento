@@ -1,0 +1,20 @@
+/*
+    Backgrounds
+*/
+
+/* #T# multiple backgrounds, size, and origin */
+
+h1
+{
+    height: 5cm;
+    padding: 1cm;
+    color: crimson;
+
+/* #T# properties: background, background-size, background-origin */
+/* #T# multiple backgrounds */
+    background:
+    url("S3_08_Aux01.jpg") left no-repeat,
+    url("../../Octave/Section1/S1_03_Aux01.svg") right no-repeat;
+    background-size: contain;
+    background-origin: padding-box;
+}

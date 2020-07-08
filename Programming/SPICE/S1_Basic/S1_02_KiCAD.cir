@@ -1,0 +1,18 @@
+
+*   KiCAD
+
+*T* integration with KiCAD
+
+*T* .cir files can be exported from KiCAD with "Generate Netlist", nodes should be placed in KiCAD as global labels, the S1_02_Aux01.cir file shows an example of KiCAD integration
+
+.title Voltage divider
+R1 NODE1 NODE2 1k
+V1 NODE1 0 1
+R2 NODE2 0 2k
+.control
+    op
+
+*T* SPICE is case insensitive
+    print v(node2)
+.endc
+.end

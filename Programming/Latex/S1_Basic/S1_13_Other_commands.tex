@@ -1,0 +1,104 @@
+
+%   Other commands
+
+\documentclass{article}
+\begin{document}
+
+%T% create a dedicated page for the title with the titlepage environment
+    \begin{titlepage}
+        Title in titlepage
+
+%T% in new paragraphs the first line is indented with one tab
+
+%T% create a new line inside the paragraph with \\ double backslash
+%T% insert extra space with the option \\[extra-space]
+%T% valid units of measurement: pt, ex, em, mm, cm, in
+%T% create a new line also with \newline
+    text1 \\ text2 \\[12pt] text3 \newline text4 text4 text4 text4 text4 
+%T% mark a place for appropriate line break with \linebreak
+    text4 \linebreak text4 text4 text4 text4 text4 text4 text4 textr text4 
+    text4 text4
+%T% mark a place to avoid a line break with \nolinebreak
+    text4 text4 \nolinebreak textr2 text4 text4 text4 text4 text4 text4 text4 
+
+%T% create a new paragraph with \par or with a blank line between paragraphs
+    text1 \par text2
+
+    text3
+
+%T% mark places for appropriate hyphenation with \-
+    textMiddleHyperLongWordThatEndsAfterTheEndOfTheActualLineSpanning\-MoreThanAnyKindOfWordEverShould
+
+%T% make a word separable with hypens with \hyphenation{}
+    \hyphenation{sepa-rable wor-dings}
+    textMiddleHyperLongWordThatEndsAfterTheEndOfTheActualLineSpan separable AndOtherRemainingText
+
+%T% avoid initial indentation of a paragraph with \noindent
+    \noindent
+%T% insert horizontal space with \hspace{measure}
+    non indented paragraph \hspace{1cm} after horizontal space
+%T% fill with horizontal space up to the end of the line with \hfill
+    te \hfill xt
+%T% insert indentation eg to the first paragraph in a section with \indent
+%T% you may need to do it twice for it to show
+    \indent\indent
+
+%T% create a new page with \newpage
+    \newpage text1
+
+%T% insert vertical space with \vspace{measure}
+    \vspace{5cm}
+
+%T% mark a place for appropriate page break with \pagebreak
+    text1 \pagebreak \newline text2
+%T% mark a place to avoid a page break with \nopagebreak
+%T% fill with vertical space up to the end of the page with \vfill
+    text3 \nopagebreak \newline \vfill text4
+
+%T% control text alignment with several commands
+%T% align text to the left with the flushleft environment
+    \begin{flushleft}
+        Text aligned left
+    \end{flushleft}
+
+%T% align text to the right with the flushright environment
+    \begin{flushright}
+        Text aligned right
+    \end{flushright}
+
+%T% align text to the center with the center environment
+    \begin{center}
+        Text with center alignment
+    \end{center}
+
+    \newpage
+%T% change the font size with the following commands:
+    normal1 \tiny tiny \scriptsize script size \footnotesize footnote size
+    \small small \normalsize normal2 \large large \Large now Large \LARGE now
+    LARGE \huge huge \Huge and Huge
+    \normalsize
+
+%T% create variables with \let\varNameLHS\varNameRHS and \def\varName{val}
+    \def\varA{var value}
+    \let\varB\varA
+
+    var one is \varA and var two is \varB
+
+%T% variables are more known as commands in Latex
+%T% when executing or defining a command call arg n with #n
+%T% create commands with \newcommand{\cmd}[nargs][optarg]{definition}
+\newcommand{\egComm}[3][optVal]{#3 and #2 are not like #1}
+\egComm{Two}{Three}
+
+%T% change commands with \renewcommand{\cmd}[nargs][optarg]{definition}
+\renewcommand{\egComm}[1]{now it's only #1}
+\egComm{The only One}
+
+%T% insert predefined vertical space with \medskip and \bigskip
+    text1 \par text2 \par \medskip text3 \par \bigskip text4 \par
+%T% insert a blank line with a vertical space of size \baselineskip
+    \vspace{\baselineskip} text5
+
+
+    \end{titlepage}
+\end{document}

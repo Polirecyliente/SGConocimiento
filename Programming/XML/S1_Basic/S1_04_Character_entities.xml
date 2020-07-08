@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Character entities
+-->
+
+<root>
+
+<!-- #T# predefined character entities -->
+    <elem1>Ampersand: &amp;</elem1>
+    <elem1>Apostrophe: &apos;</elem1>
+    <elem1>Greater than: &gt;</elem1>
+    <elem1>Less than: &lt;</elem1>
+    <elem1>Double quote: &quot;</elem1>
+
+<!-- #T# numeric character entities -->
+    <elem1>Dec number: &#65;</elem1>
+    <elem1>Hex number: &#x02A0;</elem1>
+
+</root>

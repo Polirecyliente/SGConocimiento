@@ -1,0 +1,4 @@
+<!ELEMENT root (elem1,elem2)>
+<!ELEMENT elem1 (#PCDATA)>
+<!ELEMENT elem2 (#PCDATA)>
+<!ATTLIST elem2 attr1 CDATA #REQUIRED>

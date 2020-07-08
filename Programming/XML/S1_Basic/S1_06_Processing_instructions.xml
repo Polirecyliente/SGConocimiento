@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    Processing instructions
+-->
+
+<!-- #T# processing instruction <??> -->
+<?application intruction1 prop1="value1" intruction2?>
+
+<root>
+    <elem1></elem1>
+</root>

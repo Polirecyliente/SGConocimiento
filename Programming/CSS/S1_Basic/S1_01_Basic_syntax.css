@@ -1,0 +1,8 @@
+/*
+    Basic syntax
+*/
+
+/* #T# apply color style to paragraphs and anchors */
+/* #T# property:value notation, block {} */
+p {color:red}
+a {color:green}

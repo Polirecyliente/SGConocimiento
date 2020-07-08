@@ -1,0 +1,75 @@
+
+%   Tables
+
+\documentclass{article}
+
+%T% in the preamble, set the number precision so they align in tables
+%T% use the siunitx package to set number precision
+\usepackage{siunitx}
+
+%T% set the number precision with \sisetup{}
+\sisetup{round-mode=places,round-precision=2}
+
+%T% use the multirow package to create cells that span several rows and
+%T% columns in tables
+\usepackage{multirow}
+
+%T% use the longtable package to allow tables to span multiple pages
+\usepackage{longtable}
+
+\begin{document}
+
+%T% create a general horizontal line with \rule{width}{thickness}
+\rule{\textwidth}{0.4pt}
+
+%T% create a table with the table tag, and the tabular tag
+\begin{table}
+    \caption{Table One}
+    \label{tab:tbl1}
+
+%T% in tabular tag, use c|l|r for three columns, center, left, right, or
+%T% S for SI number alignment
+%T% the | bar separates columns (and so defines their number)
+    \begin{tabular}{c|l|S}
+    
+%T% make italic text with \emph{text}, make bold text with \textbf{text}
+        \emph{emphText} & \textbf{boldText} & 3.127\\
+
+%T% create a horizontal line with \hline
+        \hline
+        next line & $\alpha$ & 12.24\\
+        a & b & 1.10\\
+        \hline
+
+%T% draw a horizontal line between columns c1 and c2 with \cline{c1-c2}
+        \cline{2-3}
+
+%T% create a multirow cell with \multirow{numRows}{width}{textContents}
+%T% auto determine the width with * asterisk
+        \multirow{2}{*}{Text in multirow} & col2 & col3\\
+        & col2A & col3A\\
+
+%T% create a multicolumn cell with \multicolumn{numCols}{alignment}{text}
+%T% alignment, like before, is from l,r,c,S
+        \multicolumn{2}{c|}{Text multicol} & 5\\
+    \end{tabular}
+\end{table}
+
+%T% a multi page table must be created with the longtable tag
+\begin{longtable}{lc|r}
+    \caption{long table}\\
+    preHeader & preHeader & preHeader\\
+%T% end the text that won't be repeated as part of the headers in next pages
+%T% with \endfirsthead
+    \endfirsthead
+
+    texHeaderA & texHeaderB & texHeaderC\\
+%T% end the headers area with \endhead, the text between \endfirsthead and
+%T% \endhead will be repeated in each new page
+    \endhead
+    
+    content1 & content2 & content3
+    
+\end{longtable}
+
+\end{document}

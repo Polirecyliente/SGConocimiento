@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Basic syntax
+-->
+
+<!-- #T# XML declaration, document prolog -->
+<!-- # <?xml version="1.0" encoding="UTF-8"?> -->
+
+<!-- #T# tags, closing tag -->
+<!-- #T# root element -->
+<category>
+<!-- #T# element nesting -->
+    <categName>Name1</categName>
+    <categType>
+        Type of category 1
+<!-- #T# attributes name="value" -->
+        <a href="https://www.google.com/">SearchEng</a>
+    </categType>
+</category>

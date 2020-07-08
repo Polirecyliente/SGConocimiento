@@ -1,0 +1,37 @@
+
+%   Figures
+
+\documentclass{article}
+
+%T$ use the graphicx package to manage figures
+\usepackage{graphicx}
+%T$ use the subcaption package to add subfigures together
+\usepackage{subcaption}
+
+\begin{document}
+
+%T% insert figures with the figure tag
+%T% the position of the environment of the tag can be set with the
+%T% option [b!], b for bottom, other values are: h for here, t for top,
+%T% p for page extra, 
+    \begin{figure}[b!]
+%T% insert the figure itself with \includegraphics{path/to/figure}
+        \includegraphics[width=\linewidth]{/home/jul/Documents/Pictures/Webcam/2019-08-02-202209.jpg}
+%T% add a caption to the figure with \caption{captionText}
+        \caption{photo1}
+%T% create a label so the figure can be referenced later with \label{fig:lbl}
+        \label{fig:ph1}
+
+%T% add subfigures within a figure tag with the subfigure tag
+        \begin{subfigure}{0.2\linewidth}
+            \includegraphics{/home/jul/Documents/Pictures/Webcam/2019-08-02-202120.jpg}
+        \end{subfigure}
+        \begin{subfigure}{0.2\linewidth}
+            \includegraphics{/home/jul/Documents/Pictures/Webcam/2019-08-08-215110.jpg}
+        \end{subfigure}
+    \end{figure}
+
+Text after images (in Latex), reference to image \ref{fig:ph1} with the photo
+one.
+
+\end{document}

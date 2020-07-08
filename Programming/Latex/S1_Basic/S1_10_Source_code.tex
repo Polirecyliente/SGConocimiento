@@ -1,0 +1,31 @@
+
+%   Source code
+
+%T% formatting as source code
+
+\documentclass{article}
+
+%T% use the listings package to display formatted source code
+\usepackage{listings}
+
+%T% use the color package to give colors to keywords and comments
+\usepackage{color}
+
+%T% set the programming language format with \lstset{params}
+\lstset{language=C,keywordstyle=\color{blue},
+    commentstyle=\color{green}}
+
+\begin{document}
+
+%T% write source code with the lstlisting tag, 
+%T% use mathescape=true to escape math within dollar symbols $$
+\begin{lstlisting}[mathescape=true]
+    int a_1 = 10;
+    $\widetilde{K} = \frac{n}{2}$
+    printf("debug string");
+\end{lstlisting}
+
+%T% input a source code file with \lstinputlisting{path/to/sourceCode}
+\lstinputlisting{../../C/Section1/Section1_1.c}
+
+\end{document}

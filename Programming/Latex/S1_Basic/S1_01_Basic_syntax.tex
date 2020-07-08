@@ -1,0 +1,46 @@
+
+%   Basic syntax
+
+%T% compile a tex file into PDF with pdflatex, e.g. pdflatex Section1_1.tex
+%T% in a shell terminal
+
+%T% a Latex file starts with the definition of the document class
+%T% with \documentclass{docClass1}
+\documentclass{article}
+
+%T% Latex commands have the form \command[optionalArg]{mandatoryArg}
+%T% set title, date, author with \title{Title1} \date{yyyy-mm-dd} 
+%T% \author{Name1} in the preamble
+\title{Section1\_1Title}
+\date{2020-01-30}
+\author{Juli Tovar}
+
+%T% make @ at symbol be used to point to metadata with \makeatletter
+\makeatletter
+%T% use single metadata like title, date, and author with \@metadata
+\let\newti\@title
+%T% end this use of the @ at symbol with \makeatother
+\makeatother
+
+%T% the document itself is enclosed in \begin{document}, \end{document}
+%T% this type of commands act as tags that enclose an environment
+%T% document is the root tag
+\begin{document}
+  text1Line1 w2Line1
+  stillLine1 endL1
+
+%T% make a page with title, date, author with \maketitle
+  \maketitle
+
+  The title is \newti
+
+%T% stop numbering pages with \pagenumbering{gobble}
+  \pagenumbering{gobble}
+
+%T% start a new page with \newpage
+  \newpage
+  Page 3
+
+%T% restart numbering pages with \pagenumbering{arabic}
+  \pagenumbering{arabic}
+\end{document}

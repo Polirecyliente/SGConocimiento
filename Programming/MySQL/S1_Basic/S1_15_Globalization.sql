@@ -1,0 +1,12 @@
+/*
+    Globalization
+*/
+
+--T-- SHOW CHARACTER SET
+SHOW CHARACTER SET;
+
+--T-- CONVERT('str1' USING charset)
+SET @str2 = CONVERT('str1' USING utf8);
+
+--T-- SHOW COLLATION
+SHOW COLLATION;

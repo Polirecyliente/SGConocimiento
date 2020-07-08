@@ -1,0 +1,65 @@
+
+*   Components
+
+*T* SimpleCircuit1 and components
+
+.title Lamp circuit and components
+
+*T* see actual circuit in the respective S1_3_Aux01 kicad schematic project
+
+*T* a capacitor is made with CName node1 node2 valFarads ic=initVolt, where ic stands for initial condition, in this case for init voltage
+C1 1 0 10u ic=1.5
+
+*T* an inductor is made with LName node1 node2 valHenrys ic=initAmps,
+L1 1 0 15u ic=2m
+L2 1 0 1u
+
+*T* a transformer or an inductor coupling is made with, KName LName1 LName2 LNameN couplingFactor
+K1 L1 L2 0.9999
+
+*T* a resistor is made with RName node1 node2 valOhms
+R1 1 0 10k
+
+*T* a diode is made with two lines, DName aNode cathNode modelName, .model modelName D param1=val1 param2=val2
+D1 0 1 diodMdl1
+.model diodMdl1 D vj=0.65 rs=1.3
+
+*T* a bipolar junction transistor BJT is made with two lines, QName collectorNode baseNode emitterNode modelName, .model modelName npn|pnp param1=val1 param2=val2
+Q1 1 2 0 bjtMdl1
+*T* continue a line in the next with the continue line operator +
+.model bjtMdl1 npn bf=75 is=1e-14 vaf=100 ikf=.18 ise=50p ne=2.5 br=7.5 +
+cjc=11p tr=7n xtb=1.5
+
+*T* a junction field effect transistor JFET is made with two lines, JName drainNode gateNode sourceNode modelName, .model modelName njf|pjf param1=val1 param2=val2
+J1 1 2 0 jfMdl1
+.model jfMdl1 njf lambda=1e-5 pb=0.75
+
+*T* a metal oxide semiconductor FET MOSFET is made with two lines, MName drainNode gateNode sourceNode substrateNode modelName, .model modelName nmos|pmos param1=val1 param2=val2
+M1 1 2 0 3 mfMdl1
+.model mfMdl1 pmos vto=1
+
+*T* a DC Vsource is made with VName node1 node2 dc valVolts
+V1 1 0 dc 10
+
+*T* an AC Vsource is made with VName n1 n2 ac valVolts initPhase sin
+V2 2 0 ac 12 180 sin
+
+*T* an AC Vsource with frequency is made with, VName n1 n2 sin(offsetDC_V AC_V freq timeDelayPhase dampingFactor)
+V3 3 0 sin(5 12 60 0.00833 0)
+
+*T* a DC pulse Vsource is made with, VName n1 n2 pulse (low_V high_V initDelay riseT fallT highT periodT)
+V4 4 0 pulse (-2 4 0.1 0.05 0.2 2 5)
+
+*T* an AC Isource is made with IName n1 n2 ac valAmps initPhase sin
+I1 1 0 ac 3 180 sin
+
+*T* an AC Isource with frequency is made with, IName n1 n2 sin(offsetDC_I AC_I freq timeDelayPhase dampingFactor)
+I2 2 0 sin(2 1.5 60 0.00833 0)
+
+*T* a DC Isource is made with IName n1 n2 dc valAmps
+I3 3 0 dc 2
+
+*T* a DC pulse Isource is made with, IName n1 n2 pulse (low_I high_I initDelay riseT fallT highT periodT)
+I4 4 0 pulse (-2m 4m 0 0.1 0.1 1 3)
+
+.end

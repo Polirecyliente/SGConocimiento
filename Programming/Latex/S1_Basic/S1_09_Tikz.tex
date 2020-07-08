@@ -1,0 +1,36 @@
+
+%   Tikz
+
+\documentclass{article}
+
+%T% use the tikz package to create vector graphics
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{figure}
+
+%T% draw inside the tikzpicture tag
+%T% use semicolons to end commands inside the tikzpicture tag
+    \begin{tikzpicture}
+        
+%T% draw a rectangle with \draw [color,opts] (xIni,yIni) rectangle 
+%T% (xEnd,yEnd) node [color,pos] {shapeText}
+        \draw [green,dashed] (0,0) rectangle (3,2) 
+        node [purple,below] {Text in the shape};
+%T% node determines the placement of the shapeText
+
+%T% draw lines with (xCoord,yCoord) to (xCoord2,yCoord2) to ...
+%T% in the options [out,in] out is the out angle from the initial point,
+%T% in is the in angle to the second point
+        \draw (-2,2) to [out=-23,in=195] (2,1) to (3,-4);
+
+%T% draw lines too with -- double hyphen
+        \draw (-2,2) -- (0,-1);
+
+%T% draw a circle with \draw [opts] (xCenter,yCenter) circle [radius=size]
+        \draw [yellow,fill] (0,0) circle [radius=0.2];
+    \end{tikzpicture}
+\end{figure}
+
+\end{document}
