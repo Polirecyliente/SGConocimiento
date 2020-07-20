@@ -9,9 +9,9 @@ print("Hello, Python!")
 
 #T# blocks of code
 if True:
-    print("Value is true")
+    i1 = 70
 else:
-    print("Value is false")
+    i1 = 'a'
 
 #T# multiline statements, sum (+), multistatement line
 varT = 5 + 6 + \
@@ -27,4 +27,4 @@ sentence3 = """sen3word1 sen3word2
                sen3word3 sen3word4"""
 
 #T# user input in interpreter
-input("\n\nPress enter to continue the script")
+input("\nGive an input to end script\n")

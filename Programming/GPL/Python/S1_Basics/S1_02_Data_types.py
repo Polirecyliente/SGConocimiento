@@ -17,7 +17,7 @@ complex1 = 5.1 + 3.28j
 
 #T# strings, slice operator [:], concat operator +, repetition operator *
 str3 = str1[0]
-#T# in [iniEl:finalEl] include iniEl, up to before finalEl (exclude finalEl)
+#T# [iniEl:finalEl] this includes iniEl, up to before finalEl (excludes finalEl)
 str4 = str1[2:5]
 #T# in [iniEl:finalEl:stepN] include iniEl and step by stepN elements
 str4a = str1[2:8:3]

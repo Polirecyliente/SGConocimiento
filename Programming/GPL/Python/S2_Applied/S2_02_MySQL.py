@@ -1,5 +1,5 @@
 
-#   MySQL API
+#   MySQL
 
 #T# database access with the MySQL API
 
