@@ -3,6 +3,10 @@
 
 #T# OOP stands for Object Oriented Programming
 
+#T# Contents
+#T# Parts of a class
+#T# Attributes
+
 #T# class statement
 class ClassName1:
     "here goes the class docstring"
@@ -34,10 +38,21 @@ print("The attribute one is:",obj1.getAttr1())
 #T# access a class variable through the class
 print("Class variable is:",ClassName1.classVar1)
 
+#T# Parts of a class
+
+#T# import the inspect module to get the parts of a class
+import inspect
+
+#T# get the members of a class, this returns methods, attributes
+inspect.getmembers(obj1)
+
+#T# Attributes
+
 #T# access attributes directly through the object
 print("Attribute 2 is",obj1.attr2)
 
 #T# built-in class attributes
+#T# the __dict__ attribute contains
 print("The object's namespace is:",obj1.__dict__)
 print("The class' docstring is:",obj1.__doc__)
 print("The class' name is:",ClassName1.__name__)

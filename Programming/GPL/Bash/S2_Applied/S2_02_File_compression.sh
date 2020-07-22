@@ -35,3 +35,6 @@ tar xzf file.tar.gz
 
 #T# extract the files from a bzip2 file with tar xjf file.tar.bz2
 tar xjf file.tar.bz2
+
+#T# decompress a .tar.xz file leaving it as .tar with
+xz -d compressed_file1.tar.xz

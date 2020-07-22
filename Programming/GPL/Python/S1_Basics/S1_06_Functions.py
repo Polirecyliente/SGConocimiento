@@ -1,6 +1,8 @@
 
 #   Functions
 
+#T# TODO First-class citizens, anonymous functions, list comprehension, function decorators
+
 #T# def funName (param1,param2 = defaultV,*paramTuple): "docstring" return
 def fun1 (f1arg1,f1arg2 = 8,*f1argTuple):
     "here goes the fun1 docstring or documentation string with its purpose"

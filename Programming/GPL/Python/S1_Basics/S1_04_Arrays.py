@@ -1,6 +1,12 @@
 
 #   Arrays
 
+#T# Contents
+#T# Lists
+#T# Tuples
+#T# Dictionaries
+#T# Strings
+
 #T# Lists
 
 #T# declaring, updating, and accessing list

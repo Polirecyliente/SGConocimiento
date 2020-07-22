@@ -1,10 +1,22 @@
 
 #   Sysadmin
 
-#T# essential commands and syntax
+#T# Contents
+#T# Essential commands and syntax
+#T# Process management
+#T# User and group management
+#T# Hardware detection
+#T# Devices
+#T# Fonts
+
+#T# Essential commands and syntax
 
 #T# remove everything but .file with rm !(*.file)
 rm !(*.tex|*.bib)
+
+#T# print numbered from the start in file1 up to line up_to_l, but taking only the last N lines
+# head -up_to_l file1 | nl -b 'a' | tail -N
+head -80 file1 | nl -b 'a' | tail -10
 
 #T# Process management
 
@@ -44,7 +56,7 @@ groups jul
 #T# append user to an existing group with usermod, reboot may be necessary for this to take effect
 usermod -a -G audio jul
 
-#T# Hardware detected
+#T# Hardware detection
 
 #T# list hardware with lshw, the option -short gives a summary
 lshw -short
