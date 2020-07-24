@@ -4,11 +4,26 @@
 #T# UPBGE stands for Uchronia Project Blender Game Engine
 
 #T# Contents
+
 #T# bge package
+
 #T# Sensors
+
 #T# Always sensor
 #T# Actuator sensor
+#T# Collision sensor
+#T# Delay sensor
+#T# Joystick sensor
+#T# Keyboard sensor
+#T# Message sensor
+#T# Mouse sensor
+#T# Near sensor
+#T# Property sensor
+#T# Radar sensor
+#T# Random sensor
 #T# Ray sensor
+
+#T# Start
 
 #T# bge package
 
@@ -122,12 +137,209 @@ sensor_actuator1.actuator = 'actuator_name1'
 
 #T# Collision sensor
 
-#T# create the collision sensor, it senses
+#T# create the collision sensor, it senses when an object collides or touches the sensor. The object must be a rigid body, or if the object is static then it must be an actor, and the sensor must be type sensor and have collision bounds enabled
 sensor_collision1 = types.KX_TouchSensor()
 
-#T# 
-#sensor_collision1.
+#T# set or get the pulse flag, which if true sends a signal each time a new object collides with the sensor, otherwise only the first collision activates the sensor and the sensor deactivates only when all objects stop touching the sensor
+sensor_collision1.usePulseCollision = True
 
+#T# set or get what is sensed by the collision sensor, a material, or a property
+sensor_collision1.useMaterial = True
+
+#T# set or get the name of the material, or property being sensed for
+sensor_collision1.propName = 'material_name1'
+
+#T# get the first object to collide with the sensor
+hitObject1 = sensor_collision1.hitObject
+
+#T# get the list of objects that are colliding with the sensor
+hitObjectList1 = sensor_collision1.hitObjectList
+
+#T# Delay sensor
+
+#T# create the delay sensor, it waits for a number of logic ticks to then send a positive signal, and after a duration it turns off the signal
+sensor_delay1 = types.SCA_DelaySensor()
+
+#T# set or get the delay in logic ticks
+sensor_delay1.delay = 60
+
+#T# set or get the duration of the positive signal in logic ticks
+sensor_delay1.duration = 20
+
+#T# set or get the repeat flag, which if true repeats the delay duration cycle
+sensor_delay1.repeat = True
+
+#T# Joystick sensor
+
+#T# create the joystick sensor, it senses input from a joystick
+sensor_joystick1 = types.SCA_JoystickSensor()
+
+#T# set or get the joystick index, between 0 and 7, which identifies the joystick that activates the sensor
+sensor_joystick1.index = 7
+
+#T# get the number of axes in the joystick
+numAxis1 = sensor_joystick1.numAxis
+
+#T# get a list with the values in each axis
+axisValues1 = sensor_joystick1.axisValues
+
+#T# get the number of buttons in the joystick
+numButtons1 = sensor_joystick1.numButtons
+
+#T# Keyboard sensor
+
+#T# create the keyboard sensor, it senses input from the keyboard
+sensor_keyboard1 = types.SCA_KeyboardSensor()
+
+#T# set or get the main key that activates the sensor
+sensor_keyboard1.key = events.EIGHTKEY
+
+#T# set or get the first modifier key to hold while pressing the main key to activate the sensor
+sensor_keyboard1.hold1 = events.COMMAKEY
+
+#T# set or get the second modifier key to hold while pressing the first modifier and the main key to activate the sensor
+sensor_keyboard1.hold2 = events.LEFTARROWKEY
+
+#T# set or get the use all keys flag, which if true activates the sensor by pressing any key
+sensor_keyboard1.useAllKeys = False
+
+#T# set or get the boolean property whose value determines if the keys get logged or not
+sensor_keyboard1.toggleProperty = 'boolean_property_name1'
+
+#T# set or get the string property which will act as the key logger storing the entered key strokes
+sensor_keyboard1.targetProperty = 'string_property_name1'
+
+#T# get a list of pairs, key pressed and its status, with all the keys simultaneously pressed in a logic tick
+events1 = sensor_keyboard1.events
+
+#T# get the press status of a given key
+keyStatus1 = sensor_keyboard1.getKeyStatus(events.F10KEY)
+
+#T# Message sensor
+
+#T# create the message sensor, it senses for the arrival of a message that was sent from a message actuator
+sensor_message1 = types.KX_NetworkMessageSensor()
+
+#T# set or get the subject of the message that the sensor will wait for
+sensor_message1.subject = 'new_subject1'
+
+#T# get the subjects received by the sensor in a logic tick, in case the sensor receives any subjects
+subjects1 = sensor_message1.subjects
+
+#T# get the bodies of the messages received by the sensor in a logic tick
+bodies1 = sensor_message1.bodies
+
+#T# get the count of messages received by the sensor in a logic tick
+frameMessageCount1 = sensor_message1.frameMessageCount
+
+#T# Mouse sensor
+
+#T# create the mouse sensor, it senses
+sensor_mouse1 = types.SCA_MouseSensor()
+
+#T# set or get the mode of the mouse event. This is an integer, 1 means Left Button, 2 means Middle Button, 3 means Right Button, 4 means Wheel Up, 5 means Wheel Down, 6 means Movement
+sensor_mouse1.mode = 4
+
+#T# set of get the pulse focus flag, which if true sets the mouse to send a pulse each time it goes over an object, even if they overlap. This applies to the Mouse Over Any event
+sensor_mouse1.usePulseFocus = False
+
+#T# get the screen position of the mouse, [x,y] with origin at the top left of the game screen and measured in pixels
+position1 = sensor_mouse1.position
+
+#T# get the status for any of the three mouse buttons, the returned int has the same meaning as with the keyboard buttons
+buttonStatus1 = sensor_mouse1.getButtonStatus(events.LEFTMOUSE)
+
+#T# the following attributes are for the mouse over events
+
+#T# get the object which has the mouse over
+hitObject1 = sensor_mouse1.hitObject
+
+#T# get the normal of the face under the mouse as a standardized vector
+hitNormal1 = sensor_mouse1.hitNormal
+
+#T# get the global position in which the mouse has intersected an object
+hitPosition1 = sensor_mouse1.hitPosition
+
+#T# get the UV coordinates in which the mouse has intersected an object
+hitUV1 = sensor_mouse1.hitUV
+
+#T# Near sensor
+
+#T# create the near sensor, it senses for objects near the sensor
+sensor_near1 = types.KX_NearSensor()
+
+#T# set or get the name of the property that objects must have when they get near the sensor to activate it
+sensor_near1.propName = 'new_property_name1'
+
+#T# set or get the distance (in Blender scene units) from the sensor in which objects will activate it and send a signal
+sensor_near1.distance = 3
+
+#T# set or get the distance (in Blender scene units) from the sensor that will reset the sensor after the object leaves
+sensor_near1.resetDistance = 3.1
+
+#T# get the first object near the sensor
+hitObject1 = sensor_near1.hitObject
+
+#T# get the list of objects near the sensor
+hitObjectList1 = sensor_near1.hitObjectList
+
+#T# Property sensor
+
+#T# create the property sensor, it takes the value of a given property and compares it to another value (can be itself), sending a signal according to the result of the comparison
+sensor_property1 = types.SCA_PropertySensor()
+
+#T# set or get the name of the property whose value is being sensed for
+sensor_property1.propName = 'property_name1'
+
+#T# set or get the mode of evaluation, the evaluation type determines the comparison that will be made, 1 means equal, 2 means not equal, 3 means interval, 4 means changed, 6 means less than, 7 means greater than
+sensor_property1.mode = 6
+
+#T# set or get the value that the property is compared against
+sensor_property1.value = 120
+
+#T# set or get the minimum and maximum values for the interval evaluation type
+sensor_property1.min = 3
+sensor_property1.max = 7
+
+#T# Radar sensor
+
+#T# create the radar sensor, it senses for objects near the sensor in a conic shape
+sensor_radar1 = types.KX_RadarSensor()
+
+#T# set or get the axis direction, 0 is +x, 1 is +y, 2 is +z, 3 is -x, 4 is -y, 5 is -z
+sensor_radar1.axis = 5
+
+#T# set or get the property name that objects must have in order to be detected when entering the radar
+sensor_radar1.propName = 'property_name1'
+
+#T# get the angle of the radar cone
+angle1 = sensor_radar1.angle
+
+#T# get the distance of the radar cone from apex to the base
+distance1 = sensor_radar1.distance
+
+#T# get the first object sensed in the radar cone
+hitObject1 = sensor_radar1.hitObject
+
+#T# get the list of objects sensed in the radar cone
+hitObjectList1 = sensor_radar1.hitObjectList
+
+#T# get the point of origin of the radar cone
+coneOrigin1 = sensor_radar1.coneOrigin
+
+#T# get the point at the center of the base from the radar cone
+coneTarget1 = sensor_radar1.coneTarget
+
+#T# Random sensor
+
+#T# create the random sensor, it randomly sends a signal, on average half of the logic ticks the sensor sends a signal, and the other half it doesn't
+sensor_random1 = types.SCA_RandomSensor()
+
+#T# set or get the seed for the random number generation
+sensor_random1.seed = 220
+
+#T# get the last outcome as a boolean value
+lastDraw1 = sensor_random1.lastDraw
 
 #T# Ray sensor
 
@@ -144,7 +356,7 @@ sensor_ray1.range = 5
 #T# set or get what is sensed by the ray, a material, or a property. The following sets the ray to sense for a property
 sensor_ray1.useMaterial = False
 
-#T# set or get the name of the material or property being sensed for
+#T# set or get the name of the material, or property being sensed for
 sensor_ray1.propName = 'property_name1'
 
 #T# set or get whether the sensor has xrays to see through objects
