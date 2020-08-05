@@ -1,33 +1,83 @@
 
 #   Arrays
 
-#T# Contents
+#T# Table of contents
+
+#T# Arrays in general
+#T# Strings
 #T# Lists
 #T# Tuples
 #T# Dictionaries
+#T# Sets
+
+#T# Beginning of content
+
+#T# Arrays in general
+
+list1 = [3,6,1,2]
+#T# get the length of an array, the amount of elements it contains, with the len function
+int1 = len(list1)
+
 #T# Strings
+
+#T# string creation, read, write
+str1 = "first string"; str2 = 'str2'
+str2 = str1 + ' written'
+
+#T# membership with in, the string acts as a set of its characters
+bool1 = "g" in str1
+
+#T# include escape sequences in a string without their meaning with the raw string prefix "r" or "R"
+str1 = r"\nRaw\tString"
+
+#T# format a string ala printf with "str1 %fmt_spec1 %fmt_spec2" %(var1,var2), where each var goes into the respective position of a format specifier %fmt_spec
+str1 = "string: %s, digit: %d" %("S1",514)
+
+#T# similar format can be done with 'str1 {} str2 {}'.format(var1,var2) where the format function maps each var to a pair of curly braces in the same position
+str1 = 'string: {}, digit: {}'.format("S1",514)
+
+#T# unicode string with prefix "u" or "U"
+str1 = u"gálèät"
+
+#T# string of bytes with prefix "b" or "B", if the byte is represented as an octal number it needs three numbers \NNN and the first has the first bit ignored, so the first number shouldn't be greater than 3
+str1 = b"\101\271\x6c"
+
+int1 = 5; int2 = 7
+#T# string interpolation with prefix "f" or "F", the string interpolation is done inside curly braces. If var1 = val1, print both directly with the self documenting expression {var1 = }
+str1 = f"partial string {str2[9:18]}, {str2 = }"
+
+#T# f strings can be formatted, the syntax is {expr:format1} where format1 can contain apw.P[f|b|o|x] a is the alignment symbol [<|>], p is the padding symbol, w is the width, .P is a number indicating the precision, f for float, b for binary, o for octal, x for hex, e for scientific notation
+num1 = 6.4
+#T# the following returns 0006.400
+str2 = f'{num1:>08.3f}'
 
 #T# Lists
 
-#T# declaring, updating, and accessing list
-list1 = ['el1',2,'El3']
+#T# declaring, reading from, and writing to lists
+list1 = ['elem1',2,'elem3']
+int1 = list1[1]
 list1[1] = 5
-print(list1[1:3])
 
-#T# append to list with append()
-list1.append("appEl")
-list2 = list1
-print(list2)
+#T# when reading from a list, if the upper limit in a slice of the list is greater than the size of the list, it's ignored, the list is read up to its last element
+str1 = list1[2:538]
 
-#T# remove from list with remove()
-list1.remove('El3')
-print(list1)
+#T# append an element to a list with the append function
+list1.append("append_elem")
 
-list3 = ['a','b']
-#T# list functions
-print("Repetitions of \'el1\'",list1.count('el1'))
-list1.extend(list3)
-print(list1)
+#T# remove an element from a list with the remove function
+list1.remove('elem3')
+
+list2 = ['a','b']
+#T# extend a list appending all elements from another, in list1.extend(list2) the elements from list2 are appended to list1
+list1.extend(list2)
+
+#T# List functions
+
+list1 = ['a', 5, 'append_elem', 'a', 'b']
+#T# count the repetitions of an element, in list1.count('elem1') the repetitions of the element 'elem1' are counted in list1
+int1 = list1.count('a')
+print(int1)
+
 print("Index of \'appEl\'",list1.index('appEl'))
 list1.insert(1,'el3')
 print(list1)
@@ -81,70 +131,4 @@ print("append a dict to another:",dict2)
 dict2.setdefault('noKey','defVal')
 print("default value:",dict2['noKey'])
 
-#T# Strings
-
-#T# string declaration, updating, and access
-str1 = "first string"
-updStr1 = str1 + ' update'
-print("pos 3 to 8: ",updStr1[3:9])
-
-#T# membership with in
-if ("g" in updStr1):
-    print("the string also has a \"g\"")
-
-#T# print escape sequences with raw string prefix "r" or "R"
-print(r"\nRaw\tString")
-
-#T# print formatted with %
-print("string: %s, digit: %d" %("S1",514))
-
-#T# unicode string with prefix "u"
-print(u"gálèät")
-
-#T# string interpolation with prefix "f"
-print(f"partial string {updStr1[3:9]}")
-
-#T# string functions
-print("capital first".capitalize())
-print("centered".center(20))
-print("leftJus".ljust(20))
-print("rightJus".rjust(20))
-print("The t's in the string are ",updStr1.count("t",1,len(updStr1)))
-encSt = updStr1.encode('utf8','strict')
-print("Encoded string: ",encSt)
-print("Decoded string: ",encSt.decode('utf8','strict'))
-print("String ends with date? ",updStr1.endswith("date",7,len(updStr1)))
-print("String begins with irst?",updStr1.startswith("irst",1,10))
-print("With\texpanded\ttabs".expandtabs(18))
-print("is \"second\" in string? ",updStr1.find("second",3,len(updStr1)))
-print("index of \"str\" is ",updStr1.index("str",3,len(updStr1)))
-print("is it purely alphanumeric? ",updStr1.isalnum())
-print("is it purely alphabetic? ",updStr1.isalpha())
-print("is it purely numeric? ",updStr1.isdigit())
-print("is it purely lowercase? ",updStr1.islower())
-print("another numeric? ",updStr1.isnumeric())
-print("has it only decimal characters? ",updStr1.isdecimal())
-print("is it purely whitespace? ",updStr1.isspace())
-print("is it titlecased? ",updStr1.istitle())
-print("is it purely uppercase? ",updStr1.isupper())
-list1 = ['el1',"2",'El3']
-print("joined as string ","-|-".join(list1))
-print("all uppercase ",updStr1.upper())
-print("ALL LOWERCASE ".lower())
-print("sWAP cASE!".swapcase())
-print("title cased ",updStr1.title())
-print(" \t  stripped of leading whitespace".lstrip())
-print("stripped of trailing whitespace \t ".rstrip())
-print(" \t both ways stripped \t ".strip())
-translTab = "".maketrans("aeiou","12345")
-print(updStr1.translate(translTab))
-print("max alphabetical char is ",max(updStr1))
-print("min alphabetical char is ",min(updStr1))
-print("replace str: ",updStr1.replace("t","q",2))
-print("reverse find: ",updStr1.rfind("second",2,len(updStr1)))
-print("reverse index: ",updStr1.rindex("t",3,len(updStr1)))
-list2 = updStr1.split(" ")
-print("list2 is ",list2)
-list3 = "line1\nline2 w1\nl3 w1 w2 w3".splitlines()
-print("list3 is ",list3)
-print("zero filled".zfill(20))
+#T# Sets

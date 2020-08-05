@@ -3,7 +3,7 @@
 
 #T# UPBGE stands for Uchronia Project Blender Game Engine
 
-#T# Contents
+#T# Table of contents
 
 #T# bge package
 
@@ -23,7 +23,7 @@
 #T# Random sensor
 #T# Ray sensor
 
-#T# Start
+#T# Beginning of content
 
 #T# bge package
 

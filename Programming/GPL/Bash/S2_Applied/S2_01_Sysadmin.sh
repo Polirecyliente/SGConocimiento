@@ -1,13 +1,17 @@
 
 #   Sysadmin
 
-#T# Contents
+#T# Table of contents
+
 #T# Essential commands and syntax
 #T# Process management
 #T# User and group management
 #T# Hardware detection
 #T# Devices
 #T# Fonts
+#T# Internet
+
+#T# Beginning of content
 
 #T# Essential commands and syntax
 
@@ -61,6 +65,9 @@ usermod -a -G audio jul
 #T# list hardware with lshw, the option -short gives a summary
 lshw -short
 
+#T# list pci devices along with their drivers, the -k flag is to show the kernel drivers and kernel modules
+lspci -k
+
 #T# Devices
 
 #T# Check mounted devices in /proc/mounts
@@ -72,3 +79,8 @@ mount -l
 
 #T# fonts are stored in /usr/share/fonts/
 cd /usr/share/fonts/
+
+#T# Internet
+
+#T# download a file from the internet with wget, the -c flag is to continue downloading a partially downloaded file
+wget -c http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run
