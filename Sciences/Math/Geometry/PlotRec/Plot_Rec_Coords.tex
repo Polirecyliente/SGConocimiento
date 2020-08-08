@@ -1,0 +1,15 @@
+\documentclass{article}
+
+\usepackage{pst-eucl}
+
+\begin{document}
+
+\begin{figure}
+    \begin{tikzpicture}
+    \begin{axis}
+        \addplot table[x=xCo,y=yCo,col sep=comma]{Coords.csv};
+    \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+\end{document}

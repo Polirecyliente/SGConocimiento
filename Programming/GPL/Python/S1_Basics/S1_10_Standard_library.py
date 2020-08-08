@@ -1,6 +1,11 @@
 
 #   Builtin functions
 
+#T# String functions
+#T# List functions
+#T# Dictionary functions
+#T# Datetime functions
+
 import math
 x = -5.15
 y = 4
@@ -180,7 +185,32 @@ str2 = "zfilled_string"
 #T# make a string str1 fill a given width1, padding with zeros at the left of str1, with str1.zfill(width1)
 str2 = str2.zfill(20)
 
-#T# Datetime
+#T# List functions
+
+list1 = ['a', 5, 'append_elem', 'a', 'elem5']
+#T# count the repetitions of an element, in list1.count('elem1') the repetitions of the element 'elem1' are counted in list1
+int1 = list1.count('a')
+
+#T# get the index of the first occurrence, in list1.index('elem1') the returned value is the index of the first occurrence of 'elem1' in list1
+int1 = list1.index('elem5')
+
+#T# reverse the order of the elements with the reverse function, it returns None, so it shouldn't be assigned to a var
+list1.reverse()
+
+list1[3] = str(list1[3])
+#T# sort elements in a list, in list1.sort([reverse = True|False[, key=fun1]]), the default order is ascending, if the reverse kwarg is True then the order is descending, the key kwarg is for the sorting function fun1, the result is sorted from smaller to bigger return values of this sorting function, the default is alphabetical order
+list1.sort(reverse=True,key=len)
+
+#T# Dictionary functions
+
+dict1 = {'key1': 85, 'key2': 85}
+#T# create a new key value pair in a dictionary only if the key doesn't already exists with the setdefault function
+# dict1.setdefault('new_key1','new_val1')
+#T# the pair 'new_key1', 'new_val1' will be added to dict1 only if 'new_key1' is not in dict1 already
+dict1.setdefault('new_key','new_val') # new_val
+dict1.setdefault('key2','val2') # 85
+
+#T# Datetime functions
 
 #T# import the time module
 import time

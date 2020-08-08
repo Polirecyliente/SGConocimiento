@@ -41,6 +41,7 @@ q3 = """sen3word1 sen3"'"'word2
 
 #T# an special kind of combination of literals are escape sequences, they mean something particular, e.g. the \n means newline
 q1 = "Line1\nLine2"
+#T# an escape sequence starts with a backslash and is followed by other character or characters
 
 #T# Expressions
 
@@ -52,8 +53,9 @@ expr1 = 5 + 3 - 7
 #T# basic output to stdout with the print function
 print("Hello, Python!")
 
-#T# the function name can be separated by whitespace, but not a newline, from the args in parentheses. Basic input from stdin with the input function
+#T# basic input from stdin with the input function
 input                   ("\nGive an input to continue the script\n")
+#T# the function name can be separated by whitespace, but not a newline, from the args in parentheses
 
 #T# Multiline statements
 

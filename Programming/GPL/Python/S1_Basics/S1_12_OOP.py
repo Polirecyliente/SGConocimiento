@@ -7,6 +7,8 @@
 #T# Parts of a class
 #T# Attributes
 
+#T# TODO dir(obj1) function, Method Resolution Order MRO
+
 #T# class statement
 class ClassName1:
     "here goes the class docstring"

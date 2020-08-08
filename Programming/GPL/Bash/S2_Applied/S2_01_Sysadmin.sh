@@ -8,6 +8,7 @@
 #T# User and group management
 #T# Hardware detection
 #T# Devices
+#T# System libraries
 #T# Fonts
 #T# Internet
 
@@ -65,8 +66,15 @@ usermod -a -G audio jul
 #T# list hardware with lshw, the option -short gives a summary
 lshw -short
 
-#T# list pci devices along with their drivers, the -k flag is to show the kernel drivers and kernel modules
+#T# list pci devices along with their drivers
 lspci -k
+#T# the -k flag is to show the kernel drivers and kernel modules
+
+#T# System libraries
+
+#T# print the cache of installed libraries
+ldconfig -p
+#T# the -p flag is for printing the cache
 
 #T# Devices
 

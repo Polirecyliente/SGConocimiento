@@ -14,121 +14,194 @@
 
 #T# Arrays in general
 
-list1 = [3,6,1,2]
+#T# arrays can be mainly strings, lists, and tuples, but also dictionaries and sets
+
+str1 = "example string"
+list1 = [99,99,1,99,99,2,99,99,3,99]
+tuple1 = ('elem1',2)
 #T# get the length of an array, the amount of elements it contains, with the len function
-int1 = len(list1)
+int1 = len(list1) # 10
+
+#T# the following operators can only be applied to the main types of arrays, strings, lists, and tuples
+
+#T# the slice operator is used to create a slice of the original array arr1
+# arr1[ini_elem:final_elem]
+#T# this includes ini_elem, up to before final_elem (excludes final_elem)
+str2 = str1[2:5] # amp
+# arr1[ini_elem:final_elem:stepN]
+#T# step by stepN elements
+list2 = list1[2:9:3] # [1,2,3]
+
+#T# the concatenation operator + is used to concatenate arrays
+# arr1 + arr2 + arr3
+tuple2 = tuple1 + ('elem3',4) # ('elem1',2,'elem3',4)
+
+#T# the repetition operator * is used to repeat an array arr1 after itself a number of times N1
+# arr1 * N1
+tuple2 = tuple1 * 3 # ('elem1', 2, 'elem1', 2, 'elem1', 2)
+
+list1 = ['elem1',2,'elem3']
+#T# when reading from, or writing to an array, if the index is negative it is counted right to left, the last element is at index -1, the second to last is at index -2, the nth to last is at -n, and so on
+str1 = list1[-3] # 'elem1'
+
+#T# when slicing an array, if the upper limit is greater than the size of the array, it's ignored, and the same goes for the lower limit in the slice if it's less than the negative size of the array
+list2 = list1[-4:3] # ['elem1', 2, 'elem3']
 
 #T# Strings
 
-#T# string creation, read, write
-str1 = "first string"; str2 = 'str2'
-str2 = str1 + ' written'
-
+str1 = "first string"
 #T# membership with in, the string acts as a set of its characters
-bool1 = "g" in str1
+bool1 = "g" in str1 # True
 
 #T# include escape sequences in a string without their meaning with the raw string prefix "r" or "R"
-str1 = r"\nRaw\tString"
+str1 = r"\nRaw\tString" # '\\nRaw\\tString'
 
-#T# format a string ala printf with "str1 %fmt_spec1 %fmt_spec2" %(var1,var2), where each var goes into the respective position of a format specifier %fmt_spec
-str1 = "string: %s, digit: %d" %("S1",514)
+#T# format a string ala printf
+# "str1 %fmt_spec1 str2 %fmt_spec2 str3" %(var1,var2)
+#T# var1 goes into %fmt_spec1, var2 into %fmt_spec2, and so on
+str1 = "string: %s, digit: %d" %("S1",514) # 'string: S1, digit: 514'
 
-#T# similar format can be done with 'str1 {} str2 {}'.format(var1,var2) where the format function maps each var to a pair of curly braces in the same position
-str1 = 'string: {}, digit: {}'.format("S1",514)
+#T# similar format can be done
+# 'str1 {} str2 {} str3'.format(var1,var2)
+#T# the format function maps each var to a pair of curly braces in the same position
+str1 = 'string: {}, digit: {}'.format("S1",514) # 'string: S1, digit: 514'
 
-#T# unicode string with prefix "u" or "U"
-str1 = u"gálèät"
+#T# unicode string with prefix "u" or "U", this is the default
+str1 = u"gálè\u02A0ät" # 'gálèʠät'
+str1 =  "gálè\u02A0ät" # 'gálèʠät'
 
-#T# string of bytes with prefix "b" or "B", if the byte is represented as an octal number it needs three numbers \NNN and the first has the first bit ignored, so the first number shouldn't be greater than 3
-str1 = b"\101\271\x6c"
+#T# string of bytes with prefix "b" or "B", each byte can be represented as 3 octal numbers \NNN or as two hexadecimal numbers \xNN, if the whole number is in the ascii range (less than 128) it will be represented as a character
+str1 = b"\101\271\xAC" # b'A\xb9\xac', \101 is 65 or 'A', \271 is 185 or \xb9
+#T# a byte as an octal number needs three numbers \NNN, the first N has the first bit ignored, so the first N shouldn't be greater than 3
 
-int1 = 5; int2 = 7
-#T# string interpolation with prefix "f" or "F", the string interpolation is done inside curly braces. If var1 = val1, print both directly with the self documenting expression {var1 = }
-str1 = f"partial string {str2[9:18]}, {str2 = }"
+str1 = "swords and quotes"
+#T# string interpolation with prefix "f" or "F", the string interpolation is done inside curly braces
+# f'str1 {var1 = } str2 {var2}'
+#T# if var1 = val1 then both are printed directly with the self documenting expression {var1 = }, var2 only gets its value val2 printed
+str2 = f"interp: {str1[2:15]}, {str1 = }" # "interp: ords and quot, str1 = 'swords and quotes'"
 
-#T# f strings can be formatted, the syntax is {expr:format1} where format1 can contain apw.P[f|b|o|x] a is the alignment symbol [<|>], p is the padding symbol, w is the width, .P is a number indicating the precision, f for float, b for binary, o for octal, x for hex, e for scientific notation
+#T# f strings can be formatted
+# f'{expr:format1}'
+#T# format1 has the form apw.Pt
+#T#     a is the alignment, left <, right >
+#T#     p is the padding, 0 for zero padding, a space for whitespace padding
+#T#     w is the total width of the number, and is an integer
+#T#     .P is a number indicating the precision i.e. the amount of numbers after the decimal period
+#T#     t is the type, f for float, b for binary, o for octal, x for hex, e for scientific notation
 num1 = 6.4
-#T# the following returns 0006.400
-str2 = f'{num1:>08.3f}'
+str2 = f'{num1:>08.3f}'     # 0006.400
+str2 = f'{num1:< 10.1e}'    # ' 6.4e+00  '
+str2 = f'{int(num1):05b}'   # '00110'
+str2 = f'{int(num1):< 5o}'  # ' 6   '
+str2 = f'{int(num1):x}'     # '6'
+
+#T# escape the curly braces in an f string by duplicating the braces
+str2 = f'{{1+2}} = {1+2}' # '{1+2} = 3'
 
 #T# Lists
 
-#T# declaring, reading from, and writing to lists
 list1 = ['elem1',2,'elem3']
-int1 = list1[1]
-list1[1] = 5
-
-#T# when reading from a list, if the upper limit in a slice of the list is greater than the size of the list, it's ignored, the list is read up to its last element
-str1 = list1[2:538]
-
 #T# append an element to a list with the append function
-list1.append("append_elem")
+list1.append("append_elem") # list1 == ['elem1', 2, 'elem3', 'append_elem']
 
 #T# remove an element from a list with the remove function
-list1.remove('elem3')
+list1.remove('elem3') # list1 == ['elem1', 2, 'append_elem']
 
 list2 = ['a','b']
-#T# extend a list appending all elements from another, in list1.extend(list2) the elements from list2 are appended to list1
-list1.extend(list2)
+#T# extend a list appending all elements from another
+# list1.extend(list2)
+#T# the elements from list2 are appended to list1
+list1.extend(list2) # list1 == ['elem1', 2, 'append_elem', 'a', 'b']
 
-#T# List functions
+#T# insert an element at a given position
+# list1.insert(pos1,'insert_elem1')
+#T# the element 'insert_elem1' is inserted at the index pos1 of list1, displacing the following elements to the right
+list1.insert(4,'inserted_elem') # list1 == ['elem1', 2, 'append_elem', 'a', 'inserted_elem', 'b']
 
-list1 = ['a', 5, 'append_elem', 'a', 'b']
-#T# count the repetitions of an element, in list1.count('elem1') the repetitions of the element 'elem1' are counted in list1
-int1 = list1.count('a')
-print(int1)
-
-print("Index of \'appEl\'",list1.index('appEl'))
-list1.insert(1,'el3')
-print(list1)
-list1.pop(-4)
-print(list1)
-list1.reverse()
-print(list1)
-list1.sort()
-print(list1)
+#T# pop the last element from a list, or the element at a given index
+# list1.pop(pos1)
+#T# if pos1 is not given then the last element is popped, otherwise the element at index pos1 of list1 is popped and returned
+list1.pop(-4) # 'append_elem'
+#T# list1 == ['elem1', 2, 'a', 'inserted_elem', 'b']
 
 #T# Tuples
 
-#T# declaration and accessing
-tupl1 = ('tEl1','tElB','tF')
-print(tupl1[1:3])
+tuple1 = (0,7,'repeated_elem',12,'repeated_elem',1,1,'repeated_elem')
+#T# as read only variables, tuples have fewer functions than lists
 
-#T# tuple functions
+#T# count the occurrences
+# tuple1.count('elem1')
+#T# the returned value is the amout of times 'elem1' is in tuple1
+int1 = tuple1.count('repeated_elem') # 3
 
-#T# get the size or length of a tuple with the len(tuple1) function
-var1 = len(tupl1)
-var2 = max(tupl1)
+#T# get the index of the first occurrence of an element
+# tuple1.index('elem1')
+#T# the returned value is the index of the first occurrence of 'elem1' in tuple1
+int1 = tuple1.index('repeated_elem') # 2
 
 #T# Dictionaries
 
-#T# declaration, updating, and accessing
-dict1 = {'key1':5,'key2':'val2'}
-dict1['keyNew'] = 'newV'
-print(dict1['keyNew'])
+dict1 = {'key1':2,'key2':'val2'}
+#T# append a new key value pair directly
+dict1['new_key'] = 'new_value' # dict1 == {'key1': 2, 'key2': 'val2', 'new_key': 'new_value'}
 
-#T# clear the whole dictionary with clear()
-dict1.clear()
-print(dict1)
+#T# get the value of a key with the get function
+# dict1.get('key1')
+#T# this returns the value of 'key1' in dict1
+str1 = dict1.get('key2') # 'val2'
 
-dict2 = {'key1':7,'key2':'val2'}
-#T# dictionary functions
-print("dict with str representation:",str(dict2))
-print("type of dict var is: ",type(dict2))
-dict3 = dict2.copy()
-print("new dict: ",dict3)
-tupl1 = ('tupK1','valNo')
-dict4 = dict.fromkeys(tupl1,8)
-print("dict from keys:",dict4)
-print("value from key \'key2\'",dict2.get('key2'))
-print("dict's items:",dict2.items())
-print("dict's keys:",dict2.keys())
-print("dict's values:",dict2.values())
+#T# clear the whole dictionary with the clear function
+dict1.clear() # {}
 
-#T# append a dictionary to another with dict1.update(dictAppended)
-dict2.update(dict4)
-print("append a dict to another:",dict2)
-dict2.setdefault('noKey','defVal')
-print("default value:",dict2['noKey'])
+dict1 = {'key1':7,'key2':'val2'}
+dict2 = {'dict2_key':'dict2_val'}
+#T# copy a dictionary's contents overwriting another with the copy function
+dict2 = dict1.copy() # {'key1': 7, 'key2': 'val2'}
+
+tuple1 = ('key1','key2')
+#T# create a dictionary from an iterable (tuples, lists)
+# dict.fromkeys(arr1,'val1')
+#T# use the values in arr1 as the keys, and assign to each key the value 'val1'
+dict1 = dict.fromkeys(tuple1,85) # {'key1': 85, 'key2': 85}
+
+#T# get a dict_items object from a dictionary, as a list of tuples, each tuple corresponding to a key value pair of the dictionary
+dict_items1 = dict1.items() # dict_items([('key1', 85), ('key2', 85)])
+
+dict2 = {'appended_key1':80,'key2':'val2'}
+#T# update a dictionary with another
+# dict1.update(dict2)
+#T# the key value pairs from dict1 are updated with those of dict2
+dict1.update(dict2) # dict1 == {'key1': 85, 'key2': 'val2', 'appended_key1': 80}
 
 #T# Sets
+
+set1 = {'elem',5}
+froz1 = frozenset({"elem_froz",62,88,5})
+#T# common set operations are
+#T#     union |
+#T#     intersection &
+#T#     difference -
+#T#     symmetric difference
+set2 = set1.union(froz1)                # {5, 'elem', 'elem_froz', 88, 62}
+set2 = set1 | froz1                     # {5, 'elem', 'elem_froz', 88, 62}
+set2 = set1.intersection(froz1)         # {5}
+set2 = set1 & froz1                     # {5}
+set2 = set1.difference(froz1)           # {'elem'}
+set2 = set1 - froz1                     # {'elem'}
+set2 = set1.symmetric_difference(froz1) # {'elem', 'elem_froz', 88, 62}
+
+set1 = {5}
+#T# comparisons between sets 
+
+#T# subsets <, <=
+bool1 = set1.issubset(froz1) # True
+bool1 = set1 < froz1         # True
+bool1 = set1 <= froz1        # True
+
+#T# supersets >, >=
+bool1 = set1.issuperset(froz1) # False
+bool1 = set1 > froz1           # False
+bool1 = set1 >= froz1          # False
+
+#T# equal sets ==
+bool1 = set1 == froz1 # False
