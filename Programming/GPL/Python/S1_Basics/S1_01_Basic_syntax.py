@@ -8,6 +8,7 @@
 #T# Escape sequences
 #T# Expressions
 #T# Function calls
+#T# Statements
 #T# Multiline statements
 #T# Multistatement lines
 
@@ -56,6 +57,15 @@ print("Hello, Python!")
 #T# basic input from stdin with the input function
 input                   ("\nGive an input to continue the script\n")
 #T# the function name can be separated by whitespace, but not a newline, from the args in parentheses
+
+#T# Statements
+
+#T# an statement is a complete instruction
+int1 = 5
+#T# int1 = 5 is a statement, the variable int1 is made to point to the value 5
+
+#T# use the pass keyword to create a statement that does nothing, as a filler
+pass
 
 #T# Multiline statements
 

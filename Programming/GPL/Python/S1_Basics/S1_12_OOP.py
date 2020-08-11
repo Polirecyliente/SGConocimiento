@@ -7,7 +7,10 @@
 #T# Parts of a class
 #T# Attributes
 
-#T# TODO dir(obj1) function, Method Resolution Order MRO
+#T# TODO dir(obj1) function, Method Resolution Order MRO, @property decorator
+
+#T# get the docstring of a function with func1.__doc__
+str1 = abs.__doc__
 
 #T# class statement
 class ClassName1:

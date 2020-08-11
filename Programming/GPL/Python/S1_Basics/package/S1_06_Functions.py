@@ -1,46 +1,98 @@
 
 #   Functions
 
-#T# TODO First-class citizens, anonymous functions, list comprehension, function decorators, function annotation ->, function annotation inside parameters
+#T# Table of contents
 
-#T# def funName (param1,param2 = defaultV,*paramTuple): "docstring" return
-def fun1 (f1arg1,f1arg2 = 8,*f1argTuple):
-    "here goes the fun1 docstring or documentation string with its purpose"
-    f1arg1 = f1arg1 * (2 + f1arg2)
-    varF1 = f1arg1
-    for varTup in f1argTuple:
-        print(varTup)
-    return varF1
+#T# Function definition
+#T# Function call
+#T# Anonymous functions
+#T# Functions as first class citizens
+#T# Function decorators
+#T# Function annotations
 
-#T# get the docstring of a function with fun1.__doc__
-print("fun1() docstring:",fun1.__doc__)
+#T# Beginning of content
 
-f1arg1 = 6
-#T# function call funName(param1 = keywordArg)
-ret1 = fun1(f1arg1 = f1arg1)
-print("val of arg",f1arg1,"\nval of ret",ret1)
+#T# Function definition
 
-#T# call a function with an argument that unpacks a list or tuple (*param)
-fun1(1,8,"3tuple","z8","str1")
+#T# functions are defined with parameters to return a value, they are called with arguments to process the return value
 
-#T# define a function with an unpackable dictionary with the ** operator
-def funKWunpack(**paramDict):
-    for varKey in paramDict:
-        print(paramDict[varKey])
+# def func1 (param1,param2 = default_value2,*varargs_tuple1): 
+#     "docstring1"
+#     statements1
+#     return val1
+#T# func1 is the function name, param1 is an obligatory parameter, param2 has a default default_value2, *varargs_tuple1 is a tuple with a variable amount of parameters, so param1 has to come before the other kinds of parameters, "docstring1" is the help string, statements1 are executed when func1 is called, and then val1 is returned from the function, it can be an array
+def func1 (param1,param2 = 5,*varargs_tuple1):
+    "func1 docstring or documentation string with its purpose"
+    val1 = param1 * (5 + param2) # param1 * 10 with default param2
+    for elem_i1 in varargs_tuple1:
+        val1 /= elem_i1
+    return val1
 
-#T# call a function with an argument that unpacks a dictionary (**dict), this can be used as a dictionary of keyword arguments
-dict1 = {'k1':"val1",'key2':"value2"}
-funKWunpack(**dict1)
+#T# Function call
 
-#T# return multiple values from a function by using a tuple, list, or dict
-def retMultiValsInTuple():
-    return(3,'st0')
+arg1 = 6
+#T# make a function call
+# return_value1 = func1(param1 = arg1,arg2,arg3,arg4)
+#T# as in the definition, arg1 is obligatory and is a keyword argument (kwarg), arg2 is optional and overrides the default value, arg3, and arg4 are varargs
+ret1 = func1(arg1,5,3) # 20.0
 
-#T# assing multiple values from a tuple
-va1, va2 = retMultiValsInTuple()
-print("va1 is:",va1,"va2 is:",va2)
+#T# Anonymous functions
 
-#T# anonymous function with lambda
-opFun1 = lambda aFarg1,aFarg2: 7 * aFarg1 + (aFarg2 - 1)
-valOp1 = opFun1(3,4)
-print("after anonymous function",valOp1)
+#T# create anonymous functions with the lambda keyword
+# anon_func1 = lambda arg1, arg2, arg3: (arg1 + arg2)/arg3
+#T# the expresion after the colon can be any other, the function name is anon_func1, arg1, arg2, and arg3 are the arguments
+anon_func1 = lambda arg1, arg2: 7 * arg1 + (arg2 - 1)
+ret1 = anon_func1(3,6) # 26
+
+#T# Functions as first class citizens
+
+#T# as first class citizens, functions can be assigned to vars, passed as args, and returned from functions
+
+#T# assign a function to a variable
+var1 = func1
+ret1 = var1(5) # 50
+
+#T# create a function that takes a function as a parameter and returns a function
+def func2(f1,arg1):
+    def ret_func1():
+        val1 = f1(arg1,-3) # same as arg1 * 2
+        return val1
+    return ret_func1
+
+var1 = func2(func1,17) # this returns func1(17,-3) as a function
+ret1 = var1() # 34, no need to use arguments
+
+#T# Function decorators
+
+#T# a function decorator takes a function and decorates it, by adding extra functionality to the original function
+
+#T# create a function decorator, f1 is the function to decorate
+def decorator1(f1):
+    """make f1 only work on odd numbers"""
+    def inner_func1(arg1, arg2):
+        if (arg1%2 != 0) and (arg2%2 != 0):
+            return f1(arg1, arg2)
+        return None
+    return inner_func1
+
+#T# apply a decorator to a function with the decorator operator @
+# @decorator_func1
+# def func1(*args,**kwargs):
+#     statements1
+#T# the decorator must be applied right before the function definition, doing this is the same as doing
+# func1 = decorator_func1(func1)
+@decorator1
+def func1(param1, param2):
+    return param1 + param2
+
+ret1 = func1(3,4) # None
+ret1 = func1(3,5) # 8
+
+#T# Function annotations
+
+#T# create function annotations for the parameters and for the return value
+def func1(param1: "param1_annotation") -> "return_value_annotation":
+    return None
+
+#T# get a dictionary with the annotations from a function with the __annotations__ attribute
+dict1 = func1.__annotations__

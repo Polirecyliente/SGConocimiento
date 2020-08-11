@@ -130,7 +130,7 @@ bool1 = (a is not b) # False
 #T# assign the same value to several variables
 int1 = int2 = int3 = a # 7
 
-#T# assign a different value to each variable
+#T# assign a different value to each variable with a tuple at each side
 int1, int2, int3 = 72, 12, 55
 
 #T# walrus operator :=, assigns and returns value

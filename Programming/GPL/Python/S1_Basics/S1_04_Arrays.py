@@ -139,6 +139,14 @@ int1 = tuple1.count('repeated_elem') # 3
 #T# the returned value is the index of the first occurrence of 'elem1' in tuple1
 int1 = tuple1.index('repeated_elem') # 2
 
+#T# unpack a tuple with the tuple unpack operator *
+elem1_tuple1, *unpack_tuple1, elemN_tuple1 = tuple1
+#T# unpack_tuple1 has every element in tuple1 except for the first and the last
+#T# unpack_tuple1 == [7, 'repeated_elem', 12, 'repeated_elem', 1, 1]
+
+#T# unpacking a tuple in an argument, passes each element as a separate arg
+str1 = "elems {} {}, and {}".format(*tuple1) # elems 0 7, and repeated_elem
+
 #T# Dictionaries
 
 dict1 = {'key1':2,'key2':'val2'}
@@ -172,6 +180,15 @@ dict2 = {'appended_key1':80,'key2':'val2'}
 # dict1.update(dict2)
 #T# the key value pairs from dict1 are updated with those of dict2
 dict1.update(dict2) # dict1 == {'key1': 85, 'key2': 'val2', 'appended_key1': 80}
+
+dict1 = {'initial1':'ini_value1'}
+dict2 = {'unpacked1':15}
+#T# unpack a dictionary with the dictionary unpack operator **, a dictionary can only be unpacked into another dictionary
+dict1 = {**dict1,**dict2} # {'initial1': 'ini_value1', 'unpacked1': 15}
+
+dict1 = {'base':7}
+#T# unpacking a dictionary in an argument, passes each key value pair as a kwarg value pair
+int1 = int('10',**dict1) # 7
 
 #T# Sets
 
