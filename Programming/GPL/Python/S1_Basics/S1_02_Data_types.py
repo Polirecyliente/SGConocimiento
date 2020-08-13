@@ -71,8 +71,8 @@ str4 = str1 + str2 + str3 # 'string onestring twostring three'
 #T#     unicode 32 bit hex number \UNNNNNNNN
 #T#     hex value \xNN
 #T#     octal value \NNN
-q1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
-#T# printing q1 gives the following
+str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
+#T# printing str1 gives the following
 # Line\1'
 # Line"2
 #       Form
@@ -95,10 +95,14 @@ bool1 = False
 #T# arrays are called lists, and are created within square brackets with elements separated by comma
 list1 = [3,5,2,"s1"]
 
+#T# lists
+
 #T# declaring, reading from, and writing to lists
 list1 = ['elem1',2,'elem3']
 int1 = list1[1] # 2
 list1[1] = 5
+
+#T# tuples
 
 #T# tuples are read-only lists, and are created within parentheses with elements separated by comma
 tuple1 = (1,2,"s1",9,"s2")
@@ -112,6 +116,8 @@ str1 = tuple1[2] # 'tuple_elem3'
 #T# tuples can be created without parentheses too
 tuple2 = 1,6,5,
 
+#T# dictionaries
+
 #T# dictionaries are python's hash table with key value pairs, and are created within curly braces with pairs separated by comma, and key separated from value with a colon
 
 #T# declaring, reading from, and writing to dictionaries
@@ -123,6 +129,8 @@ dict1 = {'Fis':63.2,'Sec':12.1,'Thd':19.8}
 #T# get the keys and values of a dictionary
 dict1keys = dict1.keys()   # dict_keys(['Fis', 'Sec', 'Thd'])
 dict1vals = dict1.values() # dict_values([63.2, 12.1, 19.8])
+
+#T# sets
 
 #T# sets are unordered collections, similar to a list in that they can be changed after creation, and are created within curly braces with elements separated by comma
 set1 = {'elem_unord',5,78}

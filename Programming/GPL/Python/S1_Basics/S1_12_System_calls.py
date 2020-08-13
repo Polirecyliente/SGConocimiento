@@ -1,9 +1,19 @@
 
-#   Input output
+#   System calls
 
-#T# eval(input())
-eval1 = eval(input("Enter the input to evaluate: "))
-print("Evaluated input:",eval1)
+#T# Table of contents
+
+#T# Input output
+
+#T# Process control
+
+#T# Signal handling
+
+#T# File management
+
+#T# Beginning of content
+
+#T# Input output
 
 loc1 = "/home/jul/PolirecylBases/tutos/Python/Section1/Section1_14Debug"
 #T# open a file with open()
@@ -48,3 +58,12 @@ print("cwd is",os.getcwd())
 
 #T# remove a directory with rmdir()
 os.rmdir(nDir)
+
+#T# Process control
+
+#T# Signal handling
+
+#T# terminate the script with the quit function
+# quit()
+
+#T# File management

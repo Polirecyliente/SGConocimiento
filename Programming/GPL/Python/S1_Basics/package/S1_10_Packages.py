@@ -4,7 +4,13 @@
 #T# Contents
 #T# Modules
 
+#T# packages are directories that contain modules, the modules are files that contain functions and classes
+
 #T# Modules
+
+#T# TODO
+help("modules")
+help(math)
 
 #T# module's definitions
 def modFun1():

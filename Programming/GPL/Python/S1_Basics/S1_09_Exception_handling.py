@@ -2,7 +2,7 @@
 #   Exception handling
 
 var1 = 5
-#T# make assertions with assert
+#T# make assertions with the assert keyword
 assert (var1 >= 0),"var1 must not be less than zero"
 
 #T# try except else statement

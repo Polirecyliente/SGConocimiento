@@ -9,6 +9,7 @@
 #T# Tuples
 #T# Dictionaries
 #T# Sets
+#T# Multidimensional arrays
 
 #T# Beginning of content
 
@@ -222,3 +223,11 @@ bool1 = set1 >= froz1          # False
 
 #T# equal sets ==
 bool1 = set1 == froz1 # False
+
+#T# Multidimensional arrays
+
+#T# create multidimensional arrays by creating arrays of arrays
+multi_arr1 = [(1,2),[['a.1','a.2'],['b.1','b.2','b.3']],{'k1':'v1'}]
+
+#T# access an element from a multidimensional array by index
+str1 = multi_arr1[1][1][2] # 'b.3'
