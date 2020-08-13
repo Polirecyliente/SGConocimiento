@@ -32,6 +32,9 @@ list1 = ['1','2','elem']
 filter1 = filter(str.isalpha,list1)
 list2 = list(filter1) # ['elem']
 
+#T# the repr function returns a string representation of its argument, in most cases just surrounding the argument in quotes
+str1 = repr(map1) # '<map object at 0x7fd71dea0610>'
+
 #T# Math functions
 
 #T# math functions are provided in the math module
