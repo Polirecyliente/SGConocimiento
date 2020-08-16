@@ -9,6 +9,7 @@
 #T# Functions as first class citizens
 #T# Function decorators
 #T# Function annotations
+#T# Scope
 
 #T# Beginning of content
 
@@ -92,7 +93,20 @@ ret1 = func1(3,5) # 8
 
 #T# create function annotations for the parameters and for the return value
 def func1(param1: "param1_annotation") -> "return_value_annotation":
-    return None
+    return 53
 
 #T# get a dictionary with the annotations from a function with the __annotations__ attribute
 dict1 = func1.__annotations__
+
+#T# Scope
+
+int1 = 5
+#T# the global keyword puts a variable in global scope, this way a variable can be modified inside a function and retain the new value outside
+def func3():
+    global int1
+    int1 = 78
+
+    return 255
+
+func3()
+#T# int1 == 78

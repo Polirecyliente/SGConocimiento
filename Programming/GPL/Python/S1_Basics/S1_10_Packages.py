@@ -1,33 +1,65 @@
 
 #   Packages
 
-#T# Contents
-#T# Modules
+#T# Table of contents
 
-#T# packages are directories that contain modules, the modules are files that contain functions and classes
+#T# Importing modules
+#T# Using modules
+#T# Importing packages
+#T# Info about modules
 
-#T# Modules
+#T# Beginning of content
 
-#T# TODO
-help("modules")
+#T# Importing modules
+
+#T# the import keyword imports a package or module to use its code in this file
+import S1_10_P_Module_example
+
+#T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch, example
+# package1
+# -- main.py
+# -- subpackage1
+# -- -- subp1_module1.py
+# -- subpackage2
+# -- -- subp2_module1.py
+#T# the file subp2_module1.py imports subp1_module1.py with
+# import subpackage1.subp1_module1
+#T# this path is the same as seen from main.py
+
+#T# specific functions, and classes from a module can be imported, without importing the rest of the module
+# from module1 import func1 as alias1
+#T# this imports only func1 from module1 into the namespace of this file with the alias alias1
+from S1_06_Functions import func1 as f1
+
+import importlib
+#T# execute a module again with the reload function
+# importlib.reload(module1)
+importlib.reload(S1_10_P_Module_example)
+
+#T# Using modules
+
+#T# call module's function
+int1 = S1_10_P_Module_example.func1() # 56
+
+int1 = f1(7) # 53
+
+#T# Importing packages
+
+#T# import a package from a directory with a __init__.py file, when the package is imported the __init__.py file is executed
+import package
+int1 = package.anon_func1(8,-5) # 50
+
+#T# Info about modules
+
+import math
+#T# the help function returns the generated help for its module argument
+# help(module1)
+#T# the help for module1 is printed to stdout
 help(math)
 
-#T# module's definitions
-def modFun1():
-    print("In module's function")
-    return None
+#T# an special argument to the help function is "modules" which lists the installed modules
+help("modules")
 
-#T# code that will execute when the module is imported
-print("In module")
-modFun1()
-
-#T# get help and documentation about a module with pydoc moduleName, execute pydoc from a terminal, NOT from this script
-# pydoc itertools
-
-#T# list all installed modules by entering the Python REPL (python3), and then with help("modules") in the Python interpreter
-
-#T# show information about a module with the command pip3 show moduleName if it returns nothing the package is not installed
-# pip3 show alabaster
-
-#T# if the installation of a module gets timeout errors in the download, it may be fixed with the --default-timeout=1000 option
-# pip3 install --default-timeout=1000 matplotlib
+#T# the __file__ attribute of a module contains its location in the system
+str1 = importlib.__file__ # /usr/lib/python3.8/importlib/__init__.py
+#T# if there is no file then the module is possibly builtin

@@ -24,30 +24,30 @@
 
 #T# indentation acts as the delimiter (like braces)
 if True:
-    i1 = 70
+    int1 = 70
 
 #T# Variables, constants, literals
 
 #T# variables are dinamically typed. Literals are characters, numbers
-i1 = 'str'
-i1 = 5
+str1 = 'str'
+int1 = 5
 
 #T# quotation types, each quotation symbol can be used inside the others as a normal character
-q1 = 'sen1word1 sen1""""word2 sen1word3 sen1word4'
-q2 = "sen2word1 sen2''''word2 sen2word3 sen2word4"
-q3 = """sen3word1 sen3"'"'word2
+str1 = 'sen1word1 sen1""""word2 sen1word3 sen1word4'
+str1 = "sen2word1 sen2''''word2 sen2word3 sen2word4"
+str1 = """sen3word1 sen3"'"'word2
                sen3word3 sen3word4"""
 
 #T# Escape sequences
 
 #T# an special kind of combination of literals are escape sequences, they mean something particular, e.g. the \n means newline
-q1 = "Line1\nLine2"
+str1 = "Line1\nLine2"
 #T# an escape sequence starts with a backslash and is followed by other character or characters
 
 #T# Expressions
 
 #T# expressions are evaluated and return a value
-expr1 = 5 + 3 - 7
+int1 = 5 + 3 - 7
 
 #T# Function calls
 
@@ -62,20 +62,25 @@ input                   ("\nGive an input to continue the script\n")
 
 #T# an statement is a complete instruction
 int1 = 5
-#T# int1 = 5 is a statement, the variable int1 is made to point to the value 5
+#T# int1 = 5 is an statement, the variable int1 is made to point to the value 5
 
-#T# use the pass keyword to create a statement that does nothing, as a filler
+#T# the dot notation is used to access the namespace of an object
+# obj1.name1.name2
+#T# here the object obj1 has name1 in its namespace, and name1 has name2 in its namespace
+int1 = int1.bit_length() # 3
+
+#T# the pass keyword is used to create a statement that does nothing, as a filler
 pass
 
 #T# Multiline statements
 
 #T# an expression statement is continued with a backslash at the end, a list can be continued without a comma at the end of the line
-varT = 5 + 6 + \
-       3 + 7
-days = ['Mon','Wed'
+int1 = 5 + 6 + \
+       3 + 7     # 21
+list1 = ['Mon','Wed'
         'Fri','Sun']
 
 #T# Multistatement lines
 
 #T# multiple statements in the same line are separated with a semicolon
-x1 = 9; x2 = 7; x3 = 0
+int1 = 9; int2 = 7; int3 = 0

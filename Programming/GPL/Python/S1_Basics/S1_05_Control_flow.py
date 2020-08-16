@@ -18,14 +18,14 @@
 
 #T# Decision making
 
-#T# decision making is made with the if, elif, and else keywords. In an if statement a condition is checked and if it returns True then the if block will be executed. In an elif statement a condition is also checked. In an else statement no condition is checked, but then the else requires an if above it, the elif also requires an if above
+#T# decision making is made with the if, elif, and else keywords. In an if conditional statement a condition is checked and if it returns True then the if block will be executed. In an elif conditional statement a condition is also checked. In an else conditional statement no condition is checked, but the else requires an if above it, the elif also requires an if above
 
 #T# a colon goes at the end of the line after an if, elif, or else keyword
 
 #T# if, elif, else keywords
 
 int1 = 0
-#T# if elif else statement
+#T# if elif else syntax
 # if condition1:
 #     statements1
 # elif condition2:
@@ -54,7 +54,7 @@ else:
 int1 = 0
 int2 = 0
 list1 = ['elem1',2]
-#T# for, else statement, and nested loops
+#T# for, else syntax, and nested loops
 # for elem_i1 in arr1:
 #     statements1
 # else:
@@ -85,7 +85,7 @@ else:
 #T# while loop
 
 int1 = 0
-#T# while statement
+#T# while syntax
 # while condition1:
 #     statements1
 # else:

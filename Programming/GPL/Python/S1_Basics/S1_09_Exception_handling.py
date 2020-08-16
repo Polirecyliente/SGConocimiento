@@ -22,7 +22,7 @@ assert int1 == 5, "Either this file or the Python interpreter is corrupted"
 import traceback
 
 int1 = int(input("Enter int1\n"))
-#T# try except else statement
+#T# try except else syntax
 # try:
 #     statements1
 # except (Error1, Error2) as alias1:
@@ -48,7 +48,7 @@ else:
     int1 *= 2
 #T# if the input is less than zero then int1 == 7, otherwise int1 is twice the input
 
-#T# try except finally statement
+#T# try except finally syntax
 # try:
 #     statements1
 # except Error1, Error2:

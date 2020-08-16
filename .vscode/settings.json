@@ -76,5 +76,6 @@
         "variant": "cpp",
         "bit": "cpp",
         "charconv": "cpp"
-    }
+    },
+    "python.autoComplete.extraPaths": ["/home/jul/SGConocimiento/Programming/GPL/Python/S1_Basics"],
 }

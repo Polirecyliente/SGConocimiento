@@ -9,6 +9,7 @@
 #T# List functions
 #T# Dictionary functions
 #T# Datetime functions
+#T# Class functions
 
 #T# Beginning of content
 
@@ -34,6 +35,25 @@ list2 = list(filter1) # ['elem']
 
 #T# the repr function returns a string representation of its argument, in most cases just surrounding the argument in quotes
 str1 = repr(map1) # '<map object at 0x7fd71dea0610>'
+
+def func1():
+    int1 = 85
+#T# the locals function returns a dictionary of local names paired to their values
+    dict1 = locals()  # {'int1': 85}
+
+#T# the vars function returns the __dict__ class attribute which is a dictionary that contains the attributes paired to values of the argument, without argument it acts as the locals function
+    dict1 = vars() # {'int1': 85, 'dict1': {...}}
+    dict1 = vars(type(int1)) # long dictionary
+
+#T# the globals function returns a dictionary of global names paired to their values
+    dict1 = globals() # {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f77256c8be0>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': 'S1_07_Standard_library.py', '__cached__': None, 'str1': '<map object at 0x7f77256204f0>', 'list1': ['1', '2', 'elem'], 'map1': <map object at 0x7f77256204f0>, 'list2': ['elem'], 'filter1': <filter object at 0x7f7725620e50>, 'func1': <function func1 at 0x7f77256b91f0>}
+
+#T# the dir function without argument returns a list of local names
+    list1 = dir()     # ['dict1', 'int1']
+#T# with an argument, the dir function returns a list with the attributes of the argument
+    list1 = dir(dict1) # ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+
+    return None
 
 #T# Math functions
 
@@ -457,3 +477,19 @@ tuple1 = calendar.monthrange(1999,4) # (3, 30)
 #T# the weekday function returns the week day from a given day
 # calendar.weekday(year1,month1,day1)
 int1 = calendar.weekday(1999,4,1) # 3
+
+#T# Class functions
+
+class Class1:
+    pass
+
+class Derived1 (Class1):
+    pass
+
+obj1 = Class1()
+
+#T# check if a class is a subclass of another
+bool1 = issubclass(Derived1,Class1) # True
+
+#T# check if an object is an instance of a class
+bool1 = isinstance(obj1,Class1) # True

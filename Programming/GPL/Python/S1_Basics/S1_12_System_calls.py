@@ -3,21 +3,24 @@
 
 #T# Table of contents
 
-#T# Input output
-
-#T# Process control
-
+#T# File input output
 #T# Signal handling
-
-#T# File management
 
 #T# Beginning of content
 
-#T# Input output
+#T# File input output
 
-loc1 = "/home/jul/PolirecylBases/tutos/Python/Section1/Section1_14Debug"
-#T# open a file with open()
-fileh1 = open(loc1,"a+",1)
+str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
+#T# the open function is used to open a file, or create it if it doesn't exist, it returns a TextIOWrapper object
+# open("/path/to/file1", "mode1", buffering_int1)
+#T#
+textIOWrapper1 = open(str1,"a+",1)
+
+bool1 = textIOWrapper1.line_buffering #
+print(bool1)
+
+quit()
+
 print("name:",fileh1.name,"closed?:",fileh1.closed,"mode:",fileh1.mode)
 
 #T# write to a file with write()
@@ -41,7 +44,7 @@ import os
 
 newN = "/home/jul/PolirecylBases/tutos/Python/Section1/Section1_14New"
 #T# rename a file with rename()
-os.rename(loc1,newN)
+os.rename(str1,newN)
 
 #T# delete a file with remove()
 os.remove(newN)
@@ -59,11 +62,7 @@ print("cwd is",os.getcwd())
 #T# remove a directory with rmdir()
 os.rmdir(nDir)
 
-#T# Process control
-
 #T# Signal handling
 
 #T# terminate the script with the quit function
 # quit()
-
-#T# File management
