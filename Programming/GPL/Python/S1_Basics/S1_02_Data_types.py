@@ -8,6 +8,7 @@
 #T# String types
 #T# Boolean type
 #T# Composite types
+#T# Enum type
 #T# Null type
 #T# Type casting
 
@@ -141,6 +142,25 @@ set1.add('elem_modif')
 
 #T# frozen sets are sets that can't be changed after creation similar to a tuple, and are created with the same syntax as a set but casted to frozenset
 froz1 = frozenset({"elem_unord_froz",12,5,98})
+
+#T# Enum type
+
+#T# enums or enumerations map names to constant values
+from enum import Enum
+
+#T# creating an enum requires inheriting from the Enum class
+# class enum1(Enum):
+#     elem1 = val1
+#     elem2 = val2
+#     elem3 = val3
+#T# the enum maps elemN to valN
+class enum1(Enum):
+    elem1 = 1
+    elem2 = 'two'
+
+#T# the value attribute of an enum element has the value of the element
+int1 = enum1.elem1.value # 1
+str1 = enum1.elem2.value # two
 
 #T# Null type
 

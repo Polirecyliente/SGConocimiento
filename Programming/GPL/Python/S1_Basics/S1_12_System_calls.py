@@ -4,6 +4,7 @@
 #T# Table of contents
 
 #T# File input output
+#T# File manipulation
 #T# Signal handling
 
 #T# Beginning of content
@@ -11,58 +12,133 @@
 #T# File input output
 
 str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
+#T# the contents of this example file should be
+# üüüüü
+
 #T# the open function is used to open a file, or create it if it doesn't exist, it returns a TextIOWrapper object
-# open("/path/to/file1", "mode1", buffering_int1)
-#T#
-textIOWrapper1 = open(str1,"a+",1)
+# open("/path/to/file1", "mode1")
+#T# the "/path/to/file1" is a string with the file path in the file hierarchy
+#T# the "mode1" is the mode in which the file is opened, and can be one of several values
+#T#     "x" create file mode
+#T#     "r[b+]" read mode
+#T#     "w[b+]" write mode
+#T#     "a[b+]" append mode
+#T# the [b+] are optional characters, b is for operating in bytes instead of chars, + is for extending the mode so r+ means read and write, w+ means write and read, a+ is append and read
 
-bool1 = textIOWrapper1.line_buffering #
-print(bool1)
+list1 = []
+#T# the file is opened with the context manager of the TextIOWrapper object returned by the open function, using the with keyword
+with open(str1, "r") as textIOWrapper1:
+    while (chars1 := textIOWrapper1.read(2)):
+        list1.append(chars1)
+#T# list1 == ['üü', 'üü', 'ü\n']
 
-quit()
+list1 = []
+with open(str1, "rb") as textIOWrapper1:
+    while (byte1 := textIOWrapper1.read(2)):
+        list1.append(byte1)
+#T# list1 == [b'\xc3\xbc', b'\xc3\xbc', b'\xc3\xbc', b'\xc3\xbc', b'\xc3\xbc', b'\n']
 
-print("name:",fileh1.name,"closed?:",fileh1.closed,"mode:",fileh1.mode)
+#T# the name attribute of a TextIOWrapper object has the value of the file path in the file hierarchy
+str1 = textIOWrapper1.name # /tmp/SGC_Programming_GPL_Python_S1_file1
 
-#T# write to a file with write()
-fileh1.write("foto\nsintatos\n")
+#T# the closed attribute of a TextIOWrapper object is a boolean that is True if the file is closed
+bool1 = textIOWrapper1.closed # True
 
-#T# get cursor position in file with tell()
-print("cursor at",fileh1.tell())
+#T# the mode attribute of a TextIOWrapper object is a string with the mode with which the file is accessed
+str1 = textIOWrapper1.mode # rb
 
-#T# set cursor position in file with seek()
-fileh1.seek(0,0)
+str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
+#T# the write function serves to write characters, or bytes to a file
+with open(str1, "a") as textIOWrapper1:
+    textIOWrapper1.write("\u02A0")
 
-#T# read a file with read()
-strFromF1 = fileh1.read(100)
-print("content read from file:",strFromF1)
+#T# the tell function returns the cursor position in bytes
+    int1 = textIOWrapper1.tell() # 13, from 10 of ü, 1 of \n, 2 of \u02A0
 
-#T# close a file with close()
-fileh1.close()
+#T# the seek function sets the cursor position in the file
+# textIOWrapper1.seek(offset_int1, start_pos_int1)
+#T# the offset_int1 is for the offset in bytes, it must be positive or zero
+#T# the start_pos_int1 must have one of these values
+#T#     0, is for start of the file
+#T#     1, is for current cursor position, offset_int1 must be zero
+#T#     2, is for end of the file
+with open(str1,"r+") as textIOWrapper1:
+    textIOWrapper1.seek(2, 0)
+    textIOWrapper1.write("AB") # two bytes written to replace one 'ü'
 
-#T# the os module allows other file manipulation
+#T# üABüüü\nʠ are the file contents
+
+#T# the close function is used to explicitly close a file
+textIOWrapper1.close()
+
+#T# File manipulation
+
+#T# the os module allows file manipulation in the file hierarchy
 import os
 
-newN = "/home/jul/PolirecylBases/tutos/Python/Section1/Section1_14New"
-#T# rename a file with rename()
-os.rename(str1,newN)
+str2 = "/tmp/renamed_file1"
+#T# the rename function serves to rename a file
+# os.rename("original_filename1", "new_filename1")
+os.rename(str1,str2)
 
-#T# delete a file with remove()
-os.remove(newN)
+#T# the remove function serves to remove a file
+os.remove(str2)
 
-nDir = "/home/jul/PolirecylBases/tutos/Python/Section1/dirDebug"
-#T# create a new directory with mkdir()
-os.mkdir(nDir)
+str1 = "/tmp/temporary_dir1"
+#T# the mkdir function serves to create a new directory
+os.mkdir(str1)
 
-#T# change the current working directory with chdir()
-os.chdir(nDir)
+#T# the chdir function serves to change the current working directory for the directory of its argument
+os.chdir(str1)
 
-#T# get the current working directory with getcwd()
-print("cwd is",os.getcwd())
+#T# the getcwd function returns the current working directory
+str1 = os.getcwd() # /tmp/temporary_dir1
 
-#T# remove a directory with rmdir()
-os.rmdir(nDir)
+#T# the rmdir function serves to remove a directory
+os.rmdir(str1)
 
 #T# Signal handling
 
+#T# the getpid function returns the pid of the caller
+int1 = os.getpid() # 175344, or similar
+
+print("Waiting to receive a signal")
+#T# the signal module is used for signal handling
+import signal
+
+#T# the two types of signals or interrupts are, maskable (can be ignored), and non maskable (cannot be ignored)
+
+import traceback
+#T# a signal handler is a callback function that is executed when a signal it handles is received
+# def signal_handler_func1(signal_number1, signal_frame1):
+#     statements1
+#T# signal_number1 is an integer with the number of the signal, signal_frame1 is the stack frame where the signal was received
+def sig_handler1(sig_number, sig_frame):
+    print("signal number is:", sig_number)
+    traceback.print_stack(sig_frame)
+
 #T# terminate the script with the quit function
-# quit()
+    quit()
+
+#T# the signal function serves to register a signal handler so it executes when a given signal is received by the program
+# signal.signal(signal.SIG1, signal_handler_func1)
+#T# whenever the signal SIG1 is received, the function signal_handler_func1 will execute
+signal.signal(signal.SIGHUP, sig_handler1)    # SIGHUP for hangup
+signal.signal(signal.SIGINT, sig_handler1)    # SIGINT for interrupt
+signal.signal(signal.SIGQUIT, sig_handler1)   # SIGQUIT for quit
+signal.signal(signal.SIGILL, sig_handler1)    # SIGILL for illegal instruction
+signal.signal(signal.SIGTRAP, sig_handler1)   # SIGTRAP for trap
+signal.signal(signal.SIGABRT, sig_handler1)   # SIGABRT for abort
+signal.signal(signal.SIGBUS, sig_handler1)    # SIGBUS for bus error
+signal.signal(signal.SIGFPE, sig_handler1)    # SIGFPE for floating point error
+signal.signal(signal.SIGUSR1, sig_handler1)   # SIGUSR1 for user defined 1
+signal.signal(signal.SIGSEGV, sig_handler1)   # SIGSEGV for segment violation
+signal.signal(signal.SIGUSR2, sig_handler1)   # SIGUSR2 for user defined 2
+signal.signal(signal.SIGPIPE, sig_handler1)   # SIGPIPE for pipe error
+signal.signal(signal.SIGALRM, sig_handler1)   # SIGALRM for alarm
+#T# the SIG_IGN enum element serves to ignore the signal when received
+signal.signal(signal.SIGTERM, signal.SIG_IGN) # SIGTERM for terminate
+#T# only the signal 9, signal.SIGKILL, can't be registered this way
+
+#T# the pause function pauses the execution until a signal is received
+signal.pause()

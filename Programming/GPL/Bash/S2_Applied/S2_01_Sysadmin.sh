@@ -25,6 +25,13 @@ head -80 file1 | nl -b 'a' | tail -10
 
 #T# Process management
 
+#T# get the pid of a process with pidof
+# pidof program_name1
+pidof firefox
+
+#T# get the pid of a running script with pgrep
+# pgrep -f script_name1
+
 #T# get a process status with ps pid
 ps 187665
 
@@ -40,6 +47,7 @@ kill 187785
 kill -l
 #T# send a particular signal_number with kill -signal_number pid
 kill -9 187785
+kill -SIGKILL 187785
 
 #T# Process status letters meaning
 # D -> Uninterruptible sleep (can't be killed without reboot)
