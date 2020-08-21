@@ -28,9 +28,17 @@ if True:
 
 #T# Variables, constants, literals
 
-#T# variables are dinamically typed. Literals are characters, numbers
+#T# variables are dynamically typed. Literals are characters, numbers
 str1 = 'str'
 int1 = 5
+
+#T# type hints
+
+#T# type hints are used when there is no autocompletion for an object that should have, this is because the type of a dynamic type can't be known at compile time
+# obj1 = Constructor1() # type: Object_type1
+#T# the type hint is written after the comment, the autocompletion of obj1 follows the type Object_type1
+var1 = 8 # type: str
+# var1. autocompletes as a string
 
 #T# quotation types, each quotation symbol can be used inside the others as a normal character
 str1 = 'sen1word1 sen1""""word2 sen1word3 sen1word4'

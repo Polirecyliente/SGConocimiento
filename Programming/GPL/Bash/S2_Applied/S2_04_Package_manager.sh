@@ -53,3 +53,15 @@ aptitude versions apache2
 #T# install the building dependencies to build a program from source code
 # apt build-dep program1
 apt build-dep vlc
+
+#T# add a package repository
+# apt-add-repository repository_name1
+apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+apt-add-repository ppa:jonathonf/ffmpeg-4
+
+#T# remove a package repository
+# apt-add-repository --remove repository_name1
+apt-add-repository --remove 'deb http://repos.codelite.org/wx3.1.0/ubuntu/ focal universe'}
+
+#T# list the trusted apt keys
+apt-key list

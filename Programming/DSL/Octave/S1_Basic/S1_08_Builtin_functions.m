@@ -124,7 +124,7 @@ axis(ax1,[0 4 2 4]);
 figure;
 fplot(@sin,[0 2*pi]);
 grid;
-print(fig1,"S1_08_Aux01.svg","-landscape");
+print(fig1,"S1_08_B__Aux01.svg","-landscape");
 title(ax1,"OutOfBoundsImg");
 
 #T# xlabel(), ylabel(), close, gtext(), hold(), legend(), refresh(), set()
