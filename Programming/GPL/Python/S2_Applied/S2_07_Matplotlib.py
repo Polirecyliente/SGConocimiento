@@ -5,7 +5,10 @@
 
 #T# Basics
 #T# Figures, axes
+#T# Parts of a plot
 #T# Plot types
+#T# Backends
+#T# Interactive sessions
 
 #T# Beginning of content
 
@@ -29,6 +32,8 @@ plt.savefig("/tmp/fig1_file")
 
 #T# show the created plot in a window with the show function
 plt.show()
+
+#T# a lot of matplotlib's functionality is done through kwargs in functions, and constructors, most of the kwargs are self explanatory, but explanations are included when neccessary
 
 #T# Figures, axes
 
@@ -127,7 +132,7 @@ ax1.grid(True)
 #T# activate the minor grid ticks
 plt.minorticks_on()
 
-#T# customize the grid with the kwargs of the grid function, most of the kwargs are self explanatory
+#T# customize the grid with the kwargs of the grid function
 #T# the which kwarg chooses the grid lines to affect, the major grid, minor grid, or both
 #T# the dashes kwarg is an array of numbers, determining the length of a dash and the length of a space in turns, (dash_length1, space_length1, dash_length2, space_length2) and so on
 ax1.grid(which = "minor", color = "r", alpha = 0.2)
@@ -144,6 +149,26 @@ ax2 = ax1.twiny()
 #T# list1 is the list of values at which a tick mark will appear
 ax2.set_xticks([-8,0,8,16,24])
 #T# the ticks in ax2 appear as if multiplying the ticks in ax1 by 4
+
+#T# create a figure, and a numpy n-dimensional array of axes, together in a tuple, with the subplots function
+# plt.subplots(rowN,colN)
+#T# rowN is the number of rows of subplots, and colN is the number of columns of subplots, a unique pair of axes is assigned to each subplot
+fig1, axes_ndarr1 = plt.subplots(2,3)
+
+#T# access subplots in an axes ndarray
+axes_ndarr1[0][2].plot([2,4],[7,12])
+#T# this figure has 6 axes, and the plot goes in rwo 1, col 3
+
+#T# set the margins of the axes as a proportion of the data interval with the margins function
+# axes1.margins([xmargin1[, ymargin1]])
+#T# without arguments, the function returns the current margins, with one argument it sets the margins for both the x, and y axis, xmargin1 is the margin for the x axis, ymargin1 is the margin for the y axis, both should be greater than zero but they can be a bit lower
+axes_ndarr1[0][2].margins(0.5)
+#T# the example leaves half the size of the data as the margin for all 4 sides of the affected plot
+
+#T# Parts of a plot
+
+#T# put the title of the figure in the superior side with suptitle("Title")
+fig1.suptitle("Title string")
 
 #T# Plot types
 
@@ -167,55 +192,44 @@ x = [4,1]
 #T# each dot in the scatter plot comes from each value in list1 paired with each value in list2 in the same position of the lists
 plt.scatter(x,y)
 
+#T# plot an arrow with the arrow function
+# plt.arrow(x_pos1, y_pos1, x_delta1, y_delta1, kwargs)
+#T# x_pos1, y_pos1 are the x, y coordinates of the arrow's origin, x_delta1 is the distance in the x axis traveled by the arrow, and y_delta1 is the homologous for the y axis
+#T# the shape kwarg can have one of the values, 'full', 'left', or 'right', to determine the side, or sides of the arrow to draw
+plt.arrow(0,0,3,5,width=0.2,length_includes_head=True,shape="left",overhang=0.2,linestyle='--',fill=False, facecolor="#FF99DD",edgecolor="#33FF99",hatch='/',zorder=3,alpha=0.7)
+
+#T# patches
+
+#T# patches are basic shapes, added through an axes object
+# axes1.add_patch(plt.Patch1)
+#T# this adds Patch1 to be drawn in axes1
+
 #T# create a rectangle with the Rectangle constructor
-# plt.Rectangle(origin_tuple1, width1, height1)
+# plt.Rectangle(origin_tuple1, width1, height1, kwargs)
 #T# origin_tuple1 is a two element tuple with the x, y coordinates of the rectangle's bottom left corner, width1 is a number with the width, height1 is a number with the height
-plt.Rectangle((2,1),3,5)
-#plt.Rectangle((2,1),3,5,fill=False,alpha=0.3,hatch='*',linewidth=4,edgecolor='#99DD33',facecolor="#4499EF",linestyle=":")
+ax1.add_patch(plt.Rectangle((0,0),3,5,fill=True,alpha=0.3,hatch='*',linewidth=4,edgecolor='#99DD33',facecolor="#4499EF",linestyle=":"))
 
-#T# plot an arrow with arrow(x,y,dx,dy)
-ax1.arrow(0,0.1,3,0,width=0.12,color='#9977ee',length_includes_head=True)
+#T# Backends
 
-#T# customize the arrow with its constructor
-# plt.arrow(0,0,3,5,width=0.2,length_includes_head=True,shape="left",overhang=0.2,linestyle='--',fill=False,facecolor="#FF99DD",edgecolor="#33FF99",hatch='/',zorder=3,alpha=0.7)
-
-#T# matplotlib concepts
+#T# there are two types of backends: interactive and non interactive, interactive shows windows with figures, and non interactive saves images to a file, with a given format
 
 import matplotlib
-matplotlib.use('TkAgg')
-
-import matplotlib.pyplot as plt
-import numpy as np
 
 #T# get the current backend in use
-str1 = plt.get_backend() # TkAgg
+str1 = plt.get_backend() # Qt5Agg
 
-#T# start an interactive plotting session with ion() turn it off with ioff()
+#T# set the current backend with the use function
+# matplotlib.use('backend_string1')
+# matplotlib.use('TkAgg')
+
+#T# Interactive sessions
+
+#T# start an interactive plotting session with the ion function
+# plt.ion()
 plt.ion()
 
-x = np.linspace(0,24,13)
-y = [5,8,3]
+#T# end an interactive plotting session with the ioff function
+# plt.ioff()
 
-#T# create an empty figure with no axes with plt.figure()
-fig1 = plt.figure()
-
-#T# put the title of the figure in the superior side with suptitle("Title")
-fig1.suptitle("strings of titles")
-
-#T# create a tuple of figure and a set of axes with plt.subplots(nrow,ncol)
-fig1, axList = plt.subplots(2,3)
-print(type(axList))
-
-#T# all plotting functions work on a np.array
-#T# access subplots in an axes list
-out1 = axList[1][2].plot([2,4],[7,12])
-
-#T# zoom in or out with axis.margins(zVal), out if zVal > 0
-axList[1][2].margins(0.07)
-
-#T# there are two types of backends: interactive and non interactive, interactive shows windows, and non interactive saves image to a format
-
-#T# if an interactive session doesn't update a plot, it is redrawn with draw()
+#T# if the interactive session doesn't update a plot, it is redrawn with the draw function
 plt.draw()
-
-# plt.show()
