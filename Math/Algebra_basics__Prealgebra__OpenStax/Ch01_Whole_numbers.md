@@ -9,7 +9,7 @@ Counting numbers are 1, 2, 3, 4, ...
 (Recta real)
 Number line
 
-
+![image_number_line](img/Ch01_Number_line.png)
 
 ## Addition (Adición)
 

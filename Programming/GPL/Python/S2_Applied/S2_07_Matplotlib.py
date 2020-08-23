@@ -6,6 +6,8 @@
 #T# Basics
 #T# Figures, axes
 #T# Parts of a plot
+#T# Annotations
+#T# Coordinate systems
 #T# Plot types
 #T# Backends
 #T# Interactive sessions
@@ -68,7 +70,8 @@ plt.clf()
 plt.figure(fig1.number)
 
 #T# create the axes with the axes constructor, it returns an axes object
-# plt.axes(label = 'label_string1')
+# plt.axes([rect1, label = 'label_string1'])
+#T# rect1 is a list with measures [left_pos1, bottom_pos1, width1, height1], in axes coordinates
 #T# the label kwarg serves to put a label to the axes, that acts as the name of the axes
 ax1 = plt.axes(label = 'axes one') # type:plt.Axes
 ax2 = plt.axes(label = 'axes two')
@@ -76,7 +79,7 @@ ax2 = plt.axes(label = 'axes two')
 
 #T# add axes to a figure
 # axes1 = fig1.add_axes([rect1])
-#T# the axes axes1 is added to fig1, rect1 is a list with measures [left_pos1, bottom_pos1, width1, height1]
+#T# the axes axes1 is added to fig1, rect1 is a list with measures [left_pos1, bottom_pos1, width1, height1], in axes coordinates
 ax1 = fig1.add_axes([0, 0, 1, 1], label = 'new axes one')
 
 #T# the axes attribute of a figure object has a list of the axes in the figure
@@ -97,7 +100,7 @@ plt.cla()
 plt.sca(ax1)
 
 ax1 = plt.axes() # type: plt.Axes
-#T# set the axis borders with the axis function
+#T# set the axis borders (in data coordinates) with the axis function
 # axis1.axis([xmin,xmax,ymin,ymax])
 #T# the list inside the axis function contains the limits in x, y
 ax1.axis([-7, 5, -0.5, 0.5])
@@ -167,8 +170,77 @@ axes_ndarr1[0][2].margins(0.5)
 
 #T# Parts of a plot
 
-#T# put the title of the figure in the superior side with suptitle("Title")
+fig1 = plt.figure() # type: plt.Figure
+#T# put the title of the figure, in the top side, with the suptitle function
 fig1.suptitle("Title string")
+
+ax1 = plt.axes() # type: plt.Axes
+#T# put the title of the axes, in the top side, with the set_title function
+ax1.set_title('Axes title string')
+
+#T# parts of the axes
+
+#T# each of the four sides of the axes is called a spine
+
+#T# the spines attribute of an axes object is used to access each spine individually, using the spines attribute as a dictionary. The spine names are: 'left', 'bottom', 'right', 'top'
+ax1.spines['top'].set_visible(False)
+#T# the set_visible function of the spines is used the set their visibility
+
+#T# the ticks can be modified with the tick_params function
+# axes1.tick_params(kwargs)
+#T# the direction kwarg is used to set the direction, in or out the axes, in which to draw the ticks, its values can be, 'in', 'out', 'inout'
+ax1.tick_params(direction = 'inout')
+
+#T# Annotations
+
+#T# annotations are ways to annotate an image, like text, arrows
+
+fig1 = plt.Figure() # type: plt.Figure
+ax1 = plt.axes() # type: plt.Axes
+#T# the text function serves to put text in the image
+# plt.text(width_coord1, height_coord1, 'text_string1', kwargs)
+#T# width_coord1, height_coord1 are the horizontal, and verical coordinates, 'text_string1' is the string that will be displayed
+#T# the ha, va kwargs are for horizontal, and vertical alignment, ha can have the values, 'left', 'center', 'right, va can have the values, 'bottom', 'center', 'top'
+plt.text(1, 1, 'text in the image')
+
+#T# the annotate function serves to put annotations in the image
+# plt.annotate('text_string1', xy_tuple1[, xy_text_tuple1], kwargs)
+#T# 'text_string1' is the string that will be displayed, xy_tuple1 is a tuple with the x, y coordinates of the annotation, xy_text_tuple1 is a tuple with the x, y coordinates for the text of the annotation
+#T# the arrowprops kwarg is a dictionary with the properties (also kwargs) of the arrow that connects the point of annotation with its text
+ax1.annotate('annotation in the image', (.4, .8), (.5, .7), arrowprops = {'arrowstyle': '->'})
+
+#T# Coordinate systems
+
+#T# there are four coordinate systems
+
+plt.clf()
+fig1 = plt.Figure() # type: plt.Figure
+ax1 = plt.axes([.1, .2, .4, .6]) # type: plt.Axes
+ax1.axis([-4, 6, 2, 5])
+
+#T# the display coordinates are the pixel coordinates of the display, measured from the bottom left corner of the display
+
+#T# the display coordinates are set using the transform kwarg with a value of None
+plt.text(1, 1, 'diplay coords', transform = None)
+
+#T# the data coordinates are between the values of x, y, in the plot, so its limits are given by the limits of x (xmin, xmax), y (ymin, ymax)
+
+#T# the get_xlim, get_ylim functions return the limits of x, y from a given axes
+tuple1 = ax1.get_xlim() # (-4.0, 6.0)
+tuple1 = ax1.get_ylim() # (2.0, 5.0)
+
+#T# the transData attribute of an axes object serves to set the coordinates to data coordinates
+plt.text(1, 1, 'data coords', transform = ax1.transData)
+
+#T# the axes coordinates are a proportional location in the axes, in the horizontal axis 0 means to the left of the axes, 1 to the right, in the vertical axis 0 means the bottom, 1 is the top
+
+#T# the transAxes attribute of an axes object serves to set the coordinates to axes coordinates
+plt.text(1, 1, 'axes coords', transform = ax1.transAxes)
+
+#T# the figure coordinates are a proportional location in the figure, in the horizontal axis 0 means to the left of the figure, 1 to the right, in the vertical axis 0 means the bottom, 1 is the top
+
+#T# the transFigure attribute of a figure object serves to set the coordinates to figure coordinates
+plt.text(.9, .9, 'figure coords', transform = fig1.transFigure)
 
 #T# Plot types
 
