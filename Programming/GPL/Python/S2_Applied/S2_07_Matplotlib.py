@@ -178,6 +178,49 @@ ax1 = plt.axes() # type: plt.Axes
 #T# put the title of the axes, in the top side, with the set_title function
 ax1.set_title('Axes title string')
 
+#T# basic formatting of a plot
+# plt.plot(x, y, 'basic_formatting_string1', kwargs)
+#T# the 'basic_formatting_string1' is a string whose characters have formatting meaning, these characters can have one of three meanings, marker shape, line style, or color, and the order should be marker_char1-line_char1-color_char1
+#T# marker shape
+#T#     '.' point
+#T#     ',' literal pixel
+#T#     'o' circle
+#T#     'v' down triangle
+#T#     '^' up triangle
+#T#     '<' left triangle
+#T#     '>' right triangle
+#T#     '1' Y down
+#T#     '2' Y up
+#T#     '3' Y left
+#T#     '4' Y right
+#T#     's' square
+#T#     'p' pentagon
+#T#     '*' star
+#T#     'h' hexagon one
+#T#     'H' hexagon two
+#T#     '+' plus
+#T#     'x' x
+#T#     'D' diamond
+#T#     'd' thin diamond
+#T#     '|' vertical line
+#T#     '_' horizontal line
+#T# line style
+#T#     '-' solid
+#T#     '--' dashed
+#T#     '-.' dash dot
+#T#     ':' dotted
+#T# color
+#T#     'r' red
+#T#     'g' green
+#T#     'b' blue
+#T#     'c' cyan
+#T#     'm' magenta
+#T#     'y' yellow
+#T#     'k' black
+#T#     'w' white
+#T# the clip_on kwarg is a boolean, that sets whether or not to the plot clips at the axes borders, so when False, the plot outside of the axes will be rendered
+plt.plot([3, 7], [-1, 5], 'w')
+
 #T# parts of the axes
 
 #T# each of the four sides of the axes is called a spine
