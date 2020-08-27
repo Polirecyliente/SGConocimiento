@@ -15,7 +15,7 @@
 
 <!-- #T# Beginning of content -->
 
-<!-- #T# render a Markdown file as an HTML file using the Markdown+Math extension, in the command palette of VS Code select the command "Markdown: Save Markdown+Math to HTML", this saves the file as an HTML file in the same dir. Convert from HTML to PDF using Firefox, for example -->
+<!-- #T# render a Markdown file as an HTML file using the Markdown Preview Enhanced extension, right click the .md file and click "Open in Browser", this can be printed as PDF in Chromium -->
 
 <!-- #T# Normal text -->
 
@@ -93,5 +93,5 @@ Normal text *italic text* continue normal _italic text two._
 <!-- #T# inline equations are enclosed in single dollar signs -->
 Inline $x = 3$ equation
 
-<!-- #T# whole line equations are enclosed in double dollar signs, the equation numbering can be set in parentheses after the double dollar signs -->
+<!-- #T# an equation block is enclosed in double dollar signs, the equation numbering can be set in parentheses after the double dollar signs -->
 $$\alpha A\pm\sqrt{x} \over y^{2}$$ (1)

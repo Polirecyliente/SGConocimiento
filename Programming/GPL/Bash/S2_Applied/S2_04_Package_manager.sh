@@ -65,3 +65,9 @@ apt-add-repository --remove 'deb http://repos.codelite.org/wx3.1.0/ubuntu/ focal
 
 #T# list the trusted apt keys
 apt-key list
+
+#T# see the main architecture supported for running applications
+dpkg --print-architecture # amd64
+
+#T# see if i386 programs can be installed, if the output is 'i386'
+dpkg --print-foreign-architectures # i386
