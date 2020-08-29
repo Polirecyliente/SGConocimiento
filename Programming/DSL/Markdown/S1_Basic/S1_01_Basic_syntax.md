@@ -9,6 +9,7 @@
 <!-- #T# Simple text formatting -->
 <!-- #T# Bulleted lists -->
 <!-- #T# Anchors, links -->
+<!-- #T# Tables -->
 <!-- #T# Blockquotes -->
 <!-- #T# Source code -->
 <!-- #T# Equations -->
@@ -67,6 +68,22 @@ Normal text *italic text* continue normal _italic text two._
 <!-- #T# embed images with an anchor but starting with an exclamation mark -->
 <!-- # ![image_anchor_text1](image_location1) -->
 ![image1](../../Octave/S1_Basic/S1_08_B__Aux01.svg)
+
+<!-- #T# Tables -->
+
+<!-- #T# tables are defined with a pipe sign per row, and below the headers at least one hyphen per column. Colon signs can be used to set the text alignment per column -->
+
+<!-- #T# table with minimal elements -->
+Column1 |
+ -:
+first_cell_string1 |
+second_cell_string1 |
+<!-- #T# in this example, '-:' makes the text alignment right justified -->
+
+<!-- #T# prettier table -->
+| Column1 | Column2 | Column3 |
+| :-----: | ------: | :------ |
+| text1   | text2   | text3   |
 
 <!-- #T# Blockquotes -->
 

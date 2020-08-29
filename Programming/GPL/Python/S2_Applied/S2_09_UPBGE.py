@@ -5,28 +5,27 @@
 
 #T# Table of contents
 
-#T# bge package
-
+#T# The bge package
 #T# Sensors
-
-#T# Always sensor
-#T# Actuator sensor
-#T# Collision sensor
-#T# Delay sensor
-#T# Joystick sensor
-#T# Keyboard sensor
-#T# Message sensor
-#T# Mouse sensor
-#T# Near sensor
-#T# Property sensor
-#T# Radar sensor
-#T# Random sensor
-#T# Ray sensor
+#T# --- Always sensor
+#T# --- Actuator sensor
+#T# --- Collision sensor
+#T# --- Delay sensor
+#T# --- Joystick sensor
+#T# --- Keyboard sensor
+#T# --- Message sensor
+#T# --- Mouse sensor
+#T# --- Near sensor
+#T# --- Property sensor
+#T# --- Radar sensor
+#T# --- Random sensor
+#T# --- Ray sensor
 
 #T# Beginning of content
 
-#T# bge package
+#T# The bge package
 
+# |-------------------------------------------------------------
 #T# BGE stands for Blender Game Engine
 
 #T# call as a module, from a Python controller in Blender's logic editor, if the module is named Objects.py, and the function is Player() then call the module with "Objects.Player". The module file must be in the same dir as the .blend file, or it can be packed into the .blend file just by saving
@@ -91,18 +90,21 @@ def Player():
         controller1.activate(motion)
         
     Update()
-
-#T# import the SCA classes and others. SCA stands for Sensor Controller Actuator
-from bge import types
+# |-------------------------------------------------------------
 
 #T# Sensors
+
+# |-------------------------------------------------------------
+#T# import the SCA classes and others. SCA stands for Sensor Controller Actuator
+from bge import types
 
 #T# all sensors have two types of attributes, configuration and status attributes. Configuration attributes may be set or get to change a configuration of the sensor, while status attributes can only be get to see a status of the sensor
 
 #T# all the attributes in the always sensor can be used with any other type of sensor as well
 
-#T# Always sensor
+#T# --- Always sensor
 
+# |-----
 #T# create the always sensor, it sends a continuous positive signal
 sensor_always1 = types.SCA_AlwaysSensor()
 
@@ -126,17 +128,21 @@ positive_flag_sensor_always1 = sensor_always1.positive
 
 #T# the sensor status has values like those of keys pressed, 0 no signal, 1 starting signal, 2 holding signal, 3 stopping signal
 status_sensor_always1 = sensor_always1.status
+# |-----
 
-#T# Actuator sensor
+#T# --- Actuator sensor
 
+# |-----
 #T# create the actuator sensor, it senses when a given actuator is active
 sensor_actuator1 = types.SCA_ActuatorSensor
 
 #T# set or get the actuator that the sensor senses upon
 sensor_actuator1.actuator = 'actuator_name1'
+# |-----
 
-#T# Collision sensor
+#T# --- Collision sensor
 
+# |-----
 #T# create the collision sensor, it senses when an object collides or touches the sensor. The object must be a rigid body, or if the object is static then it must be an actor, and the sensor must be type sensor and have collision bounds enabled
 sensor_collision1 = types.KX_TouchSensor()
 
@@ -154,9 +160,11 @@ hitObject1 = sensor_collision1.hitObject
 
 #T# get the list of objects that are colliding with the sensor
 hitObjectList1 = sensor_collision1.hitObjectList
+# |-----
 
-#T# Delay sensor
+#T# --- Delay sensor
 
+# |-----
 #T# create the delay sensor, it waits for a number of logic ticks to then send a positive signal, and after a duration it turns off the signal
 sensor_delay1 = types.SCA_DelaySensor()
 
@@ -168,9 +176,11 @@ sensor_delay1.duration = 20
 
 #T# set or get the repeat flag, which if true repeats the delay duration cycle
 sensor_delay1.repeat = True
+# |-----
 
-#T# Joystick sensor
+#T# --- Joystick sensor
 
+# |-----
 #T# create the joystick sensor, it senses input from a joystick
 sensor_joystick1 = types.SCA_JoystickSensor()
 
@@ -185,9 +195,11 @@ axisValues1 = sensor_joystick1.axisValues
 
 #T# get the number of buttons in the joystick
 numButtons1 = sensor_joystick1.numButtons
+# |-----
 
-#T# Keyboard sensor
+#T# --- Keyboard sensor
 
+# |-----
 #T# create the keyboard sensor, it senses input from the keyboard
 sensor_keyboard1 = types.SCA_KeyboardSensor()
 
@@ -214,9 +226,11 @@ events1 = sensor_keyboard1.events
 
 #T# get the press status of a given key
 keyStatus1 = sensor_keyboard1.getKeyStatus(events.F10KEY)
+# |-----
 
-#T# Message sensor
+#T# --- Message sensor
 
+# |-----
 #T# create the message sensor, it senses for the arrival of a message that was sent from a message actuator
 sensor_message1 = types.KX_NetworkMessageSensor()
 
@@ -231,10 +245,12 @@ bodies1 = sensor_message1.bodies
 
 #T# get the count of messages received by the sensor in a logic tick
 frameMessageCount1 = sensor_message1.frameMessageCount
+# |-----
 
-#T# Mouse sensor
+#T# --- Mouse sensor
 
-#T# create the mouse sensor, it senses
+# |-----
+#T# create the mouse sensor, it senses for a few mouse events, such as pressing the mouse buttons, moving the wheel
 sensor_mouse1 = types.SCA_MouseSensor()
 
 #T# set or get the mode of the mouse event. This is an integer, 1 means Left Button, 2 means Middle Button, 3 means Right Button, 4 means Wheel Up, 5 means Wheel Down, 6 means Movement
@@ -262,9 +278,11 @@ hitPosition1 = sensor_mouse1.hitPosition
 
 #T# get the UV coordinates in which the mouse has intersected an object
 hitUV1 = sensor_mouse1.hitUV
+# |-----
 
-#T# Near sensor
+#T# --- Near sensor
 
+# |-----
 #T# create the near sensor, it senses for objects near the sensor
 sensor_near1 = types.KX_NearSensor()
 
@@ -282,9 +300,11 @@ hitObject1 = sensor_near1.hitObject
 
 #T# get the list of objects near the sensor
 hitObjectList1 = sensor_near1.hitObjectList
+# |-----
 
-#T# Property sensor
+#T# --- Property sensor
 
+# |-----
 #T# create the property sensor, it takes the value of a given property and compares it to another value (can be itself), sending a signal according to the result of the comparison
 sensor_property1 = types.SCA_PropertySensor()
 
@@ -300,9 +320,11 @@ sensor_property1.value = 120
 #T# set or get the minimum and maximum values for the interval evaluation type
 sensor_property1.min = 3
 sensor_property1.max = 7
+# |-----
 
-#T# Radar sensor
+#T# --- Radar sensor
 
+# |-----
 #T# create the radar sensor, it senses for objects near the sensor in a conic shape
 sensor_radar1 = types.KX_RadarSensor()
 
@@ -329,9 +351,11 @@ coneOrigin1 = sensor_radar1.coneOrigin
 
 #T# get the point at the center of the base from the radar cone
 coneTarget1 = sensor_radar1.coneTarget
+# |-----
 
-#T# Random sensor
+#T# --- Random sensor
 
+# |-----
 #T# create the random sensor, it randomly sends a signal, on average half of the logic ticks the sensor sends a signal, and the other half it doesn't
 sensor_random1 = types.SCA_RandomSensor()
 
@@ -340,9 +364,11 @@ sensor_random1.seed = 220
 
 #T# get the last outcome as a boolean value
 lastDraw1 = sensor_random1.lastDraw
+# |-----
 
-#T# Ray sensor
+#T# --- Ray sensor
 
+# |-----
 #T# create the ray sensor, it senses if a ray intersects the face of an object
 sensor_ray1 = types.KX_RaySensor()
 
@@ -373,3 +399,6 @@ hitObject1 = sensor_ray1.hitObject
 
 #T# get the direction of the ray as a standardized vector
 rayDirection1 = sensor_ray1.rayDirection
+# |-----
+
+# |-------------------------------------------------------------

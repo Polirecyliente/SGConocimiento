@@ -4,14 +4,10 @@
 #T# Table of contents
 
 #T# Decision making
-
-#T# if, elif, else keywords
-
+#T# --- if, elif, else keywords
 #T# Loops
-
-#T# for loop
-#T# while loop
-
+#T# --- for loop
+#T# --- while loop
 #T# List comprehension
 
 #T# Beginning of content
@@ -22,7 +18,7 @@
 
 #T# a colon goes at the end of the line after an if, elif, or else keyword
 
-#T# if, elif, else keywords
+#T# --- if, elif, else keywords
 
 int1 = 0
 #T# if elif else syntax
@@ -49,7 +45,7 @@ else:
 
 #T# a colon goes at the end of the line after a for, or while keyword
 
-#T# for loop
+#T# --- for loop
 
 int1 = 0
 int2 = 0
@@ -82,7 +78,7 @@ for i1 in range1:
 else:
     print("Unreachable code")
 
-#T# while loop
+#T# --- while loop
 
 int1 = 0
 #T# while syntax

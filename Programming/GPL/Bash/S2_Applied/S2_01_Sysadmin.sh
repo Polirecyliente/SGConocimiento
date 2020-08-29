@@ -11,6 +11,7 @@
 #T# System libraries
 #T# Fonts
 #T# Internet
+#T# Latex
 
 #T# Beginning of content
 
@@ -22,6 +23,10 @@ rm !(*.tex|*.bib)
 #T# print numbered from the start in file1 up to line up_to_l, but taking only the last N lines
 # head -up_to_l file1 | nl -b 'a' | tail -N
 head -80 file1 | nl -b 'a' | tail -10
+
+#T# make a directory
+mkdir -p /tmp/parent_dir1/child_dir1
+#T# the p flag creates any parent directories needed, if they don't exist
 
 #T# Process management
 
@@ -100,3 +105,12 @@ cd /usr/share/fonts/
 
 #T# download a file from the internet with wget, the -c flag is to continue downloading a partially downloaded file
 wget -c http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run
+
+#T# Latex
+
+#T# see the paths where latex packages can be installed
+kpsepath tex
+
+#T# use the tlmgr command (for texlive manager) to install latex packages
+# tlmgr install package1
+tlmgr install undertilde

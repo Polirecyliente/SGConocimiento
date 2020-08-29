@@ -77,5 +77,6 @@
         "bit": "cpp",
         "charconv": "cpp"
     },
+    // python path for local python files
     "python.autoComplete.extraPaths": ["/home/jul/SGConocimiento/Programming/GPL/Python/S1_Basics"],
 }
