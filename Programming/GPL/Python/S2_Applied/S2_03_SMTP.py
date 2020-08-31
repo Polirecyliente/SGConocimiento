@@ -19,7 +19,7 @@ subject1 = 'Test email subject'
 attachment1 = '/home/jul/PolirecylBases/README.md'
 
 #T# open and read the attachment to attach it in the email
-fh1 = open(attachment1,"rb")
+fh1 = open(attachment1, "rb")
 attContent1 = fh1.read()
 
 #T# boundary to separate text from attachment
@@ -42,14 +42,14 @@ Content-Disposition: attachment; filename="testFile"
 
 %s
 --%s--
-""" % (sender1,", ".join(receiver1),subject1,boundary1,boundary1,boundary1
-    ,attachment1,attContent1,boundary1)
+""" % (sender1, ", ".join(receiver1), subject1, boundary1, boundary1, boundary1
+    , attachment1, attContent1, boundary1)
 
 #T# send email within try except block
 try:
 
-#T# creat an SMTP object with SMTP(host,port)
-    smtpObj1 = smtplib.SMTP('smtp.gmail.com',587)
+#T# creat an SMTP object with SMTP(host, port)
+    smtpObj1 = smtplib.SMTP('smtp.gmail.com', 587)
 
 #T# extended SMTP hello function with ehlo()
     smtpObj1.ehlo()
@@ -58,10 +58,10 @@ try:
     smtpObj1.starttls()
 
 #T# login with login()
-    smtpObj1.login(sender1,'s9l1pknOt')
+    smtpObj1.login(sender1, 's9l1pknOt')
 
 #T# send the email with sendmail()
-    smtpObj1.sendmail(sender1,receiver1,message1)
+    smtpObj1.sendmail(sender1, receiver1, message1)
 
 #T# close communication with close()
     smtpObj1.close()

@@ -17,10 +17,10 @@
 
 # |-------------------------------------------------------------
 #T# run any Python file /path/to/file1.py in a terminal with
-# python3 /path/to/file1.py
+# SYNTAX python3 /path/to/file1.py
 
 #T# output variables to stdout with the print function
-# print(var1,var2,var3)
+# SYNTAX print(var1, var2, var3)
 # |-------------------------------------------------------------
 
 #T# Blocks of code
@@ -45,8 +45,7 @@ int1 = 5
 # |--------------------------------------------------\
 #T# type hints are used when there is no autocompletion for an object that should have, this is because the type of a dynamic type can't be known at compile time
 
-# obj1 = Constructor1() # type: Object_type1
-
+# SYNTAX obj1 = Constructor1() # type: Object_type1
 #T# the type hint is written after the comment, the autocompletion of obj1 follows the type Object_type1
 
 var1 = 8 # type: str
@@ -100,16 +99,15 @@ input                   ("\nGive an input to continue the script\n")
 #T# Statements
 
 # |-------------------------------------------------------------
-#T# an statement is a complete instruction
+#T# a statement is a complete instruction
 
 int1 = 5
-#T# int1 = 5 is an statement, the variable int1 is made to point to the value 5
+#T# int1 = 5 is a statement, the variable int1 is made to point to the value 5
 
 # |--------------------------------------------------\
 #T# the dot notation is used to access the namespace of an object
 
-# obj1.name1.name2
-
+# SYNTAX obj1.name1.name2
 #T# here the object obj1 has name1 in its namespace, and name1 has name2 in its namespace
 
 int1 = int1.bit_length() # 3
@@ -126,8 +124,8 @@ pass
 #T# an expression statement is continued with a backslash at the end, a list can be continued without a comma at the end of the line
 int1 = 5 + 6 + \
        3 + 7     # 21
-list1 = ['Mon','Wed'
-        'Fri','Sun']
+list1 = ['Mon', 'Wed'
+        'Fri', 'Sun']
 # |-------------------------------------------------------------
 
 #T# Multistatement lines

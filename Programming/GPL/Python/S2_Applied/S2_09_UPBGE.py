@@ -70,7 +70,7 @@ def Player():
     x_pos1 = 480
     y_pos1 = 240
 #T# set the mouse position
-    render.setMousePosition(x_pos1,y_pos1)
+    render.setMousePosition(x_pos1, y_pos1)
     
 #T# the Update() function is common and executes in each frame
     def Update():
@@ -84,7 +84,7 @@ def Player():
             deltaX += movespd
 
 #T# change the location
-        motion.dLoc = [deltaX,deltaY,0.0]
+        motion.dLoc = [deltaX, deltaY, 0.0]
 
 #T# activate the actuator connected to the controller
         controller1.activate(motion)
@@ -259,7 +259,7 @@ sensor_mouse1.mode = 4
 #T# set of get the pulse focus flag, which if true sets the mouse to send a pulse each time it goes over an object, even if they overlap. This applies to the Mouse Over Any event
 sensor_mouse1.usePulseFocus = False
 
-#T# get the screen position of the mouse, [x,y] with origin at the top left of the game screen and measured in pixels
+#T# get the screen position of the mouse, [x, y] with origin at the top left of the game screen and measured in pixels
 position1 = sensor_mouse1.position
 
 #T# get the status for any of the three mouse buttons, the returned int has the same meaning as with the keyboard buttons

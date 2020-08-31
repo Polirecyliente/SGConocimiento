@@ -4,11 +4,11 @@
 #T# import the regex module
 import re
 
-#T# match at the start of the string with match('regexStr','textStr')
-match1 = re.match('a','aabbcc')
+#T# match at the start of the string with match('regexStr', 'textStr')
+match1 = re.match('a', 'aabbcc')
 
-#T# match at any place of the string with search('regexStr','textStr')
-search1 = re.search('(bc)(cd)','aabbccdd')
+#T# match at any place of the string with search('regexStr', 'textStr')
+search1 = re.search('(bc)(cd)', 'aabbccdd')
 
 #T# get a list with regex groups found with groups()
 print(search1.groups())

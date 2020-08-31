@@ -31,7 +31,7 @@ class Class_name1:
 #T# the self keyword is used to represent the calling instance, it is the instance itself, given an instance obj1, the expression obj1.method1() is shorthand for Class_name1.method1(obj1), the obj1 instance is placed in the self keyword place, given that method1 is defined with self as the first parameter
 
 #T# the constructor method is called __init__, the instance attributes can be defined inside the constructor
-    def __init__(self,attr1_param,attr2_param):
+    def __init__(self, attr1_param, attr2_param):
 
 #T# instance attributes are defined after the self keyword
         self.attr1 = attr1_param
@@ -45,7 +45,7 @@ class Class_name1:
     def get_attr1(self):
         return self.attr1
 
-    def set_attr1(self,new_attr1):
+    def set_attr1(self, new_attr1):
         self.attr1 = new_attr1
 
 #T# hidden variables
@@ -63,11 +63,11 @@ class Class_name1:
 #T# Instantiation
 
 #T# make an instance of a class by calling the constructor
-obj1 = Class_name1(5,"str1")
+obj1 = Class_name1(5, "str1")
 
 #T# objects in local scope can be made by instantiating them inside a function
 def func1():
-    local_obj1 = Class_name1(1,"2")
+    local_obj1 = Class_name1(1, "2")
     return None
 func1()
 func1()
@@ -157,7 +157,7 @@ class Derived_class1 (Class_name1):
         return "String of the object"
 
 #T# a child object is instantiated the same way as the parent
-child_obj1 = Derived_class1(4,"child_str","child_new_str")
+child_obj1 = Derived_class1(4, "child_str", "child_new_str")
 
 #T# the following examples show a few of the child methods, and attributes
 int1 = child_obj1.child_new_method1() # 35
@@ -187,7 +187,7 @@ class Multiple_parents_class1 (Derived_class2, Derived_class1):
 
 #T# the Method Resolution Order MRO
 
-multi_parent_obj1 = Multiple_parents_class1(5,"multi_parent","s")
+multi_parent_obj1 = Multiple_parents_class1(5, "multi_parent", "s")
 int1 = multi_parent_obj1.attr1 # 15
 #T# the MRO is used to decide which of the parents methods to use when several parents have the same method, the MRO allows to select which of the methods to inherit
 

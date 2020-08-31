@@ -9,6 +9,12 @@
 
 #T# Beginning of content
 
+#T# Basic system calls
+
+import time
+#T# the sleep function suspends the execution of the program for a given time in seconds
+time.sleep(0.3) # None
+
 #T# File input output
 
 str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
@@ -62,7 +68,7 @@ with open(str1, "a") as textIOWrapper1:
 #T#     0, is for start of the file
 #T#     1, is for current cursor position, offset_int1 must be zero
 #T#     2, is for end of the file
-with open(str1,"r+") as textIOWrapper1:
+with open(str1, "r+") as textIOWrapper1:
     textIOWrapper1.seek(2, 0)
     textIOWrapper1.write("AB") # two bytes written to replace one 'ü'
 
@@ -79,7 +85,7 @@ import os
 str2 = "/tmp/renamed_file1"
 #T# the rename function serves to rename a file
 # os.rename("original_filename1", "new_filename1")
-os.rename(str1,str2)
+os.rename(str1, str2)
 
 #T# the remove function serves to remove a file
 os.remove(str2)

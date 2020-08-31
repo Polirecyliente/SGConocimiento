@@ -79,4 +79,12 @@
     },
     // python path for local python files
     "python.autoComplete.extraPaths": ["/home/jul/SGConocimiento/Programming/GPL/Python/S1_Basics"],
+    
+    "highlight.regexes": {
+        "(//|#|<!-- #|%|/\\* #)( SYNTAX)(.*)": [
+          { }, 
+          { },
+          { "color": "#C030FF", "backgroundColor": "#03410388"}
+        ]
+    }
 }

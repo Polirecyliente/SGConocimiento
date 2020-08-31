@@ -1,5 +1,5 @@
 
-#   P  Module example
+#   P Module example
 
 #T# Table of contents
 
@@ -7,13 +7,17 @@
 
 #T# Beginning of content
 
+# |-------------------------------------------------------------
 #T# packages are directories that contain modules, the modules are files that contain functions and classes
+# |-------------------------------------------------------------
 
 #T# Modules
 
+# |-------------------------------------------------------------
 #T# module's definitions, they are mostly functions and classes
 def func1():
     return 56
 
 #T# any statement will execute when the module is imported
 print("In module")
+# |-------------------------------------------------------------

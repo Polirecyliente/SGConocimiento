@@ -3,18 +3,18 @@
 
 #T# pdb is the Python debugger
 
-a1 = [5,2,3]
+a1 = [5, 2, 3]
 #T# create a breakpoint with breakpoint()
 breakpoint()
 a2 = 7
-def eofF1(nu1,nu2):
+def eofF1(nu1, nu2):
     nu3 = nu1+nu2
     print("EOFString")
 def fun2():
-    eofF1(a1[0],a1[2])
+    eofF1(a1[0], a1[2])
     loc2 = 72
-    for i in [1,2,3]:
-        print("i is",i)
+    for i in [1, 2, 3]:
+        print("i is", i)
 fun2()
 
 #T# print a variable's value with p (for print)
@@ -31,9 +31,9 @@ fun2()
 # ll
 #T# list 11 source code lines around line n with l n
 # l 3
-#T# create a breakpoint with break file(:lineNum|.func),conditionToBreak
+#T# create a breakpoint with break file(:lineNum|.func), conditionToBreak
 # break Section2_9:12
-# break Section2_9.eofF1,a2 < 10
+# break Section2_9.eofF1, a2 < 10
 #T# display all breakpoints with break (alone)
 # break
 #T# disable a breakpoint with disable bpNum

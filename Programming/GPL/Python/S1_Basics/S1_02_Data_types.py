@@ -26,8 +26,7 @@
 # |--------------------------------------------------\
 #T# get the type or class of a variable with the type function
 
-# type1 = type(var1)
-
+# SYNTAX type1 = type(var1)
 #T# this returns a type object with the type of var1
 
 int1 = 8
@@ -116,8 +115,7 @@ str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
 # |--------------------------------------------------\
 #T# the bytes type is numerical but used extensively in strings
 
-# byte1 = bytes('\NUM', encoding1)
-
+# SYNTAX byte1 = bytes('\NUM', encoding1)
 #T# \NUM is a series of escape sequences of hex and octal numbers \xNN and \NNN, encoding1 is a string with an encoding scheme
 
 byte1 = bytes("\x42\103", 'utf-8') # b'BC'
@@ -211,11 +209,11 @@ froz1 = frozenset({"elem_unord_froz", 12, 5, 98})
 #T# creating an enum requires inheriting from the Enum class
 from enum import Enum
 
+# SYNTAX definition of an enum
 # class enum1(Enum):
 #     elem1 = val1
 #     elem2 = val2
 #     elem3 = val3
-
 #T# the enum maps elemN to valN. In the example, enum1 maps elem1 to val1
 
 class enum1(Enum):
@@ -243,8 +241,7 @@ str1 = None
 # |--------------------------------------------------\
 #T# cast from int to int base 10
 
-# int(int1)
-
+# SYNTAX int(int1)
 #T# this returns int1 in base 10
 
 int1 = int(0o12) # 10
@@ -253,8 +250,7 @@ int1 = int(0o12) # 10
 # |--------------------------------------------------\
 #T# cast from string to int base 10
 
-# int(str1, base1)
-
+# SYNTAX int(str1, base1)
 #T# base1 is the base of str1, it can be from 2 to 36, in base 36 the number 35 is represented with a 'z', in base 35 the number 34 is 'y', and so on
 
 str1 = "0xA4" # 0xA4 is 164
@@ -264,8 +260,7 @@ int1 = int(str1, 16) # 164
 # |--------------------------------------------------\
 #T# cast pairs of numbers as complex numbers
 
-# complex(realN, imN)
-
+# SYNTAX complex(realN, imN)
 #T# realN is the real component, imN is the imaginary component
 
 flo1 = float(int1/2) # 82.0

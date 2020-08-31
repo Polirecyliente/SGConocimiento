@@ -12,19 +12,26 @@
 
 #T# Importing modules
 
+# |-------------------------------------------------------------
 #T# the import keyword imports a package or module to use its code in this file
 import S1_10_P_Module_example
 
-#T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch, example
+# |--------------------------------------------------\
+#T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch
+
+# SYNTAX file system hierarchy
 # package1
 # -- main.py
 # -- subpackage1
 # -- -- subp1_module1.py
 # -- subpackage2
 # -- -- subp2_module1.py
-#T# the file subp2_module1.py imports subp1_module1.py with
-# import subpackage1.subp1_module1
+
+#T# the file subp2_module1.py imports subp1_module1.py with the following
+
+# SYNTAX import subpackage1.subp1_module1
 #T# this path is the same as seen from main.py
+# |--------------------------------------------------/
 
 #T# specific functions, and classes from a module can be imported, without importing the rest of the module
 # from module1 import func1 as alias1
@@ -35,6 +42,7 @@ import importlib
 #T# execute a module again with the reload function
 # importlib.reload(module1)
 importlib.reload(S1_10_P_Module_example)
+# |-------------------------------------------------------------
 
 #T# Using modules
 
@@ -47,7 +55,7 @@ int1 = f1(7) # 53
 
 #T# import a package from a directory with a __init__.py file, when the package is imported the __init__.py file is executed
 import package
-int1 = package.anon_func1(8,-5) # 50
+int1 = package.anon_func1(8, -5) # 50
 
 #T# Info about modules
 

@@ -3,7 +3,7 @@
 
 #T# Table of contents
 
-#T# Basics
+#T# Basic usage
 #T# Figures, axes
 #T# Parts of a plot
 #T# Annotations
@@ -16,17 +16,17 @@
 
 #T# Matplotlib is a package for plotting
 
-#T# Basics
+#T# Basic usage
 
 #T# import the matplotlib.pyplot module
 import matplotlib.pyplot as plt
 
-x = [4,1]
-y = [3,5]
+x = [4, 1]
+y = [3, 5]
 #T# plot a set of points with the plot function
 # plt.plot(list1, list2)
 #T# list1 and list2 must be the same size, list1 has the abscissa values, list2 has the ordinate values
-plt.plot(x,y)
+plt.plot(x, y)
 
 #T# save the plot with the savefig function
 # plt.savefig("/path/to/save_file1")
@@ -101,7 +101,7 @@ plt.sca(ax1)
 
 ax1 = plt.axes() # type: plt.Axes
 #T# set the axis borders (in data coordinates) with the axis function
-# axis1.axis([xmin,xmax,ymin,ymax])
+# axis1.axis([xmin, xmax, ymin, ymax])
 #T# the list inside the axis function contains the limits in x, y
 ax1.axis([-7, 5, -0.5, 0.5])
 
@@ -140,9 +140,9 @@ plt.minorticks_on()
 #T# the dashes kwarg is an array of numbers, determining the length of a dash and the length of a space in turns, (dash_length1, space_length1, dash_length2, space_length2) and so on
 ax1.grid(which = "minor", color = "r", alpha = 0.2)
 ax1.grid(which = "major", color= "#FFFF66")
-ax1.grid(axis = "x", linewidth=4, dashes=[5, 10, 7, 7, 2, 1], linestyle='--')
+ax1.grid(axis = "x", linewidth = 4, dashes = [5, 10, 7, 7, 2, 1], linestyle = '--')
 
-ax1.axis([0,4,0,6])
+ax1.axis([0, 4, 0, 6])
 #T# the twinx, twiny functions serve to create a second axis
 ax2 = ax1.twiny()
 
@@ -150,16 +150,16 @@ ax2 = ax1.twiny()
 # axes1.set_xtick(list1)
 # axes1.set_ytick(list1)
 #T# list1 is the list of values at which a tick mark will appear
-ax2.set_xticks([-8,0,8,16,24])
+ax2.set_xticks([-8, 0, 8, 16, 24])
 #T# the ticks in ax2 appear as if multiplying the ticks in ax1 by 4
 
 #T# create a figure, and a numpy n-dimensional array of axes, together in a tuple, with the subplots function
-# plt.subplots(rowN,colN)
+# plt.subplots(rowN, colN)
 #T# rowN is the number of rows of subplots, and colN is the number of columns of subplots, a unique pair of axes is assigned to each subplot
-fig1, axes_ndarr1 = plt.subplots(2,3)
+fig1, axes_ndarr1 = plt.subplots(2, 3)
 
 #T# access subplots in an axes ndarray
-axes_ndarr1[0][2].plot([2,4],[7,12])
+axes_ndarr1[0][2].plot([2, 4], [7, 12])
 #T# this figure has 6 axes, and the plot goes in rwo 1, col 3
 
 #T# set the margins of the axes as a proportion of the data interval with the margins function
@@ -288,11 +288,11 @@ plt.text(.9, .9, 'figure coords', transform = fig1.transFigure)
 #T# Plot types
 
 x = ['categ1', 'categ2']
-y = [3,5]
+y = [3, 5]
 #T# create a bar plot with the bar function
 # plt.bar(list1, list2)
 #T# list1 contains the categories so it can be a list of strings, list2 has the value of the bar for each category
-plt.bar(x,y)
+plt.bar(x, y)
 
 z = [4, 7.6, 4, 4, 4.36, 4]
 #T# plot a histogram with the hist function
@@ -301,17 +301,17 @@ z = [4, 7.6, 4, 4, 4.36, 4]
 plt.hist(z)
 #T# in the example, 4.36 is the minimum value away from 4 that by default produces a new bar
 
-x = [4,1]
+x = [4, 1]
 #T# create a scatter plot with the scatter function
 # plt.scatter(list1, list2)
 #T# each dot in the scatter plot comes from each value in list1 paired with each value in list2 in the same position of the lists
-plt.scatter(x,y)
+plt.scatter(x, y)
 
 #T# plot an arrow with the arrow function
 # plt.arrow(x_pos1, y_pos1, x_delta1, y_delta1, kwargs)
 #T# x_pos1, y_pos1 are the x, y coordinates of the arrow's origin, x_delta1 is the distance in the x axis traveled by the arrow, and y_delta1 is the homologous for the y axis
 #T# the shape kwarg can have one of the values, 'full', 'left', or 'right', to determine the side, or sides of the arrow to draw
-plt.arrow(0,0,3,5,width=0.2,length_includes_head=True,shape="left",overhang=0.2,linestyle='--',fill=False, facecolor="#FF99DD",edgecolor="#33FF99",hatch='/',zorder=3,alpha=0.7)
+plt.arrow(0, 0, 3, 5, width = 0.2, length_includes_head = True, shape = "left", overhang = 0.2, linestyle = '--', fill = False, facecolor = "#FF99DD", edgecolor = "#33FF99", hatch = '/', zorder = 3, alpha = 0.7)
 
 #T# patches
 
@@ -322,7 +322,7 @@ plt.arrow(0,0,3,5,width=0.2,length_includes_head=True,shape="left",overhang=0.2,
 #T# create a rectangle with the Rectangle constructor
 # plt.Rectangle(origin_tuple1, width1, height1, kwargs)
 #T# origin_tuple1 is a two element tuple with the x, y coordinates of the rectangle's bottom left corner, width1 is a number with the width, height1 is a number with the height
-ax1.add_patch(plt.Rectangle((0,0),3,5,fill=True,alpha=0.3,hatch='*',linewidth=4,edgecolor='#99DD33',facecolor="#4499EF",linestyle=":"))
+ax1.add_patch(plt.Rectangle((0, 0), 3, 5, fill = True, alpha = 0.3, hatch = '*', linewidth = 4, edgecolor = '#99DD33', facecolor = "#4499EF", linestyle = ":"))
 
 #T# Backends
 
