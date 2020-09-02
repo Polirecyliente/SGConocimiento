@@ -6,21 +6,35 @@
 #T# Class definition
 #T# Instantiation
 #T# Parts of a class
+#T# --- Attributes
+#T# --- Methods
+#T# --- Class variables
+#T# --- Hidden variables
+#T# --- General parts
 #T# Inheritance
+#T# --- Multiple inheritance
+#T# --- Method Resolution Order (MRO)
 
 #T# Beginning of content
 
+# |-------------------------------------------------------------
 #T# OOP stands for Object Oriented Programming
+# |-------------------------------------------------------------
 
 #T# Class definition
 
-#T# class definition syntax
+# |-------------------------------------------------------------
+#T# the class keyword is used to define the classes
+
+# SYNTAX class definition
 # class Class_name1:
 #     "class_docstring1"
 #     class_attribute1 = val1
 #     def class_method1(self, params):
 #         statements1
-#T# the class name is Class_name1, the docstring is "class_docstring1", inside the class, attributes and methods can be defined, such as class_attribute1, and class_method1, the self keyword is the first parameter, it allows methods to access the calling instance 
+#T# the class name is Class_name1, the docstring is "class_docstring1", inside the class, attributes and methods can be defined, such as class_attribute1, and class_method1
+
+#T# in the class methods, the self keyword is the first parameter, it allows methods to access the calling instance 
 
 class Class_name1:
     "here the class docstring"
@@ -28,9 +42,9 @@ class Class_name1:
 #T# a class attribute is a variable shared by all instances, it's defined outside all methods
     class_attr1 = 1
 
-#T# the self keyword is used to represent the calling instance, it is the instance itself, given an instance obj1, the expression obj1.method1() is shorthand for Class_name1.method1(obj1), the obj1 instance is placed in the self keyword place, given that method1 is defined with self as the first parameter
+#T# the self keyword is used to represent the calling instance, given an instance obj1, the expression obj1.method1() is shorthand for Class_name1.method1(obj1), obj1 being in the self keyword place, the first parameter of method1
 
-#T# the constructor method is called __init__, the instance attributes can be defined inside the constructor
+#T# the constructor method is called __init__
     def __init__(self, attr1_param, attr2_param):
 
 #T# instance attributes are defined after the self keyword
@@ -48,20 +62,30 @@ class Class_name1:
     def set_attr1(self, new_attr1):
         self.attr1 = new_attr1
 
-#T# hidden variables
+#T# --- Hidden variables
 
-#T# hidden variables syntax
-# __hidden_var_name1 = val1
+# |-----
+
+# |--------------------------------------------------\
+#T# creating hidden variables
+
+# SYNTAX __hidden_var_name1 = val1
 #T# the name of a hidden variable starts with double underscore
+
     __hidden1 = 9
+# |--------------------------------------------------/
 
 #T# access a hidden variable inside the class as a normal attribute
     def get_hidden_var1(self):
         self.__hidden1 *= 2
         return self.__hidden1
+# |-----
+
+# |-------------------------------------------------------------
 
 #T# Instantiation
 
+# |-------------------------------------------------------------
 #T# make an instance of a class by calling the constructor
 obj1 = Class_name1(5, "str1")
 
@@ -69,36 +93,56 @@ obj1 = Class_name1(5, "str1")
 def func1():
     local_obj1 = Class_name1(1, "2")
     return None
+
+#T# the destructor is called when the local instances go out of scope
 func1()
 func1()
-#T# Class_name1.class_attr1 == 3
+# Class_name1.class_attr1 == 3
+# |-------------------------------------------------------------
 
 #T# Parts of a class
 
-#T# attributes
+# |-------------------------------------------------------------
 
+#T# --- Attributes
+
+# |-----
 #T# access attributes directly through the object with dot notation
 str1 = obj1.attr2 # str1
+# |-----
 
-#T# methods
+#T# --- Methods
 
+# |-----
 #T# call methods from the class through the object with dot notation
 int1 = obj1.get_attr1() # 5
+# |-----
 
-#T# class variables
+#T# --- Class variables
 
+# |-----
 #T# access a class variable through the class with dot notation
 int1 = 2 * Class_name1.class_attr1 # 6
+# |-----
 
-#T# hidden variables
+#T# --- Hidden variables
 
+# |-----
+
+# |--------------------------------------------------\
 #T# access hidden variables from outside the class
-# var1 = obj1._Class1__hidden_var_name1
-#T# the hidden variable is accessed as an attribute of obj1, it must be written as an underscore then the class name, then two underscores and the variable name
+
+# SYNTAX var1 = obj1._Class1__hidden_var_name1
+#T# the hidden variable is accessed as an attribute of obj1, it must be written as, an underscore, the class name, two underscores, the variable name
+
 int1 = obj1._Class_name1__hidden1 # 9
+# |--------------------------------------------------/
 
-#T# parts of a class in general
+# |-----
 
+#T# --- General parts
+
+# |-----
 #T# import the inspect module to get the parts of a class
 import inspect
 
@@ -122,24 +166,37 @@ str1 = obj1.__module__ # __main__
 
 #T# the __bases__ attribute
 tuple1 = Class_name1.__bases__ # (<class 'object'>,)
+# |-----
+
+# |-------------------------------------------------------------
 
 #T# Inheritance
 
-#T# class inheritance syntax
+# |-------------------------------------------------------------
+#T# classes can inherit from preexisting classes
+
+# SYNTAX class inheritance
 # class Derived_class1 (Parent_class1):
 #     def parent_method1(self, params)
 #         statements1
 #     def child_new_method1(self, params):
 #         statements2
 #T# to inherit, the parent class must go in parentheses after the class name, and the parent methods like parent_method1 can be overridden
+
 class Derived_class1 (Class_name1):
 
 #T# create child instance attributes and inherit the parent ones in the constructor
     def __init__(self, attr1_param, attr2_param, new_attr_param):
 
+# |--------------------------------------------------\
 #T# the super function returns an object of the parent class
-# super().parent_method1(args)
+
+# SYNTAX super().parent_method1(args)
+#T# the parent's methods and attributes can be accessed through this object
+
         super().__init__(3 * attr1_param, attr2_param)
+# |--------------------------------------------------/
+
         self.new_attr1 = new_attr_param
         self.new_attr2 = 888
 
@@ -172,36 +229,52 @@ str1 = str(obj1)        # <__main__.Class_name1 object at 0x7feebbae2a30>
 str1 = repr(child_obj1) # Representation of the object
 str1 = str(child_obj1)  # String of the object
 
-#T# multiple inheritance
+#T# --- Multiple inheritance
 
+# |-----
 class Derived_class2 (Class_name1):
     def set_attr1(self):
         self.attr1 = 2 * self.attr1
 
-#T# multiple inheritance syntax
+# |--------------------------------------------------\
+#T# for multiple inheritance, at least two parent classes are required
+
+# SYNTAX multiple inheritance
 # class Derived_class1 (Parent_class1, Parent_class2):
 #     class_statements1
 #T# the parent classes are written inside parentheses separated by comma
+
 class Multiple_parents_class1 (Derived_class2, Derived_class1):
     pass
+# |--------------------------------------------------/
 
-#T# the Method Resolution Order MRO
-
+#T# normal instantiation, and access in multiple inheritance
 multi_parent_obj1 = Multiple_parents_class1(5, "multi_parent", "s")
 int1 = multi_parent_obj1.attr1 # 15
+
+# |-----
+
+#T# --- Method Resolution Order (MRO)
+
+# |-----
 #T# the MRO is used to decide which of the parents methods to use when several parents have the same method, the MRO allows to select which of the methods to inherit
 
 #T# the first inherited class has priority in the MRO
 multi_parent_obj1.set_attr1()
-int1 = multi_parent_obj1.attr1 # 30
-#T# here the Derived_class2 method was used because this class is first in the parentheses of parent classes from the Multiple_parents_class1
+int1 = multi_parent_obj1.attr1 # 30, here the Derived_class2 method was used because this class is first in the parentheses of parent classes from the Multiple_parents_class1
 
+# |--------------------------------------------------\
 #T# it's possible to call one of the methods that wasn't inherited
-# Parent_class1.method1(child_obj1)
+
+# SYNTAX Parent_class1.method1(child_obj1)
 #T# this calls the method1 from the parent Parent_class1, even if it wasn't inherited by the child class
+
 Derived_class1.set_attr1(multi_parent_obj1)
 int1 = multi_parent_obj1.attr1 # 29
+# |--------------------------------------------------/
 
-#T# the mro function returns a list of the classes in order, in which a member will be searched for, or the same as the order of the classes to inherit from
+#T# the mro function returns a list of the classes in order, in which a member will be searched for, or the same as the order of the classes inherited, the class 'object' is the base class of all classes
 list1 = Multiple_parents_class1.mro() # [<class '__main__.Multiple_parents_class1'>, <class '__main__.Derived_class2'>, <class '__main__.Derived_class1'>, <class '__main__.Class_name1'>, <class 'object'>]
-#T# the class 'object' is the base class of all classes
+# |-----
+
+# |-------------------------------------------------------------

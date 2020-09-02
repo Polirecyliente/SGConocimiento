@@ -33,41 +33,47 @@ import S1_10_P_Module_example
 #T# this path is the same as seen from main.py
 # |--------------------------------------------------/
 
+# |--------------------------------------------------\
 #T# specific functions, and classes from a module can be imported, without importing the rest of the module
-# from module1 import func1 as alias1
+
+# SYNTAX from module1 import func1 as alias1
 #T# this imports only func1 from module1 into the namespace of this file with the alias alias1
+
 from S1_06_Functions import func1 as f1
+# |--------------------------------------------------/
 
 import importlib
 #T# execute a module again with the reload function
-# importlib.reload(module1)
 importlib.reload(S1_10_P_Module_example)
 # |-------------------------------------------------------------
 
 #T# Using modules
 
+# |-------------------------------------------------------------
 #T# call module's function
 int1 = S1_10_P_Module_example.func1() # 56
 
 int1 = f1(7) # 53
+# |-------------------------------------------------------------
 
 #T# Importing packages
 
-#T# import a package from a directory with a __init__.py file, when the package is imported the __init__.py file is executed
+# |-------------------------------------------------------------
+#T# import a package, which is a directory with an __init__.py file, when the package is imported the __init__.py file is executed
 import package
 int1 = package.anon_func1(8, -5) # 50
+# |-------------------------------------------------------------
 
 #T# Info about modules
 
+# |-------------------------------------------------------------
 import math
-#T# the help function returns the generated help for its module argument
-# help(module1)
-#T# the help for module1 is printed to stdout
+#T# the help function prints to stdout the generated help for its module argument
 help(math)
 
 #T# an special argument to the help function is "modules" which lists the installed modules
 help("modules")
 
-#T# the __file__ attribute of a module contains its location in the system
+#T# the __file__ attribute of a module contains its location in the system, and if it has no file then the module is possibly builtin
 str1 = importlib.__file__ # /usr/lib/python3.8/importlib/__init__.py
-#T# if there is no file then the module is possibly builtin
+# |-------------------------------------------------------------
