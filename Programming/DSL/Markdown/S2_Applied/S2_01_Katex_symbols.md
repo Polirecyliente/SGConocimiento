@@ -6,12 +6,21 @@
 
 <!-- #T# Accents -->
 <!-- #T# Delimiters -->
+<!-- #T# --- Delimiter sizing modifiers -->
 <!-- #T# Environments -->
 <!-- #T# Letters -->
 <!-- #T# Layout -->
+<!-- #T# --- Annotations -->
+<!-- #T# --- Line breaks -->
+<!-- #T# --- Vertical layout -->
+<!-- #T# --- Overlap, spacing -->
 <!-- #T# Logic, set theory -->
 <!-- #T# Macros -->
 <!-- #T# Operators -->
+<!-- #T# --- Big operators -->
+<!-- #T# --- Binary operators -->
+<!-- #T# --- Functions -->
+<!-- #T# --- Relational operators -->
 <!-- #T# Arrows -->
 <!-- #T# Style -->
 <!-- #T# Symbols, punctuation -->
@@ -19,12 +28,15 @@
 
 <!-- #T# Beginning of content -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# katex symbols are used in markdown files, inside single, or double dollar signs -->
 
 <!-- %T% this markdown file is used to show the katex symbols, organized by categories. The character 'L' for Letters, is used for most examples -->
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Accents -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# accents are a type of diacritic that commonly goes on top of the letter -->
 
 | Symbol description                | Example                         |
@@ -61,70 +73,161 @@
 | Parenthesis under letters         | $\undergroup{Letters}$          |
 | Brace over letters                | $\overbrace{Letters}$           |
 | Brace under letters               | $\underbrace{Letters}$          |
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Delimiters -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# delimiters are used as grouping symbols -->
+| Symbol description       | Example                            |
+| :----------------------- | :--------------------------------: |
+| Left parenthesis         | $\lparen$ or $($                   |
+| Right parenthesis        | $\rparen$ or $)$                   |
+| Left bracket             | $\lbrack$ or $[$                   |
+| Right bracket            | $\rbrack$ or $]$                   |
+| Left brace               | $\lbrace$ or $\{$                  |
+| Right brace              | $\rbrace$ or $\}$                  |
+| Left angle bracket       | $\langle$ or $\lang$               |
+| Right angle bracket      | $\rangle$ or                       |
+| Left group symbol        | $\lgroup$                          |
+| Right group symbol       | $\rgroup$                          |
+| Vertical line            | $\vert$ or a literal vertical line |
+| Left vertical line       | $\lvert$                           |
+| Right vertical line      | $\rvert$                           |
+| Double vertical lines    | $\Vert$ or $\|$                    |
+| Left double vertical     | $\lVert$                           |
+| Right double vertical    | $\rVert$                           |
+| Left white bracket       | $\llbracket$                       |
+| Right white bracket      | $\rrbracket$                       |
+| Left white brace         | $\lBrace$                          |
+| Right white brace        | $\rBrace$                          |
+| Upper left bracket       | $\ulcorner$                        |
+| Upper right bracket      | $\urcorner$                        |
+| Lower left bracket       | $\llcorner$                        |
+| Lower right bracket      | $\lrcorner$                        |
+| Left ceiling             | $\lceil$                           |
+| Right ceiling            | $\rceil$                           |
+| Left floor               | $\lfloor$                          |
+| Right floor              | $\rfloor$                          |
+| Left upper half brace    | $\lmoustache$                      |
+| Right upper half brace   | $\rmoustache$                      |
 
-| Symbol description | Example |
-| :----------------- | :-----: |
-| Tilde over letter                 | $\tilde{L}$                     |
+<!-- #T# --- Delimiter sizing modifiers -->
 
-<!-- TODO: braket notation -->
+<!-- # |----- -->
+| Symbol description                   | Example                           |
+| :----------------------------------- | :-------------------------------: |
+| Left, middle, right, always together | $\left) A \middle\Vert B \right($ |
+| big grouping symbol                  | $\big\lparen$                     |
+| Big grouping symbol                  | $\Big\lbrack$                     |
+| bigg grouping symbol                 | $\bigg\lbrace$                    |
+| Bigg grouping symbol                 | $\Bigg\langle$                    |
+| bigm grouping symbol                 | $\bigm\lgroup$                    |
+| Bigm grouping symbol                 | $\Bigm\lvert$                     |
+| biggm grouping symbol                | $\biggm\lVert$                    |
+| Biggm grouping symbol                | $\Biggm\lmoustache$               |
+| bigr grouping symbol                 | $\bigr\lceil$                     |
+| Bigr grouping symbol                 | $\Bigr\rceil$                     |
+| biggr grouping symbol                | $\biggr\lfloor$                   |
+| Biggr grouping symbol                | $\Biggr\rfloor$                   |
+<!-- # |----- -->
 
-<!-- Delimiter sizing modifiers -->
-$\left\gt AB\right\lt$
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Environments -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# environments are specific grids where to write characters -->
-
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Letters -->
 
+<!-- # |------------------------------------------------------------- -->
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Layout -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# layout serves to set the characters' position -->
 
-<!-- #T# annotations -->
+<!-- #T# --- Annotations -->
 
-<!-- #T# line breaks -->
+<!-- # |----- -->
+<!-- # |----- -->
 
-<!-- #T# vertical layout -->
+<!-- #T# --- Line breaks -->
 
-<!-- #T# overlap, spacing -->
+<!-- # |----- -->
+<!-- # |----- -->
 
+<!-- #T# --- Vertical layout -->
+
+<!-- # |----- -->
+<!-- # |----- -->
+
+<!-- #T# --- Overlap, spacing -->
+
+<!-- # |----- -->
+<!-- # |----- -->
+
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Logic, set theory -->
 
+<!-- # |------------------------------------------------------------- -->
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Macros -->
 
+<!-- # |------------------------------------------------------------- -->
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Operators -->
 
-<!-- #T# big operators -->
+<!-- # |------------------------------------------------------------- -->
+<!-- #T# --- Big operators -->
 
-<!-- #T# binary operators -->
+<!-- # |----- -->
+<!-- # |----- -->
 
-<!-- #T# functions -->
+<!-- #T# --- Binary operators -->
 
-<!-- #T# relational operators -->
+<!-- # |----- -->
+<!-- # |----- -->
 
+<!-- #T# --- Functions -->
+
+<!-- # |----- -->
+<!-- # |----- -->
+
+<!-- #T# --- Relational operators -->
+
+<!-- # |----- -->
+<!-- # |----- -->
+
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Arrows -->
 
+<!-- # |------------------------------------------------------------- -->
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Style -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# styles are used to change the appearance of the characters -->
-
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Symbols, punctuation -->
 
+<!-- # |------------------------------------------------------------- -->
+| Symbol description | Example |
+| :----------------- | :-----: |
+| Backslash | $\backslash$ |
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Units of measure -->
 
+<!-- # |------------------------------------------------------------- -->
 <!-- #T# units of measure are used to dictate the size of what is being changed -->
-
+<!-- # |------------------------------------------------------------- -->
