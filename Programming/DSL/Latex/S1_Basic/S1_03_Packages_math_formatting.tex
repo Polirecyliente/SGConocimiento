@@ -39,57 +39,92 @@
         \frac{a}{b} = \int_x^y Z\\
         \sqrt{x_1}\\
         \sum_{u \in U_{s}}^{\infty} Z_{i,u,s} = 1
-
+    \end{align}
 %T% less than and greater than or equal to with \leq, \geq
 %T% insert spaces in equations with \quad and \qquad
-        a \leq \quad x \qquad \geq b\\
-        
+    $a \leq \quad x \qquad \geq b$
+
 %T% put a tilde on top of a text with \tilde{text}
-        \tilde{A}\\
+    $\tilde{A}$
 
 %T% put a tilde that covers the whole text with \widetilde{text}
-        \widetilde{long Text}\\
+    $\widetilde{long Text}$
         
 %T% create special symbols like the forall symbol, in set, ellipsis,
 %T% curly braces
-        \forall \in \dots \{ \}\\
+    $\forall \in \dots \{ \}$
 
 %T% define a function by parts with the cases environment
+    \begin{align}
         \begin{cases}
             val1,  & range1\\
             v2,    & range2
         \end{cases}
+    \end{align}
 
 %T% grouping symbols
 
 % |--------------------------------------------------\
 %T% grouping symbols such as parentheses, brackets, braces, etc., are commonly paired as a left, right pair. This pairing is ensured with the left, right commands
 
-% \left\grouping_symbol1 text1 \right\grouping_symbol2
-
+% SYNTAX \left\grouping_symbol1 text1 \right\grouping_symbol2
 %T% the grouping symbol is placed after the left, right commands, text1 is the text between the grouping symbols, \grouping_symbol1 need not be the same as \grouping_symbol2
+
+    $\left\langle str1 \right\rangle$
 % |--------------------------------------------------/
 
 %T% create matrices with the matrix tag, within an align environment
 %T% scale brackets and parentheses with \left(, \right), \left[, \right]
+    \begin{align}
         \left[
         \begin{matrix}
             1 & x & y\\
             z & & t*\lambda
         \end{matrix}    
         \right]
+    \end{align}
 
 %T% use ceil and floor delimiters with \lceil, \rceil, \lfloor, \rfloor
-        \lceil k \rceil = \lfloor\frac{N}{2}\rfloor
+    $\lceil k \rceil = \lfloor\frac{N}{2}\rfloor$
+
+% |--------------------------------------------------\
+%T% the array environment is used with extra arguments to set the alignment, the arguments can be
+%T%     l for left
+%T%     c for center
+%T%     r for right
+%T%     | for line separator
+%T%     : for dotted line separator (in Katex)
+
+% SYNTAX array creation
+% \def\arraystretch{N1}
+% \begin{array}{l|c|r}
+%     str1 & str2 & str3\\
+%     str4 & str5 & str6
+% \end{array}
+%T% N1 is a number with the amount of stretch for the array
+
+    $\def\arraystretch{3}
+    \begin{array}{l|c|r}
+        a & b & c\\
+        d & e & f
+    \end{array}$
+    
+% |--------------------------------------------------/
 
 %T% create a single multiline equation inside an align environment,
 %T% with the split environment
+    \begin{align}
         \begin{split}
             \widetilde{Tf}_{i,s} + M*(2-Z_{i,u,s}-&Z_{j,u,s}) \leq 
             \widetilde{Ts}_{j,s} \\
             \forall i \in I, j \in I, i < j,& s \in S, u \in U_{s}    
         \end{split}
-
     \end{align}
+
+%T% the alignedat environment allows the alignment of more than two columns, the amount of columns is specified via argument
+    $\begin{alignedat}{3}
+        ab& &dc \quad &e\\
+        &ba \quad cd& &e
+    \end{alignedat}$
 
 \end{document}

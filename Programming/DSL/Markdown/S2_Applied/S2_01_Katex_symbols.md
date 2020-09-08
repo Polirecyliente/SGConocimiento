@@ -39,7 +39,7 @@
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# accents are a type of diacritic that commonly goes on top of the letter -->
 
-| Symbol description                | Example                         |
+| Accent description                | Example                         |
 | :-------------------------------- | :-----------------------------: |
 | Tilde over letter                 | $\tilde{L}$                     |
 | Wide tilde over letters           | $\widetilde{Letters}$           |
@@ -79,7 +79,7 @@
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# delimiters are used as grouping symbols -->
-| Symbol description       | Example                            |
+| Delimiter description    | Example                            |
 | :----------------------- | :--------------------------------: |
 | Left parenthesis         | $\lparen$ or $($                   |
 | Right parenthesis        | $\rparen$ or $)$                   |
@@ -115,7 +115,7 @@
 <!-- #T# --- Delimiter sizing modifiers -->
 
 <!-- # |----- -->
-| Symbol description                   | Example                           |
+| Modifier description                 | Example                           |
 | :----------------------------------- | :-------------------------------: |
 | Left, middle, right, always together | $\left) A \middle\Vert B \right($ |
 | big grouping symbol                  | $\big\lparen$                     |
@@ -137,7 +137,21 @@
 <!-- #T# Environments -->
 
 <!-- # |------------------------------------------------------------- -->
-<!-- #T# environments are specific grids where to write characters -->
+<!-- #T# Latex environments, used here mostly for specific grids where to write characters -->
+| Environment  | Example                                            |
+| :----------- | :------------------------------------------------: |
+| Array        | $\begin{array}{l:c} a & b \\ c & d \end{array}$    |
+| Matrix       | $\begin{matrix} a & b \\[9pt] c & d \end{matrix}$  |
+| Parentheses  | $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$     |
+| Brackets     | $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$     |
+| Braces       | $\begin{Bmatrix} a & b \\ c & d \end{Bmatrix}$     |
+| Single lines | $\begin{vmatrix} a & b \\ c & d \end{vmatrix}$     |
+| Double lines | $\begin{Vmatrix} a & b \\ c & d \end{Vmatrix}$     |
+| Small        | $\begin{smallmatrix} a \\ c & d \end{smallmatrix}$ |
+| Left cases   | $\begin{cases} a & b \\ c & d \end{cases}$         |
+| Aligned      | $\begin{aligned} a &= b \\ 2 =& 2 \end{aligned}$   |
+| Alignedat    | $\begin{alignedat}{1} ab& \\ &ba \end{alignedat}$  |
+| Gathered     | $\begin{gathered} a \\ c = d \end{gathered}$       |
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #T# Letters -->
@@ -221,7 +235,7 @@
 <!-- #T# Symbols, punctuation -->
 
 <!-- # |------------------------------------------------------------- -->
-| Symbol description | Example |
+| Symbol, punctuation description | Example |
 | :----------------- | :-----: |
 | Backslash | $\backslash$ |
 <!-- # |------------------------------------------------------------- -->
