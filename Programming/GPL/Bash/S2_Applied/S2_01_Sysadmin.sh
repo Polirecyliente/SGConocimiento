@@ -28,6 +28,9 @@ head -80 file1 | nl -b 'a' | tail -10
 mkdir -p /tmp/parent_dir1/child_dir1
 #T# the p flag creates any parent directories needed, if they don't exist
 
+#T# print the current datetime
+date # mar 13 oct 2020 16:52:09 -05
+
 #T# Process management
 
 #T# get the pid of a process with pidof

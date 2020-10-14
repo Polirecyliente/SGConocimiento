@@ -54,7 +54,7 @@ var1 = 8 # type: str
 
 # |-----
 
-#T# quotation types, each quotation symbol can be used inside the others as a normal character
+#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character
 str1 = 'sen1word1 sen1""""word2 sen1word3 sen1word4'
 str1 = "sen2word1 sen2''''word2 sen2word3 sen2word4"
 str1 = """sen3word1 sen3"'"'word2

@@ -2,6 +2,8 @@ Bash Tutorial
 
 Bash is an interpreted language and it's the main open source shell for the GNU/Linux systems.
 
-Basic Bash Tutorial: https://www.learnshell.org/
-Advanced Bash Tutorial: http://tldp.org/LDP/abs/html/index.html
-sed Tutorial: https://www.gnu.org/software/sed/manual/sed.html
+Main tutorial: https://www.learnshell.org/
+
+Other tutorials: http://tldp.org/LDP/abs/html/index.html
+
+sed tutorial: https://www.grymoire.com/Unix/Sed.html

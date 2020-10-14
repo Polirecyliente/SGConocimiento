@@ -10,7 +10,7 @@
 (Recta real)
 **Number line**
 
-![image_number_line](aux/Ch01_Number_line.png)
+![image_number_line](Aux01/Ch01_Number_line.png)
 
 (Origen)
 **Origin**: this is the point at 0.
