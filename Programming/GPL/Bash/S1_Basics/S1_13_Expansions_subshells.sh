@@ -34,8 +34,3 @@ ${var1:?errStr1}
     cd ..
     echo "In subshell"
 )
-
-#T# Command substitution
-
-#T# command substitution $()
-FileWithTimeStamp=/path/to/file_$(/bin/date +%Y-%m-%d).txt

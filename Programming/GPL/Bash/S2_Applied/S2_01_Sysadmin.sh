@@ -10,6 +10,7 @@
 #T# Devices
 #T# System libraries
 #T# Fonts
+#T# Encodings
 #T# Internet
 #T# Latex
 
@@ -103,6 +104,11 @@ mount -l
 
 #T# fonts are stored in /usr/share/fonts/
 cd /usr/share/fonts/
+
+#T# Encodings
+
+#T# get the list of encodings knows by the operating system with the -l flag of the iconv program
+iconv -l
 
 #T# Internet
 

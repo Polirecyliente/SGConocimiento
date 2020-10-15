@@ -9,6 +9,7 @@
 #T# Expressions
 #T# Function calls
 #T# --- Command execution
+#T# --- Command substitution
 #T# Statements
 #T# Multiline statements
 #T# Multistatement lines
@@ -94,7 +95,7 @@ echo -e "Line1\nLine2"
 #T# math expressions are written with this syntax
 
 # SYNTAX num1=$((expr1))
-#T# expr1 is the math expression, which is enclosed in $(()), its result is assigned to num1
+#T# expr1 is the math expression, which is enclosed in the arithmetic expansion $(()), its result is assigned to num1
 
 int1=$((5 + 3 - 1)) # 7
 # |--------------------------------------------------/
@@ -114,6 +115,17 @@ echo "Hello, Bash!" "Second arg" # Hello, Bash! Second arg
 
 #T# basic input from stdin with the read command
 read var1
+# |-----
+
+#T# --- Command substitution
+
+# |-----
+#T# the result of a command can be converted to a string by using command substitution
+
+# SYNTAX $(command1)
+#T# the result that command1 sends to stdout is converted to a string, command1 must be inside $() the command substitution operator
+
+$(echo "str1") # str1: command not found
 # |-----
 
 # |-------------------------------------------------------------

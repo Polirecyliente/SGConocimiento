@@ -1,10 +1,10 @@
 
-#   Arrays
+#   Composite types
 
 #T# Table of contents
 
-#T# Arrays in general
-#T# --- Array operators
+#T# Composite types in general
+#T# --- Basic operators
 #T# Strings
 #T# --- String formatting
 #T# --- U strings
@@ -16,29 +16,28 @@
 #T# Dictionaries
 #T# Sets
 #T# --- Comparisons between sets
-#T# Multidimensional arrays
+#T# Multidimensional composite types
 
 #T# Beginning of content
 
-#T# Arrays in general
+#T# Composite types in general
 
 # |-------------------------------------------------------------
-#T# arrays can be mainly strings, lists, and tuples, but also dictionaries and sets
+#T# composite types can be mainly lists and tuples, but also dictionaries and sets, if a list or tuple has all elements of the same type then it's called an array, strings are always arrays of characters
 str1 = "example string"
 list1 = [99, 99, 1, 99, 99, 2, 99, 99, 3, 99]
 tuple1 = ('elem1', 2)
 
-#T# get the length of an array, the amount of elements it contains, with the len function
+#T# get the length of a composite type, the amount of elements it contains, with the len function
 int1 = len(list1) # 10
 
-#T# --- Array operators
+#T# --- Basic operators
 
 # |-----
-
-#T# the following operators can only be applied to the main types of arrays, strings, lists, and tuples
+#T# the following operators can only be applied to strings, lists, and tuples
 
 # |--------------------------------------------------\
-#T# the slice operator is used to create a slice of the original array
+#T# the slice operator is used to create a slice of the original composite type
 
 # SYNTAX arr1[ini_elem:final_elem]
 #T# this includes ini_elem, up to before final_elem (excludes final_elem) from arr1
@@ -51,19 +50,19 @@ str2 = str1[2:5] # amp
 list2 = list1[2:9:3] # [1, 2, 3]
 # |--------------------------------------------------/
 
-#T# the concatenation operator + is used to concatenate arrays
+#T# the concatenation operator + is used to concatenate composite types
 # SYNTAX arr1 + arr2 + arr3
 tuple2 = tuple1 + ('elem3', 4) # ('elem1', 2, 'elem3', 4)
 
-#T# the repetition operator * is used to repeat an array arr1 after itself a number of times N1
+#T# the repetition operator * is used to repeat a composite type arr1 after itself a number of times N1
 # SYNTAX arr1 * N1
 tuple2 = tuple1 * 3 # ('elem1', 2, 'elem1', 2, 'elem1', 2)
 
 list1 = ['elem1', 2, 'elem3']
-#T# when reading from, or writing to an array, if the index is negative it is counted right to left, the last element is at index -1, the second to last is at index -2, the nth to last is at -n, and so on
+#T# when reading from, or writing to a composite type, if the index is negative it is counted right to left, the last element is at index -1, the second to last is at index -2, the nth to last is at -n, and so on
 str1 = list1[-3] # 'elem1'
 
-#T# when slicing an array, if the upper limit is greater than the size of the array, it's ignored, and the same goes for the lower limit in the slice if it's less than the negative size of the array
+#T# when slicing a composite type, if the upper limit is greater than its size, it's ignored, and the same goes for the lower limit in the slice if it's less than the negative size of the composite type
 list2 = list1[-4:3] # ['elem1', 2, 'elem3']
 # |-----
 
@@ -347,12 +346,12 @@ bool1 = set1 == froz1 # False
 
 # |-------------------------------------------------------------
 
-#T# Multidimensional arrays
+#T# Multidimensional composite types
 
 # |-------------------------------------------------------------
-#T# create multidimensional arrays by creating arrays of arrays
+#T# create multidimensional composite types by creating them inside one another
 multi_arr1 = [(1, 2), [['a.1', 'a.2'], ['b.1', 'b.2', 'b.3']], {'k1':'v1'}]
 
-#T# access an element from a multidimensional array by index
+#T# access an element from a multidimensional composite type by index
 str1 = multi_arr1[1][1][2] # 'b.3'
 # |-------------------------------------------------------------

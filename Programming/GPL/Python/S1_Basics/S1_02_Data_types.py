@@ -44,7 +44,7 @@ type1 = type(int1) # <class 'int'>
 #T#     integer
 #T#     binary, with prefix 0b
 #T#     octal, with prefix 0o
-#T#     hexa, with prefix 0x
+#T#     hexa, with prefix 0x or 0X
 #T#     float, with suffix EN1 where N1 is an integer, e.g. E-2, E3
 #T#     complex N1 + N2j where N1, N2 are numbers, j indicates N2 as the imaginary part 
 
@@ -137,7 +137,9 @@ bool1 = False
 #T# Composite types
 
 # |-------------------------------------------------------------
-#T# arrays store several values together, each value in an element of the array
+#T# composite types store several values together, each value in an element of the composite type
+
+#T# arrays are produced when all the elements in a composite type are from the same type
 
 #T# --- Lists
 
