@@ -1,5 +1,5 @@
 
-#   Arrays
+#   Composite types
 
 #T# Array initialization, length of array #Arr[@], all elements Arr[@]
 Arr1=( elem1 elem2 elem3 "elem 4" )

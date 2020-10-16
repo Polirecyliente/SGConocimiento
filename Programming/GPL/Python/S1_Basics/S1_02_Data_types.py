@@ -68,7 +68,7 @@ str1 = 'string one'
 str2 = "string two"
 str3 = """string three"""
 
-#T# reading from strings
+#T# reading elements from strings
 str4 = str1[4] # 'n'
 
 #T# a character or char is a string of size 1, but a char can also be obtained from an integer with the chr function

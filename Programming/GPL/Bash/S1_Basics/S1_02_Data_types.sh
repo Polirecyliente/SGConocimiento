@@ -46,3 +46,17 @@ flo1=$(bc <<< "12.415") # 12.415 # heredoc is explained later in this file
 # |--------------------------------------------------/
 
 # |-------------------------------------------------------------
+
+#T# String types
+
+# |-------------------------------------------------------------
+#T# strings are created inside quotation symbols, single quotes or double quotes
+str1='string one'
+str2="string two"
+
+#T# --- Heredoc
+
+# |-----
+# |-----
+
+# |-------------------------------------------------------------

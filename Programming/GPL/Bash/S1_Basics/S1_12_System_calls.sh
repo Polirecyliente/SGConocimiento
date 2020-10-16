@@ -20,3 +20,5 @@
 # |-----
 
 # |-------------------------------------------------------------
+
+#T# job control for foreground and background processes

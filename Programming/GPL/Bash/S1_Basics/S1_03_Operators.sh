@@ -19,3 +19,5 @@ let "A *= 8"
 echo "A value is: $A"
 let "A /= 2"
 echo "A value is: $A"
+
+#T# let, declare keywords, expr command

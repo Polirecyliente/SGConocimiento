@@ -11,10 +11,13 @@
 #T# --- Command execution
 #T# --- Command substitution
 #T# Statements
+#T# --- Parameter expansion
 #T# Multiline statements
 #T# Multistatement lines
 #T# Command history
 #T# --- History expansion
+#T# Interpreter options
+#T# Special parameters
 
 #T# Beginning of content
 
@@ -63,7 +66,7 @@ str2="second str'ing"
 #T# double quotes are used for interpolated strings, variable substitution is made with
 
 # SYNTAX ${var1}
-#T# var1 is the variable to be substituted inside a string
+#T# var1 is the variable to be substituted inside a string, this is also called parameter expansion as explained later in this file
 
 str2="string ${int1} interpolation" # string 5 interpolation
 # |--------------------------------------------------/
@@ -137,6 +140,162 @@ $(echo "str1") # str1: command not found
 
 int1=5
 #T# int1=5 is a statement, the variable int1 is made to point to the value 5
+
+#T# --- Parameter expansion
+
+# |-----
+#T# variables (called parameters here) can be expanded to get their value or get their value modified by using a word (as it's called here)
+
+#T# parameters are identified because they start with the dollar sign $ when they are being operated with
+
+#T# define a parameter as usual
+var1="value one"
+
+# |--------------------------------------------------\
+#T# expansion means sustituting the parameter for its value
+
+# SYNTAX $var1
+# SYNTAX ${var1}
+#T# both syntaxes are equivalent, braces are used when the next character after var1 is not a space, or when needed
+
+echo $var1 # value one
+
+#T# because arguments are separated by spaces, a parameter should be enclosed in double quotes to protect its value' spaces
+echo "$var1" # value one # in this case "value one" is the argument, instead of two arguments "value" and "one"
+# |--------------------------------------------------/
+
+#T# a null parameter is defined as an empty string
+null_var1=""
+
+# |--------------------------------------------------\
+#T# a parameter can be unset so it doesn't exist anymore
+# SYNTAX unset var1
+unset_var1="temp value"
+unset unset_var1 # unset_var1 becomes as if it was never defined
+# |--------------------------------------------------/
+
+# |--------------------------------------------------\
+#T# conditional parameter expansion is done to expand a parameter conditionally, if the parameter doesn't exist then it's expanded to another alternative called a word
+
+# SYNTAX ${var1-alt1}
+#T# var1 is the parameter to be expanded, alt1 is the alternative literal string in case var1 doesn't exist, alt1 can also be a parameter expansion, an arithmetic expansion, command substitution etc.
+
+echo ${var1-literal_alt1}
+#T# the former prints
+# value one    # if var1="value one"
+# literal_alt1 # if var1 is unset
+
+# SYNTAX ${var1:-alt1}
+#T# same as before, but expanding to alt1 also happens when var1 is null
+
+echo ${var1:-literal_alt1}
+#T# the former prints
+# value one    # if var1="value one"
+# literal_alt1 # if var1 is unset or null
+
+# SYNTAX ${var1=alt1}
+#T# same as before, but if var1 is null then it gets assigned the literal string alt1 (unless alt1 is another expansion as said before, in that case var1 is assigned the value of alt1)
+
+echo ${var1=literal_alt1}
+#T# the former prints
+# value one    # if var1="value one"
+# literal_alt1 # if var1 is unset, and now var1="literal_alt1"
+
+# SYNTAX ${var1:=alt1}
+#T# same as before, but expanding and assigning to alt1 also happens when var1 is null
+
+echo ${var1:=literal_alt1}
+#T# the former prints
+# value one    # if var1="value one"
+# literal_alt1 # if var1 is unset or null, and now var1="literal_alt1"
+
+# SYNTAX ${var1?alt1}
+#T# same as before, but if var1 is unset then alt1 is printed as an error message to stderr
+
+echo ${var1?error_alt1}
+#T# the former prints
+# value one              # if var1="value one"
+# bash: var1: error_alt1 # if var1 is unset
+
+# SYNTAX ${var1:?alt1}
+#T# same as before, but expanding to alt1 as an error message also happens when var1 is null
+
+echo ${var1:?error_alt1}
+#T# the former prints
+# value one              # if var1="value one"
+# bash: var1: error_alt1 # if var1 is unset or null
+
+# SYNTAX ${var1+alt1}
+#T# same as before, but now var1 is expanded to alt1 when var1 is not unset, note that this doesn't change var1 original value
+
+echo ${var1+literal_alt1}
+#T# the former prints
+# literal_alt1 # if var1="value one" or any other value
+#              # if var1 is unset
+
+# SYNTAX ${var1:+alt1}
+#T# same as before, but expanding to alt1 also does not happen when var1 is null
+
+echo ${var1:+literal_alt1}
+#T# the former prints
+# literal_alt1 # if var1="value one" or any other non null value
+#              # if var1 is unset or null
+# |--------------------------------------------------/
+
+# |--------------------------------------------------\
+#T# substring parameter expansion is done to expand a parameter partially, taking only a substring of the parameter according to an offset or a matching pattern
+
+# SYNTAX ${var1:offset1}
+# SYNTAX ${var1:offset1:length1}
+#T# var1 is the parameter to be expanded, offset1 and length1 are integers, this extracts a substring from var1, starting at the character in the position offset1, and extracting a total of length1 characters
+
+#T# offset1 and length1 can be negative integers, if they are then they must be enclosed in parentheses to avoid forming the :- operator, if offset1 is negative then the first character is counted from the end of the parameter value, if length1 is negative then the last length1 characters are removed
+
+var1=str1str2str3
+echo ${var1:4}         # str2str3
+echo ${var1:(-8)}      # str2str3
+echo ${var1:3:4}       # 1str
+echo ${var1:(-5):(-1)} # 2str
+
+# SYNTAX ${var1#pattern1}
+# SYNTAX ${var1##pattern1}
+#T# this removes the substring that has to start from the left of var1 and matches pattern1, using double hash ## makes a greedy match
+
+#T# pattern1 accepts globbing, the asterisk * matches 0 or more characters, the question mark ? matches 0 or 1 character, brackets [] are used for character classes which includes negation with the caret ^
+
+var1="apple pie"
+echo ${var1#?p}           # ple pie
+echo ${var1##*p}          # ie
+echo ${var1#[a-z][^a-h]p} # le pie
+
+# SYNTAX ${var1%pattern1}
+# SYNTAX ${var1%%pattern1}
+#T# same as before, but the removed substring has to start at the right of var1 and match pattern1, using double %% makes a greedy match
+
+var1="apple pie"
+echo ${var1%p*}  # apple
+echo ${var1%%p*} # a
+# |--------------------------------------------------/
+
+# |--------------------------------------------------\
+#T# substring substitution is done to make substring replacements and then expand the changed parameter
+
+# SYNTAX ${var1/pattern1/replace_string1}
+# SYNTAX ${var1//pattern1/replace_string1}
+#T# var1 is the parameter whose value is the string where the replacement will take place, pattern1 is the pattern to be matched, replace_string1 replaces the matched substring
+
+#T# if only one slash / is used between var1 and pattern1 then only the first match is replaced, with double slash // all matches are replaced
+
+#T# pattern1 accepts globbing, the asterisk * matches 0 or more characters, the question mark ? matches 0 or 1 character, brackets [] are used for character classes which includes negation with the caret ^
+
+var1="apple pie"
+echo ${var1/ /_}  # apple_pie
+echo ${var1/p/n}  # anple pie
+echo ${var1//p/b} # abble bie
+# |--------------------------------------------------/
+
+# |-----
+
 # |-------------------------------------------------------------
 
 #T# Multiline statements
@@ -271,4 +430,52 @@ echo !gi:2
 #T# if the last command is 'gir push' then this executes 'git push'
 # |--------------------------------------------------/
 
+# |-------------------------------------------------------------
+
+#T# Interpreter options
+
+# |-------------------------------------------------------------
+#T# the interpreter can have several options set at the start and changed during execution
+
+# SYNTAX set -o1
+# SYNTAX set +o1
+#T# the set command is used to set the value of flags that modify the options of the interpreter, o1 is the flag being set, using -o1 activates the flag, using +o1 turns off the flag
+
+#T# there are several flags used for different options, the following lists describes each flag when turned on
+#T#     -C, +C, impedes bash from overwriting files
+#T#     -f, +f, disable globbing
+#T#     -x, +x, print debug information
+#T#     -e, +e, quit the interpreter on error
+#T#     -v, +v, print each line read
+#T#     -H, +H, enable history expansion
+#T#     -m, -M, enable job control, to manage background and foreground processes
+
+#T# the -i flag means the shell is interactive, the -s flag makes bash read commands from stdin
+
+set -x
+set +x
+# |-------------------------------------------------------------
+
+#T# Special parameters
+
+# |-------------------------------------------------------------
+#T# the special parameters are variables whose name can't be manually assigned values, they are used to store special values
+
+#T# process related parameters are the $$, $! parameters
+echo $$ # 389217 # prints the PID of the current terminal
+echo $! # 406952 # prints the PID of the last process sent to be a background process, if any
+
+#T# the $? parameter stores the exit status of the last command
+echo $? # 0 # zero usually means correct execution
+
+#T# the $0 parameter stores the name of the script or command that expanded its value
+echo $0 # bash
+
+#T# the $_ parameter stores a string with the last argument of the last command
+echo $_ # third # if the last command was 'echo first second third'
+
+#T# the $- parameter stores the interpreter options
+echo $- # himBHs
+
+#T# there are a few more special parameters that deal with positional parameters which are treated in the section about command line arguments, see S1_08_CLI_args.sh
 # |-------------------------------------------------------------
