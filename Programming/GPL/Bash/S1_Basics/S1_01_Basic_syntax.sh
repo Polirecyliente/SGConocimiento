@@ -12,6 +12,7 @@
 #T# --- Command substitution
 #T# Statements
 #T# --- Parameter expansion
+#T# --- Brace expansion
 #T# Multiline statements
 #T# Multistatement lines
 #T# Command history
@@ -48,6 +49,18 @@
 
 #T# semicolon separates commands in one line
 echo 'First line'; echo 'Second line'
+
+# |--------------------------------------------------\
+#T# the dot command, and its synonym the source command, are used for executing a script in the same shell environment, normally scripts are executed in a subshell
+
+# SYNTAX . script1.sh
+# SYNTAX source script1.sh
+#T# both syntaxes are equivalent, the commands in script1 are executed in the same shell environment that called it
+
+. S1_08_CLI_args.sh      # executes this script in the same shell
+source S1_08_CLI_args.sh # executes this script in the same shell
+# |--------------------------------------------------/
+
 # |-------------------------------------------------------------
 
 #T# Variables, constants, literals
@@ -292,6 +305,14 @@ var1="apple pie"
 echo ${var1/ /_}  # apple_pie
 echo ${var1/p/n}  # anple pie
 echo ${var1//p/b} # abble bie
+
+# SYNTAX ${var1/#pattern1/replace_string1}
+# SYNTAX ${var1/%pattern1/replace_string1}
+#T# same as before, but when using hash # the pattern is matched only at the left of var1, and when using percent sign % the pattern is matched at the right of var1
+
+var1="apple pie"
+echo ${var1/#app/abs} # absle pie
+echo ${var1/%pie/bye} # apple bye
 # |--------------------------------------------------/
 
 # |-----
@@ -442,13 +463,25 @@ echo !gi:2
 #T# the set command is used to set the value of flags that modify the options of the interpreter, o1 is the flag being set, using -o1 activates the flag, using +o1 turns off the flag
 
 #T# there are several flags used for different options, the following lists describes each flag when turned on
-#T#     -C, +C, impedes bash from overwriting files
+#T#     -a, +a, automatically export created or newly modified variables
+#T#     -b, +b, print a message when a job is killed
+#T#     -e, +e, exit the interpreter on error
 #T#     -f, +f, disable globbing
-#T#     -x, +x, print debug information
-#T#     -e, +e, quit the interpreter on error
+#T#     -h, +h, executed commands are placed in a hash table for quicker access, see S1_06_Functions.sh
+#T#     -k, +k, arguments that contain variables use the same variables of the calling environment, var1=$var1 uses $var1 from the calling environment
+#T#     -m, +m, enable job control, to manage background and foreground processes
+#T#     -n, +n, read commands but do not execute them, used executing 'bash -n script1.sh' prints the syntax errors in script1.sh
+#T#     -o arg1, +o arg1, activates the flag arg1, the names of the flags can be seen executing 'set --help'
+#T#     -t, +t, exit the interpreter after executing one command
+#T#     -u, +u, print error when calling an unset variable
 #T#     -v, +v, print each line read
+#T#     -x, +x, print debug information
+#T#     -B, +B, perform brace expansion when there are braces to be expanded
+#T#     -C, +C, impede bash from overwriting files
+#T#     -E, +E, the ERR trap can be activated by shell functions, for an explanation on traps see S1_09_Exception_handling.sh
 #T#     -H, +H, enable history expansion
-#T#     -m, -M, enable job control, to manage background and foreground processes
+#T#     -P, +P, follow symbolic links, e.g. if dir1 has a symlink link1, and -P is on, then executing 'cd link1' makes the pwd be dir1 and not link1
+#T#     -T, +T, the DEBUG and RETURN traps can be activated by shell functions, for an explanation on traps see S1_09_Exception_handling.sh
 
 #T# the -i flag means the shell is interactive, the -s flag makes bash read commands from stdin
 
@@ -479,3 +512,12 @@ echo $- # himBHs
 
 #T# there are a few more special parameters that deal with positional parameters which are treated in the section about command line arguments, see S1_08_CLI_args.sh
 # |-------------------------------------------------------------
+
+
+
+
+#T# --- Brace expansion
+
+# |-----
+#T# 
+# |-----

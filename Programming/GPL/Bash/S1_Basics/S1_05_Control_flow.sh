@@ -42,6 +42,8 @@ else
     echo "this line should never be reached forever"
 fi
 
+#T# the rest of if switches, -a, -z, etcetera
+
 #T# string comparisons: is empty -z, equal to ==, not equal to !=
 if [[ -z ${expr1} || (${expr1} == ${expr2}) ]]; then
     echo "expr1 is empty or both expressions are equal"

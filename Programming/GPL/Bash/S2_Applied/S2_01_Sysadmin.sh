@@ -72,11 +72,20 @@ kill -SIGKILL 187785
 
 #T# User and group management
 
-#T# see the groups that the current user belongs to with groups userName
+# |-------------------------------------------------------------
+#T# see the groups that the current user belongs to with the groups command
 groups jul
 
 #T# append user to an existing group with usermod, reboot may be necessary for this to take effect
+# SYNTAX 
 usermod -a -G audio jul
+
+#T# list the existing users along with their passwd information
+nl /etc/passwd
+
+#T# switch user with the su command
+su serveruser
+# |-------------------------------------------------------------
 
 #T# Hardware detection
 

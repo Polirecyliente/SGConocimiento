@@ -63,7 +63,7 @@ complex1 = 5.1 + 3.28j
 #T# String types
 
 # |-------------------------------------------------------------
-#T# strings are created inside quotation symbols, single quotes, double quotes, and three double quotes
+#T# strings are created inside quotation symbols, single quotes ', double quotes ", and three double quotes """
 str1 = 'string one'
 str2 = "string two"
 str3 = """string three"""

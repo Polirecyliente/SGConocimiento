@@ -11,3 +11,6 @@ function funA()
 }
 B=$(funA)
 echo ${B}
+
+
+#T# commands placed in a hash table

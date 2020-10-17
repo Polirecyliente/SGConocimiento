@@ -61,7 +61,7 @@ apt-add-repository ppa:jonathonf/ffmpeg-4
 
 #T# remove a package repository
 # apt-add-repository --remove repository_name1
-apt-add-repository --remove 'deb http://repos.codelite.org/wx3.1.0/ubuntu/ focal universe'}
+apt-add-repository --remove 'deb http://repos.codelite.org/wx3.1.0/ubuntu/ focal universe'
 
 #T# list the trusted apt keys
 apt-key list
