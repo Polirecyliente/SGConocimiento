@@ -26,9 +26,7 @@
 #T# --- if, elif, else keywords
 
 # |-----
-
-# |--------------------------------------------------\
-#T# the if, elif, else keywords, are used following a syntax
+#T# the if, elif, else keywords, are used following this syntax
 
 # SYNTAX if, elif, else
 # if condition1:
@@ -48,8 +46,6 @@ elif ~int1:
 else:
     int2 = 3
 # int2 == 2
-# |--------------------------------------------------/
-
 # |-----
 
 # |-------------------------------------------------------------
@@ -68,8 +64,6 @@ else:
 #T# --- for loop
 
 # |-----
-
-# |--------------------------------------------------\
 #T# the for, continue, break, else keywords are used to create for loops
 
 # SYNTAX for, continue, break, else
@@ -98,7 +92,6 @@ for char_i1 in 's1tr':
 else:
     print("Unreachable code")
 # int1 == 3; int2 == 0
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# typical use of the for loop includes the range function
@@ -117,8 +110,6 @@ for i1 in range1:
 #T# --- while loop
 
 # |-----
-
-# |--------------------------------------------------\
 #T# the while loop uses a few of the same keywords as the for loop, such as continue, break, and else
 
 # SYNTAX while, continue, break, else
@@ -135,8 +126,6 @@ while (int1 < 80):
 else:
     int1 += 5
 # int1 == 95
-# |--------------------------------------------------/
-
 # |-----
 
 # |-------------------------------------------------------------

@@ -60,8 +60,8 @@ str1 = repr(map1) # '<map object at 0x7fd71dea0610>'
 
 #T# the following function func1 is used to show functions used in different scopes, those functions can be used outside as well, no need for func1
 def func1():
-    
     int1 = 85
+
 #T# the locals function returns a dictionary of local names paired to their values
     dict1 = locals()  # {'int1': 85}
 
@@ -156,12 +156,9 @@ flo1 = math.acos(-1) # 3.1415... == math.pi
 #T# the atan function returns the arc tangent in radians of a number
 flo1 = math.atan(1) # 0.7853 == math.pi/4
 
-# |--------------------------------------------------\
 #T# the atan2 function returns the arc tangent in radians by taking the triangle legs as arguments
 # SYNTAX math.atan2(opposite_leg1, adjacent_leg1)
-
 flo1 = math.atan2(0, -1) # 3.1415... == math.pi
-# |--------------------------------------------------/
 
 #T# the hypot function returns the hypotenuse given the triangle legs
 flo1 = math.hypot(3, 4) # 5.0
@@ -182,14 +179,10 @@ str1 = "random string"
 #T# the choice function chooses a random element from an array
 str2 = random.choice(str1) # 'd', or another element in str1
 
-# |--------------------------------------------------\
 #T# the randrange function returns a random number from a range
-
 # SYNTAX random.randrange(iniN, endN, stepN)
 #T# the random number is one the numbers starting at iniN, stepping by stepN, and ending at endN - 1
-
 int1 = random.randrange(1, 12, 3) # 7, or another element from the range
-# |--------------------------------------------------/
 
 #T# the random function generates a random number in the [0, 1) interval
 flo1 = random.random() # 0.7156...
@@ -197,15 +190,10 @@ flo1 = random.random() # 0.7156...
 #T# the seed function sets the random generation seed
 random.seed(2) # None
 
-# |--------------------------------------------------\
 #T# the uniform function returns an uniform random number
-
 # SYNTAX random.uniform(iniN, endN)
 #T# the returned number is in the [iniN, endN) interval
-
 flo1 = random.uniform(3, 5) # 4.4719...
-# |--------------------------------------------------/
-
 # |-----
 
 # |-------------------------------------------------------------
@@ -218,16 +206,11 @@ flo1 = random.uniform(3, 5) # 4.4719...
 #T# --- Alignment
 
 # |-----
-
-# |--------------------------------------------------\
 #T# center a string with a given padding
-
 # SYNTAX str1.center(width1, char1)
 #T# str1 is centered in the width width1, char1 is used to make the padding
-
 str1 = "Cen"
 str1 = str1.center(9, "-") # '---Cen---'
-# |--------------------------------------------------/
 
 str1 = "Left"
 #T# left justify a string, same arguments as in the center function
@@ -237,40 +220,31 @@ str1 = "Right"
 #T# right justify a string, same arguments as in the center function
 str1 = str1.rjust(8, "<") # '<<<Right'
 
-# |--------------------------------------------------\
 #T# strip the whitespace, or the given chars at both sides of a string with the strip function
-
 # SYNTAX str1.strip(['chars1'])
 #T# strips all chars in 'chars1' from both sides of str1
-
 str1 = 'abb' + "elabele" + 'baa' # 'abbelabelebaa'
 str1 = str1.strip('abe') # 'label'
-# |--------------------------------------------------/
 
-str1 = "     Stripped     "
 #T# strip leading whitespace or given chars at the left of a string with the lstrip function, same arguments as in the strip function
+str1 = "     Stripped     "
 str1 = str1.lstrip() # 'Stripped     '
 
 #T# strip trailing whitespace or given chars at the right of a string with the rstrip function, same arguments as in the strip function
 str1 = str1.rstrip() # 'Stripped'
 
-# |--------------------------------------------------\
 #T# the zfill function fills a string with zeros up to a given width
-
 # SYNTAX str1.zfill(width1)
 #T# str1 is filled up to the width width1, padding with zeros to the left
-
 str1 = "zfilled"
 str1 = str1.zfill(10) # '000zfilled'
-# |--------------------------------------------------/
-
 # |-----
 
 #T# --- Encoding
 
 # |-----
-str1 = 'string'
 #T# encode a string to bytes with the encode function, decode bytes to string with the decode function
+str1 = 'string'
 byte1 = str1[3:].encode('utf-8') + b"\x41\x20\x21" # b'ingA !'
 str2 = byte1.decode('utf-16')         # '湩䅧℠'
 
@@ -285,26 +259,21 @@ str2 = byte1.decode('mac_greek')      # 'ingA !'
 str2 = byte1.decode('cp424')          # 'ש>קא\x80\x81'
 
 #T# can't decode an utf-8 encoded string in utf-32 unless extra bytes are added
-# str2 = byte1.decode('utf-32') # UnicodeDecodeError: 'utf-32-le' codec can't decode bytes in position 0-3: code point not in range(0x110000)
+str2 = byte1.decode('utf-32') # UnicodeDecodeError: 'utf-32-le' codec can't decode bytes in position 0-3: code point not in range(0x110000)
 
-str1 = "ü\u02A0" # 'üʠ'
 #T# When encoding with 'unicode-escape' the returned byte object contains the unicode escape sequence \uNNNN or \xNN for non ascii chars
+str1 = "ü\u02A0" # 'üʠ'
 byte1 = str1.encode('unicode-escape') # b'\\xfc\\u02a0'
 # |-----
 
 #T# --- Substring finding
 
 # |-----
-
-# |--------------------------------------------------\
 #T# count repetitions of substrings
-
 # SYNTAX str1.count("substr"[, startN[, endN]])
 #T# "substr" is counted in the string slice str1[startN:endN]
-
 str1 = "in inner innings"
 int1 = str1.count("in") # 4
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# check if a string starts or ends with a given string
@@ -318,8 +287,8 @@ bool1 = str1.startswith("rst", 2)   # True
 bool1 = str1.endswith("Las", 0, 12) # True
 # |--------------------------------------------------/
 
-str1 = "to be found"
 #T# get the pos of the first substring found in a string, same arguments as in the startswith function
+str1 = "to be found"
 int1 = str1.find('fou', 2, -1) # 6
 
 #T# do the same as the find function but raise an exception on failure with the index function, same arguments as in the startswith function
@@ -333,57 +302,66 @@ int1 = str1.rindex("nd", 3, 37) # 9
 #T# --- Predicate logic
 
 # |-----
-str1 = "test5trin6"
 #T# check if a string is only made of alphabetic chars, no whitespace or numbers allowed
+str1 = "test5trin6"
 bool1 = str1.isalpha() # False
 
 #T# check if a string is made with numbers, the difference in the following functions is according to unicode definition
+str1 = "test5trin6"
 bool1 = str1.isdigit()   # False
-bool1 = str1.isnumeric() # False
-bool1 = str1.isdecimal() # False
+bool2 = str1.isnumeric() # False
+bool3 = str1.isdecimal() # False
 
 #T# check if a string is only made of alphanumeric chars
+str1 = "test5trin6"
 bool1 = str1.isalnum() # True
 
 #T# check if a string is all whitespace
+str1 = "test5trin6"
 bool1 = str1.isspace() # False
 
-str1 = 'New Te5T'
 #T# check if a string is all lowercase
+str1 = 'New Te5T'
 bool1 = str1.islower() # False
 
 #T# check if a string is in title case, numbers start new words
+str1 = 'New Te5T'
 bool1 = str1.istitle() # True
 
 #T# check if a string is in upper case
+str1 = 'New Te5T'
 bool1 = str1.isupper() # False
 # |-----
 
 #T# --- Case modification
 
 # |-----
-str1 = "case changer"
 #T# capitalize the first letter of the string
+str1 = "case changer"
 str1 = str1.capitalize() # 'Case changer'
 
 #T# make all letters uppercase with the upper function
+str1 = 'Case changer'
 str1 = str1.upper() # 'CASE CHANGER'
 
 #T# make all letters lowercase with the lower function
+str1 = 'CASE CHANGER'
 str1 = str1.lower() # 'case changer'
 
 #T# make a string title cased with the title function
+str1 = 'case changer'
 str1 = str1.title() # 'Case Changer'
 
 #T# swap the case of a string with the swapcase function
+str1 = 'Case Changer'
 str1 = str1.swapcase() # 'cASE cHANGER'
 # |-----
 
 #T# --- String modification
 
 # |-----
-str1 = "With\texpanded\ttabs"
 #T# change the tab size with the expandtabs function
+str1 = "With\texpanded\ttabs"
 str1 = str1.expandtabs(5) # 'With expanded  tabs'
 
 # |--------------------------------------------------\
@@ -397,23 +375,20 @@ str1 = "-|-".join(arr1) # 'elem1-|-elem2'
 # |--------------------------------------------------/
 
 # |--------------------------------------------------\
-#T# split a string into elements of an array
+#T# split a string into elements of a list
 
 # SYNTAX str1.split("separator1")
-#T# str1 is split at each occurrence of the substring "separator1", leaving out the substring
+#T# str1 is split at each occurrence of the substring "separator1", leaving out said substring
 
+str1 = 'elem1-|-elem2'
 list1 = str1.split("-|") # ['elem1', '-elem2']
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# split around newlines
-
 # SYNTAX str1.splitlines([bool1])
 #T# bool1 determines whether or not to keep ends (the newlines), defaults to False
-
 str1 = "line1\nline2 w1\nline3 w1 w2"
 list1 = str1.splitlines(True) # ['line1\n', 'line2 w1\n', 'line3 w1 w2']
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# create a dictionary with a translation table with the maketrans function, and use it with the translate function
@@ -429,16 +404,11 @@ dict1 = str.maketrans("aeiou", "12345", "s") # {97: 49, 101: 50, 105: 51, 111: 5
 str1 = str1.translate(dict1) # 'P1rt31l tr3ng'
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# replace a substring for another, in a string
-
 # SYNTAX str1.replace("substr1", "replace1", countN)
 #T# the first countN occurrences of "substr1" in str1 are replaced by the substring "replace1"
-
 str1 = "t string t"
 str1 = str1.replace("t", "67", 2) # '67 s67ring t'
-# |--------------------------------------------------/
-
 # |-----
 
 # |-------------------------------------------------------------
@@ -463,26 +433,29 @@ int1 = list1.count('a') # 2
 # SYNTAX list1.index('elem1')
 #T# this returns the index of the first occurrence of 'elem1' in list1
 
+list1 = ['a', 5, 'stray_elem', 'a', 'elem5']
 int1 = list1.index('elem5') # 4
 # |--------------------------------------------------/
 
 #T# reverse the order of the elements with the reverse function, it returns None, so it shouldn't be assigned to a var
-list1.reverse() # list1 == ['elem5', 'a', 'append_elem', 5, 'a']
+list1 = ['a', 5, 'stray_elem', 'a', 'elem5']
+list1.reverse() # list1 == ['elem5', 'a', 'stray_elem', 5, 'a']
 
 # |--------------------------------------------------\
 #T# sort elements in a list
 
 # SYNTAX list1.sort([reverse = True|False[, key = func1]])
-#T# the default order is ascending, if the reverse kwarg is True then the order is descending
+#T# the default order is ascending, if the reverse kwarg is True then the order is descending, the elements of list1 must be strings
 
 #T# the key kwarg is for the sorting function func1, the result is sorted from smaller to bigger return values of this sorting function, the default is alphabetical order
 
-list1[3] = str(list1[3]) # '5'
-list1.sort(reverse = True, key = len) # ['append_elem', 'elem5', 'a', '5', 'a']
+list1 = ['elem5', 'a', 'stray_elem', '5', 'a']
+list1.sort(reverse = True, key = len) # ['stray_elem', 'elem5', 'a', '5', 'a']
 # |--------------------------------------------------/
 
 #T# shuffle the elements of a list
-random.shuffle(list1) # ['a', 'elem5', '5', 'a', 'append_elem'] or other
+list1 = ['elem5', 'a', 'stray_elem', '5', 'a']
+random.shuffle(list1) # ['a', 'elem5', '5', 'a', 'stray_elem'] or other
 # |-------------------------------------------------------------
 
 #T# Dictionary functions
@@ -515,12 +488,13 @@ import calendar
 #T# the principal datetime parts are, date, and time, date is mainly the year, month, day, and time is mainly the hour, minute, second
 
 #T# the time.time() function returns a float with the current time in seconds since the UNIX Epoch which is 1 Jan 1970 00:00
-flo1 = time.time() # 1597299316.1336622, or Thu Aug 13 01:15:16 2020
+flo1 = time.time() # 1597299316.1336622 # or Thu Aug 13 01:15:16 2020
 
 #T# convert the time in seconds to a struct_time object with the date and time from the local region with the localtime function
 struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 
 #T# the elements in an struct_time object have self explaining names, when casted as an array, only the values become elements
+struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 tuple1 = tuple(struct_time1) # (2020, 8, 13, 1, 15, 16, 3, 226, 0)
 # |-----
 
@@ -538,11 +512,13 @@ int1 /= 3600 # 5.0
 int1 = time.timezone # 18000
 
 #T# the mktime function converts a struct_time object in local time into the seconds from Epoch
+flo1 = 1597299316.1336622
 flo2 = time.mktime(time.localtime(flo1)) # 1597299316.0
 flo2 = time.mktime(time.gmtime(flo1))    # 1597317316.0 == 1597299316 + 18000
-#                         original flo1 == 1597299316.1336622
+#          original flo1 for comparison == 1597299316.1336622
 
 #T# the timegm function returns the number of seconds from Epoch in GMT
+struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 flo2 = calendar.timegm(struct_time1) # 1597281316   == 1597299316 - 18000
 # |-----
 
@@ -550,9 +526,11 @@ flo2 = calendar.timegm(struct_time1) # 1597281316   == 1597299316 - 18000
 
 # |-----
 #T# the asctime function formats a struct_time object as a string
+struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 str1 = time.asctime(struct_time1) # 'Thu Aug 13 01:15:16 2020'
 
 #T# the ctime function formats the seconds from Epoch in local time as a string
+flo1 = 1597299316.1336622
 str1 = time.ctime(flo1) # 'Thu Aug 13 01:15:16 2020'
 
 # |--------------------------------------------------\
@@ -596,6 +574,7 @@ str1 = time.ctime(flo1) # 'Thu Aug 13 01:15:16 2020'
 #T#     %Z timezone name
 #T#     %% escaped char %
 
+struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 str1 = time.strftime("%A%B%C %d%t%u %G %h %Hor%I %j %m%M%n%p%S %V %W %w %y %z%%", struct_time1)
 #T# printing str1 yields
 # ThursdayAugust20 13     4 2020 Aug 06or06 226 0810
@@ -640,14 +619,10 @@ str1 = calendar.calendar(2020)
 #T# check if a given year is leap
 bool1 = calendar.isleap(2020) # True
 
-# |--------------------------------------------------\
 #T# the leapdays function returns the number of leap days in a time interval
-
 # SYNTAX calendar.leapdays(ini_year1, end_year1)
 #T# the count of leap days is done between ini_year1, and end_year1
-
 int1 = calendar.leapdays(2020, 2029) # 3
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# the monthcalendar function returns a list of lists

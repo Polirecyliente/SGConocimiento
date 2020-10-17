@@ -37,13 +37,9 @@ num1 = b % a  # 3
 #T# exponentiation operation
 num1 = a ** b # 125
 
-# |--------------------------------------------------\
 #T# floor division operation
-
 num1 = b//a   # 0
 #T# the floor division b//a returns the floor of b/a
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Relational operators
@@ -129,8 +125,6 @@ num1 = a >> 4
 #T# Ternary operator
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# use the ternary operator to assign one of two values to a variable depending on a condition
 
 # SYNTAX var1 = val_true1 if condition1 else val_false1
@@ -139,8 +133,6 @@ num1 = a >> 4
 a = 10; b = 3
 num1 = 5 if a > b else "retV" # 5
 #T# the result is 5 since a is greater than b
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Logical operators

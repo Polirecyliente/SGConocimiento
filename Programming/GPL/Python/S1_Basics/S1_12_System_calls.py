@@ -20,6 +20,7 @@ time.sleep(0.3) # None
 
 #T# terminate the script with the quit function
 # SYNTAX quit()
+quit()
 # |-------------------------------------------------------------
 
 #T# File input output
@@ -42,8 +43,8 @@ str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
 #T#     "a[b+]" append mode
 #T# the [b+] are optional characters, b is for operating in bytes instead of chars, + is for extending the mode so r+ means read and write, w+ means write and read, a+ is append and read
 
-list1 = []
 #T# the file is opened with the context manager of the TextIOWrapper object returned by the open function, using the with keyword
+list1 = []
 with open(str1, "r") as textIOWrapper1:
     while (chars1 := textIOWrapper1.read(2)):
         list1.append(chars1)
@@ -65,8 +66,8 @@ bool1 = textIOWrapper1.closed # True
 #T# the mode attribute of a TextIOWrapper object is a string with the mode with which the file is accessed
 str1 = textIOWrapper1.mode # rb
 
-str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
 #T# the write function serves to write characters, or bytes to a file
+str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
 with open(str1, "a") as textIOWrapper1:
     textIOWrapper1.write("\u02A0")
 
@@ -100,19 +101,16 @@ textIOWrapper1.close()
 #T# the os module allows file manipulation in the file system hierarchy
 import os
 
-# |--------------------------------------------------\
 #T# the rename function serves to rename a file
 # SYNTAX os.rename("original_filename1", "new_filename1")
-
 str2 = "/tmp/renamed_file1"
 os.rename(str1, str2)
-# |--------------------------------------------------/
 
 #T# the remove function serves to remove a file
 os.remove(str2)
 
-str1 = "/tmp/temporary_dir1"
 #T# the mkdir function serves to create a new directory
+str1 = "/tmp/temporary_dir1"
 os.mkdir(str1)
 
 #T# the chdir function serves to change the current working directory for the directory of its argument
@@ -131,8 +129,8 @@ os.rmdir(str1)
 #T# the getpid function returns the pid of the caller
 int1 = os.getpid() # 175344, or similar
 
-print("Waiting to receive a signal")
 #T# the signal module is used for signal handling, the two types of signals or interrupts are, maskable (can be ignored), and non maskable (cannot be ignored)
+print("Waiting to receive a signal")
 import signal
 
 # |--------------------------------------------------\

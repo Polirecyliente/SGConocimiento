@@ -13,8 +13,6 @@
 #T# Assertions
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# make assertions with the assert keyword
 
 # SYNTAX assert condition1, "assertion_error_string1"
@@ -22,8 +20,6 @@
 
 int1 = 5
 assert int1 == 5, "Either this file or the Python interpreter is corrupted"
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Catching exceptions
@@ -93,16 +89,12 @@ finally:
 #T# Throwing exceptions
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# to throw (or raise from now on) an exception, the raise keyword is used
 
 # SYNTAX raise ObjectError
 #T# the ObjectError is the exception being raised
 
 raise BrokenPipeError
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Context managers
@@ -110,7 +102,6 @@ raise BrokenPipeError
 # |-------------------------------------------------------------
 #T# a context manager gives a context for operations, so that by executing one of them, others execute in turn, no need to execute them directly
 
-# |--------------------------------------------------\
 #T# the with keyword allows the use of an object in a context manager
 
 # SYNTAX with
@@ -122,6 +113,4 @@ raise BrokenPipeError
 with open("/tmp/file1", "r") as textIOWrapper1:
     textIOWrapper1.read(2)
 #T# after this statement the file is closed, even if an exception is raised
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------

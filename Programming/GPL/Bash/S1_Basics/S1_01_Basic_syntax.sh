@@ -519,5 +519,7 @@ echo $- # himBHs
 #T# --- Brace expansion
 
 # |-----
-#T# 
+#T# brace expansion is used to create strings in a combinatorial manner
+
+
 # |-----

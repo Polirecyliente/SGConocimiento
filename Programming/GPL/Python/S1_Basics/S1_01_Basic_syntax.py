@@ -41,8 +41,6 @@ int1 = 5
 #T# --- Type hints
 
 # |-----
-
-# |--------------------------------------------------\
 #T# type hints are used when there is no autocompletion for an object that should have, this is because the type of a dynamic type can't be known at compile time
 
 # SYNTAX obj1 = Constructor1() # type: Object_type1
@@ -50,8 +48,6 @@ int1 = 5
 
 var1 = 8 # type: str
 # var1. autocompletes as a string
-# |--------------------------------------------------/
-
 # |-----
 
 #T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character
@@ -64,18 +60,15 @@ str1 = """sen3word1 sen3"'"'word2
 #T# Escape sequences
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# an special kind of combination of literals are escape sequences, they mean something particular, e.g. the \n means newline
+
+# SYNTAX \c1
+#T# an escape sequence starts with a backslash \ and is followed by c1 which is other character or characters, most commonly c1 is a single character
 
 str1 = "Line1\nLine2"
 #T# printing str1 gives the following
 # Line1
 # Line2
-
-#T# an escape sequence starts with a backslash and is followed by other character or characters
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Expressions

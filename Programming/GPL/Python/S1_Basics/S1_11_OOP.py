@@ -65,15 +65,10 @@ class Class_name1:
 #T# --- Hidden variables
 
 # |-----
-
-# |--------------------------------------------------\
 #T# creating hidden variables
-
 # SYNTAX __hidden_var_name1 = val1
 #T# the name of a hidden variable starts with double underscore
-
     __hidden1 = 9
-# |--------------------------------------------------/
 
 #T# access a hidden variable inside the class as a normal attribute
     def get_hidden_var1(self):
@@ -128,16 +123,12 @@ int1 = 2 * Class_name1.class_attr1 # 6
 #T# --- Hidden variables
 
 # |-----
-
-# |--------------------------------------------------\
 #T# access hidden variables from outside the class
 
 # SYNTAX var1 = obj1._Class1__hidden_var_name1
 #T# the hidden variable is accessed as an attribute of obj1, it must be written as, an underscore, the class name, two underscores, the variable name
 
 int1 = obj1._Class_name1__hidden1 # 9
-# |--------------------------------------------------/
-
 # |-----
 
 #T# --- General parts
@@ -232,11 +223,6 @@ str1 = str(child_obj1)  # String of the object
 #T# --- Multiple inheritance
 
 # |-----
-class Derived_class2 (Class_name1):
-    def set_attr1(self):
-        self.attr1 = 2 * self.attr1
-
-# |--------------------------------------------------\
 #T# for multiple inheritance, at least two parent classes are required
 
 # SYNTAX multiple inheritance
@@ -244,14 +230,16 @@ class Derived_class2 (Class_name1):
 #     class_statements1
 #T# the parent classes are written inside parentheses separated by comma
 
+class Derived_class2 (Class_name1):
+    def set_attr1(self):
+        self.attr1 = 2 * self.attr1
+
 class Multiple_parents_class1 (Derived_class2, Derived_class1):
     pass
-# |--------------------------------------------------/
 
 #T# normal instantiation, and access in multiple inheritance
 multi_parent_obj1 = Multiple_parents_class1(5, "multi_parent", "s")
 int1 = multi_parent_obj1.attr1 # 15
-
 # |-----
 
 #T# --- Method Resolution Order (MRO)

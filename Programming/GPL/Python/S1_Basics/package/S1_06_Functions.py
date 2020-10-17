@@ -18,7 +18,6 @@
 # |-------------------------------------------------------------
 #T# functions are defined with parameters, and a return value, they are called with arguments to calculate the return value
 
-# |--------------------------------------------------\
 #T# the function definition starts with the def keyword
 
 # SYNTAX function definition, parameters, docstring, return
@@ -36,15 +35,11 @@ def func1 (param1, param2 = 5, *varargs_tuple1):
     for elem_i1 in varargs_tuple1:
         val1 /= elem_i1
     return val1
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Function call
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# make a function call
 
 # SYNTAX return_value1 = func1(param1 = arg1, arg2, arg3, arg4)
@@ -52,15 +47,11 @@ def func1 (param1, param2 = 5, *varargs_tuple1):
 
 arg1 = 6
 ret1 = func1(arg1, 5, 3) # 20.0
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Anonymous functions
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# create anonymous functions with the lambda keyword
 
 # SYNTAX anon_func1 = lambda arg1, arg2, arg3: (arg1 + arg2)/arg3
@@ -68,8 +59,6 @@ ret1 = func1(arg1, 5, 3) # 20.0
 
 anon_func1 = lambda arg1, arg2: 7 * arg1 + (arg2 - 1)
 ret1 = anon_func1(3, 6) # 26
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #T# Functions as first class citizens
@@ -105,6 +94,7 @@ def decorator1(f1):
             return f1(arg1, arg2)
         return None
     return inner_func1
+#T# a function decorated with this decorator will only work on odd numbers
 
 # |--------------------------------------------------\
 #T# apply a decorator to a function with the decorator operator @

@@ -51,9 +51,9 @@ importlib.reload(S1_10_P_Module_example)
 
 # |-------------------------------------------------------------
 #T# call module's function
-int1 = S1_10_P_Module_example.func1() # 56
+int1 = S1_10_P_Module_example.func1() # 56 # func1() returns 56
 
-int1 = f1(7) # 53
+int1 = f1(7) # 53 # f1(arg1) returns 53
 # |-------------------------------------------------------------
 
 #T# Importing packages
