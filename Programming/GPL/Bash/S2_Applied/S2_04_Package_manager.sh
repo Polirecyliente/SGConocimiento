@@ -1,8 +1,15 @@
 
 #   Package manager
 
+#T# Table of contents
+
 #T# dpkg and apt commands
 
+#T# Beginning of content
+
+#T# dpkg and apt commands
+
+# |-------------------------------------------------------------
 #T# get information about a package, like its name, size, description, version, maintainers, bug report, dependencies, homepage
 # apt show package1
 apt show qt5-quick-demos
@@ -59,9 +66,14 @@ apt build-dep vlc
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 apt-add-repository ppa:jonathonf/ffmpeg-4
 
+# |--------------------------------------------------\
 #T# remove a package repository
-# apt-add-repository --remove repository_name1
+# SYNTAX apt-add-repository --remove repository_name1
 apt-add-repository --remove 'deb http://repos.codelite.org/wx3.1.0/ubuntu/ focal universe'
+
+# SYNTAX if the former doesn't work, remove the repository directly in the file hierarchy, delete the repository entry in the /etc/apt/sources.list, and the repository file in /etc/apt/sources.list.d
+#T# e.g. delete the entry 'deb https://repos.codelite.org/wx3.1.3/ubuntu/ focal universe' in /etc/apt/sources.list, and the file codelite-wx3.1.3.list in /etc/apt/sources.list.d
+# |--------------------------------------------------/
 
 #T# list the trusted apt keys
 apt-key list
@@ -71,3 +83,4 @@ dpkg --print-architecture # amd64
 
 #T# see if i386 programs can be installed, if the output is 'i386'
 dpkg --print-foreign-architectures # i386
+# |-------------------------------------------------------------

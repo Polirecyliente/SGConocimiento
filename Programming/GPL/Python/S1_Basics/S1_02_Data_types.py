@@ -76,9 +76,6 @@ str4 = str1 + str2 + str3 # 'string onestring twostring three'
 
 # |--------------------------------------------------\
 #T# escape sequences are
-#T#     '\\' literal backslash
-#T#     "\'" single quote
-#T#     '\"' double quote
 #T#     '\a' bell system sound
 #T#     '\b' backspace
 #T#     '\f' formfeed
@@ -87,6 +84,9 @@ str4 = str1 + str2 + str3 # 'string onestring twostring three'
 #T#     '\t' horizontal tab
 #T#     '\v' vertical tab
 
+#T#     '\\'         literal backslash
+#T#     "\'"         single quote
+#T#     '\"'         double quote
 #T#     '\uNNNN'     unicode character  where NNNN is a 16 bit hex number
 #T#     '\UNNNNNNNN' unicode 32 bit hex number
 #T#     '\xNN'       hex value

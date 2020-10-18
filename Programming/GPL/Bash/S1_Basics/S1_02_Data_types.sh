@@ -7,22 +7,17 @@
 #T# Numeric types
 #T# String types
 #T# --- Heredoc and here string
-#T# Boolean type
 #T# Composite types
-#T# --- Lists
-#T# --- Tuples
-#T# --- Dictionaries
-#T# --- Sets
-#T# Enum type
+#T# --- Arrays
+#T# --- Associative arrays
 #T# Null type
-#T# Type casting
 
 #T# Beginning of content
 
 #T# Types in general
 
 # |-------------------------------------------------------------
-#T# types are not fully supported, the only considered types are strings and numbers
+#T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see S1_05_Control_flow.sh for the treatment of boolean variables in conditionals
 # |-------------------------------------------------------------
 
 #T# Numeric types
@@ -57,9 +52,29 @@ str3=$str1" "$str2 # string one string two
 
 # |--------------------------------------------------\
 #T# escape sequences are
-#T#     '\\' 
-#T#     "\'" 
+#T#     "\a" bell system sound
+#T#     "\b" backspace
+#T#     "\f" formfeed
+#T#     "\r" carriage return
+#T#     "\n" newline, the same as \f\r
+#T#     "\t" horizontal tab
+#T#     "\v" vertical tab
+#T#     "\c" suppress the rest of the string
 
+#T#     "\\"         literal backslash
+#T#     "\""         double quote
+#T#     "\$"         dollar sign
+#T#     "\`"         backtick
+#T#     "\uNNNN"     unicode character  where NNNN is a 16 bit hex number
+#T#     "\UNNNNNNNN" unicode 32 bit hex number
+#T#     "\xNN"       hex value
+
+str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cUnreachable"
+#T# printing str1 gives the following
+# Line\1
+# Line"2
+#       Form
+# or ʠ𐍆l$`  feed lines
 # |--------------------------------------------------/
 
 #T# --- Heredoc and here string
@@ -126,4 +141,43 @@ bc <<< "3 + $((1 + 1)) + $(echo 1) + $var1" # 8 # 3 + 2 + 1 + 2
 
 # |-----
 
+# |-------------------------------------------------------------
+
+#T# Composite types
+
+# |-------------------------------------------------------------
+
+#T# --- Arrays
+
+# |-----
+#T# arrays in bash can be said to be composite types since they can store any different types of data together
+
+#T# arrays are created within parentheses after the equal sign and separated by space
+arr1=(elem1 elem2 elem3)
+
+#T# declaring, reading from, and writing to arrays
+arr1=(elem1 2 'elem three')
+int1=${arr1[1]} # 2
+arr1[4]='new elem' # index 3 doesn't need to be assigned, it's null by default
+# |-----
+
+#T# --- Associative arrays
+
+# |-----
+#T# associative arrays are created using the -A flag of the declare command (see S1_03_Operators.sh), the key value pairs go inside parentheses separated by space, each key goes inside brackets and is followed by an equal sign and its associated value
+declare -A associative1=([key1]="value1" [key2]="value2")
+
+#T# declaring, reading from, and writing to associative arrays
+declare -A associative1=([key1]="value1" [key2]="value2") # ([key2]="value2" [key1]="value1") # the order of key value pairs is inverted
+str1=${associative1[key2]}  # value2
+associative1[key4]="value4" # the new key value pair is appended at the start of the associative array, associative1 == ([key4]="value4" [key2]="value2" [key1]="value1")
+# |-----
+
+# |-------------------------------------------------------------
+
+#T# Null type
+
+# |-------------------------------------------------------------
+#T# the null value is considered to be the empty string
+null_var1=""
 # |-------------------------------------------------------------
