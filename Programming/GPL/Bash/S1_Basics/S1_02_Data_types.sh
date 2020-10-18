@@ -46,13 +46,13 @@ flo1=$(bc <<< "12.415") # 12.415 # here string is explained later in this file
 #T# String types
 
 # |-------------------------------------------------------------
-#T# strings are created inside quotation symbols ', single quotes or double quotes "
+#T# strings are created inside quotation symbols, single quotes ' or double quotes "
 str1='string one'
 str2="string two"
 
-#T# reading elements from strings is done via substring parameter expansion, see S1_01_Basic_syntax.sh
+#T# reading elements (characters) from strings is done via substring parameter expansion (see S1_03_Operators.sh)
 
-#T# string concatenation can be done indirectly with parameter expansion by expanding two or more string variables separated by space
+#T# string concatenation can be done indirectly with parameter expansion (see S1_03_Operators.sh) by expanding two or more string variables separated by space
 str3=$str1" "$str2 # string one string two
 
 # |--------------------------------------------------\
