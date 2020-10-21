@@ -133,4 +133,7 @@ echo "str1" \
 # |-------------------------------------------------------------
 #T# multiple statements in the same line are separated with a semicolon
 int1=9; int2=7; int3=0
+
+#T# these assignment statements can also be separated with space
+var1=value1 var2=value2
 # |-------------------------------------------------------------

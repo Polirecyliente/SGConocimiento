@@ -21,7 +21,7 @@
 
 #T# in the operating system shell, a compiled .pyc file can be executed like a source code script
 # SYNTAX python3 __pycache__/script1.cpython-38.pyc
-#T# same as before, but this executes script1.cpython-38.pyc which gives the same output as executing script1.py
+#T# python3 is the Python executable, this syntax executes script1.cpython-38.pyc which gives the same output as executing script1.py
 # |-------------------------------------------------------------
 
 #T# Building a project to binary

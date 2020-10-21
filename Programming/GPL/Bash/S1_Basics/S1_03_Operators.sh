@@ -19,7 +19,6 @@
 #T# Logical operators
 #T# Membership operators
 #T# Identity operators
-#T# Operators over variables
 
 #T# Beginning of content
 
@@ -35,6 +34,12 @@
 # |-----
 #T# brace expansion is used to create strings in a combinatorial manner, with N sets of strings, each enclosed in braces, and each of size n_i, the total amount of created strings is the product of all the n_i from all the N sets
 
+#T# each set of strings goes inside braces, with elements separated with comma (no spaces in between), except when there is only one string in the set, in that case the set of one element goes without braces and no commas
+
+# SYNTAX "set1_elem1"{"set2_elem1","set2_elem2"}"set3_elem1"
+#T# each of the strings is an element of a set of strings, there can be more sets and more elements in each set, and as set1_elem1 is the string element 1 of set 1, in general setI_elemi is the string element i of the set I
+
+echo "s1"{"s2","s3"}"sm"{"s4","s5","s6"} # s1s2sms4 s1s2sms5 s1s2sms6 s1s3sms4 s1s3sms5 s1s3sms6
 # |-----
 
 #T# --- Tilde expansion
@@ -56,7 +61,7 @@ echo ~other_user1/dir1 # /home/other_user1/dir1 # if such user and directory exi
 #T# --- Parameter (variable) expansion
 
 # |-----
-#T# variables (called parameters here) can be expanded to get their value, or get their value modified by using a word (as it's called here)
+#T# variables (called parameters here) can be expanded to get their value, or get their value with modification
 
 #T# parameters are identified because they start with the dollar sign $ and followed by their name, with optional braces enclosing the name
 
@@ -271,11 +276,39 @@ echo "Bash exec file is in "`which bash`  # Bash exec file is in /bin/bash
 #T# --- Arithmetic expansion
 
 # |-----
+#T# arithmetic expansion is done to do arithmetic calculations
+
+# SYNTAX $(( expression1 ))
+#T# expression1 is any arithmetic expression consisting of integers (for floating point numbers, bc or similar commands can be used), the list of math operations is shown later in this file
+
+int1=$((7 - 2 + 1)) # 6
+int2=$((int1 + 5))  # 11 # int1 must not be expanded with dollar sign $
+
+# |--------------------------------------------------\
+#T# the let command can be used to do the same as arithmetic expansions
+
+# SYNTAX let "expression1"
+#T# expression1 is any arithmetic expression consisting of integers, it must contains at least one variable
+
+let "var1 = 5 + 2" # var1 == 7
+# |--------------------------------------------------/
+
 # |-----
 
 #T# --- Word splitting
 
 # |-----
+#T# word splitting is done to split words where an IFS (Internal Field Separator) character is found, this is done only outside double quotes ", so strings inside double quotes are not word splitted
+
+#T# the default value of the IFS consist of space, tab, and newline
+
+#T# words are tokens that can be passed as arguments to commands, a string with substrings separated by the IFS will create one such token or word per each substring when word splitted
+
+# SYNTAX IFSsubstring1IFSsubstring2IFS
+# SYNTAX  substring1 substring2 "sub string 3" 
+#T# The IFS at the start and end of the string are ignored, all substrings, substring1, substring2, etc., are converted into separate tokens, these can be used as arguments by commands
+
+cat file1 file2 "file name 3" # this outputs the contents of file1, file2, and "file name 3", if such files exist
 # |-----
 
 #T# --- Pathname expansion
@@ -349,20 +382,64 @@ echo !(F[A-Z])       # F1F2 F2 # if such files exist
 
 # |-------------------------------------------------------------
 
-#T# let, declare keywords, expr command
-
-
 #T# Arithmetic operators
 
 # |-------------------------------------------------------------
+#T# these operators can be used in an arithmetic expansion, and so they can be used in expressions with the let command, when used inside an arithmetic expansion, the dollar sign $ can be omitted to avoid expanding the result if it's not going to be used as argument or output
 
-#T# Arithmetics with $(()), *, +, **, -, /, %
-A=3
-B=$(((6 * (${A} + 5)) ** 2))
-C=404
-D=$((((${C} - 4)/100) % 27))
-echo -e "${B}\n${D}"
+# SYNTAX (( var3 = var1 + var2 ))
+# SYNTAX let "var3 = var1 + var2"
+#T# this adds var1 and var2, and stores the result in var3
 
+var1=5; var2=3
+(( var3 = var1 + var2 )) # var3 == 8
+let "var3 = var1 + var2" # var3 == 8
+
+# SYNTAX (( var3 = var1 - var2 ))
+# SYNTAX let "var3 = var1 - var2"
+#T# this subtracts var2 from var1, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1 - var2 )) # var3 == 2
+let "var3 = var1 - var2" # var3 == 2
+
+# SYNTAX (( var3 = var1*var2 ))
+# SYNTAX let "var3 = var1*var2"
+#T# this multiplies var1 by var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1*var2 )) # var3 == 15
+let "var3 = var1*var2" # var3 == 15
+
+# SYNTAX (( var3 = var1/var2 ))
+# SYNTAX let "var3 = var1/var2"
+#T# this divides var1 by var2, and stores the result in var3, since Bash doesn't support floating point arithmetics, the result is the nearest integer to zero
+
+var1=5; var2=3
+(( var3 = var1/var2 )) # var3 == 1
+let "var3 = var1/var2" # var3 == 1
+
+# SYNTAX (( var3 = var1 % var2 ))
+# SYNTAX let "var3 = var1 % var2"
+#T# this does the modulo operation, which calculates the remainder of var1 divided by var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1 % var2 )) # var3 == 2
+let "var3 = var1 % var2" # var3 == 2
+
+# SYNTAX (( var3 = var1**var2 ))
+# SYNTAX let "var3 = var1**var2"
+#T# this elevates var1 to the power of var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1**var2 )) # var3 == 125
+let "var3 = var1**var2" # var3 == 125
+# |-------------------------------------------------------------
+
+#T# Relational operators
+#T# Assignment operators
+
+# |-------------------------------------------------------------
 #T# assignment operators with let "var = 4"
 let "A = 2"
 echo "A value is: $A"
@@ -374,6 +451,22 @@ let "A *= 8"
 echo "A value is: $A"
 let "A /= 2"
 echo "A value is: $A"
+# |-------------------------------------------------------------
+
+#T# Bitwise operators
+#T# Ternary operator
+#T# Logical operators
+#T# Membership operators
+#T# Identity operators
+
+
+
+
+
+
+
+
+
 
 
 
@@ -388,7 +481,6 @@ echo "A value is: $A"
 . S1_08_CLI_args.sh      # executes this script in the same shell
 source S1_08_CLI_args.sh # executes this script in the same shell
 # |--------------------------------------------------/
-
 
 
 #T# variable indirection, indirect expansion

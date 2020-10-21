@@ -11,6 +11,7 @@
 #T# --- Arrays
 #T# --- Associative arrays
 #T# Null type
+#T# The declare command
 
 #T# Beginning of content
 
@@ -18,6 +19,8 @@
 
 # |-------------------------------------------------------------
 #T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see S1_05_Control_flow.sh for the treatment of boolean variables in conditionals
+
+#T# the only caveat, is the declare command, which can be used to set attributes on variables, and these attributes act as the type of the variable
 # |-------------------------------------------------------------
 
 #T# Numeric types
@@ -164,7 +167,7 @@ arr1[4]='new elem' # index 3 doesn't need to be assigned, it's null by default
 #T# --- Associative arrays
 
 # |-----
-#T# associative arrays are created using the -A flag of the declare command (see S1_03_Operators.sh), the key value pairs go inside parentheses separated by space, each key goes inside brackets and is followed by an equal sign and its associated value
+#T# associative arrays are created using the -A flag of the declare command (see later in this file), the key value pairs go inside parentheses separated by space, each key goes inside brackets and is followed by an equal sign and its associated value
 declare -A associative1=([key1]="value1" [key2]="value2")
 
 #T# declaring, reading from, and writing to associative arrays
@@ -180,4 +183,35 @@ associative1[key4]="value4" # the new key value pair is appended at the start of
 # |-------------------------------------------------------------
 #T# the null value is considered to be the empty string
 null_var1=""
+# |-------------------------------------------------------------
+
+#T# The declare command
+
+# |-------------------------------------------------------------
+#T# the declare command is used as a way to set the type of variables by setting attributes to them
+
+#T# the typeset command is an alias for the declare command
+
+# SYNTAX declare -o1 var1
+# SYNTAX declare +o1 var1
+#T# var1 is assigned the attribute denoted by -o1 which is a flag that indicates a data type, when using +o1 the attribute is removed from var1
+
+#T# the following are the flags of the declare command that assign types to var1, described using the -o1 version
+#T#     -a, +a, makes var1 an indexed array
+#T#     -A, +A, makes var1 an associative array
+#T#     -i, +i, makes var1 an integer
+#T#     -l, +l, makes var1 a lowercase string
+#T#     -n, +n, makes var1 a reference to another variable
+#T#     -r, +r, makes var1 a readonly variable
+#T#     -u, +u, makes var1 an uppercase string
+#T#     -x, +x, makes var1 an environment variable
+
+declare -a arr1=( "elem1" "elem2" )
+declare -A associative1=([key1]="value1" [key2]="value2")
+declare -i int1=54
+declare -l str1="STRING1" # string1
+declare -n int_ref1=int1 # 54
+declare -r read_only1="read_only_string1"
+declare -u str2="string2" # STRING2
+declare -x int2=25
 # |-------------------------------------------------------------

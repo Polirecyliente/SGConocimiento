@@ -1,4 +1,4 @@
 
 #   Packages
 
-# export keyword
+# double colon :: notation

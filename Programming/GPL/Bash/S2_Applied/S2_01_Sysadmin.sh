@@ -89,6 +89,9 @@ nl /etc/passwd
 
 #T# switch user with the su command
 su serveruser
+
+#T# get the current user with the whoami command
+whoami # jul
 # |-------------------------------------------------------------
 
 #T# Hardware detection
