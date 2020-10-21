@@ -49,15 +49,15 @@ echo 'First line'; echo 'Second line'
 # |-------------------------------------------------------------
 #T# variables are dynamically typed. Literals are characters, numbers
 
-#T# define variables with the equal sign, no spaces are allowed before or after the equal sign
+#T# define variables with the equal sign, no spaces are allowed before or after the equal sign (because spaces separate arguments)
 int1=5
 
-#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character
+#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character, quotation symbols preserve the whitespace of the string
 str1='Hello       world!"'
 str2="second str'ing"
 
 # |--------------------------------------------------\
-#T# double quotes are used for interpolated strings, variable substitution is made with
+#T# double quotes are used for interpolated strings (single quotes create raw, literal strings), variable substitution is made with
 
 # SYNTAX ${var1}
 #T# var1 is the variable to be substituted inside a string, this is also called parameter expansion and uses the braces operator as explained in S1_03_Operators.sh

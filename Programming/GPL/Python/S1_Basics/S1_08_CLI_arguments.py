@@ -1,11 +1,9 @@
 
-#   CLI
+#   CLI arguments
 
 #T# Table of contents
 
-#T# CLI arguments
-#T# Interpreter customization
-#T# --- Interpreter options
+#T# Argparse
 
 #T# Beginning of content
 
@@ -15,7 +13,7 @@
 #T# execute this file with command line arguments: str2 5.4 -oCount -oCount
 # |-------------------------------------------------------------
 
-#T# CLI arguments
+#T# Argparse
 
 # |-------------------------------------------------------------
 #T# manage command line arguments with the argparse module
@@ -57,23 +55,4 @@ args1 = parser1.parse_args() # Namespace(flag1 = False, oCount = 2, positional_a
 #T# access the elements in a Namespace object using dot notation, as each argument name becomes an attribute of the Namespace object
 arg1_value = args1.positional_arg1 # str2
 oCount_value = args1.oCount        # 2
-# |-------------------------------------------------------------
-
-#T# Interpreter customization
-
-# |-------------------------------------------------------------
-
-#T# --- Interpreter options
-
-# |-----
-#T# the interpreter can have several options set at the start
-
-# SYNTAX python3 -o1
-#T# this must be executed outside Python, in the operating system shell, o1 is the flag being turned on, the flags that modify the options of the interpreter are set before starting it, python3 is the Python interpreter
-
-#T# there are several flags used for different options
-#T#     -v, print the initialized modules and their file location
-#T#     -vv, like -v, but also print a message for each file checked when searching a module
-# |-----
-
 # |-------------------------------------------------------------

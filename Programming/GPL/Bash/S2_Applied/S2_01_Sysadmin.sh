@@ -18,7 +18,8 @@
 
 #T# Essential commands and syntax
 
-#T# remove everything but .file with rm !(*.file)
+# |-------------------------------------------------------------
+#T# remove everything but .file with rm !(*.file), this uses pattern matching (see S1_03_Operators.sh)
 rm !(*.tex|*.bib)
 
 #T# print numbered from the start in file1 up to line up_to_l, but taking only the last N lines
@@ -31,9 +32,11 @@ mkdir -p /tmp/parent_dir1/child_dir1
 
 #T# print the current datetime
 date # mar 13 oct 2020 16:52:09 -05
+# |-------------------------------------------------------------
 
 #T# Process management
 
+# |-------------------------------------------------------------
 #T# get the pid of a process with pidof
 # pidof program_name1
 pidof firefox
@@ -69,6 +72,7 @@ kill -SIGKILL 187785
 # N -> low priority
 # l -> is multithreaded
 # + -> is in the foreground process group
+# |-------------------------------------------------------------
 
 #T# User and group management
 
@@ -89,46 +93,60 @@ su serveruser
 
 #T# Hardware detection
 
+# |-------------------------------------------------------------
 #T# list hardware with lshw, the option -short gives a summary
 lshw -short
 
 #T# list pci devices along with their drivers
 lspci -k
 #T# the -k flag is to show the kernel drivers and kernel modules
+# |-------------------------------------------------------------
 
 #T# System libraries
 
+# |-------------------------------------------------------------
 #T# print the cache of installed libraries
 ldconfig -p
 #T# the -p flag is for printing the cache
+# |-------------------------------------------------------------
 
 #T# Devices
 
+# |-------------------------------------------------------------
 #T# Check mounted devices in /proc/mounts
 cat /proc/mounts
 #T# list mounted devices with mount -l
 mount -l
+# |-------------------------------------------------------------
 
 #T# Fonts
 
+# |-------------------------------------------------------------
 #T# fonts are stored in /usr/share/fonts/
 cd /usr/share/fonts/
+# |-------------------------------------------------------------
 
 #T# Encodings
 
+# |-------------------------------------------------------------
 #T# get the list of encodings knows by the operating system with the -l flag of the iconv program
 iconv -l
+# |-------------------------------------------------------------
 
 #T# Internet
 
+# |-------------------------------------------------------------
 #T# download a file from the internet with wget, the -c flag is to continue downloading a partially downloaded file
 wget -c http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run
+# |-------------------------------------------------------------
 
 #T# Latex
 
+# |-------------------------------------------------------------
 #T# see the paths where latex packages can be installed
 kpsepath tex
 
 #T# use the tlmgr command (for texlive manager) to install latex packages
 # tlmgr install package1
 tlmgr install undertilde
+# |-------------------------------------------------------------

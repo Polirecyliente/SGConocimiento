@@ -1,64 +1,70 @@
 
 #   Operators
 
-#T# Arithmetics with $(()), *, +, **, -, /, %
-A=3
-B=$(((6 * (${A} + 5)) ** 2))
-C=404
-D=$((((${C} - 4)/100) % 27))
-echo -e "${B}\n${D}"
+#T# Table of contents
 
-#T# assignment operators with let "var = 4"
-let "A = 2"
-echo "A value is: $A"
-let "A += 3"
-echo "A value is: $A"
-let "A -= 4"
-echo "A value is: $A"
-let "A *= 8"
-echo "A value is: $A"
-let "A /= 2"
-echo "A value is: $A"
-
-#T# let, declare keywords, expr command
-
-
-# |--------------------------------------------------\
-#T# the dot command, and its synonym the source command, are used for executing a script in the same shell environment, normally scripts are executed in a subshell
-
-# SYNTAX . script1.sh
-# SYNTAX source script1.sh
-#T# both syntaxes are equivalent, the commands in script1 are executed in the same shell environment that called it
-
-. S1_08_CLI_args.sh      # executes this script in the same shell
-source S1_08_CLI_args.sh # executes this script in the same shell
-# |--------------------------------------------------/
-
-
+#T# Expansions
+#T# --- Brace expansion
+#T# --- Tilde expansion
+#T# --- Parameter (variable) expansion
 #T# --- Command substitution
+#T# --- Arithmetic expansion
+#T# --- Word splitting
+#T# --- Pathname expansion
+#T# Arithmetic operators
+#T# Relational operators
+#T# Assignment operators
+#T# Bitwise operators
+#T# Ternary operator
+#T# Logical operators
+#T# Membership operators
+#T# Identity operators
+#T# Operators over variables
+
+#T# Beginning of content
+
+#T# Expansions
+
+# |-------------------------------------------------------------
+#T# expansions are used to replace tokens into characters depending on the value of the tokens, expansion operators serve to recognize the tokens to replace (called expand here)
+
+#T# there are several kinds of expansion, and so they are done in a given order, the following sections are written in this order, the tokens expand in this order
+
+#T# --- Brace expansion
 
 # |-----
-#T# the result of a command can be converted to a string by using command substitution
-
-# SYNTAX $(command1)
-#T# the result that command1 sends to stdout is converted to a string, command1 must be inside $() the command substitution operator
-
-$(echo "str1") # str1: command not found
-# |-----
-
-
-#T# --- Parameter expansion
+#T# brace expansion is used to create strings in a combinatorial manner, with N sets of strings, each enclosed in braces, and each of size n_i, the total amount of created strings is the product of all the n_i from all the N sets
 
 # |-----
-#T# variables (called parameters here) can be expanded to get their value or get their value modified by using a word (as it's called here)
 
-#T# parameters are identified because they start with the dollar sign $ when they are being operated with
+#T# --- Tilde expansion
+
+# |-----
+#T# tilde expansion expands a tilde by replacing it for a user's home directory
+
+# SYNTAX ~
+#T# a tilde alone is expanded to the current user's home directory
+
+echo ~/dir1 # /home/user1/dir1 # if such user and directory exist
+
+# SYNTAX ~user1
+#T# this expands to the user1 home directory
+
+echo ~other_user1/dir1 # /home/other_user1/dir1 # if such user and directory exist
+# |-----
+
+#T# --- Parameter (variable) expansion
+
+# |-----
+#T# variables (called parameters here) can be expanded to get their value, or get their value modified by using a word (as it's called here)
+
+#T# parameters are identified because they start with the dollar sign $ and followed by their name, with optional braces enclosing the name
 
 #T# define a parameter as usual
 var1="value one"
 
 # |--------------------------------------------------\
-#T# expansion means sustituting the parameter for its value
+#T# expansion means substituting the parameter for its value
 
 # SYNTAX $var1
 # SYNTAX ${var1}
@@ -78,6 +84,45 @@ null_var1=""
 # SYNTAX unset var1
 unset_var1="temp value"
 unset unset_var1 # unset_var1 becomes as if it was never defined
+# |--------------------------------------------------/
+
+# |--------------------------------------------------\
+#T# a variable's length in bytes can be expanded
+
+# SYNTAX ${#var1}
+#T# var1 is the variable (parameter) whose lenght in bytes (according to the locale) is the result of the expansion
+
+var1="ʠüña"
+echo ${#var1} # 4
+LC_ALL=C      # changing the locale
+echo ${#var1} # 7
+# |--------------------------------------------------/
+
+# |--------------------------------------------------\
+#T# the case of the string value of a parameter (variable) can be modified
+
+# SYNTAX ${var1^pattern_single1}
+#T# var1 is the parameter whose case is being changed, pattern_single1 is a single character, pattern_single1 can be nothing, it can be a char, or it can be a character class with several chars
+
+#T# this syntax makes uppercase the first char in var1 if it matches pattern_single1
+
+var1="choqolada"
+echo ${var1^[aqc]} # Choqolada
+
+# SYNTAX ${var1^^pattern_single1}
+#T# same as before, but make uppercase all chars in var1 that match pattern_single1
+
+var1="choqolada"
+echo ${var1^^[!aqc]} # cHOqOLaDa
+
+# SYNTAX ${var1,pattern_single1}
+#T# same as before, but make lowercase the first char in var1 if it matches pattern_single1
+
+var1="CHOQOLADA"
+echo ${var1,C} # cHOQOLADA
+
+# SYNTAX ${var1,,pattern_single1}
+#T# same as before, but make lowercase all chars in var1 that match pattern_single1
 # |--------------------------------------------------/
 
 # |--------------------------------------------------\
@@ -167,7 +212,7 @@ echo ${var1:(-5):(-1)} # 2str
 # SYNTAX ${var1##pattern1}
 #T# this removes the substring that has to start from the left of var1 and matches pattern1, using double hash ## makes a greedy match
 
-#T# pattern1 accepts globbing, the asterisk * matches 0 or more characters, the question mark ? matches 0 or 1 character, brackets [] are used for character classes which includes negation with the caret ^
+#T# pattern1 accepts globbing (see Pathname expansion subsection in the Expansions section)
 
 var1="apple pie"
 echo ${var1#?p}           # ple pie
@@ -192,7 +237,7 @@ echo ${var1%%p*} # a
 
 #T# if only one slash / is used between var1 and pattern1 then only the first match is replaced, with double slash // all matches are replaced
 
-#T# pattern1 accepts globbing, the asterisk * matches 0 or more characters, the question mark ? matches 0 or 1 character, brackets [] are used for character classes which includes negation with the caret ^
+#T# pattern1 accepts globbing (see Pathname expansion subsection in the Expansions section)
 
 var1="apple pie"
 echo ${var1/ /_}  # apple_pie
@@ -210,14 +255,141 @@ echo ${var1/%pie/bye} # apple bye
 
 # |-----
 
-
-#T# --- Brace expansion
-
-# |-----
-#T# brace expansion is used to create strings in a combinatorial manner, with N sets of strings, each enclosed in braces, and each of size n_i, the total amount of created strings is the product of all the n_i from all the N sets
-
+#T# --- Command substitution
 
 # |-----
+#T# command substitution allows using the output of commands as arguments for other commands
+
+# SYNTAX command1 $(command2)
+# SYNTAX command1 `command2`
+#T# the output of command2 is used as argument for the command1
+
+echo "Bash exec file is in "$(which bash) # Bash exec file is in /bin/bash
+echo "Bash exec file is in "`which bash`  # Bash exec file is in /bin/bash
+# |-----
+
+#T# --- Arithmetic expansion
+
+# |-----
+# |-----
+
+#T# --- Word splitting
+
+# |-----
+# |-----
+
+#T# --- Pathname expansion
+
+# |-----
+#T# pathname expansion is done with globbing (also called filename expansion), the following syntaxes of this section can be used anywhere where globbing is accepted in Bash
+
+# SYNTAX substring1*substring2
+#T# the asterisk * operator is expanded to the filenames of the working directory that start with substring1 and end with substring2
+
+echo * # Drawing Math Programming Science # or others, according to the working directory
+echo D*g # Drawing
+
+# SYNTAX substring1?substring2
+#T# the question mark ? operator is expanded to any single character of the filenames of the working directory, this single character must be preceded by substring1 and followed by substring2
+
+echo ???? # Math
+echo M??h # Math
+
+# SYNTAX substring1[chars1]substring2
+#T# the brackets [] operator encloses a character class made of the characters in chars1, it matches one and only one of the characters in chars1, preceded by substring1 and followed by substring2
+
+#T# a character range is allowed with the hyphen -, e.g. [c-h] matches one char between 'c' and 'h' according to the collation set
+
+#T# the caret ^ and the exclamation mark ! are used to negate the character class (match a char that is not in the character class), this negation sign must be placed at the start of the character class
+
+#T# to match a hyphen or other special char, they can be escaped with backslash
+
+#T# a character class can be one of the POSIX character clases, these are made with a word within colons and a pair of brackets which don't count as the character class brackets
+#T#     [:alnum:],  matches one alphanumeric char
+#T#     [:alpha:],  matches one alphabetic char
+#T#     [:blank:],  matches one space or tab
+#T#     [:cntrl:],  matches one control char, like a vertical tab
+#T#     [:digit:],  matches one digit
+#T#     [:graph:],  matches one visible char
+#T#     [:lower:],  matches one lowercase char
+#T#     [:print:],  matches one visible char or space
+#T#     [:punct:],  matches one punctuation char
+#T#     [:space:],  matches one space char
+#T#     [:upper:],  matches one uppercase char
+#T#     [:xdigit:], matches one hexadecimal digit
+
+echo F[a9i]le1     # File1 # if such file exists in the working directory
+echo F[k-p]le2     # Fmle2 # if such file exists
+echo F[^i][!o]3    # Fae3  # if such file exists
+echo [[:xdigit:]]* # A     # if such file exists
+
+# SYNTAX */*/pattern1
+#T# pattern1 can be any matching pattern, the series of '*/' can be longer and it means that pattern1 will be matched in a subdirectory, for the case of '*/*/' pattern1 will be matched in all subsubdirectories (in a depth level of 2)
+
+echo */*/*/File1 # dir1/subdir1/subsubdir1/File1 # if such file exists under the working directory
+
+#T# for the following syntax, an extended set of operators for globbing is required, this feature is turned on with the extglob option of the shopt command (see S1_08_CLI.sh)
+
+# SYNTAX operator1(pattern1|pattern2|pattern3)
+#T# there can be more than 3 patterns separated by vertical bar |, operator1 can be any of '?', '*', '+', '@', or '!', all patterns, pattern1, pattern2, pattern3, etcetera, are matching patterns, this syntax matches any of the patterns inside parentheses according to operator1
+
+#T# the use of the operators is
+#T#     ?, matches 0 or 1 time any of the patterns
+#T#     *, matches 0 or more times any of the patterns
+#T#     +, matches 1 or more times any of the patterns
+#T#     @, matches 1 time any of the patterns
+#T#     !, matches the negation of the patterns, so anything that doesn't match any of the patterns
+
+echo ?(F1|F2)        # F2      # if such file exists in the working directory
+echo *(F[[:digit:]]) # F1F2 F2 # if such files exist
+echo +(FA|FB|FC)     # FAFBFC  # if such files exist
+echo @(F[A-Z])       # FB FC   # if such files exist
+echo !(F[A-Z])       # F1F2 F2 # if such files exist
+# |-----
+
+# |-------------------------------------------------------------
+
+#T# let, declare keywords, expr command
+
+
+#T# Arithmetic operators
+
+# |-------------------------------------------------------------
+
+#T# Arithmetics with $(()), *, +, **, -, /, %
+A=3
+B=$(((6 * (${A} + 5)) ** 2))
+C=404
+D=$((((${C} - 4)/100) % 27))
+echo -e "${B}\n${D}"
+
+#T# assignment operators with let "var = 4"
+let "A = 2"
+echo "A value is: $A"
+let "A += 3"
+echo "A value is: $A"
+let "A -= 4"
+echo "A value is: $A"
+let "A *= 8"
+echo "A value is: $A"
+let "A /= 2"
+echo "A value is: $A"
+
+
+
+
+# |--------------------------------------------------\
+#T# the dot command, and its synonym the source command, are used for executing a script in the same shell environment, normally scripts are executed in a subshell
+
+# SYNTAX . script1.sh
+# SYNTAX source script1.sh
+#T# both syntaxes are equivalent, the commands in script1 are executed in the same shell environment that called it
+
+. S1_08_CLI_args.sh      # executes this script in the same shell
+source S1_08_CLI_args.sh # executes this script in the same shell
+# |--------------------------------------------------/
+
+
 
 #T# variable indirection, indirect expansion
 
