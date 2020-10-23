@@ -15,10 +15,10 @@
 #T# Relational operators
 #T# Assignment operators
 #T# Bitwise operators
-#T# Ternary operator
 #T# Logical operators
-#T# Membership operators
-#T# Identity operators
+#T# Shell operators
+#T# --- History expansion
+#T# Special parameters
 
 #T# Beginning of content
 
@@ -434,42 +434,199 @@ let "var3 = var1 % var2" # var3 == 2
 var1=5; var2=3
 (( var3 = var1**var2 )) # var3 == 125
 let "var3 = var1**var2" # var3 == 125
+
+# SYNTAX (( expression1, expression2 ))
+# SYNTAX let "expression1, expression2"
+#T# several expressions, expression1, expression2, etc, can be calculated one after the other, separated by comma, the last expression is sent as output
+
+(( var1 = 4 + 1, var2 = 5 - 2 )) # var1 == 5, var2 == 3
+let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
 # |-------------------------------------------------------------
 
 #T# Relational operators
+
+# |-------------------------------------------------------------
+#T# boolean results are interpreted as follows, when a command is successful its exit status is 0, when a command fails its exit status is 1 or any other number, because of this a value of 0 means true and a value of 1 means false, to see the exit status of a boolean operation the $? variable (parameter) is used, e.g. 'echo $?' shows said exit status
+
+#T# comparisons between floating point numbers can be done with the bc command
+
+# |--------------------------------------------------\
+#T# comparisons in general are made in two ways (both give the same result), the test command, and the double brackets [[]]
+
+# SYNTAX test "$var1" "-o1" "$var2"
+# SYNTAX [[ "$var1" -o2 "$var2" ]]
+#T# each of -o1 and -o2 can be a kwarg option or an operator, var1 and var2 are variables being tested, there can be more (or less) variables and operators
+
+int1=5
+test "-v" "int1" # $? == 0 # true
+[[ -v "int1" ]]  # $? == 0 # true
+#T# the -v var1 kwarg makes the test return true if var1 is defined (var1 is set in the interpreter)
+# |--------------------------------------------------/
+
+#T# the following are the relational operators shown using both the test command and the double brackest [[]]
+
+#T# equality operator between numbers
+int1=12; int2=5
+test "$int1" "-eq" "$int2" # $? == 1 # false
+[[ "$int1" -eq "$int2" ]]  # $? == 1 # false
+
+#T# equality operator between strings
+str1="stringA"; str2="stringA"
+test "$str1" "==" "$str2" # $? == 0 # true
+[[ "$str1" == "$str2" ]]  # $? == 0 # true
+
+#T# not equal operator between numbers
+int1=12; int2=5
+test "$int1" "-ne" "$int2" # $? == 0 # true
+[[ "$int1" -ne "$int2" ]]  # $? == 0 # true
+
+#T# not equal operator between strings
+str1="stringA"; str2="stringA"
+test "$str1" "!=" "$str2" # $? == 1 # false
+[[ "$str1" != "$str2" ]]  # $? == 1 # false
+
+#T# greater than operator between numbers
+int1=12; int2=5
+test "$int1" "-gt" "$int2" # $? == 0 # true
+[[ "$int1" -gt "$int2" ]]  # $? == 0 # true
+
+#T# greater than operator between strings
+str1="AgnirtS"; str2="StringA"
+test "$str1" ">" "$str2" # $? == 1 # false
+[[ "$str1" > "$str2" ]]  # $? == 1 # false
+
+#T# less than operator between numbers
+int1=12; int2=5
+test "$int1" "-lt" "$int2" # $? == 1 # false
+[[ "$int1" -lt "$int2" ]]  # $? == 1 # false
+
+#T# less than operator between strings
+str1="AgnirtS"; str2="StringA"
+test "$str1" "<" "$str2" # $? == 0 # true
+[[ "$str1" < "$str2" ]]  # $? == 0 # true
+
+#T# greater than or equal to operator between numbers
+int1=12; int2=5
+test "$int1" "-ge" "$int2" # $? == 0 # true
+[[ "$int1" -ge "$int2" ]]  # $? == 0 # true
+
+#T# less than or equal to operator between numbers
+int1=12; int2=5
+test "$int1" "-le" "$int2" # $? == 1 # false
+[[ "$int1" -le "$int2" ]]  # $? == 1 # false
+# |-------------------------------------------------------------
+
 #T# Assignment operators
 
 # |-------------------------------------------------------------
-#T# assignment operators with let "var = 4"
-let "A = 2"
-echo "A value is: $A"
-let "A += 3"
-echo "A value is: $A"
-let "A -= 4"
-echo "A value is: $A"
-let "A *= 8"
-echo "A value is: $A"
-let "A /= 2"
-echo "A value is: $A"
+#T# assignments are done with arithmetic expansion and with the let command
+
+#T# equals operator
+(( int1 = 5 )) # 5
+let "int1 = 5" # 5
+
+#T# plus equals operator
+(( int1 = 5 ))
+(( int1 += 5 )) # 10
+let "int1 += 5" # 10
+
+#T# minus equals operator
+(( int1 = 10 ))
+(( int1 -= 5 )) # 5
+let "int1 -= 5" # 5
+
+#T# times equals operator
+(( int1 = 5 ))
+(( int1 *= 5 )) # 25
+let "int1 *= 5" # 25
+
+#T# divided by equals operator (the resulting integer is the nearest to zero)
+(( int1 = 25 ))
+(( int1 /= 5 )) # 5
+let "int1 /= 5" # 5
+
+#T# modulo equals operator
+(( int1 = 5 ))
+(( int1 %= 3 )) # 2
+let "int1 %= 3" # 2
 # |-------------------------------------------------------------
 
 #T# Bitwise operators
-#T# Ternary operator
+# |-------------------------------------------------------------
+#T# several bitwise operators can be used as assignment operators by appending an equal sign = at the end of the bitwise operator
+
+#T# and operator
+(( int1 = 0xA & 0x3 )) # 0x2
+let "int1 = 0xA & 0x3" # 0x2
+
+#T# and equals operator
+(( int1 = 0xA ))
+(( int1 &= 0x3 )) # 0x2
+let "int1 &= 0x3" # 0x2
+
+#T# or operator
+(( int1 = 0xA | 0x3 )) # 0xB
+let "int1 = 0xA | 0x3" # 0xB
+
+#T# or equals operator
+(( int1 = 0xA ))
+(( int1 |= 0x3 )) # 0xB
+let "int1 |= 0x3" # 0xB
+
+#T# xor operator
+(( int1 = 0xA ^ 0x3 )) # 0x9
+let "int1 = 0xA ^ 0x3" # 0x9
+
+#T# xor equals operator
+(( int1 = 0xA ))
+(( int1 ^= 0x3 )) # 0x9
+let "int1 ^= 0x3" # 0x9
+
+#T# not operator
+(( int1 = ~ 0xA )) # 0x5 # truncating up to the first four bits
+let "int1 = ~ 0xA" # 0x5 # truncating up to the first four bits
+
+#T# left shift operator
+(( int1 = 0x3 << 1 )) # 0x6
+let "int1 = 0x3 << 1" # 0x6
+
+#T# left shift equals operator
+(( int1 = 0x3 ))
+(( int1 <<= 1 )) # 0x6
+let "int1 <<= 1" # 0x6
+
+#T# right shift operator
+(( int1 = 0xE >> 1 )) # 0x7
+let "int1 = 0xE >> 1" # 0x7
+
+#T# right shift equals operator
+(( int1 = 0xE ))
+(( int1 >>= 1 )) # 0x7
+let "int1 >>= 1" # 0x7
+# |-------------------------------------------------------------
+
 #T# Logical operators
-#T# Membership operators
-#T# Identity operators
 
+# |-------------------------------------------------------------
+#T# logical and operator
+var1="value1"; var2=5
+test "$var1" -a "$var2"  # $? == 0 # true
+[[ "$var1" && "$var2" ]] # $? == 0 # true
 
+#T# logical or operator
+var1=""; var2=""
+test "$var1" -o "$var2"  # $? == 1 # false
+[[ "$var1" || "$var2" ]] # $? == 1 # false
 
+#T# logical not operator
+var1=""
+test "!" "$var1" # $? == 0 # true
+[[ ! "$var1" ]]  # $? == 0 # true
+# |-------------------------------------------------------------
 
+#T# Shell operators
 
-
-
-
-
-
-
-
+# |-------------------------------------------------------------
 
 # |--------------------------------------------------\
 #T# the dot command, and its synonym the source command, are used for executing a script in the same shell environment, normally scripts are executed in a subshell
@@ -482,13 +639,9 @@ echo "A value is: $A"
 source S1_08_CLI_args.sh # executes this script in the same shell
 # |--------------------------------------------------/
 
+#T# --- History expansion
 
-#T# variable indirection, indirect expansion
-
-
-#T# Command history
-
-# |-------------------------------------------------------------
+# |-----
 
 # |--------------------------------------------------\
 #T# the history can be checked with the history command
@@ -499,23 +652,19 @@ history
 #    2  cat ~/.bash_history 
 #    3  git push
 #    4  history
-
 #T# or any list of commands executed before and stored in the history
-# |--------------------------------------------------/
 
 #T# clear the history with the -c flag of the history command
 history -c
-
-#T# --- History expansion
-
-# |-----
-#T# commands from the history are expanded with an exclamation mark, known as the bang operator
+# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# any command in the history can be executed again with its number in the history
 
 # SYNTAX additionals1 !int1 additionals2
 #T# int1 is the number of the command in the history, additionals1 and additionals2 are any other commands and arguments added before and after the command with number int1
+
+#T# commands from the history are expanded with an exclamation mark !, known as the bang operator
 
 #T# as an example, if the command number 6 is 'echo "repeated string"'
 !6 "and more"
@@ -591,8 +740,6 @@ echo !gi:2
 # origin
 # |--------------------------------------------------/
 
-# |-----
-
 # |--------------------------------------------------\
 #T# the previous command can be rerun replacing a substring for another, for example in case of a typo
 
@@ -603,8 +750,89 @@ echo !gi:2
 #T# if the last command is 'gir push' then this executes 'git push'
 # |--------------------------------------------------/
 
-# |-------------------------------------------------------------
+# |-----
 
+#T# --- Test checks and comparisons
+
+# |-----
+#T# the test command, and the double brackets [[]], are used to do more checks and comparisons than the already shown
+
+#T# check if the variable's string length is non zero (the same effect is obtained testing the variable directly, without the -n)
+var1=""
+test "-n" "$var1" # $? == 1 # false
+[[ -n "$var1" ]]  # $? == 1 # false
+
+#T# check if the variable's string length is zero
+var1=""
+test "-z" "$var1" # $? == 0 # true
+[[ -z "$var1" ]]  # $? == 0 # true
+
+#T# the following checks and comparisons are made over files rather than variables
+
+#T# compare two files to see if both are hard links to the same file
+#T# assuming file1 and file2 exist in the working directory
+test "file1" "-ef" "file2" # $? == 1 # false
+[[ "file1" -ef "file2" ]]  # $? == 1 # false
+
+#T# compare if a first file has newer modifications than a second file
+#T# assuming file1 and file2 exist in the working directory, file1 is newer
+test "file1" "-nt" "file2" # $? == 0 # true
+[[ "file1" -nt "file2" ]]  # $? == 0 # true
+
+#T# compare if a first file has older modifications than a second file
+#T# assuming file1 and file2 exist in the working directory, file1 is newer
+test "file1" "-ot" "file2" # $? == 1 # false
+[[ "file1" -ot "file2" ]]  # $? == 1 # false
+
+#T# check if a file is a block file
+test "-b" "/dev/sda1" # $? == 0 # true
+[[ -b "/dev/sda1" ]]  # $? == 0 # true
+
+#T# check if a file is a character file
+test "-c" "/dev/null" # $? == 0 # true
+[[ -c "/dev/null" ]]  # $? == 0 # true
+
+#T# check if a file is a directory
+test "-d" "." # $? == 0 # true
+[[ -d "." ]]  # $? == 0 # true
+
+#T# check if a file exists
+#T# assuming file4 doesn't exist in the working directory
+test "-e" "file4" # $? == 1 # false
+[[ -e "file4" ]]  # $? == 1 # false
+
+#T# check if a file is a regular file
+#T# assuming file1 exists in the working directory
+test "-f" "file1" # $? == 0 # true
+[[ -f "file1" ]]  # $? == 0 # true
+
+#T# check if a file has the SGID flag in its group execution permission
+test "-g" "/usr/bin/bsd-write" # $? == 0 # true
+[[ -g "/usr/bin/bsd-write" ]]  # $? == 0 # true
+
+#T# check if a file's group is the current user
+#T# assuming file1 exists in the working directory
+test "-G" "file1" # $? == 0 # true
+[[ -G "file1" ]]  # $? == 0 # true
+
+#T# check if a file is a symbolic link
+test "-h" "/usr/bin/zsh" # $? == 0 # true
+test "-L" "/usr/bin/zsh" # $? == 0 # true
+[[ -h "/usr/bin/zsh" ]]  # $? == 0 # true
+[[ -L "/usr/bin/zsh" ]]  # $? == 0 # true
+
+#T# check if a file has the sticky bit set
+test "-k" "/tmp" # $? == 0 # true
+[[ -k "/tmp" ]]  # $? == 0 # true
+
+#T# check if a file's owner is the current user
+test "-O" "file1" # $? == 0 # true
+[[ -O "file1" ]]  # $? == 0 # true
+
+#T# check if a file is a 
+# |-----
+
+# |-------------------------------------------------------------
 
 #T# Special parameters
 
@@ -629,3 +857,13 @@ echo $- # himBHs
 
 #T# there are a few more special parameters that deal with positional parameters which are treated in the section about command line arguments, see S1_08_CLI_args.sh
 # |-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+#T# variable indirection, indirect expansion

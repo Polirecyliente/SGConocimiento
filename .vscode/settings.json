@@ -110,5 +110,6 @@
         "FIXME": {
             "icon": "flame"
         }
-    }
+    },
+    "bashIde.explainshellEndpoint": "http://localhost:5000",
 }

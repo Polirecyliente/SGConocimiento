@@ -13,6 +13,7 @@
 #T# Encodings
 #T# Internet
 #T# Latex
+#T# Files
 
 #T# Beginning of content
 
@@ -152,4 +153,11 @@ kpsepath tex
 #T# use the tlmgr command (for texlive manager) to install latex packages
 # tlmgr install package1
 tlmgr install undertilde
+# |-------------------------------------------------------------
+
+#T# Files
+
+# |-------------------------------------------------------------
+#T# dereference a symbolic link
+readlink -f link_file1 # /path/to/original_file1
 # |-------------------------------------------------------------
