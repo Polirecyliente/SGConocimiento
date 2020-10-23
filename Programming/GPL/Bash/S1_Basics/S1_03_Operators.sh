@@ -11,6 +11,7 @@
 #T# --- Arithmetic expansion
 #T# --- Word splitting
 #T# --- Pathname expansion
+#T# --- Indirect expansion
 #T# Arithmetic operators
 #T# Relational operators
 #T# Assignment operators
@@ -378,6 +379,33 @@ echo *(F[[:digit:]]) # F1F2 F2 # if such files exist
 echo +(FA|FB|FC)     # FAFBFC  # if such files exist
 echo @(F[A-Z])       # FB FC   # if such files exist
 echo !(F[A-Z])       # F1F2 F2 # if such files exist
+# |-----
+
+#T# --- Indirect expansion
+
+# |-----
+#T# indirect expansion allows using the value of a variable, as a variable, and expand it, this is done with an exclamation mark ! at the start of a variable being expanded
+
+# SYNTAX ${!var1}
+#T# assuming the value of var1 is 'var2' then the value of a variable called var2 is expanded
+
+var1=var2
+var2="indirect_value1"
+echo ${var1}  # var2
+echo ${!var1} # indirect_value1
+
+# |--------------------------------------------------\
+#T# there are a couple of exceptions about the use of the exclamation mark at the start of the name of a variable
+
+#T# get the names of all the variables that start with the same characters
+var1=12; var2=5; var3=77
+echo ${!va*} # var1 var2 var3
+
+#T# get the indices of an array (see S1_04_Composite_types.sh)
+arr1=( elem1 elem2 elem3 )
+echo ${!arr1[@]} # 0 1 2
+# |--------------------------------------------------/
+
 # |-----
 
 # |-------------------------------------------------------------
@@ -796,24 +824,10 @@ test "-c" "/dev/null" # $? == 0 # true
 test "-d" "." # $? == 0 # true
 [[ -d "." ]]  # $? == 0 # true
 
-#T# check if a file exists
-#T# assuming file4 doesn't exist in the working directory
-test "-e" "file4" # $? == 1 # false
-[[ -e "file4" ]]  # $? == 1 # false
-
 #T# check if a file is a regular file
 #T# assuming file1 exists in the working directory
 test "-f" "file1" # $? == 0 # true
 [[ -f "file1" ]]  # $? == 0 # true
-
-#T# check if a file has the SGID flag in its group execution permission
-test "-g" "/usr/bin/bsd-write" # $? == 0 # true
-[[ -g "/usr/bin/bsd-write" ]]  # $? == 0 # true
-
-#T# check if a file's group is the current user
-#T# assuming file1 exists in the working directory
-test "-G" "file1" # $? == 0 # true
-[[ -G "file1" ]]  # $? == 0 # true
 
 #T# check if a file is a symbolic link
 test "-h" "/usr/bin/zsh" # $? == 0 # true
@@ -821,15 +835,65 @@ test "-L" "/usr/bin/zsh" # $? == 0 # true
 [[ -h "/usr/bin/zsh" ]]  # $? == 0 # true
 [[ -L "/usr/bin/zsh" ]]  # $? == 0 # true
 
+#T# check if a file is a named pipe
+test "-p" "/run/systemd/initctl/fifo" # $? == 0 # true
+[[ -p "/run/systemd/initctl/fifo" ]]  # $? == 0 # true
+
+#T# check if a file is a socket
+test "-S" "/run/udev/control" # $? == 0 # true
+[[ -S "/run/udev/control" ]]  # $? == 0 # true
+
+#T# check if a file exists
+#T# assuming file4 doesn't exist in the working directory
+test "-e" "file4" # $? == 1 # false
+[[ -e "file4" ]]  # $? == 1 # false
+
+#T# check if a file's group is the current user
+#T# assuming file1 exists in the working directory
+test "-G" "file1" # $? == 0 # true
+[[ -G "file1" ]]  # $? == 0 # true
+
+#T# check if a file has the SUID flag in its user execution permission
+#T# assuming file1 exists in the working directory
+test "-u" "file1" # $? == 1 # false
+[[ -u "file1" ]]  # $? == 1 # false
+
+#T# check if a file has the SGID flag in its group execution permission
+test "-g" "/usr/bin/bsd-write" # $? == 0 # true
+[[ -g "/usr/bin/bsd-write" ]]  # $? == 0 # true
+
 #T# check if a file has the sticky bit set
 test "-k" "/tmp" # $? == 0 # true
 [[ -k "/tmp" ]]  # $? == 0 # true
 
 #T# check if a file's owner is the current user
+#T# assuming file1 exists in the working directory
 test "-O" "file1" # $? == 0 # true
 [[ -O "file1" ]]  # $? == 0 # true
 
-#T# check if a file is a 
+#T# check if a file has read permission for the current user
+#T# assuming file1 exists in the working directory
+test "-r" "file1" # $? == 0 # true
+[[ -r "file1" ]]  # $? == 0 # true
+
+#T# check if a file has write permission for the current user
+#T# assuming file1 exists in the working directory
+test "-w" "file1" # $? == 0 # true
+[[ -w "file1" ]]  # $? == 0 # true
+
+#T# check if a file has execute permission for the current user
+#T# assuming file1 exists in the working directory and is executable
+test "-x" "file1" # $? == 0 # true
+[[ -x "file1" ]]  # $? == 0 # true
+
+#T# check if a file has a size greater than zero
+#T# assuming file1 exists in the working directory and is empty
+test "-s" "file1" # $? == 1 # false
+[[ -s "file1" ]]  # $? == 1 # false
+
+#T# check if a file descriptor is opened on a terminal, the common file descriptors are 0 for stdin, 1 for stdout, 2 for stderr
+test "-t" "0" # $? == 0 # true
+[[ -t "0" ]]  # $? == 0 # true
 # |-----
 
 # |-------------------------------------------------------------
@@ -857,13 +921,3 @@ echo $- # himBHs
 
 #T# there are a few more special parameters that deal with positional parameters which are treated in the section about command line arguments, see S1_08_CLI_args.sh
 # |-------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-#T# variable indirection, indirect expansion
