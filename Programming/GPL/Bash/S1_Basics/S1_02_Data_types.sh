@@ -3,19 +3,19 @@
 
 #T# Table of contents
 
-#T# Types in general
-#T# Numeric types
-#T# String types
-#T# --- Heredoc and here string
-#T# Composite types
-#T# --- Arrays
-#T# --- Associative arrays
-#T# Null type
-#T# The declare command
+#C# Types in general
+#C# Numeric types
+#C# String types
+#C# --- Heredoc and here string
+#C# Composite types
+#C# --- Arrays
+#C# --- Associative arrays
+#C# Null type
+#C# The declare command
 
 #T# Beginning of content
 
-#T# Types in general
+#C# Types in general
 
 # |-------------------------------------------------------------
 #T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see S1_05_Control_flow.sh for the treatment of boolean variables in conditionals
@@ -23,7 +23,7 @@
 #T# the only caveat, is the declare command, which can be used to set attributes on variables, and these attributes act as the type of the variable
 # |-------------------------------------------------------------
 
-#T# Numeric types
+#C# Numeric types
 
 # |-------------------------------------------------------------
 #T# numerical types are
@@ -41,7 +41,7 @@ int1=$((2#10101)) # 21
 flo1=$(bc <<< "12.415") # 12.415 # here string is explained later in this file
 # |-------------------------------------------------------------
 
-#T# String types
+#C# String types
 
 # |-------------------------------------------------------------
 #T# strings are created inside quotation symbols, single quotes ' or double quotes "
@@ -80,7 +80,7 @@ str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cU
 # or ʠ𐍆l$`  feed lines
 # |--------------------------------------------------/
 
-#T# --- Heredoc and here string
+#C# --- Heredoc and here string
 
 # |-----
 
@@ -146,11 +146,11 @@ bc <<< "3 + $((1 + 1)) + $(echo 1) + $var1" # 8 # 3 + 2 + 1 + 2
 
 # |-------------------------------------------------------------
 
-#T# Composite types
+#C# Composite types
 
 # |-------------------------------------------------------------
 
-#T# --- Arrays
+#C# --- Arrays
 
 # |-----
 #T# arrays in bash can be said to be composite types since they can store any different types of data together
@@ -164,7 +164,7 @@ int1=${arr1[1]} # 2
 arr1[4]='new elem' # index 3 doesn't need to be assigned, it's null by default
 # |-----
 
-#T# --- Associative arrays
+#C# --- Associative arrays
 
 # |-----
 #T# associative arrays are created using the -A flag of the declare command (see later in this file), the key value pairs go inside parentheses separated by space, each key goes inside brackets and is followed by an equal sign and its associated value
@@ -178,14 +178,14 @@ associative1[key4]="value4" # the new key value pair is appended at the start of
 
 # |-------------------------------------------------------------
 
-#T# Null type
+#C# Null type
 
 # |-------------------------------------------------------------
 #T# the null value is considered to be the empty string
 null_var1=""
 # |-------------------------------------------------------------
 
-#T# The declare command
+#C# The declare command
 
 # |-------------------------------------------------------------
 #T# the declare command is used as a way to set the type of variables by setting attributes to them

@@ -3,16 +3,16 @@
 
 #T# Table of contents
 
-#T# Interpreter customization
-#T# --- Interpreter options
+#C# Interpreter customization
+#C# --- Interpreter options
 
 #T# Beginning of content
 
-#T# Interpreter customization
+#C# Interpreter customization
 
 # |-------------------------------------------------------------
 
-#T# --- Interpreter options
+#C# --- Interpreter options
 
 # |-----
 #T# the interpreter can have several options set at the start

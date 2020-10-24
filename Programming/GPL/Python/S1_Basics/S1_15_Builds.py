@@ -3,12 +3,12 @@
 
 #T# Table of contents
 
-#T# Compiling to bytecode
-#T# Building a project to binary
+#C# Compiling to bytecode
+#C# Building a project to binary
 
 #T# Beginning of content
 
-#T# Compiling to bytecode
+#C# Compiling to bytecode
 
 # |-------------------------------------------------------------
 #T# Python code is compiled from .py source code files, to .pyc bytecode files
@@ -24,7 +24,7 @@
 #T# python3 is the Python executable, this syntax executes script1.cpython-38.pyc which gives the same output as executing script1.py
 # |-------------------------------------------------------------
 
-#T# Building a project to binary
+#C# Building a project to binary
 
 # |-------------------------------------------------------------
 #T# a Python project is formed by several related Python files whose execution starts at a main file, a project can be built into a binary executable so that the whole project resides in a single file, which doesn't depend on the Python interpreter to be executed

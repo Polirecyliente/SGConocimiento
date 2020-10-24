@@ -3,17 +3,18 @@
 
 #T# Table of contents
 
-#T# Class definition
-#T# Instantiation
-#T# Parts of a class
-#T# --- Attributes
-#T# --- Methods
-#T# --- Class variables
-#T# --- Hidden variables
-#T# --- General parts
-#T# Inheritance
-#T# --- Multiple inheritance
-#T# --- Method Resolution Order (MRO)
+#C# Class definition
+#C# --- Hidden variables
+#C# Instantiation
+#C# Parts of a class
+#C# --- Attributes
+#C# --- Methods
+#C# --- Class variables
+#C# --- Hidden variables
+#C# --- General parts
+#C# Inheritance
+#C# --- Multiple inheritance
+#C# --- Method Resolution Order (MRO)
 
 #T# Beginning of content
 
@@ -21,7 +22,7 @@
 #T# OOP stands for Object Oriented Programming
 # |-------------------------------------------------------------
 
-#T# Class definition
+#C# Class definition
 
 # |-------------------------------------------------------------
 #T# the class keyword is used to define the classes
@@ -62,7 +63,7 @@ class Class_name1:
     def set_attr1(self, new_attr1):
         self.attr1 = new_attr1
 
-#T# --- Hidden variables
+#C# --- Hidden variables
 
 # |-----
 #T# creating hidden variables
@@ -78,7 +79,7 @@ class Class_name1:
 
 # |-------------------------------------------------------------
 
-#T# Instantiation
+#C# Instantiation
 
 # |-------------------------------------------------------------
 #T# make an instance of a class by calling the constructor
@@ -95,32 +96,32 @@ func1()
 # Class_name1.class_attr1 == 3
 # |-------------------------------------------------------------
 
-#T# Parts of a class
+#C# Parts of a class
 
 # |-------------------------------------------------------------
 
-#T# --- Attributes
+#C# --- Attributes
 
 # |-----
 #T# access attributes directly through the object with dot notation
 str1 = obj1.attr2 # str1
 # |-----
 
-#T# --- Methods
+#C# --- Methods
 
 # |-----
 #T# call methods from the class through the object with dot notation
 int1 = obj1.get_attr1() # 5
 # |-----
 
-#T# --- Class variables
+#C# --- Class variables
 
 # |-----
 #T# access a class variable through the class with dot notation
 int1 = 2 * Class_name1.class_attr1 # 6
 # |-----
 
-#T# --- Hidden variables
+#C# --- Hidden variables
 
 # |-----
 #T# access hidden variables from outside the class
@@ -131,7 +132,7 @@ int1 = 2 * Class_name1.class_attr1 # 6
 int1 = obj1._Class_name1__hidden1 # 9
 # |-----
 
-#T# --- General parts
+#C# --- General parts
 
 # |-----
 #T# import the inspect module to get the parts of a class
@@ -161,7 +162,7 @@ tuple1 = Class_name1.__bases__ # (<class 'object'>,)
 
 # |-------------------------------------------------------------
 
-#T# Inheritance
+#C# Inheritance
 
 # |-------------------------------------------------------------
 #T# classes can inherit from preexisting classes
@@ -220,7 +221,7 @@ str1 = str(obj1)        # <__main__.Class_name1 object at 0x7feebbae2a30>
 str1 = repr(child_obj1) # Representation of the object
 str1 = str(child_obj1)  # String of the object
 
-#T# --- Multiple inheritance
+#C# --- Multiple inheritance
 
 # |-----
 #T# for multiple inheritance, at least two parent classes are required
@@ -242,7 +243,7 @@ multi_parent_obj1 = Multiple_parents_class1(5, "multi_parent", "s")
 int1 = multi_parent_obj1.attr1 # 15
 # |-----
 
-#T# --- Method Resolution Order (MRO)
+#C# --- Method Resolution Order (MRO)
 
 # |-----
 #T# the MRO is used to decide which of the parents methods to use when several parents have the same method, the MRO allows to select which of the methods to inherit

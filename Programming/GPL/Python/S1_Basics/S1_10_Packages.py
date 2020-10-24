@@ -3,14 +3,14 @@
 
 #T# Table of contents
 
-#T# Importing modules
-#T# Using modules
-#T# Importing packages
-#T# Info about modules
+#C# Importing modules
+#C# Using modules
+#C# Importing packages
+#C# Info about modules
 
 #T# Beginning of content
 
-#T# Importing modules
+#C# Importing modules
 
 # |-------------------------------------------------------------
 #T# the import keyword imports a package or module to use its code in this file
@@ -47,7 +47,7 @@ import importlib
 importlib.reload(S1_10_P_Module_example)
 # |-------------------------------------------------------------
 
-#T# Using modules
+#C# Using modules
 
 # |-------------------------------------------------------------
 #T# call module's function
@@ -56,7 +56,7 @@ int1 = S1_10_P_Module_example.func1() # 56 # func1() returns 56
 int1 = f1(7) # 53 # f1(arg1) returns 53
 # |-------------------------------------------------------------
 
-#T# Importing packages
+#C# Importing packages
 
 # |-------------------------------------------------------------
 #T# import a package, which is a directory with an __init__.py file, when the package is imported the __init__.py file is executed
@@ -64,7 +64,7 @@ import package
 int1 = package.anon_func1(8, -5) # 50
 # |-------------------------------------------------------------
 
-#T# Info about modules
+#C# Info about modules
 
 # |-------------------------------------------------------------
 import math

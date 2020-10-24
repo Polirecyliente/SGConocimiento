@@ -80,14 +80,23 @@
     // python path for local python files
     "python.autoComplete.extraPaths": ["/home/jul/SGConocimiento/Programming/GPL/Python/S1_Basics"],
     
-    // highlight for the SYNTAX tag
     "highlight.regexes": {
+    // highlight for the SYNTAX tag
         "(//|#|<!-- #|%|/\\* #)( SYNTAX)(.*)": [
           { }, 
           { },
           { "color": "#C030FF", "backgroundColor": "#03410388"}
-        ]
+        ],
+    // highlight for the #T# tag
+        "(//T// .*|#T# .*|<!-- #T# .*)": [
+            { "color": "#076DDF" }
+        ],
+    // highlight for #C#
+        "(//C// .*|#C# .*|<!-- #C# .*)": [
+            { "color": "#CCAA22" }
+        ], 
     },
+
     "todo-tree.highlights.defaultHighlight": {
     
         "foreground": "#569CD6",
@@ -109,6 +118,18 @@
         },
         "FIXME": {
             "icon": "flame"
+        },
+        "#T#": {
+            "type": "tag",
+            "foreground": "#22CCAA",
+            "background": "#AA22DD",
+            "opacity": "35",
+        },
+        "#C#": {
+            "type": "tag",
+            "foreground": "#EE2489",
+            "background": "#115035",
+            "opacity": "35"
         }
     },
     "bashIde.explainshellEndpoint": "http://localhost:5000",

@@ -3,32 +3,32 @@
 
 #T# Table of contents
 
-#T# Decision making
-#T# --- if, elif, else keywords
-#T# Loops
-#T# --- for loop
-#T# --- while loop
-#T# List comprehension
+#C# Decision making
+#C# --- Conditional statements
+#C# Loops
+#C# --- for loop
+#C# --- while loop
+#C# List comprehension
 
 #T# Beginning of content
 
-#T# Decision making
+#C# Decision making
 
 # |-------------------------------------------------------------
 #T# decision making is made with the if, elif, and else keywords
 
-#T# in an if conditional statement a condition is checked and if it returns True then the if block is executed, and in an elif conditional statement a condition is also checked
- 
+#T# in an if conditional statement a condition is checked and if it returns True then the if block is executed, this also happens in an elif conditional statement
+
 #T# in an else conditional statement no condition is checked, but the else requires an if above it, the elif also requires an if above
 
 #T# a colon goes at the end of the line after an if, elif, or else keyword
 
-#T# --- if, elif, else keywords
+#C# --- Conditional statements
 
 # |-----
-#T# the if, elif, else keywords, are used following this syntax
+#T# conditional statements are carried out with the following syntax
 
-# SYNTAX if, elif, else
+# SYNTAX if, elif, else conditional statements
 # if condition1:
 #     statements1
 # elif condition2:
@@ -50,7 +50,7 @@ else:
 
 # |-------------------------------------------------------------
 
-#T# Loops
+#C# Loops
 
 # |-------------------------------------------------------------
 #T# loops are made with the for, and while keywords
@@ -61,12 +61,12 @@ else:
 
 #T# a colon goes at the end of the line after a for, or while keyword
 
-#T# --- for loop
+#C# --- for loop
 
 # |-----
-#T# the for, continue, break, else keywords are used to create for loops
+#T# the for loop is made with the following syntax
 
-# SYNTAX for, continue, break, else
+# SYNTAX for loop
 # for elem_i1 in arr1:
 #     statements1
 #     [continue|break]
@@ -81,7 +81,6 @@ else:
 int1 = 0
 int2 = 0
 list1 = ['elem1', 'elem2']
-
 for char_i1 in 's1tr':
     if (char_i1 == '1'): continue
     int1 += 1
@@ -107,18 +106,18 @@ for i1 in range1:
 
 # |-----
 
-#T# --- while loop
+#C# --- while loop
 
 # |-----
-#T# the while loop uses a few of the same keywords as the for loop, such as continue, break, and else
+#T# the while loop is made with the following syntax
 
-# SYNTAX while, continue, break, else
+# SYNTAX while loop
 # while condition1:
 #     statements1
 #     [continue|break]
 # else:
 #     statements2
-#T# the statements1 are executed while condition1 is True, the statements2 are executed at the end of the loop, if there is no break
+#T# the statements1 are executed while condition1 is True, the statements2 are executed at the end of the loop, if there is no break, (for continue, break, int1, see the for loop subsection)
 
 int1 = 0
 while (int1 < 80):
@@ -130,7 +129,7 @@ else:
 
 # |-------------------------------------------------------------
 
-#T# List comprehension
+#C# List comprehension
 
 # |-------------------------------------------------------------
 #T# create a list with a for using a list comprehension statement

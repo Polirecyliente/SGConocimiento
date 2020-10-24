@@ -3,15 +3,15 @@
 
 #T# Table of contents
 
-#T# Blocks of code
-#T# Variables, constants, literals
-#T# --- Type hints
-#T# Escape sequences
-#T# Expressions
-#T# Function calls
-#T# Statements
-#T# Multiline statements
-#T# Multistatement lines
+#C# Blocks of code
+#C# Variables, constants, literals
+#C# --- Type hints
+#C# Escape sequences
+#C# Expressions
+#C# Function calls
+#C# Statements
+#C# Multiline statements
+#C# Multistatement lines
 
 #T# Beginning of content
 
@@ -23,7 +23,7 @@
 # SYNTAX print(var1, var2, var3)
 # |-------------------------------------------------------------
 
-#T# Blocks of code
+#C# Blocks of code
 
 # |-------------------------------------------------------------
 #T# indentation acts as the delimiter (like braces)
@@ -31,14 +31,14 @@ if True:
     int1 = 70
 # |-------------------------------------------------------------
 
-#T# Variables, constants, literals
+#C# Variables, constants, literals
 
 # |-------------------------------------------------------------
 #T# variables are dynamically typed. Literals are characters, numbers
 str1 = 'str'
 int1 = 5
 
-#T# --- Type hints
+#C# --- Type hints
 
 # |-----
 #T# type hints are used when there is no autocompletion for an object that should have, this is because the type of a dynamic type can't be known at compile time
@@ -57,7 +57,7 @@ str1 = """sen3word1 sen3"'"'word2
                sen3word3 sen3word4"""
 # |-------------------------------------------------------------
 
-#T# Escape sequences
+#C# Escape sequences
 
 # |-------------------------------------------------------------
 #T# an special kind of combination of literals are escape sequences, they mean something particular, e.g. the \n means newline
@@ -71,14 +71,14 @@ str1 = "Line1\nLine2"
 # Line2
 # |-------------------------------------------------------------
 
-#T# Expressions
+#C# Expressions
 
 # |-------------------------------------------------------------
 #T# expressions are evaluated and return a value
 int1 = 5 + 3 - 7
 # |-------------------------------------------------------------
 
-#T# Function calls
+#C# Function calls
 
 # |-------------------------------------------------------------
 #T# the function name can be separated by whitespace (but not a newline) from the arguments in parentheses
@@ -90,7 +90,7 @@ print("Hello, Python!")
 input                   ("\nGive an input to continue the script\n")
 # |-------------------------------------------------------------
 
-#T# Statements
+#C# Statements
 
 # |-------------------------------------------------------------
 #T# a statement is a complete instruction
@@ -108,11 +108,11 @@ int1 = int1.bit_length() # 3
 #T# the bit_length function is accessed using dot notation on an integer
 # |--------------------------------------------------/
 
-#T# the pass keyword is used to create a statement that does nothing, as a filler
+#T# the pass keyword is used to create a no-op statement that does nothing, as a filler
 pass
 # |-------------------------------------------------------------
 
-#T# Multiline statements
+#C# Multiline statements
 
 # |-------------------------------------------------------------
 #T# an expression statement is continued with a backslash at the end, a list can be continued without a comma at the end of the line
@@ -122,7 +122,7 @@ list1 = ['Mon', 'Wed'
         'Fri', 'Sun']
 # |-------------------------------------------------------------
 
-#T# Multistatement lines
+#C# Multistatement lines
 
 # |-------------------------------------------------------------
 #T# multiple statements in the same line are separated with a semicolon

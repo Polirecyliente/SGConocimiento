@@ -3,15 +3,15 @@
 
 #T# Table of contents
 
-#T# Blocks of code
-#T# Variables, constants, literals
-#T# Escape sequences
-#T# Expressions
-#T# Function calls
-#T# --- Command execution
-#T# Statements
-#T# Multiline statements
-#T# Multistatement lines
+#C# Blocks of code
+#C# Variables, constants, literals
+#C# Escape sequences
+#C# Expressions
+#C# Function calls
+#C# --- Command execution
+#C# Statements
+#C# Multiline statements
+#C# Multistatement lines
 
 #T# Beginning of content
 
@@ -23,7 +23,7 @@
 # SYNTAX echo "$var1 $var2 $var3"
 # |-------------------------------------------------------------
 
-#T# Blocks of code
+#C# Blocks of code
 
 # |-------------------------------------------------------------
 #T# blocks of code are delimited by either braces of parentheses
@@ -44,7 +44,7 @@
 echo 'First line'; echo 'Second line'
 # |-------------------------------------------------------------
 
-#T# Variables, constants, literals
+#C# Variables, constants, literals
 
 # |-------------------------------------------------------------
 #T# variables are dynamically typed. Literals are characters, numbers
@@ -67,7 +67,7 @@ str2="string ${int1} interpolation" # string 5 interpolation
 
 # |-------------------------------------------------------------
 
-#T# Escape sequences
+#C# Escape sequences
 
 # |-------------------------------------------------------------
 #T# escaped characters start with backslash
@@ -80,7 +80,7 @@ echo -e "Line1\nLine2"
 # Line2
 # |-------------------------------------------------------------
 
-#T# Expressions
+#C# Expressions
 
 # |-------------------------------------------------------------
 #T# expressions are evaluated and return a value
@@ -93,12 +93,12 @@ echo -e "Line1\nLine2"
 int1=$((5 + 3 - 1)) # 7
 # |-------------------------------------------------------------
 
-#T# Function calls
+#C# Function calls
 
 # |-------------------------------------------------------------
 #T# functions and commands use the same syntax, there are no parentheses, arguments are separated by space, arguments without quotation are taken to be strings
 
-#T# --- Command execution
+#C# --- Command execution
 
 # |-----
 #T# basic output to stdout with the echo command
@@ -111,16 +111,19 @@ read var1
 
 # |-------------------------------------------------------------
 
-#T# Statements
+#C# Statements
 
 # |-------------------------------------------------------------
 #T# a statement is a complete instruction
 
 int1=5
 #T# int1=5 is a statement, the variable int1 is made to point to the value 5
+
+#T# the colon : operator is used to create a no-op statement that does nothing, as a filler
+:
 # |-------------------------------------------------------------
 
-#T# Multiline statements
+#C# Multiline statements
 
 # |-------------------------------------------------------------
 #T# a multiline statement is created with a backslash at the end of each line
@@ -128,7 +131,7 @@ echo "str1" \
 "str2" # str1 str2
 # |-------------------------------------------------------------
 
-#T# Multistatement lines
+#C# Multistatement lines
 
 # |-------------------------------------------------------------
 #T# multiple statements in the same line are separated with a semicolon

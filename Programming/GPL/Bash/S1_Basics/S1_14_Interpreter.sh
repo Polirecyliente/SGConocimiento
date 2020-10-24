@@ -3,17 +3,17 @@
 
 #T# Table of contents
 
-#T# Interpreter customization
-#T# --- Interpreter options
-#T# --- Shell options
+#C# Interpreter customization
+#C# --- Interpreter options
+#C# --- Shell options
 
 #T# Beginning of content
 
-#T# Interpreter customization
+#C# Interpreter customization
 
 # |-------------------------------------------------------------
 
-#T# --- Interpreter options
+#C# --- Interpreter options
 
 # |-----
 #T# the interpreter can have several options set at the start and changed during execution
@@ -49,7 +49,7 @@ set -x
 set +x
 # |-----
 
-#T# --- Shell options
+#C# --- Shell options
 
 # |-----
 #T# shell options are modified with the shopt command

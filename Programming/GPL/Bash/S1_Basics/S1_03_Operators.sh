@@ -3,34 +3,34 @@
 
 #T# Table of contents
 
-#T# Expansions
-#T# --- Brace expansion
-#T# --- Tilde expansion
-#T# --- Parameter (variable) expansion
-#T# --- Command substitution
-#T# --- Arithmetic expansion
-#T# --- Word splitting
-#T# --- Pathname expansion
-#T# --- Indirect expansion
-#T# Arithmetic operators
-#T# Relational operators
-#T# Assignment operators
-#T# Bitwise operators
-#T# Logical operators
-#T# Shell operators
-#T# --- History expansion
-#T# Special parameters
+#C# Expansions
+#C# --- Brace expansion
+#C# --- Tilde expansion
+#C# --- Parameter (variable) expansion
+#C# --- Command substitution
+#C# --- Arithmetic expansion
+#C# --- Word splitting
+#C# --- Pathname expansion
+#C# --- Indirect expansion
+#C# Arithmetic operators
+#C# Relational operators
+#C# Assignment operators
+#C# Bitwise operators
+#C# Logical operators
+#C# Shell operators
+#C# --- History expansion
+#C# Special parameters
 
 #T# Beginning of content
 
-#T# Expansions
+#C# Expansions
 
 # |-------------------------------------------------------------
 #T# expansions are used to replace tokens into characters depending on the value of the tokens, expansion operators serve to recognize the tokens to replace (called expand here)
 
 #T# there are several kinds of expansion, and so they are done in a given order, the following sections are written in this order, the tokens expand in this order
 
-#T# --- Brace expansion
+#C# --- Brace expansion
 
 # |-----
 #T# brace expansion is used to create strings in a combinatorial manner, with N sets of strings, each enclosed in braces, and each of size n_i, the total amount of created strings is the product of all the n_i from all the N sets
@@ -43,7 +43,7 @@
 echo "s1"{"s2","s3"}"sm"{"s4","s5","s6"} # s1s2sms4 s1s2sms5 s1s2sms6 s1s3sms4 s1s3sms5 s1s3sms6
 # |-----
 
-#T# --- Tilde expansion
+#C# --- Tilde expansion
 
 # |-----
 #T# tilde expansion expands a tilde by replacing it for a user's home directory
@@ -59,7 +59,7 @@ echo ~/dir1 # /home/user1/dir1 # if such user and directory exist
 echo ~other_user1/dir1 # /home/other_user1/dir1 # if such user and directory exist
 # |-----
 
-#T# --- Parameter (variable) expansion
+#C# --- Parameter (variable) expansion
 
 # |-----
 #T# variables (called parameters here) can be expanded to get their value, or get their value with modification
@@ -261,7 +261,7 @@ echo ${var1/%pie/bye} # apple bye
 
 # |-----
 
-#T# --- Command substitution
+#C# --- Command substitution
 
 # |-----
 #T# command substitution allows using the output of commands as arguments for other commands
@@ -274,7 +274,7 @@ echo "Bash exec file is in "$(which bash) # Bash exec file is in /bin/bash
 echo "Bash exec file is in "`which bash`  # Bash exec file is in /bin/bash
 # |-----
 
-#T# --- Arithmetic expansion
+#C# --- Arithmetic expansion
 
 # |-----
 #T# arithmetic expansion is done to do arithmetic calculations
@@ -296,7 +296,7 @@ let "var1 = 5 + 2" # var1 == 7
 
 # |-----
 
-#T# --- Word splitting
+#C# --- Word splitting
 
 # |-----
 #T# word splitting is done to split words where an IFS (Internal Field Separator) character is found, this is done only outside double quotes ", so strings inside double quotes are not word splitted
@@ -312,7 +312,7 @@ let "var1 = 5 + 2" # var1 == 7
 cat file1 file2 "file name 3" # this outputs the contents of file1, file2, and "file name 3", if such files exist
 # |-----
 
-#T# --- Pathname expansion
+#C# --- Pathname expansion
 
 # |-----
 #T# pathname expansion is done with globbing (also called filename expansion), the following syntaxes of this section can be used anywhere where globbing is accepted in Bash
@@ -381,7 +381,7 @@ echo @(F[A-Z])       # FB FC   # if such files exist
 echo !(F[A-Z])       # F1F2 F2 # if such files exist
 # |-----
 
-#T# --- Indirect expansion
+#C# --- Indirect expansion
 
 # |-----
 #T# indirect expansion allows using the value of a variable, as a variable, and expand it, this is done with an exclamation mark ! at the start of a variable being expanded
@@ -410,7 +410,7 @@ echo ${!arr1[@]} # 0 1 2
 
 # |-------------------------------------------------------------
 
-#T# Arithmetic operators
+#C# Arithmetic operators
 
 # |-------------------------------------------------------------
 #T# these operators can be used in an arithmetic expansion, and so they can be used in expressions with the let command, when used inside an arithmetic expansion, the dollar sign $ can be omitted to avoid expanding the result if it's not going to be used as argument or output
@@ -471,7 +471,7 @@ let "var3 = var1**var2" # var3 == 125
 let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
 # |-------------------------------------------------------------
 
-#T# Relational operators
+#C# Relational operators
 
 # |-------------------------------------------------------------
 #T# boolean results are interpreted as follows, when a command is successful its exit status is 0, when a command fails its exit status is 1 or any other number, because of this a value of 0 means true and a value of 1 means false, to see the exit status of a boolean operation the $? variable (parameter) is used, e.g. 'echo $?' shows said exit status
@@ -544,7 +544,7 @@ test "$int1" "-le" "$int2" # $? == 1 # false
 [[ "$int1" -le "$int2" ]]  # $? == 1 # false
 # |-------------------------------------------------------------
 
-#T# Assignment operators
+#C# Assignment operators
 
 # |-------------------------------------------------------------
 #T# assignments are done with arithmetic expansion and with the let command
@@ -579,7 +579,7 @@ let "int1 /= 5" # 5
 let "int1 %= 3" # 2
 # |-------------------------------------------------------------
 
-#T# Bitwise operators
+#C# Bitwise operators
 # |-------------------------------------------------------------
 #T# several bitwise operators can be used as assignment operators by appending an equal sign = at the end of the bitwise operator
 
@@ -633,7 +633,7 @@ let "int1 = 0xE >> 1" # 0x7
 let "int1 >>= 1" # 0x7
 # |-------------------------------------------------------------
 
-#T# Logical operators
+#C# Logical operators
 
 # |-------------------------------------------------------------
 #T# logical and operator
@@ -652,7 +652,7 @@ test "!" "$var1" # $? == 0 # true
 [[ ! "$var1" ]]  # $? == 0 # true
 # |-------------------------------------------------------------
 
-#T# Shell operators
+#C# Shell operators
 
 # |-------------------------------------------------------------
 
@@ -667,7 +667,7 @@ test "!" "$var1" # $? == 0 # true
 source S1_08_CLI_args.sh # executes this script in the same shell
 # |--------------------------------------------------/
 
-#T# --- History expansion
+#C# --- History expansion
 
 # |-----
 
@@ -898,7 +898,7 @@ test "-t" "0" # $? == 0 # true
 
 # |-------------------------------------------------------------
 
-#T# Special parameters
+#C# Special parameters
 
 # |-------------------------------------------------------------
 #T# the special parameters are variables whose name can't be manually assigned values, they are used to store special values

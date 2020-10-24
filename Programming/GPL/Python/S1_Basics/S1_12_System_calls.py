@@ -3,14 +3,14 @@
 
 #T# Table of contents
 
-#T# Basic system calls
-#T# File input output
-#T# File manipulation
-#T# Signal handling
+#C# Basic system calls
+#C# File input output
+#C# File manipulation
+#C# Signal handling
 
 #T# Beginning of content
 
-#T# Basic system calls
+#C# Basic system calls
 
 # |-------------------------------------------------------------
 import time
@@ -23,7 +23,7 @@ time.sleep(0.3) # None
 quit()
 # |-------------------------------------------------------------
 
-#T# File input output
+#C# File input output
 
 # |-------------------------------------------------------------
 str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
@@ -95,7 +95,7 @@ with open(str1, "r+") as textIOWrapper1:
 textIOWrapper1.close()
 # |-------------------------------------------------------------
 
-#T# File manipulation
+#C# File manipulation
 
 # |-------------------------------------------------------------
 #T# the os module allows file manipulation in the file system hierarchy
@@ -123,7 +123,7 @@ str1 = os.getcwd() # /tmp/temporary_dir1
 os.rmdir(str1)
 # |-------------------------------------------------------------
 
-#T# Signal handling
+#C# Signal handling
 
 # |-------------------------------------------------------------
 #T# the getpid function returns the pid of the caller

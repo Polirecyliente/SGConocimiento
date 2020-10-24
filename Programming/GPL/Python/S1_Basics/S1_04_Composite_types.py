@@ -3,24 +3,24 @@
 
 #T# Table of contents
 
-#T# Composite types in general
-#T# --- Basic operators
-#T# Strings
-#T# --- String formatting
-#T# --- U strings
-#T# --- R strings
-#T# --- B strings
-#T# --- F strings
-#T# Lists
-#T# Tuples
-#T# Dictionaries
-#T# Sets
-#T# --- Comparisons between sets
-#T# Multidimensional composite types
+#C# Composite types in general
+#C# --- Basic operators
+#C# Strings
+#C# --- String formatting
+#C# --- U strings
+#C# --- R strings
+#C# --- B strings
+#C# --- F strings
+#C# Lists
+#C# Tuples
+#C# Dictionaries
+#C# Sets
+#C# --- Comparisons between sets
+#C# Multidimensional composite types
 
 #T# Beginning of content
 
-#T# Composite types in general
+#C# Composite types in general
 
 # |-------------------------------------------------------------
 #T# composite types can be mainly lists and tuples, but also dictionaries and sets, if a list or tuple has all elements of the same type then it's called an array, strings are always arrays of characters
@@ -31,7 +31,7 @@ tuple1 = ('elem1', 2)
 #T# get the length of a composite type, the amount of elements it contains, with the len function
 int1 = len(list1) # 10
 
-#T# --- Basic operators
+#C# --- Basic operators
 
 # |-----
 #T# the following operators can only be applied to strings, lists, and tuples
@@ -73,14 +73,14 @@ list2 = list1[-4:3] # ['elem1', 2, 'elem3']
 
 # |-------------------------------------------------------------
 
-#T# Strings
+#C# Strings
 
 # |-------------------------------------------------------------
 str1 = "first string"
 #T# membership with in, the string acts as a set of its characters
 bool1 = "g" in str1 # True
 
-#T# --- String formatting
+#C# --- String formatting
 
 # |-----
 
@@ -104,7 +104,7 @@ str1 = 'string: {}, digit: {}'.format("S1", 514) # 'string: S1, digit: 514'
 
 # |-----
 
-#T# --- U strings
+#C# --- U strings
 
 # |-----
 #T# make an unicode string with the prefix "u" or "U", this is the default
@@ -112,14 +112,14 @@ str1 = u"gálè\u02A0ät" # 'gálèʠät'
 str1 =  "gálè\u02A0ät" # 'gálèʠät'
 # |-----
 
-#T# --- R strings
+#C# --- R strings
 
 # |-----
 #T# include escape sequences in a string without their meaning with the raw string prefix "r" or "R"
 str1 = r"\nRaw\tString" # '\\nRaw\\tString'
 # |-----
 
-#T# --- B strings
+#C# --- B strings
 
 # |-----
 #T# make a string of bytes with the prefix "b" or "B"
@@ -130,7 +130,7 @@ str1 = b"\101\271\xAC" # b'A\xb9\xac', \101 is 65 or 'A', \271 is 185 or \xb9
 #T# a byte as an octal number needs three numbers \NNN, the first N has the first bit ignored, so the first N shouldn't be greater than 3
 # |-----
 
-#T# --- F strings
+#C# --- F strings
 
 # |-----
 
@@ -169,7 +169,7 @@ str2 = f'{{1+2}} = {1+2}' # '{1+2} = 3'
 
 # |-------------------------------------------------------------
 
-#T# Lists
+#C# Lists
 
 # |-------------------------------------------------------------
 #T# append an element to a list with the append function
@@ -213,7 +213,7 @@ list1.pop(-4) # 'append_elem'
 
 # |-------------------------------------------------------------
 
-#T# Tuples
+#C# Tuples
 
 # |-------------------------------------------------------------
 #T# as read only variables, tuples have fewer functions than lists
@@ -253,7 +253,7 @@ tuple1 = (1, 7, 'elem', 12, 'last_elem')
 str1 = "Elements {} {}, and {}".format(*tuple1) # Elements 1 7, and elem
 # |-------------------------------------------------------------
 
-#T# Dictionaries
+#C# Dictionaries
 
 # |-------------------------------------------------------------
 #T# append a new key value pair directly to a dictionary
@@ -320,7 +320,7 @@ dict1 = {'base':7}
 int1 = int('10', **dict1) # 7
 # |-------------------------------------------------------------
 
-#T# Sets
+#C# Sets
 
 # |-------------------------------------------------------------
 
@@ -342,7 +342,7 @@ set2 = set1 - froz1                     # {'elem'}
 set2 = set1.symmetric_difference(froz1) # {'elem', 'elem_froz', 88, 62}
 # |--------------------------------------------------/
 
-#T# --- Comparisons between sets
+#C# --- Comparisons between sets
 
 # |-----
 #T# subsets <, <=
@@ -362,7 +362,7 @@ bool1 = set1 == froz1 # False
 
 # |-------------------------------------------------------------
 
-#T# Multidimensional composite types
+#C# Multidimensional composite types
 
 # |-------------------------------------------------------------
 #T# create multidimensional composite types by creating them inside one another

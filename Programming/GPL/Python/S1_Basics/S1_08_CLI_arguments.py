@@ -3,7 +3,7 @@
 
 #T# Table of contents
 
-#T# Argparse
+#C# Argparse
 
 #T# Beginning of content
 
@@ -13,7 +13,7 @@
 #T# execute this file with command line arguments: str2 5.4 -oCount -oCount
 # |-------------------------------------------------------------
 
-#T# Argparse
+#C# Argparse
 
 # |-------------------------------------------------------------
 #T# manage command line arguments with the argparse module

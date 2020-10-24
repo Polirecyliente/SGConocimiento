@@ -3,19 +3,19 @@
 
 #T# Table of contents
 
-#T# Arithmetic operators
-#T# Relational operators
-#T# Assignment operators
-#T# Bitwise operators
-#T# Ternary operator
-#T# Logical operators
-#T# Membership operators
-#T# Identity operators
-#T# Operators over variables
+#C# Arithmetic operators
+#C# Relational operators
+#C# Assignment operators
+#C# Bitwise operators
+#C# Ternary operator
+#C# Logical operators
+#C# Membership operators
+#C# Identity operators
+#C# Operators over variables
 
 #T# Beginning of content
 
-#T# Arithmetic operators
+#C# Arithmetic operators
 
 # |-------------------------------------------------------------
 a = 5; b = 3
@@ -42,7 +42,7 @@ num1 = b//a   # 0
 #T# the floor division b//a returns the floor of b/a
 # |-------------------------------------------------------------
 
-#T# Relational operators
+#C# Relational operators
 
 # |-------------------------------------------------------------
 #T# equality operator
@@ -64,7 +64,7 @@ bool1 = (a >= b) # True
 bool1 = (a <= b) # False
 # |-------------------------------------------------------------
 
-#T# Assignment operators
+#C# Assignment operators
 
 # |-------------------------------------------------------------
 #T# equals operator
@@ -92,7 +92,7 @@ num1 **= a      # 32.0
 num1 //= a      # 6.0
 # |-------------------------------------------------------------
 
-#T# Bitwise operators
+#C# Bitwise operators
 
 # |-------------------------------------------------------------
 a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
@@ -122,7 +122,7 @@ num1 = a << 4
 num1 = a >> 4
 # |-------------------------------------------------------------
 
-#T# Ternary operator
+#C# Ternary operator
 
 # |-------------------------------------------------------------
 #T# use the ternary operator to assign one of two values to a variable depending on a condition
@@ -135,7 +135,7 @@ num1 = 5 if a > b else "retV" # 5
 #T# the result is 5 since a is greater than b
 # |-------------------------------------------------------------
 
-#T# Logical operators
+#C# Logical operators
 
 # |-------------------------------------------------------------
 a = True; b = False
@@ -149,7 +149,7 @@ bool1 = (a or b)  # True
 bool1 = (not b)   # True
 # |-------------------------------------------------------------
 
-#T# Membership operators
+#C# Membership operators
 
 # |-------------------------------------------------------------
 list1 = ['memb1', 'memb3', 'memb4']
@@ -160,7 +160,7 @@ bool1 = 'memb3' in list1     # True
 bool1 = 'memb2' not in list1 # True
 # |-------------------------------------------------------------
 
-#T# Identity operators
+#C# Identity operators
 
 # |-------------------------------------------------------------
 a = 7; b = 7
@@ -171,7 +171,7 @@ bool1 = (a is b)     # True
 bool1 = (a is not b) # False
 # |-------------------------------------------------------------
 
-#T# Operators over variables
+#C# Operators over variables
 
 # |-------------------------------------------------------------
 #T# assign the same value to several variables

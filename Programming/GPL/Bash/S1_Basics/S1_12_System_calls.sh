@@ -3,16 +3,16 @@
 
 #T# Table of contents
 
-#T# File input output
-#T# --- Piping and redirection
+#C# File input output
+#C# --- Piping and redirection
 
 #T# Beginning of content
 
-#T# File input output
+#C# File input output
 
 # |-------------------------------------------------------------
 
-#T# --- Piping and redirection
+#C# --- Piping and redirection
 
 # |-----
 #T# 

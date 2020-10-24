@@ -3,14 +3,14 @@
 
 #T# Table of contents
 
-#T# Assertions
-#T# Catching exceptions
-#T# Throwing exceptions
-#T# Context managers
+#C# Assertions
+#C# Catching exceptions
+#C# Throwing exceptions
+#C# Context managers
 
 #T# Beginning of content
 
-#T# Assertions
+#C# Assertions
 
 # |-------------------------------------------------------------
 #T# make assertions with the assert keyword
@@ -22,7 +22,7 @@ int1 = 5
 assert int1 == 5, "Either this file or the Python interpreter is corrupted"
 # |-------------------------------------------------------------
 
-#T# Catching exceptions
+#C# Catching exceptions
 
 # |-------------------------------------------------------------
 import traceback
@@ -86,7 +86,7 @@ finally:
 
 # |-------------------------------------------------------------
 
-#T# Throwing exceptions
+#C# Throwing exceptions
 
 # |-------------------------------------------------------------
 #T# to throw (or raise from now on) an exception, the raise keyword is used
@@ -97,7 +97,7 @@ finally:
 raise BrokenPipeError
 # |-------------------------------------------------------------
 
-#T# Context managers
+#C# Context managers
 
 # |-------------------------------------------------------------
 #T# a context manager gives a context for operations, so that by executing one of them, others execute in turn, no need to execute them directly

@@ -3,17 +3,17 @@
 
 #T# Table of contents
 
-#T# Function definition
-#T# Function call
-#T# Anonymous functions
-#T# Functions as first class citizens
-#T# Function decorators
-#T# Function annotations
-#T# Scope
+#C# Function definition
+#C# Function call
+#C# Anonymous functions
+#C# Functions as first class citizens
+#C# Function decorators
+#C# Function annotations
+#C# Scope
 
 #T# Beginning of content
 
-#T# Function definition
+#C# Function definition
 
 # |-------------------------------------------------------------
 #T# functions are defined with parameters, and a return value, they are called with arguments to calculate the return value
@@ -37,7 +37,7 @@ def func1 (param1, param2 = 5, *varargs_tuple1):
     return val1
 # |-------------------------------------------------------------
 
-#T# Function call
+#C# Function call
 
 # |-------------------------------------------------------------
 #T# make a function call
@@ -49,7 +49,7 @@ arg1 = 6
 ret1 = func1(arg1, 5, 3) # 20.0
 # |-------------------------------------------------------------
 
-#T# Anonymous functions
+#C# Anonymous functions
 
 # |-------------------------------------------------------------
 #T# create anonymous functions with the lambda keyword
@@ -61,7 +61,7 @@ anon_func1 = lambda arg1, arg2: 7 * arg1 + (arg2 - 1)
 ret1 = anon_func1(3, 6) # 26
 # |-------------------------------------------------------------
 
-#T# Functions as first class citizens
+#C# Functions as first class citizens
 
 # |-------------------------------------------------------------
 #T# as first class citizens, functions can be assigned to vars, passed as args, and returned from functions
@@ -81,7 +81,7 @@ var1 = func2(func1, 17) # this returns func1(17, -3) as a function
 ret1 = var1() # 34, no need to use arguments
 # |-------------------------------------------------------------
 
-#T# Function decorators
+#C# Function decorators
 
 # |-------------------------------------------------------------
 #T# a function decorator takes a function and decorates it, by adding extra functionality to the original function
@@ -116,7 +116,7 @@ ret1 = func1(3, 5) # 8
 
 # |-------------------------------------------------------------
 
-#T# Function annotations
+#C# Function annotations
 
 # |-------------------------------------------------------------
 #T# create function annotations for the parameters and for the return value
@@ -127,7 +127,7 @@ def func1(param1: "param1_annotation") -> "return_value_annotation":
 dict1 = func1.__annotations__
 # |-------------------------------------------------------------
 
-#T# Scope
+#C# Scope
 
 # |-------------------------------------------------------------
 int1 = 5

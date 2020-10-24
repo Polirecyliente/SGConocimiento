@@ -1,12 +1,36 @@
 
 #   Composite types
 
-#T# Array initialization, length of array #Arr[@], all elements Arr[@]
-Arr1=( elem1 elem2 elem3 "elem 4" )
-Arr2[3]=el3
-echo -e "Length of Arr1: ${#Arr1[@]}\nElement3 in Arr2: ${Arr2[3]}"
-echo "Elements in Arr1: ${Arr1[@]}"
+#T# Table of contents
 
+#C# Composite types in general
 
-#T# string length #string
-echo -e "String measures: ${#STRING}\n${STRING:${INDEX1}:2}"
+#T# Beginning of content
+
+#C# Composite types in general
+
+# |-------------------------------------------------------------
+#T# the only supported composite types are the one dimensional array, and the one dimensional associative array, their elements can be of any type except for other arrays or associative arrays
+arr1=( "elem1" "elem2" "elem3" )
+declare -A associative1=( [key1]="value1" [key2]="value2" )
+
+#T# get all the elements of an array separated by IFS
+echo ${arr1[@]} # elem1 elem2 elem3
+echo ${arr1[*]} # elem1 elem2 elem3
+
+#T# get all the elements of an array as a single word (string)
+echo "${arr1[*]}" # "elem1 elem2 elem3"
+
+#T# get all the elements of an array as separate words (strings)
+echo "${arr1[@]}" # "elem1" "elem2" "elem3"
+
+#T# get the length of a composite type, the amount of elements it contains, by preceding the variable's name with a hash # when doing an expansion
+echo ${#arr1[@]}         # 3
+echo ${#associative1[@]} # 2
+
+#T# get the values of an associative array
+echo ${associative1[@]} # value2 value1
+
+#T# get the keys of an associative array (this gets the indices when applied to an array)
+echo ${!associative1[@]} # key2 key1
+# |-------------------------------------------------------------

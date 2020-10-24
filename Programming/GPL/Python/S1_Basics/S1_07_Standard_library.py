@@ -3,31 +3,31 @@
 
 #T# Table of contents
 
-#T# Basic functions
-#T# Math functions
-#T# --- Basic math
-#T# --- Trigonometry
-#T# --- Randon number generation
-#T# String functions
-#T# --- Alignment
-#T# --- Encoding
-#T# --- Substring finding
-#T# --- Predicate logic
-#T# --- Case modification
-#T# --- String modification
-#T# List functions
-#T# Dictionary functions
-#T# Datetime functions
-#T# --- Datetime parts
-#T# --- Timezones
-#T# --- Datetime formatting
-#T# --- Calendar usage
-#T# Class functions
-#T# --- Predicate logic
+#C# Basic functions
+#C# Math functions
+#C# --- Basic math
+#C# --- Trigonometry
+#C# --- Randon number generation
+#C# String functions
+#C# --- Alignment
+#C# --- Encoding
+#C# --- Substring finding
+#C# --- Predicate logic
+#C# --- Case modification
+#C# --- String modification
+#C# List functions
+#C# Dictionary functions
+#C# Datetime functions
+#C# --- Datetime parts
+#C# --- Timezones
+#C# --- Datetime formatting
+#C# --- Calendar usage
+#C# Class functions
+#C# --- Predicate logic
 
 #T# Beginning of content
 
-#T# Basic functions
+#C# Basic functions
 
 # |-------------------------------------------------------------
 #T# get input from stdin with the input function, it returns a string which can be cast to any needed type
@@ -79,13 +79,13 @@ def func1():
     return None
 # |-------------------------------------------------------------
 
-#T# Math functions
+#C# Math functions
 
 # |-------------------------------------------------------------
 #T# math functions are provided in the math module
 import math
 
-#T# --- Basic math
+#C# --- Basic math
 
 # |-----
 x = -5.15
@@ -135,7 +135,7 @@ int1 = int(tuple1[1]) # -5
 flo1 = round(100*x, -1) # -520.0
 # |-----
 
-#T# --- Trigonometry
+#C# --- Trigonometry
 
 # |-----
 #T# the sin function returns the sine of a number in radians
@@ -170,7 +170,7 @@ flo1 = math.degrees(math.pi/4) # 45.0
 flo1 = math.radians(45) # 0.7853 == math.pi/4
 # |-----
 
-#T# --- Randon number generation
+#C# --- Randon number generation
 
 # |-----
 import random
@@ -198,12 +198,12 @@ flo1 = random.uniform(3, 5) # 4.4719...
 
 # |-------------------------------------------------------------
 
-#T# String functions
+#C# String functions
 
 # |-------------------------------------------------------------
 #T# string functions have several categories to work with strings
 
-#T# --- Alignment
+#C# --- Alignment
 
 # |-----
 #T# center a string with a given padding
@@ -240,7 +240,7 @@ str1 = "zfilled"
 str1 = str1.zfill(10) # '000zfilled'
 # |-----
 
-#T# --- Encoding
+#C# --- Encoding
 
 # |-----
 #T# encode a string to bytes with the encode function, decode bytes to string with the decode function
@@ -266,7 +266,7 @@ str1 = "ü\u02A0" # 'üʠ'
 byte1 = str1.encode('unicode-escape') # b'\\xfc\\u02a0'
 # |-----
 
-#T# --- Substring finding
+#C# --- Substring finding
 
 # |-----
 #T# count repetitions of substrings
@@ -299,7 +299,7 @@ int1 = str1.rfind("nd", 3, 45)  # 9
 int1 = str1.rindex("nd", 3, 37) # 9
 # |-----
 
-#T# --- Predicate logic
+#C# --- Predicate logic
 
 # |-----
 #T# check if a string is only made of alphabetic chars, no whitespace or numbers allowed
@@ -333,7 +333,7 @@ str1 = 'New Te5T'
 bool1 = str1.isupper() # False
 # |-----
 
-#T# --- Case modification
+#C# --- Case modification
 
 # |-----
 #T# capitalize the first letter of the string
@@ -357,7 +357,7 @@ str1 = 'Case Changer'
 str1 = str1.swapcase() # 'cASE cHANGER'
 # |-----
 
-#T# --- String modification
+#C# --- String modification
 
 # |-----
 #T# change the tab size with the expandtabs function
@@ -413,7 +413,7 @@ str1 = str1.replace("t", "67", 2) # '67 s67ring t'
 
 # |-------------------------------------------------------------
 
-#T# List functions
+#C# List functions
 
 # |-------------------------------------------------------------
 
@@ -458,7 +458,7 @@ list1 = ['elem5', 'a', 'stray_elem', '5', 'a']
 random.shuffle(list1) # ['a', 'elem5', '5', 'a', 'stray_elem'] or other
 # |-------------------------------------------------------------
 
-#T# Dictionary functions
+#C# Dictionary functions
 
 # |-------------------------------------------------------------
 
@@ -475,14 +475,14 @@ dict1.setdefault('key2', 'val2') # 85
 
 # |-------------------------------------------------------------
 
-#T# Datetime functions
+#C# Datetime functions
 
 # |-------------------------------------------------------------
 #T# import the time, calendar modules
 import time
 import calendar
 
-#T# --- Datetime parts
+#C# --- Datetime parts
 
 # |-----
 #T# the principal datetime parts are, date, and time, date is mainly the year, month, day, and time is mainly the hour, minute, second
@@ -498,7 +498,7 @@ struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, t
 tuple1 = tuple(struct_time1) # (2020, 8, 13, 1, 15, 16, 3, 226, 0)
 # |-----
 
-#T# --- Timezones
+#C# --- Timezones
 
 # |-----
 #T# the gmtime function returns an struct_time object with the date and time in gmt
@@ -522,7 +522,7 @@ struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, t
 flo2 = calendar.timegm(struct_time1) # 1597281316   == 1597299316 - 18000
 # |-----
 
-#T# --- Datetime formatting
+#C# --- Datetime formatting
 
 # |-----
 #T# the asctime function formats a struct_time object as a string
@@ -592,7 +592,7 @@ struct_time2 = time.strptime("Nov 2021 8", "%b %Y %H") # time.struct_time(tm_yea
 
 # |-----
 
-#T# --- Calendar usage
+#C# --- Calendar usage
 
 # |-----
 
@@ -655,7 +655,7 @@ int1 = calendar.weekday(1999, 4, 1) # 3
 
 # |-------------------------------------------------------------
 
-#T# Class functions
+#C# Class functions
 
 # |-------------------------------------------------------------
 class Class1:
@@ -666,7 +666,7 @@ class Derived1 (Class1):
 
 obj1 = Class1()
 
-#T# --- Predicate logic
+#C# --- Predicate logic
 
 # |-----
 #T# check if a class is a subclass of another

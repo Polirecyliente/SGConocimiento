@@ -3,23 +3,23 @@
 
 #T# Table of contents
 
-#T# Types in general
-#T# Numeric types
-#T# String types
-#T# --- Bytes type
-#T# Boolean type
-#T# Composite types
-#T# --- Lists
-#T# --- Tuples
-#T# --- Dictionaries
-#T# --- Sets
-#T# Enum type
-#T# Null type
-#T# Type casting
+#C# Types in general
+#C# Numeric types
+#C# String types
+#C# --- Bytes type
+#C# Boolean type
+#C# Composite types
+#C# --- Lists
+#C# --- Tuples
+#C# --- Dictionaries
+#C# --- Sets
+#C# Enum type
+#C# Null type
+#C# Type casting
 
 #T# Beginning of content
 
-#T# Types in general
+#C# Types in general
 
 # |-------------------------------------------------------------
 #T# get the type or class of a variable with the type function
@@ -31,7 +31,7 @@ int1 = 8
 type1 = type(int1) # <class 'int'>
 # |-------------------------------------------------------------
 
-#T# Numeric types
+#C# Numeric types
 
 # |-------------------------------------------------------------
 #T# numerical types are
@@ -52,7 +52,7 @@ flo1 = 12.415
 complex1 = 5.1 + 3.28j
 # |-------------------------------------------------------------
 
-#T# String types
+#C# String types
 
 # |-------------------------------------------------------------
 #T# strings are created inside quotation symbols, single quotes ', double quotes ", and three double quotes """
@@ -100,7 +100,7 @@ str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
 # or ʠ𐍆l¹   feed lines
 # |--------------------------------------------------/
 
-#T# --- Bytes type
+#C# --- Bytes type
 
 # |-----
 #T# the bytes type is numerical but used extensively in strings
@@ -114,7 +114,7 @@ byte1 = bytes("\x42\103", 'utf-8') # b'BC'
 
 # |-------------------------------------------------------------
 
-#T# Boolean type
+#C# Boolean type
 
 # |-------------------------------------------------------------
 #T# boolean variables have only two possible values, True, False
@@ -122,14 +122,14 @@ bool1 = True
 bool1 = False
 # |-------------------------------------------------------------
 
-#T# Composite types
+#C# Composite types
 
 # |-------------------------------------------------------------
 #T# composite types store several values together, each value in an element of the composite type
 
 #T# arrays are produced when all the elements in a composite type are from the same type
 
-#T# --- Lists
+#C# --- Lists
 
 # |-----
 #T# lists are created within brackets with elements separated by comma
@@ -141,7 +141,7 @@ int1 = list1[1] # 2
 list1[1] = 5
 # |-----
 
-#T# --- Tuples
+#C# --- Tuples
 
 # |-----
 #T# tuples are read-only lists, and are created within parentheses with elements separated by comma
@@ -158,7 +158,7 @@ str1 = tuple1[2] # 'tuple_elem3'
 tuple2 = 1, 6, 5,
 # |-----
 
-#T# --- Dictionaries
+#C# --- Dictionaries
 
 # |-----
 #T# dictionaries are Python's hash table with key value pairs, and are created within curly braces with pairs separated by comma, and key separated from value with a colon
@@ -174,7 +174,7 @@ dict1keys = dict1.keys()   # dict_keys(['Fis', 'Sec', 'Thd'])
 dict1vals = dict1.values() # dict_values([63.2, 12.1, 19.8])
 # |-----
 
-#T# --- Sets
+#C# --- Sets
 
 # |-----
 #T# sets are unordered collections, similar to a list in that they can be changed after creation, and are created within curly braces with elements separated by comma
@@ -190,7 +190,7 @@ froz1 = frozenset({"elem_unord_froz", 12, 5, 98})
 
 # |-------------------------------------------------------------
 
-#T# Enum type
+#C# Enum type
 
 # |-------------------------------------------------------------
 #T# enums or enumerations map names to constant values
@@ -216,14 +216,14 @@ int1 = enum1.elem1.value # 1
 str1 = enum1.elem2.value # two
 # |-------------------------------------------------------------
 
-#T# Null type
+#C# Null type
 
 # |-------------------------------------------------------------
 #T# the null type has the None keyword
 str1 = None
 # |-------------------------------------------------------------
 
-#T# Type casting
+#C# Type casting
 
 # |-------------------------------------------------------------
 #T# type casting can be done with functions named after the wanted type, e.g. str(var1) casts var1 as a string

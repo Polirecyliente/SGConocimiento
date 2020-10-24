@@ -3,7 +3,7 @@
 
 #T# Table of contents
 
-#T# Modules
+#C# Modules
 
 #T# Beginning of content
 
@@ -11,7 +11,7 @@
 #T# packages are directories that contain modules, the modules are files that contain functions and classes
 # |-------------------------------------------------------------
 
-#T# Modules
+#C# Modules
 
 # |-------------------------------------------------------------
 #T# module's definitions, they are mostly functions and classes

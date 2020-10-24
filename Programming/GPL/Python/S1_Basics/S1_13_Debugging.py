@@ -3,11 +3,11 @@
 
 #T# Table of contents
 
-#T# Python debugger (pdb)
+#C# Python debugger (pdb)
 
 #T# Beginning of content
 
-#T# Python debugger (pdb)
+#C# Python debugger (pdb)
 
 # |-------------------------------------------------------------
 #T# pdb is the builtin Python debugger, it has breakpoints, stepping through the code, printing the values of variables, post-mortem debugging, debugging of modules, functions, scripts, among other features
@@ -117,11 +117,11 @@ output_var1 # (Pdb) l 7 # (Pdb) list 7
 #  3  	
 #  4  	#T# Table of contents
 #  5  	
-#  6  	#T# Python debugger (pdb)
+#  6  	#C# Python debugger (pdb)
 #  7  	
 #  8  	#T# Beginning of content
 #  9  	
-# 10  	#T# Python debugger (pdb)
+# 10  	#C# Python debugger (pdb)
 # 11  	
 # 12  	# |-------------------------------------------------------------
 
