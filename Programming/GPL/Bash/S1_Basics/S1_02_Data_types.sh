@@ -18,7 +18,7 @@
 #C# Types in general
 
 # |-------------------------------------------------------------
-#T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see S1_05_Control_flow.sh for the treatment of boolean variables in conditionals
+#T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see S1_03_Operators.sh and S1_05_Control_flow.sh for the treatment of boolean variables in general and in conditionals
 
 #T# the only caveat, is the declare command, which can be used to set attributes on variables, and these attributes act as the type of the variable
 # |-------------------------------------------------------------
@@ -35,10 +35,10 @@
 
 #T# the following are particular examples, numbers in any non decimal base must be enclosed in an arithmetic expansion
 int1=5
-int1=$((011))     # 9
-int1=$((0x17))    # 23
-int1=$((2#10101)) # 21
-flo1=$(bc <<< "12.415") # 12.415 # here string is explained later in this file
+int1=$(( 011 ))     # 9
+int1=$(( 0x17 ))    # 23
+int1=$(( 2#10101 )) # 21
+flo1=$( bc <<< "12.415" ) # 12.415 # here string is explained later in this file
 # |-------------------------------------------------------------
 
 #C# String types
@@ -51,6 +51,8 @@ str2="string two"
 #T# reading elements (characters) from strings is done via substring parameter expansion (see S1_03_Operators.sh)
 
 #T# string concatenation can be done indirectly with parameter expansion (see S1_03_Operators.sh) by expanding two or more string variables separated by space
+str1='string one'
+str2="string two"
 str3=$str1" "$str2 # string one string two
 
 # |--------------------------------------------------\
@@ -156,10 +158,10 @@ bc <<< "3 + $((1 + 1)) + $(echo 1) + $var1" # 8 # 3 + 2 + 1 + 2
 #T# arrays in bash can be said to be composite types since they can store any different types of data together
 
 #T# arrays are created within parentheses after the equal sign and separated by space
-arr1=(elem1 elem2 elem3)
+arr1=( elem1 elem2 elem3 )
 
 #T# declaring, reading from, and writing to arrays
-arr1=(elem1 2 'elem three')
+arr1=( elem1 2 'elem three' )
 int1=${arr1[1]} # 2
 arr1[4]='new elem' # index 3 doesn't need to be assigned, it's null by default
 # |-----
@@ -168,12 +170,12 @@ arr1[4]='new elem' # index 3 doesn't need to be assigned, it's null by default
 
 # |-----
 #T# associative arrays are created using the -A flag of the declare command (see later in this file), the key value pairs go inside parentheses separated by space, each key goes inside brackets and is followed by an equal sign and its associated value
-declare -A associative1=([key1]="value1" [key2]="value2")
+declare -A associative1=( [key1]="value1" [key2]="value2" )
 
 #T# declaring, reading from, and writing to associative arrays
-declare -A associative1=([key1]="value1" [key2]="value2") # ([key2]="value2" [key1]="value1") # the order of key value pairs is inverted
+declare -A associative1=( [key1]="value1" [key2]="value2" ) # ( [key2]="value2" [key1]="value1" ) # the order of key value pairs is inverted
 str1=${associative1[key2]}  # value2
-associative1[key4]="value4" # the new key value pair is appended at the start of the associative array, associative1 == ([key4]="value4" [key2]="value2" [key1]="value1")
+associative1[key4]="value4" # the new key value pair is appended at the start of the associative array, associative1 == ( [key4]="value4" [key2]="value2" [key1]="value1" )
 # |-----
 
 # |-------------------------------------------------------------
@@ -207,11 +209,24 @@ null_var1=""
 #T#     -x, +x, makes var1 an environment variable
 
 declare -a arr1=( "elem1" "elem2" )
-declare -A associative1=([key1]="value1" [key2]="value2")
+declare -A associative1=( [key1]="value1" [key2]="value2" )
 declare -i int1=54
 declare -l str1="STRING1" # string1
 declare -n int_ref1=int1 # 54
 declare -r read_only1="read_only_string1"
 declare -u str2="string2" # STRING2
 declare -x int2=25
+
+#T# the declare command has a few flags that don't actually declare a variable, but that are still useful
+#T#     -f, must be used with a function, it shows the function's body
+#T#     -F, must be used with a function, it shows the function name and debug information
+
+f1() { : ; } # see S1_06_Functions.sh
+declare -f f1
+#T# the former prints
+# f1 () 
+# { 
+#     :
+# }
+declare -F f1 # f1 int1 /path/to/file_of_f1 # int1 and /path/to/file_of_f1 appear when printing debug information (see S1_14_Interpreter.sh), int1 means the number line where f1 is defined inside file_of_f1
 # |-------------------------------------------------------------

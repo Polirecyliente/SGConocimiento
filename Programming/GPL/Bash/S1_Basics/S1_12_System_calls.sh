@@ -21,4 +21,4 @@
 
 # |-------------------------------------------------------------
 
-#T# job control for foreground and background processes
+#T# job control for foreground and background processes, ampersand & to start an asynchronous script or command as a background process vs semicolon ; to start processes synchronously, the vertical line | pipes the output of a command as input of another

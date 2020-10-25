@@ -103,10 +103,12 @@ import os
 
 #T# the rename function serves to rename a file
 # SYNTAX os.rename("original_filename1", "new_filename1")
+str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
 str2 = "/tmp/renamed_file1"
 os.rename(str1, str2)
 
 #T# the remove function serves to remove a file
+str2 = "/tmp/renamed_file1"
 os.remove(str2)
 
 #T# the mkdir function serves to create a new directory
@@ -114,12 +116,14 @@ str1 = "/tmp/temporary_dir1"
 os.mkdir(str1)
 
 #T# the chdir function serves to change the current working directory for the directory of its argument
+str1 = "/tmp/temporary_dir1"
 os.chdir(str1)
 
 #T# the getcwd function returns the current working directory
 str1 = os.getcwd() # /tmp/temporary_dir1
 
 #T# the rmdir function serves to remove a directory
+str1 = "/tmp/temporary_dir1"
 os.rmdir(str1)
 # |-------------------------------------------------------------
 

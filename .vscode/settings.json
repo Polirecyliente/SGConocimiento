@@ -89,7 +89,7 @@
         ],
     // highlight for the #T# tag
         "(//T// .*|#T# .*|<!-- #T# .*)": [
-            { "color": "#076DDF" }
+            { "color": "#177DFF" }
         ],
     // highlight for #C#
         "(//C// .*|#C# .*|<!-- #C# .*)": [

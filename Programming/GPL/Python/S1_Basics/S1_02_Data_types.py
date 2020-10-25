@@ -61,15 +61,20 @@ str2 = "string two"
 str3 = """string three"""
 
 #T# reading elements from strings
+str1 = 'string one'
 str4 = str1[4] # 'n'
 
 #T# a character or char is a string of size 1, but a char can also be obtained from an integer with the chr function
+str1 = 'string one'
 char1 = str1[0] # 's'
 char1 = chr(65) # 'A'
 
 # |--------------------------------------------------\
 #T# strings created with different quotation symbols can be operated together like normal
 
+str1 = 'string one'
+str2 = "string two"
+str3 = """string three"""
 str4 = str1 + str2 + str3 # 'string onestring twostring three'
 #T# the plus sign concatenates the strings
 # |--------------------------------------------------/
@@ -138,7 +143,7 @@ list1 = [3, 5, 2, "s1"]
 #T# declaring, reading from, and writing to lists
 list1 = ['elem1', 2, 'elem3']
 int1 = list1[1] # 2
-list1[1] = 5
+list1[1] = 5 # list1 == ['elem1', 5, 'elem3']
 # |-----
 
 #C# --- Tuples
@@ -166,10 +171,10 @@ tuple2 = 1, 6, 5,
 #T# declaring, reading from, and writing to dictionaries
 dict1 = {'key1': 5, 'key2': 'val2'}
 int1 = dict1['key1'] # 5
-dict1['key1'] = 2
+dict1['key1'] = 2 # dict1 == {'key1': 2, 'key2': 'val2'}
 
-dict1 = {'Fis': 63.2, 'Sec': 12.1, 'Thd': 19.8}
 #T# get the keys and values of a dictionary
+dict1 = {'Fis': 63.2, 'Sec': 12.1, 'Thd': 19.8}
 dict1keys = dict1.keys()   # dict_keys(['Fis', 'Sec', 'Thd'])
 dict1vals = dict1.values() # dict_values([63.2, 12.1, 19.8])
 # |-----
@@ -183,6 +188,7 @@ set1 = {'elem_unord', 5, 78}
 #T# given that sets are unordered, their elements can't be accessed directly, so to modify one element it must be discarded and then added
 set1.discard('elem_unord')
 set1.add('elem_modif')
+# set1 == {'elem_modif', 5, 78}
 
 #T# frozen sets are sets that can't be changed after creation similar to a tuple, and are created with the same syntax as a set but casted to frozenset
 froz1 = frozenset({"elem_unord_froz", 12, 5, 98})
@@ -212,6 +218,7 @@ class enum1(Enum):
 # |--------------------------------------------------/
 
 #T# the value attribute of an enum element has the value of the element
+#T# see the enum1 definition up from here
 int1 = enum1.elem1.value # 1
 str1 = enum1.elem2.value # two
 # |-------------------------------------------------------------
@@ -253,13 +260,14 @@ int1 = int(str1, 16) # 164
 # SYNTAX complex(realN, imN)
 #T# realN is the real component, imN is the imaginary component
 
+int1 = 164
 flo1 = float(int1/2) # 82.0
 cmp1 = complex(int1, flo1) # (164+82j)
 # |--------------------------------------------------/
 
-byte1 = bytes("\x41\x4a", 'utf-8') # b'AJ'
 #T# casting a bytes object as a list returns each byte as a decimal, in the following 0x41 is 65 or "A", 0x4a is 74 or "J"
-list1 = list(byte1) # [65, 74]
+byte1 = bytes("\x41\x4a", 'utf-8') # b'AJ'
+list1 = list(byte1) # [65, 74] # 0x41 == 64, 0x4A == 74
 
 #T# represent an integer in base 2 with the bin function, in base 8 with the oct function, and in base 16 with the hex function
 int1 = bin(21) # 0b10101
@@ -271,12 +279,16 @@ char1 = chr(0x02A0) # 'ʠ'
 int1 = ord("A")     # 65
 
 #T# casting a dictionary as a list returns only a list of the keys
+dict1 = {'Fis': 63.2, 'Sec': 12.1, 'Thd': 19.8}
 list1 = list(dict1) # ['Fis', 'Sec', 'Thd']
 
 #T# other castings
+cmp1 = complex(164, 82.0)
+list1 = [65, 74]
 str1 = str(cmp1) # '(164+82j)'
 tuple1 = tuple(list1) # (65, 74)
 set1 = set(list1)     # {65, 74}
 dict1 = dict(key1 = 1, key2 = 2, key3 = 'val3') # {'key1': 1, 'key2': 2, 'key3': 'val3'}
+tuple1 = (65, 74)
 froz1 = frozenset(tuple1) # frozenset({65, 74})
 # |-------------------------------------------------------------

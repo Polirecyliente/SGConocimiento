@@ -86,7 +86,7 @@ echo "$var1" # value one # in this case "value one" is the argument, instead of 
 null_var1=""
 
 # |--------------------------------------------------\
-#T# a parameter can be unset so it doesn't exist anymore
+#T# a parameter can be unset so it doesn't exist anymore in the namespace of the current shell, this can also be applied to functions to delete them
 # SYNTAX unset var1
 unset_var1="temp value"
 unset unset_var1 # unset_var1 becomes as if it was never defined
@@ -282,8 +282,8 @@ echo "Bash exec file is in "`which bash`  # Bash exec file is in /bin/bash
 # SYNTAX $(( expression1 ))
 #T# expression1 is any arithmetic expression consisting of integers (for floating point numbers, bc or similar commands can be used), the list of math operations is shown later in this file
 
-int1=$((7 - 2 + 1)) # 6
-int2=$((int1 + 5))  # 11 # int1 must not be expanded with dollar sign $
+int1=$(( 7 - 2 + 1 )) # 6
+int2=$(( int1 + 5 ))  # 11 # int1 must not be expanded with dollar sign $
 
 # |--------------------------------------------------\
 #T# the let command can be used to do the same as arithmetic expansions
@@ -476,6 +476,8 @@ let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
 # |-------------------------------------------------------------
 #T# boolean results are interpreted as follows, when a command is successful its exit status is 0, when a command fails its exit status is 1 or any other number, because of this a value of 0 means true and a value of 1 means false, to see the exit status of a boolean operation the $? variable (parameter) is used, e.g. 'echo $?' shows said exit status
 
+#T# in Bash exists a syntax that permits the use of boolean variables with their traditional values, 0 for false, 1 for true, and assign this values to variables, effectively allowing the use of boolean variables, this syntax uses arithmetic expansion (()) which is shown later
+
 #T# comparisons between floating point numbers can be done with the bc command
 
 # |--------------------------------------------------\
@@ -542,6 +544,23 @@ test "$int1" "-ge" "$int2" # $? == 0 # true
 int1=12; int2=5
 test "$int1" "-le" "$int2" # $? == 1 # false
 [[ "$int1" -le "$int2" ]]  # $? == 1 # false
+
+# |--------------------------------------------------\
+#T# this syntax is used to get boolean values with their traditional meanings, 0 for false, 1 for true, this can be applied with all the relational operators
+
+# SYNTAX (( bool1 = boolean_expression1 ))
+#T# boolean_expression1 is any valid boolean expression between numbers, bool1 is the variable where the result of the boolean expression is stored
+
+#T# it must be noted that boolean_expression1 must operate over numbers and not strings or characters, but the operators are those used for strings (which are traditionally used with numbers), e.g., to compare 5 greater than 4, the boolean expression would be 5 > 4, and so on
+
+(( bool1 = 4 == 5 )) # 0 # false
+(( bool1 = 4 != 5 )) # 1 # true
+(( bool1 = 7 > 4 ))  # 1 # true
+(( bool1 = 7 < 4 ))  # 0 # false
+(( bool1 = 7 >= 4 )) # 1 # true
+(( bool1 = 7 <= 4 )) # 0 # false
+# |--------------------------------------------------/
+
 # |-------------------------------------------------------------
 
 #C# Assignment operators
@@ -577,6 +596,26 @@ let "int1 /= 5" # 5
 (( int1 = 5 ))
 (( int1 %= 3 )) # 2
 let "int1 %= 3" # 2
+
+#T# pre increment operator
+(( int1 = 5 ))
+(( ++int1 )) # 6
+let "++int1" # 6
+
+#T# post increment operator
+(( int1 = 5 ))
+(( int1++ )) # 6
+let "int1++" # 6
+
+#T# pre decrement operator
+(( int1 = 5 ))
+(( --int1 )) # 4
+let "--int1" # 4
+
+#T# post decrement operator
+(( int1 = 5 ))
+(( int1-- )) # 4
+let "int1--" # 4
 # |-------------------------------------------------------------
 
 #C# Bitwise operators
@@ -636,20 +675,25 @@ let "int1 >>= 1" # 0x7
 #C# Logical operators
 
 # |-------------------------------------------------------------
+#T# for a primer on boolean logic see the relational operators
+
 #T# logical and operator
 var1="value1"; var2=5
 test "$var1" -a "$var2"  # $? == 0 # true
 [[ "$var1" && "$var2" ]] # $? == 0 # true
+(( bool1 = 7 && 0 )) # 0 # false
 
 #T# logical or operator
 var1=""; var2=""
 test "$var1" -o "$var2"  # $? == 1 # false
 [[ "$var1" || "$var2" ]] # $? == 1 # false
+(( bool1 = 7 || 0 )) # 1 # true
 
 #T# logical not operator
 var1=""
 test "!" "$var1" # $? == 0 # true
 [[ ! "$var1" ]]  # $? == 0 # true
+(( bool1 = ! 0 )) # 1 # true
 # |-------------------------------------------------------------
 
 #C# Shell operators

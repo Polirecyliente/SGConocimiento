@@ -116,6 +116,28 @@ for file_it1 in $(ls); do
         continue
     fi
 done
+
+#T# there is another syntax of the for loop
+
+# SYNTAX for loop with arithmetic expansion
+# for (( statement_ini1; expression1; statement_end1 )); do
+#     statements1
+#     [continue int1|break int1]
+# done
+#T# the loop will repeat statements1 as long as expression1 evaluates to true, statement_ini1 is executed only once at the start of the loop, statement_end1 is executed at the end of each loop iteration
+
+#T# the idea is that through the execution of statement_end1 at the end of each iteration, eventually expression1 becomes false, and the loop ends
+
+#T# same as before about continue, break, and int1
+
+for (( it1 = 2; it1 <= 5; it1++ )); do
+    echo "iter $it1"
+done
+#T# the former prints
+# iter 2
+# iter 3
+# iter 4
+# iter 5
 # |-----
 
 #C# --- while loop

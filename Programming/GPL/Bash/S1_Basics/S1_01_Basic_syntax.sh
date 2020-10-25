@@ -62,6 +62,7 @@ str2="second str'ing"
 # SYNTAX ${var1}
 #T# var1 is the variable to be substituted inside a string, this is also called parameter expansion and uses the braces operator as explained in S1_03_Operators.sh
 
+int1=5
 str2="string ${int1} interpolation" # string 5 interpolation
 # |--------------------------------------------------/
 
@@ -87,10 +88,10 @@ echo -e "Line1\nLine2"
 
 #T# math expressions are written with this syntax
 
-# SYNTAX num1=$((expr1))
+# SYNTAX num1=$(( expr1 ))
 #T# expr1 is the math expression, its result is assigned to num1, for the $(()) operator see S1_03_Operators.sh, specifically arithmetic expansion
 
-int1=$((5 + 3 - 1)) # 7
+int1=$(( 5 + 3 - 1 )) # 7
 # |-------------------------------------------------------------
 
 #C# Function calls
@@ -107,6 +108,8 @@ echo "Hello, Bash!" "Second arg" # Hello, Bash! Second arg
 #T# basic input from stdin with the read command
 echo "Please enter var1 as input"
 read var1
+
+#T# bash has several commands that are builtin, such as echo, read
 # |-----
 
 # |-------------------------------------------------------------

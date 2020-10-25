@@ -21,6 +21,8 @@
 
 #T# output variables to stdout with the print function
 # SYNTAX print(var1, var2, var3)
+#T# the same can be done by simply typing the variable's name
+# SYNTAX var1
 # |-------------------------------------------------------------
 
 #C# Blocks of code
@@ -104,6 +106,7 @@ int1 = 5
 # SYNTAX obj1.name1.name2
 #T# here the object obj1 has name1 in its namespace, and name1 has name2 in its namespace
 
+int1 = 5
 int1 = int1.bit_length() # 3
 #T# the bit_length function is accessed using dot notation on an integer
 # |--------------------------------------------------/

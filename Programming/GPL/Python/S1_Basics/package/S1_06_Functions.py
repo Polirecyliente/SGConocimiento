@@ -10,6 +10,7 @@
 #C# Function decorators
 #C# Function annotations
 #C# Scope
+#C# Recursion
 
 #T# Beginning of content
 
@@ -140,4 +141,26 @@ def func3():
 
 func3()
 # int1 == 78
+# |-------------------------------------------------------------
+
+#C# Recursion
+
+# |-------------------------------------------------------------
+#T# recursion allows calling a function from inside itself
+
+# SYNTAX function recursion
+# def func1(params1):
+#     statements1
+#     func1(args1)
+#     return val1
+#T# same as before, but func1 is called inside func1 with arguments args1, statements1 must ensure that there is a way to stop calling func1, so that recursion stops
+
+var1 = 0
+def recursion_func1(int1):
+    if (int1 >= 0):
+        global var1
+        var1 = var1 + 1
+        recursion_func1(int1 - 1)
+recursion_func1(3)
+var1 # 4
 # |-------------------------------------------------------------

@@ -42,8 +42,8 @@ import S1_10_P_Module_example
 from S1_06_Functions import func1 as f1
 # |--------------------------------------------------/
 
-import importlib
 #T# execute a module again with the reload function
+import importlib
 importlib.reload(S1_10_P_Module_example)
 # |-------------------------------------------------------------
 
@@ -67,8 +67,8 @@ int1 = package.anon_func1(8, -5) # 50
 #C# Info about modules
 
 # |-------------------------------------------------------------
-import math
 #T# the help function prints to stdout the generated help for its module argument
+import math
 help(math)
 
 #T# an special argument to the help function is "modules" which lists the installed modules

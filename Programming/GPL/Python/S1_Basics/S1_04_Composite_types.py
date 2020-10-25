@@ -29,6 +29,7 @@ list1 = [99, 99, 1, 99, 99, 2, 99, 99, 3, 99]
 tuple1 = ('elem1', 2)
 
 #T# get the length of a composite type, the amount of elements it contains, with the len function
+list1 = [99, 99, 1, 99, 99, 2, 99, 99, 3, 99]
 int1 = len(list1) # 10
 
 #C# --- Basic operators
@@ -76,8 +77,8 @@ list2 = list1[-4:3] # ['elem1', 2, 'elem3']
 #C# Strings
 
 # |-------------------------------------------------------------
-str1 = "first string"
 #T# membership with in, the string acts as a set of its characters
+str1 = "first string"
 bool1 = "g" in str1 # True
 
 #C# --- String formatting
@@ -156,15 +157,15 @@ str2 = f"interp: {str1[2:15]}, {str1 = }" # "interp: ords and quot, str1 = 'swor
 #T#     t is the type, f for float, b for binary, o for octal, x for hex, e for scientific notation
 
 num1 = 6.4
-str2 = f'{num1:>08.3f}'     # 0006.400
-str2 = f'{num1:< 10.1e}'    # ' 6.4e+00  '
-str2 = f'{int(num1):05b}'   # '00110'
-str2 = f'{int(num1):< 5o}'  # ' 6   '
-str2 = f'{int(num1):x}'     # '6'
+str1 = f'{num1:>08.3f}'     # 0006.400
+str1 = f'{num1:< 10.1e}'    # ' 6.4e+00  '
+str1 = f'{int(num1):05b}'   # '00110'
+str1 = f'{int(num1):< 5o}'  # ' 6   '
+str1 = f'{int(num1):x}'     # '6'
 # |--------------------------------------------------/
 
 #T# escape the curly braces in an f string by duplicating the braces
-str2 = f'{{1+2}} = {1+2}' # '{1+2} = 3'
+str1 = f'{{1+2}} = {1+2}' # '{1+2} = 3'
 # |-----
 
 # |-------------------------------------------------------------
@@ -177,6 +178,7 @@ list1 = ['elem1', 2, 'elem3']
 list1.append("append_elem") # list1 == ['elem1', 2, 'elem3', 'append_elem']
 
 #T# remove an element from a list with the remove function
+list1 = ['elem1', 2, 'elem3', 'append_elem']
 list1.remove('elem3') # list1 == ['elem1', 2, 'append_elem']
 
 # |--------------------------------------------------\
@@ -347,16 +349,21 @@ set2 = set1.symmetric_difference(froz1) # {'elem', 'elem_froz', 88, 62}
 # |-----
 #T# subsets <, <=
 set1 = {5}
+froz1 = frozenset({"elem_froz", 62, 88, 5})
 bool1 = set1.issubset(froz1) # True
 bool1 = set1 < froz1         # True
 bool1 = set1 <= froz1        # True
 
 #T# supersets >, >=
+set1 = {5}
+froz1 = frozenset({"elem_froz", 62, 88, 5})
 bool1 = set1.issuperset(froz1) # False
 bool1 = set1 > froz1           # False
 bool1 = set1 >= froz1          # False
 
 #T# equal sets ==
+set1 = {5}
+froz1 = frozenset({"elem_froz", 62, 88, 5})
 bool1 = set1 == froz1 # False
 # |-----
 
@@ -365,9 +372,7 @@ bool1 = set1 == froz1 # False
 #C# Multidimensional composite types
 
 # |-------------------------------------------------------------
-#T# create multidimensional composite types by creating them inside one another
+#T# create multidimensional composite types by creating them inside one another, access an element from a multidimensional composite type by index
 multi_arr1 = [(1, 2), [['a.1', 'a.2'], ['b.1', 'b.2', 'b.3']], {'k1':'v1'}]
-
-#T# access an element from a multidimensional composite type by index
 str1 = multi_arr1[1][1][2] # 'b.3'
 # |-------------------------------------------------------------

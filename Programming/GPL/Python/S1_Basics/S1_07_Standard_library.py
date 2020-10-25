@@ -88,15 +88,16 @@ import math
 #C# --- Basic math
 
 # |-----
-x = -5.15
-y = 4
 #T# the abs function returns the absolute value of a number
+x = -5.15
 flo1 = abs(x) # 5.15
 
 #T# the ceil function returns the ceiling of a number
+x = -5.15
 int1 = math.ceil(x) # -5
 
 #T# the floor function returns the floor of a number
+x = -5.15
 int1 = math.floor(x) # -6
 
 #T# the pi constant approximates the value of pi
@@ -106,32 +107,41 @@ flo1 = math.pi # 3.14159...
 flo1 = math.e # 2.71828...
 
 #T# the sqrt function returns the square root of a number
+y = 4
 flo1 = math.sqrt(y) # 2.0
 
 #T# the pow function raises a number to another
+y = 4
 int1 = pow(y, 2) # 16
 
 #T# the exp function raises e to the power of a number
+y = 4
 flo1 = math.exp(y) # 54.598...
 
 #T# the log function returns the log of a number in a given base
+y = 4
 flo1 = math.log(y, 3) # 1.26...
 
 #T# the log10 function returns the log of a number in base 10
+y = 4
 flo1 = math.log10(y) # 0.60...
 
 #T# the max function returns the maximum of the arguments
+x = -5.15; y = 4
 num1 = max(x, y) # 4
 
 #T# the min function returns the minimum of the arguments
+x = -5.15; y = 4
 num1 = min(x, y) # -5.15
 
 #T# the modf function returns a tuple with the fractional part and the integer part of a number
+x = -5.15
 tuple1 = math.modf(x) # (-0.15, -5.0); x == -5.15
 flo1 = tuple1[0]      # -0.15
 int1 = int(tuple1[1]) # -5
 
 #T# the round function rounds a number to a given precision, if the precision is negative it's is rounded to the left of the decimal point
+x = -5.15
 flo1 = round(100*x, -1) # -520.0
 # |-----
 
@@ -175,8 +185,8 @@ flo1 = math.radians(45) # 0.7853 == math.pi/4
 # |-----
 import random
 
-str1 = "random string"
 #T# the choice function chooses a random element from an array
+str1 = "random string"
 str2 = random.choice(str1) # 'd', or another element in str1
 
 #T# the randrange function returns a random number from a range
@@ -212,12 +222,12 @@ flo1 = random.uniform(3, 5) # 4.4719...
 str1 = "Cen"
 str1 = str1.center(9, "-") # '---Cen---'
 
-str1 = "Left"
 #T# left justify a string, same arguments as in the center function
+str1 = "Left"
 str1 = str1.ljust(7, ">") # 'Left>>>'
 
-str1 = "Right"
 #T# right justify a string, same arguments as in the center function
+str1 = "Right"
 str1 = str1.rjust(8, "<") # '<<<Right'
 
 #T# strip the whitespace, or the given chars at both sides of a string with the strip function
@@ -231,6 +241,7 @@ str1 = "     Stripped     "
 str1 = str1.lstrip() # 'Stripped     '
 
 #T# strip trailing whitespace or given chars at the right of a string with the rstrip function, same arguments as in the strip function
+str1 = "Stripped     "
 str1 = str1.rstrip() # 'Stripped'
 
 #T# the zfill function fills a string with zeros up to a given width
@@ -249,6 +260,7 @@ byte1 = str1[3:].encode('utf-8') + b"\x41\x20\x21" # b'ingA !'
 str2 = byte1.decode('utf-16')         # '湩䅧℠'
 
 #T# a few valid encodings, 'utf-8', 'utf-16', 'utf-32', 'unicode-escape', 'ascii', 'Latin-1', 'cp1252' cp is for code pages, chinese 'big5', arabic 'iso8859_6', greek 'mac_greek', hebrew 'cp424'
+byte1 = b'ingA !'
 str2 = byte1.decode('unicode-escape') # 'ingA !'
 str2 = byte1.decode('ascii')          # 'ingA !'
 str2 = byte1.decode('Latin-1')        # 'ingA !'
@@ -259,6 +271,7 @@ str2 = byte1.decode('mac_greek')      # 'ingA !'
 str2 = byte1.decode('cp424')          # 'ש>קא\x80\x81'
 
 #T# can't decode an utf-8 encoded string in utf-32 unless extra bytes are added
+byte1 = b'ingA !'
 str2 = byte1.decode('utf-32') # UnicodeDecodeError: 'utf-32-le' codec can't decode bytes in position 0-3: code point not in range(0x110000)
 
 #T# When encoding with 'unicode-escape' the returned byte object contains the unicode escape sequence \uNNNN or \xNN for non ascii chars
@@ -292,9 +305,11 @@ str1 = "to be found"
 int1 = str1.find('fou', 2, -1) # 6
 
 #T# do the same as the find function but raise an exception on failure with the index function, same arguments as in the startswith function
+str1 = "to be found"
 int1 = str1.index('fou') # 6
 
 #T# do a reverse find, in the sense of starting the search at the end of the string, with the functions rfind, and rindex, same arguments as in the startswith function
+str1 = "to be found"
 int1 = str1.rfind("nd", 3, 45)  # 9
 int1 = str1.rindex("nd", 3, 37) # 9
 # |-----

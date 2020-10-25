@@ -14,5 +14,5 @@ echo -e "First argument is: $1\nSecond argument is: $2\nScript name is: $0"
 argsNum=$#
 echo -e "The number of args is: ${argsNum}\nThe args are: $@"
 
-#T# $*
+#T# $*, these can be used in functions as well
 #T# PS1, PS2 prompts, and their escaped characters
