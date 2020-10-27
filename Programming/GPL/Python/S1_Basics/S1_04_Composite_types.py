@@ -86,7 +86,7 @@ bool1 = "g" in str1 # True
 # |-----
 
 # |--------------------------------------------------\
-#T# format a string ala printf
+#T# format a string à la printf
 
 # SYNTAX "str1 %fmt_spec1 str2 %fmt_spec2 str3" %(var1, var2)
 #T# var1 goes into %fmt_spec1, var2 into %fmt_spec2, and so on

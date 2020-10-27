@@ -22,6 +22,7 @@
 #C# --- Timezones
 #C# --- Datetime formatting
 #C# --- Calendar usage
+#C# --- Locales
 #C# Class functions
 #C# --- Predicate logic
 
@@ -509,7 +510,7 @@ flo1 = time.time() # 1597299316.1336622 # or Thu Aug 13 01:15:16 2020
 struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 
 #T# the elements in an struct_time object have self explaining names, when casted as an array, only the values become elements
-struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
+struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 tuple1 = tuple(struct_time1) # (2020, 8, 13, 1, 15, 16, 3, 226, 0)
 # |-----
 
@@ -533,7 +534,7 @@ flo2 = time.mktime(time.gmtime(flo1))    # 1597317316.0 == 1597299316 + 18000
 #          original flo1 for comparison == 1597299316.1336622
 
 #T# the timegm function returns the number of seconds from Epoch in GMT
-struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
+struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 flo2 = calendar.timegm(struct_time1) # 1597281316   == 1597299316 - 18000
 # |-----
 
@@ -541,7 +542,7 @@ flo2 = calendar.timegm(struct_time1) # 1597281316   == 1597299316 - 18000
 
 # |-----
 #T# the asctime function formats a struct_time object as a string
-struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
+struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 str1 = time.asctime(struct_time1) # 'Thu Aug 13 01:15:16 2020'
 
 #T# the ctime function formats the seconds from Epoch in local time as a string
@@ -549,47 +550,52 @@ flo1 = 1597299316.1336622
 str1 = time.ctime(flo1) # 'Thu Aug 13 01:15:16 2020'
 
 # |--------------------------------------------------\
-#T# the strftime function converts a struct_time object into a string with a custom format through format codes that start with %
+#T# the strftime function converts a struct_time object into a string with a custom format through format codes that start with the percent sign %
 
 # SYNTAX format codes of the strftime function
-#T#     %a weekday name abbreviated
-#T#     %A weekday name
-#T#     %b month name abbreviated
-#T#     %B month name
-#T#     %c default format
-#T#     %C century number
-#T#     %d day of the month with zero padding
-#T#     %D shorthand for %m/%d/%y
-#T#     %e day of the month
-#T#     %g year with two digits
-#T#     %G year
-#T#     %h equivalent to %b
-#T#     %H 24 hour clock
-#T#     %I 12 hour clock
-#T#     %j day of the year
-#T#     %m month number
-#T#     %M minute
-#T#     %n newline char
-#T#     %p AM or PM in a 12 hour clock 
-#T#     %r shorthand for %I:%M:%S %p
-#T#     %R shorthand for %H:%M
-#T#     %S second
-#T#     %t tab char
-#T#     %T shorthand for %H:%M:%S
-#T#     %u weekday number, monday is 1
-#T#     %U week of the year, starting monday
-#T#     %V week of the year, ISO 8601
-#T#     %W week of the year, starting sunday
-#T#     %w weekday number, sunday is 0
-#T#     %x shorthand for %m/%d/%y
-#T#     %X shorthand for %H:%M:%S
-#T#     %y year with two digits
-#T#     %Y year
-#T#     %z timezone change
-#T#     %Z timezone name
-#T#     %% escaped char %
+#T#     %a, locale weekday name abbreviated
+#T#     %A, locale weekday name
+#T#     %b, locale month name abbreviated
+#T#     %B, locale month name
+#T#     %c, locale default format
+#T#     %C, century number
+#T#     %d, day of the month with zero padding
+#T#     %D, shorthand for %m/%d/%y
+#T#     %e, day of the month
+#T#     %F, shorthand for %Y-%m-%d
+#T#     %g, year with two digits
+#T#     %G, year
+#T#     %h, equivalent to %b
+#T#     %H, hour in 24 hours format
+#T#     %I, hour in 12 hours format
+#T#     %j, day of the year
+#T#     %k, same as %H, but with space padding
+#T#     %l, same as %I, but with space padding
+#T#     %m, month number
+#T#     %M, minute
+#T#     %n, newline char
+#T#     %p, AM or PM in a 12 hour clock
+#T#     %P, same as %p, but lowercase
+#T#     %r, shorthand for %I:%M:%S %p
+#T#     %R, shorthand for %H:%M
+#T#     %s, seconds from epoch
+#T#     %S, second
+#T#     %t, tab char
+#T#     %T, shorthand for %H:%M:%S
+#T#     %u, weekday number, monday is 1
+#T#     %U, week of the year, starting monday
+#T#     %V, week of the year, ISO 8601
+#T#     %w, weekday number, sunday is 0
+#T#     %W, week of the year, starting sunday
+#T#     %x, shorthand for %m/%d/%y
+#T#     %X, shorthand for %H:%M:%S
+#T#     %y, year with two digits
+#T#     %Y, year
+#T#     %z, timezone change
+#T#     %Z, timezone name
+#T#     %%, escaped char %
 
-struct_time1 = time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
+struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, tm_mday=13, tm_hour=1, tm_min=15, tm_sec=16, tm_wday=3, tm_yday=226, tm_isdst=0)
 str1 = time.strftime("%A%B%C %d%t%u %G %h %Hor%I %j %m%M%n%p%S %V %W %w %y %z%%", struct_time1)
 #T# printing str1 yields
 # ThursdayAugust20 13     4 2020 Aug 06or06 226 0810
@@ -666,6 +672,22 @@ tuple1 = calendar.monthrange(1999, 4) # (3, 30)
 int1 = calendar.weekday(1999, 4, 1) # 3
 # |--------------------------------------------------/
 
+# |-----
+
+#C# --- Locales
+
+# |-----
+#T# locales are managed through the locale module
+import locale
+
+#T# list the available locales with the locale_alias dictionary
+locale.locale_alias # the output is too large to display here
+
+#T# get the current locale in a given category with the getlocale function
+locale.getlocale(locale.LC_CTYPE) # ('en_US', 'UTF-8')
+
+#T# change the locale in a given category with the setlocale function
+locale.setlocale(locale.LC_TIME, "es_CO.UTF-8")
 # |-----
 
 # |-------------------------------------------------------------
