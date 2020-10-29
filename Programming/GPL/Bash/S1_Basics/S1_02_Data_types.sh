@@ -57,22 +57,23 @@ str3=$str1" "$str2 # string one string two
 
 # |--------------------------------------------------\
 #T# escape sequences are
-#T#     "\a" bell system sound
-#T#     "\b" backspace
-#T#     "\f" formfeed
-#T#     "\r" carriage return
-#T#     "\n" newline, the same as \f\r
-#T#     "\t" horizontal tab
-#T#     "\v" vertical tab
-#T#     "\c" suppress the rest of the string
+#T#     "\a", alert bell system sound
+#T#     "\b", backspace
+#T#     "\f", formfeed
+#T#     "\r", carriage return
+#T#     "\n", newline, the same as \f\r
+#T#     "\t", horizontal tab
+#T#     "\v", vertical tab
+#T#     "\c", suppress the rest of the string
+#T#     "\e", escape char (same as ASCII 033 or Unicode U+001B)
 
-#T#     "\\"         literal backslash
-#T#     "\""         double quote
-#T#     "\$"         dollar sign
-#T#     "\`"         backtick
-#T#     "\uNNNN"     unicode character  where NNNN is a 16 bit hex number
-#T#     "\UNNNNNNNN" unicode 32 bit hex number
-#T#     "\xNN"       hex value
+#T#     "\\",         literal backslash
+#T#     "\"",         double quote
+#T#     "\$",         dollar sign
+#T#     "\`",         backtick
+#T#     "\uNNNN",     unicode character  where NNNN is a 16 bit hex number
+#T#     "\UNNNNNNNN", unicode 32 bit hex number
+#T#     "\xNN",       hex value
 
 str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cUnreachable"
 #T# printing str1 gives the following

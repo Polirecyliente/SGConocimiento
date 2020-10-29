@@ -69,6 +69,10 @@ func1 # the function name is func1
 #T# a function is called directly, its arguments use no parentheses nor commas, there can be more or less arguments than those used inside the function
 func1() if [ $1 == "arg1" ]; then echo "with $1, $2, and $3"; fi
 func1 arg1 arg2 arg3 arg4 arg5 # with arg1, arg2, and arg3
+
+#T# in Bash, functions are not really first class citizens, still, the name of a function can be assigned to a variable, and expanding that variable will call the function
+var1=func1
+$var1 arg1 # with arg1, , and
 # |-------------------------------------------------------------
 
 #C# Scope

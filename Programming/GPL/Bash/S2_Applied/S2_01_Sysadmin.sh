@@ -98,10 +98,10 @@ whoami # jul
 #T# Hardware detection
 
 # |-------------------------------------------------------------
-#T# list hardware with lshw, the option -short gives a summary
+#T# list hardware with the lshw command, the option -short gives a summary
 lshw -short
 
-#T# list pci devices along with their drivers
+#T# list pci devices along with their drivers with the lspci command
 lspci -k
 #T# the -k flag is to show the kernel drivers and kernel modules
 # |-------------------------------------------------------------
@@ -117,10 +117,17 @@ ldconfig -p
 #T# Devices
 
 # |-------------------------------------------------------------
-#T# Check mounted devices in /proc/mounts
-cat /proc/mounts
-#T# list mounted devices with mount -l
-mount -l
+#T# check mounted devices in the /proc/mounts file
+cat /proc/mounts # very large output
+
+#T# list mounted devices with the mount command, using the -l flag
+mount -l # very large output
+
+#T# check the file of the current terminal with the tty command
+tty # /dev/pts/1
+
+#T# check the terminal emulator with the $TERM variable
+echo $TERM # xterm-256color
 # |-------------------------------------------------------------
 
 #T# Fonts

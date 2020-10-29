@@ -47,6 +47,12 @@ echo ${!associative1[@]} # key2 key1
 #C# Strings
 
 # |-------------------------------------------------------------
+#T# a string can be made so that only its escaped chars (see S1_02_Data_types.sh) are interpreted (no parameter expansion)
+
+# SYNTAX $'str1\char1str2'
+#T# str1 and str2 are substrings, char1 is a single character that is escaped, char1 is interpreted with this syntax
+
+echo $'A\tB' # A	B
 
 #C# --- String formatting
 

@@ -81,21 +81,21 @@ str4 = str1 + str2 + str3 # 'string onestring twostring three'
 
 # |--------------------------------------------------\
 #T# escape sequences are
-#T#     '\a' bell system sound
-#T#     '\b' backspace
-#T#     '\f' formfeed
-#T#     '\r' carriage return
-#T#     '\n' newline, the same as \f\r
-#T#     '\t' horizontal tab
-#T#     '\v' vertical tab
+#T#     '\a', alert bell system sound
+#T#     '\b', backspace
+#T#     '\f', formfeed
+#T#     '\r', carriage return
+#T#     '\n', newline, the same as \f\r
+#T#     '\t', horizontal tab
+#T#     '\v', vertical tab
 
-#T#     '\\'         literal backslash
-#T#     "\'"         single quote
-#T#     '\"'         double quote
-#T#     '\uNNNN'     unicode character  where NNNN is a 16 bit hex number
-#T#     '\UNNNNNNNN' unicode 32 bit hex number
-#T#     '\xNN'       hex value
-#T#     '\NNN'       octal value
+#T#     '\\',         literal backslash
+#T#     "\'",         single quote
+#T#     '\"',         double quote
+#T#     '\uNNNN',     unicode character  where NNNN is a 16 bit hex number
+#T#     '\UNNNNNNNN', unicode 32 bit hex number
+#T#     '\xNN',       hex value
+#T#     '\NNN',       octal value
 
 str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
 #T# printing str1 gives the following
