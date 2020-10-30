@@ -74,6 +74,7 @@ str3=$str1" "$str2 # string one string two
 #T#     "\uNNNN",     unicode character  where NNNN is a 16 bit hex number
 #T#     "\UNNNNNNNN", unicode 32 bit hex number
 #T#     "\xNN",       hex value
+#T#     "\0NNN",      octal value
 
 str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cUnreachable"
 #T# printing str1 gives the following

@@ -110,6 +110,30 @@ echo "Please enter var1 as input"
 read var1
 
 #T# bash has several commands that are builtin, such as echo, read
+
+# |--------------------------------------------------\
+#T# commands can receive arguments, there are three types of arguments, flags, options (kwarg pairs), and positional parameters
+
+# SYNTAX command1 -f --option1 value1 -- positional1
+# SYNTAX command1 --flag1 -o=value1 positional1
+# SYNTAX command1 -f -ovalue1 positional1
+# SYNTAX command1 -fovalue1 positional1
+#T# the former syntaxes are equivalent, command1 is the command to be executed
+
+#T# -f is a flag, it can also have a long name such as --flag1, a flag is a binary variable, it can be turned on by its presence after the command, or turned off by its absence after the command
+
+#T# --option1 value1 is a key value pair, it can also be called a kwarg pair, --option1 can have a short name such as -o, value1 can be separated by space, by an equal sign =, or not separated from -o
+
+#T# positional1 is a positional parameter, the double dash -- is used to separate flags and options from positional parameters, to avoid ambiguity when there are positional parameters that start with a hyphen, e.g. '-pos1'
+
+#T# flags can be put in a single hyphen, the last one can be an option, e.g. -fgovalue1, if g is another flag
+
+#T# when an application is big, it can be composed of several different but related commands, in this case the command name is separated from the application name by space, as if the command was an argument (it's not), e.g. git pull, git add, git commit, etc.
+
+read -s -p prompt1 -- var1
+#T# -s is a flag to read silently (without showing the read chars), -p prompt1 are a kwarg pair (an option) to display prompt1 as the prompt, and var1 is a positional parameter separated from the rest with a double dash --, var1 stores the value received by the read command from stdin
+# |--------------------------------------------------/
+
 # |-----
 
 # |-------------------------------------------------------------
