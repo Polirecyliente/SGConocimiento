@@ -35,7 +35,7 @@
 
 #T# the ERR signal is sent when an error occurs, for example when attempting to open a nonexistent file
 
-#T# the DEBUG signal is sent everytime a command is executed if the debug option is enabled (by using 'set -x' (see S1_14_Interpreter.sh))
+#T# the DEBUG signal is sent everytime a command is executed
 
 #T# the EXIT signal is sent when a shell or subshell exits
 
