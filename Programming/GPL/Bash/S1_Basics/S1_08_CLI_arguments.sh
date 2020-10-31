@@ -4,7 +4,7 @@
 #T# Table of contents
 
 #C# Special parameters
-#C# Getopt
+#C# The getopt command
 
 #T# Beginning of content
 
@@ -58,7 +58,7 @@ echo $2 # ""
 
 # |-------------------------------------------------------------
 
-#C# Getopt
+#C# The getopt command
 
 # |-------------------------------------------------------------
 #T# the getopt command is used to parse the CLI arguments
