@@ -104,6 +104,12 @@ lshw -short
 #T# list pci devices along with their drivers with the lspci command
 lspci -k
 #T# the -k flag is to show the kernel drivers and kernel modules
+
+#T# list the kernel modules with their status with the lsmod command
+lsmod # output too large
+
+#T# get info about a module with the modinfo command
+modinfo bluetooth # output too large
 # |-------------------------------------------------------------
 
 #T# System libraries

@@ -62,19 +62,34 @@ fi
 # case $var1 in
 #     "value1") statements1;;
 #     "value2") statements2;;
-#     "value3") statements3;;
+#     "value3") statements3;&
+#     "value4") statements4;;&
+#     "value5") statements5;;
 #     *) default_statements1;;
 # esac
-#T# the value of var1 is taken and compared to the list of values, value1, value2, value3, etc., if the value of var1 matches any of these values, for example value3, then the statements associated with that value are executed, in this case statements3
+#T# the value of var1 is taken and compared to the list of values, value1, value2, value3, up to valueN, if the value of var1 matches any of these values, for example value2, then the statements associated with that value are executed, in this case statements2
 
-#T# there can be more values and statements, the last case is the default case, represented with the asterisk *, the default_statements1 execute when no case value matches the value of var1
+#T# the last case is the default case, represented with the asterisk *, the default_statements1 execute when no case value matches the value of var1
 
-C="str3"
+#T# each statement can be terminated with a different operator, there are three of them, ;;, ;;&, and ;&
+
+#T# a statement ended in ;; makes Bash end the case statement, in the syntax example, if value1 matches then only statements1 execute
+
+#T# a statement ended in ;;& makes Bash try to match the value of var1 with the following values again, if another match is found then its statement is executed and its ending operator is followed, in the syntax example, if value4 matches then default_statements1 is also executed
+
+#T# a statement ended in ;& will continue executing the following statements until a ;; or ;;& is found, if ;; is found then Bash ends the case statement there, if ;;& is found then the value of var1 is matched again with the following values, in the syntax example, if value3 is matched then statements3, statements4, and default_statements1 are executed
+
+C="str2"
 case ${C} in
-    "str1") echo "String 1 selected";;
-    "str2") echo "String 2 selected";;
-    "str3") echo "String 3 selected";;
+    "str1") echo "String 1 matched";;
+    "str2") echo "String 2 matched";&
+    "str3") echo "String 3 matched";;&
+    "str2") echo "String 2 matched again";;
 esac
+#T# the former prints
+# String 2 matched
+# String 3 matched
+# String 2 matched again
 # |-----
 
 # |-------------------------------------------------------------

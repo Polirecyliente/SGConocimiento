@@ -16,7 +16,7 @@
 import time
 
 #T# the sleep function suspends the execution of the program for a given time in seconds
-time.sleep(0.3) # None
+time.sleep(0.3) # None # suspends the execution for 0.3 seconds or 300 ms
 
 #T# terminate the script with the quit function
 # SYNTAX quit()

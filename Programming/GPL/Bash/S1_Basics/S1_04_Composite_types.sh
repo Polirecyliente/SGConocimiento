@@ -16,6 +16,9 @@
 arr1=( "elem1" "elem2" "elem3" )
 declare -A associative1=( [key1]="value1" [key2]="value2" )
 
+#T# the string is partially treated as a composite type, mainly because its elements can't be accessed directly
+str1="string1"
+
 #T# get all the elements of an array separated by IFS
 arr1=( "elem1" "elem2" "elem3" )
 echo ${arr1[@]} # elem1 elem2 elem3
@@ -34,6 +37,13 @@ arr1=( "elem1" "elem2" "elem3" )
 declare -A associative1=( [key1]="value1" [key2]="value2" )
 echo ${#arr1[@]}         # 3
 echo ${#associative1[@]} # 2
+
+#T# append new elements to a composite type with the += operator
+str1="string1"
+str1+=" appended_string1" # string1 appended_string1
+arr1=( "elem1" "elem2" "elem3" )
+arr1+=( "appended_elem1" )
+echo ${arr1[@]} # elem1 elem2 elem3 appended_elem1
 
 #T# get the values of an associative array
 declare -A associative1=( [key1]="value1" [key2]="value2" )

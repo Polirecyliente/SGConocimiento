@@ -56,6 +56,19 @@ int1=5
 eval 'echo "string $int1"' "in echo" # string 5 in echo
 
 # |--------------------------------------------------\
+#T# the exec command replaces the current shell with a command to be executed or with a redirection in the same shell
+
+# SYNTAX exec -o1 -o2 var2 command1 redirection1
+#T# everything is optional (if command1 is left out then redirection1 should be there and vice versa) 
+
+#T# command1 is executed and replaces the current shell, destroying the current shell, -o1 represents a flag, -o2 var2 represent a kwarg pair, the -c flag executes command1 in an empty environment, the -a name1 kwarg pair changes the value of $0 for name1 inside command1
+
+#T# if command1 is left out, so redirection1 is alone, then redirection1 applies to the current shell
+
+exec -c -a 'new_shell' rbash 1>file1 # opens restricted bash, in an empty environment, with the value of $0 being 'new_shell', and all output redirected to file1 in the working directory
+# |--------------------------------------------------/
+
+# |--------------------------------------------------\
 #T# the expr command outputs the result of an expression, this expression can be a boolean expression, or an integer arithmetic expression (but no exponentiation), a regex expression, or a string expression
 
 #T# the syntax is very similar to the rest of Bash, and uses most of the operators in the same way as Bash (see S1_03_Operators.sh), boolean expressions return 0 for false and 1 for true

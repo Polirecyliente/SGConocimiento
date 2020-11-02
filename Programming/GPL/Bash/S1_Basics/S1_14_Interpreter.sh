@@ -7,6 +7,7 @@
 #C# --- Interpreter options
 #C# --- Shell options
 #C# --- Command prompts
+#C# --- ANSI escape sequences
 
 #T# Beginning of content
 
@@ -17,7 +18,7 @@
 #C# --- Interpreter options
 
 # |-----
-#T# the interpreter can have several options set at the start and changed during execution
+#T# the interpreter can have several options changed during execution
 
 # SYNTAX set -o1
 # SYNTAX set +o1
@@ -32,22 +33,36 @@
 #T#     -k, +k, arguments that contain variables use the same variables of the calling environment, var1=$var1 uses $var1 from the calling environment
 #T#     -m, +m, enable job control, to manage background and foreground processes
 #T#     -n, +n, read commands but do not execute them, used executing 'bash -n script1.sh' prints the syntax errors in script1.sh
-#T#     -o arg1, +o arg1, activates the flag arg1, the names of the flags can be seen executing 'set --help'
+#T#     -o arg1, +o arg1, activates the shell option arg1, the names of the shell options can be seen executing 'set --help'
 #T#     -t, +t, exit the interpreter after executing one command
 #T#     -u, +u, print error when calling an unset variable
 #T#     -v, +v, print each line read
 #T#     -x, +x, print debug information
-#T#     -B, +B, perform brace expansion, for an explanation on brace expansion see S1_03_Operators.sh
+#T#     -B, +B, perform brace expansion (see S1_03_Operators.sh)
 #T#     -C, +C, impede bash from overwriting files
-#T#     -E, +E, the ERR trap can be activated by shell functions, for an explanation on traps see S1_09_Exception_handling.sh
-#T#     -H, +H, enable history expansion, for an explanation on history expansion see S1_03_Operators.sh
+#T#     -E, +E, the ERR trap can be activated by shell functions (see S1_09_Exception_handling.sh)
+#T#     -H, +H, enable history expansion (see S1_03_Operators.sh)
 #T#     -P, +P, follow symbolic links, e.g. if dir1 has a symlink link1, and -P is on, then executing 'cd link1' makes the pwd be dir1 and not link1
-#T#     -T, +T, the DEBUG and RETURN traps can be activated by shell functions, for an explanation on traps see S1_09_Exception_handling.sh
+#T#     -T, +T, the DEBUG and RETURN traps can be activated by shell functions (see S1_09_Exception_handling.sh)
 
 #T# the -i flag means the shell is interactive, the -s flag makes bash read commands from stdin
 
+#T# some of the shell options that can be turned on with the -o arg1 kwarg pair of the set command are the following
+#T#     -o pipefail, makes a pipeline of commands have the exit status of the last command to fail
+
 set -x
 set +x
+
+# |--------------------------------------------------\
+#T# other interpreter options are used when starting Bash
+
+# SYNTAX bash -o1 -o2 var2
+#T# this should be executed from the operating system shell, such as Bash itself, -o1 represents a flag, and -o2 var2 represent a kwarg pair
+
+#T# the following are some of these options
+#T#     -c "command_string1", makes Bash execute command_string1, any strings following command_string1 are taken as positional paratemers
+# |--------------------------------------------------/
+
 # |-----
 
 #C# --- Shell options
@@ -63,9 +78,13 @@ set +x
 
 #T# the following list is the list of shell options
 #T#     extglob, allows the use of an extended set of operators for globbing (see S1_03_Operators.sh)
+#T#     lastpipe, the last command in a pipeline executes in the current shell (see S1_12_System_calls.sh), job control must be turned off with 'set +m'
 
 shopt -s extglob
 shopt -u extglob
+
+# SYNTAX shopt -p option1
+#T# prints option1 and its status, on (-s) or off (-u), option1 is optional and leaving it out prints all options and their status
 # |-----
 
 #C# --- Command prompts
@@ -113,9 +132,12 @@ echo $PS4 # +
 #T#     \[, begins a control sequence (e.g. an ANSI escape sequence)
 #T#     \], ends a control sequence (e.g. an ANSI escape sequence)
 #T#     $'\char1' use a normal escape sequence, \char1 is any of the normal escape sequences in Bash (see S1_02_Data_types.sh), this allows using \u to insert an Unicode char instead of the current user
+# |-----
 
-# |--------------------------------------------------\
-#T# command prompts can be customized using ANSI escape sequences, these allow modifying the title of the terminal, the prompt string (e.g. its color), the cursor position, among other features
+#C# --- ANSI escape sequences
+
+# |-----
+#T# the terminal can be customized using ANSI escape sequences, these allow modifying the title of the terminal, the prompt string (e.g. its color), the cursor position, among other features
 
 #T# ANSI escape sequences begin with the escape character, there are a number of ways to write the escape character, all of them equivalent, '\e', '\033', '\x1B'
 
@@ -452,12 +474,9 @@ echo -e "\e]11;#DF79B8\a" # the terminal background becomes a pinkish color
 # SYNTAX \e]12;#six_hex1\a
 #T# this sets the cursor color, the new color is specified by six_hex1 as stated before
 echo -e "\e]12;#1322DF\a" # the cursor turns soft blue
-# |--------------------------------------------------/
-
 # |-----
 
 # |-------------------------------------------------------------
-
 
 
 
