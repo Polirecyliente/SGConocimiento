@@ -8,6 +8,7 @@
 #C# --- Shell options
 #C# --- Command prompts
 #C# --- ANSI escape sequences
+#C# Shell session
 
 #T# Beginning of content
 
@@ -478,12 +479,13 @@ echo -e "\e]12;#1322DF\a" # the cursor turns soft blue
 
 # |-------------------------------------------------------------
 
+#C# Shell session
 
+# |-------------------------------------------------------------
+#T# the env command outputs all the environment variables and their values
+env # output too large
 
-
-
-
-
-
-
-# export keyword for environment variables in an interpreter session
+#T# to add an environment variable to the current shell session, the export command is used
+export var1=75
+#T# now var1 appears in the output of the env command
+# |-------------------------------------------------------------
