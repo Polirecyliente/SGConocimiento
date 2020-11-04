@@ -101,9 +101,13 @@ textIOWrapper1.close()
 #T# the os module allows file manipulation in the file system hierarchy
 import os
 
+#T# create an empty file with the mknod function
+str1 = "/tmp/file1"
+os.mknod(str1)
+
 #T# the rename function serves to rename a file
 # SYNTAX os.rename("original_filename1", "new_filename1")
-str1 = "/tmp/SGC_Programming_GPL_Python_S1_file1"
+str1 = "/tmp/file1"
 str2 = "/tmp/renamed_file1"
 os.rename(str1, str2)
 

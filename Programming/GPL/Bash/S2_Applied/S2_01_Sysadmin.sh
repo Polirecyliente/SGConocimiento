@@ -3,21 +3,22 @@
 
 #T# Table of contents
 
-#T# Essential commands and syntax
-#T# Process management
-#T# User and group management
-#T# Hardware detection
-#T# Devices
-#T# System libraries
-#T# Fonts
-#T# Encodings
-#T# Internet
-#T# Latex
-#T# Files
+#C# Essential commands and syntax
+#C# Process management
+#C# User and group management
+#C# Hardware detection
+#C# Devices
+#C# System libraries
+#C# Fonts
+#C# Encodings
+#C# Internet
+#C# Latex
+#C# File system hierarchy management
+#C# Root privileges
 
 #T# Beginning of content
 
-#T# Essential commands and syntax
+#C# Essential commands and syntax
 
 # |-------------------------------------------------------------
 #T# remove everything but .file with rm !(*.file), this uses pattern matching (see S1_03_Operators.sh)
@@ -35,7 +36,7 @@ mkdir -p /tmp/parent_dir1/child_dir1
 date # mar 13 oct 2020 16:52:09 -05
 # |-------------------------------------------------------------
 
-#T# Process management
+#C# Process management
 
 # |-------------------------------------------------------------
 #T# get the pid of a process with pidof
@@ -75,7 +76,7 @@ kill -SIGKILL 187785
 # + -> is in the foreground process group
 # |-------------------------------------------------------------
 
-#T# User and group management
+#C# User and group management
 
 # |-------------------------------------------------------------
 #T# see the groups that the current user belongs to with the groups command
@@ -95,7 +96,7 @@ su serveruser
 whoami # jul
 # |-------------------------------------------------------------
 
-#T# Hardware detection
+#C# Hardware detection
 
 # |-------------------------------------------------------------
 #T# list hardware with the lshw command, the option -short gives a summary
@@ -112,7 +113,7 @@ lsmod # output too large
 modinfo bluetooth # output too large
 # |-------------------------------------------------------------
 
-#T# System libraries
+#C# System libraries
 
 # |-------------------------------------------------------------
 #T# print the cache of installed libraries
@@ -120,7 +121,7 @@ ldconfig -p
 #T# the -p flag is for printing the cache
 # |-------------------------------------------------------------
 
-#T# Devices
+#C# Devices
 
 # |-------------------------------------------------------------
 #T# check mounted devices in the /proc/mounts file
@@ -136,28 +137,28 @@ tty # /dev/pts/1
 echo $TERM # xterm-256color
 # |-------------------------------------------------------------
 
-#T# Fonts
+#C# Fonts
 
 # |-------------------------------------------------------------
 #T# fonts are stored in /usr/share/fonts/
 cd /usr/share/fonts/
 # |-------------------------------------------------------------
 
-#T# Encodings
+#C# Encodings
 
 # |-------------------------------------------------------------
 #T# get the list of encodings knows by the operating system with the -l flag of the iconv program
 iconv -l
 # |-------------------------------------------------------------
 
-#T# Internet
+#C# Internet
 
 # |-------------------------------------------------------------
 #T# download a file from the internet with wget, the -c flag is to continue downloading a partially downloaded file
 wget -c http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run
 # |-------------------------------------------------------------
 
-#T# Latex
+#C# Latex
 
 # |-------------------------------------------------------------
 #T# see the paths where latex packages can be installed
@@ -168,9 +169,23 @@ kpsepath tex
 tlmgr install undertilde
 # |-------------------------------------------------------------
 
-#T# Files
+#C# File system hierarchy management
 
 # |-------------------------------------------------------------
 #T# dereference a symbolic link
 readlink -f link_file1 # /path/to/original_file1
+# |-------------------------------------------------------------
+
+#C# Root privileges
+
+# |-------------------------------------------------------------
+#T# the sudo command grants root privileges
+
+# SYNTAX sudo -o1 command1
+#T# command1 is executed with root privileges, -o1 represents a flag
+
+#T# command1 is optional, the -s flag without command1 starts a shell session with the shell found in the SHELL environment variable, and with root as the user
+
+sudo echo "str1" # str1
+sudo -s # starts a shell session with the root user
 # |-------------------------------------------------------------

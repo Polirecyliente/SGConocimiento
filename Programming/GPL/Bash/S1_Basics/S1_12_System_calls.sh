@@ -8,6 +8,7 @@
 #C# --- Piping and redirection
 #C# File manipulation
 #C# Signal handling
+#C# Job control
 
 #T# Beginning of content
 
@@ -138,21 +139,129 @@ echo "string1" 1>&$var1 # bash: $var1: Bad file descriptor
 # |--------------------------------------------------\
 #T# a special construct with redirections allows using the while loop to read a file line by line, for this, the file is passed to the input of the read command inside the while loop
 
-# SYNTAX while read -r line1; do statements1; done < file1
-# SYNTAX 
+# SYNTAX while read line1; do statements1; done 0<file1
+# SYNTAX file1_output1 | while read line1; do statements1; done
+#T# both syntaxes are equivalent, and in both of them the idea is about sending the contents of file1 to the input of the read command
+
+while read line1; do echo $line1; sleep .5; done 0<file1
+cat file1 | while read line1; do echo $line1; sleep .5; done
+#T# the former both print (if these are the contents of file1)
+# first line
+# second line
+# current final line
 # |--------------------------------------------------/
 
+#T# a named pipe can be created with the mkfifo command, it's a file that works like the vertical bar | pipe, but with input and output redirections
+mkfifo pipe1
+ls -l 1>pipe1 &
+cat 0<pipe1
+#T# the former prints
+# -rw-rw---- 2 jul jul     42 nov  3 18:12 file1
+# -rw-rw---- 1 jul jul      4 oct 22 21:39 file2
+# -rw-rw---- 2 jul jul     42 nov  3 18:12 file3
+# drwxrwx--- 3 jul jul   4096 oct 11 17:17 dir1
+# prw-rw---- 1 jul jul      0 nov  4 11:14 pipe1
+# [1]+  Done                    ls --color=auto -l > pipe1
 # |-----
 
 # |-------------------------------------------------------------
 
+#C# File manipulation
 
+# |-------------------------------------------------------------
+#T# create an empty file with the touch command
+touch file1
 
-# the syntax to read a file line by line 'while read -r line1; do echo $line1; done < file1', or 'file1 output | while read line1...'
+#T# rename and move a file with the mv command
+# SYNTAX mv /path/to/original/file1 /path/to/renamed_or_moved/file1
+mv file1 new/path/renamed_file1
 
+#T# remove a file with the rm command
+rm file1
 
+#T# create an empty directory with the mkdir command
+mkdir dir1
 
-# trapping operating system signals, trap -l (lists the operating system signals)
+#T# change the working directory with the cd command
+cd dir1
 
-#T# job control for foreground and background processes, ampersand & (and the coproc keyword) to start an asynchronous script or command as a background process vs semicolon ; to start processes synchronously, the vertical line | pipes the output of a command as input of another
-# && and || in piping commands
+#T# print the working directory with the pwd command
+pwd
+# |-------------------------------------------------------------
+
+#C# Signal handling
+
+# |-------------------------------------------------------------
+#T# there are several operating system signals that can be handled with traps (see S1_09_Exception_handling)
+
+#T# the -l flag of the trap command lists the operating system signals
+trap -l # the system signals are the output
+
+#T# handling operating system signals follows the same rules as exception handling
+
+# SYNTAX trap "command1" signal1 signal2
+# SYNTAX trap "command1" int1 int2
+#T# both syntaxes are equivalent, command1 is the signal handler, signal1, signal2, up to signalN, are the signals being handled, when executing trap -l each signal has a integer associated, this integer can be used to identify the signal to be handled, such as int1, int2, up to intN
+
+signal_handler1() { echo -e "\noperating system signal handled"; }
+trap signal_handler1 SIGINT
+trap signal_handler1 2
+#T# both commands make signal_handler1 handle the interrumpt signal
+# |-------------------------------------------------------------
+
+#C# Job control
+
+# |-------------------------------------------------------------
+#T# the jobs command prints the current jobs
+jobs
+#T# the former prints this jobs table (with gedit, firefox, and sleep opened in the backgroung)
+# [2]   Running                 gedit &
+# [3]-  Done                    firefox
+# [4]+  Running                 sleep 10000 &
+#T# particular jobs can be identified inside commands by using the percent sign % followed by the job number (the one inside the brackets)
+
+#T# a command can be started in the background by ending it with an ampersand &
+gedit &
+firefox &
+sleep &
+#T# these order was used to create the former jobs table
+
+#T# the fg command serves to bring a job to the foreground
+
+# SYNTAX fg %int1
+# SYNTAX fg %?substring1
+#T# int1 is the number of the job as seen in the table of the jobs command inside brackets, substring1 is any substring inside the command of the job
+
+fg %4    # sleep 10000
+fg %?lee # sleep 10000
+
+# |--------------------------------------------------\
+#T# jobs can be stopped with the suspend character CTRL-Z (or ^Z)
+# |--------------------------------------------------/
+
+#T# the bg command serves to send a job to the background
+
+# SYNTAX bg %int
+# SYNTAX bg %?substring1
+#T# same as before (see the fg command)
+
+bg %4    # [4]+ sleep 10000 & # assuming that job 4 was stopped before
+bg %?lee # [4]+ sleep 10000 &
+
+# SYNTAX job_control_command1 %%
+# SYNTAX job_control_command1 %+
+#T# this applies job_control_command1 (such as fg, bg, etcetera) to the current job, the current job is noted in the jobs table with a plus sign + after the job number in brackets
+
+fg %% # sleep 10000
+bg %+ # [4]+ sleep 10000 &
+
+# SYNTAX job_control_command1 %-
+#T# same as before, but here job_control_command1 is applied to the previous job, the previous job is noted in the jobs table with a minus sign - after the job number in brackets
+
+fg %- # gedit
+
+# SYNTAX disown %job1
+#T# the disown command makes the background job1 independent from the shell, job1 can be identified in any of the shown was (an integer, a substring, through the current job %%, etc.)
+
+disown %4
+# |-------------------------------------------------------------
