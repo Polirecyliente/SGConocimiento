@@ -1,5 +1,11 @@
 
-#   git commands
+#   Git commands
+
+#T# Table of contents
+
+#C# 
+
+#T# Beginning of content
 
 #T# create a git repo in a folder with git init
 git init
