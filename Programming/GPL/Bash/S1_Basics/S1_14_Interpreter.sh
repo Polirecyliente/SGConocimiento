@@ -62,6 +62,7 @@ set +x
 
 #T# the following are some of these options
 #T#     -c "command_string1", makes Bash execute command_string1, any strings following command_string1 are taken as positional paratemers
+#T#     -s, allows writing the positional parameters for an interactive session, any argument that is positional is not interpreted as a file name, but as a positional parameter
 # |--------------------------------------------------/
 
 # |-----

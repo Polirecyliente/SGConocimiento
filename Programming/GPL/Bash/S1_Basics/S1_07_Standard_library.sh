@@ -6,6 +6,7 @@
 #C# Basic functions
 #C# Math functions
 #C# Datetime functions
+#C# Regex matching
 
 #T# Beginning of content
 
@@ -268,4 +269,186 @@ date -u -d "1998-10-21 20:42" +"%x and %X" # 21/10/98 and 20:42:00
 #T#     %z, timezone change
 #T#     %Z, timezone name
 #T#     %%, escaped char %
+# |-------------------------------------------------------------
+
+#C# Regex matching
+
+# |-------------------------------------------------------------
+
+# |--------------------------------------------------\
+#T# the grep command is used to globally match strings or patterns in the contents of files, and then print these matches
+
+# SYNTAX grep -o1 -o2 var2 'pattern1' file1 file2
+#T# about the options, -o1 represents a flag, -o2 var2 represent a kwarg pair, this matches pattern1 in the contents of file1, file2, up to fileN, pattern1 is in single quotes to avoid expansion
+
+#T# grep can also receive input directly via redirection and piping (see S1_12_System_calls.sh)
+
+#T# some of the options are
+#T#     -c, output the amount of lines that matched
+#T#     -n, output the line number as well
+#T#     -o, output only the match
+#T#     -v, invert the results (output the non matching lines)
+#T#     -E, interpret pattern1 with the Extended Regular Expression rules
+
+#T# the contents of file1 are the following
+# first word1 word1 line
+# second word1 line
+# third word1 line
+grep -n "i" file1
+#T# the former prints
+# 1:first word1 word1 line
+# 2:second word1 line
+# 3:third word1 lineh
+#T# the "i" letter is highlighted
+
+echo "in string1" | grep -n 'i' # 1:in string1 # the "i" letter is highlighted
+# |--------------------------------------------------/
+
+#T# the following regex operators and special characters can also be used in other commands that accept patterns, such as the sed program
+
+#T# other regex operators and special characters from PCRE (Perl Compatible Regular Expressions) can be used with the -P flag of the grep command, these may not work in other programs, such as the sed program
+
+#C# --- Characters
+
+# |-----
+#T# the dot . is used to match any char
+echo "str1" | grep -E '.' # str1 # all chars match
+
+#T# the backslash \ is used to escape chars, so as to match operators as raw chars
+echo '$|r1' | grep -E '\$|\|' # $|
+#T# note that to match a dollar sign $ it must be escaped and inside single quotes (because it's an operator in both Bash and regex)
+
+#T# the escaped char \s matches one whitespace (space, tab, newline)
+echo "a b" | grep -E '\sb' #  b
+
+#T# the escaped char \S matches one non whitespace
+echo "a bc" | grep -E '\Sc' # bc
+
+#T# the escaped char \w matches one alphanumeric character or an underscore
+echo "_a5." | grep -E '\w' # _a5
+
+#T# the escaped char \W matches one non alphanumeric character nor an underscore
+echo "_a5." | grep -E '\W' # .
+
+#T# the escaped char \d matches one digit
+echo "a5b" | grep -P '\d' # 5
+
+#T# the escaped char \D matches one non digit
+echo "5bc" | grep -P '\D' # bc
+
+#T# the escaped char \t matches one tab char (this also works in the sed program)
+echo "ab    c" | grep -P '\tc' #     c
+
+#T# the escaped char \r matches one carriage return (this also works in the sed program)
+echo -e "ab\rc" # cb
+echo -e "ab\rc" | grep -P '\rc' # c
+
+#T# the escaped char \N matches a non newline
+echo -e "ab\ncd" | grep -P '\Nc' #  # no match
+
+#T# the escaped char \h matches an horizontal whitespace (space, tab)
+echo -e "a b    c" | grep -P '\hb\hc' #  b    c
+
+#T# the escaped char \H matches a non horizontal whitespace
+echo -e "a b  c" | grep -P '\Hc' #  # no match
+# |-----
+
+#C# --- Quantifiers
+
+# |-----
+#T# the question mark ? is used as a quantifier to match 0 or 1 of the preceding char
+echo "str1" | grep -E 'r?1' # r1
+
+#T# the asterisk * is used as a quantifier to match 0 or more of the preceding char
+echo "st1" | grep -E 'r*1' # 1
+
+#T# the plus sign + is used as a quantifier to match 1 or more of the preceding char
+echo "strrr1" | grep -E 'r+1' # rrr1
+
+#T# the syntax {int1} is used as a quantifier to match the preceding char int1 times
+echo "strrrr1" | grep -E 'r{2}1' # rr1
+
+#T# the syntax {int1,int2} is used as a quantifier to match the preceding char between int1 and int2 times (as many times as possible), so int2 >= int1
+echo "strrrrr1" | grep -E 'r{1,3}1' # rrr1
+
+#T# lazy (non greedy) quantifiers are created with a question mark ? after the operator
+echo "12345" | grep -P '[0-9]*?' #  # no match
+# |-----
+
+#C# --- Character classes
+
+# |-----
+#T# the syntax [char1char2charN] is called a character class, and used to match any single one of the characters, char1, char2, up to charN
+echo "strr1" | grep -E '[trs]1' # r1
+
+#T# using a caret ^ at the start of a character class, negates it
+echo "strr1" | grep -E '[^trs]1' #  # no match
+
+#T# using a dash - between two characters inside a character class, matches any single one character in the range of said two characters
+echo "strr1" | grep -E '[3-H]1' # r1
+# |-----
+
+#C# --- Groupings
+
+# |-----
+#T# the parentheses () are used to capture a group of chars, and treat this group the same as treating a single char
+echo "strtr1" | grep -E '(tr)+1' # trtr1
+
+#T# the escaped numbers \1, \2, etc., are used to match (backreference) a captured group, \1 matches the first group, \2 the second, and so on
+echo "str1Astr1" | grep -E '(st)(r1)A\1\2' # str1Astr1
+
+#T# the vertical bar | is used for alternation (to match either one of the patterns separated with the vertical bar)
+echo "str1" | grep -E 'st|tr1' # st
+
+#T# the syntax (?:pattern1) is used to create a non capturing group for pattern1, this means that the match of pattern1 can't be recalled with a backreference like \1, because it doesn't create a group
+echo "strabab" | grep -P '(?:tr)(ab)\1' # trabab
+# |-----
+
+#C# --- Anchors and boundaries
+
+# |-----
+#T# the caret ^ (outside a character class) matches the following chars as an anchor at the start of the line
+echo "str1" | grep -E '^str' # str
+
+#T# the escaped char \A does the same as the caret ^, it anchors the match at the beginning of the line
+echo "str1" | grep -P '\Astr' # str
+
+#T# the dollar sign $ matches the preceding chars as an anchor at the end of the line
+echo "str1" | grep -E 'tr1$' # tr1
+
+#T# the escaped char \< matches at the start of a word
+echo "ab cd" | grep -E '\<cd' # cd
+
+#T# the escaped char \> matches at the end of a word
+echo "ab cd" | grep -E 'ab\>' # ab
+
+#T# the escaped char \b matches at a word boundary
+echo "ab cd" | grep -E '\bcd' # cd
+
+#T# the escaped char \B matches at a non word boundary
+echo "ab cd" | grep -E '\Bcd' #  # no match
+# |-----
+
+#C# --- Lookarounds
+
+# |-----
+#T# the syntax (?=pattern1) is used to create a positive lookahead with pattern1, so pattern1 must appear ahead when finding a match, because pattern1 is not matched
+echo "str1" | grep -P 'r(?=[0-2])\d' # r1 # only matches r0, r1, or r2
+
+#T# the syntax (?<=pattern1) is used to create a positive lookbehind with pattern1, so pattern1 must appear behind when finding a match, pattern1 is not matched
+echo "str1" | grep -P '(?<=st)r1' # r1
+
+#T# the syntax (?!pattern1) is used to create a negative lookahead with pattern1, so pattern1 can't appear ahead when finding a match, because pattern1 is not matched
+echo "str101" | grep -P 'r1(?!00)\d\d' # r101 # doesn't match in str100
+#T# use single quotes to avoid history expansion with !
+
+#T# the syntax (?<!pattern1) is used to create a negative lookbehind with pattern1, so pattern1 can't appear behind when finding a match, pattern1 is not matched
+echo "str1" | grep -P '(?<!st)r1' #  # no match
+# |-----
+
+
+
+
+
+
 # |-------------------------------------------------------------
