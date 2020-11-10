@@ -5,8 +5,15 @@
 
 #C# Basic functions
 #C# Math functions
+#C# String functions
 #C# Datetime functions
 #C# Regex matching
+#C# --- Characters
+#C# --- Quantifiers
+#C# --- Character classes
+#C# --- Groupings
+#C# --- Anchors and boundaries
+#C# --- Lookarounds
 
 #T# Beginning of content
 
@@ -210,6 +217,16 @@ var1=$(bc -l <<< "length(253.45)") # 5
 
 #T# generate a random number between int1 and int2 using the $RANDOM variable, (( int1 + $RANDOM % int2 ))
 (( var1 = 5 + $RANDOM % 22 )) # var1 == 11 # the number is between 5 and 27
+# |-------------------------------------------------------------
+
+#C# String functions
+
+# |-------------------------------------------------------------
+#T# the seq command creates a sequence of numbers, each on its own line, starting at the first argument and ending at the second argument (if there is only one argument then the sequence ends at this one argument)
+seq 2 3
+#T# the former prints
+# 2
+# 3
 # |-------------------------------------------------------------
 
 #C# Datetime functions
@@ -445,10 +462,5 @@ echo "str101" | grep -P 'r1(?!00)\d\d' # r101 # doesn't match in str100
 #T# the syntax (?<!pattern1) is used to create a negative lookbehind with pattern1, so pattern1 can't appear behind when finding a match, pattern1 is not matched
 echo "str1" | grep -P '(?<!st)r1' #  # no match
 # |-----
-
-
-
-
-
 
 # |-------------------------------------------------------------

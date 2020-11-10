@@ -365,7 +365,7 @@ echo */*/*/File1 # dir1/subdir1/subsubdir1/File1 # if such file exists under the
 #T# for the following syntax, an extended set of operators for globbing is required, this feature is turned on with the extglob option of the shopt command (see S1_14_Interpreter.sh)
 
 # SYNTAX operator1(pattern1|pattern2|pattern3)
-#T# there can be more than 3 patterns separated by vertical bar |, operator1 can be any of '?', '*', '+', '@', or '!', all patterns, pattern1, pattern2, pattern3, etcetera, are matching patterns, this syntax matches any of the patterns inside parentheses according to operator1
+#T# there can be more than 3 patterns separated by vertical bar |, operator1 can be any of '?', '*', '+', '@', or '!', all patterns, pattern1, pattern2, pattern3, up to patternN, are matching patterns, this syntax matches any of the patterns inside parentheses according to operator1
 
 #T# the use of the operators is
 #T#     ?, matches 0 or 1 time any of the patterns
