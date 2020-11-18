@@ -16,7 +16,7 @@
 
 <!-- #T# Beginning of content -->
 
-<!-- #T# render a Markdown file as an HTML file using the Markdown Preview Enhanced extension, right click the .md file and click "Open in Browser", this can be printed as PDF in Chromium -->
+<!-- #T# render a Markdown file as an HTML file using the Markdown Preview Enhanced extension, right click the .md preview file and click "Open in Browser", this can be printed as PDF in Chromium -->
 
 <!-- #T# Normal text -->
 
