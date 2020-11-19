@@ -388,8 +388,16 @@ echo "strrrr1" | grep -E 'r{2}1' # rr1
 #T# the syntax {int1,int2} is used as a quantifier to match the preceding char between int1 and int2 times (as many times as possible), so int2 >= int1
 echo "strrrrr1" | grep -E 'r{1,3}1' # rrr1
 
+# |--------------------------------------------------\
 #T# lazy (non greedy) quantifiers are created with a question mark ? after the operator
 echo "12345" | grep -P '[0-9]*?' #  # no match
+
+#T# the lazy quantifier *? can be emulated in programs where there is no lazy quantifiers, such as sed
+
+# SYNTAX [^c1]*c1
+#T# in here 'c1' is any single character, this syntax matches zero or more non 'c1' characters followed by a 'c1', exactly as .*?c1 using the lazy quantifier
+# |--------------------------------------------------/
+
 # |-----
 
 #C# --- Character classes
