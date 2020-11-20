@@ -14,6 +14,7 @@
 #C# Multiline commands
 #C# Hold space commands
 #C# Control flow
+#C# Examples
 
 #T# Beginning of content
 
@@ -444,4 +445,11 @@ echo -e "str1" | sed 'b; l' # str1 # without skipping this would also print 'str
 echo -e "str1" | sed -n 's/t/T/; t lbl1; p; p; :lbl1; l' # sTr1$
 
 #T# in the previous syntaxes, if :label1 is repeated several times then the jump is made to the last one
+# |-------------------------------------------------------------
+
+#C# Examples
+
+# |-------------------------------------------------------------
+#T# the following process a table of Unicode chars and through substitution rearranges the columns and puts the vertical bar | as a separator to use the result as a Markdown table
+sed -Ene 's/^U\+([^ ]*) \t(.*) \(U\+\1\) \t(.).*/| \&\#x\1\; | \3 | \2/ p' unicode_buffer.txt > out_buffer.txt
 # |-------------------------------------------------------------
