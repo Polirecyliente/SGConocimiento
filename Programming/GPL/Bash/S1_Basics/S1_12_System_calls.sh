@@ -8,7 +8,8 @@
 #C# --- Piping and redirection
 #C# File manipulation
 #C# Signal handling
-#C# Job control
+#C# Multiprocessing
+#C# --- Job control
 
 #T# Beginning of content
 
@@ -209,9 +210,13 @@ trap signal_handler1 2
 #T# both commands make signal_handler1 handle the interrumpt signal
 # |-------------------------------------------------------------
 
-#C# Job control
+#C# Multiprocessing
 
 # |-------------------------------------------------------------
+
+#C# --- Job control
+
+# |-----
 #T# the jobs command prints the current jobs
 jobs
 #T# the former prints this jobs table (with gedit, firefox, and sleep opened in the backgroung)
@@ -224,7 +229,7 @@ jobs
 gedit &
 firefox &
 sleep &
-#T# these order was used to create the former jobs table
+#T# this order of commands was used to create the former jobs table
 
 #T# the fg command serves to bring a job to the foreground
 
@@ -264,4 +269,6 @@ fg %- # gedit
 #T# the disown command makes the background job1 independent from the shell, job1 can be identified in any of the shown was (an integer, a substring, through the current job %%, etc.)
 
 disown %4
+# |-----
+
 # |-------------------------------------------------------------

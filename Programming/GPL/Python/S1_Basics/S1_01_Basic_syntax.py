@@ -16,13 +16,17 @@
 #T# Beginning of content
 
 # |-------------------------------------------------------------
-#T# run any Python file /path/to/file1.py in a terminal with
+#T# run any Python file /path/to/file1.py in the operating system shell with
 # SYNTAX python3 /path/to/file1.py
 
 #T# output variables to stdout with the print function
 # SYNTAX print(var1, var2, var3)
-#T# the same can be done by simply typing the variable's name
+#T# the same can be done by simply typing the variable's name in the Python prompt
 # SYNTAX var1
+
+#T# get help about a symbol or name (function, attribute, etc.) with the help function, used in a script or in the Python prompt
+# SYNTAX help(name1)
+help(round)
 # |-------------------------------------------------------------
 
 #C# Blocks of code

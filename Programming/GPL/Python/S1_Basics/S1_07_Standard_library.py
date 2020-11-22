@@ -101,11 +101,23 @@ int1 = math.ceil(x) # -5
 x = -5.15
 int1 = math.floor(x) # -6
 
+#T# the trunc function truncates a number (rounds it towards zero)
+x = -2.5
+int1 = math.trunc(x) # -2
+
 #T# the pi constant approximates the value of pi
 flo1 = math.pi # 3.14159...
 
 #T# the e constant approximates the value of e
 flo1 = math.e # 2.71828...
+
+#T# the sum function returns the sum of all elements in an array
+list1 = [2, 3, 2]
+int1 = sum(list1) # 7
+
+#T# the prod function returns the product of all elements in an array
+list1 = [2, 3, 2]
+int1 = math.prod(list1) # 12
 
 #T# the sqrt function returns the square root of a number
 y = 4

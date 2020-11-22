@@ -19,6 +19,7 @@
 #C# --- Python
 #C# File system hierarchy management
 #C# --- File compression
+#C# --- find and xargs commands
 #C# Root privileges
 
 #T# Beginning of content
@@ -79,12 +80,21 @@ kill -SIGKILL 187785
 #T# see the groups that the current user belongs to with the groups command
 groups jul
 
+#T# see the IDs (user ID, group IDs) from a user with the id command
+id serveruser # uid=1001(serveruser) gid=1001(serveruser) groups=1001(serveruser),27(sudo),998(bumblebee)
+
 #T# append user to an existing group with usermod, reboot may be necessary for this to take effect
-# SYNTAX 
-usermod -a -G audio jul
+
+# SYNTAX usermod -o1 -o2 val2 group1 user1
+#T# -o1 represents a flag, -o2 val2 represent a kwarg pair, user1 is added to group1
+
+usermod -a -G audio jul #  # the -a flag is to append the user, the -G group1 kwarg pair determines the group in which the user will be appended
 
 #T# list the existing users along with their passwd information
 nl /etc/passwd
+
+#T# list the existing groups
+nl /etc/group
 
 #T# switch user with the su command
 su serveruser
@@ -158,29 +168,32 @@ wget -c http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installer
 
 # |-----
 #T# get information about a package, like its name, size, description, version, maintainers, bug report, dependencies, homepage
-# apt show package1
+# SYNTAX apt show package1
 apt show qt5-quick-demos
 
 #T# install a package or several
-# apt install package1 package2 packageN
+# SYNTAX apt install package1 package2 packageN
 apt install vlc
 
 #T# uninstall a package or several
-# apt remove package1 package2 packageN
+# SYNTAX apt remove package1 package2 packageN
 apt remove vlc
 
 #T# uninstall and remove configuration files from a package or several
-# apt purge package1 package2 packageN
+# SYNTAX apt purge package1 package2 packageN
 apt purge vlc
 
+#T# simulate the output of apt, to see what would be installed, changed, or uninstalled with the -s flag
+apt purge -s vlc
+
 #T# check if a package or several are installed
-# apt policy package1 package2 packageN
+# SYNTAX apt policy package1 package2 packageN
 apt policy jfsutils
 
 #T# search for a package with apt search pattern1
 apt search jfsuti*
 
-#T# list packages with apt list, use the --upgradable flag to see upgradable packages
+#T# list packages with apt list, use the --upgradable flag to see upgradable packages, use the --installed flag to see the installed packages
 apt list --upgradable
 
 #T# see files inside a package with dpkg-query -L package1
@@ -190,26 +203,40 @@ dpkg-query -L jfsutils
 dpkg -S $(which ls)
 
 #T# get the packages that contain and will install a given file
-# apt-file search file
+# SYNTAX apt-file search file
 #T# but first update the cache
-# apt-file update
+# SYNTAX apt-file update
 apt-file update
 apt-file search reiserfsck
 
+#T# check the dependencies of a package
+# SYNTAX apt-rdepends package1
+apt-rdepends zerotier-one
+
+#T# check the dependent packages of a package
+# SYNTAX apt-rdepends -r package1
+apt-rdepends -r dmtracedump
+
 #T# set package to be autoremoved
-# apt-mark [auto|manual] package1
+
+# SYNTAX apt-mark auto package1
+#T# this sets package1 to be removed automatically
+
+# SYNTAX apt-mark manual package1
+#T# this sets package1 to be removed manually
+
 apt-mark auto jfsutils
 
 #T# see the different versions available for a package with
-# aptitude versions packageName
+# SYNTAX aptitude versions package_name1
 aptitude versions apache2
 
 #T# install the building dependencies to build a program from source code
-# apt build-dep program1
+# SYNTAX apt build-dep program1
 apt build-dep vlc
 
 #T# add a package repository
-# apt-add-repository repository_name1
+# SYNTAX apt-add-repository repository_name1
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 apt-add-repository ppa:jonathonf/ffmpeg-4
 
@@ -256,7 +283,6 @@ ufw default allow outgoing
 
 #T# from now on, the deny, reject, and allow arguments will be used for other commands, but their meaning is the same as with the default policies
 
-# |--------------------------------------------------\
 #T# create explicit rules to allow or deny different connections
 
 # SYNTAX ufw deny|reject|allow port1|service_name1
@@ -265,9 +291,7 @@ ufw default allow outgoing
 ufw allow 22
 ufw allow ssh
 #T# both examples are equivalent
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# create rules with port ranges and protocols
 
 # SYNTAX ufw deny|reject|allow port1:port2/[protocol1]
@@ -275,7 +299,6 @@ ufw allow ssh
 
 ufw reject 5000:6030/tcp
 #T# this rejects all IPs connecting to ports 5000 to 6030 using tcp
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# the IP addresses can follow the Classless Inter Domain Routing style (CIDR numbers), CIDR numbers represent IP ranges
@@ -289,7 +312,6 @@ IP_RANGE1=192.168.255.0/31
 #T# as the CIDR number is 31, the first 31 bits of the IP range remain unchanged, so the resulting IP range only has the last bit, the bit 32, varying
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# create rules about specific IPs
 
 # SYNTAX ufw deny|reject|allow from ip1 to ip2 port port1
@@ -297,9 +319,7 @@ IP_RANGE1=192.168.255.0/31
 
 ufw allow from 192.168.0.0/24 to 192.168.0.13 port 443
 #T# IPs in the range [192.168.0.0, 192.168.0.255] are allowed to connect in port 443, this host is 192.168.0.13
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# create rules about network interfaces
 
 # SYNTAX ufw deny|reject|allow incoming|outgoing on net1 from ip1
@@ -307,7 +327,6 @@ ufw allow from 192.168.0.0/24 to 192.168.0.13 port 443
 
 ufw deny incoming on wlp3s0 from 236.217.38.92
 #T# this denies connections from the IP 236.217.38.92 to the wireless network interface identified by wlp3s0
-# |--------------------------------------------------/
 
 #T# list the available firewall rules by number
 ufw status numbered
@@ -411,6 +430,92 @@ tar xjf file.tar.bz2
 
 #T# decompress a .tar.xz file leaving it as .tar with
 xz -d compressed_file1.tar.xz
+# |-----
+
+#C# --- find and xargs commands
+
+# |-----
+
+# |--------------------------------------------------\
+#T# the find command is used to find files
+
+# SYNTAX find -o1 -o2 val2 /path/to/search1 -option1 -option2 value2 '!' -option3
+#T# this searches in /path/to/search1, -o1 represents a flag, -o2 val2 represent a kwarg pair, up to -oN, these must be written before the path
+
+#T# -option1 represents a flag, -option2 value2 represent a kwarg pair, -option1, -option2, -option3, up to -optionN are long options with a single hyphen, they are used as expressions to refine the search
+
+#T# the pairs -option2 value2 in which value2 is a measure of time, or size, are written as a number with a plus or minus sign, e.g. if value2 is in minutes then '+5' means more than 5 minutes ago, '-5' means less than 5 minutes ago, '5' means exactly five minutes ago, it can be a float using comma, for example '6,1', when comparing sizes '+5M' means more than 5 mebibytes and so on
+
+#T# the exclamation mark '!' is used to negate only the option that follows it, the syntax shown finds files where -option3 does not match
+
+#T# globbing patterns such as 'str*' should be quoted
+
+#T# -o1 and -o2 val2 can be one of the following
+#T#     -D str1, print debug info according to str1, replace str1 for 'help' to see the different debug options
+#T#     -H, only follow symlinks that are directly written or expanded in the arguments to the find command
+#T#     -L, follow symlinks
+#T#     -Oint1, do search optimization, int1 is the level of optimization between 0 and 3
+#T#     -P, do not follow symlinks
+
+#T# -option1, -option3, and -option2 value2 can be one of the following
+#T#     -amin time1, finds files and dirs accessed time1 minutes ago, see up for the time1 notation
+#T#     -anewer file1, finds files and dirs accessed after file1
+#T#     -atime time1, finds files and dirs accessed time1 days ago, see up for the time1 notation
+#T#     -cmin time1, finds files and dirs changed time1 minutes ago, see up for the time1 notation
+#T#     -cnewer file1, finds files and dirs changed after file1
+#T#     -ctime time1, finds files and dirs changed time1 days ago, see up for the time1 notation
+#T#     -depth, in each dir, process first the files and last the dir
+#T#     -delete, deletes found files, should be used at the end of the command, because it deletes all files that were found before its place in the command
+#T#     -empty, finds empty files and dirs
+#T#     -exec command1 '{}' \;, executes command1, placing each found file in the placeholder '{}' and terminating the command with \;
+#T#     -exec command1 '{}' +, same as before, but append the found files one after the other separated by space, so that command1 uses them as arguments
+#T#     -execdir command1, like -exec in both syntaxes, but command1 is run from the subdir that contains the found file
+#T#     -executable, finds executable files and dirs
+#T#     -false, false value for boolean expression
+#T#     -fprint file1, prints the output directly to file1
+#T#     -fstype fs1, finds files with the filesystem type fs1
+#T#     -gid int1, finds files and dirs whose group id is int1
+#T#     -group str1, finds files and dirs whose group name is str1
+#T#     -ilname file1, finds the symlinks to file1, case insensitive
+#T#     -iname file1, finds files and dirs with the name file1, case insensitive
+#T#     -inum int1, finds the file whose inode is int1
+#T#     -ipath path1, like -iname, but find the whole path1, not only the last file or dir name, so, not only the basename
+#T#     -iregex 'pattern1', finds files and dirs matching pattern1, it must be quoted
+#T#     -links int1, finds files with int1 hard links
+#T#     -lname file1, finds the symlinks to file1
+#T#     -maxdepth int1, finds files and dirs at a dir depth of maximum int1
+#T#     -mindepth int1, finds files and dirs at a dir depth of minimum int1
+#T#     -mmin time1, finds files and dirs modified time1 minutes ago, see up for the time1 notation
+#T#     -mount, do not descend into directories from other filesystems and partitions
+#T#     -mtime time1, finds files and dirs modified time1 days ago, see up for the time1 notation
+#T#     -name file1, finds files and dirs with the name file1
+#T#     -newer file1, finds files and dirs modified after file1
+#T#     -nogroup, finds files and dirs whose group is not registered in /etc/group
+#T#     -nouser, finds files and dirs whose user is not registered in /etc/passwd
+#T#     -path path1, like -name, but find the whole path1, not only the last file or dir name, so, not only the basename
+#T#     -perm int1, finds files and dirs that have their permission bits set as the octal number int1, int1 has up to 4 digits
+#T#     -perm str1, finds files and dirs that have their permissions as str1, the format of str1 is 'ugo=rwx,ugo=rwx,ugo=rwx' any single char can be deleted, except for '=', they mean, u user, g group, o other, r read, w write, x execute
+#T#     -readable, finds readable files and dirs
+#T#     -regex 'pattern1', finds files and dirs matching pattern1, it must be quoted
+#T#     -samefile file1, finds any file that is the same as file1, so hard links, and soft links (using the -L flag)
+#T#     -size size1, size1 has three parts, sign, number, letter, see up for the size1 notation which explains sign and number, the letters are, 'c' for bytes, 'w' for words (two bytes), 'b' for 512 bytes, 'k' for kibibytes, 'M' for mebibytes, 'G' for gibibytes
+#T#     -true, true value for boolean expression
+#T#     -type type1, finds files of type1, type1 can have the values, 'b' for block files, 'c' for char files, 'd' for dirs, 'f' for files, 'l' for symlinks, 'p' for pipes, 's' for sockets
+#T#     -uid int1, finds files and dirs whose user id is int1
+#T#     -user str1, finds files and dirs whose username is str1
+#T#     -writable, finds writable files and dirs
+
+find -H . link1 # finds files and dirs and dereferences link1 to check if it is a file or dir
+find . -amin -5 #  # finds files accessed less than 5 minutes ago
+find . -ctime +2 #  # finds files modified more than 2 days ago
+find . '!' -executable '!' -readable #  # finds files that are non executable and non readable, kwarg options can be used after the '!' too
+find . -fstype ext4 #  # finds files with an ext4 filesystem
+find . -gid 1000 #  # finds files whose group id is 1000
+find . -inum 52300562 # ./file1 # if 52300562 is the inode of file1
+find . -path './dir1*' # finds files that contain the path ./dir1* after globbing
+find . -regex '..[A-z]+[0-9]*' # finds files with the given regex pattern
+# |--------------------------------------------------/
+
 # |-----
 
 # |-------------------------------------------------------------

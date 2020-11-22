@@ -39,7 +39,7 @@ type man # man is hashed (/usr/bin/man)
 # SYNTAX compgen -o1 str1
 #T# -o1 is a flag to indicate the type of name for which completions will be generated, str1 is optional and it contains a string that will be matched by the resulting completions, and only the matching completions are output
 
-#T# -o1 con be one of several values
+#T# -o1 can be one of the following
 #T#     -a, generates completions of aliases
 #T#     -b, generates completions of builtin commands
 #T#     -c, generates completions of commands

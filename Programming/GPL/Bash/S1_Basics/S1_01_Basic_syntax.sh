@@ -21,6 +21,17 @@
 
 #T# output variables to stdout with the echo command
 # SYNTAX echo "$var1 $var2 $var3"
+
+#T# get help about a symbol or name (function, command, etc.) in a few ways
+
+# SYNTAX help builtin_command1
+#T# this prints help about builtin_command1
+
+# SYNTAX man command1
+#T# this prints the manual pages of command1
+
+# SYNTAX type symbol1
+#T# this prints the type of symbol1 which can be a function, command, etc.
 # |-------------------------------------------------------------
 
 #C# Blocks of code

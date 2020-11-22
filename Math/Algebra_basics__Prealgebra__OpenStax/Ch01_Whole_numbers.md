@@ -9,8 +9,9 @@
 
 (Recta real)
 **Number line**
+[Number line code](Programs/Ch01/S01_01_Number_line.py)
 
-![image_number_line](Aux01/Ch01_Number_line.png)
+![image_number_line](Images/Ch01/S01_01_Number_line.png)
 
 (Origen)
 **Origin**: this is the point at 0.
@@ -29,19 +30,13 @@
 
 (Redondeo)
 **Rounding**: approximating a number with another of less significant digits.
-
-```Python
-#T# The round function rounds to the nearest even
-num1 = round(1.5) # 2
-num1 = round(2.5) # 2
-num1 = round(23658, -2) # 23700
-num1 = round(23650, -2) # 23600
-```
+[Rounding code](Programs/Ch01/S01_02_Rounding.py)
 
 ## Addition (Adición)
 [Ch01_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=32)
 
 Addition is the operation of adding numbers together.
+[Addition code](Programs/Ch01/S02_01_Addition.py)
 
 (Operador suma)
 **Sum operator**: this operator is $+$, the plus sign.
@@ -76,6 +71,7 @@ Example: $2 + 2 = 4$
 [Ch01_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=48)
 
 Subtraction is the operation of subtracting a number from another.
+[Subtraction code](Programs/Ch01/S03_01_Subtraction.py)
 
 (Operador resta)
 **Subtraction operator**: this operator is $-$, the minus sign.
@@ -91,6 +87,7 @@ Example: $5 - 3 = 2$
 [Ch01_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=63)
 
 Multiplication is the operation of multiplying numbers together, this means the repeated addition of a number with itself, the amount of repetitions is the other number in the operation.
+[Multiplication code](Programs/Ch01/S04_01_Multiplication.py)
 
 (Operador multiplicación)
 **Multiplication operator**: this operator is $\times$, the times sign. Another is $\cdot$, the dot sign. Another is $()$, the parentheses signs.
@@ -116,6 +113,7 @@ Example: $4 \times 3 = 3 + 3 + 3 + 3 = 12$
 [Ch01_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=81)
 
 Division is the operation of dividing a first number by a second one, this means the repeated subtraction of the second number from the first one, the amount of repetitions is the result of the operation.
+[Division code](Programs/Ch01/S05_01_Division.py)
 
 (Operador división)
 **Division operator**: this operator is $\div$, the division sign. Another is $/$, the slash sign. Another is $\text{---}$, the horizontal line sign.
@@ -137,6 +135,7 @@ Division is the operation of dividing a first number by a second one, this means
 
 (Residuo)
 **Remainder**: this is the number that is left over after doing the repeated subtraction, let the quotient be $q$, and the remainder be $r$, so $a/b = q + r/b$
+[Remainder code](Programs/Ch01/S05_02_Remainder.py)
 
 Multiplication and division are inverse operations.
 

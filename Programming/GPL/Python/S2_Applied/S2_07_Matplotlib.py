@@ -107,8 +107,8 @@ plt.figure(fig1.number)
 # |-----
 #T# create the axes with the axes constructor, it returns an axes object
 
-# SYNTAX plt.axes([rect1, label = 'label_string1'])
-#T# rect1 is a list with measures [left_pos1, bottom_pos1, width1, height1], in axes coordinates
+# SYNTAX plt.axes(rect1, label = 'label_string1')
+#T# the arguments are optional, rect1 is a list with measures [left_pos1, bottom_pos1, width1, height1], in axes coordinates
 
 #T# the label kwarg serves to put a label to the axes, that acts as the name of the axes
 
@@ -321,6 +321,18 @@ spine1 = ax1.spines['top']
 
 #T# the set_visible function of the spines is used the set their visibility
 spine1.set_visible(False)
+
+#T# the set_position function is used to set the position of a spine
+
+# SYNTAX spine1.set_position(('position_type1', num1))
+#T# 'position_type1' and num1 form a tuple, num1 indicates the exact position in which spine1 will be placed
+
+#T# 'position_type1' is a string, its value can be
+#T#     'outward', num1 is measured in points outward from the plot, so a negative value puts the spine inwards
+#T#     'axes', num1 is in axes coordinates
+#T#     'data', num1 is in data coordinates
+
+spine1.set_position(('outward', 2)) # spine1 is places 2 points outwards
 # |-----
 
 #C# --- Ticks
