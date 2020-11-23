@@ -22,11 +22,9 @@ import argparse
 #T# create a parser object with the ArgumentParser constructor
 parser1 = argparse.ArgumentParser()
 
-# |--------------------------------------------------\
 #T# the add_argument function adds command line arguments that the program will recognize
 
 # SYNTAX parser1.add_argument("arg_name1", help = "help_string1", choices = list1, type = type1, action = "action1", default = val1)
-
 #T# an argument named "arg_name1" is added to parser1, if "arg_name1" starts with a hyphen then it's an optional argument, otherwise it's positional, the value of "arg_name1" is the value entered in the CLI
 
 #T# the help kwarg is for the help string "help_string1"
@@ -47,7 +45,6 @@ parser1.add_argument("positional_arg1", help = "this is the first arg", choices 
 parser1.add_argument("positional_arg2", type = float)
 parser1.add_argument("-f", "--flag1", action = "store_true")
 parser1.add_argument("-oCount", action = "count", default = 0)
-# |--------------------------------------------------/
 
 #T# the parse_args function returns a Namespace object with the args and its values obtained from the CLI
 args1 = parser1.parse_args() # Namespace(flag1 = False, oCount = 2, positional_arg1 = 'str2', positional_arg2 = 5.4)

@@ -55,8 +55,12 @@ str1='string one'
 str2="string two"
 str3=$str1" "$str2 # string one string two
 
-# |--------------------------------------------------\
-#T# escape sequences are
+#T# escape sequences serve to do in-band signaling
+
+# SYNTAX \char1
+#T# char1 is commonly a single char, except for octal values, hex values, unicode chars, etcetera
+
+#T# the escape sequences are
 #T#     "\a", alert bell system sound
 #T#     "\b", backspace
 #T#     "\f", formfeed
@@ -66,6 +70,7 @@ str3=$str1" "$str2 # string one string two
 #T#     "\v", vertical tab
 #T#     "\c", suppress the rest of the string
 #T#     "\e", escape char (same as ASCII 033 or Unicode U+001B)
+#T#     "\0", null char
 
 #T#     "\\",         literal backslash
 #T#     "\"",         double quote
@@ -82,7 +87,6 @@ str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cU
 # Line"2
 #       Form
 # or ʠ𐍆l$`  feed lines
-# |--------------------------------------------------/
 
 #C# --- Heredoc and here string
 
@@ -136,7 +140,6 @@ delimiter1
 # second line
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# a here string is used like a heredoc but it only sends one string as input to a command
 
 # SYNTAX command1 <<< "string1"
@@ -144,8 +147,6 @@ delimiter1
 
 var1=2
 bc <<< "3 + $((1 + 1)) + $(echo 1) + $var1" # 8 # 3 + 2 + 1 + 2
-# |--------------------------------------------------/
-
 # |-----
 
 # |-------------------------------------------------------------

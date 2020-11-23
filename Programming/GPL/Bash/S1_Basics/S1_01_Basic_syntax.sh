@@ -67,7 +67,6 @@ int1=5
 str1='Hello       world!"'
 str2="second str'ing"
 
-# |--------------------------------------------------\
 #T# double quotes are used for interpolated strings (single quotes create raw, literal strings), variable substitution is made with
 
 # SYNTAX ${var1}
@@ -75,8 +74,6 @@ str2="second str'ing"
 
 int1=5
 str2="string ${int1} interpolation" # string 5 interpolation
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #C# Escape sequences
@@ -120,10 +117,7 @@ echo "Hello, Bash!" "Second arg" # Hello, Bash! Second arg
 echo "Please enter var1 as input"
 read var1
 
-#T# bash has several commands that are builtin, such as echo, read
-
-# |--------------------------------------------------\
-#T# commands can receive arguments, there are three types of arguments, flags, options (kwarg pairs), and positional parameters
+#T# bash has several commands that are builtin, such as echo, read, commands can receive arguments, there are three types of arguments, flags, options (kwarg pairs), and positional parameters
 
 # SYNTAX command1 -f --option1 value1 -- positional1
 # SYNTAX command1 --flag1 -o=value1 positional1
@@ -141,10 +135,7 @@ read var1
 
 #T# when an application is big, it can be composed of several different but related commands, in this case the command name is separated from the application name by space, as if the command was an argument (it's not), e.g. git pull, git add, git commit, etc.
 
-read -s -p prompt1 -- var1
-#T# -s is a flag to read silently (without showing the read chars), -p prompt1 are a kwarg pair (an option) to display prompt1 as the prompt, and var1 is a positional parameter separated from the rest with a double dash --, var1 stores the value received by the read command from stdin
-# |--------------------------------------------------/
-
+read -s -p prompt1 -- var1 #| -s is a flag to read silently (without showing the read chars), -p prompt1 are a kwarg pair (an option) to display prompt1 as the prompt, and var1 is a positional parameter separated from the rest with a double dash --, var1 stores the value received by the read command from stdin
 # |-----
 
 # |-------------------------------------------------------------
@@ -159,6 +150,8 @@ int1=5
 
 #T# the colon : operator is used to create a no-op statement that does nothing, as a filler
 :
+
+#T# in Bash, an alias is a shell word that executes another command or keyword, a keyword is a shell word that has its own semantic meaning for Bash, a function is a command created in Bash, a builtin is a command that comes with Bash, a file is an external command that resides in the file hierarchy
 # |-------------------------------------------------------------
 
 #C# Multiline statements

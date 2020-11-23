@@ -85,14 +85,14 @@ echo "$var1" # value one # in this case "value one" is the argument, instead of 
 #T# a null parameter is defined as an empty string
 null_var1=""
 
-# |--------------------------------------------------\
 #T# a parameter can be unset so it doesn't exist anymore in the namespace of the current shell, this can also be applied to functions to delete them
+
 # SYNTAX unset var1
+#T# var1 is unset
+
 unset_var1="temp value"
 unset unset_var1 # unset_var1 becomes as if it was never defined
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# a variable's length in bytes can be expanded
 
 # SYNTAX ${#var1}
@@ -102,7 +102,6 @@ var1="ʠüña"
 echo ${#var1} # 4
 LC_ALL=C      # changing the locale
 echo ${#var1} # 7
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# the case of the string value of a parameter (variable) can be modified
@@ -285,15 +284,12 @@ echo "Bash exec file is in "`which bash`  # Bash exec file is in /bin/bash
 int1=$(( 7 - 2 + 1 )) # 6
 int2=$(( int1 + 5 ))  # 11 # int1 must not be expanded with dollar sign $
 
-# |--------------------------------------------------\
 #T# the let command can be used to do the same as arithmetic expansions
 
 # SYNTAX let "expression1"
 #T# expression1 is any arithmetic expression consisting of integers, it must contains at least one variable
 
 let "var1 = 5 + 2" # var1 == 7
-# |--------------------------------------------------/
-
 # |-----
 
 #C# --- Word splitting
@@ -480,7 +476,6 @@ let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
 
 #T# comparisons between floating point numbers can be done with the bc command
 
-# |--------------------------------------------------\
 #T# comparisons in general are made in two ways (both give the same result), the test command, and the double brackets [[]]
 
 # SYNTAX test "$var1" "-o1" "$var2"
@@ -489,9 +484,7 @@ let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
 
 int1=5
 test "-v" "int1" # $? == 0 # true
-[[ -v "int1" ]]  # $? == 0 # true
-#T# the -v var1 kwarg makes the test return true if var1 is defined (var1 is set in the interpreter)
-# |--------------------------------------------------/
+[[ -v "int1" ]]  # $? == 0 # true #| the -v var1 kwarg makes the test return true if var1 is defined (var1 is set in the interpreter)
 
 #T# the following are the relational operators shown using both the test command and the double brackest [[]]
 
@@ -545,7 +538,6 @@ int1=12; int2=5
 test "$int1" "-le" "$int2" # $? == 1 # false
 [[ "$int1" -le "$int2" ]]  # $? == 1 # false
 
-# |--------------------------------------------------\
 #T# this syntax is used to get boolean values with their traditional meanings, 0 for false, 1 for true, this can be applied with all the relational operators
 
 # SYNTAX (( bool1 = boolean_expression1 ))
@@ -559,7 +551,6 @@ test "$int1" "-le" "$int2" # $? == 1 # false
 (( bool1 = 7 < 4 ))  # 0 # false
 (( bool1 = 7 >= 4 )) # 1 # true
 (( bool1 = 7 <= 4 )) # 0 # false
-# |--------------------------------------------------/
 
 # |-------------------------------------------------------------
 
@@ -699,8 +690,6 @@ test "!" "$var1" # $? == 0 # true
 #C# Shell operators
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# the dot command, and its synonym the source command, are used for executing a script in the same shell environment, normally scripts are executed in a subshell
 
 # SYNTAX . script1.sh
@@ -709,13 +698,10 @@ test "!" "$var1" # $? == 0 # true
 
 . S1_08_CLI_args.sh      # executes this script in the same shell
 source S1_08_CLI_args.sh # executes this script in the same shell
-# |--------------------------------------------------/
 
 #C# --- History expansion
 
 # |-----
-
-# |--------------------------------------------------\
 #T# the history can be checked with the history command
 
 history
@@ -724,11 +710,10 @@ history
 #    2  cat ~/.bash_history 
 #    3  git push
 #    4  history
-#T# or any list of commands executed before and stored in the history
+#| or any list of commands executed before and stored in the history
 
 #T# clear the history with the -c flag of the history command
 history -c
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# any command in the history can be executed again with its number in the history
@@ -740,7 +725,7 @@ history -c
 
 #T# as an example, if the command number 6 is 'echo "repeated string"'
 !6 "and more"
-#T# then the former prints
+#T# the former prints
 # echo "repeated string" "and more"
 # repeated string and more
 
@@ -752,7 +737,6 @@ history -c
 !-3
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# commands in the history can also be expanded with their starting characters
 
 # SYNTAX additionals1 !starting_chars1 additionals2
@@ -761,18 +745,14 @@ history -c
 #T# additionals1 and additionals2 are any other commands and arguments added before and after the command that starts with starting_chars1
 
 #T# if the commands 'git pull' and 'git push' are on the history, then executing
-!gi
-#T# will execute 'git push' as it's the last one in the history
-# |--------------------------------------------------/
+!gi #| will execute 'git push' as it's the last one in the history
 
-# |--------------------------------------------------\
 #T# appending :p to a history expansion will print it instead of executing it
 
 # SYNTAX !command_id1:p
 #T# command_id1 is either an integer with the number of the command in the history, a string with the starting characters of the command in the history, or any other valid history expansion like !!
 
 !!:p # history # if this was the last command in the history
-# |--------------------------------------------------/
 
 # |--------------------------------------------------\
 #T# history expansion can also be used to reuse arguments from past commands
@@ -812,15 +792,12 @@ echo !gi:2
 # origin
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the previous command can be rerun replacing a substring for another, for example in case of a typo
 
 # SYNTAX ^original_substring1^new_substring1
 #T# this replaces the first instance of original_substring1 for new_substring1 in the last command
 
-^ir^it
-#T# if the last command is 'gir push' then this executes 'git push'
-# |--------------------------------------------------/
+^ir^it #| if the last command is 'gir push' then this executes 'git push'
 
 # |-----
 

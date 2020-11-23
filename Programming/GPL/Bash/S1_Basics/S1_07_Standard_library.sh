@@ -20,20 +20,14 @@
 #C# Basic functions
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# the type command is used to know the type of a command or keyword, so its output is either alias, keyword, function, builtin, file, or not found
-
-#T# an alias is a shell word that executes another command or keyword, a keyword is a shell word that has its own semantic meaning for Bash, a function is a command created in Bash, a builtin is a command that comes with Bash, a file is an external command that resides in the file hierarchy
 
 # SYNTAX type word1
 #T# word1 is the name of the command or keyword whose type is being examined
 
 type man # man is hashed (/usr/bin/man)
 #T# in the example the man command is hashed which allows for quicker execution, the hash command is explained in this file too
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the compgen command generates completions for different kinds of names
 
 # SYNTAX compgen -o1 str1
@@ -57,13 +51,11 @@ compgen -b tr
 #T# the former prints
 # trap
 # true
-# |--------------------------------------------------/
 
 #T# the eval command concatenates its arguments into a single string, and then executes that string in the current shell as if it was written in the shell
 int1=5
 eval 'echo "string $int1"' "in echo" # string 5 in echo
 
-# |--------------------------------------------------\
 #T# the exec command replaces the current shell with a command to be executed or with a redirection in the same shell
 
 # SYNTAX exec -o1 -o2 var2 command1 redirection1
@@ -73,8 +65,7 @@ eval 'echo "string $int1"' "in echo" # string 5 in echo
 
 #T# if command1 is left out, so redirection1 is alone, then redirection1 applies to the current shell
 
-exec -c -a 'new_shell' rbash 1>file1 # opens restricted bash, in an empty environment, with the value of $0 being 'new_shell', and all output redirected to file1 in the working directory
-# |--------------------------------------------------/
+exec -c -a 'new_shell' rbash 1>file1 #| opens restricted bash, in an empty environment, with the value of $0 being 'new_shell', and all output redirected to file1 in the working directory
 
 # |--------------------------------------------------\
 #T# the expr command outputs the result of an expression, this expression can be a boolean expression, or an integer arithmetic expression (but no exponentiation), a regex expression, or a string expression
@@ -148,10 +139,7 @@ echo $int1 # 5
 #T# the which command outputs the path to its argument if it's an executable on the operating system path
 which bash # /bin/bash
 
-# |--------------------------------------------------\
-#T# the hash command is used to manage the hash table of used commands
-
-#T# the hash table contains a field for the used commands paths, and a field for the number of times each command has been called
+#T# the hash command is used to manage the hash table of used commands, the hash table contains a field for the used commands paths, and a field for the number of times each command has been called
 
 # SYNTAX hash -o1 command1
 #T# -o1 is a flag or kwarg option to indicate the action to be done about the hash table, command1 is the command that will be affected in the hash table, omitting -o1 and command1 outputs the hash table
@@ -171,7 +159,6 @@ hash
 #    0	/usr/bin/which
 #    0	/usr/bin/man
 hash -d which # the which command's entry is deleted from the hash table
-# |--------------------------------------------------/
 
 #T# the time keyword is used to measure the time of execution of a command or set of commands, it measures the execution time of it's arguments
 time ping duckduckgo.com
@@ -235,7 +222,7 @@ seq 2 3
 #T# the date command is used to get the date and time
 date # mar 27 oct 2020 12:11:09 -05 # the last number is the timezone
 
-#T# the output of the date command can be formatted using format codes that start with the percent sign %
+#T# the output of the date command can be formatted using the format codes from strftime that start with the percent sign %
 
 # SYNTAX date -o1 -o2 var2 +"format_string1"
 #T# all arguments are optional, with no arguments the current datetime is output, -o1 represents a flag, -o2 var2 represents a kwarg pair, format_string1 contains the format codes to specify the output of the datetime
@@ -291,8 +278,6 @@ date -u -d "1998-10-21 20:42" +"%x and %X" # 21/10/98 and 20:42:00
 #C# Regex matching
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# the grep command is used to globally match strings or patterns in the contents of files, and then print these matches
 
 # SYNTAX grep -o1 -o2 var2 'pattern1' file1 file2
@@ -317,9 +302,7 @@ grep -n "i" file1
 # 2:second word1 line
 # 3:third word1 lineh
 #T# the "i" letter is highlighted
-
-echo "in string1" | grep -n 'i' # 1:in string1 # the "i" letter is highlighted
-# |--------------------------------------------------/
+echo "in string1" | grep -n 'i' # 1:in string1 #| the "i" letter is highlighted
 
 #T# the following regex operators and special characters can also be used in other commands that accept patterns, such as the sed program
 

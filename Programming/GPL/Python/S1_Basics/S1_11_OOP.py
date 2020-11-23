@@ -252,7 +252,6 @@ int1 = multi_parent_obj1.attr1 # 15
 multi_parent_obj1.set_attr1()
 int1 = multi_parent_obj1.attr1 # 30, here the Derived_class2 method was used because this class is first in the parentheses of parent classes from the Multiple_parents_class1
 
-# |--------------------------------------------------\
 #T# it's possible to call one of the methods that wasn't inherited
 
 # SYNTAX Parent_class1.method1(child_obj1)
@@ -260,7 +259,6 @@ int1 = multi_parent_obj1.attr1 # 30, here the Derived_class2 method was used bec
 
 Derived_class1.set_attr1(multi_parent_obj1)
 int1 = multi_parent_obj1.attr1 # 29
-# |--------------------------------------------------/
 
 #T# the mro function returns a list of the classes in order, in which a member will be searched for, or the same as the order of the classes inherited, the class 'object' is the base class of all classes
 list1 = Multiple_parents_class1.mro() # [<class '__main__.Multiple_parents_class1'>, <class '__main__.Derived_class2'>, <class '__main__.Derived_class1'>, <class '__main__.Class_name1'>, <class 'object'>]

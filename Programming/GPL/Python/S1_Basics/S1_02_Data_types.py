@@ -69,18 +69,18 @@ str1 = 'string one'
 char1 = str1[0] # 's'
 char1 = chr(65) # 'A'
 
-# |--------------------------------------------------\
 #T# strings created with different quotation symbols can be operated together like normal
-
 str1 = 'string one'
 str2 = "string two"
 str3 = """string three"""
-str4 = str1 + str2 + str3 # 'string onestring twostring three'
-#T# the plus sign concatenates the strings
-# |--------------------------------------------------/
+str4 = str1 + str2 + str3 # 'string onestring twostring three' # the plus sign concatenates the strings
 
-# |--------------------------------------------------\
-#T# escape sequences are
+#T# escape sequences serve to do in-band signaling
+
+# SYNTAX \char1
+#T# char1 is commonly a single char, except for octal values, hex values, unicode chars, etcetera
+
+#T# the escape sequences are
 #T#     '\a', alert bell system sound
 #T#     '\b', backspace
 #T#     '\f', formfeed
@@ -103,7 +103,6 @@ str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
 # Line"2
 #       Form
 # or ʠ𐍆l¹   feed lines
-# |--------------------------------------------------/
 
 #C# --- Bytes type
 
@@ -201,9 +200,10 @@ froz1 = frozenset({"elem_unord_froz", 12, 5, 98})
 # |-------------------------------------------------------------
 #T# enums or enumerations map names to constant values
 
-# |--------------------------------------------------\
 #T# creating an enum requires inheriting from the Enum class
 from enum import Enum
+
+#T# an enum is defined as follows
 
 # SYNTAX definition of an enum
 # class enum1(Enum):
@@ -215,7 +215,6 @@ from enum import Enum
 class enum1(Enum):
     elem1 = 1
     elem2 = 'two'
-# |--------------------------------------------------/
 
 #T# the value attribute of an enum element has the value of the element
 #T# see the enum1 definition up from here
@@ -235,16 +234,13 @@ str1 = None
 # |-------------------------------------------------------------
 #T# type casting can be done with functions named after the wanted type, e.g. str(var1) casts var1 as a string
 
-# |--------------------------------------------------\
 #T# cast from int to int base 10
 
 # SYNTAX int(int1)
 #T# this returns int1 in base 10
 
 int1 = int(0o12) # 10
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# cast from string to int base 10
 
 # SYNTAX int(str1, base1)
@@ -252,9 +248,7 @@ int1 = int(0o12) # 10
 
 str1 = "0xA4" # 0xA4 is 164
 int1 = int(str1, 16) # 164
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# cast pairs of numbers as complex numbers
 
 # SYNTAX complex(realN, imN)
@@ -263,7 +257,6 @@ int1 = int(str1, 16) # 164
 int1 = 164
 flo1 = float(int1/2) # 82.0
 cmp1 = complex(int1, flo1) # (164+82j)
-# |--------------------------------------------------/
 
 #T# casting a bytes object as a list returns each byte as a decimal, in the following 0x41 is 65 or "A", 0x4a is 74 or "J"
 byte1 = bytes("\x41\x4a", 'utf-8') # b'AJ'

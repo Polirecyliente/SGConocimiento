@@ -63,7 +63,6 @@ else:
 # int1 == 7 if the input is less than zero then, otherwise int1 is twice the input
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# exception handling with the try, except, finally keywords
 
 # SYNTAX try, except, finally
@@ -82,8 +81,6 @@ except AssertionError:
 finally:
     int2 = 50
 # int2 == 50
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #C# Throwing exceptions

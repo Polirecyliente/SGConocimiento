@@ -68,8 +68,8 @@ str1 = """sen3word1 sen3"'"'word2
 # |-------------------------------------------------------------
 #T# an special kind of combination of literals are escape sequences, they mean something particular, e.g. the \n means newline
 
-# SYNTAX \c1
-#T# an escape sequence starts with a backslash \ and is followed by c1 which is other character or characters, most commonly c1 is a single character
+# SYNTAX \char1
+#T# an escape sequence starts with a backslash \ and is followed by char1 which is other character or characters, most commonly char1 is a single character
 
 str1 = "Line1\nLine2"
 #T# printing str1 gives the following
@@ -104,7 +104,6 @@ input                   ("\nGive an input to continue the script\n")
 int1 = 5
 #T# int1 = 5 is a statement, the variable int1 is made to point to the value 5
 
-# |--------------------------------------------------\
 #T# the dot notation is used to access the namespace of an object
 
 # SYNTAX obj1.name1.name2
@@ -113,7 +112,6 @@ int1 = 5
 int1 = 5
 int1 = int1.bit_length() # 3
 #T# the bit_length function is accessed using dot notation on an integer
-# |--------------------------------------------------/
 
 #T# the pass keyword is used to create a no-op statement that does nothing, as a filler
 pass

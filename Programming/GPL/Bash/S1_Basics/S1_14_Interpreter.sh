@@ -54,17 +54,16 @@
 set -x
 set +x
 
-# |--------------------------------------------------\
 #T# other interpreter options are used when starting Bash
 
 # SYNTAX bash -o1 -o2 var2
 #T# this should be executed from the operating system shell, such as Bash itself, -o1 represents a flag, and -o2 var2 represent a kwarg pair
 
 #T# the following are some of these options
-#T#     -c "command_string1", makes Bash execute command_string1, any strings following command_string1 are taken as positional paratemers
+#T#     -c "command_string1", makes Bash execute command_string1, any strings following command_string1 are taken as positional paratemers for the shell, i.e. $0, $1, etc.
 #T#     -s, allows writing the positional parameters for an interactive session, any argument that is positional is not interpreted as a file name, but as a positional parameter
-# |--------------------------------------------------/
 
+bash -c 'echo str1 "$0" "$1"' "name1" "name2" # str1 name1 name2
 # |-----
 
 #C# --- Shell options

@@ -34,7 +34,6 @@
 #T# get input from stdin with the input function, it returns a string which can be cast to any needed type
 str1 = input("Enter the input:")
 
-# |--------------------------------------------------\
 #T# the map function applies a given function to the elements of an array and returns a map object with the return values, that can be cast as an array
 
 # SYNTAX map(func1, arr1)
@@ -43,9 +42,7 @@ str1 = input("Enter the input:")
 list1 = [-11, 3, -25]
 map1 = map(abs, list1)
 list2 = list(map1) # [11, 3, 25]
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the filter function uses a given function to filter the elements of an array and returns a filter object that can be cast as an array
 
 # SYNTAX filter(func1, arr1)
@@ -54,7 +51,6 @@ list2 = list(map1) # [11, 3, 25]
 list1 = ['1', '2', 'elem']
 filter1 = filter(str.isalpha, list1)
 list2 = list(filter1) # ['elem']
-# |--------------------------------------------------/
 
 #T# the repr function returns a string representation of its argument, in most cases just surrounding the argument in quotes
 str1 = repr(map1) # '<map object at 0x7fd71dea0610>'
@@ -301,7 +297,6 @@ byte1 = str1.encode('unicode-escape') # b'\\xfc\\u02a0'
 str1 = "in inner innings"
 int1 = str1.count("in") # 4
 
-# |--------------------------------------------------\
 #T# check if a string starts or ends with a given string
 
 # SYNTAX str1.startswith("substr1"[, startN[, endN]])
@@ -311,7 +306,6 @@ int1 = str1.count("in") # 4
 str1 = "First to Last"
 bool1 = str1.startswith("rst", 2)   # True
 bool1 = str1.endswith("Las", 0, 12) # True
-# |--------------------------------------------------/
 
 #T# get the pos of the first substring found in a string, same arguments as in the startswith function
 str1 = "to be found"
@@ -392,7 +386,6 @@ str1 = str1.swapcase() # 'cASE cHANGER'
 str1 = "With\texpanded\ttabs"
 str1 = str1.expandtabs(5) # 'With expanded  tabs'
 
-# |--------------------------------------------------\
 #T# join the string elements of an array
 
 # SYNTAX "insert1".join(arr1) 
@@ -400,9 +393,7 @@ str1 = str1.expandtabs(5) # 'With expanded  tabs'
 
 arr1 = ("elem1", "elem2")
 str1 = "-|-".join(arr1) # 'elem1-|-elem2'
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# split a string into elements of a list
 
 # SYNTAX str1.split("separator1")
@@ -410,11 +401,12 @@ str1 = "-|-".join(arr1) # 'elem1-|-elem2'
 
 str1 = 'elem1-|-elem2'
 list1 = str1.split("-|") # ['elem1', '-elem2']
-# |--------------------------------------------------/
 
 #T# split around newlines
+
 # SYNTAX str1.splitlines([bool1])
 #T# bool1 determines whether or not to keep ends (the newlines), defaults to False
+
 str1 = "line1\nline2 w1\nline3 w1 w2"
 list1 = str1.splitlines(True) # ['line1\n', 'line2 w1\n', 'line3 w1 w2']
 
@@ -444,8 +436,6 @@ str1 = str1.replace("t", "67", 2) # '67 s67ring t'
 #C# List functions
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# count the repetitions of an element in a list
 
 # SYNTAX list1.count('elem1')
@@ -453,9 +443,7 @@ str1 = str1.replace("t", "67", 2) # '67 s67ring t'
 
 list1 = ['a', 5, 'stray_elem', 'a', 'elem5']
 int1 = list1.count('a') # 2
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# get the index of the first occurrence
 
 # SYNTAX list1.index('elem1')
@@ -463,13 +451,11 @@ int1 = list1.count('a') # 2
 
 list1 = ['a', 5, 'stray_elem', 'a', 'elem5']
 int1 = list1.index('elem5') # 4
-# |--------------------------------------------------/
 
 #T# reverse the order of the elements with the reverse function, it returns None, so it shouldn't be assigned to a var
 list1 = ['a', 5, 'stray_elem', 'a', 'elem5']
 list1.reverse() # list1 == ['elem5', 'a', 'stray_elem', 5, 'a']
 
-# |--------------------------------------------------\
 #T# sort elements in a list
 
 # SYNTAX list1.sort([reverse = True|False[, key = func1]])
@@ -479,7 +465,6 @@ list1.reverse() # list1 == ['elem5', 'a', 'stray_elem', 5, 'a']
 
 list1 = ['elem5', 'a', 'stray_elem', '5', 'a']
 list1.sort(reverse = True, key = len) # ['stray_elem', 'elem5', 'a', '5', 'a']
-# |--------------------------------------------------/
 
 #T# shuffle the elements of a list
 list1 = ['elem5', 'a', 'stray_elem', '5', 'a']
@@ -489,8 +474,6 @@ random.shuffle(list1) # ['a', 'elem5', '5', 'a', 'stray_elem'] or other
 #C# Dictionary functions
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# create a new key value pair in a dictionary only if the key doesn't already exists with the setdefault function
 
 # SYNTAX dict1.setdefault('new_key1', 'new_val1')
@@ -499,8 +482,6 @@ random.shuffle(list1) # ['a', 'elem5', '5', 'a', 'stray_elem'] or other
 dict1 = {'key1': 85, 'key2': 85}
 dict1.setdefault('new_key', 'new_val') # new_val
 dict1.setdefault('key2', 'val2') # 85
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #C# Datetime functions
@@ -561,7 +542,6 @@ str1 = time.asctime(struct_time1) # 'Thu Aug 13 01:15:16 2020'
 flo1 = 1597299316.1336622
 str1 = time.ctime(flo1) # 'Thu Aug 13 01:15:16 2020'
 
-# |--------------------------------------------------\
 #T# the strftime function converts a struct_time object into a string with a custom format through format codes that start with the percent sign %
 
 # SYNTAX format codes of the strftime function
@@ -612,24 +592,18 @@ str1 = time.strftime("%A%B%C %d%t%u %G %h %Hor%I %j %m%M%n%p%S %V %W %w %y %z%%"
 #T# printing str1 yields
 # ThursdayAugust20 13     4 2020 Aug 06or06 226 0810
 # AM55 33 32 4 20 +0000%
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the strptime function converts a string in a given format using format codes into an struct_time object
 
 # SYNTAX time.strptime("str_date1", "str_format1")
 #T# the string "str_date1" is parsed according to "str_format1"
 
 struct_time2 = time.strptime("Nov 2021 8", "%b %Y %H") # time.struct_time(tm_year=2021, tm_mon=11, tm_mday=1, tm_hour=8, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=305, tm_isdst=-1)
-# |--------------------------------------------------/
-
 # |-----
 
 #C# --- Calendar usage
 
 # |-----
-
-# |--------------------------------------------------\
 #T# make the calendar for a given month with the calendar.month() function
 
 # SYNTAX calendar.month(year1, month1)
@@ -644,7 +618,6 @@ str1 = calendar.month(2020, 2)
 # 10 11 12 13 14 15 16
 # 17 18 19 20 21 22 23
 # 24 25 26 27 28 29
-# |--------------------------------------------------/
 
 #T# make the calendar for a given year with the calendar.calendar() function, this prints similar to the example of calendar.month() but for all months in the year
 str1 = calendar.calendar(2020)
@@ -657,33 +630,26 @@ bool1 = calendar.isleap(2020) # True
 #T# the count of leap days is done between ini_year1, and end_year1
 int1 = calendar.leapdays(2020, 2029) # 3
 
-# |--------------------------------------------------\
 #T# the monthcalendar function returns a list of lists
 
 # SYNTAX list1 = calendar.monthcalendar(year1, month1)
 #T# list1 holds the days of month1 from year1, with one inner list for each week of month1
 
 list1 = calendar.monthcalendar(2002, 3) # [[0, 0, 0, 0, 1, 2, 3], [4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17], [18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31]]
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the monthrange function returns a tuple with the first weekday number, and the number of days in a given month
 
 # SYNTAX tuple1 = calendar.monthrange(year1, month1)
 #T# tuple1 contains the first weekday number of month1, and its number of days
 
 tuple1 = calendar.monthrange(1999, 4) # (3, 30)
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the weekday function returns the weekday from a given day
 
 # SYNTAX calendar.weekday(year1, month1, day1)
 #T# this returns the weekday number of day1 in month1 from year1
 
 int1 = calendar.weekday(1999, 4, 1) # 3
-# |--------------------------------------------------/
-
 # |-----
 
 #C# --- Locales

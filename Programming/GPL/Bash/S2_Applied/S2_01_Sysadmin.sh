@@ -268,7 +268,6 @@ ufw status verbose
 #T# enable or disable the firewall
 # SYNTAX ufw enable|disable
 
-# |--------------------------------------------------\
 #T# firewall rules decide whether or not to allow connections, set the default policies which are the rules that apply when there is no rule defined
 
 # SYNTAX ufw default deny|reject|allow incoming|outgoing
@@ -278,8 +277,7 @@ ufw status verbose
 
 ufw default deny incoming
 ufw default allow outgoing
-#T# these are normally the default policies for a firewall
-# |--------------------------------------------------/
+#| these are normally the default policies for a firewall
 
 #T# from now on, the deny, reject, and allow arguments will be used for other commands, but their meaning is the same as with the default policies
 
@@ -300,17 +298,14 @@ ufw allow ssh
 ufw reject 5000:6030/tcp
 #T# this rejects all IPs connecting to ports 5000 to 6030 using tcp
 
-# |--------------------------------------------------\
 #T# the IP addresses can follow the Classless Inter Domain Routing style (CIDR numbers), CIDR numbers represent IP ranges
-
-#T# an IPv4 address is made up with four 8 bit numbers, separated by dots, for a total of 32 bits, such as 10110010.11001011.11010001.11101111
 
 # SYNTAX byte1.byte2.byte3.byte4/CIDR_number1
 #T# the CIDR_number1 number is the amount of bits that do not change in the IP range, starting at the first bit
 
-IP_RANGE1=192.168.255.0/31
-#T# as the CIDR number is 31, the first 31 bits of the IP range remain unchanged, so the resulting IP range only has the last bit, the bit 32, varying
-# |--------------------------------------------------/
+#T# an IPv4 address is made up with four 8 bit numbers, separated by dots, for a total of 32 bits, such as 10110010.11001011.11010001.11101111
+
+IP_RANGE1=192.168.255.0/31 #| as the CIDR number is 31, the first 31 bits of the IP range remain unchanged, so the resulting IP range only has the last bit, the bit 32, varying
 
 #T# create rules about specific IPs
 
@@ -376,6 +371,32 @@ pip3 install --default-timeout=1000 matplotlib
 #C# File system hierarchy management
 
 # |-------------------------------------------------------------
+#T# go to the previous directory
+cd -
+
+#T# list the current directories in the directory stack, the -v flag can be used to output the index of the entries in the list
+dirs -v
+
+#T# push a directory into the directory stack
+# SYNTAX pushd dir1
+pushd ~/.local/
+
+#T# push a directory without changing the current directory
+pushd -n /sbin/
+
+#T# rotate the directory stack by pushing a dir already in the stack, using its index
+
+# SYNTAX pushd +int1
+# SYNTAX pushd -int1
+#T# int1 is the index, using the plus + sign counts from the start with the first element being 0, using the minus - sign counts from the end with the last element being 0
+
+dirs # /tmp/dir1 /tmp/dir2 /tmp/dir3
+pushd +1 # /tmp/dir2 /tmp/dir3 /tmp/dir1
+pushd -0 # /tmp/dir1 /tmp/dir2 /tmp/dir3
+
+#T# remove a dir from the directory stack using the popd command, it has the same syntaxes and options as the ones shown for the pushd command
+popd +2 # /tmp/dir1 /tmp/dir2 # using the same example as in pushd
+
 #T# dereference a symbolic link
 readlink -f link_file1 # /path/to/original_file1
 
@@ -436,7 +457,6 @@ xz -d compressed_file1.tar.xz
 
 # |-----
 
-# |--------------------------------------------------\
 #T# the find command is used to find files
 
 # SYNTAX find -o1 -o2 val2 /path/to/search1 -option1 -option2 value2 '!' -option3
@@ -446,7 +466,7 @@ xz -d compressed_file1.tar.xz
 
 #T# the pairs -option2 value2 in which value2 is a measure of time, or size, are written as a number with a plus or minus sign, e.g. if value2 is in minutes then '+5' means more than 5 minutes ago, '-5' means less than 5 minutes ago, '5' means exactly five minutes ago, it can be a float using comma, for example '6,1', when comparing sizes '+5M' means more than 5 mebibytes and so on
 
-#T# the exclamation mark '!' is used to negate only the option that follows it, the syntax shown finds files where -option3 does not match
+#T# the exclamation mark '!' is used to negate only the option that follows it, the syntax shown finds files where -option3 does not match, the parentheses '(' ')' are used to group expressions of -option1, -option2, up to -optionN, they should be separated with space like this '(' -option2 value2 ')'
 
 #T# globbing patterns such as 'str*' should be quoted
 
@@ -458,6 +478,7 @@ xz -d compressed_file1.tar.xz
 #T#     -P, do not follow symlinks
 
 #T# -option1, -option3, and -option2 value2 can be one of the following
+#T#     -a, and operator, returns true (as -true) if the left and right side of it are true
 #T#     -amin time1, finds files and dirs accessed time1 minutes ago, see up for the time1 notation
 #T#     -anewer file1, finds files and dirs accessed after file1
 #T#     -atime time1, finds files and dirs accessed time1 days ago, see up for the time1 notation
@@ -492,11 +513,18 @@ xz -d compressed_file1.tar.xz
 #T#     -newer file1, finds files and dirs modified after file1
 #T#     -nogroup, finds files and dirs whose group is not registered in /etc/group
 #T#     -nouser, finds files and dirs whose user is not registered in /etc/passwd
+#T#     -o, or operator, returns true (as -true) if the left or right side of it are true
+#T#     -ok command1, like -exec in both syntaxes, but ask for confirmation before executing any command
+#T#     -okdir command1, like -execdir, but ask for confirmation before executing any command
 #T#     -path path1, like -name, but find the whole path1, not only the last file or dir name, so, not only the basename
 #T#     -perm int1, finds files and dirs that have their permission bits set as the octal number int1, int1 has up to 4 digits
 #T#     -perm str1, finds files and dirs that have their permissions as str1, the format of str1 is 'ugo=rwx,ugo=rwx,ugo=rwx' any single char can be deleted, except for '=', they mean, u user, g group, o other, r read, w write, x execute
 #T#     -readable, finds readable files and dirs
 #T#     -regex 'pattern1', finds files and dirs matching pattern1, it must be quoted
+#T#     -print, prints each found file and dir separated by newline
+#T#     -print0, prints each found file and dir separated by a null char
+#T#     -prune, prunes found matches, so it should be used with -o -print, to print the files and dirs that were not found, -prune also prevents descending into dirs found to the left (before it in the command)
+#T#     -quit, quits the command
 #T#     -samefile file1, finds any file that is the same as file1, so hard links, and soft links (using the -L flag)
 #T#     -size size1, size1 has three parts, sign, number, letter, see up for the size1 notation which explains sign and number, the letters are, 'c' for bytes, 'w' for words (two bytes), 'b' for 512 bytes, 'k' for kibibytes, 'M' for mebibytes, 'G' for gibibytes
 #T#     -true, true value for boolean expression
@@ -505,17 +533,36 @@ xz -d compressed_file1.tar.xz
 #T#     -user str1, finds files and dirs whose username is str1
 #T#     -writable, finds writable files and dirs
 
-find -H . link1 # finds files and dirs and dereferences link1 to check if it is a file or dir
-find . -amin -5 #  # finds files accessed less than 5 minutes ago
-find . -ctime +2 #  # finds files modified more than 2 days ago
-find . '!' -executable '!' -readable #  # finds files that are non executable and non readable, kwarg options can be used after the '!' too
-find . -fstype ext4 #  # finds files with an ext4 filesystem
-find . -gid 1000 #  # finds files whose group id is 1000
+find -H . link1 #| finds files and dirs and dereferences link1 to check if it is a file or dir
+find . -amin -5 #| finds files accessed less than 5 minutes ago
+find . -ctime +2 #| finds files modified more than 2 days ago
+find . -execdir pwd \; #| prints the dir of each found file and dir
+find . '!' -executable '!' -readable #| finds files that are non executable and non readable, kwarg options can be used after the '!' too
+find . '(' -fstype ext4 ')' #| finds files with an ext4 filesystem
+find . -gid 1000 #| finds files whose group id is 1000
 find . -inum 52300562 # ./file1 # if 52300562 is the inode of file1
-find . -path './dir1*' # finds files that contain the path ./dir1* after globbing
-find . -regex '..[A-z]+[0-9]*' # finds files with the given regex pattern
-# |--------------------------------------------------/
+find . -path './dir1*' #| finds files that contain the path ./dir1* after globbing
+find . -name dir* -prune #| does not descend into dirs that start with 'dir' in the name
+find . -regex '..[A-z]+[0-9]*' #| finds files with the given regex pattern
 
+#T# the xargs command is used as an improved -exec action from the find command, xargs applies a command (echo by default) over a set of arguments, separated by space or newline
+
+# SYNTAX xargs -o1 -o2 val2 command1 args1
+#T# some of these parts can be optional depending on the context, -o1 represents a flag, -o2 val2 represent a kwarg pair, command1 args1 is the command and the arguments (separated by space) that will be applied to the input of the xargs command
+
+#T# -o1 and -o2 val2 can be one of the following
+#T#     -0, use the null char to identify separated inputs
+#T#     -a file1, use file1 contents as the input of the xargs command
+#T#     -d char1, use char1 to identify separated inputs
+#T#     -E char1, use char1 as the EOF (end of file) char, char1 must appear alone in its own line
+#T#     -I str1, use str1 as the placeholder for each of the inputs, str1 is replaced by each input in turn, so str1 is used in args1 to represent the inputs
+#T#     -P int1, open int1 processes in parallel, this allows multiprocessing
+#T#     -p, prompt to ask for confirmation before executing any command
+#T#     -t, verbose output, it shows the commands being executed
+
+find . -print0 | xargs -0 echo #| prints the found files and dirs
+xargs -d A -a files.txt grep -n 'key' #| prints the files written inside files.txt separated by 'A', that contain 'key', i.e. if in files.txt is the line file1Afile2Afile3A then file1, file2, and file3 are printed if the contain 'key'
+find . -name 'file*' | xargs -I str1 mv str1 str1_new #| finds any files and dirs whose name starts with 'file', and appends '_new' to their name
 # |-----
 
 # |-------------------------------------------------------------

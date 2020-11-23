@@ -34,7 +34,6 @@ for it1 in "$@"; do echo "$it1"; done
 # -oCount
 # -oCount
 
-# |--------------------------------------------------\
 #T# the shift command is used to shift the positional parameters to the left, reducing their number
 
 # SYNTAX shift int1
@@ -43,9 +42,7 @@ for it1 in "$@"; do echo "$it1"; done
 echo $1 # str2
 shift 2
 echo $1 # -oCount # corresponds to the original third argument
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the set command allows the modification of the positional parameters
 
 # SYNTAX set -- new_arg1 new_arg2 new_arg3
@@ -54,8 +51,6 @@ echo $1 # -oCount # corresponds to the original third argument
 set -- "new_arg"
 echo $1 # new_arg
 echo $2 # ""
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #C# The getopt command

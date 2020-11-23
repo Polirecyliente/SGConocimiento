@@ -19,14 +19,12 @@
 #T# the pdb module is imported to use the pdb debugger as part of a script
 import pdb
 
-# |--------------------------------------------------\
 #T# the run function of the pdb module allows debugging the execution of a Python string
 
 # SYNTAX pdb.run('string1')
 #T# the pdb debugger is started right before the execution of string1, and is used to debug whatever string1 executes
 
 pdb.run('import S1_01_Basic_syntax') # this debugs the S1_01_Basic_syntax.py file, because the import statement executes the imported module
-# |--------------------------------------------------/
 
 #T# the following code is used to show the syntax of the pdb debugger in its interactive mode
 output_var1 = "help variable to show the different output of the pdb debugger"

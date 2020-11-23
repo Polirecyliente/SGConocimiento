@@ -92,7 +92,6 @@ else:
     print("Unreachable code")
 # int1 == 3; int2 == 0
 
-# |--------------------------------------------------\
 #T# typical use of the for loop includes the range function
 
 # SYNTAX range(iniN, endN, stepN)
@@ -102,8 +101,6 @@ range1 = range(1, 12, 3) # this produces the numbers 1, 4, 7, 10
 for i1 in range1:
     if i1 == 7:
         break
-# |--------------------------------------------------/
-
 # |-----
 
 #C# --- while loop

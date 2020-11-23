@@ -33,14 +33,12 @@ import S1_10_P_Module_example
 #T# this path is the same as seen from main.py
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# specific functions, and classes from a module can be imported, without importing the rest of the module
 
 # SYNTAX from module1 import func1 as alias1
 #T# this imports only func1 from module1 into the namespace of this file with the alias alias1
 
 from S1_06_Functions import func1 as f1
-# |--------------------------------------------------/
 
 #T# execute a module again with the reload function
 import importlib

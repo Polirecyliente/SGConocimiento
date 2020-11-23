@@ -84,25 +84,19 @@ bool1 = "g" in str1 # True
 #C# --- String formatting
 
 # |-----
-
-# |--------------------------------------------------\
 #T# format a string à la printf
 
 # SYNTAX "str1 %fmt_spec1 str2 %fmt_spec2 str3" %(var1, var2)
 #T# var1 goes into %fmt_spec1, var2 into %fmt_spec2, and so on
 
 str1 = "string: %s, digit: %d" %("S1", 514) # 'string: S1, digit: 514'
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# similar format can be done using the format function
 
 # SYNTAX 'str1 {} str2 {} str3'.format(var1, var2)
 #T# the format function maps each var to a pair of curly braces in the same position
 
 str1 = 'string: {}, digit: {}'.format("S1", 514) # 'string: S1, digit: 514'
-# |--------------------------------------------------/
-
 # |-----
 
 #C# --- U strings
@@ -134,8 +128,6 @@ str1 = b"\101\271\xAC" # b'A\xb9\xac', \101 is 65 or 'A', \271 is 185 or \xb9
 #C# --- F strings
 
 # |-----
-
-# |--------------------------------------------------\
 #T# string interpolation can be made with the prefix "f" or "F", the string interpolation is done inside curly braces
 
 # SYNTAX f'str1 {var1 = } str2 {var2}'
@@ -143,9 +135,7 @@ str1 = b"\101\271\xAC" # b'A\xb9\xac', \101 is 65 or 'A', \271 is 185 or \xb9
 
 str1 = "swords and quotes"
 str2 = f"interp: {str1[2:15]}, {str1 = }" # "interp: ords and quot, str1 = 'swords and quotes'"
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# f strings can have the numbers formatted
 
 # SYNTAX f'{expr1:format1}'
@@ -162,7 +152,6 @@ str1 = f'{num1:< 10.1e}'    # ' 6.4e+00  '
 str1 = f'{int(num1):05b}'   # '00110'
 str1 = f'{int(num1):< 5o}'  # ' 6   '
 str1 = f'{int(num1):x}'     # '6'
-# |--------------------------------------------------/
 
 #T# escape the curly braces in an f string by duplicating the braces
 str1 = f'{{1+2}} = {1+2}' # '{1+2} = 3'
@@ -181,7 +170,6 @@ list1.append("append_elem") # list1 == ['elem1', 2, 'elem3', 'append_elem']
 list1 = ['elem1', 2, 'elem3', 'append_elem']
 list1.remove('elem3') # list1 == ['elem1', 2, 'append_elem']
 
-# |--------------------------------------------------\
 #T# extend a list, appending all elements from another
 
 # SYNTAX list1.extend(list2)
@@ -190,9 +178,7 @@ list1.remove('elem3') # list1 == ['elem1', 2, 'append_elem']
 list1 = ['elem1', 2, "append_elem"]
 list2 = ['a', 'b']
 list1.extend(list2) # list1 == ['elem1', 2, 'append_elem', 'a', 'b']
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# insert an element at a given position
 
 # SYNTAX list1.insert(pos1, 'insert_elem1')
@@ -200,9 +186,7 @@ list1.extend(list2) # list1 == ['elem1', 2, 'append_elem', 'a', 'b']
 
 list1 = ['elem1', 2, 'append_elem', 'a', 'b']
 list1.insert(4, 'inserted_elem') # list1 == ['elem1', 2, 'append_elem', 'a', 'inserted_elem', 'b']
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# pop the last element from a list, or the element at a given index
 
 # SYNTAX list1.pop(pos1)
@@ -211,8 +195,6 @@ list1.insert(4, 'inserted_elem') # list1 == ['elem1', 2, 'append_elem', 'a', 'in
 list1 = ['elem1', 2, 'append_elem', 'a', 'inserted_elem', 'b']
 list1.pop(-4) # 'append_elem'
 # list1 == ['elem1', 2, 'a', 'inserted_elem', 'b']
-# |--------------------------------------------------/
-
 # |-------------------------------------------------------------
 
 #C# Tuples
@@ -220,17 +202,14 @@ list1.pop(-4) # 'append_elem'
 # |-------------------------------------------------------------
 #T# as read only variables, tuples have fewer functions than lists
 
-# |--------------------------------------------------\
-#T# count the occurrences
+#T# count the amount of occurrences of an element in a tuple
 
 # SYNTAX tuple1.count('elem1')
 #T# the returned value is the amout of times 'elem1' is in tuple1
 
 tuple1 = (0, 7, 'repeated_elem', 12, 'repeated_elem', 1, 1, 'repeated_elem')
 int1 = tuple1.count('repeated_elem') # 3
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# get the index of the first occurrence of an element
 
 # SYNTAX tuple1.index('elem1')
@@ -238,9 +217,7 @@ int1 = tuple1.count('repeated_elem') # 3
 
 tuple1 = (0, 7, 'repeated_elem', 12, 'repeated_elem', 1, 1, 'repeated_elem')
 int1 = tuple1.index('repeated_elem') # 2
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# unpack a tuple with the tuple unpack operator *
 
 # SYNTAX elem_var1, elem_vari, *unpack_tuple1, elem_varj, elem_varN = tuple1
@@ -248,7 +225,6 @@ int1 = tuple1.index('repeated_elem') # 2
 
 tuple1 = (1, 7, 'elem', 12, 'last_elem')
 elem1, *unpack_tuple1, elemN = tuple1 # unpack_tuple1 == [7, 'elem', 12]
-# |--------------------------------------------------/
 
 #T# an unpacked tuple can be passed as an argument, to pass each element as a separate arg
 tuple1 = (1, 7, 'elem', 12, 'last_elem')
@@ -262,7 +238,6 @@ str1 = "Elements {} {}, and {}".format(*tuple1) # Elements 1 7, and elem
 dict1 = {'key1': 2, 'key2': 'val2'}
 dict1['new_key'] = 'new_value' # dict1 == {'key1': 2, 'key2': 'val2', 'new_key': 'new_value'}
 
-# |--------------------------------------------------\
 #T# get the value associated with a key
 
 # SYNTAX dict1.get('key1')
@@ -270,7 +245,6 @@ dict1['new_key'] = 'new_value' # dict1 == {'key1': 2, 'key2': 'val2', 'new_key':
 
 dict1 = {'key1': 2, 'key2': 'val2'}
 str1 = dict1.get('key2') # 'val2'
-# |--------------------------------------------------/
 
 #T# clear the whole dictionary with the clear function
 dict1 = {'key1': 2, 'key2': 'val2'}
@@ -281,7 +255,6 @@ dict1 = {'key1': 7, 'key2': 'val2'}
 dict2 = {'dict2_key': 'dict2_val'}
 dict2 = dict1.copy() # {'key1': 7, 'key2': 'val2'}
 
-# |--------------------------------------------------\
 #T# create a dictionary from an iterable (tuples, lists)
 
 # SYNTAX dict.fromkeys(arr1, 'val1')
@@ -289,13 +262,11 @@ dict2 = dict1.copy() # {'key1': 7, 'key2': 'val2'}
 
 tuple1 = ('key1', 'key2')
 dict1 = dict.fromkeys(tuple1, 85) # {'key1': 85, 'key2': 85}
-# |--------------------------------------------------/
 
 #T# get a dict_items object from a dictionary, as a list of tuples, each tuple corresponding to a key value pair of the dictionary
 dict1 = {'key1': 85, 'key2': 85}
 dict_items1 = dict1.items() # dict_items([('key1', 85), ('key2', 85)])
 
-# |--------------------------------------------------\
 #T# update a dictionary with another, new keys are appended
 
 # SYNTAX dict1.update(dict2)
@@ -304,9 +275,7 @@ dict_items1 = dict1.items() # dict_items([('key1', 85), ('key2', 85)])
 dict1 = {'key1': 85, 'key2': 85}
 dict2 = {'appended_key1': 80, 'key2': 'val2'}
 dict1.update(dict2) # dict1 == {'key1': 85, 'key2': 'val2', 'appended_key1': 80}
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# unpack a dictionary 
 
 # SYNTAX dict1 = {**dict2, **dictN}
@@ -315,7 +284,6 @@ dict1.update(dict2) # dict1 == {'key1': 85, 'key2': 'val2', 'appended_key1': 80}
 dict1 = {'initial1':'ini_value1'}
 dict2 = {'unpacked1':15}
 dict3 = {**dict1, **dict2} # {'initial1': 'ini_value1', 'unpacked1': 15}
-# |--------------------------------------------------/
 
 #T# unpacking a dictionary in an argument, passes each key value pair as a kwarg value pair
 dict1 = {'base':7}
@@ -325,8 +293,6 @@ int1 = int('10', **dict1) # 7
 #C# Sets
 
 # |-------------------------------------------------------------
-
-# |--------------------------------------------------\
 #T# common set operations are
 #T#     | union
 #T#     & intersection
@@ -342,7 +308,6 @@ set2 = set1 & froz1                     # {5}
 set2 = set1.difference(froz1)           # {'elem'}
 set2 = set1 - froz1                     # {'elem'}
 set2 = set1.symmetric_difference(froz1) # {'elem', 'elem_froz', 88, 62}
-# |--------------------------------------------------/
 
 #C# --- Comparisons between sets
 

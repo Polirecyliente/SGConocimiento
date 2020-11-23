@@ -137,7 +137,6 @@ exec {var1}>&-
 echo "string1" 1>&$var1 # bash: $var1: Bad file descriptor
 # |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# a special construct with redirections allows using the while loop to read a file line by line, for this, the file is passed to the input of the read command inside the while loop
 
 # SYNTAX while read line1; do statements1; done 0<file1
@@ -150,7 +149,6 @@ cat file1 | while read line1; do echo $line1; sleep .5; done
 # first line
 # second line
 # current final line
-# |--------------------------------------------------/
 
 #T# a named pipe can be created with the mkfifo command, it's a file that works like the vertical bar | pipe, but with input and output redirections
 mkfifo pipe1
@@ -240,10 +238,6 @@ sleep &
 fg %4    # sleep 10000
 fg %?lee # sleep 10000
 
-# |--------------------------------------------------\
-#T# jobs can be stopped with the suspend character CTRL-Z (or ^Z)
-# |--------------------------------------------------/
-
 #T# the bg command serves to send a job to the background
 
 # SYNTAX bg %int
@@ -269,6 +263,19 @@ fg %- # gedit
 #T# the disown command makes the background job1 independent from the shell, job1 can be identified in any of the shown was (an integer, a substring, through the current job %%, etc.)
 
 disown %4
+
+#T# jobs can be stopped with the suspend character CTRL-Z (or ^Z)
 # |-----
 
+#T# using job control, multiprocessing is made straightforward
+
+# SYNTAX multiprocessing
+# command1 &
+# command2 &
+# wait
+#T# this runs command1, up to commandN, in the background in parallel, the wait command is used to wait until all background processes end
+
+sleep 50 &
+gedit &
+wait #| the prompt returns after 50 seconds and after closing gedit
 # |-------------------------------------------------------------

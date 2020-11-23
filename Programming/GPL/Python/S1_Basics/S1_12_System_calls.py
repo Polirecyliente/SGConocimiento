@@ -7,6 +7,7 @@
 #C# File input output
 #C# File manipulation
 #C# Signal handling
+#C# Multithreading
 
 #T# Beginning of content
 
@@ -74,7 +75,6 @@ with open(str1, "a") as textIOWrapper1:
 #T# the tell function returns the cursor position in bytes
     int1 = textIOWrapper1.tell() # 13, from 10 of ü, 1 of \n, 2 of \u02A0
 
-# |--------------------------------------------------\
 #T# the seek function sets the cursor position in the file
 
 # SYNTAX textIOWrapper1.seek(offset_int1, start_pos_int1)
@@ -89,7 +89,6 @@ with open(str1, "r+") as textIOWrapper1:
     textIOWrapper1.seek(2, 0)
     textIOWrapper1.write("AB") # two bytes written to replace one 'ü'
 # üABüüü\nʠ are the file contents
-# |--------------------------------------------------/
 
 #T# the close function is used to explicitly close a file
 textIOWrapper1.close()
@@ -141,7 +140,6 @@ int1 = os.getpid() # 175344, or similar
 print("Waiting to receive a signal")
 import signal
 
-# |--------------------------------------------------\
 #T# a signal handler is a callback function that is executed when a signal it handles is received
 
 # SYNTAX signal handler
@@ -154,9 +152,7 @@ def sig_handler1(sig_number, sig_frame):
     print("signal number is:", sig_number)
     traceback.print_stack(sig_frame)
     quit()
-# |--------------------------------------------------/
 
-# |--------------------------------------------------\
 #T# the signal function serves to register a signal handler so it executes when a given signal is received by the program
 
 # SYNTAX signal.signal(signal.SIG1, signal_handler_func1)
@@ -177,8 +173,83 @@ signal.signal(signal.SIGPIPE, sig_handler1)   # SIGPIPE for pipe error
 signal.signal(signal.SIGALRM, sig_handler1)   # SIGALRM for alarm
 signal.signal(signal.SIGTERM, signal.SIG_IGN) # SIGTERM for terminate, the SIG_IGN enum element serves to ignore the signal when received
 #T# only the signal 9, signal.SIGKILL, can't be registered this way as it is a non maskable signal
-# |--------------------------------------------------/
 
 #T# the pause function pauses the execution until a signal is received
 signal.pause()
+# |-------------------------------------------------------------
+
+#C# Multithreading
+
+# |-------------------------------------------------------------
+#T# import the threading module, it allows the creation of threads
+import threading
+
+#T# list1 is an example list representing several lines of data that can be processed in threads (this can be inside a file)
+list1 = ['line1', 'line2', 'line3', 'line4', 'line5', 'line6', 'line7', 'line8', 'line9', 'line10', 'line11', 'line12', 'line13', 'line14', 'line15', 'line16', 'line17', 'line18', 'line19', 'line20', 'line21',  'line22', 'line23', 'line24', 'line25', 'line26', 'line27', 'line28', 'line29', 'line30']
+
+#T# create a lock to synchronize threads with the Lock constructor
+lock1 = threading.Lock()
+
+#T# inherit from the Thread class to make thread objects
+class Thread_class1(threading.Thread):
+
+#T# call the original Thread constructor but also override __init__
+    def __init__(self, name):
+        threading.Thread.__init__(self)
+        self.name = name
+
+#T# override the run method to define what each thread does
+    def run(self):
+        import time
+        while len(list1) > 0:
+
+#T# each thread acquires the lock with the acquire function
+            lock1.acquire()
+
+#T# call the function in which each thread will work
+            thread_func1(self.name)
+
+#T# at the end of the thread release the lock with the release function
+            lock1.release()
+            time.sleep(.5) #| this is used to give a chance to other threads to acquire the lock, it emulates the thread being busy
+
+#T# this function will be executed by the threads
+def thread_func1(thread_name1):
+    global list1
+    print(list1[0],"worked by",thread_name1)
+    list1.remove(list1[0])
+
+#T# instantiate the thread objects
+thread1 = Thread_class1("First_Thread")
+thread2 = Thread_class1("Second_Thread")
+thread3 = Thread_class1("Third_Thread")
+
+#T# start the threads with the start function
+thread1.start()
+thread2.start()
+thread3.start()
+
+#T# get the amount of active threads with the active_count function
+int1 = threading.active_count() # 4
+
+#T# get a list with the active thread objects with the enumerate function
+threads_list1 = threading.enumerate() # [<_MainThread(MainThread, started 140263018882880)>, <Thread_class1(First_Thread, started 140263008216832)>, <Thread_class1(Second_Thread, started 140262999824128)>, <Thread_class1(Third_Thread, started 140262991431424)>]
+
+#T# get the thread object of the current thread with the current_thread function
+thread4 = threading.current_thread() # <_MainThread(MainThread, started 140263018882880)>
+
+#T# check if a thread is alive with the is_alive function
+bool1 = thread2.is_alive() # True
+
+#T# set the name of a thread with the setName function
+thread2.setName("new_Thread2")
+
+#T# get the name of a thread with the getName function
+str1 = thread2.getName() # 'new_Thread2'
+
+#T# get the main thread with the main_thread function
+thread4 = threading.main_thread() # <_MainThread(MainThread, started 140263018882880)>
+
+#T# the main thread (this script) waits for a thread to end with the join function
+thread1.join() #| this script only continues after thread1 has finished
 # |-------------------------------------------------------------
