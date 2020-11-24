@@ -93,8 +93,8 @@ echo -e "ab\nabc\nabd" | sed '2,3 { /d/ { s/a/Z1/; s/b/Y2/ } }' # (see Substitut
 # abc
 # Z1Y2d
 
-# SYNTAX sed -o1 -o2 var2
-#T# same as before, with input from stdin, and output to stdout, -o1 represents a flag, -o2 var2 represent a kwarg pair
+# SYNTAX sed -o1 -o2 val2
+#T# same as before, with input from stdin, and output to stdout, -o1 represents a flag, -o2 val2 represent a kwarg pair
 
 #T# some of the options of the sed program are
 #T#     -e 'command1', this kwarg pair can be repeated up to commandN, each one of the commands is executed in turn as a sed command

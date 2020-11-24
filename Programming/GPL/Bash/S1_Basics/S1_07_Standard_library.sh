@@ -12,8 +12,10 @@
 #C# --- Quantifiers
 #C# --- Character classes
 #C# --- Groupings
+#C# --- Subroutines
 #C# --- Anchors and boundaries
 #C# --- Lookarounds
+#C# --- Regex modifiers
 
 #T# Beginning of content
 
@@ -58,10 +60,10 @@ eval 'echo "string $int1"' "in echo" # string 5 in echo
 
 #T# the exec command replaces the current shell with a command to be executed or with a redirection in the same shell
 
-# SYNTAX exec -o1 -o2 var2 command1 redirection1
+# SYNTAX exec -o1 -o2 val2 command1 redirection1
 #T# everything is optional (if command1 is left out then redirection1 should be there and vice versa) 
 
-#T# command1 is executed and replaces the current shell, destroying the current shell, -o1 represents a flag, -o2 var2 represent a kwarg pair, the -c flag executes command1 in an empty environment, the -a name1 kwarg pair changes the value of $0 for name1 inside command1
+#T# command1 is executed and replaces the current shell, destroying the current shell, -o1 represents a flag, -o2 val2 represent a kwarg pair, the -c flag executes command1 in an empty environment, the -a name1 kwarg pair changes the value of $0 for name1 inside command1
 
 #T# if command1 is left out, so redirection1 is alone, then redirection1 applies to the current shell
 
@@ -224,8 +226,8 @@ date # mar 27 oct 2020 12:11:09 -05 # the last number is the timezone
 
 #T# the output of the date command can be formatted using the format codes from strftime that start with the percent sign %
 
-# SYNTAX date -o1 -o2 var2 +"format_string1"
-#T# all arguments are optional, with no arguments the current datetime is output, -o1 represents a flag, -o2 var2 represents a kwarg pair, format_string1 contains the format codes to specify the output of the datetime
+# SYNTAX date -o1 -o2 val2 +"format_string1"
+#T# all arguments are optional, with no arguments the current datetime is output, -o1 represents a flag, -o2 val2 represents a kwarg pair, format_string1 contains the format codes to specify the output of the datetime
 
 #T# the -u flag outputs the date in UTC (Universal Time Coordinated), the -d date1 kwarg pair outputs date1 instead of the current date (the date1 arg is written as "year-month-day hour:minute:second"), the -r file1 kwarg pair outputs the last modification time of file1
 
@@ -280,17 +282,23 @@ date -u -d "1998-10-21 20:42" +"%x and %X" # 21/10/98 and 20:42:00
 # |-------------------------------------------------------------
 #T# the grep command is used to globally match strings or patterns in the contents of files, and then print these matches
 
-# SYNTAX grep -o1 -o2 var2 'pattern1' file1 file2
-#T# about the options, -o1 represents a flag, -o2 var2 represent a kwarg pair, this matches pattern1 in the contents of file1, file2, up to fileN, pattern1 is in single quotes to avoid expansion
+# SYNTAX grep -o1 -o2 val2 'pattern1' file1 file2
+#T# about the options, -o1 represents a flag, -o2 val2 represent a kwarg pair, this matches pattern1 in the contents of file1, file2, up to fileN, pattern1 is in single quotes to avoid expansion
 
 #T# grep can also receive input directly via redirection and piping (see S1_12_System_calls.sh)
 
-#T# some of the options are
+#T# -o1 and -o2 val2 can be one of the following
+#T#     -A int1, print int1 lines after each match
+#T#     -B int1, print int1 lines before each match
 #T#     -c, output the amount of lines that matched
+#T#     -E, interpret pattern1 with the Extended Regular Expression rules
+#T#     -i, case insensitive matching
+#T#     -m int1, only match up to the first int1 occurrences
 #T#     -n, output the line number as well
 #T#     -o, output only the match
+#T#     -P, use Perl Compatible Regular Expressions to interpret the regex
 #T#     -v, invert the results (output the non matching lines)
-#T#     -E, interpret pattern1 with the Extended Regular Expression rules
+#T#     -z, allow multiline matching, the whole input becomes a single line
 
 #T# the contents of file1 are the following
 # first word1 word1 line
@@ -311,12 +319,13 @@ echo "in string1" | grep -n 'i' # 1:in string1 #| the "i" letter is highlighted
 #C# --- Characters
 
 # |-----
+#T# note that to match a dollar sign $ it must be escaped and inside single quotes (because it's an operator in both Bash and regex), such as '\$'
+
 #T# the dot . is used to match any char
 echo "str1" | grep -E '.' # str1 # all chars match
 
 #T# the backslash \ is used to escape chars, so as to match operators as raw chars
-echo '$|r1' | grep -E '\$|\|' # $|
-#T# note that to match a dollar sign $ it must be escaped and inside single quotes (because it's an operator in both Bash and regex)
+echo 'str1.' | grep -E '\.' # .
 
 #T# the escaped char \s matches one whitespace (space, tab, newline)
 echo "a b" | grep -E '\sb' #  b
@@ -336,12 +345,18 @@ echo "a5b" | grep -P '\d' # 5
 #T# the escaped char \D matches one non digit
 echo "5bc" | grep -P '\D' # bc
 
+#T# the escaped char \X matches one unicode char
+echo -e "a\u2446b" | grep -P '\w\X' # a⑆
+
 #T# the escaped char \t matches one tab char (this also works in the sed program)
 echo "ab    c" | grep -P '\tc' #     c
 
 #T# the escaped char \r matches one carriage return (this also works in the sed program)
 echo -e "ab\rc" # cb
 echo -e "ab\rc" | grep -P '\rc' # c
+
+#T# the escaped char \n matches one newline, use the -z flag
+echo -e "str1\nstr2" | grep -zP 'r1\nst' # r1\nst
 
 #T# the escaped char \N matches a non newline
 echo -e "ab\ncd" | grep -P '\Nc' #  # no match
@@ -351,6 +366,13 @@ echo -e "a b    c" | grep -P '\hb\hc' #  b    c
 
 #T# the escaped char \H matches a non horizontal whitespace
 echo -e "a b  c" | grep -P '\Hc' #  # no match
+
+#T# the escaped chars \Q and \E escape any characters inside them, e.g. \Q.*\E matches a literal dot . followed by a literal asterisk *
+echo "a.+?" | grep -P '\Qa.+?\E' # a.+?
+
+#T# the escaped char \K removes the part of the match that is to its left
+echo -e "str1\nstr2" | grep -zP 'str1\n\Kstr2' # str2 #| without \K both lines are matched, i.e. str1\nstr2, but with \K str1\n is removed from the match
+
 # |-----
 
 #C# --- Quantifiers
@@ -368,11 +390,12 @@ echo "strrr1" | grep -E 'r+1' # rrr1
 #T# the syntax {int1} is used as a quantifier to match the preceding char int1 times
 echo "strrrr1" | grep -E 'r{2}1' # rr1
 
-#T# the syntax {int1,int2} is used as a quantifier to match the preceding char between int1 and int2 times (as many times as possible), so int2 >= int1
+#T# the syntax {int1,int2} is used as a quantifier to match the preceding char between int1 and int2 times (as many times as possible), so int2 >= int1, if int2 is omitted then match any amount greater than or equal to int1
 echo "strrrrr1" | grep -E 'r{1,3}1' # rrr1
+echo "strrrrr1" | grep -E 'r{1,}1' # rrrrr1
 
 # |--------------------------------------------------\
-#T# lazy (non greedy) quantifiers are created with a question mark ? after the operator
+#T# lazy (non greedy) quantifiers are created with a question mark ? after the operator, it only works well for the asterisk * quantifier
 echo "12345" | grep -P '[0-9]*?' #  # no match
 
 #T# the lazy quantifier *? can be emulated in programs where there is no lazy quantifiers, such as sed
@@ -405,11 +428,20 @@ echo "strtr1" | grep -E '(tr)+1' # trtr1
 #T# the escaped numbers \1, \2, etc., are used to match (backreference) a captured group, \1 matches the first group, \2 the second, and so on
 echo "str1Astr1" | grep -E '(st)(r1)A\1\2' # str1Astr1
 
+#T# a group number from 10 onwards can be backreferenced with \g{int1} where int1 is the group number, this avoids ambiguity
+echo "abcdefghijkk" | grep -P '(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)\g{11}' # abcdefghijkk
+
 #T# the vertical bar | is used for alternation (to match either one of the patterns separated with the vertical bar)
 echo "str1" | grep -E 'st|tr1' # st
 
 #T# the syntax (?:pattern1) is used to create a non capturing group for pattern1, this means that the match of pattern1 can't be recalled with a backreference like \1, because it doesn't create a group
 echo "strabab" | grep -P '(?:tr)(ab)\1' # trabab
+# |-----
+
+#C# --- Subroutines
+
+# |-----
+
 # |-----
 
 #C# --- Anchors and boundaries
@@ -418,11 +450,14 @@ echo "strabab" | grep -P '(?:tr)(ab)\1' # trabab
 #T# the caret ^ (outside a character class) matches the following chars as an anchor at the start of the line
 echo "str1" | grep -E '^str' # str
 
-#T# the escaped char \A does the same as the caret ^, it anchors the match at the beginning of the line
-echo "str1" | grep -P '\Astr' # str
+#T# the escaped char \A matches the beginning of the first line, use it with the -z flag to see the effect
+echo -e "str1\nstr2" | grep -zP '\Astr\d' # str1
 
 #T# the dollar sign $ matches the preceding chars as an anchor at the end of the line
 echo "str1" | grep -E 'tr1$' # tr1
+
+#T# the escaped char \Z matches the end of the last line, use it with the -z flag to see the effect
+echo -e "str1\nstr2" | grep -zP 'str\d\Z' # str2
 
 #T# the escaped char \< matches at the start of a word
 echo "ab cd" | grep -E '\<cd' # cd
@@ -452,6 +487,57 @@ echo "str101" | grep -P 'r1(?!00)\d\d' # r101 # doesn't match in str100
 
 #T# the syntax (?<!pattern1) is used to create a negative lookbehind with pattern1, so pattern1 can't appear behind when finding a match, pattern1 is not matched
 echo "str1" | grep -P '(?<!st)r1' #  # no match
+# |-----
+
+#C# --- Regex modifiers
+
+# |-----
+#T# grep only supports a few regular regex modifiers, to use inline modifiers the -P flag must be used
+
+#T# there is no support for the continuation modifier
+
+#T# the global modifier has no inline version, grep has the global modifier by default, use the -m int1 kwarg, the -o flag, and pipe it to head -1 to avoid it (this prints only the first match of the pattern)
+echo "str1" | grep -P '\w' # str1
+echo "str1" | grep -P -m 1 -o '\w' | head -1 # s
+
+#T# use the case insensitive modifier with the -i flag, this matches lowercase and uppercase letters the same
+echo "str1" | grep -i 'STR1' # str1
+
+#T# use the inline case insensitive modifier (?i), turn it off with (?-i)
+echo "stR1" | grep -P '(?i)ST(?-i)R1' # stR1
+
+#T# use the multiline modifier directly, by default grep uses this modifier, this makes the caret ^ and the dollar sign $ match at the start and end of intermediate lines (all lines actually)
+echo -e "str1\nstr2\nstr3" | grep '^str2$' # str2
+
+#T# use the inline multiline modifier (?m) with the -z flag, turn it off with (?-m)
+echo -e "str1\nstr2\nstr3" | grep -zP '(?m)^str2$' # str2
+
+#T# use the dotall modifier with the -z flag, this makes the dot . also match a newline
+echo -e "begin\nend" | grep -z 'in.*en' # in\nen
+
+#T# use the inline dotall modifier (?s) with the -z flag, turn it off with (?-s)
+echo -e "begin\nend" | grep -zP '(?s)in.*en' # in\nen
+
+#T# there is no support for the regular ungreedy modifier, only for the inline one
+
+#T# use the inline ungreedy modifier (?U), turn it off with (?-U), this makes quantifiers lazy by default
+echo "abcde" | grep -P '(?U)\w*' #  # no match
+
+#T# there is no support for the extended modifier, there is however, support for the inline version
+
+#T# use the inline extended modifier (?x), turn it off with (?-x), this ignores whitespace that is not escaped or outside a character class
+echo -e "str1 str2" | grep -P '(?x)st    r1\ str2' # str1 str2
+
+#T# there is no support for the extra modifier, but there is for the inline version
+
+#T# use the inline extra modifier (?X), turn it off with (?-X), this throws an error when escaping a character that has no special meaning
+echo -e "str1ystr2" | grep -P '(?X)str1\ystr2' # grep: unrecognized character follows \ #| without (?X) this would match "str1ystr2"
+
+
+
+# TODO (?R) recursion, (?J), (?C) callouts
+
+
 # |-----
 
 # |-------------------------------------------------------------

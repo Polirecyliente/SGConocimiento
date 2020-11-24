@@ -7,6 +7,10 @@ if("AAAABC" =~ m/A++[A-Z]C/){print "Matched2: $&\n"}
 if("start[5462]end" =~ m/({)?\[?\d+(?(1)}|\])/){print "Matched3: $&\n"}
 if("one two" =~ m/(\w+) (?1)/){print "Matched4: $&\n"}
 
+#T# conditional with subroutines (?(R1)), (?(R&foo))
+if ("ACAB" =~ m/(A(?(R1)B|C))(?1)/){print "Matched8: $&\n";}
+if ("DCDB" =~ m/(?<foo>D(?(R&foo)B|C))(?&foo)/){print "Matched9: $&\n";}
+
 #T# named groups (?<name>) \k, turn off all inline modifiers (?^)
 if("235.67 67" =~ m/(?<intPart>\d+)\.(?<decPart>\d+)\s\k<decPart>/)
 {print "Matched5: $& $+{intPart}$+{decPart}\n"}

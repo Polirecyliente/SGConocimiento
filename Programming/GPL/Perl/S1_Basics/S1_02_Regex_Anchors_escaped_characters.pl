@@ -31,9 +31,5 @@ print "\n";
 if ("hello world" =~ m/hello \K(world)/){print "Matched5: $&\n";}
 if ("mat matc" =~ m/(\w+)\s\g{1}/){print "Matched6: $&\n";}
 
-#T# unicode properties match \p{} doesn't match \P{}
+#T# unicode properties match \p{} doesn't match \P{} # TODO \X matches an unicode char
 if ("A_B5[" =~ m/\w+\p{N}\P{N}/){print "Matched7: $& $1\n";}
-
-#T# conditional with subroutines (?(R1)), (?(R&foo))
-if ("ACAB" =~ m/(A(?(R1)B|C))(?1)/){print "Matched8: $&\n";}
-if ("DCDB" =~ m/(?<foo>D(?(R&foo)B|C))(?&foo)/){print "Matched9: $&\n";}

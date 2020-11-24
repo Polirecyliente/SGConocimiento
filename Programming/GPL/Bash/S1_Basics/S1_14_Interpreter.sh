@@ -56,8 +56,8 @@ set +x
 
 #T# other interpreter options are used when starting Bash
 
-# SYNTAX bash -o1 -o2 var2
-#T# this should be executed from the operating system shell, such as Bash itself, -o1 represents a flag, and -o2 var2 represent a kwarg pair
+# SYNTAX bash -o1 -o2 val2
+#T# this should be executed from the operating system shell, such as Bash itself, -o1 represents a flag, and -o2 val2 represent a kwarg pair
 
 #T# the following are some of these options
 #T#     -c "command_string1", makes Bash execute command_string1, any strings following command_string1 are taken as positional paratemers for the shell, i.e. $0, $1, etc.
