@@ -12,7 +12,7 @@
 #C# --- Quantifiers
 #C# --- Character classes
 #C# --- Groupings
-#C# --- Subroutines
+#C# --- Subroutines and conditionals
 #C# --- Anchors and boundaries
 #C# --- Lookarounds
 #C# --- Regex modifiers
@@ -373,6 +373,8 @@ echo "a.+?" | grep -P '\Qa.+?\E' # a.+?
 #T# the escaped char \K removes the part of the match that is to its left
 echo -e "str1\nstr2" | grep -zP 'str1\n\Kstr2' # str2 #| without \K both lines are matched, i.e. str1\nstr2, but with \K str1\n is removed from the match
 
+#T# comments are introduced with (?# comment1)
+echo -e "str1" | grep -P '(?# initial comment)str(?# a number comes next)1' # str1
 # |-----
 
 #C# --- Quantifiers
@@ -404,6 +406,8 @@ echo "12345" | grep -P '[0-9]*?' #  # no match
 #T# in here 'c1' is any single character, this syntax matches zero or more non 'c1' characters followed by a 'c1', exactly as .*?c1 using the lazy quantifier
 # |--------------------------------------------------/
 
+#T# possessive quantifiers add a plus + at the end of the other quantifiers, they are greedy without backtracking, so that after a match fails, it is not checked if less chars would make it succeed, works as *+, ++, {}+
+echo "abcdeF" | grep -Po '\w{1,7}+F' # no match #| 'abcdeF' would be matched without the possessive quantifier
 # |-----
 
 #C# --- Character classes
@@ -431,17 +435,51 @@ echo "str1Astr1" | grep -E '(st)(r1)A\1\2' # str1Astr1
 #T# a group number from 10 onwards can be backreferenced with \g{int1} where int1 is the group number, this avoids ambiguity
 echo "abcdefghijkk" | grep -P '(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)\g{11}' # abcdefghijkk
 
+#T# nested groups are possible as (group1(group2)), they are numbered in order of appearance, so \1 matches group1group2, \2 matches group2
+echo "ab ab" | grep -P '(a(b)) \1'  # ab ab
+echo "ab ab" | grep -P '(a(b)) a\2' # ab ab
+
+#T# named groups are created with (?<group_name1>pattern1) and are matched again (as a backreference) with \k<group_name1>
+echo "ab ab" | grep -P '(?<group1>ab) \k<group1>' # ab ab
+
 #T# the vertical bar | is used for alternation (to match either one of the patterns separated with the vertical bar)
 echo "str1" | grep -E 'st|tr1' # st
 
 #T# the syntax (?:pattern1) is used to create a non capturing group for pattern1, this means that the match of pattern1 can't be recalled with a backreference like \1, because it doesn't create a group
 echo "strabab" | grep -P '(?:tr)(ab)\1' # trabab
+
+#T# the syntax (?>pattern1|pattern2) up to patternN creates an atomic group, this means there is no backtracking, i.e. the match is fixed with the first pattern found from this group, and if it fails there is no checking the remaining patterns, in this sense pattern1 has more priority than pattern2 and so on
+echo "priorship" | grep -P '(?>prio|priorshi)p' # no match #| given that the first pattern 'prio' is matched, the second one 'priorshi' will never be matched due to the atomic group, without '?>' the whole 'priorship' is matched
+
+#T# the syntax (?|(pattern1)|pattern2|(pattern3)(pattern4)) creates a brach reset group, in it, the group numbering resets, this means that if pattern3 is matched then it's group number 1 and pattern4 is group 2, if pattern1 is matched then it's group 1, and if pattern2 is matched there are no groups created
+echo "B12 12" | grep -P '(?|A(\d+)|B(\d+)) \1' # B12 12
 # |-----
 
-#C# --- Subroutines
+#C# --- Subroutines and conditionals
 
 # |-----
+#T# subroutines are a way to reuse regex patterns already created, instead of writing them again
 
+#T# the basic subroutine reuses the numbered groups, a subroutine (?int1) matches the pattern of a numbered group int1
+echo "str1 str2" | grep -P '(\w\w\w\d) (?1)' # str1 str2 #| (?1) matches the pattern of the first group '\w\w\w\d'
+
+#T# a named subroutine is the same as before, but using a named group, the named subroutine (?&group_name1) matches the pattern of a named group group_name1
+echo "str1 str2" | grep -P '(?<group1>str\d) (?&group1)' # str1 str2
+
+#T# there are relative subroutines, the syntax (?-int1) matches the pattern of the int1 group to the left, (?+int1) matches the pattern of the int1 group to the right
+echo "a b 1 2" | grep -P '(\w) (?-1) (?+1) (\d)' # a b 1 2
+
+#T# regex patterns can have recursion with (?R), the whole pattern is put in place of (?R), so the ? quantifier should accompany it, as (?R)? to ensure the recursion can end when it doesn't match anymore
+echo "a1b2" | grep -P '\w\d(?R)?' # a1b2
+echo "ab12" | grep -P '\w(?R)?\d' # ab12
+#| when used at the start '(?R)?pattern1' grep gives an error, "grep: recursive call could loop indefinitely"
+
+#T# there is no support for regex code capsules
+
+#T# conditionals allow matching patterns according to an if-then-else conditional, the basic form is (?(if1)(then_patterns1)|(else_patterns1)) note the plural in patterns as each can be several patterns separated by alternation |, if1 is either a lookaround or a group (named or numbered)
+echo "12345" | grep -P '(?(?=\d+)(123|456)|(abc|def))'          # 123
+echo "12345" | grep -P '(\d)(?(1)(2)|(b))'                      # 12
+echo "12345" | grep -P '(?<group1>\d{2})(?(<group1>)(34)|(cd))' # 1234
 # |-----
 
 #C# --- Anchors and boundaries
@@ -533,11 +571,8 @@ echo -e "str1 str2" | grep -P '(?x)st    r1\ str2' # str1 str2
 #T# use the inline extra modifier (?X), turn it off with (?-X), this throws an error when escaping a character that has no special meaning
 echo -e "str1ystr2" | grep -P '(?X)str1\ystr2' # grep: unrecognized character follows \ #| without (?X) this would match "str1ystr2"
 
-
-
-# TODO (?R) recursion, (?J), (?C) callouts
-
-
+#T# turn on or off several inline modifiers together, e.g. (?ix-U)
+echo "str1" | grep -P '(?ix-U)S  T  R1' # str1
 # |-----
 
 # |-------------------------------------------------------------
