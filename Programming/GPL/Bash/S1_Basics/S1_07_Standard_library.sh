@@ -324,7 +324,7 @@ echo "in string1" | grep -n 'i' # 1:in string1 #| the "i" letter is highlighted
 #T# the dot . is used to match any char
 echo "str1" | grep -E '.' # str1 # all chars match
 
-#T# the backslash \ is used to escape chars, so as to match operators as raw chars
+#T# to match an operator as a literal char, it must be escaped with a backslash \
 echo 'str1.' | grep -E '\.' # .
 
 #T# the escaped char \s matches one whitespace (space, tab, newline)
@@ -421,6 +421,23 @@ echo "strr1" | grep -E '[^trs]1' #  # no match
 
 #T# using a dash - between two characters inside a character class, matches any single one character in the range of said two characters
 echo "strr1" | grep -E '[3-H]1' # r1
+
+#T# a character class can be one of the POSIX character clases, these are made with a word within colons and a pair of brackets which don't count as the character class brackets
+#T#     [:alnum:],  matches one alphanumeric char
+#T#     [:alpha:],  matches one alphabetic char
+#T#     [:blank:],  matches one space or tab
+#T#     [:cntrl:],  matches one control char, like a vertical tab
+#T#     [:digit:],  matches one digit
+#T#     [:graph:],  matches one visible char
+#T#     [:lower:],  matches one lowercase char
+#T#     [:print:],  matches one visible char or space
+#T#     [:punct:],  matches one punctuation char
+#T#     [:space:],  matches one space char
+#T#     [:upper:],  matches one uppercase char
+#T#     [:xdigit:], matches one hexadecimal digit
+echo "str1" | grep '[[:alnum:]]' # str1
+
+#T# there is no support for set operations on character classes
 # |-----
 
 #C# --- Groupings
@@ -573,6 +590,9 @@ echo -e "str1ystr2" | grep -P '(?X)str1\ystr2' # grep: unrecognized character fo
 
 #T# turn on or off several inline modifiers together, e.g. (?ix-U)
 echo "str1" | grep -P '(?ix-U)S  T  R1' # str1
+
+#T# all former inline modifiers shown can be introduced exclusively for the pattern inside the same parentheses of the inline modifier, i.e. (?s:pattern1), (?-s:pattern1) only affects pattern1
+echo "str1 STR2" | grep -P '(?i:STR)1 (?-i:STR)2' # str1 STR2
 # |-----
 
 # |-------------------------------------------------------------

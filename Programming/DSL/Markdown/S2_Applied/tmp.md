@@ -1,9 +1,0 @@
-| fi | se | th
-| - | - | -
-| &#x2420; | ␠ | SYMBOL FOR SPACE
-| &#x2421; | ␡ | SYMBOL FOR DELETE
-| &#x2422; | ␢ | BLANK SYMBOL
-| &#x2423; | ␣ | OPEN BOX
-| &#x2424; | N_L | SYMBOL FOR NEWLINE
-| &#x2425; | ␥ | SYMBOL FOR DELETE FORM TWO
-| &#x2426; | ␦ | SYMBOL FOR SUBSTITUTE FORM TWO
