@@ -79,7 +79,7 @@ str2="string ${int1} interpolation" # string 5 interpolation
 #C# Escape sequences
 
 # |-------------------------------------------------------------
-#T# escaped characters start with backslash
+#T# an special kind of combination of literals are escape sequences or escaped chars, they can mean something particular, e.g. the \n means newline, or they can make operators become literals, e.g. the \$ makes the dollar sign to be taken literally
 
 #T# the -e flag of echo is to enable the use of escaped characters inside a double quoted string
 

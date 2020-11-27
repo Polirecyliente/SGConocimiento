@@ -66,7 +66,7 @@ str1 = """sen3word1 sen3"'"'word2
 #C# Escape sequences
 
 # |-------------------------------------------------------------
-#T# an special kind of combination of literals are escape sequences, they mean something particular, e.g. the \n means newline
+#T# an special kind of combination of literals are escape sequences or escaped chars, they can mean something particular, e.g. the \n means newline, or they can make operators become literals, e.g. the \* makes the asterisk to be taken literally
 
 # SYNTAX \char1
 #T# an escape sequence starts with a backslash \ and is followed by char1 which is other character or characters, most commonly char1 is a single character

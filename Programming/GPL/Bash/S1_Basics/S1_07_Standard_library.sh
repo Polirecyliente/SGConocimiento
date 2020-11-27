@@ -348,6 +348,69 @@ echo "5bc" | grep -P '\D' # bc
 #T# the escaped char \X matches one unicode char
 echo -e "a\u2446b" | grep -P '\w\X' # a⑆
 
+#T# to match a particular unicode char, use either \x{hex1} or the unicode char itself, hex1 is the hexadecimal number of the unicode char being matched, there is no support to match with the char name \N{name1}
+echo -e "a⑆b" | grep -P '\x{2446}b' # ⑆b
+echo -e "a⑆b" | grep -P 'a⑆'        # a⑆
+
+#T# unicode properties are matched in general with \p{prop1} where prop1 stands for the unicode property being matched, a char with said property will be matched
+
+#T# unicode categories are matched with \p{categ1}, categ1 can be one of the following
+#T#     L, matches a letter char, such as 's'
+#T#     Ll, matches a lowercase letter char, such as 's'
+#T#     Lu, matches an uppercase letter char, such as 'S'
+#T#     Lt, matches a titlecase letter char, such as 'ǅ' \u01C5
+#T#     L&, matches a lowercase, uppercase, or titlecase letter char, such as 'ǅ'
+#T#     Lm, matches a modifier letter char, such as 'ʱ' \u02B1
+#T#     Lo, matches a type other letter char, such as 'ƻ' \u01BB
+#T#     M, matches a combining mark char (like diacritics), such as the breve in 'ă' a\u0306
+#T#     Mc, matches an spacing combining mark char, such as 'ೄ' \u0CC4
+#T#     Me, matches an enclosing mark char, such as 'a꙲' a\uA672
+#T#     Mn, matches a nonspacing mark char, such as 'ả' a\u0309
+#T#     N, matches a numeric char, such as '୬' \u0B6C
+#T#     Nd, matches a decimal digit char, such as '߈' \u07C8
+#T#     Nl, matches a number letter char, such as 'ↈ' \u2188
+#T#     No, matches a type other number char, such as '௲' \u0BF2
+#T#     P, matches a punctuation char, such as '⸗' \u2E17
+#T#     Pc, matches a punctuation connector char, such as '﹏' \uFE4F
+#T#     Pd, matches a punctuation dash char, such as '⸻' \u2E3B
+#T#     Pe, matches a punctuation close char, such as '⟧' \u27E7
+#T#     Pf, matches a punctuation final quote char, such as '»' \u00BB
+#T#     Pi, matches a punctuation initial quote char, such as '⸄' \u2E04
+#T#     Ps, matches a punctuation open char, such as '⁅' \u2045
+#T#     Po, matches a type other punctuation char, such as '¶' \u00B6
+#T#     S, matches a symbol char, such as '⌨' \u2328"
+#T#     Sc, matches a symbol currency char, such as '֏' \u058F
+#T#     Sk, matches a symbol modifier char, such as '˧' \u02E7
+#T#     Sm, matches a symbol math char, such as '؆' \u0606
+#T#     So, matches a type other symbol char, such as '۩' \u06E9
+#T#     Z, matches a separator char, such as \u205F
+#T#     Zl, matches a separator line char, such as \u2028
+#T#     Zp, matches a separator paragraph char, such as \u2029
+#T#     Zs, matches a separator space char, such as ' ' \u0020
+#T#     C, matches a control char, such as \uFFF9
+#T#     Cf, matches a format control char, such as \u2060
+#T#     Co, matches a private use control char, such as \uE000
+#T#     Cc, matches a type other control char, such as \u008A
+echo "str1" | grep -P '\p{L}'        # str
+echo -e "\u01C5" | grep -P '\p{Lt}'  # ǅ
+echo -e "\u02B1" | grep -P '\p{Lm}'  # ʱ
+echo -e "\u01BB" | grep -P '\p{Lo}'  # ƻ
+echo -e "a\u0306" | grep -P 'a\p{M}' # ă
+echo -e "\u0B6C" | grep -P '\p{N}'   # ୬
+echo -e "\u2E17" | grep -P '\p{P}'   # ⸗
+echo -e "\u2328" | grep -P '\p{S}'   # ⌨
+echo -e "\u205F" | grep -P '\p{Z}'   #  
+echo -e "\uFFF9" | grep -P '\p{C}'   #  
+
+#T# unicode scripts are matched with \p{script1}, the possible values of script1 are the following (each name represents a script, 'Common' is for chars common to many scripts, 'Inherited' is for chars that inherit their script from a char they accompany, like nonspacing diacritics do): Arabic, Armenian, Avestan, Balinese, Bamum, Bassa_Vah, Batak, Bengali, Bopomofo, Brahmi, Braille, Buginese, Buhid, Canadian_Aboriginal, Carian, Caucasian_Albanian, Chakma, Cham, Cherokee, Common, Coptic, Cuneiform, Cypriot, Cyrillic, Deseret, Devanagari, Duployan, Egyptian_Hieroglyphs, Elbasan, Ethiopic, Georgian, Glagolitic, Gothic, Grantha, Greek, Gujarati, Gurmukhi, Han, Hangul, Hanunoo, Hebrew, Hiragana, Imperial_Aramaic, Inherited, Inscriptional_Pahlavi, Inscriptional_Parthian, Javanese, Kaithi, Kannada, Katakana, Kayah_Li, Kharoshthi, Khmer, Khojki, Khudawadi, Lao, Latin, Lepcha, Limbu, Linear_A, Linear_B, Lisu, Lycian, Lydian, Mahajani, Malayalam, Manichaean, Meetei_Mayek, Mende_Kikakui, Meroitic_Cursive, Meroitic_Hieroglyphs, Miao, Modi, Mongolian, Mro, Myanmar, Nabataean, New_Tai_Lue, Nko, Ogham, Ol_Chiki, Old_Italic, Old_North_Arabian, Old_Permic, Old_Persian, Old_South_Arabian, Old_Turkic, Oriya, Osmanya, Pahawh_Hmong, Palmyrene, Pau_Cin_Hau, Phags_Pa, Phoenician, Psalter_Pahlavi, Rejang, Runic, Samaritan, Saurashtra, Sharada, Shavian, Siddham, Sinhala, Sora_Sompeng, Sundanese, Syloti_Nagri, Syriac, Tagalog, Tagbanwa, Tai_Le, Tai_Tham, Tai_Viet, Takri, Tamil, Telugu, Thaana, Thai, Tibetan, Tifinagh, Tirhuta, Ugaritic, Vai, Warang_Citi, Yi
+echo "5" | grep -P '\p{Common}'          # 5
+echo -e "\u060B" | grep -P '\p{Arabic}'  # ؋
+echo -e "\u1C12" | grep -P '\p{Lepcha}'  # ᰒ
+echo -e "\u07D2" | grep -P '\p{Nko}'     # ߒ
+echo -e "\u0F12" | grep -P '\p{Tibetan}' # ༒
+
+#T# there is no support to match chars by their unicode block with \p{block1}
+
 #T# the escaped char \t matches one tab char (this also works in the sed program)
 echo "ab    c" | grep -P '\tc' #     c
 
@@ -436,8 +499,6 @@ echo "strr1" | grep -E '[3-H]1' # r1
 #T#     [:upper:],  matches one uppercase char
 #T#     [:xdigit:], matches one hexadecimal digit
 echo "str1" | grep '[[:alnum:]]' # str1
-
-#T# there is no support for set operations on character classes
 # |-----
 
 #C# --- Groupings
@@ -449,14 +510,16 @@ echo "strtr1" | grep -E '(tr)+1' # trtr1
 #T# the escaped numbers \1, \2, etc., are used to match (backreference) a captured group, \1 matches the first group, \2 the second, and so on
 echo "str1Astr1" | grep -E '(st)(r1)A\1\2' # str1Astr1
 
-#T# a group number from 10 onwards can be backreferenced with \g{int1} where int1 is the group number, this avoids ambiguity
+#T# a group number from 10 onwards can be backreferenced with \g<int1> or \g{int1} where int1 is the group number, this avoids ambiguity
+echo "abcdefghijkk" | grep -P '(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)\g<11>' # abcdefghijkk
 echo "abcdefghijkk" | grep -P '(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)\g{11}' # abcdefghijkk
 
 #T# nested groups are possible as (group1(group2)), they are numbered in order of appearance, so \1 matches group1group2, \2 matches group2
 echo "ab ab" | grep -P '(a(b)) \1'  # ab ab
 echo "ab ab" | grep -P '(a(b)) a\2' # ab ab
 
-#T# named groups are created with (?<group_name1>pattern1) and are matched again (as a backreference) with \k<group_name1>
+#T# named groups are created with (?<group_name1>pattern1) or (?P<group_name1>pattern1) and are matched again (as a backreference) with \k<group_name1>
+echo "ab ab" | grep -P '(?P<group1>ab) \k<group1>' # ab ab
 echo "ab ab" | grep -P '(?<group1>ab) \k<group1>' # ab ab
 
 #T# the vertical bar | is used for alternation (to match either one of the patterns separated with the vertical bar)
@@ -477,7 +540,7 @@ echo "B12 12" | grep -P '(?|A(\d+)|B(\d+)) \1' # B12 12
 # |-----
 #T# subroutines are a way to reuse regex patterns already created, instead of writing them again
 
-#T# the basic subroutine reuses the numbered groups, a subroutine (?int1) matches the pattern of a numbered group int1
+#T# the basic subroutine reuses the numbered groups, a subroutine (?int1) matches the pattern of the numbered group int1
 echo "str1 str2" | grep -P '(\w\w\w\d) (?1)' # str1 str2 #| (?1) matches the pattern of the first group '\w\w\w\d'
 
 #T# a named subroutine is the same as before, but using a named group, the named subroutine (?&group_name1) matches the pattern of a named group group_name1
@@ -494,9 +557,9 @@ echo "ab12" | grep -P '\w(?R)?\d' # ab12
 #T# there is no support for regex code capsules
 
 #T# conditionals allow matching patterns according to an if-then-else conditional, the basic form is (?(if1)(then_patterns1)|(else_patterns1)) note the plural in patterns as each can be several patterns separated by alternation |, if1 is either a lookaround or a group (named or numbered)
-echo "12345" | grep -P '(?(?=\d+)(123|456)|(abc|def))'          # 123
-echo "12345" | grep -P '(\d)(?(1)(2)|(b))'                      # 12
-echo "12345" | grep -P '(?<group1>\d{2})(?(<group1>)(34)|(cd))' # 1234
+echo "12345" | grep -P '(?(?=\d+)(123|456)|(abc|def))'        # 123
+echo "12345" | grep -P '(\d)(?(1)(2)|(b))'                    # 12
+echo "12345" | grep -P '(?<group1>\d{2})(?(group1)(34)|(cd))' # 1234
 # |-----
 
 #C# --- Anchors and boundaries
@@ -525,20 +588,22 @@ echo "ab cd" | grep -E '\bcd' # cd
 
 #T# the escaped char \B matches at a non word boundary
 echo "ab cd" | grep -E '\Bcd' #  # no match
+
+#T# there is no support for the match anchor \G
 # |-----
 
 #C# --- Lookarounds
 
 # |-----
 #T# the syntax (?=pattern1) is used to create a positive lookahead with pattern1, so pattern1 must appear ahead when finding a match, because pattern1 is not matched
-echo "str1" | grep -P 'r(?=[0-2])\d' # r1 # only matches r0, r1, or r2
+echo "str1" | grep -P 'r(?=[0-2])\d' # r1 #| only matches r0, r1, or r2
 
 #T# the syntax (?<=pattern1) is used to create a positive lookbehind with pattern1, so pattern1 must appear behind when finding a match, pattern1 is not matched
 echo "str1" | grep -P '(?<=st)r1' # r1
 
 #T# the syntax (?!pattern1) is used to create a negative lookahead with pattern1, so pattern1 can't appear ahead when finding a match, because pattern1 is not matched
-echo "str101" | grep -P 'r1(?!00)\d\d' # r101 # doesn't match in str100
-#T# use single quotes to avoid history expansion with !
+echo "str101" | grep -P 'r1(?!00)\d\d' # r101 #| doesn't match in str100
+#| use single quotes to avoid history expansion with !
 
 #T# the syntax (?<!pattern1) is used to create a negative lookbehind with pattern1, so pattern1 can't appear behind when finding a match, pattern1 is not matched
 echo "str1" | grep -P '(?<!st)r1' #  # no match
@@ -578,18 +643,21 @@ echo -e "begin\nend" | grep -zP '(?s)in.*en' # in\nen
 #T# use the inline ungreedy modifier (?U), turn it off with (?-U), this makes quantifiers lazy by default
 echo "abcde" | grep -P '(?U)\w*' #  # no match
 
-#T# there is no support for the extended modifier, there is however, support for the inline version
+#T# there is no support for the regular extended modifier, there is however, support for the inline version
 
 #T# use the inline extended modifier (?x), turn it off with (?-x), this ignores whitespace that is not escaped or outside a character class
-echo -e "str1 str2" | grep -P '(?x)st    r1\ str2' # str1 str2
+echo -e "str1 str2" | grep -P '(?x)st    r1\ st r2' # str1 str2
 
 #T# there is no support for the extra modifier, but there is for the inline version
 
 #T# use the inline extra modifier (?X), turn it off with (?-X), this throws an error when escaping a character that has no special meaning
 echo -e "str1ystr2" | grep -P '(?X)str1\ystr2' # grep: unrecognized character follows \ #| without (?X) this would match "str1ystr2"
 
-#T# turn on or off several inline modifiers together, e.g. (?ix-U)
-echo "str1" | grep -P '(?ix-U)S  T  R1' # str1
+#T# there is no support for the ascii modifier (?a), nor for the unicode modifier (?u), \w matches ascii letters
+echo -e "áüo" | grep -P '\w' # o
+
+#T# turn on or off several inline modifiers together, e.g. (?ix-m)
+echo "str1" | grep -P '(?ix-m)S  T  R1' # str1
 
 #T# all former inline modifiers shown can be introduced exclusively for the pattern inside the same parentheses of the inline modifier, i.e. (?s:pattern1), (?-s:pattern1) only affects pattern1
 echo "str1 STR2" | grep -P '(?i:STR)1 (?-i:STR)2' # str1 STR2
