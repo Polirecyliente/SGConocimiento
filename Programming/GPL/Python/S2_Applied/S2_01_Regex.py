@@ -40,6 +40,14 @@ str1 = search1.group(2) # 'cd'
 search1 = regex.search(r'(bc)(cd)', 'aabbccdd')
 int1 = search1.start(2) # 5
 
+#T# get the ending position of a group with the end function
+
+# SYNTAX end(int1)
+#T# same as before
+
+search1 = regex.search(r'(bc)(cd)', 'aabbccdd')
+int1 = search1.end(2) # 7
+
 #T# get a list with all global matches with the findall function
 list1 = regex.findall(r'text', 'strtextstrtextstr') # ['text', 'text']
 
@@ -54,21 +62,29 @@ list1 = regex.split(r'text', 'strtextstrtextstr') # ['str', 'str', 'str']
 #T# substitute matches with a replacement string with the sub function
 str1 = regex.sub(r'text', 'TEXT', 'strtextstrtextstr') # 'strTEXTstrTEXTstr'
 
-#T# the Match objects have a few properties and methods
+#T# substitute only up to a given maximum number of occurrences with the count kwarg
+str1 = regex.sub(r'text', 'TEXT', 'strtextstrtextstr', count = 1) # 'strTEXTstrtextstr'
 
-#T# the groups method returns a tuple where each element is the match of a group
+#T# substitute with regex groups, using a raw string as the replacement string
+str1 = regex.sub(r'(\w+) (\w+)', r'\2 \1', 'str1 str2') # 'str2 str1'
+
+#T# the pattern attribute of a Regex object, contains the pattern that was used to compile the Regex object
+regex_object1 = regex.compile('\w*\sPattern1\b') # regex.Regex('\\w*\\sPattern1\x08', flags=regex.V0)
+str1 = regex_object1.pattern # '\\w*\\sPattern1\x08'
+
+#T# the groups method of a Match object, returns a tuple where each element is the match of a group
 search1 = regex.search(r'(s)(tr)(1)', 'str1') # <regex.Match object; span=(0, 4), match='str1'>
 tuple1 = search1.groups() # ('s', 'tr', '1')
 
-#T# the span method returns the start and end positions of a group, or of the match if no group is input as argument
+#T# the span method of a Match object, returns the start and end positions of a group, or of the match if no group is input as argument
 search1 = regex.search(r'(s)(tr)(1)', 'str1') # <regex.Match object; span=(0, 4), match='str1'>
 tuple1 = search1.span(1) # (0, 1)
 
-#T# the group method returns the contents of single groups, or the whole match if no group is input as argument
+#T# the group method of a Match object, returns the contents of single groups, or the whole match if no group is input as argument
 search1 = regex.search(r'(s)(tr)(1)', 'str1') # <regex.Match object; span=(0, 4), match='str1'>
 str1 = search1.group(2) # 'tr'
 
-#T# the string property contains the string being analyzed, i.e. the one that the regex is being applied on, the input string
+#T# the string property of a Match object, contains the string being analyzed, i.e. the one that the regex is being applied on, the input string
 search1 = regex.search(r'(s)(tr)(1)', 'textstr1text') # <regex.Match object; span=(4, 8), match='str1'>
 str1 = search1.string # 'textstr1text'
 # |-----
@@ -285,6 +301,9 @@ search1 = regex.search(r'(a(b)) a\2', 'ab ab') # <regex.Match object; span=(0, 5
 search1 = regex.search(r'(?P<group1>ab) \g<group1>', 'ab ab') # <regex.Match object; span=(0, 5), match='ab ab'>
 search1 = regex.search(r'(?<group1>ab) \g<group1>', 'ab ab') # <regex.Match object; span=(0, 5), match='ab ab'>
 search1 = regex.search(r'(?P<group1>ab) (?P=group1)', 'ab ab') # <regex.Match object; span=(0, 5), match='ab ab'>
+
+#T# subscripting repeated groups as in (\w)+, is done with the subf function, the syntax is {int1[int2]} int1 is for the group number, int2 is for the subscript
+str1 = regex.subf(r'(\w)+', '{1[0]} {1[1]} {1[2]} {1[-1]}', 'str1') # 's t r 1'
 
 #T# the vertical bar | is used for alternation (to match either one of the patterns separated with the vertical bar)
 search1 = regex.search(r'st|tr1', 'str1') # <regex.Match object; span=(0, 2), match='st'>

@@ -522,6 +522,8 @@ echo "ab ab" | grep -P '(a(b)) a\2' # ab ab
 echo "ab ab" | grep -P '(?P<group1>ab) \k<group1>' # ab ab
 echo "ab ab" | grep -P '(?<group1>ab) \k<group1>' # ab ab
 
+#T# there is no support for subscripting repeated groups, e.g. in (\w)+ the group stores only the last match, in this case the last letter
+
 #T# the vertical bar | is used for alternation (to match either one of the patterns separated with the vertical bar)
 echo "str1" | grep -E 'st|tr1' # st
 
