@@ -6,7 +6,7 @@
 #C# Importing modules
 #C# Using modules
 #C# Importing packages
-#C# Info about modules
+#C# Info about modules and packages
 
 #T# Beginning of content
 
@@ -14,7 +14,7 @@
 
 # |-------------------------------------------------------------
 #T# the import keyword imports a package or module to use its code in this file
-import S1_10_P_Module_example
+import S1_10_Packages_01_Module_example
 
 # |--------------------------------------------------\
 #T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch
@@ -42,14 +42,14 @@ from S1_06_Functions import func1 as f1
 
 #T# execute a module again with the reload function
 import importlib
-importlib.reload(S1_10_P_Module_example)
+importlib.reload(S1_10_Packages_01_Module_example)
 # |-------------------------------------------------------------
 
 #C# Using modules
 
 # |-------------------------------------------------------------
 #T# call module's function
-int1 = S1_10_P_Module_example.func1() # 56 # func1() returns 56
+int1 = S1_10_Packages_01_Module_example.func1() # 56 # func1() returns 56
 
 int1 = f1(7) # 53 # f1(arg1) returns 53
 # |-------------------------------------------------------------
@@ -62,7 +62,7 @@ import package
 int1 = package.anon_func1(8, -5) # 50
 # |-------------------------------------------------------------
 
-#C# Info about modules
+#C# Info about modules and packages
 
 # |-------------------------------------------------------------
 #T# the help function prints to stdout the generated help for its module argument
@@ -73,5 +73,10 @@ help(math)
 help("modules")
 
 #T# the __file__ attribute of a module contains its location in the system, and if it has no file then the module is possibly builtin
+import importlib
 str1 = importlib.__file__ # /usr/lib/python3.8/importlib/__init__.py
+
+#T# the __path__ attribute of a package contains the path to its __init__.py file, only packages and not modules have this attribute
+import importlib
+list1 = importlib.__path__ # ['/usr/lib/python3.8/importlib']
 # |-------------------------------------------------------------

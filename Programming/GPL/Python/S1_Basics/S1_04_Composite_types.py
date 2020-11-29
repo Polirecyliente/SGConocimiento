@@ -40,17 +40,25 @@ int1 = len(list1) # 10
 # |--------------------------------------------------\
 #T# the slice operator is used to create a slice of the original composite type
 
-# SYNTAX arr1[ini_elem:final_elem]
-#T# this includes ini_elem, up to before final_elem (excludes final_elem) from arr1
+# SYNTAX arr1[ini_elem1:final_elem1]
+#T# this includes ini_elem1, up to before final_elem1 (excludes final_elem1) from arr1
 
 str1 = "example string"
 str2 = str1[2:5] # amp
 
-# SYNTAX arr1[ini_elem:final_elem:stepN]
-#T# same as before, but form the slice stepping by stepN elements
+# SYNTAX arr1[ini_elem1:final_elem1:step1]
+#T# same as before, but form the slice stepping by step1 elements
 
 list1 = [99, 99, 1, 99, 99, 2, 99, 99, 3, 99]
 list2 = list1[2:9:3] # [1, 2, 3]
+
+#T# parts of the slice can be left out, in that case ini_elem1 defaults to 0, final_elem1 defaults to the length of the array, step1 defaults to 1
+list1 = [1, 2, 3, 4, 5]
+list1[:3]  # [1, 2, 3]
+list1[2:]  # [3, 4, 5]
+list1[::2] # [1, 3, 5]
+list1[:]   # [1, 2, 3, 4, 5]
+list1[1:1] # [] #| this starts at index 1 (second element) and ends at element 1 or index 0 (first element), so this list is always empty
 # |--------------------------------------------------/
 
 #T# the concatenation operator + is used to concatenate composite types
@@ -340,4 +348,9 @@ bool1 = set1 == froz1 # False
 #T# create multidimensional composite types by creating them inside one another, access an element from a multidimensional composite type by index
 multi_arr1 = [(1, 2), [['a.1', 'a.2'], ['b.1', 'b.2', 'b.3']], {'k1':'v1'}]
 str1 = multi_arr1[1][1][2] # 'b.3'
+
+#T# multidimensional arrays can be sliced too
+arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8, 9, 10], [11]]]
+int1 = arr1[1][0:2][1][1:3][1] # 9
+#| this takes index 1 of arr1 which is [[5, 6], [7, 8, 9, 10], [11]], then slice 0:2 of that is [[5, 6], [7, 8, 9, 10]], then index 1 of that is [7, 8, 9, 10], then slice 1:3 of that is [8, 9], and finally index 1 of that is 9
 # |-------------------------------------------------------------

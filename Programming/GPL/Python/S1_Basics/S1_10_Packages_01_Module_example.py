@@ -1,5 +1,5 @@
 
-#   P Module example
+#   Module example
 
 #T# Table of contents
 
