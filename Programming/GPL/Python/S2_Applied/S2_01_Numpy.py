@@ -5,8 +5,15 @@
 
 #C# Numpy arrays
 #C# --- Array data types
+#C# --- Array operations
 
 #T# Beginning of content
+
+# |-------------------------------------------------------------
+#T# numpy has an specific function to get help for names in the namespace of numpy, it's the numpy.info function which is used as the builtin help function from Python, this is important because numpy ufuncs are written in C, an so the help function can't show their help
+import numpy as np
+np.info(np.array) #| shows the numpy help for np.array
+# |-------------------------------------------------------------
 
 #C# Numpy arrays
 
@@ -99,12 +106,12 @@ tuple1 = arr2.shape # (2, 3, 2)
 #T#     f, float
 #T#     i, integer
 #T#     M, datetime
-#T#     m, timedelta (# TODO)
+#T#     m, timedelta, provides time intervals to operate with datetimes
 #T#     O, object
 #T#     S, string
 #T#     U, unicode string
 #T#     u, unsigned integer
-#T#     V, void (# TODO)
+#T#     V, void, flexible data type to accommodate for any of the others
 arr1 = np.array(['str1']) # array(['str1'], dtype='<U4'), U4 means unicode string with 4 chars
 
 #T# the dtype attribute of an ndarray object contains the array data type of said object
@@ -120,4 +127,149 @@ arr1 = np.array([1.4, 2.4])
 arr2 = arr1.astype('i') # array([1, 2], dtype=int32) #| the argument 'i' changes the data type to integer, any of the other types can be used
 # |-----
 
+#C# --- Array operations
+
+# |-----
+#T# numpy arrays can be iterated like regular arrays, but also with the nditer function, this has the difference that the nditer function iterates over each individual element, and so nested arrays are not necessary
+arr1 = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+for it1 in np.nditer(arr1):
+    it1
+#T# the former prints
+# array(1)
+# array(2)
+# array(3)
+# array(4)
+# array(5)
+# array(6)
+# array(7)
+# array(8)
+# array(9)
+# array(10)
+# array(11)
+# array(12)
+
+#T# the ndenumerate function returns an iterable object of tuples, where each tuple contains the index of each element in the numpy array, and the element itself
+
+# SYNTAX np.ndenumerate(array1)
+#T# each element in the numpy array array1 has an index, this can be retrieved with this syntax
+
+#T# as array1 can have several dimensions, the index also has several dimensions, and so the index returned by the ndenumerate function is also a tuple whose elements indicate the index in each dimension, starting from the outer dimension or first dimension
+
+#T# as an example, if an element of value 5 is located in index 3 of the first dimension and index 1 of the second, its index tuple will be (3, 1), and its tuple in the ndenumerate object would be ((3, 1), 5)
+
+arr1 = np.array([[0, 1], [1, 1], [1, 1], [1, 5]])
+for it1 in np.ndenumerate(arr1):
+    it1
+#T# the former outputs
+# ((0, 0), 0)
+# ((0, 1), 1)
+# ((1, 0), 1)
+# ((1, 1), 1)
+# ((2, 0), 1)
+# ((2, 1), 1)
+# ((3, 0), 1)
+# ((3, 1), 5)
+
+#T# in numpy, the words dimension and axis are almost synonyms, axis is the same as dimension - 1, dimensions count from 1, axes count from 0
+
+#T# numpy arrays can be joined along a given dimension or axis using the axis kwarg of the concatenate function, the axis kwarg starts counting dimensions at 0, this means that the first dimension is axis 0
+
+# SYNTAX np.concatenate((array1, array2), axis = int1)
+#T# the tuple argument accepts up to arrayN, array1 and array2 are the numpy arrays to concatenate, int1 is the axis in which the arrays will be concatenated
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+arr3 = np.concatenate((arr1, arr2), axis = 0) # array([[1, 2], [3, 4], [5, 6], [7, 8]])
+arr3 = np.concatenate((arr1, arr2), axis = 1) # array([[1, 2, 5, 6], [3, 4, 7, 8]])
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5], [6]])
+arr3 = np.concatenate((arr1, arr2), axis = 0)
+arr3 = np.concatenate((arr1, arr2), axis = 1)
+
+#T# numpy arrays can be stacked, thereby creating an extra dimension to contain the stacked arrays, this is done with the stack function
+
+# SYNTAX np.stack((array1, array2), axis = int1)
+#T# array1, array2, up to arrayN are the arrays to be stacked, int1 is the axis in which the stacking will be made, all arrays must have the same shape
+
+#T# int1 applies from the perspective of the new extra dimension that is an outer dimension enclosing the stacked arrays, so an axis of int1 equal to 0 represents the first dimension which is the extra dimension itself
+
+#T# if int1 is 0 then each numpy array, array1, array2, up to arrayN, now counts as an element of the stacked array, so they are stacked directly on top of each other, in the order specified by the tuple argument
+
+#T# if int1 is 1 then now the elements of the first dimension (their axis 0) of the numpy arrays, are stacked, and so if int1 is N then the elements in the Nth dimension of the numpy arrays, are stacked
+
+#T# all the former means that the maximum value of int1 is 1 plus the biggest axes number of any of the arrays, array1, array2, up to arrayN, in this particular case, each individual element of each array is stacked with the individual elements of the other arrays, this forms new arrays in the most inner dimension that are always the size of the number of arrays stacked
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+arr3 = np.array([[9, 10], [11, 12]])
+
+arr4 = np.stack((arr1, arr2, arr3), axis = 0)
+#T# arr4 stacks like the following
+# array([[[ 1,  2], [ 3,  4]], [[ 5,  6], [ 7,  8]], [[ 9, 10], [11, 12]]])
+
+arr4 = np.stack((arr1, arr2, arr3), axis = 1)
+#T# arr4 stacks like the following
+# array([[[ 1,  2], [ 5,  6], [ 9, 10]],
+#        [[ 3,  4], [ 7,  8], [11, 12]]])
+
+arr4 = np.stack((arr1, arr2, arr3), axis = 2)
+#T# arr4 stacks like the following
+# array([[[ 1,  5,  9],
+#         [ 2,  6, 10]],
+#        [[ 3,  7, 11],
+#         [ 4,  8, 12]]])
+
+#T# by stacking arrays, new arrays with different shapes can be acquired, except for dimensions with a shape value of 1, to get extra dimensions with a shape value of 1 use the following syntax
+
+# SYNTAX array1 = np.array([[[[array1]]]])
+#T# array1 is the array being manipulated, the number of square bracket pairs [] can be more than 4 or less than 4, according to the amount of extra dimensions wanted with a shape value of 1
+
+arr1 = np.array([1, 2])
+tuple1 = arr1.shape # (2,)
+arr1 = np.array([[arr1]]) # array([[[1, 2]]])
+tuple1 = arr1.shape # (1, 1, 2)
+
+#T# the vstack function is not so much a function for stacking, as it is a function to concatenate along axis 0 (first dimension)
+
+# SYNTAX np.vstack((array1, array2))
+#T# array1, array2, up to arrayN are the arrays being concatenated along axis 0
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8], [9, 10]])
+arr3 = np.vstack((arr1, arr2))
+# array([[ 1,  2], [ 3,  4], [ 5,  6], [ 7,  8], [ 9, 10]])
+arr3 = np.concatenate((arr1, arr2), axis = 0) #| same as before
+# array([[ 1,  2], [ 3,  4], [ 5,  6], [ 7,  8], [ 9, 10]])
+
+#T# the hstack function is not so much a function for stacking, as it is a function to concatenate along axis 1 (second dimension)
+
+# SYNTAX np.hstack((array1, array2))
+#T# array1, array2, up to arrayN are the arrays being concatenated along axis 1
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5], [6]])
+arr3 = np.hstack((arr1, arr2))
+# array([[1, 2, 5], [3, 4, 6]])
+arr3 = np.concatenate((arr1, arr2), axis = 1) #| same as before
+# array([[1, 2, 5], [3, 4, 6]])
+
+#T# the dstack function is not so much a function for stacking, as it is a function to concatenate along axis 2 (third dimension)
+
+# SYNTAX np.dstack((array1, array2))
+#T# array1, array2, up to arrayN are the arrays being concatenated along axis 2
+
+arr1 = np.array([[[1, 2]], [[3, 4]]])
+arr2 = np.array([[[5]], [[6]]])
+arr3 = np.dstack((arr1, arr2))
+# array([[[1, 2, 5]], [[3, 4, 6]]])
+arr3 = np.concatenate((arr1, arr2), axis = 2) #| same as before
+# array([[[1, 2, 5]], [[3, 4, 6]]])
+# |-----
+
 # |-------------------------------------------------------------
+
+
+
+
+# TODO ellipsis notation arr1[...]

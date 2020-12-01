@@ -190,7 +190,7 @@ apt purge -s vlc
 # SYNTAX apt policy package1 package2 packageN
 apt policy jfsutils
 
-#T# search for a package with apt search pattern1
+#T# search for a package with apt search glob_pattern1
 apt search jfsuti*
 
 #T# list packages with apt list, use the --upgradable flag to see upgradable packages, use the --installed flag to see the installed packages
