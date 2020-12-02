@@ -35,6 +35,8 @@
 #C# --- Anchors and boundaries
 #C# --- Lookarounds
 #C# --- Regex modifiers
+#C# Builtin values
+#C# --- Constants
 
 #T# Beginning of content
 
@@ -1152,6 +1154,19 @@ search1 = regex.search(r'(?ix-m)S  T  R1', 'str1', flags = regex.V1) # <regex.Ma
 
 #T# all former inline modifiers shown can be introduced exclusively for the pattern inside the same parentheses of the inline modifier, i.e. (?s:pattern1), (?-s:pattern1) only affects pattern1
 search1 = regex.search(r'(?i:STR)1 (?-i:STR)2', 'str1 STR2') # <regex.Match object; span=(0, 9), match='str1 STR2'>
+# |-----
+
+# |-------------------------------------------------------------
+
+#C# Builtin values
+
+# |-------------------------------------------------------------
+
+#C# --- Constants
+
+# |-----
+#T# the ellipsis ... constant is used to allow for extra functionality in third party libraries, particularly in array notation
+... # Ellipsis
 # |-----
 
 # |-------------------------------------------------------------

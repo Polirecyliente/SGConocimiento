@@ -16,6 +16,8 @@
 #C# --- Anchors and boundaries
 #C# --- Lookarounds
 #C# --- Regex modifiers
+#C# Builtin values
+#C# --- Special parameters
 
 #T# Beginning of content
 
@@ -663,6 +665,45 @@ echo "str1" | grep -P '(?ix-m)S  T  R1' # str1
 
 #T# all former inline modifiers shown can be introduced exclusively for the pattern inside the same parentheses of the inline modifier, i.e. (?s:pattern1), (?-s:pattern1) only affects pattern1
 echo "str1 STR2" | grep -P '(?i:STR)1 (?-i:STR)2' # str1 STR2
+# |-----
+
+# |-------------------------------------------------------------
+
+#C# Builtin values
+
+# |-------------------------------------------------------------
+
+#C# --- Special parameters
+
+# |-----
+#T# the special parameters are variables whose name can't be manually assigned values, they are used to store special values
+
+#T# process related parameters are the $$, $! parameters
+echo $$ # 389217 # prints the PID of the current terminal
+echo $! # 406952 # prints the PID of the last process sent to be a background process, if any
+
+#T# the $? parameter stores the exit status of the last command
+echo $? # 0 # zero usually means correct execution
+
+#T# the $0 parameter stores the name of the script or command that expanded its value
+echo $0 # bash
+
+#T# the $_ parameter stores a string with the last argument of the last command
+echo $_ # third # if the last command was 'echo first second third'
+
+#T# the $- parameter stores the interpreter options
+echo $- # himBHs
+
+#T# the $int1 parameter stores the value of argument int1 passed to the CLI, to a function, or to a script, see S1_08_CLI_args.sh
+echo $1 # str1 #| if 'str1' is the first argument passed to the CLI
+echo $2 # str2
+
+#T# the $# parameter stores the number of arguments passed to the CLI, to a function, or to a script, see S1_08_CLI_args.sh
+echo $# # 5 #| if there are 5 arguments
+
+#T# the $*, $@ parameters store the passed arguments in an array, for their difference see S1_08_CLI_args.sh
+echo $* # str1 str2
+echo $@ # str1 str2
 # |-----
 
 # |-------------------------------------------------------------

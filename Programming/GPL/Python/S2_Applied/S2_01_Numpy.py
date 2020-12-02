@@ -6,6 +6,8 @@
 #C# Numpy arrays
 #C# --- Array data types
 #C# --- Array operations
+#C# Functions
+#C# --- Random number generation
 
 #T# Beginning of content
 
@@ -50,6 +52,10 @@ arr1 = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]], [[13, 14, 15
 arr2 = arr1[0:2, 1] # array([[ 4,  5,  6],  [10, 11, 12]]) #| the 0:2 slice is in the outer dimension which is [[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]], the 1 index is in the second dimension which is [4, 5, 6] for the first element of the second dimension, and [10, 11, 12] for the second element of the second dimension
 arr1[0:2, 1, 1:3]   # array([[ 5,  6], [11, 12]])
 arr1[0:2, 1, 2]     # array([ 6, 12])
+
+#T# the ellipsis ... can be used to pass colons to array dimensions, e.g. in a numpy array arr1 of 5 dimensions, doing arr1[0, ..., 0] is the same as arr1[0, :, :, :, 0], only a single ellipsis for indexing is supported
+arr1 = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]], [[13, 14, 15], [16, 17, 18]]])
+arr2 = arr1[0, ..., 0] # array([1, 4])
 
 #T# any variable created by indexing or slicing a numpy array contains the data of said array by reference, this means that the original data can be modified through these variables, these variables are called views of the original data
 arr1 = np.array([1, 2, 3])
@@ -130,6 +136,8 @@ arr2 = arr1.astype('i') # array([1, 2], dtype=int32) #| the argument 'i' changes
 #C# --- Array operations
 
 # |-----
+#T# in numpy, the words dimension and axis are almost synonyms, axis is the same as dimension - 1, dimensions count from 1, axes count from 0
+
 #T# numpy arrays can be iterated like regular arrays, but also with the nditer function, this has the difference that the nditer function iterates over each individual element, and so nested arrays are not necessary
 arr1 = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 for it1 in np.nditer(arr1):
@@ -170,7 +178,36 @@ for it1 in np.ndenumerate(arr1):
 # ((3, 0), 1)
 # ((3, 1), 5)
 
-#T# in numpy, the words dimension and axis are almost synonyms, axis is the same as dimension - 1, dimensions count from 1, axes count from 0
+#T# values can be searched inside numpy arrays, to get their indices in the array with the where function
+
+# SYNTAX np.where(array1 == value1)
+#T# this returns a tuple with an array that holds the indices where array1 has the value of value1, the == can be replaced with >, <, >=, <=, depending on the comparison being made
+
+arr1 = np.array([1, 2, 2, 3, 4, 2])
+tuple1 = np.where(arr1 == 2) # (array([1, 2, 5]),)
+tuple1 = np.where(arr1 > 2)  # (array([3, 4]),)
+
+#T# the searchsorted function performs a binary search on sorted arrays from smallest to largest, it doesn't return an index where a match is found, but rather an index where the searched number should be inserted to maintain sorting
+
+# SYNTAX np.searchsorted(array1, num1)
+#T# array1 is the array being searched that must be in ascending order, num1 is the number that wants to be inserted in the array, this returns the index at which num1 should be inserted to maintain the order of the array, num1 can be a list
+
+arr1 = np.array([1, 2, 2, 3, 4])
+int1 = np.searchsorted(arr1, 8)        # 5
+arr2 = np.searchsorted(arr1, [2.4, 2]) # array([3, 1])
+
+# SYNTAX np.searchsorted(array1, num1, side = 'str1')
+#T# same as before, the side kwarg serves to set from which side the index is calculated, the default is to start from the left, and so the index returned is the minimum, making str1 equal to 'right' returns the maximum
+
+arr1 = np.array([1, 2, 2, 3, 4])
+int1 = np.searchsorted(arr1, 2)                 # 1
+int1 = np.searchsorted(arr1, 2, side = 'right') # 3
+
+#T# numpy arrays can be sorted in place if they are not already, the sort function is a basic sorting function
+arr1 = np.array([[5, 4, 4], [12, 1, 9]])
+arr2 = np.sort(arr1) # array([[ 4,  4,  5], [ 1,  9, 12]])
+
+#T# numpy arrays can be filtered to create new arrays according to a given filter rule
 
 #T# numpy arrays can be joined along a given dimension or axis using the axis kwarg of the concatenate function, the axis kwarg starts counting dimensions at 0, this means that the first dimension is axis 0
 
@@ -265,11 +302,73 @@ arr3 = np.dstack((arr1, arr2))
 # array([[[1, 2, 5]], [[3, 4, 6]]])
 arr3 = np.concatenate((arr1, arr2), axis = 2) #| same as before
 # array([[[1, 2, 5]], [[3, 4, 6]]])
+
+#T# numpy arrays can be splitted, this creates several arrays from a single one, to split an array in equal size parts, the split function is used
+
+# SYNTAX list1 = np.split(array1, int1)
+#T# array1 is the array being splitted, list1 will store the resulting arrays, int1 is the amount of arrays in the result, the axis kwarg may also be used
+
+arr1 = np.array([1, 2, 3, 4, 5, 6])
+list1 = np.split(arr1, 3)
+# [array([1, 2]), array([3, 4]), array([5, 6])]
+arr1 = np.array([[1, 2], [3, 4], [5, 6]])
+list1 = np.split(arr1, 2, axis = 1)
+# [array([[1], [3], [5]]), array([[2], [4], [6]])]
+
+#T# the array_split function splits an array into a given number of parts, these do not need to be equal in size
+
+# SYNTAX list1 = np.array_split(array1, int1)
+#T# same as before
+
+arr1 = np.array([1, 2, 3, 4, 5, 6, 7])
+list1 = np.array_split(arr1, 3)
+# [array([1, 2, 3]), array([4, 5]), array([6, 7])]
+
+#T# the vsplit function is like the split function but it splits along the axis 0
+arr1 = np.array([[1, 2, 5], [3, 4, 6]])
+list1 = np.vsplit(arr1, 2)
+# [array([[1, 2, 5]]), array([[3, 4, 6]])]
+
+#T# the hsplit function is like the split function but it splits along the axis 1
+arr1 = np.array([[1, 2, 5], [3, 4, 6]])
+list1 = np.hsplit(arr1, 3)
+# [array([[1], [3]]), array([[2], [4]]), array([[5], [6]])]
+
+#T# the dsplit function is like the split function but it splits along the axis 2
+arr1 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+list1 = np.dsplit(arr1, 2)
+# [array([[[1], [3]], [[5], [7]]]), array([[[2], [4]], [[6], [8]]])]
 # |-----
 
 # |-------------------------------------------------------------
 
+#C# Functions
 
+# |-------------------------------------------------------------
 
+#C# --- Random number generation
 
-# TODO ellipsis notation arr1[...]
+# |-----
+#T# the random module from the numpy package is used to do random number generation
+
+#T# the rand function generates a random float between 0 and 1
+
+# SYNTAX np.random.rand(tuple1)
+#T# tuple1 contains the shape of an array of the random numbers to be generated
+
+arr1 = np.random.rand(2, 1)
+# array([[0.12880446], [0.62443916]]) #| or other
+
+#T# the randint function generates a random integer between 0 and a given number
+
+# SYNTAX np.random.randint(int1, size = tuple1)
+#T# int1 is the upper limit of the random number to generate, if an array of numbers is to be generated then tuple1 contains the shape of said array
+
+arr1 = np.random.randint(20, size = (3, 1, 2))
+# array([[[13, 16]], [[ 3, 15]], [[ 9,  6]]]) #| or other
+
+#T# a random element from a one dimensional numpy array or list can be selected with the choice function, it admits the size kwarg
+int1 = np.random.choice(np.array([1, 2, 3, 4])) # 2 #| or other
+# |-----
+
+# |-------------------------------------------------------------

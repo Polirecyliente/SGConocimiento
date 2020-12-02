@@ -19,7 +19,6 @@
 #C# Logical operators
 #C# Shell operators
 #C# --- History expansion
-#C# Special parameters
 
 #T# Beginning of content
 
@@ -917,28 +916,4 @@ test "-t" "0" # $? == 0 # true
 [[ -t "0" ]]  # $? == 0 # true
 # |-----
 
-# |-------------------------------------------------------------
-
-#C# Special parameters
-
-# |-------------------------------------------------------------
-#T# the special parameters are variables whose name can't be manually assigned values, they are used to store special values
-
-#T# process related parameters are the $$, $! parameters
-echo $$ # 389217 # prints the PID of the current terminal
-echo $! # 406952 # prints the PID of the last process sent to be a background process, if any
-
-#T# the $? parameter stores the exit status of the last command
-echo $? # 0 # zero usually means correct execution
-
-#T# the $0 parameter stores the name of the script or command that expanded its value
-echo $0 # bash
-
-#T# the $_ parameter stores a string with the last argument of the last command
-echo $_ # third # if the last command was 'echo first second third'
-
-#T# the $- parameter stores the interpreter options
-echo $- # himBHs
-
-#T# there are a few more special parameters that deal with positional parameters which are treated in the section about command line arguments, see S1_08_CLI_args.sh
 # |-------------------------------------------------------------
