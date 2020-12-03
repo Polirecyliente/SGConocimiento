@@ -364,6 +364,9 @@ pip3 show alabaster
 
 #T# if the installation of a module gets timeout errors in the download, it may be fixed with the --default-timeout=1000 option
 pip3 install --default-timeout=1000 matplotlib
+
+#T# install a module or package in a user directory with the --user flag
+pip3 install --user sympy
 # |-----
 
 # |-------------------------------------------------------------

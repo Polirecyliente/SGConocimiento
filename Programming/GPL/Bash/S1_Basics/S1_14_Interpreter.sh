@@ -144,6 +144,8 @@ echo $PS4 # +
 
 #T# to start one of these sequences, a CSI (Control Sequence Introducer) is used, the CSI in Bash is a escape char followed by an opening bracket, i.e. \033[, in the following the \e[ form is used
 
+#T# in Bash, the escape sequence must be enclosed in escaped brackets \[ \], this is to avoid behaviors where the escape sequence changes the cursor position or the prompt, e.g. PS1='\[\e[33mP>\e[0m\]' creates a prompt 'P>' of orange color
+
 # SYNTAX \e]0;string1\a
 #T# this sets string1 as the title of the terminal
 echo -e "\e]0;New Title1\a" # sets 'New Title1' as the title of the terminal

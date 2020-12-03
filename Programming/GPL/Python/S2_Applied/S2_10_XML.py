@@ -6,7 +6,7 @@
 #T# import DOM API
 import xml.dom.minidom
 
-fileXML = "/home/jul/SGConocimiento/Programming/GPL/Python/S2_Applied/S2_12_XML_01_Input_file.xml"
+fileXML = "/home/jul/SGConocimiento/Programming/GPL/Python/S2_Applied/S2_10_XML_01_Input_file.xml"
 
 #T# parse XML file into a DOM object with parse()
 DOMTree1 = xml.dom.minidom.parse(fileXML)
