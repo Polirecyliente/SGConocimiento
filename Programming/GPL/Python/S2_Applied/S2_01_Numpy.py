@@ -7,7 +7,9 @@
 #C# --- Array data types
 #C# --- Array operations
 #C# Functions
+#C# --- Array creation
 #C# --- Random number generation
+#C# --- Arithmetic
 
 #T# Beginning of content
 
@@ -21,6 +23,12 @@ np.info(np.array) #| shows the numpy help for np.array
 
 # |-------------------------------------------------------------
 #T# arrays are one of the main aspects of the numpy package, numpy does not support jagged arrays for its operations
+
+#T# numpy arrays are multidimensional, the rank of an array is the amount of dimensions of the array, the size of an array is the total amount of individual elements in the array
+
+#T# several numpy operations and functions can handle operand arrays of different sizes and with different number of dimensions, this is called broadcasting, in it, the smaller array is broadcasted (repeated) over the larger array, e.g. a 3 element vector can be broadcasted over a 4x3 matrix, by repeating it in each of the 4 rows and then operating element-wise
+
+#T# numpy arrays can be created with the array function
 import numpy as np
 arr1 = np.array(('a', 'b', 'c')) # array(['a', 'b', 'c'], dtype='<U1')
 arr1 = np.array([1, 2, 3])   # array([1, 2, 3])
@@ -345,6 +353,18 @@ list1 = np.dsplit(arr1, 2)
 #C# Functions
 
 # |-------------------------------------------------------------
+import numpy as np
+
+#C# --- Array creation
+
+# |-----
+#T# the arange function creates an array given a numeric range
+
+# SYNTAX np.arange(int1, int2, int3, dtype = 'str1')
+#T# the dtype kwarg determines the type of the data in the returned numpy array, so str1 must be a valid numpy data type, int1 is the initial number, int2 is the step, and int3 - 1 is the final number in the range
+
+arr1 = np.arange(1, 12, 3) # array([ 1,  4,  7, 10])
+# |-----
 
 #C# --- Random number generation
 
@@ -369,6 +389,142 @@ arr1 = np.random.randint(20, size = (3, 1, 2))
 
 #T# a random element from a one dimensional numpy array or list can be selected with the choice function, it admits the size kwarg
 int1 = np.random.choice(np.array([1, 2, 3, 4])) # 2 #| or other
+# |-----
+
+#C# --- Arithmetic
+
+# |-----
+#T# the add function adds two arrays element-wise, it supports array broadcasting
+arr1 = np.array([[1, 2, 3, 4], [3, 4, 5, 6]])
+arr2 = np.array([4, 3, 2, 1])
+arr3 = np.add(arr1, arr2) # array([[5, 5, 5, 5], [7, 7, 7, 7]])
+
+#T# the plus + operator can be used to add more than two arrays in a single statement, it supports array broadcasting
+arr1 = np.array([[1, 2, 3, 4], [0, 1, 2, 3]])
+arr2 = np.array([4, 3, 2, 1])
+arr3 = np.array([2, 3, 4, 5])
+arr4 = arr1 + arr2 + arr3 # array([[ 7,  8,  9, 10], [ 6,  7,  8,  9]])
+
+#T# the subtract function subtracts the second array from the first, element-wise, it supports array broadcasting
+arr1 = np.array([[1, 2, 3, 4], [6, 5, 4, 3]])
+arr2 = np.array([4, 3, 2, 1])
+arr3 = np.subtract(arr1, arr2) # array([[-3, -1,  1,  3], [ 2,  2,  2,  2]])
+
+#T# the minus - operator can be used to subtract more than one array from another in a single statement, it supports array broadcasting
+arr1 = np.array([[1, 2, 3, 4], [6, 5, 4, 3]])
+arr2 = np.array([4, 3, 2, 1])
+arr3 = np.array([-3, -1, 1, 3])
+arr4 = arr1 - arr2 - arr3 # array([[ 0,  0,  0,  0], [ 5,  3,  1, -1]])
+
+#T# the multiply function multiplies two arrays element-wise, it supports array broadcasting
+arr1 = np.array([[1, 2, 3, 4], [0, 1, 2, 3]])
+arr2 = np.array([2, 2, 2, 2])
+arr3 = np.multiply(arr1, arr2) # array([[2, 4, 6, 8], [0, 2, 4, 6]])
+
+#T# the multiplication * operator can be used to multiply more than two arrays in a single statement, it supports array broadcasting
+arr1 = np.array([[1, 2, 3, 4], [0, 1, 2, 3]])
+arr2 = np.array([2, 2, 2, 2])
+arr3 = np.array([3, 3, 1, 1])
+arr4 = arr1*arr2*arr3 # array([[ 6, 12,  6,  8], [ 0,  6,  4,  6]])
+
+#T# the divide function divides the first array by the second, element-wise, it supports array broadcasting 
+arr1 = np.array([[12, 24, 12, 6], [21, 18, 15, 12]])
+arr2 = np.array([3, 3, 3, 3])
+arr3 = np.divide(arr1, arr2) # array([[4., 8., 4., 2.], [7., 6., 5., 4.]])
+
+#T# the division / operator can be used to divide one array by more than one other array, element-wise, it supports array broadcasting
+arr1 = np.array([[12, 24, 12, 6], [21, 18, 15, 12]])
+arr2 = np.array([3, 3, 3, 3])
+arr3 = np.array([2, 2, 1, 1])
+arr4 = arr1/arr2/arr3 # array([[2. , 4. , 4. , 2. ], [3.5, 3. , 5. , 4. ]])
+
+#T# the remainder function calculates the remainder of the division of the first array by the second, element-wise, it supports array broadcasting
+arr1 = np.array([[12, 13, 9, 11], [8, 8, 7, 12]])
+arr2 = np.array([7, 7, 5, 6])
+arr3 = np.remainder(arr1, arr2) # array([[5, 6, 4, 5], [1, 1, 2, 0]])
+
+#T# the remainder % operator can be used to calculate the remainder from a sequence of arrays
+arr1 = np.array([[12, 13, 9, 11], [8, 8, 7, 12]])
+arr2 = np.array([7, 7, 5, 6])
+arr3 = np.array([3, 3, 3, 3])
+arr4 = arr1 % arr2 % arr3 # array([[2, 0, 1, 2], [1, 1, 2, 0]])
+
+#T# the array_equal function compares if two arrays are equal, with the same shape and the same elements
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 9, 10]])
+arr2 = np.array([[6, 9, 4, 4], [8, 1, 9, 10]])
+bool1 = np.array_equal(arr1, arr2) # True
+
+#T# the equal function compares if two arrays are equal element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = np.equal(arr1, arr2)
+# array([[False, False,  True, False], [False, False, False,  True]])
+
+#T# the equality operator == can be used to compare if two arrays are equal element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = arr1 == arr2
+# array([[False, False,  True, False], [False, False, False,  True]])
+
+#T# the not_equal function compares if two arrays are not equal element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = np.not_equal(arr1, arr2)
+# array([[ True,  True, False,  True], [ True,  True,  True, False]])
+
+#T# the not equal != operator can be used to compare if two arrays are not equal element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = arr1 != arr2
+# array([[ True,  True, False,  True], [ True,  True,  True, False]])
+
+#T# the greater function compares if the first array is greater than the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = np.greater(arr1, arr2)
+# array([[False,  True, False, False], [ True, False,  True, False]])
+
+#T# the greater than > operator can be used to compare if the first array is greater than the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = arr1 > arr2
+# array([[False,  True, False, False], [ True, False,  True, False]])
+
+#T# the less function compares if the first array is less than the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = np.less(arr1, arr2)
+# array([[ True, False, False,  True], [False,  True, False, False]])
+
+#T# the less than < operator can be used to compare if the first array is less than the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = arr1 < arr2
+# array([[ True, False, False,  True], [False,  True, False, False]])
+
+#T# the greater_equal function compares if the first array is greater than or equal to the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = np.greater_equal(arr1, arr2)
+# array([[False,  True,  True, False], [ True, False,  True,  True]])
+
+#T# the greater than or equal to >= operator can be used to compare if the first array is greater than or equal to the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = arr1 >= arr2
+# array([[False,  True,  True, False], [ True, False,  True,  True]])
+
+#T# the less_equal function compares if the first array is less than or equal to the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = np.less_equal(arr1, arr2)
+# array([[ True, False,  True,  True], [False,  True, False,  True]])
+
+#T# the less than or equal to <= operator can be used to compare if the first array is less than or equal to the second element-wise, it supports array broadcasting
+arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
+arr2 = np.array([7, 3, 4, 8])
+arr3 = arr1 <= arr2
+# array([[ True, False,  True,  True], [False,  True, False,  True]])
 # |-----
 
 # |-------------------------------------------------------------

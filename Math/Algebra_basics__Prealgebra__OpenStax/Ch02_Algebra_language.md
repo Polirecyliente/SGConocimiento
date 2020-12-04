@@ -7,6 +7,9 @@
 (Variables)
 **Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$
 
+(Constantes)
+**Constants**: the representation of quantities that can not vary, that stay always with the same value, written using letters of the alphabet, such as $m, n$
+
 (Funciones)
 **Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a, b$.
 
@@ -15,6 +18,7 @@
 
 (Operadores relacionales)
 **Relational operators**: operators that compare the values of two quantities.
+[Relational operators code](Programs/Ch02/S01_01_Relational_operators.py)
 
 (Igualdad)
 **Equality**: when the values of two quantities are equal, $a = b$ means the value of $a$ is equal to the value of $b$.
@@ -38,7 +42,8 @@
 **not equal to**: the comparison of two numbers where they have different values. The operator is $\ne$, the not equal to sign. $a \ne b$, read as $a$ not equal to $b$ ($a$ diferente a $b$), means that the value of $a$ is not equal to the value of $b$.
 
 (Orden de las operaciones)
-**Order of operations**: The order in which to execute the operations. In $5 + 10/2$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first.
+**Order of operations**: The order in which to execute the operations. In $5 + 10/2$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first. This can be modified with grouping symbols.
+[Order of operations code](Programs/Ch02/S01_02_Order_of_operations.py)
 
 (Signos de agrupación)
 **Grouping symbols**: symbols that act as operators by grouping algebraic symbols. The grouped symbols are operated together. The grouping symbols serve to make explicit the order of operations.
@@ -57,16 +62,21 @@
 
 (Simplificación)
 **Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$
+[Simplification code](Programs/Ch02/S01_03_Simplification.py)
 
 (Notación exponencial)
-**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \ldots$
+**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$ where $n$ is the amount of times that $a$ is multiplied by itself, read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia)
+[Exponentiation code](Programs/Ch02/S01_04_Exponentiation.py)
 
-## Evaluation, simplification of expressions
+(Número al cuadrado)
+**Squared numbers**: 
+
+## Evaluation and simplification of expressions
 [Ch02_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=129)
 
 
 
-## Subtraction, and addition properties of equality
+## Subtraction and addition properties of equality
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
 
 
