@@ -449,6 +449,18 @@ arr2 = np.array([7, 7, 5, 6])
 arr3 = np.array([3, 3, 3, 3])
 arr4 = arr1 % arr2 % arr3 # array([[2, 0, 1, 2], [1, 1, 2, 0]])
 
+#T# the power function raises the first array to the power of the second element-wise, it supports array broadcasting
+arr1 = np.array([[2, 3, 2, 4], [3, 2, 2, 5]])
+arr2 = np.array([6, 4, 5, 2])
+arr3 = np.power(arr1, arr2)
+# array([[ 64,  81,  32,  16], [729,  16,  32,  25]])
+
+#T# the exponentiation ** operator can be used to raise the first array to the power of the second element-wise, it supports array broadcasting
+arr1 = np.array([[2, 3, 2, 4], [3, 2, 2, 5]])
+arr2 = np.array([6, 4, 5, 2])
+arr3 = arr1 ** arr2
+# array([[ 64,  81,  32,  16], [729,  16,  32,  25]])
+
 #T# the array_equal function compares if two arrays are equal, with the same shape and the same elements
 arr1 = np.array([[6, 9, 4, 4], [8, 1, 9, 10]])
 arr2 = np.array([[6, 9, 4, 4], [8, 1, 9, 10]])

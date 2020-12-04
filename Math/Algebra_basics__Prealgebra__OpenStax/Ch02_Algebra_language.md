@@ -5,10 +5,10 @@
 [Ch02_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=109)
 
 (Variables)
-**Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$
+**Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$.
 
 (Constantes)
-**Constants**: the representation of quantities that can not vary, that stay always with the same value, written using letters of the alphabet, such as $m, n$
+**Constants**: the representation of quantities that can not vary, that stay always with the same value, written using letters of the alphabet, such as $m, n$.
 
 (Funciones)
 **Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a, b$.
@@ -52,24 +52,39 @@
 **Parentheses**: this operator is $()$, the parentheses signs. $8(14 - 8)$ returns $48$.
 
 (Corchetes)
-**Brackets**: this operator is $[]$, the brackets signs. $21 - 3[2 + 4(9 - 8)]$ returns $3$
+**Brackets**: this operator is $[]$, the brackets signs. $21 - 3[2 + 4(9 - 8)]$ returns $3$.
 
 (Llaves)
-**Braces**: this operator is $\{\}$, the braces signs. $24 \div \{13 - 2[(6 - 5) + 4]\}$ returns $8$
+**Braces**: this operator is $\{\}$, the braces signs. $24 \div \{13 - 2[(6 - 5) + 4]\}$ returns $8$.
+
+(PEMDAS)
+**PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general.
 
 (Expresiones y ecuaciones)
 **Expressions and equations**: two expressions can form an equation by connecting them with an equal sign, $a + b = c/d$.
 
 (Simplificación)
-**Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$
+**Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$.
 [Simplification code](Programs/Ch02/S01_03_Simplification.py)
 
 (Notación exponencial)
-**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$ where $n$ is the amount of times that $a$ is multiplied by itself, read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia)
+**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$ where $n$ is the amount of times that $a$ is multiplied by itself, read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$). The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
+
+(Potenciación)
+**Exponentiation**: the operation of raising a number to a given power, i.e. $a^n$.
 [Exponentiation code](Programs/Ch02/S01_04_Exponentiation.py)
 
-(Número al cuadrado)
-**Squared numbers**: 
+(Base y exponente)
+**Base and exponent**: in the operation $a^n$, $a$ is called the base, $n$ is called the exponent.
+
+(Expresión exponencial en forma expandida)
+**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a * a * a * ... * a$ where $a$ is multiplied by itself $n$ times.
+
+(Números al cuadrado)
+**Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. 3 to the power of 2 is 9, or 3 squared is 9 (3 al cuadrado es 9).
+
+(Números al cubo)
+**Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. 5 to the power of 3 is 125, or 5 cubed is 125 (5 al cubo es 125).
 
 ## Evaluation and simplification of expressions
 [Ch02_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=129)
