@@ -9,6 +9,7 @@
 #C# Bitwise operators
 #C# Ternary operator
 #C# Logical operators
+#C# Grouping operators
 #C# Membership operators
 #C# Identity operators
 #C# Operators over variables
@@ -176,6 +177,13 @@ bool1 = (a or b)  # True
 #T# logical not operator
 b = False
 bool1 = (not b)   # True
+# |-------------------------------------------------------------
+
+#C# Grouping operators
+
+# |-------------------------------------------------------------
+#T# the basic grouping operator is the parenthesis pair ()
+num1 = ((3 + 4) * 5) + 1 # 36 #| ((7) * 5) + 1 == 35 + 1
 # |-------------------------------------------------------------
 
 #C# Membership operators

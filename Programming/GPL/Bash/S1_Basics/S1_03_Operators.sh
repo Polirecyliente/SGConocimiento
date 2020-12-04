@@ -17,6 +17,7 @@
 #C# Assignment operators
 #C# Bitwise operators
 #C# Logical operators
+#C# Grouping operators
 #C# Shell operators
 #C# --- History expansion
 
@@ -684,6 +685,14 @@ var1=""
 test "!" "$var1" # $? == 0 # true
 [[ ! "$var1" ]]  # $? == 0 # true
 (( bool1 = ! 0 )) # 1 # true
+# |-------------------------------------------------------------
+
+#C# Grouping operators
+
+# |-------------------------------------------------------------
+#T# the basic grouping operator is the parenthesis pair ()
+num1='((3 + 4) * 5) + 1'
+echo $((num1)) # 36 #| ((7) * 5) + 1 == 35 + 1
 # |-------------------------------------------------------------
 
 #C# Shell operators
