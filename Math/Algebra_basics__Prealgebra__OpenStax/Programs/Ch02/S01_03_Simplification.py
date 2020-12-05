@@ -5,6 +5,6 @@ import sympy
 
 #T# most expressions are simplified by default
 x = sympy.Symbol('x')
-expr1 = x * x * x * x * x    # x**5
+expr1 = x * x * x * x * x    # x**5 #| like terms are combined by default
 expr1 = x + x * x + x        # x**2 + 2*x
 num1 = sympy.Rational(18/12) # 3/2

@@ -89,12 +89,29 @@
 ## Evaluation and simplification of expressions
 [Ch02_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=129)
 
+(Evaluar una expresión)
+**Evaluate an expression**: this means substitute symbols for specific values and calculate the result, e.g. in $x + 7$ substitute $x$ for $4$ and calculate, $4 + 7 = 11$. Expressions without symbols are ready to be evaluated.
+[Evaluation code](Programs/Ch02/S02_01_Evaluation.py)
 
+(Expresión algebraica)
+**Algebraic expression**: an expression that uses symbols, it may or may not represent constant values as symbols too, e.g. $x + 7$ or $x + a$.
+
+(Términos algebraicos)
+**Algebraic terms**: each of the parts of an algebraic expression separated by a plus or minus, so numbers and symbols multiplied together count as a term, e.g. in $3a + 7 + x^2$ there are three terms, $3a$, $7$, and $x^2$.
+
+(Coeficiente)
+**Coefficient**: the numeric constant that multiplies the variable(s) in a term. If a term has no variables then the coefficient is the term itself. If a variable has no numeric constant then the implied coefficient is 1. For example, in $3a + 7 + x^2$, the coefficients are $3$, $7$, and $1$, respectively.
+
+(Términos semejantes)
+**Like terms**: terms that can be added together directly, like terms can only differ from each other in the coefficient, so their symbol(s) (variable or constant) has to be the same, e.g. $3x$ and $4x$ are like terms, they may be added (or subtracted) directly.
+
+(Reducción de términos semejantes)
+**Combining like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
 ## Subtraction and addition properties of equality
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
 
-
+<!-- # TODO  -->
 
 ## Multiples, factors
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
