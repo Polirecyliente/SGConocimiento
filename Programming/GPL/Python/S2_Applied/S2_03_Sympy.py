@@ -6,6 +6,8 @@
 #C# Basic usage
 #C# Data types
 #C# --- Numeric constants
+#C# Functions
+#C# --- Equation solving
 
 #T# Beginning of content
 
@@ -142,6 +144,25 @@ num1 = sympy.S.ImaginaryUnit # I
 #T# the boolean values True and False have sympy constants
 bool1 = sympy.S.true  # True
 bool1 = sympy.S.false # False
+# |-----
+
+# |-------------------------------------------------------------
+
+#C# Functions
+
+# |-------------------------------------------------------------
+import sympy
+
+#C# --- Equation solving
+
+# |-----
+#T# the Eq constructor is used to create equations, the first argument is equal to the second
+var1 = sympy.Symbol('x')
+eq1 = sympy.Eq(11, var1 + 7) # Eq(11, x + 7)
+
+#T# the solveset function is used to solve the equation in the first argument, for the variable in the second
+eq1 = sympy.Eq(11, var1 + 7) # Eq(11, x + 7)
+num1 = sympy.solveset(eq1, var1) # FiniteSet(4) #| the solution is x == 4
 # |-----
 
 # |-------------------------------------------------------------

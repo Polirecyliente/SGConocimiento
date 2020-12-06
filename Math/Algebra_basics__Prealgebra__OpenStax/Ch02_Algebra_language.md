@@ -108,15 +108,25 @@
 (Reducción de términos semejantes)
 **Combining like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
-## Subtraction and addition properties of equality
+## Solutions of an equation, subtraction and addition properties of equality
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
 
-<!-- # TODO  -->
+<!-- # TODO subtraction property of equality, addition property of equality -->
+
+(Solución de una ecuación)
+**Solution of an equation**: an equation that contains a variable can be solved by determining the value of the variable that makes the equation true, e.g. in $x + 7 = 11$, $x$ must be $4$ so that the equation is true, and $4$ is the solution of the equation.
+[Solution of an equation code](Programs/Ch02/S03_01_Solution_of_an_equation.py)
+
+(Propiedad sustractiva de la igualdad)
+**Subtraction property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then subtracting a third number $c$ from each side of the equality preserves the equality $a - c = b - c$. Note, in spanish this property may be bundled as part of the addition property of equality, since changing the sign of $c$ shows both properties.
+
+(Propiedad aditiva de la igualdad)
+**Addition property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then adding a third number $c$ to each side of the equality preserves the equality $a + c = b + c$.
 
 ## Multiples, factors
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
 
-
+<!-- # TODO  -->
 
 ## Prime factorization, least common multiple
 [Ch02_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=172)
