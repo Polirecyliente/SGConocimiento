@@ -43,8 +43,9 @@
 #C# Basic functions
 
 # |-------------------------------------------------------------
-#T# get input from stdin with the input function, it returns a string which can be cast to any needed type
-str1 = input("Enter the input:")
+#T# get input from stdin with the input function, it returns a string which can be cast to any needed type, its argument is a single string
+int1 = 5
+str1 = input("Enter the input " + str(int1)) # Enter the input 5
 
 #T# the map function applies a given function to the elements of an array and returns a map object with the return values, that can be cast as an array
 
@@ -416,8 +417,8 @@ list1 = str1.split("-|") # ['elem1', '-elem2']
 
 #T# split around newlines
 
-# SYNTAX str1.splitlines([bool1])
-#T# bool1 determines whether or not to keep ends (the newlines), defaults to False
+# SYNTAX str1.splitlines(bool1)
+#T# bool1 is optional, it determines whether or not to keep ends (the newlines), defaults to False
 
 str1 = "line1\nline2 w1\nline3 w1 w2"
 list1 = str1.splitlines(True) # ['line1\n', 'line2 w1\n', 'line3 w1 w2']
@@ -481,6 +482,18 @@ list1.sort(reverse = True, key = len) # ['stray_elem', 'elem5', 'a', '5', 'a']
 #T# shuffle the elements of a list
 list1 = ['elem5', 'a', 'stray_elem', '5', 'a']
 random.shuffle(list1) # ['a', 'elem5', '5', 'a', 'stray_elem'] or other
+
+#T# the any function returns True if any of the elements in an iterable is true
+list1 = [0, 0, 3, 0]
+bool1 = any(list1) # True
+list1 = [0, 0, 0, 0]
+bool1 = any(list1) # False
+
+#T# the all function returns True if all of the elements in an iterable are true
+list1 = [3, 5, 6, 1]
+bool1 = all(list1) # True
+list1 = [3, 5, 6, 0]
+bool1 = all(list1) # False
 # |-------------------------------------------------------------
 
 #C# Dictionary functions

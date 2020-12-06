@@ -249,6 +249,11 @@ int1 = int(0o12) # 10
 str1 = "0xA4" # 0xA4 is 164
 int1 = int(str1, 16) # 164
 
+#T# the bool function casts its argument as a boolean value
+bool1 = bool(5)   # True
+bool1 = bool(0)   # False
+bool1 = bool('a') # True
+
 #T# cast pairs of numbers as complex numbers
 
 # SYNTAX complex(realN, imN)

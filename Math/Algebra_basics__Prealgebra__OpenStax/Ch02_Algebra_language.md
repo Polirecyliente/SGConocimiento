@@ -111,8 +111,6 @@
 ## Solutions of an equation, subtraction and addition properties of equality
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
 
-<!-- # TODO subtraction property of equality, addition property of equality -->
-
 (Solución de una ecuación)
 **Solution of an equation**: an equation that contains a variable can be solved by determining the value of the variable that makes the equation true, e.g. in $x + 7 = 11$, $x$ must be $4$ so that the equation is true, and $4$ is the solution of the equation.
 [Solution of an equation code](Programs/Ch02/S03_01_Solution_of_an_equation.py)
@@ -123,11 +121,50 @@
 (Propiedad aditiva de la igualdad)
 **Addition property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then adding a third number $c$ to each side of the equality preserves the equality $a + c = b + c$.
 
-## Multiples, factors
+## Multiples, divisibility, factors, prime numbers
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
 
-<!-- # TODO  -->
+(Múltiplos de un número)
+**Multiples of a number**: the result of multiplying a number by any of the counting numbers, so a number has infinite multiples. The smallest value multiple is the number itself.
+
+(Divisibilidad)
+**Divisibility**: if a given number $b$ is multiple of another number $a$, then $b$ is divisible by $a$, because $b/a$ returns a whole number. All the multiples of $a$ are divisible by $a$.
+[Divisibility code](Programs/Ch02/S04_01_Divisibility.py)
+
+(Números pares)
+**Even numbers**: 0 and the multiples of 2
+
+(Números impares)
+**Odd numbers**: the whole numbers that are not even numbers
+
+(Pruebas de divisibilidad)
+**Divisibility tests**: a quick test made to check if a number is divisible by another. The following are the divisibility tests of the first numbers.
+
+A given number is divisible by 2 if its last digit is an even number.
+A given number is divisible by 3 if the sum of its digits is divisible by 3.
+A given number is divisible by 4 if its last two digits are divisible by 4.
+A given number is divisible by 5 if its last digit is 0 or 5.
+A given number is divisible by 6 if it's divisible by 2 and 3.
+A given number is divisible by 7 if its last digit is doubled and then subtracted from the rest of the number, and the result of that is divisible by 7.
+A given number is divisible by 8 if its last three digits are divisible by 8.
+A given number is divisible by 9 if the sum of its digits is divisible by 9.
+A given number is divisible by 10 if its last digit is 0.
+A given number is divisible by 11 if the alternating sum of its digits (i.e. the first digit, minus the second, plus the third, minus the fourth, etc.) is divisible by 11.
+
+(Factores de un número)
+**Factors of a number**: in a given number, its factors are the numbers that multiplied together produce the given number. A number can have several different sets of factors, e.g. 12 has sets of factors like 3, 4, also 2, 6, or 2, 3, 2, or others.
+[Find factors code](Programs/Ch02/S04_02_Find_factors.py)
+
+(Pares de factores)
+**factor pairs**: factors can always be presented in pairs, because at least two numbers are required to be multiplied together in order to produce a given number. In the example of $12 = 2*3*2$, with factor pairs the equation would be $12 = 2*6$ or $12 = 3*4$.
+
+(Números primos)
+**Prime numbers**: each of them is a number with only 2 different factors, the number 1 and the number itself.
+
+(Números compuestos)
+**Composite numbers**: the numbers that are not prime, i.e. the numbers that have at least 3 different factors.
 
 ## Prime factorization, least common multiple
 [Ch02_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=172)
 
+<!-- # TODO  -->

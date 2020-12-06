@@ -222,15 +222,19 @@ arr2 = np.sort(arr1) # array([[ 4,  4,  5], [ 1,  9, 12]])
 # SYNTAX np.concatenate((array1, array2), axis = int1)
 #T# the tuple argument accepts up to arrayN, array1 and array2 are the numpy arrays to concatenate, int1 is the axis in which the arrays will be concatenated
 
+#T# the arrays array1, array2, up to arrayN, can't be empty unless all are empty
+
 arr1 = np.array([[1, 2], [3, 4]])
 arr2 = np.array([[5, 6], [7, 8]])
-arr3 = np.concatenate((arr1, arr2), axis = 0) # array([[1, 2], [3, 4], [5, 6], [7, 8]])
-arr3 = np.concatenate((arr1, arr2), axis = 1) # array([[1, 2, 5, 6], [3, 4, 7, 8]])
+arr3 = np.concatenate((arr1, arr2), axis = 0)
+# array([[1, 2], [3, 4], [5, 6], [7, 8]])
+arr3 = np.concatenate((arr1, arr2), axis = 1)
+# array([[1, 2, 5, 6], [3, 4, 7, 8]])
 
 arr1 = np.array([[1, 2], [3, 4]])
 arr2 = np.array([[5], [6]])
-arr3 = np.concatenate((arr1, arr2), axis = 0)
 arr3 = np.concatenate((arr1, arr2), axis = 1)
+# array([[1, 2, 5], [3, 4, 6]])
 
 #T# numpy arrays can be stacked, thereby creating an extra dimension to contain the stacked arrays, this is done with the stack function
 
@@ -381,11 +385,12 @@ arr1 = np.random.rand(2, 1)
 
 #T# the randint function generates a random integer between 0 and a given number
 
-# SYNTAX np.random.randint(int1, size = tuple1)
-#T# int1 is the upper limit of the random number to generate, if an array of numbers is to be generated then tuple1 contains the shape of said array
+# SYNTAX np.random.randint(int1, int2, size = tuple1)
+#T# int1 is the lower limit and int2 is the upper limit of the random number to generate, if an array of numbers is to be generated then tuple1 contains the shape of said array, int2 is optional and if left out then int1 is taken as the upper limit and the lower limit is 0
 
 arr1 = np.random.randint(20, size = (3, 1, 2))
 # array([[[13, 16]], [[ 3, 15]], [[ 9,  6]]]) #| or other
+num1 = np.random.randint(4, 7) # 6 #| or other
 
 #T# a random element from a one dimensional numpy array or list can be selected with the choice function, it admits the size kwarg
 int1 = np.random.choice(np.array([1, 2, 3, 4])) # 2 #| or other

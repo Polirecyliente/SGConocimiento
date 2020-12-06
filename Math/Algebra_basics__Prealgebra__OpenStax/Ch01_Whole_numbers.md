@@ -22,6 +22,9 @@
 (Números naturales y el cero)
 **Whole numbers**: these are, 0, 1, 2, 3, 4, ...
 
+(Dígitos | Cifras)
+**Digits**: each of the numeric values that make up a number, e.g. the number 834 has three digits, namely 8, 3, and 4.
+
 (Sistema de numeración posicional)
 **Place value system**: system in which the value of a digit depends on its place in the number.
 
@@ -139,7 +142,7 @@ Division is the operation of dividing a first number by a second one, this means
 (Propiedades del cero en la división)
 **Division properties of zero**: zero divided by any number is zero, $0/a = 0$. Division by zero is undefined, $a/0$ is undefined.
 
-(Residuo)
+(Residuo | Resto)
 **Remainder**: this is the number that is left over after doing the repeated subtraction, let the quotient be $q$, and the remainder be $r$, so $a/b = q + r/b$
 [Remainder code](Programs/Ch01/S05_02_Remainder.py)
 
