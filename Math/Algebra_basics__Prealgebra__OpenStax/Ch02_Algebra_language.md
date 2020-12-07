@@ -1,7 +1,7 @@
 
 #   Algebra language
 
-## The language of algebra
+## The language of algebra (El lenguaje del álgebra)
 [Ch02_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=109)
 
 (Variables)
@@ -86,7 +86,7 @@
 (Números al cubo)
 **Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. 5 to the power of 3 is 125, or 5 cubed is 125 (5 al cubo es 125).
 
-## Evaluation and simplification of expressions
+## Evaluation and simplification of expressions (Evaluación y simplificación de expresiones)
 [Ch02_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=129)
 
 (Evaluar una expresión)
@@ -108,7 +108,7 @@
 (Reducción de términos semejantes)
 **Combining like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
-## Solutions of an equation, subtraction and addition properties of equality
+## Solutions of an equation, subtraction and addition properties of equality (Soluciones de una ecuación, propiedades de sustracción y adición de la igualdad)
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
 
 (Solución de una ecuación)
@@ -121,7 +121,7 @@
 (Propiedad aditiva de la igualdad)
 **Addition property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then adding a third number $c$ to each side of the equality preserves the equality $a + c = b + c$.
 
-## Multiples, divisibility, factors, prime numbers
+## Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
 
 (Múltiplos de un número)
@@ -164,7 +164,7 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 (Números compuestos)
 **Composite numbers**: the numbers that are not prime, i.e. the numbers that have at least 3 different factors.
 
-## Prime factorization, least common multiple
+## Prime factorization, least common multiple (Descomposición en factores primos, mínimo común múltiplo)
 [Ch02_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=172)
 
 (Factores primos)
@@ -180,7 +180,7 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 (Múltiplos comunes)
 **Common multiples**: the numbers that are multiples of a given set of numbers (at least two)
 
-(Mínimo comúm múltiplo)
+(Mínimo común múltiplo)
 **Least common multiple**: the smallest common multiple of a given set of numbers (at least two)
 [Least common multiple code](Programs/Ch02/S05_02_Least_common_multiple.py)
 
