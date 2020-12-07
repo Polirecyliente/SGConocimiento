@@ -30,6 +30,8 @@
 
 #T# "docstring1" is the help string, statements1 are executed when func1 is called, and then val1 is returned from the function, it can be an array
 
+#T# if a function does not execute a return statement (e.g. omitting the return statement altogether) then it returns None by default
+
 def func1 (param1, param2 = 5, *varargs_tuple1):
     "func1 docstring or documentation string with its purpose"
     val1 = param1 * (5 + param2) # param1 * 10 with default param2

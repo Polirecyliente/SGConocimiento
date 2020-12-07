@@ -164,7 +164,7 @@ for it1 in np.nditer(arr1):
 # array(11)
 # array(12)
 
-#T# the ndenumerate function returns an iterable object of tuples, where each tuple contains the index of each element in the numpy array, and the element itself
+#T# the ndenumerate function returns an iterable object of tuples, where each tuple contains the index of each element in the array, and the element itself
 
 # SYNTAX np.ndenumerate(array1)
 #T# each element in the numpy array array1 has an index, this can be retrieved with this syntax
@@ -186,7 +186,7 @@ for it1 in np.ndenumerate(arr1):
 # ((3, 0), 1)
 # ((3, 1), 5)
 
-#T# values can be searched inside numpy arrays, to get their indices in the array with the where function
+#T# values can be searched inside arrays, to get their indices in the array with the where function
 
 # SYNTAX np.where(array1 == value1)
 #T# this returns a tuple with an array that holds the indices where array1 has the value of value1, the == can be replaced with >, <, >=, <=, depending on the comparison being made
@@ -211,11 +211,14 @@ arr1 = np.array([1, 2, 2, 3, 4])
 int1 = np.searchsorted(arr1, 2)                 # 1
 int1 = np.searchsorted(arr1, 2, side = 'right') # 3
 
-#T# numpy arrays can be sorted in place if they are not already, the sort function is a basic sorting function
+#T# arrays can be sorted in place if they are not already, the sort function is a basic sorting function
 arr1 = np.array([[5, 4, 4], [12, 1, 9]])
 arr2 = np.sort(arr1) # array([[ 4,  4,  5], [ 1,  9, 12]])
 
-#T# numpy arrays can be filtered to create new arrays according to a given filter rule
+#T# the unique function returns the unique elements in an array, and with the return_counts kwarg equal to True, it also returns the amount of repetitions of each element
+arr1 = np.array([2, 5, 1, 2, 1, 2, 1, 1])
+tuple1 = np.unique(arr1, return_counts = True)
+# (array([1, 2, 5]), array([4, 3, 1]))
 
 #T# numpy arrays can be joined along a given dimension or axis using the axis kwarg of the concatenate function, the axis kwarg starts counting dimensions at 0, this means that the first dimension is axis 0
 
@@ -542,6 +545,15 @@ arr1 = np.array([[6, 9, 4, 4], [8, 1, 10, 8]])
 arr2 = np.array([7, 3, 4, 8])
 arr3 = arr1 <= arr2
 # array([[ True, False,  True,  True], [False,  True, False,  True]])
+
+#T# the lcm function calculates the least common multiple of two numbers
+num1 = 8
+num2 = 12
+num3 = np.lcm(num1, num2) # 24
+
+#T# the reduce function from the lcm module calculates the least common multiple of a set of numbers inside a one dimensional array
+arr1 = np.array([2, 5, 2, 1])
+num1 = np.lcm.reduce(arr1) # 10
 # |-----
 
 # |-------------------------------------------------------------

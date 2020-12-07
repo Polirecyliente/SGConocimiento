@@ -16,8 +16,7 @@ arr2 = np.array([[1, num1]]) #| this array is two dimensional so that the factor
 
 #T# find all factor pairs and concatenate them in the array of factor pairs
 for it1 in arr1:
-    if (num1/it1 < it1):
-        break #| there is no need to iterate if the quotient is less than the divisor, otherwise factor pairs are repeated
+    if (num1/it1 < it1): break #| there is no need to iterate if the quotient is less than the divisor, otherwise factor pairs are repeated
     if (num1 % it1 == 0):
         arr3 = np.array([[it1, num1/it1]])
         arr2 = np.concatenate((arr2, arr3))
@@ -26,3 +25,5 @@ for it1 in arr1:
 arr2 # array([[ 1., 72.], [ 2., 36.], [ 3., 24.], [ 4., 18.], [ 6., 12.], [ 8.,  9.]])
 
 #T# the list of factor pairs would be the same as the list of factors in general, except for squared numbers which have one repeated factor, for instance doing num1 = 25, makes arr2 = array([[ 1., 25.], [ 5.,  5.]])
+
+#T# if the list of factor pairs of num1 only contains two numbers, then the number num1 is prime

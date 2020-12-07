@@ -167,4 +167,23 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 ## Prime factorization, least common multiple
 [Ch02_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=172)
 
-<!-- # TODO  -->
+(Factores primos)
+**prime factors**: the set of prime numbers that multiplied together produce a given number. Numbers can be represented as the product of prime factors.
+
+(Descomposición en factores primos)
+**Prime factorization**: the process of finding the prime factors of a number.
+[Prime factorization code](Programs/Ch02/S05_01_Prime_factorization.py)
+
+(Multiplicidad de un factor primo)
+**Multiplicity of a prime factor**: the amount of times that a prime factor of a given number is repeated, e.g. in the number 60 the prime factors are 2, 2, 3, 5, the number 2 has a multiplicity of 2, the number 3 has a multiplicity of 1, and the number 5 has a multiplicity of 1.
+
+(Múltiplos comunes)
+**Common multiples**: the numbers that are multiples of a given set of numbers (at least two)
+
+(Mínimo comúm múltiplo)
+**Least common multiple**: the smallest common multiple of a given set of numbers (at least two)
+[Least common multiple code](Programs/Ch02/S05_02_Least_common_multiple.py)
+
+The least common multiple of two numbers can be calculated using their prime factors. The least common multiple of two numbers is the product of all their unique prime factors, each raised to the power of their maximum multiplicity.
+
+For example, to find the least common multiple of 12 and 18, the prime factors of 12 are 2, 2, 3, and the prime factors of 18 are 2, 3, 3. The least common multiple is $2*2*3*3 = 36$, the number 2 has a maximum multiplicity of 2 (in 12), and 3 has a maximum multiplicity of 2 (in 18).
