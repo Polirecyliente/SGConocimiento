@@ -1,5 +1,5 @@
 
-#   Algebra language
+#   Algebra language (Lenguaje del álgebra)
 
 ## The language of algebra (El lenguaje del álgebra)
 [Ch02_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=109)

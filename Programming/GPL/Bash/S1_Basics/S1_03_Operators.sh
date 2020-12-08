@@ -427,6 +427,14 @@ var1=5; var2=3
 (( var3 = var1 - var2 )) # var3 == 2
 let "var3 = var1 - var2" # var3 == 2
 
+# SYNTAX (( var2 = -var1 ))
+# SYNTAX let "var2 = -var1"
+#T# this changes the sign of var1 and stores the result in var2
+
+var1=5
+(( var2 = -var1 )) # -5
+let "var2 = -var1" # -5
+
 # SYNTAX (( var3 = var1*var2 ))
 # SYNTAX let "var3 = var1*var2"
 #T# this multiplies var1 by var2, and stores the result in var3

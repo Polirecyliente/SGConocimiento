@@ -1,5 +1,5 @@
 
-#   Whole numbers (Números enteros)
+#   Whole numbers (Números naturales y el cero)
 
 ## Introduction (Introducción)
 [Ch01_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=15)

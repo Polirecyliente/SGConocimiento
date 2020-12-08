@@ -27,6 +27,10 @@ num1 = a + b  # 8
 a = 5; b = 3
 num1 = a - b  # 2
 
+#T# change sign operator (the same as the subtraction operator)
+a = 5
+num1 = -a # -5
+
 #T# multiplication operation
 a = 5; b = 3
 num1 = a * b  # 15

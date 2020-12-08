@@ -32,6 +32,9 @@
 
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 #T# this hides the Gnome dock (i.e. the taskbar with opened programs)
+
+#T# change the display manager with dpkg-reconfigure display-manager1
+dpkg-reconfigure lightdm
 # |-------------------------------------------------------------
 
 #C# Process management
