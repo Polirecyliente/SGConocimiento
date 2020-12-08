@@ -23,15 +23,19 @@ The absolute value of a number is represented by putting parallel lines at the s
 ## Addition of integers (Adición de enteros)
 [Ch03_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=209)
 
-<!-- # TODO  -->
+Addition of integers is no different from regular addition. Adding a negative number is the same as subtracting its opposite (just as adding a positive number is the same as subtracting its opposite).
+
+Addition means moving in the same direction of the number being added, if the number being added is positive then the addition moves in the positive direction, if the number being added is negative then the addition moves in the negative direction.
 
 ## Subtraction of integers (Sustracción de enteros)
 [Ch03_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=224)
 
-<!-- # TODO  -->
+Subtraction of integers is no different from regular subtraction. In $a - (-b)$ the expression $- (-b)$ subtracts negative $b$, subtracting means moving in the opposite direction, so moving opposite to negative $b$ means adding positive $b$, and $a - (-b) = a + b$
 
 ## Multiplication and division of integers (Multiplicación y división de enteros)
 [Ch03_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=244)
+
+Multiplication and division of integers are no different from regular multiplication and division. When multiplying or dividing by a negative number, it changes the sign of the other number, so multiplying or dividing a negative number by another negative number results in a positive number, and multiplying or dividing a positive number by a negative number results in a negative number.
 
 <!-- # TODO  -->
 
