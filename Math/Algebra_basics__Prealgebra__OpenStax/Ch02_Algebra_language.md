@@ -17,7 +17,7 @@
 **Algebraic symbols**: operators, functions, variables, numbers.
 
 (Operadores relacionales)
-**Relational operators**: operators that compare the values of two quantities.
+**Relational operators**: operators that compare the values of two numbers. These operators serve to make the set of numbers an ordered set, ordered according to the values of the numbers.
 [Relational operators code](Programs/Ch02/S01_01_Relational_operators.py)
 
 (Igualdad)
@@ -108,7 +108,7 @@
 (Reducción de términos semejantes)
 **Combining like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
-## Solutions of an equation, subtraction and addition properties of equality (Soluciones de una ecuación, propiedades de sustracción y adición de la igualdad)
+## Solution of an equation, subtraction and addition properties of equality (Soluciones de una ecuación, propiedades de sustracción y adición de la igualdad)
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
 
 (Solución de una ecuación)

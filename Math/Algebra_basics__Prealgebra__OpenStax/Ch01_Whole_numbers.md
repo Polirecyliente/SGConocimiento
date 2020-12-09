@@ -44,7 +44,7 @@
 ## Addition (Adición)
 [Ch01_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=32)
 
-Addition is the operation of adding numbers together.
+Addition is the operation of adding numbers together. Addition means starting at the end of the first number, and then moving the amount of units being added by the second number.
 [Addition code](Programs/Ch01/S02_01_Addition.py)
 
 (Operador suma)
@@ -79,7 +79,7 @@ Example: $2 + 2 = 4$
 ## Subtraction (Sustracción)
 [Ch01_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=48)
 
-Subtraction is the operation of subtracting a number from another.
+Subtraction is the operation of subtracting a number from another. Subtraction means starting at the end of the first number, and then moving in the opposite direction the amount of units being subtracted by the second number.
 [Subtraction code](Programs/Ch01/S03_01_Subtraction.py)
 
 (Operador resta)
@@ -95,7 +95,7 @@ Example: $5 - 3 = 2$
 ## Multiplication (Multiplicación)
 [Ch01_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=63)
 
-Multiplication is the operation of multiplying numbers together, this means the repeated addition of a number with itself, the amount of repetitions is the other number in the operation.
+Multiplication is the operation of multiplying numbers together. Multiplication means the repeated addition of a number with itself, the amount of repeated additions is the other number in the operation.
 [Multiplication code](Programs/Ch01/S04_01_Multiplication.py)
 
 (Operador multiplicación)
@@ -121,7 +121,7 @@ Example: $4 \times 3 = 3 + 3 + 3 + 3 = 12$
 ## Division (División)
 [Ch01_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=81)
 
-Division is the operation of dividing a first number by a second one, this means the repeated subtraction of the second number from the first one, the amount of repetitions is the result of the operation.
+Division is the operation of dividing a first number by a second number. Division means the repeated subtraction of the second number from the first one until reaching 0, the amount of repeated subtractions is the result of the operation.
 [Division code](Programs/Ch01/S05_01_Division.py)
 
 (Operador división)
