@@ -1,5 +1,7 @@
 import argparse
 
+# TODO gcd
+
 import sympy as sp
 
 def main():

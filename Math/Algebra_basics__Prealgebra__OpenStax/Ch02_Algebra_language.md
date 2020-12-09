@@ -10,8 +10,10 @@
 (Constantes)
 **Constants**: the representation of quantities that can not vary, that stay always with the same value, written using letters of the alphabet, such as $m, n$.
 
+The use of a letter of the alphabet as a variable or as a constant is determined from the context, so the context must state which letters are variables and which are constants.
+
 (Funciones)
-**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a, b$.
+**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, e.g. $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a, b$.
 
 (Símbolos algebraicos)
 **Algebraic symbols**: operators, functions, variables, numbers.
@@ -24,7 +26,7 @@
 **Equality**: when the values of two quantities are equal, $a = b$ means the value of $a$ is equal to the value of $b$.
 
 (Desigualdad)
-**Inequality**: when the values of two quantities are not equal, or may not be equal.
+**Inequality**: when the values of two quantities are strictly not equal, or may not be equal.
 
 (Mayor que)
 **Greater than**: the comparison of two numbers where the first is greater than the second. The operator is $>$, the greater than sign. $a > b$, read as $a$ greater than $b$ ($a$ mayor que $b$), means that the value of $a$ is greater than the value of $b$.
@@ -68,23 +70,25 @@
 [Simplification code](Programs/Ch02/S01_03_Simplification.py)
 
 (Notación exponencial)
-**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$ where $n$ is the amount of times that $a$ is multiplied by itself, read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$). The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
+**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$ where $n$ is the amount of times that $a$ is multiplied by itself, read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
+
+The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
 
 (Potenciación)
-**Exponentiation**: the operation of raising a number to a given power, i.e. $a^n$.
+**Exponentiation**: the operation of raising a number to a given power, e.g. $a^n$.
 [Exponentiation code](Programs/Ch02/S01_04_Exponentiation.py)
 
 (Base y exponente)
 **Base and exponent**: in the operation $a^n$, $a$ is called the base, $n$ is called the exponent.
 
 (Expresión exponencial en forma expandida)
-**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a * a * a * ... * a$ where $a$ is multiplied by itself $n$ times.
+**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a \cdot a \cdot a \cdot ... \cdot a$ where $a$ is multiplied by itself $n$ times.
 
 (Números al cuadrado)
-**Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. 3 to the power of 2 is 9, or 3 squared is 9 (3 al cuadrado es 9).
+**Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. $3$ to the power of $2$ is $9$, or $3$ squared is $9$ ($3$ al cuadrado es $9$).
 
 (Números al cubo)
-**Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. 5 to the power of 3 is 125, or 5 cubed is 125 (5 al cubo es 125).
+**Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. $5$ to the power of $3$ is $125$, or $5$ cubed is $125$ ($5$ al cubo es $125$).
 
 ## Evaluation and simplification of expressions (Evaluación y simplificación de expresiones)
 [Ch02_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=129)
@@ -152,14 +156,14 @@ A given number is divisible by 10 if its last digit is 0.
 A given number is divisible by 11 if the alternating sum of its digits (i.e. the first digit, minus the second, plus the third, minus the fourth, etc.) is divisible by 11.
 
 (Factores de un número)
-**Factors of a number**: in a given number, its factors are the numbers that multiplied together produce the given number. A number can have several different sets of factors, e.g. 12 has sets of factors like 3, 4, also 2, 6, or 2, 3, 2, or others.
+**Factors of a number**: in a given number, its factors are the numbers that multiplied together produce the given number. A number can have several different sets of factors, e.g. $12$ has different sets of factors like $3$, $4$, also $2$, $6$, or $2$, $3$, $2$, or others.
 [Find factors code](Programs/Ch02/S04_02_Find_factors.py)
 
 (Pares de factores)
-**factor pairs**: factors can always be presented in pairs, because at least two numbers are required to be multiplied together in order to produce a given number. In the example of $12 = 2*3*2$, with factor pairs the equation would be $12 = 2*6$ or $12 = 3*4$.
+**factor pairs**: factors can always be presented in pairs, because at least two numbers are required to be multiplied together in order to produce a given number. In the example of $12 = 2 \cdot 3 \cdot 2$, with factor pairs the equation would be $12 = 2 \cdot 6$ or $12 = 3 \cdot 4$.
 
 (Números primos)
-**Prime numbers**: each of them is a number with only 2 different factors, the number 1 and the number itself.
+**Prime numbers**: each of the numbers with only 2 different factors, the number 1 and the number itself.
 
 (Números compuestos)
 **Composite numbers**: the numbers that are not prime, i.e. the numbers that have at least 3 different factors.
@@ -175,7 +179,7 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 [Prime factorization code](Programs/Ch02/S05_01_Prime_factorization.py)
 
 (Multiplicidad de un factor primo)
-**Multiplicity of a prime factor**: the amount of times that a prime factor of a given number is repeated, e.g. in the number 60 the prime factors are 2, 2, 3, 5, the number 2 has a multiplicity of 2, the number 3 has a multiplicity of 1, and the number 5 has a multiplicity of 1.
+**Multiplicity of a prime factor**: the amount of times that a prime factor of a given number is repeated, e.g. in the number $60$ the prime factors are $2$, $2$, $3$, $5$, the number $2$ has a multiplicity of $2$, the number $3$ has a multiplicity of $1$, and the number $5$ has a multiplicity of $1$.
 
 (Múltiplos comunes)
 **Common multiples**: the numbers that are multiples of a given set of numbers (at least two)
@@ -186,4 +190,4 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 
 The least common multiple of two numbers can be calculated using their prime factors. The least common multiple of two numbers is the product of all their unique prime factors, each raised to the power of their maximum multiplicity.
 
-For example, to find the least common multiple of 12 and 18, the prime factors of 12 are 2, 2, 3, and the prime factors of 18 are 2, 3, 3. The least common multiple is $2*2*3*3 = 36$, the number 2 has a maximum multiplicity of 2 (in 12), and 3 has a maximum multiplicity of 2 (in 18).
+For example, to find the least common multiple of $12$ and $18$, the prime factors of $12$ are $2$, $2$, $3$, and the prime factors of $18$ are $2$, $3$, $3$. The least common multiple is $2 \cdot 2 \cdot 3 \cdot 3 = 36$, the number $2$ has a maximum multiplicity of $2$ (in $12$), and $3$ has a maximum multiplicity of $2$ (in $18$).

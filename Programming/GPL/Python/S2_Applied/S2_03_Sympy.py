@@ -104,8 +104,8 @@ flo1 = sympy.Float('5.3E1')    # 53.0000000000000
 flo1 = sympy.Float('5.3E1', 2) # 53.
 flo1 = sympy.Float('5.8E1', 1) # 6.e+1
 
-#T# rational numbers are created with the Rational constructor, it admits fractions and float numbers
-num1 = sympy.Rational(3/4)   # 3/4
+#T# rational numbers are created with the Rational constructor, it admits a float number casted as string
+num1 = sympy.Rational('3/4') # 3/4
 num1 = sympy.Rational('0.2') # 1/5
 
 #T# the Rational constructor can also create rational numbers with the following syntax
@@ -120,7 +120,12 @@ num1 = sympy.Rational(5, 2)
 int1 = num1.p # 5
 int1 = num1.q # 2
 
-#T# the Integer constructor accepts integer numbers, but also rational and float numbers
+#T# the numerator, denominator getters of a rational number also contain the numerator and the denominator
+num1 = sympy.Rational(5, 2)
+int1 = num1.numerator()   # 5
+int1 = num1.denominator() # 2
+
+#T# the Integer constructor accepts integer numbers, but also float numbers
 int1 = sympy.Integer(3.7) # 3
 int1 = sympy.Integer(5/2) # 2
 

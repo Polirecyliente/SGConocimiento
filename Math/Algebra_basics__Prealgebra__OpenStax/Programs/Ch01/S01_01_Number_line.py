@@ -1,4 +1,4 @@
-#T# this programs draws a number line
+#T# this program draws a number line
 
 #T# import the pyplot module of the matplotlib package
 import matplotlib.pyplot as plt
