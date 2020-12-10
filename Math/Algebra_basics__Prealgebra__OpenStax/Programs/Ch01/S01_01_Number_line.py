@@ -12,8 +12,8 @@ xmin = -2.5; xmax = 5.5
 ax1.axis([xmin, xmax, 0, 0])
 
 #T# leave the number line alone
-for iter1 in ['top', 'left', 'right']:
-    ax1.spines[iter1].set_visible(False)
+for it1 in ['top', 'left', 'right']:
+    ax1.spines[it1].set_visible(False)
 ax1.axes.get_yaxis().set_visible(False)
 
 #T# put the arrow tips

@@ -19,11 +19,9 @@ num1 = sympy.Rational('0.2') # 1/5
 num1 = sympy.Rational(5, 2) # 5/2
 
 #T# the p, q attributes of a rational number contain the numerator and the denominator respectively
-num1 = sympy.Rational(5, 2)
 int1 = num1.p # 5
 int1 = num1.q # 2
 
 #T# the numerator, denominator getters of a rational number also contain the numerator and the denominator
-num1 = sympy.Rational(5, 2)
 int1 = num1.numerator()   # 5
 int1 = num1.denominator() # 2

@@ -2,6 +2,7 @@
 #   Fractions (Fracciones)
 
 ## Visualizing fractions (Visualizando fracciones)
+[Ch04_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=281)
 
 (Fracciones)
 **Fractions**: numbers that represent a part of a whole number or an integer, so there are many fractions between any two integers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two fractions.
@@ -12,36 +13,58 @@
 
 For example, $\frac{2}{3}$ means $2$ divided by $3$, and using the definition of division, this calculates the amount of times that the number $3$ is subtracted from $2$ until 0 is reached, but subtracting $3$ from $2$ gives $-1$ because $2 - 3 = -1$, so to reach 0, a proportion, fraction, or part of $3$ must be subtracted from $2$, and not the full unity of the number $3$. 
 
-By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is subtracted from $2$ to reach 0. This amount, $\frac{2}{3}$ is between $0$ and $1$ and it occupies the same proportional distance to $1$, as the number $2$ occupies to $3$.
-
+By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is subtracted from $2$ to reach 0. This amount, $\frac{2}{3}$ is between $0$ and $1$ and it occupies the same proportional distance to $1$, as the number $2$ occupies to $3$, as shown in the figure.
 [Fraction diagram code](Programs/Ch04/S01_02_Fraction_diagram.py)
 ![Fraction diagram image](Images/Ch04/S01_02_Fraction_diagram.png)
 
 (Numerador y denominador)
 **Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). For example, in $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.
 
-<!-- # TODO proper fractions, improper fractions, mixed numbers, equivalent fractions,  -->
+(Propiedad del 1 en la división)
+**Division property of 1**: any non zero number $a$ divided by itself is 1, $\frac{a}{a} = 1$.
+
+(Fracciones propias)
+**Proper fractions**: a fraction $\frac{a}{b}$ in which $a < b$. A proper fraction is always between 0 and 1.
+
+(Fracciones impropias)
+**Improper fractions**: a fraction $\frac{a}{b}$ in which $a \ge b$. An improper fraction can be an integer (when $a$ is a multiple of $b$), and it is always greater than or equal to 1, which means that an improper fraction has an integer part and a proper fraction part, when said parts are summed the result is the improper fraction.
+[Improper fractions code](Programs/Ch04/S01_03_Improper_fractions.py)
+
+(Números mixtos)
+**Mixed numbers**: the representation of an improper fraction as an integer part and a proper fraction part. Let $a$ be an integer, and $\frac{b}{c}$ be a proper fraction with $c \ne 0$, so the mixed number they form together is denoted as $a\frac{b}{c}$. When adding together this numbers, $a + \frac{b}{c}$ the result is an improper fraction.
+
+(Fracciones equivalentes)
+**Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. This can be also seen in the figure shown earlier.
+
+(Propiedad de las fracciones equivalentes)
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a \cdot c}{b \cdot c}$.
 
 ## Multiplication and division of fractions (Multiplicación y división de fracciones)
+[Ch04_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=305)
 
 <!-- # TODO  -->
 
 ## Multiplication and division of mixed numbers and complex fractions (Multiplicación y división de números mixtos y fracciones complejas)
+[Ch04_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=325)
 
 <!-- # TODO  -->
 
 ## Addition and subtraction of fractions with common denominators (Adición y sustracción de fracciones con denominador común)
+[Ch04_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=338)
 
 <!-- # TODO  -->
 
 ## Addition and subtraction of fractions with different denominators (Adición y sustracción de fracciones con denominador diferente)
+[Ch04_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=350)
 
 <!-- # TODO  -->
 
 ## Addition and subtraction of mixed numbers (Adición y sustracción de números mixtos)
+[Ch04_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=372)
 
 <!-- # TODO  -->
 
 ## Solution of an equation with fractions (Solución de una ecuación con fracciones)
+[Ch04_S07](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=388)
 
 <!-- # TODO  -->

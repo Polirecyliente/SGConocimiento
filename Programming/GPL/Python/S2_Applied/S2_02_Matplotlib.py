@@ -356,6 +356,10 @@ ax1.tick_params(direction = 'inout')
 #T# list1 is the list of values at which a tick mark will appear in the y axis
 
 ax1.set_xticks([-8, 0, 8, 16, 24])
+
+#T# when the numeric ticks are float numbers, but want to be represented as fractions, the set_xticklabels, set_yticklabels functions can be used
+ax1.set_xticks([0, 2/3, 4/3])
+ax1.set_xticklabels(['0', '2/3', '4/3']) #| without this, the tick at 2/3 appears as 0.6666
 # |-----
 
 # |-------------------------------------------------------------
@@ -467,6 +471,25 @@ plt.arrow(0, 0, 3, 5, width = 0.2, length_includes_head = True, shape = "left", 
 
 rect1 = plt.Rectangle((0, 0), 3, 5, fill = True, alpha = 0.3, hatch = '*', linewidth = 4, edgecolor = '#99DD33', facecolor = "#4499EF", linestyle = ":")
 ax1.add_patch(rect1)
+
+#T# the hatch kwarg that is used in patches can have one of the following values
+#T#     '*' crosshatches with stars
+#T#     '-' crosshatches with horizontal lines
+#T#     '.' crosshatches with dots
+#T#     '+' crosshatches with a grid of horizontal and vertical lines
+#T#     'x' crosshatches with a grid of diagonals
+#T#     '\\' this is a single escaped backslash, crosshatches with down right diagonals
+#T#     'o' crosshatches with circles
+#T#     'O' crosshatches with big circles
+#T#     '|' crosshatches with vertical lines
+#T#     '/' crosshatches with up right diagonals
+
+#T# the density of any of the former hatch patterns can be increased by repeating the corresponding character, e.g. using '***' triples the density of the stars hatch pattern, '..' doubles the density of the dot hatch pattern, and so on
+
+#T# hatch patterns may be mixed, e.g. 'Oo', '*-', etc.
+
+rect1 = plt.Rectangle((.2,.2), .6, .4, hatch = '*-.+x\\oO|/')
+
 # |--------------------------------------------------/
 
 # |-----
@@ -491,12 +514,14 @@ matplotlib.use('TkAgg')
 #C# Interactive sessions
 
 # |-------------------------------------------------------------
+#T# for interactive sessions, a backend that supports interactivity must be used, such as TkAgg
+
 #T# start an interactive plotting session with the ion function
 plt.ion()
 
 #T# end an interactive plotting session with the ioff function
 plt.ioff()
 
-#T# if the interactive session doesn't update a plot, it is redrawn with the draw function
+#T# if the interactive session doesn't update a plot, it can be redrawn with the draw function
 plt.draw()
 # |-------------------------------------------------------------
