@@ -73,17 +73,42 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 ## Multiplication and division of mixed numbers and complex fractions (Multiplicación y división de números mixtos y fracciones complejas)
 [Ch04_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=325)
 
-<!-- # TODO  -->
+(Multiplicación y división de números mixtos)
+**Multiplication and division of mixed numbers**: this operations are done the same as multiplication and division of proper fractions. The mixed numbers should be converted to improper fractions first, as shown earlier.
+
+(Fracciones complejas)
+**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
+
+(Simplificación de fracciones complejas)
+**Simplification of complex fractions**: complex fractions are simplified like normal fractions.
+[Simplification of complex fractions](Programs/Ch04/S03_01_Simplification_of_complex_fractions.py)
+
+(Fracciones negativas)
+**Negative fractions**: when either the numerator is negative, or the denominator is negative, the fraction itself is negative, $\frac{-a}{b} = -\frac{a}{b}$, and $\frac{a}{-b} = -\frac{a}{b}$.
 
 ## Addition and subtraction of fractions with common denominators (Adición y sustracción de fracciones con denominador común)
 [Ch04_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=338)
 
-<!-- # TODO  -->
+(Adición de fracciones con denominador común)
+**Addition of fractions with common denominators**: the same as normal addition. It must be noted that $\frac{a}{b} = \frac{1}{b} \cdot a$, which means that $\frac{a}{b} + \frac{c}{b} = \frac{1}{b} \cdot (a + c) = \frac{a + c}{b}$, because $a$ and $c$ are multiples of $\frac{1}{b}$ which are then added together.
+
+(sustracción de fracciones con denominador común)
+**Subtraction of fractions with common denominators**: the same as normal subtraction, and following the logic shown for addition, $\frac{a}{b} - \frac{c}{b} = \frac{a - c}{b}$.
 
 ## Addition and subtraction of fractions with different denominators (Adición y sustracción de fracciones con denominador diferente)
 [Ch04_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=350)
 
-<!-- # TODO  -->
+(Mínimo común denominador)
+**Least common denominator**: the least common multiple of the denominators from a set of fractions.
+
+(Adición de fracciones con denominador diferente)
+**Addition of fractions with different denominators**: first the fractions being added must have common denominators, for this, each fraction is converted to an equivalent fraction such that its denominator is the common one. The common denominator is found as the least common denominator of the fractions. The addition is done like regular addition when the denominators are common.
+
+(Sustracción de fracciones con denominador diferente)
+**Subtraction of fractions with different denominator**: like regular subtraction, but first applying the steps in addition of fractions with different denominators, such that the denominators are common.
+
+(Evaluación de expresiones con fracciones)
+**Evaluation of expressions with fractions**: like regular evaluation.
 
 ## Addition and subtraction of mixed numbers (Adición y sustracción de números mixtos)
 [Ch04_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=372)
