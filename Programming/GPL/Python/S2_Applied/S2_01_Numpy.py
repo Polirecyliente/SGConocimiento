@@ -554,6 +554,15 @@ num3 = np.lcm(num1, num2) # 24
 #T# the reduce function from the lcm module calculates the least common multiple of a set of numbers inside a one dimensional array
 arr1 = np.array([2, 5, 2, 1])
 num1 = np.lcm.reduce(arr1) # 10
+
+#T# the gcd function calculates the greatest common divisor of two numbers
+num1 = 8
+num2 = 12
+num3 = np.gcd(num1, num2) # 4
+
+#T# the reduce function from the gcd module calculates the greatest common divisor of a set of numbers inside a one dimensional array
+arr1 = np.array([12, 18, 36, 60])
+num1 = np.gcd.reduce(arr1) # 6
 # |-----
 
 # |-------------------------------------------------------------

@@ -191,3 +191,11 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 The least common multiple of two numbers can be calculated using their prime factors. The least common multiple of two numbers is the product of all their unique prime factors, each raised to the power of their maximum multiplicity.
 
 For example, to find the least common multiple of $12$ and $18$, the prime factors of $12$ are $2$, $2$, $3$, and the prime factors of $18$ are $2$, $3$, $3$. The least common multiple is $2 \cdot 2 \cdot 3 \cdot 3 = 36$, the number $2$ has a maximum multiplicity of $2$ (in $12$), and $3$ has a maximum multiplicity of $2$ (in $18$).
+
+(Máximo común divisor)
+**Greatest common divisor**: the biggest common divisor of a given set of numbers (at least two)
+[Greatest common divisor code](Programs/Ch02/S05_03_Greatest_common_divisor.py)
+
+The greatest common divisor of two numbers can be calculated using their prime factors. The greatest common divisor of two numbers is the product of their common prime factors, each raised to the power of their minimum multiplicity.
+
+In this use of the term "divisor", it is also a factor of the set of numbers. That's why sometimes this is also called greatest common factor (Máximo factor común).

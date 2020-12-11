@@ -113,9 +113,13 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 ## Addition and subtraction of mixed numbers (Adición y sustracción de números mixtos)
 [Ch04_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=372)
 
-<!-- # TODO  -->
+(Adición de números mixtos)
+**Addition of mixed numbers**: like regular addition. The integer parts of the mixed numbers can be added directly, and the proper fraction parts are added with the rules of addition of fractions, the result number is the sum of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
+
+(Sustracción de números mixtos)
+**Subtraction of mixed numbers**: like regular subtraction. As with addition, the integer parts are subtracted separately from the fraction parts.
 
 ## Solution of an equation with fractions (Solución de una ecuación con fracciones)
 [Ch04_S07](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=388)
 
-<!-- # TODO  -->
+An equation with fractions can have a fraction solution, just like a regular solution.
