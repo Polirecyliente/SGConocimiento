@@ -60,7 +60,7 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 **Braces**: this operator is $\{\}$, the braces signs. $24 \div \{13 - 2[(6 - 5) + 4]\}$ returns $8$.
 
 (PEMDAS)
-**PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general.
+**PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general. Multiplication and division have the same relevance, so they can be switched in order, same with addition and subtraction.
 
 (Expresiones y ecuaciones)
 **Expressions and equations**: two expressions can form an equation by connecting them with an equal sign, $a + b = c/d$.

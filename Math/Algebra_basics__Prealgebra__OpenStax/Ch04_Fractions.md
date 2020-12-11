@@ -42,7 +42,33 @@ By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is 
 ## Multiplication and division of fractions (Multiplicación y división de fracciones)
 [Ch04_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=305)
 
-<!-- # TODO  -->
+(Reducir fracciones)
+**Reduce fractions**: form of simplification in which a fraction is expressed as an equivalent fraction that has no common factors between the numerator and the denominator. If there is a common factor, both the numerator and the denominator are divided by it, this simplifies the fraction.
+
+For example $\frac{6}{9} = \frac{4}{6}$, but their reduced form is $\frac{2}{3}$. In $\frac{6}{9}$ a common factor is $3$ and dividing the numerator and denominator by $3$ results in $\frac{2}{3}$. In $\frac{4}{6}$ a common factor is $2$ and dividing the numerator and denominator by $2$ results in $\frac{2}{3}$.
+
+The same simplification can be done with variables, e.g. $\frac{2 \cdot x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
+
+(Fracción irreducible)
+**Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
+
+(Multiplicación de fracciones)
+**Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
+
+(Recíproco de un número)
+**Reciprocal of a number**: another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
+
+Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \cdot \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends.
+
+Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \cdot \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the place of $\frac{a}{b}$.
+
+Multiplication by a number is the same as division by its reciprocal, $a \cdot b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a \cdot b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
+
+(Invertir un número)
+**Invert a number**: the process of finding the reciprocal of a number. When a number is inverted the result is its reciprocal.
+
+(División de fracciones)
+**Fraction division**: the operation $\frac{a}{b} \div \frac{c}{d}$. This implies two operations, division by $c$ and division by the reciprocal of $d$ which is the same as multiplication by $d$, so $\frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
 
 ## Multiplication and division of mixed numbers and complex fractions (Multiplicación y división de números mixtos y fracciones complejas)
 [Ch04_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=325)

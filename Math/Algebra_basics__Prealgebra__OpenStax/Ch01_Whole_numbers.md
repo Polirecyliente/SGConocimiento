@@ -148,3 +148,12 @@ Division is the operation of dividing a first number by a second number. Divisio
 Multiplication and division are inverse operations.
 
 General example of division: $28/8 = 3 + 4/8$
+
+(Paradigma de la multiplicación y división)
+**Multiplication and division paradigm**: multiplication and division both deal with three concepts: a set of elements, groups of elements, and the size of said groups. Each of this concepts is associated with a number, the total number of elements, the amount of groups, and the size of each group.
+
+Multiplication returns the total number of elements as the product of the amount of groups by the size of each group. For example, $5$ groups of size $4$, has a total number of elements of $5 \cdot 4 = 20$, and $4$ groups each with $5$ elements, has a total number of elements of $4 \cdot 5 = 20$.
+
+In multiplication, the amount of groups is interchangeable with the size of each group, so a multiplication can be interpreted as the amount of groups times their size, or as the size of the groups times the amount of groups, both interpretations are valid for any single multiplication.
+
+Division has a similar behavior, the total number of elements is the dividend, but then, the divisor can be any of the other two numbers. The divisor can be the amount of groups, or the size of each group, and the quotient is the other number. For example, $24 \div 8 = 3$ means, from the $24$ total elements, with groups of size $8$, then there are $3$ groups, but $24 \div 8 = 3$ also means that from the $24$ total elements, with $8$ groups, each will have a size of $3$. Both conclusions are arrived via repeated subtraction.
