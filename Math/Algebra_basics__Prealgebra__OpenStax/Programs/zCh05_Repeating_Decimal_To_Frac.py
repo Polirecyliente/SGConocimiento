@@ -11,7 +11,7 @@ def main(argv):
     Input the repeating decimal as two arguments: arg1 is the part you 
     want unique, and arg2 is the part you want repeated. Example usage:
     python3 Repeating_Decimal_To_Frac.py 894.57 448132653
-    This represents the decimal 894.57448132653448132653448132653448132653
+    This represens the decimal 894.57448132653448132653448132653448132653
     If correct, it should output the fraction 2484929112311/2777777775"""
 
     num,den = repeDecToFrac(argv[1],argv[2])
@@ -35,6 +35,3 @@ def repeDecToFrac(unique,repe):
 
     numden = (num,den)
     return numden
-
-if __name__ == '__main__':
-    main(argv)
