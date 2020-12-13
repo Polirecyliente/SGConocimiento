@@ -125,6 +125,9 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 (Propiedad aditiva de la igualdad)
 **Addition property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then adding a third number $c$ to each side of the equality preserves the equality $a + c = b + c$.
 
+(Despejar una variable)
+**Isolate a variable**: using properties of equality (such as the ones from addition and subtraction, but also from multiplication and division, see Ch03_Integers.md), to make a variable stand alone in one side of an equation. For example, in $a + b = c + d$, isolating $a$ requires the use of the subtraction property of equality, by subtracting $b$ from each side, $a = c + d - b$.
+
 ## Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
 
