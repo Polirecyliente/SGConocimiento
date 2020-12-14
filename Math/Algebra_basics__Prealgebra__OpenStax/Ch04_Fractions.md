@@ -80,8 +80,12 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 **Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
 
 (Simplificación de fracciones complejas)
-**Simplification of complex fractions**: complex fractions are simplified like normal fractions.
+**Simplification of complex fractions**: complex fractions are simplified like regular fractions.
 [Simplification of complex fractions](Programs/Ch04/S03_01_Simplification_of_complex_fractions.py)
+
+(Simplificación de expresiones con fracciones)
+**Simplification of expressions with fractions**: expressions with fractions are simplified like regular expressions
+[Simplification of expressions with fractions](Programs/Ch04/S03_02_Simplification_of_expressions_with_fractions.py)
 
 (Fracciones negativas)
 **Negative fractions**: when either the numerator is negative, or the denominator is negative, the fraction itself is negative, $\frac{-a}{b} = -\frac{a}{b}$, and $\frac{a}{-b} = -\frac{a}{b}$.

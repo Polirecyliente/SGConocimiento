@@ -16,6 +16,9 @@ About their place value, the first place to the right has its value multiplied b
 **Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa.
 [Conversion decimal fraction code](Programs/Ch05/S01_01_Conversion_decimal_fraction.py)
 
+(Redondeo de decimales)
+**Decimal rounding**: like regular rounding.
+
 ## Decimal operations (Operaciones con decimales)
 [Ch05_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=434)
 
@@ -75,14 +78,64 @@ An equation with decimals can have a decimal solution, just like a regular solut
 (Promedios)
 **Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
 
-<!-- # TODO mean, median, mode, probability -->
+(La media)
+**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of said set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, so $\bar{x} = \frac{x_1 + x_2 + ... + x_i + ... + x_N}{N} = \sum_i{\frac{x_i}{N}}$
+
+(Mediana)
+**Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
+
+(Frecuencia de un número en un conjunto)
+**Frequency of a number in a set**: the amount of times a given number is repeated in a set.
+
+(Moda)
+**Mode**: the number with the highest frequency in a set. A set of numbers can have several modes if several numbers have the same highest frequency, or none if all the numbers have the same frequency.
+
+(Probabilidad de un evento)
+**Probability of an event**: the fraction of the number of times an event happens over the number of general outcomes with or without the event.
 
 ## Ratios, rates (Ratios, tasas)
 [Ch05_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=489)
 
-<!-- # TODO -->
+(Ratio)
+**Ratio**: a fraction of any two numbers that are measured with the same unit or scale, therefore ratios have no units themselves. For example the ratio of height to width, both are measured in distance.
 
-## Simplification of square roots (Simplificación de raíces cuadradas)
+The notation of ratios in particular, includes the use of the colon : symbol to replace the division symbol. So the ratio $\frac{a}{b}$ can be denoted as $a:b$. If $b = 1$ then the ratio is still presented as $\frac{a}{1}$, and if the ratio is an improper fraction, it is not converted to a mixed number.
+
+(elevación sobre avance de una pendiente)
+**rise over run of a slope**: the fraction of vertical distance called "rise" over the horizontal distance called "run" in a slope.
+
+(Tasa)
+**Rate**: a fraction of any two numbers that are measured in differente units or scales, so the unit of a rate is the fraction of the units. For example the rate of speed which is measured as a fraction of distance over time.
+
+(Tasa unitaria)
+**Unit rate**: a rate expressed with a denominator of $1$.
+
+(Precio unitario)
+**Unit price**: a unit rate in which the unit is $\$/unit$, it tells the price per unit.
+
+## Square roots, simplification of square roots (Raíces cuadradas, simplificación de raíces cuadradas)
 [Ch05_S07](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=502)
 
-<!-- # TODO -->
+Simplification of square roots is done like regular simplification.
+[Simplification of radicals code](Programs/Ch05/S07_01_Simplification_of_radicals.py)
+
+Squared numbers can be seen as squares in a 2D grid. Let $n$ be the area of a given square, then $\sqrt{n}$ is the measure of the size of each side.
+
+The symbol around $n$ in $\sqrt{n}$ is called the radical sign (signo de radical), it acts as a grouping symbol for the expression inside it.
+
+(Cuadrado perfecto)
+**Perfect square**: any whole number that is the square of an integer. For example $9$ is the perfect square of $3$, because $3^2 = 9$ and $\sqrt{9} = 3$.
+
+(Raíz cuadrada)
+**Square root**: given two numbers $m$, $n$, such that $m = n^2$, then $n$ is the square root of $m$, $n = \sqrt{m}$.
+
+(Raíz cuadrada principal)
+**Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.
+
+(Fórmula de tiempo en caída libre)
+**Free fall time formula**: Let $t$ be the fall time in a free fall scenario, $h$ be the starting height, $g$ the standard gravity (gravedad estándar), then $t = \sqrt{\frac{2 \cdot h}{g}}$.
+
+The constant $g$ is measured as a rate, its units are distance over squared time, when using feet and seconds, $g = 32 ft/s^2$, and when using meters and seconds $g = 9.81 m/s^2$. Using $g = 32 ft/s^2$, then $t = \sqrt{\frac{2 \cdot h}{32}} = \sqrt{\frac{h}{16}} = \frac{\sqrt{h}}{4}$, $h$ must be in feet, and $t$ is in seconds.
+
+(Fórmula para encontrar la velocidad antes de frenar, según la distancia de la huella de frenado)
+**Formula to find the speed before braking, according to the skid mark distance**: the speed of a car before braking can be approximated. Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then $v = \sqrt{24 \cdot d}$.
