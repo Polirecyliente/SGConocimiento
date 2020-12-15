@@ -1,3 +1,2 @@
 
-#   Linear equations
-
+#   Linear equations (Ecuaciones lineales)

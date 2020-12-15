@@ -1,3 +1,2 @@
 
-#   Polynomials
-
+#   Polynomials (Polinomios)

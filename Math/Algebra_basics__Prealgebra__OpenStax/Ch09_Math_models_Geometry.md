@@ -1,3 +1,2 @@
 
-#   Math models and Geometry
-
+#   Math models and Geometry (Modelos matemáticos y geometría)
