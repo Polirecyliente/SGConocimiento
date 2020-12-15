@@ -107,6 +107,8 @@ The notation of ratios in particular, includes the use of the colon : symbol to 
 (Tasa)
 **Rate**: a fraction of any two numbers that are measured in differente units or scales, so the unit of a rate is the fraction of the units. For example the rate of speed which is measured as a fraction of distance over time.
 
+Ratios can be considered rates when the particular units in the numerator and denominator are also considered, even though they are the same. For example, width over height can be seen as a ratio, but also as the rate of width per unit of height, this rate is still dimensionless like a ratio.
+
 (Tasa unitaria)
 **Unit rate**: a rate expressed with a denominator of $1$.
 

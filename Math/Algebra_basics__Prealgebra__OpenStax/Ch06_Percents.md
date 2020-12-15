@@ -38,8 +38,36 @@ Given that $V_f$ can be smaller, or bigger than $V_i$, then $\Delta p\%$ can be 
 ## Sales tax, commissions, discounts (Impuesto de ventas, comisiones, descuentos)
 [Ch06_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=554)
 
+(Impuesto de ventas)
+**Sales tax**: percent applied to the price of a good or service (bien o servicio), the resulting amount of which is paid as taxes. Let $P_i$ be the price before taxes, $P$ be the price with taxes, and $t$ be the sales tax, then $P = P_i + t \cdot P_i$. The term $t \cdot P_i$ goes as taxes.
+
+(Comisión por ventas)
+**Sales commission**: extra wage paid to a sales person for the value sold by them. A basic form of commission is calculated as a commission rate (tasa de comisión) applied to the money value of the goods or services sold. Let $C$ be the commission earned by the sales person, $P$ be the sales value of the goods or services sold, and $c$ be the commission rate, then $C = c \cdot P$. The commission rate $c$ is commonly expressed as a percent.
+
+(Descuento de precio)
+**Price discount**: reduction in the price of a good or service, to make it more attractive to clients. A basic form of discount is calculated as a discount rate (tasa de descuento) applied to the sales price of the good or service. Let $D$ be the amount of discount, $P_i$ be the regular price, and $d$ be the discount rate, then $D = d \cdot P_i$. The discount rate $d$ is commonly expressed as a percent.
+
+Using this definition of discount, let $P$ be the price after discount, then $P = P_i - D = P_i - d \cdot P_i$.
+
+(Margen de ganancia)
+**Mark-up**: retailers buy goods at a wholesale price (precio mayorista), and then resell said goods at a list price (precio de lista|precio sugerido). Their profit comes from the mark-up which is the extra price added to the wholesale price to obtain the list price. A simple mark-up policy is to use a mark-up rate and multiply it by the wholesale price to obtain the mark-up amount. Let $W$ be the wholesale price of a good, $M$ be the amount of mark-up, and $m$ be the mark-up rate, then $M = m \cdot W$. The mark-up rate is commonly expressed as a percent.
+
+The list price is the result of adding the mark-up to the wholesale price. Let $L$ be the list price, then $L = M + W$.
+
 ## Simple interest (Interés simple)
 [Ch06_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=568)
+
+(Principal de una inversión)
+**Investment principal**: the amount of money put into an investment.
+
+(Principal de un préstamo)
+**Loan principal**: the amount of money borrowed as a loan.
+
+(Interés financiero)
+**Financial interest**: money received in return for an investment, or paid for a loan.
+
+(Interés simple)
+**Simple interest**: a way to calculate the amount of interest to be received for an investment or paid for a loan. Let $P$ be the principal of the investment or loan, $I$ be the amount of interest, $t$ be the time periods elapsed since the moment of the investment or loan, and $r$ be the interest rate (tasa de interés) paid per period, then $I = Prt$. This formula is the simple interest formula.
 
 ## Proportions (Proporciones)
 [Ch06_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=578)
