@@ -71,3 +71,12 @@ The list price is the result of adding the mark-up to the wholesale price. Let $
 
 ## Proportions (Proporciones)
 [Ch06_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=578)
+
+(Proporción)
+**Proportion**: an equation in which two fractions (ratios or rates) are equated, $\frac{a}{b} = \frac{c}{d}$, this is read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
+
+(Producto cruzado)
+**Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $a \cdot d = c \cdot b$. This concept is used to test if a proportion is true without dividing.
+
+(Proporción con porcentajes)
+**Percent proportion**: a proportion in which one of the fractions is a percentage. Using terms from before, let $B$ be the base, $A$ the amount, then $\frac{A}{B} = \frac{p}{100}$, this means that the amount $A$ is to the base $B$ as $p$ is to $100$.
