@@ -19,6 +19,22 @@ When handling improper fractions, the resulting percent is greater than $100\%$,
 ## Percentage applications (Aplicaciones de porcentajes)
 [Ch06_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=542)
 
+(Partes de una ecuación de porcentaje)
+**Parts of a percentage equation**: let $p\%$ be a percentage, $B$ be the base (la base), $A$ be the amount (la cantidad), then the simplest percentage equation is, $A = p\% \cdot B$, this expresses the amount $A$ as a percent of the base $B$.
+
+Isolating the base allows finding its value from the amount and the percent, $B = \frac{A}{p\%}$.
+
+The reciprocal of a percent, $\frac{1}{p\%}$, means the reciprocal of a ratio. If a percent $p\%$ means the fraction of the part over the total, i.e. there are $p$ part units per group of $100$ total units, then $\frac{1}{p\%}$ means that there are $100$ total units per group of $p$ part units.
+
+Isolating the percent allows finding its value from the amount and the base, $p\% = \frac{A}{B}$.
+
+(porcentaje de aumento, porcentaje de disminución)
+**percent increase, percent decrease**: in general, the percent change (porcentaje de cambio) from a variable is measured as the difference of final value minus initial value, divided over the initial value, this result tells the amount of units changed per group of $1$ unit before change, and this can be converted to a percent.
+
+Let $V_i$ be the initial value of a given variable, $V_f$ be the final value of said variable, $\Delta p\%$ be the percent change, then $\Delta p\% = \frac{V_f - V_i}{V_i} \cdot 100\%$. Note that the words "initial" and "final" do not have to mean that they are separated in time, they can be separated under any criteria wanted.
+
+Given that $V_f$ can be smaller, or bigger than $V_i$, then $\Delta p\%$ can be negative or positive, if it's negative that means that the percent change is a percent decrease, whereas if it's positive that means that the percent change is a percent increase.
+
 ## Sales tax, commissions, discounts (Impuesto de ventas, comisiones, descuentos)
 [Ch06_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=554)
 
