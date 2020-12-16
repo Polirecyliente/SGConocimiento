@@ -19,14 +19,30 @@ The fact that they are called irrational, doesn't necessarily mean that they can
 (Números reales)
 **Real numbers**: the union of the sets of rational and irrational numbers.
 
-## Commutative property, associative property (Propiedad conmutativa, propiedad asociativa)
-[Ch07_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=)
+## Commutative properties, associative properties (Propiedades conmutativas, propiedades asociativas)
+[Ch07_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=611)
+
+(Propiedad conmutativa de la adición)
+**Commutative property of addition**: the order of the addends doesn't change the sum, $a + b = b + a$. Given that addition means movement after the first number in the direction of the second, this means that no matter which number comes first and which second, the end result is the same.
+
+Subtraction is not commutative. If $a \ne b$, then $a - b \ne b - a$.
+
+(Propiedad conmutativa de la multiplicación)
+**Commutative property of multiplication**: the order of the factors doesn't change the product, $a \cdot b = b \cdot a$. Given that multiplication means the repeated addition of the first number with itself a number of times equal to the second number, this means that no matter which number comes first and which second, the final repeated addition is the same.
+
+Division is not commutative. If $a \ne b$, then $\frac{a}{b} \ne \frac{b}{a}$.
+
+(Propiedad asociativa de la adición)
+**Associative property of addition**: using grouping symbols to group addition operations does not change the sum, $a + b + c = (a + b) + c = a + (b + c)$.
+
+(Propiedad asociativa de la multiplicación)
+**Associative property of multiplication**: using grouping symbols to group multiplication operations does not change the product, $a \cdot b \cdot c = (a \cdot b) \cdot c = a \cdot (b \cdot c)$.
 
 ## Distributive property (Propiedad distributiva)
-[Ch07_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=)
+[Ch07_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=623)
 
 ## Identity properties, inverse properties, zero properties (Propiedades de identidad, propiedades de inversa, propiedades del cero)
-[Ch07_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=)
+[Ch07_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=635)
 
 ## Systems of measurement (Sistemas de medición)
-[Ch07_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=)
+[Ch07_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=646)
