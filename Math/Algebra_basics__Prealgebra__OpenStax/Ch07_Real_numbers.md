@@ -41,8 +41,30 @@ Division is not commutative. If $a \ne b$, then $\frac{a}{b} \ne \frac{b}{a}$.
 ## Distributive property (Propiedad distributiva)
 [Ch07_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=623)
 
-## Identity properties, inverse properties, zero properties (Propiedades de identidad, propiedades de inversa, propiedades del cero)
+(Propiedad distributiva de la multiplicación respecto a la suma)
+**Distributive property of multiplication over addition**: when a group of addends (grouped using a grouping symbol) is multiplied by a number, is the same as sum of the products of said number by each addend, $a \cdot (b + c) = a \cdot b + a \cdot c$. This property shows itself when multiplying $a$ by the sum $b + c$, the resulting product can be seen as the sum of $a \cdot b$ and $a \cdot c$.
+
+This property actually includes subtraction as a case of the sum, given that the addends can be negative numbers.
+
+## Inverse properties, zero properties (Propiedades inversas, propiedades del cero)
 [Ch07_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=635)
+
+(Inverso aditivo)
+**Additive inverse**: the opposite of a number, is its additive inverse. The additive inverse of $a$ is $-a$.
+
+(Propiedad inversa aditiva)
+**Inverse property of addition**: the sum of a number and its additive inverse is zero, $a + (-a) = a - a = 0$. $0$ is the additive identity (see Ch01_Whole_numbers.md)
+
+(Inverso multiplicativo)
+**Multiplicative inverse**: the reciprocal of a number, is its multiplicative inverse. The multiplicative inverse of $a$ is $\frac{1}{a}$.
+
+(Propiedad inversa de la multiplicación)
+**Inverse property of multiplication**: the product of a number and its multiplicative inverse is one, $a \cdot \frac{1}{a} = 1$. $1$ is the multiplicative identity (see Ch01_Whole_numbers.md)
+
+(Multiplicación por 0)
+**Multiplication by 0**: the product of any number and 0 is 0, $a \cdot 0 = 0$. This is because $a$ is added $0$ times with itself.
+
+See Ch01_Whole_numbers.md for the properties of 0 in the division operation.
 
 ## Systems of measurement (Sistemas de medición)
 [Ch07_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=646)
