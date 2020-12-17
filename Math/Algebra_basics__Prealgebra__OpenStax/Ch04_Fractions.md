@@ -8,7 +8,7 @@
 **Fractions**: numbers that represent a part of a whole number or an integer, so there are many fractions between any two integers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two fractions.
 
 (Notación de las fracciones)
-**Fraction notation**: given that fractions are numbers that can be between two integers, they are represented with a division, a fraction that is not integer has a remainder different from 0 when represented as a division. The fraction $\frac{a}{b}$ is calculated as $a$ divided by $b$, with $b \ne 0$.
+**Fraction notation**: given that fractions are numbers that can be between two integers, they are represented with a division, a fraction that is not integer has a remainder different from 0 when represented as a division. The fraction $\frac{a}{b}$ is calculated as $a$ divided by $b$, with $b$ being nonzero.
 [Fraction notation code](Programs/Ch04/S01_01_Fraction_notation.py)
 
 For example, $\frac{2}{3}$ means $2$ divided by $3$, and using the definition of division, this calculates the amount of times that the number $3$ is subtracted from $2$ until 0 is reached, but subtracting $3$ from $2$ gives $-1$ because $2 - 3 = -1$, so to reach 0, a proportion, fraction, or part of $3$ must be subtracted from $2$, and not the full unity of the number $3$. 
@@ -21,17 +21,29 @@ By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is 
 **Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). For example, in $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.
 
 (Propiedad del 1 en la división)
-**Division property of 1**: any non zero number $a$ divided by itself is 1, $\frac{a}{a} = 1$.
+**Division property of 1**: any non zero number divided by itself is 1.
+
+> Division property of 1
+>
+> Let $a$ be a nonzero number, then
+> $$\frac{a}{a} = 1$$
 
 (Fracciones propias)
 **Proper fractions**: a fraction $\frac{a}{b}$ in which $a < b$. A proper fraction is always between 0 and 1.
 
 (Fracciones impropias)
-**Improper fractions**: a fraction $\frac{a}{b}$ in which $a \ge b$. An improper fraction can be an integer (when $a$ is a multiple of $b$), and it is always greater than or equal to 1, which means that an improper fraction has an integer part and a proper fraction part, when said parts are summed the result is the improper fraction.
+**Improper fractions**: a fraction $\frac{a}{b}$ in which $a \ge b$. An improper fraction can be an integer (when $a$ is a multiple of $b$), and it is always greater than or equal to 1, which means that an improper fraction has an integer part and a proper fraction part, when said parts are added the result is the improper fraction.
 [Improper fractions code](Programs/Ch04/S01_03_Improper_fractions.py)
 
 (Números mixtos)
-**Mixed numbers**: the representation of an improper fraction as an integer part and a proper fraction part. Let $a$ be an integer, and $\frac{b}{c}$ be a proper fraction with $c \ne 0$, so the mixed number they form together is denoted as $a\frac{b}{c}$. When adding together this numbers, $a + \frac{b}{c}$ the result is an improper fraction.
+**Mixed numbers**: the representation of an improper fraction as an integer part and a proper fraction part.
+
+> Mixed numbers notation
+>
+> Let $a$ be an integer, and $\frac{b}{c}$ be a proper fraction, the mixed number they form together is denoted as
+> $$a\frac{b}{c}$$
+
+When adding together this numbers, $a + \frac{b}{c}$ the result is an improper fraction with the same value.
 
 (Fracciones equivalentes)
 **Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. This can be also seen in the figure shown earlier.

@@ -4,33 +4,34 @@
 
 <!-- #T# Table of contents -->
 
-<!-- #T# Accents -->
-<!-- #T# Delimiters -->
-<!-- #T# --- Delimiter sizing modifiers -->
-<!-- #T# Environments -->
-<!-- #T# Letters -->
-<!-- #T# Layout -->
-<!-- #T# --- Annotations -->
-<!-- #T# --- Vertical layout -->
-<!-- #T# Logic, set theory -->
-<!-- #T# Operators -->
-<!-- #T# --- Big operators -->
-<!-- #T# --- Binary operators -->
-<!-- #T# --- Functions -->
-<!-- #T# --- Relational operators -->
-<!-- #T# Arrows -->
-<!-- #T# Style -->
-<!-- #T# Symbols, punctuation -->
+<!-- #C# Accents -->
+<!-- #C# Spacing -->
+<!-- #C# Delimiters -->
+<!-- #C# --- Delimiter sizing modifiers -->
+<!-- #C# Environments -->
+<!-- #C# Letters -->
+<!-- #C# Layout -->
+<!-- #C# --- Annotations -->
+<!-- #C# --- Vertical layout -->
+<!-- #C# Logic, set theory -->
+<!-- #C# Operators -->
+<!-- #C# --- Big operators -->
+<!-- #C# --- Binary operators -->
+<!-- #C# --- Functions -->
+<!-- #C# --- Relational operators -->
+<!-- #C# Arrows -->
+<!-- #C# Style -->
+<!-- #C# Symbols, punctuation -->
 
 <!-- #T# Beginning of content -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# katex symbols are used in markdown files, inside single, or double dollar signs -->
 
-<!-- %T% this markdown file is used to show the katex symbols, organized by categories. The character 'L' for Letters, is used for most examples -->
+<!-- #T# this markdown file is used to show the katex symbols, organized by categories. The character 'L' for Letters, is used for most examples -->
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Accents -->
+<!-- #C# Accents -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# accents are a type of diacritic that commonly goes on top of the letter -->
@@ -70,7 +71,25 @@
 | Brace under letters            | $\underbrace{Letters}$          |
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Delimiters -->
+<!-- #C# Spacing -->
+
+<!-- # |------------------------------------------------------------- -->
+| Spacing description       | Example             |
+| :----------------------   | :------:            |
+| Literal space             | $A\ B$              |
+| Quadratone space          | $A\quad B$          |
+| Double quadratone space   | $A\qquad B$         |
+| Small spacing             | $A\, B$             |
+| Middle spacing            | $A\enspace B$       |
+| Custom horizontal space   | $A\hspace{1.4em}B$  |
+| Custom horizontal space 2 | $A\hspace{-2.3em}B$ |
+| Small negative spacing    | $A\!B$              |
+| Middle negative spacing   | $A\negmedspace B$   |
+| Big negative spacing      | $A\negthickspace B$ |
+| No break space            | $A\nobreakspace B$  |
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Delimiters -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# delimiters are used as grouping symbols -->
@@ -107,7 +126,7 @@
 | Left upper half brace    | $\lmoustache$                                 |
 | Right upper half brace   | $\rmoustache$                                 |
 
-<!-- #T# --- Delimiter sizing modifiers -->
+<!-- #C# --- Delimiter sizing modifiers -->
 
 <!-- # |----- -->
 | Delimiter modifier description       | Example                           |
@@ -129,7 +148,7 @@
 
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Environments -->
+<!-- #C# Environments -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# Latex environments, used here mostly for specific grids where to write characters -->
@@ -149,7 +168,7 @@
 | Gathered     | $\begin{gathered} a \\ c = d \end{gathered}$       |
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Letters -->
+<!-- #C# Letters -->
 
 <!-- # |------------------------------------------------------------- -->
 | Letter name        | Example                           |
@@ -255,12 +274,12 @@
 | Infinity           | $\infty$ or $\infin$              |
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Layout -->
+<!-- #C# Layout -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# layout serves to set the characters' position -->
 
-<!-- #T# --- Annotations -->
+<!-- #C# --- Annotations -->
 
 <!-- # |----- -->
 | Annotation description | Example             |
@@ -273,7 +292,7 @@
 | Box around letters     | $\boxed{Letters}$   |
 <!-- # |----- -->
 
-<!-- #T# --- Vertical layout -->
+<!-- #C# --- Vertical layout -->
 
 <!-- # |----- -->
 | Layout description        | Example                                     |
@@ -290,7 +309,7 @@
 
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Logic, set theory -->
+<!-- #C# Logic, set theory -->
 
 <!-- # |------------------------------------------------------------- -->
 | Symbol description     | Example                                 |
@@ -342,10 +361,10 @@
 | Verum                  | $\top$                                  |
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Operators -->
+<!-- #C# Operators -->
 
 <!-- # |------------------------------------------------------------- -->
-<!-- #T# --- Big operators -->
+<!-- #C# --- Big operators -->
 
 <!-- # |----- -->
 | Operator description     | Example                           |
@@ -369,7 +388,7 @@
 | Arbitrary disjoint union | $\biguplus$ or $\bigsqcup$        |
 <!-- # |----- -->
 
-<!-- #T# --- Binary operators -->
+<!-- #C# --- Binary operators -->
 
 <!-- # |----- -->
 | Operator description                 | Example                         |
@@ -421,7 +440,7 @@
 | Plus with dot                        | $\dotplus$                      |
 <!-- # |----- -->
 
-<!-- #T# --- Functions -->
+<!-- #C# --- Functions -->
 
 <!-- # |----- -->
 | Function description    | Example                              |
@@ -463,7 +482,7 @@
 | Degree of polynomial    | $\deg{x}$                            |
 <!-- # |----- -->
 
-<!-- #T# --- Relational operators -->
+<!-- #C# --- Relational operators -->
 
 <!-- # |----- -->
 | Operator description     | Example                                       |
@@ -556,7 +575,7 @@
 
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Arrows -->
+<!-- #C# Arrows -->
 
 <!-- # |------------------------------------------------------------- -->
 | Arrow description            | Example                                    |
@@ -648,7 +667,7 @@
 | Two lines text               | $\xlongequal[L1]{L2}$                      |
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Style -->
+<!-- #C# Style -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# styles are used to change the appearance of the characters -->
@@ -701,7 +720,7 @@
 | Verbatim style            | $\verb°L1°$                                 |
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #T# Symbols, punctuation -->
+<!-- #C# Symbols, punctuation -->
 
 <!-- # |------------------------------------------------------------- -->
 | Symbol, punctuation description | Example                                 |

@@ -8,8 +8,16 @@
 **Positive and negative numbers**: positive numbers are greater than 0 and negative numbers are less than 0, so 0 is neither. Negative numbers are represented with a minus in front, e.g. $-5$ is negative $5$. Positive numbers are greater than negative numbers.
 
 (Números opuestos)
-**Opposite numbers**: pairs of numbers only differentiated by their sign, one is positive and the other one is negative, but their value is the same. Opposite numbers are obtained with the minus sign, e.g. the opposite of $-5$ or $-(-5)$ is $5$, and the opposite of $5$ or $-(5)$ is $-5$, so $5$ and $-5$ are opposite numbers.
+**Opposite numbers**: pairs of numbers only differentiated by their sign, one is positive and the other one is negative, but their value is the same. Opposite numbers are obtained with the minus sign.
 [Opposite numbers code](Programs/Ch03/S01_01_Opposite_numbers.py)
+
+> Opposite numbers
+>
+> Let $a$ be a number, and $-a$ be its opposite, then
+> $$-(-a) = a
+> $$ which means that the opposite of $-a$ is $a$, and
+> $$-(a) = -a
+> $$ which means that the opposite of $a$ is $-a$.
 
 (Números enteros)
 **Integers**: the set of the whole numbers and the negative numbers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two integer numbers.
@@ -18,7 +26,12 @@
 **Absolute value**: the distance between 0 and a given number, it's always positive and it's the same for any number and its opposite.
 [Absolute value code](Programs/Ch03/S01_02_Absolute_value.py)
 
-The absolute value of a number is represented by putting parallel lines at the sides of the number, e.g. the absolute value of $a$ is $\lvert a \rvert$, the absolute value of $-5$ is $5$, and the absolute value of $5$ is $5$, so $\lvert 5 \rvert = \lvert -5 \rvert = 5$.
+> Absolute value notation
+>
+> Let $a$ be a number, then its absolute value is
+> $$\lvert a \rvert$$
+
+For example, the absolute value of $-5$ is $5$, and the absolute value of $5$ is $5$, so $\lvert 5 \rvert = \lvert -5 \rvert = 5$.
 
 ## Addition of integers (Adición de enteros)
 [Ch03_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=209)
@@ -44,10 +57,24 @@ Multiplication means repeated addition, if the amount of repeated additions is n
 Division means repeated subtraction until reaching 0, if the amount of repeated subtractions is negative, then this means repeated subtraction with each subtraction done in the opposite direction. For example, $24 \div -8 = -3$ so the number $-8$ is subtracted $-3$ times from $24$, i.e. $-8$ is subtracted three times in its opposite direction to reach 0 starting at 24. In $-24 \div -8 = 3$ the amount of repeated subtractions is positive, so $-8$ is subtracted directly from $-24$ three times to reach 0.
 
 (Multiplicación por -1)
-**Multiplication by -1**: a given number $a$ multiplied by $-1$ is $-1 \cdot a$, using the definition of multiplication, this is adding $a$ one time in its opposite direction, which is $-a$, and so $-1 \cdot a = -a$, which means that multiplying a given number by -1 results in the opposite of the given number.
+**Multiplication by -1**: a number multiplied by $-1$ results in its opposite.
+
+> Multiply a number by $-1$
+>
+> Let $a$ be a number, then
+> $$-1 \cdot a = -a$$
+
+Using the definition of multiplication, multiplying $a$ by $-1$ is the same as adding $a$ one time in its opposite direction, which is $-a$, the opposite of $a$.
 
 (División por -1)
-**Division by -1**: a given number $a$ divided by $-1$ is $a \div -1$, using the definition of division, this is subtracting $-1$ from $a$ until reaching 0, which is $-a$ times, this is true when $a > 0$, $a = 0$, and $a < 0$.
+**Division by -1**: a number divided by $-1$ results in its opposite.
+
+> Divide a number by $-1$
+>
+> Let $a$ be a number, then
+> $$a \div -1 = -a$$
+
+Using the definition of division, dividing $a$ by $-1$ is the same as subtracting $-1$ from $a$ until reaching 0, which is $-a$ times, the opposite of $a$.
 
 ## Solution of an equation with integers, multiplication and division properties of equality (Soluciones de una ecuación con enteros, propiedades multiplicativa y divisiva de la igualdad)
 [Ch03_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=258)
@@ -55,7 +82,19 @@ Division means repeated subtraction until reaching 0, if the amount of repeated 
 The solution of an equation with integers is no different from a regular solution of an equation. A variable can be negative to satisfy an equation.
 
 (Propiedad multiplicativa de la igualdad)
-**Multiplication property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then multiplying a third number $c$ to each side of the equality preserves the equality $a \cdot c = b \cdot c$.
+**Multiplication property of equality**: multiplying a number to both sides of an equality preserves the equality.
+
+> Multiplication property of equality
+>
+> Let $a$, $b$, $c$ be numbers
+> $$if\ a = b\\
+> then\ a \cdot c = b \cdot c$$
 
 (Propiedad divisiva de la igualdad)
-**Division property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then dividing each side by a third non zero number $c$ preserves the equality $\frac{a}{c} = \frac{b}{c}$.
+**Division property of equality**: dividing both sides of an equality by a nonzero number preserves the equality.
+
+> Division property of equality
+>
+> Let $a$, $b$, $c$ be numbers, with $c$ being nonzero
+> $$if\ a = b\\
+> then\ \frac{a}{c} = \frac{b}{c}$$

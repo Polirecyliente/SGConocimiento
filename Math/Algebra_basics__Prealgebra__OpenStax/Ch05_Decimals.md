@@ -56,13 +56,27 @@ Repeating decimals are denoted with a horizontal bar over the digits that repeat
 **The pi constant**: the fraction of the circumference over the diameter. It's represented with the greek letter pi, which is $\pi$. The value of pi is roughly $\pi = 3.14159...$, this is a non repeating decimal.
 
 (Fórmula de la circunferencia)
-**Circumference formula**: let $d$ be the diameter, $r$ be the radius, $C$ be the circumference, then by definition $\pi = \frac{C}{d}$, and $d = 2 \cdot r$, so $C = \pi \cdot d = 2 \cdot \pi \cdot r$.
+**Circumference formula**: formula to find the length of the circumference of a circle from the length of its radius.
+
+> Circumference formula
+>
+> Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then
+> $$\pi := \frac{C}{d}\\
+> d = 2 \cdot r\\
+> C = \pi \cdot d = 2 \cdot \pi \cdot r$$
 
 (Sector circular)
-**Circular sector**: a portion of a circle. A sector is originated from the intersection of two radii segments and the circumference.
+**Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
 
 (Fórmula del área de un círculo)
-**Circle area formula**: let $A$ be the area of a circle, $r$ be the radius, $C$ be the circumference, then $A = \pi \cdot r^2$. This is because when dividing the circle in many small sectors, and then lining the circumference to make a straight line, the result is half a rectangle of sides $C$ and $r$, so $A = \frac{C \cdot r}{2} = \frac{2 \cdot \pi \cdot r \cdot r}{2} = \pi \cdot r^2$.
+**Circle area formula**: formula to find the area occupied by a circle, from the length of its radius.
+
+> Circle area formula
+>
+> Let $A$ be the area of a circle in squared length units, $r$ be the radius in length units, then
+> $$A = \pi \cdot r^2$$
+
+This is because when dividing the circle in many small sectors, and then lining the circumference $C$ (measured in length units) to make a straight line, the result is half a rectangle of sides $C$ and $r$, so $A = \frac{C \cdot r}{2} = \frac{2 \cdot \pi \cdot r \cdot r}{2} = \pi \cdot r^2$.
 
 (Aproximación fraccionaria de pi)
 **Fractional approximation of pi**: there are infinitely many fractional approximations of pi, one of the simplest is $\frac{22}{7}$.
@@ -79,7 +93,12 @@ An equation with decimals can have a decimal solution, just like a regular solut
 **Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
 
 (La media)
-**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of said set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, so $\bar{x} = \frac{x_1 + x_2 + ... + x_i + ... + x_N}{N} = \sum_i{\frac{x_i}{N}}$
+**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of said set.
+
+> Definition of the mean
+>
+> Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then
+> $$\bar{x} = \frac{x_1 + x_2 + ... + x_i + ... + x_N}{N} = \sum_i{\frac{x_i}{N}}$$
 
 (Mediana)
 **Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
@@ -121,7 +140,7 @@ Ratios can be considered rates when the particular units in the numerator and de
 Simplification of square roots is done like regular simplification.
 [Simplification of radicals code](Programs/Ch05/S07_01_Simplification_of_radicals.py)
 
-Squared numbers can be seen as squares in a 2D grid. Let $n$ be the area of a given square, then $\sqrt{n}$ is the measure of the size of each side.
+Squared numbers can be seen as squares in a 2D grid. Let $n$ be the area of a given square, then $\sqrt{n}$ is the measure of its side's length.
 
 The symbol around $n$ in $\sqrt{n}$ is called the radical sign (signo de radical), it acts as a grouping symbol for the expression inside it.
 
@@ -135,9 +154,19 @@ The symbol around $n$ in $\sqrt{n}$ is called the radical sign (signo de radical
 **Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.
 
 (Fórmula de tiempo en caída libre)
-**Free fall time formula**: Let $t$ be the fall time in a free fall scenario, $h$ be the starting height, $g$ the standard gravity (gravedad estándar), then $t = \sqrt{\frac{2 \cdot h}{g}}$.
+**Free fall time formula**: formula to find the fall time in a free fall scenario. The fall starts at a given height, and the time calculated by this formula is the time from the moment the fall starts, to the moment of reaching the ground.
 
-The constant $g$ is measured as a rate, its units are distance over squared time, when using feet and seconds, $g = 32 ft/s^2$, and when using meters and seconds $g = 9.81 m/s^2$. Using $g = 32 ft/s^2$, then $t = \sqrt{\frac{2 \cdot h}{32}} = \sqrt{\frac{h}{16}} = \frac{\sqrt{h}}{4}$, $h$ must be in feet, and $t$ is in seconds.
+> Free fall time formula
+>
+> Let $t$ be the fall time in time units, $h$ be the starting height in length units, $g$ be the standard gravity (gravedad estándar), then
+> $$t = \sqrt{\frac{2 \cdot h}{g}}$$
 
-(Fórmula para encontrar la velocidad antes de frenar, según la distancia de la huella de frenado)
-**Formula to find the speed before braking, according to the skid mark distance**: the speed of a car before braking can be approximated. Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then $v = \sqrt{24 \cdot d}$.
+The constant $g$ is measured as a rate, its units are length over squared time units (see Ch07_Real_numbers.md). When using feet and seconds, $g = 32 ft/s^2$, and when using meters and seconds $g = 9.81 m/s^2$. Using $g = 32 ft/s^2$, then $t = \sqrt{\frac{2 \cdot h}{32}} = \sqrt{\frac{h}{16}} = \frac{\sqrt{h}}{4}$, $h$ must be in feet, and $t$ is in seconds.
+
+(Fórmula de la velocidad antes de frenar)
+**Formula of the speed before braking**: formula to find the speed of a car before braking, from the length of the skid mark.
+
+> Formula of the speed before braking
+>
+> Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then
+> $$v = \sqrt{24 \cdot d}$$

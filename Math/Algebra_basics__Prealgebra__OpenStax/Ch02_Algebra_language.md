@@ -13,7 +13,7 @@
 The use of a letter of the alphabet as a variable or as a constant is determined from the context, so the context must state which letters are variables and which are constants.
 
 (Funciones)
-**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, e.g. $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a, b$.
+**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, e.g. $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a$, $b$.
 
 (Símbolos algebraicos)
 **Algebraic symbols**: operators, functions, variables, numbers.
@@ -44,7 +44,7 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 **not equal to**: the comparison of two numbers where they have different values. The operator is $\ne$, the not equal to sign. $a \ne b$, read as $a$ not equal to $b$ ($a$ diferente a $b$), means that the value of $a$ is not equal to the value of $b$.
 
 (Orden de las operaciones)
-**Order of operations**: The order in which to execute the operations. In $5 + 10/2$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first. This can be modified with grouping symbols.
+**Order of operations**: The order in which to execute the operations. In $5 + \frac{10}{2}$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first. This can be modified with grouping symbols.
 [Order of operations code](Programs/Ch02/S01_02_Order_of_operations.py)
 
 (Signos de agrupación)
@@ -63,14 +63,25 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 **PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general. Multiplication and division have the same relevance, so they can be switched in order, same with addition and subtraction.
 
 (Expresiones y ecuaciones)
-**Expressions and equations**: two expressions can form an equation by connecting them with an equal sign, $a + b = c/d$.
+**Expressions and equations**: two expressions can form an equation by connecting them with an equal sign.
+
+> Two expressions connected with an equal sign form an equation
+> $$a + b = \frac{c}{d}$$
 
 (Simplificación)
 **Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$.
 [Simplification code](Programs/Ch02/S01_03_Simplification.py)
 
 (Notación exponencial)
-**Exponential notation**: used in expressions where a number is multiplied by itself several times, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$, $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$ where $n$ is the amount of times that $a$ is multiplied by itself, read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
+**Exponential notation**: used in expressions where a number is multiplied by itself several times, for example, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$
+
+> General exponential notation
+>
+> Let $a$ be a number, $n$ be a whole number, then
+> $$a \cdot a \cdot a \cdot \ldots \cdot a = a^n
+> $$ The value $n$ is the amount of times that $a$ is multiplied by itself.
+
+Using the shown symbols, the exponential notation is read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
 
 The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
 
@@ -79,7 +90,7 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 [Exponentiation code](Programs/Ch02/S01_04_Exponentiation.py)
 
 (Base y exponente)
-**Base and exponent**: in the operation $a^n$, $a$ is called the base, $n$ is called the exponent.
+**Base and exponent**: in the operation $a^n$, $a$ is called the base and $n$ is called the exponent.
 
 (Expresión exponencial en forma expandida)
 **Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a \cdot a \cdot a \cdot ... \cdot a$ where $a$ is multiplied by itself $n$ times.
@@ -120,22 +131,42 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 [Solution of an equation code](Programs/Ch02/S03_01_Solution_of_an_equation.py)
 
 (Propiedad sustractiva de la igualdad)
-**Subtraction property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then subtracting a third number $c$ from each side of the equality preserves the equality $a - c = b - c$. Note, in spanish this property may be bundled as part of the addition property of equality, since changing the sign of $c$ shows both properties.
+**Subtraction property of equality**: subtracting a number from both sides of an equality preserves the equality.
+
+> Subtraction property of equality
+>
+> Let $a$, $b$, $c$ be numbers
+> $$if\ a = b\\
+> then\ a - c = b - c$$
+
+Note, in spanish this property may be bundled as part of the addition property of equality, since changing the sign of $c$ shows both properties.
 
 (Propiedad aditiva de la igualdad)
-**Addition property of equality**: if two numbers $a$ and $b$ are equal, $a = b$, then adding a third number $c$ to each side of the equality preserves the equality $a + c = b + c$.
+**Addition property of equality**: adding a number to both sides of an equality preserves the equality.
+
+> Addition property of equality
+>
+> Let $a$, $b$, $c$ be numbers
+> $$if\ a = b\\
+> then\ a + c = b + c$$
 
 (Despejar una variable)
-**Isolate a variable**: using properties of equality (such as the ones from addition and subtraction, but also from multiplication and division, see Ch03_Integers.md), to make a variable stand alone in one side of an equation. For example, in $a + b = c + d$, isolating $a$ requires the use of the subtraction property of equality, by subtracting $b$ from each side, $a = c + d - b$.
+**Isolate a variable**: using properties of equality (such as the ones from addition and subtraction, but also from multiplication and division, see Ch03_Integers.md), to make a variable stand alone in one side of an equation.
+
+> Isolating a variable using the properties of equality
+>
+> Let $a$, $b$, $c$, $d$ be numbers, and let
+> $$a + b = c + d
+> $$Isolate $a$ using the subtraction property of equality, by subtracting $b$ from each side. $$a = c + d - b$$
 
 ## Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
 
 (Múltiplos de un número)
-**Multiples of a number**: the result of multiplying a number by any of the counting numbers, so a number has infinite multiples. The smallest value multiple is the number itself.
+**Multiples of a number**: the result of multiplying a number by any of the counting numbers, so a number has infinite multiples. The smallest multiple is the number itself.
 
 (Divisibilidad)
-**Divisibility**: if a given number $b$ is multiple of another number $a$, then $b$ is divisible by $a$, because $b/a$ returns a whole number. All the multiples of $a$ are divisible by $a$.
+**Divisibility**: if a given number $b$ is multiple of another number $a$, then $b$ is divisible by $a$, because $\frac{b}{a}$ is a whole number. All the multiples of $a$ are divisible by $a$.
 [Divisibility code](Programs/Ch02/S04_01_Divisibility.py)
 
 (Números pares)

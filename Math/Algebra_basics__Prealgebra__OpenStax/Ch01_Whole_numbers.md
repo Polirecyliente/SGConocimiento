@@ -28,13 +28,13 @@
 **Place value system**: system in which the value of a digit depends on its place in the number.
 
 (Sistema de numeración decimal)
-**Decimal place value system**: the most common place value system, each place is a power of 10, starting at 0 in the first place, 1 in the second place and so on, so 10 is the base of the place value system, e.g. $345$ is $3$ in the third position (3 of 10 to the power of 2), $4$ is in the second position (4 of 10 to the power of 1), and $5$ is in the first position (5 of 10 to the power of 0), see Ch02_Algebra_language.md.
+**Decimal place value system**: the most common place value system, each place is a power of 10, starting at 0 in the first place, 1 in the second place and so on, so 10 is the base of the place value system, e.g. $345$ is $3$ in the third position ($3$ of 10 to the power of 2), $4$ is in the second position ($4$ of 10 to the power of 1), and $5$ is in the first position ($5$ of 10 to the power of 0), see Ch02_Algebra_language.md.
 
 (Forma expandida de los números)
 **Expanded form of the numbers**: numbers in a place value system can be shown in an expanded form, this expanded form is the sum of each of the digits in a given number multiplied by the base of the place value system to the power of its respective position, e.g. $345$ in expanded form is $3 \cdot 10^2 + 4 \cdot 10^1 + 5 \cdot 10^0$
 
 (Grupos en la numeración posicional)
-**Plave value periods**: these periods are the separation of digits in groups of three, each has a name, ones, thousands, millions, etc.
+**Plave value periods**: these periods are the separation of digits in groups of three, each has a name, ones, thousands, millions, thousandths, millionths, etcetera.
 
 (Redondeo)
 **Rounding**: approximating a number with another of less significant digits.
@@ -43,37 +43,73 @@
 ## Addition (Adición)
 [Ch01_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=32)
 
-Addition is the operation of adding numbers together. Addition means starting at the end of the first number, and then moving the amount of units being added by the second number.
+Addition is the operation of adding numbers together. Addition means starting at the end of the first number, and then moving the amount being added by the second number.
 [Addition code](Programs/Ch01/S02_01_Addition.py)
 
 (Operador suma)
 **Sum operator**: this operator is $+$, the plus sign.
 
 (Notación de la suma)
-**Addition notation**: the addition of $a$ and $b$ is $a + b$, read as $a$ plus $b$ ($a$ más $b$), $a, b$ are called the addends (sumandos), the result is called the sum (suma).
+**Addition notation**: the addition of $a$ and $b$ is $a + b$, read as $a$ plus $b$ ($a$ más $b$), $a$, $b$ are called the addends (sumandos), the result is called the sum (suma).
+
+> The addition of $a$ and $b$ is
+> $$a + b$$
 
 (Enunciado matemático)
 **Math statement**: any math writing that can be read as a statement, with symbols, signs, numbers, operators, etc.
 
-(Expresión)
-**Expression**: a statement of numbers, symbols, and operations together, such as $a + b + c$.
+(Expresión matemática)
+**Math expression**: a statement of numbers, symbols, and operations together.
+
+> Example of a mathematical expression
+> $$a + b + c$$
 
 (Signo de igualdad)
 **Equality sign**: this sign is $=$, the equal sign.
 
 (Ecuación)
-**Equation**: the statement of two expressions that are equal, such as $a + b = c + d$.
+**Equation**: the statement of two expressions that are equal
+
+> Example of an equation
+> $$a + b = c + d$$
+
+(Definición)
+**Definition**: an equation in which a symbol is defined.
+
+> Definition notation
+>
+> Let $a$, $b$ be symbols, then
+> $$a := b
+> $$ This is read as $a$ is defined as $b$ ($a$ es definido como $b$).
+
+The sign $:=$ is used to make definitions, to differentiate it from the equal sign.
+
+(Fórmula)
+**Formula**: an equation whose purpose is to find the value of a quantity or variable, i.e. formulas are equations expressly intended to find the value of a quantity, they are the "formula" to find said value.
 
 (Propiedad de identidad de la suma)
-**Identity property of addition**: adding to zero doesn't change the number, $a + 0 = a$.
+**Identity property of addition**: adding to zero doesn't change the number
+
+> Identity property of addition
+>
+> Let $a$ be a number, then
+> $$a + 0 = a$$
 
 (Identidad aditiva)
 **Additive identity**: The number 0.
 
 (Propiedad conmutativa de la suma)
-**Commutative property of addition**: changing the addends' order doesn't change the sum, $a + b = b + a$.
+**Commutative property of addition**: changing the order of the addends doesn't change the sum.
 
-General example of addition: $2 + 2 = 4$
+> Commutative property of addition
+>
+> Let $a$, $b$ be numbers, then
+> $$a + b = b + a$$
+
+Given that addition means after the first number move the amount of the second, commutativity means that no matter which number comes first and which second, the end result is the same.
+
+> General example of addition
+> $$2 + 2 = 4$$
 
 ## Subtraction (Sustracción)
 [Ch01_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=48)
@@ -85,11 +121,24 @@ Subtraction is the operation of subtracting a number from another. Subtraction m
 **Subtraction operator**: this operator is $-$, the minus sign.
 
 (Notación de la resta)
-**Subtraction notation**: the subtraction of $a$ from $b$ is $b - a$, read as $b$ minus $a$ ($b$ menos $a$), $b$ is called the minuend (minuendo), $a$ is called the subtrahend (sustraendo), the result is called the difference (diferencia). In $b - a = c$, $c$ is the difference.
+**Subtraction notation**: the subtraction of $a$ from $b$ is $b - a$, read as $b$ minus $a$ ($b$ menos $a$), $b$ is called the minuend (minuendo), $a$ is called the subtrahend (sustraendo), the result is called the difference (diferencia)
 
-Addition and subtraction are inverse operations.
+> The subtraction of $b$ from $a$ is
+> $$b - a = c 
+> $$ The value $c$ is the difference.
 
-General example of subtraction: $5 - 3 = 2$
+Addition and subtraction are inverse operations. 
+
+Subtraction is not commutative.
+
+> Non commutativity of subtraction
+>
+> Let $a$, $b$ be numbers,
+> $$if\ a \ne b\\
+> then\ a - b \ne b - a$$
+
+> General example of subtraction
+> $$5 - 3 = 2$$
 
 ## Multiplication (Multiplicación)
 [Ch01_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=63)
@@ -101,21 +150,43 @@ Multiplication is the operation of multiplying numbers together. Multiplication 
 **Multiplication operator**: this operator is $\times$, the times sign. Another is $\cdot$, the dot sign. Another is $()$, the parentheses signs.
 
 (Notación de la multiplicación)
-**Multiplication notation**: the multiplication of $a$ and $b$ is $a \cdot b$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result is called the product (producto). In $a \cdot b = c$, $c$ is the product.
+**Multiplication notation**: the multiplication of $a$ and $b$ is $a \cdot b$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result is called the product (producto).
+
+> The multiplication of $a$ and $b$ is
+> $$a \cdot b = c
+> $$ The value $c$ is the product.
 
 (Propiedad anulativa de la multiplicación)
-**Multiplication property of zero**: the product of any number multiplied by 0, is 0, $a \cdot 0 = 0$
+**Multiplication property of zero**: the product of any number multiplied by 0, is 0
+
+> Multiplication property of zero
+>
+> Let $a$ be a number, then
+> $$a \cdot 0 = 0$$
 
 (Propiedad modulativa de la multiplicación)
-**Identity property of multiplication**: the product of any number multiplied by 1, is the number itself, $a \cdot 1 = a$
+**Identity property of multiplication**: the product of any number multiplied by 1, is the number itself
+
+> Identity property of multiplication
+>
+> Let $a$ be a number, then
+> $$a \cdot 1 = a$$
 
 (Identidad multiplicativa | elemento neutro | elemento identidad)
 **Multiplicative identity**: The number 1.
 
 (Propiedad conmutativa de la multiplicación)
-**Commutative property of multiplication**: changing the factors' order doesn't change the product, $a \cdot b = b \cdot a$
+**Commutative property of multiplication**: changing the order of the factors doesn't change the product.
 
-General example of multiplication: $4 \cdot 3 = 3 + 3 + 3 + 3 = 12$
+> Commutative property of multiplication
+>
+> Let $a$, $b$, be numbers, then
+> $$a \cdot b = b \cdot a$$
+
+Given that multiplication means the repeated addition of the first number with itself a number of times equal to the second number, this means that no matter which number comes first and which second, the final repeated addition is the same.
+
+> General example of multiplication
+> $$4 \cdot 3 = 3 + 3 + 3 + 3 = 12$$
 
 ## Division (División)
 [Ch01_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=81)
@@ -127,32 +198,70 @@ Division is the operation of dividing a first number by a second number. Divisio
 **Division operator**: this operator is $\div$, the division sign. Another is $/$, the slash sign. Another is $\text{---}$, the horizontal line sign.
 
 (Notación de la división)
-**Division notation**: the division of $b$ by $a$ is $b/a$, read as $b$ divided by $a$ ($b$ dividido $a$), $b$ is called the dividend (dividendo), $a$ is called the divisor (divisor), the result is called the quotient (cociente). In $b/a = c$, $c$ is the quotient.
+**Division notation**: the division of $b$ over $a$ is $b/a$ or $\frac{b}{a}$, read as $b$ divided by $a$ ($b$ dividido $a$), $b$ is called the dividend (dividendo), $a$ is called the divisor (divisor), the result is called the quotient (cociente)
+
+> The division of $b$ over $a$ is
+> $$\frac{b}{a} = c
+> $$ The value $c$ is the quotient.
 
 (Propiedad modulativa de la división)
-**Identity property of division**: the quotient of any number divided by 1, is the number itself, $a/1 = a$
+**Identity property of division**: the quotient of any number divided by 1, is the number itself
+
+> Identity property of division
+>
+> Let $a$ be a number, then
+> $$\frac{a}{1} = a$$
 
 (Identidad divisiva)
 **Divisive identity**: The number 1.
 
 (Propiedad del cociente uno de la división)
-**Division property of quotient one**: any non zero number divided by itself gives a quotient of 1, $a/a = 1$.
+**Division property of quotient one**: any non zero number divided by itself gives a quotient of 1
+
+> Division property of quotient one
+>
+> Let $a$ be a number, then
+> $$\frac{a}{a} = 1$$
 
 (Propiedades del cero en la división)
-**Division properties of zero**: zero divided by any number is zero, $0/a = 0$. Division by zero is undefined, $a/0$ is undefined.
+**Division properties of zero**: zero divided by any nonzero number is zero. Division by zero is undefined.
+
+> Zero divided by a nonzero number
+>
+> Let $a$ be a number, then
+> $$\frac{0}{a} = 0$$
+
+> Division by zero is undefined
+>
+> Let $a$ be a number, then
+> $$\frac{a}{0}\ is\ undefined$$
 
 (Residuo | Resto)
-**Remainder**: this is the number that is left over after doing the repeated subtraction, if any. Let the quotient be $q$, and the remainder be $r$, so $a/b = q + r/b$
+**Remainder**: in division, this is the number that is left over after doing the repeated subtraction, if any.
 [Remainder code](Programs/Ch01/S05_02_Remainder.py)
+
+> Division with quotient and remainder
+>
+> Let $a$, $b$ be numbers with $b$ being nonzero, let $q$ be the quotient, $r$ be the remainder, then
+> $$\frac{a}{b} = q + \frac{r}{b}$$
 
 Multiplication and division are inverse operations.
 
-General example of division: $28/8 = 3 + 4/8$
+Division is not commutative.
+
+> Non commutativity of division
+>
+> Let $a$, $b$ be numbers,
+> $$if\ a \ne b\\
+> then\ \frac{a}{b} \ne \frac{b}{a}$$
+
+> General example of division
+> $$\frac{28}{8} = 3 + \frac{4}{8}$$
 
 (Paradigma de la multiplicación y división)
 **Multiplication and division paradigm**: multiplication and division both deal with three concepts: a set of elements, groups of elements, and the size of said groups. Each of this concepts is associated with a number, the total number of elements, the amount of groups, and the size of each group.
 
-Multiplication returns the total number of elements as the product of the amount of groups by the size of each group. For example, $5$ groups of size $4$, has a total number of elements of $5 \cdot 4 = 20$, and $4$ groups each with $5$ elements, has a total number of elements of $4 \cdot 5 = 20$.
+Multiplication returns the total number of elements as the product of the amount of groups by the size of each group. For example, $5$ groups of size $4$, have a total number of elements of $5 \cdot 4 = 20$, and $4$ groups each with $5$ elements, have a total number of elements of $4 \cdot 5 = 20$. By itself, the total number of elements remains the same, $20$.
 
 In multiplication, the amount of groups is interchangeable with the size of each group, so a multiplication can be interpreted as the amount of groups times their size, or as the size of the groups times the amount of groups, both interpretations are valid for any single multiplication.
 
