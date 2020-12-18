@@ -17,10 +17,10 @@ The division property of equality is used to solve equations when there is a fac
 
 The multiplication property of equality is used to solve equations when there is a number dividing the variable, then said number is multiplied to both sided of the equality, helping in isolating the variable.
 
-## Solve equations with variables and constants on both sides (Solucionar ecuaciones con variables y constantes en ambos lados)
+## Linear equation definitions (Definiciones de ecuaciones lineales)
 [Ch08_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=693)
 
-When equations have variables and constants on both sides, the properties of equality can be used to move the variables and put them in one side if needed. For example, if a variable is dividing a number, it can be passed to the other side by using the multiplication property of equality, multiplying both sides by the variable.
+Linear equations can start with variable terms on both sides. When equations have variables and constants on both sides, the properties of equality can be used to move the variables and put them in one side if needed. For example, if a variable is dividing a number, it can be passed to the other side by using the multiplication property of equality, multiplying both sides by the variable.
 
 (Lado para variables de una ecuación)
 **Variable side of an equation**: A side of an equation that can be arbitrarily chosen to hold variables, or a single variable, in order to isolate it and find its value.
@@ -48,5 +48,10 @@ Every linear equation in one variable can be simplified through the use of the p
 (Combinar términos constantes)
 **Collect constant terms**: the process of combining like terms without variables, this creates the constant side of the equation.
 
-## Solve equations with fraction or decimal coefficients
+## Solve equations with fraction or decimal coefficients (Solucionar ecuaciones con coeficientes fraccionales o decimales)
 [Ch08_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=711)
+
+Equations with fractions and decimals behave ultimately the same as regular equations.
+
+(Eliminar los denominadores de una ecuación)
+**Clear an equation of fractions**: the process of clearing the fractions of an equation, by multiplying each term by the least common denominator.
