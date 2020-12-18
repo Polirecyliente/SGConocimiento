@@ -198,9 +198,23 @@ import sympy
 var1 = sympy.Symbol('x') # x
 eq1 = sympy.Eq(11, var1 + 7) # Eq(11, x + 7)
 
+#T# the solve function is a generic function used to solve the equation in the first argument, for the variable in the second, it returns a list with the found solutions
+var1 = sympy.Symbol('x') # x
+eq1 = sympy.Eq(var1**2, 9) # Eq(x**2, 9)
+num1 = sympy.solve(eq1, var1) # [-3, 3]
+
 #T# the solveset function is used to solve the equation in the first argument, for the variable in the second
+var1 = sympy.Symbol('x') # x
 eq1 = sympy.Eq(11, var1 + 7) # Eq(11, x + 7)
 num1 = sympy.solveset(eq1, var1) # FiniteSet(4) #| the solution is x == 4
+
+#T# the linsolve function is used to solve systems of linear equations, it takes a list of equations in the first argument, and a list of variables in the second
+var1, var2 = sympy.symbols('x, y') # x, y
+eq1 = sympy.Eq(11, var1 + 7)   # Eq(11, x + 7)
+eq2 = sympy.Eq(3*var1, 2*var2) # Eq(3*x, 2*y)
+list1 = [eq1, eq2]   # [Eq(11, x + 7), Eq(3*x, 2*y)]
+list2 = [var1, var2] # [x, y]
+nums1 = sympy.linsolve(list1, list2) # FiniteSet((4, 6)) #| 4 is the solution of var1, and 6 is the solution of var2
 # |-----
 
 #C# --- Simplification
