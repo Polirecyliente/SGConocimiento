@@ -82,6 +82,9 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 (Figuras similares)
 **Similar figures**: figures that have the same shape but not the same size.
 
+(Figuras congruentes)
+**Congruent figures**: figures that have the same shape and also the same size.
+
 (Lados y ángulos correspondientes)
 **Corresponding sides and angles**: in similar figures, the sides and angles that would be the same if replacing one figure for the other.
 
@@ -105,6 +108,67 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 
 ## Rectangles, triangles, trapezoids (Rectángulos, triángulos, trapezoides)
 [Ch09_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=774)
+
+(Medida lineal)
+**Linear measure**: measure for length, like distances, width, height, depth, etcetera, in linear units (unidades lineales).
+
+(Medida cuadrada)
+**Square measure**: measure for area size, in square units (unidades cuadradas).
+
+(Medida cúbica)
+**Cubic measure**: measure for volume, in cubic units (unidades cúbicas).
+
+(Perímetro)
+**Perimeter**: in a two dimensional shape, the measure of the distance around it.
+
+(Área)
+**Area**: in a two dimensional shape, the measure of the surface covered by it.
+
+(Cuadrilatero)
+**Quadrilateral**: a shape with four straight sides.
+
+(Rectángulo)
+**Rectangle**: a quadrilateral with four right angles. This configuration produces a shape in which the opposite sides are of equal length. Its perimeter is equal to the sum of its four sides, and its area is equal to the product of any two adjacent sides.
+
+> Rectangle properties
+>
+> Let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, and $A$ be the area of the rectangle, then
+> $$P = 2(L + W)\\
+> A = L \cdot W$$
+
+(Propiedades del triángulo)
+**Triangle properties**: the perimeter of a triangle is the sum of the lengths of its three sides, the area of a triangle is half the area of the rectangle created with any of the sides of the triangle and that is just big enough to contain the complete triangle.
+
+> Triangle properties
+>
+> Let $a$, $b$, $c$, be the lengths of the sides of a triangle, let $h$ be the height of the triangle as measured when $b$ is the floor, let $P$ be the perimeter of the triangle, and $A$ be the area of the triangle, then
+> $$P = a + b + c\\
+> A = \frac{b \cdot h}{2}$$
+
+(Triángulo escaleno)
+**Scalene triangle**: a triangle in which all the sides have different measures of length.
+
+(Triángulo isósceles)
+**Isosceles triangle**: a triangle in which two of its sides have the same measure of length.
+
+(Triángulo equilatero)
+**Equilateral triangle**: a triangle in which all the sides have the same measure of length. All equilateral triangles are similar or congruent.
+
+(Trapezoide)
+**Trapezoid**: a quadrilateral with two parallel sides and two non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and also the non parallel sides. 
+
+The two parallel sides in a trapezoid have different sizes, and they are called the bases (las bases), there is a smaller base and a bigger base. The height of a trapezoid is the distance between its bases.
+
+> Trapezoid properties
+>
+> Let $b$ be the length of the smaller base in a trapezoid, let $B$ be the length of the bigger base in a trapezoid, let $h$ be the height of a trapezoid, let $A$ be the area of a trapezoid, then
+> $$A = \frac{1}{2}h(b + B)$$
+
+The area of a trapezoid can be understood with the following image.
+[Trapezoid area image code](Programs/Ch09/S04_01_Trapezoid_area_image.py)
+![Trapezoid area image](Images/Ch09/S04_01_Trapezoid_area_image.png)
+
+As shown in the image, the area of the trapezoid $A$ is equal to the sum of the areas $A_1$ and $A_2$. In turn, each of these areas is the area of a triangle, $A_1 = \frac{b \cdot h}{2}$ and $A_2 = \frac{B \cdot h}{2}$, then $A = A_1 + A_2 = \frac{b \cdot h + B \cdot h}{2} = \frac{1}{2}h(b + B)$.
 
 ## Circles and irregular figures (Círculos y figuras irregulares)
 [Ch09_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=803)
