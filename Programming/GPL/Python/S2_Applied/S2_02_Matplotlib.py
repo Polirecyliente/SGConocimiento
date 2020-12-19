@@ -17,6 +17,7 @@
 #C# --- Spines
 #C# --- Ticks
 #C# Annotations
+#C# --- Latex symbols
 #C# Coordinate systems
 #C# Plot types
 #C# Backends
@@ -37,7 +38,10 @@ import matplotlib.pyplot as plt
 #T# plot a set of points with the plot function
 
 # SYNTAX plt.plot(list1, list2)
-#T# list1 and list2 must be the same size, list1 has the abscissa values, list2 has the ordinate values
+#T# list1 and list2 must be the same size, list1 has the abscissa values, list2 has the ordinate values, the plot can be modified using kwargs
+
+#T# a few of the plot kwargs are
+#T#     color, accepts a hexadecimal string that starts with a hash, such as '#A178B9'
 
 x = [4, 1]
 y = [3, 5]
@@ -374,9 +378,10 @@ ax1.set_xticklabels(['0', '2/3', '4/3']) #| without this, the tick at 2/3 appear
 # SYNTAX plt.text(width_coord1, height_coord1, 'text_string1', kwarg1 = value1, kwarg2 = value2)
 #T# width_coord1, height_coord1 are the horizontal, and verical coordinates, 'text_string1' is the string that will be displayed, kwarg1 = value1 up to kwargN = valueN are the kwargs used to set aspects of the text annotation
 
-#T# the ha, va kwargs are for horizontal, and vertical alignment
-#T#     ha, can be, 'left', 'center', 'right
-#T#     va, can be, 'bottom', 'center', 'top'
+#T# the following are a few of the kwargs used in annotations
+#T#     ha, stands for horizontal alignment, it can be, 'left', 'center', 'right
+#T#     size, sets the font size of the annotation
+#T#     va, stands for vertical alignment, it can be, 'bottom', 'center', 'top'
 
 fig1 = plt.Figure() # type: plt.Figure
 ax1 = plt.axes() # type: plt.Axes
@@ -390,6 +395,14 @@ plt.text(1, 1, 'text in the image')
 #T# the arrowprops kwarg is a dictionary with the properties (also kwargs) of the arrow that connects the point of annotation with its text
 
 ax1.annotate('annotation in the image', (.4, .8), (.5, .7), arrowprops = {'arrowstyle': '->'})
+
+#C# --- Latex symbols
+
+# |-----
+#T# Latex symbols can be used in annotations, they must be written within a pair of dollar signs $, and the string must be declared to be a raw string
+plt.text(1, 1, r'$A = \frac{B}{\sqrt{C}}$')
+# |-----
+
 # |-------------------------------------------------------------
 
 #C# Coordinate systems

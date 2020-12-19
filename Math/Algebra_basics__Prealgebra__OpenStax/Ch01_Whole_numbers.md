@@ -108,6 +108,9 @@ The sign $:=$ is used to make definitions, to differentiate it from the equal si
 
 Given that addition means after the first number move the amount of the second, commutativity means that no matter which number comes first and which second, the end result is the same.
 
+(Símbolo de sumatoria)
+**Summation symbol**: the symbol $\sum_i$ that represents the sum of the elements of the set to which $i$ belongs.
+
 > General example of addition
 > $$2 + 2 = 4$$
 
