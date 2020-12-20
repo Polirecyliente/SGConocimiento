@@ -99,7 +99,7 @@ See Ch01_Whole_numbers.md for the properties of 0 in the division operation.
 ## Systems of measurement (Sistemas de medida)
 [Ch07_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=646)
 
-The systems of measurement are systems intended to be internally consistent, to provide a unit of measure for any physical quantity. The main quantities measured in these systems are time and space (distance, area, volume), derived quantities are also included like speed (distance divided by time), and also units of measure for other quantities, like electric field, radiation levels, etcetera.
+The systems of measurement are systems intended to be internally consistent, to provide a unit of measure for any physical quantity. The main quantities measured in these systems are time and space (distance, area, volume, see Ch09_Math_models_Geometry.md), derived quantities are also included like speed (distance divided by time), and also units of measure for other quantities, like electric field, radiation levels, etcetera.
 
 There are two main systems of measurement used at the time of this writing, the U.S. system and the international metric system.
 

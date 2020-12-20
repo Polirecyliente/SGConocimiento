@@ -124,6 +124,9 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 (Área)
 **Area**: in a two dimensional shape, the measure of the surface covered by it.
 
+(Volumen)
+**Volume**: in a three dimensional shape, the measure of the space occupied by it.
+
 (Cuadrilatero)
 **Quadrilateral**: a shape with four straight sides.
 
@@ -170,11 +173,81 @@ The area of a trapezoid can be understood with the following image.
 
 As shown in the image, the area of the trapezoid $A$ is equal to the sum of the areas $A_1$ and $A_2$. In turn, each of these areas is the area of a triangle, $A_1 = \frac{b \cdot h}{2}$ and $A_2 = \frac{B \cdot h}{2}$, then $A = A_1 + A_2 = \frac{b \cdot h + B \cdot h}{2} = \frac{1}{2}h(b + B)$.
 
-## Circles and irregular figures (Círculos y figuras irregulares)
+## Irregular figures (Figuras irregulares)
 [Ch09_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=803)
+
+Irregular figures are figures whose shape is not a basic shape.
+
+(Área de una figura irregular)
+**Area of an irregular figure**: there is no single formula for the area of an irregular figure, but rather, said area is divided into smaller areas with basic shapes, such as triangles and quadrilaterals, and then the area of the irregular figure is calculated as the sum of the areas of the smaller shapes.
 
 ## Volume, surface area (Volumen, área superficial)
 [Ch09_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=815)
+
+(Área superficial)
+**Surface area**: in a three dimensional shape, the amount of area that covers its surface.
+
+(Sólidos)
+**Solids**: three dimensional shapes.
+
+(Sólido rectangular)
+**Rectangular solid**: solid with six faces and with right angles between its faces.
+
+A rectangular solid can be defined with only three measures, length (largo), widht (ancho), and height (alto). When looking at the front of one of the faces from a rectangular solid, the length is defined as the horizontal left to right distance, the width is defined as the horizontal front to back distance, and the height is defined as the vertical distance.
+
+> Rectangular solid properties
+>
+> In a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
+> $$V = L \cdot W \cdot H\\
+> S = 2 \cdot (L \cdot W + L \cdot H + W \cdot H)$$
+
+(Cubo)
+**Cube**: rectangular solid with all its sides equal in length. This configuration creates a shape in which all of its faces have equal areas.
+
+> Cube properties
+>
+> In a cube, let $s$ be the the length of any of its sides, $L$ be its length, $W$ be its widht, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
+> $$s = L = W = H\\
+> V = s^3\\
+> S = 6s^2$$
+
+(Esfera)
+**Sphere**: three dimensional shape in which all of its points are at the same distance from its center, this distance is called the radius.
+
+> Sphere properties
+>
+> In a sphere, let $r$ be its radius, $V$ be its volume, and $S$ be its surface area, then
+> $$V = \frac{4}{3} \pi r^3\\
+> S = 4 \pi r^2$$
+
+The formula for the surface area of a sphere can be understood from the surface area of a cylinder (see later in this file). Let there be a cylinder of radius $r$ and height $2r$, then its surface area without the two circles is $4 \pi r^2$, which is the same as for the sphere. This is because when cutting a transversal thin strip of area from the cylinder, its area is equal to that of the same cut in the sphere. Even though the radius of the cut can be smaller in the sphere, the height of said cut increases proportionally, this makes both areas equal.
+
+The formula for the volume of a sphere can be understood from the surface area of the same sphere. If the volume of a sphere is filled with several very thin cones (see later in this file), such that the apex of each cone is at the center of the sphere, and the base of each cone is on the surface of the sphere, then the volume of each cone is the area of its base times $\frac{1}{3}r$. The volume of the sphere is the sum of the volumes of the cones. The total base area of the cones is $4 \pi r^2$, so the total volume of the cones is $4 \pi r^2 \cdot \frac{1}{3}r = \frac{4}{3} \pi r^3$, which is the volume of the sphere.
+
+(Cilindro)
+**Cylinder**: a solid made with two parallel circles separated along an axis.
+
+> Cylinder properties
+>
+> In a cylinder, let $r$ be the radius of its circles, $h$ be its height, $V$ be its volume, and $S$ be its surface area, then
+> $$V = \pi r^2 h \\
+> S = 2 \pi r^2 + 2 \pi r h$$
+
+The volume of the cylinder is the product of the area of its base and its height. The surface area of a cylinder is the sum of the areas of the two circles and the area of its side, which is the surface between the two circles.
+
+(Cono)
+**Cone**: a solid made with a circle called the base (base) and a point called the apex (ápice) above the center of the base, in such a way that the circumference of the base converges to the apex.
+
+> Cone properties
+>
+> In a cone, let $r$ be the radius of its base, $h$ be the distance from the apex to its base, $l$ be the distance from the apex to its circumference, $V$ be its volume, and $S$ be its surface area, then
+> $$V = \frac{1}{3} \pi r^2 h\\[5 pt]
+> S = \pi r^2 + \pi r l$$
+
+The volume of a cone is one third of the volume of a cylinder with the same base and same height. This is a general rule for shapes that end in an apex, as can be seen in the following image.
+![One third volume image](Images/Ch09/S06_01_One_third_volume_image.png)
+
+The surface area of a cone is the sum of the area of the base, plus the area of the surface that connects the circumference to the apex, which when unrolled can be seen as a sector of a circle, with an arc the size of $2 \pi r$ and a radius of $l$. So as shown in the formula of the area of a cirle, the area of this sector is $\frac{2 \pi r l}{2} = \pi r l$.
 
 ## Solve a formula for a specific variable (Despejar una variable específica en una fórmula)
 [Ch09_S07](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=836)

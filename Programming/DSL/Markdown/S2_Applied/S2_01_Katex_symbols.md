@@ -87,6 +87,7 @@
 | Middle negative spacing   | $A\negmedspace B$   |
 | Big negative spacing      | $A\negthickspace B$ |
 | No break space            | $A\nobreakspace B$  |
+| Custom vertical space     | $A\\[12 pt]B$       |
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Delimiters -->
