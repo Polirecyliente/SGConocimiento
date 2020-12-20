@@ -244,7 +244,7 @@ The volume of the cylinder is the product of the area of its base and its height
 > $$V = \frac{1}{3} \pi r^2 h\\[5 pt]
 > S = \pi r^2 + \pi r l$$
 
-The volume of a cone is one third of the volume of a cylinder with the same base and same height. This is a general rule for shapes that end in an apex, as can be seen in the following image.
+The volume of a cone is one third of the volume of a cylinder with the same base and same height. This is a general rule for shapes that end in an apex, as can be seen in the following image, one cube can hold exactly three pyramids with a square base.
 ![One third volume image](Images/Ch09/S06_01_One_third_volume_image.png)
 
 The surface area of a cone is the sum of the area of the base, plus the area of the surface that connects the circumference to the apex, which when unrolled can be seen as a sector of a circle, with an arc the size of $2 \pi r$ and a radius of $l$. So as shown in the formula of the area of a cirle, the area of this sector is $\frac{2 \pi r l}{2} = \pi r l$.

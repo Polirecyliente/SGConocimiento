@@ -3,85 +3,148 @@
 
 #T# Table of contents
 
-#C# 
+#C# Basic usage
+#C# Management of remote locations
+#C# Working with a remote repository
+#C# Commits and staging area
+#C# Branches
+#C# Submodules
+#C# Configuration
 
 #T# Beginning of content
 
-#T# create a git repo in a folder with git init
+#C# Basic usage
+
+# |-------------------------------------------------------------
+#T# create a git repository in a given directory
 git init
 
-#T# see origin repository location (and remote repos) with git remote -v, v is for verbose output
-git remote -v
+#T# clone a git repository that is stored in a given URL, this creates a directory with the name of the project
+# SYNTAX git clone url1
+git clone https://github.com/UPBGE/upbge.git #| creates a dir named 'upbge'
 
-#T# add a remote location with git remote add remoteName url
+#T# after modifying files in a git project, add them to the staging area
+git add -A #| this adds all the modified files to the staging area
+
+#T# create a new commit of the project
+git commit -m "commit message"
+
+#T# if the project is stored as a remote repository, push the new commits to said repository
+git push
+
+#T# see the git log, it shows the former commits with a bit of their metadata
+git log
+# |-------------------------------------------------------------
+
+#C# Management of remote locations
+
+# |-------------------------------------------------------------
+#T# see origin repository location (and remote repos)
+git remote -v #| -v is for verbose
+
+#T# add a remote location
+# SYNTAX git remote add remote1 url1
 git remote add origin https://github.com/Polirecyliente/proy1
 
-#T# remove a remote location with git remote rm remoteName
+#T# remove a remote location
+# SYNTAX git remote rm remote1
 git remote rm origin
 
-#T# fetch changes in remote repo with git fetch repo
+#T# set the url of a given remote, this allows for example to change from HTTPS to SSH access, by changing the protocol from https to git
+# SYNTAX git remote set-url remote1 url1
+git remote set-url origin https://github.com/Polirecyliente/proy1 #| use https
+git remote set-url origin git@github.com:Polirecyliente/proy1.git #| use git for ssh
+# |-------------------------------------------------------------
+
+#C# Working with a remote repository
+
+# |-------------------------------------------------------------
+#T# fetch changes in a remote repository
+# SYNTAX git fetch remote1
 git fetch origin
 
-#T# see diff between branches with git diff repo1/branchA repo2/branchB
-git diff master origin/master
-
-#T# pull changes from a branch in a repo with git pull repo branch
+#T# pull changes from a branch in a repository
+# SYNTAX git pull remote1 branch1
 git pull origin master
 
-#T# push a given branch to a repo with git push repo branch
+#T# push a given branch to a repository
+# SYNTAX git push remote1 branch1
 git push origin master
+# |-------------------------------------------------------------
 
-#T# create a git project within a project with git submodule add repo1, the submodule can be embedded in the main project:
-git submodule add ./path/to/proy path/to/proy
+#C# Commits and staging area
 
-#T# clone a git project with submodules with
-# git submodule init; git submodule update
+# |-------------------------------------------------------------
+#T# unstage all staged files
+git reset
+
+#T# uncommit the most recent commit
+git reset --hard HEAD^
+
+#T# reattach HEAD to the most recent commit of a given branch
+# SYNTAX git checkout branch1
+git checkout master
+
+#T# restore deleted or changed files that have not been staged
+# SYNTAX git restore path1/file1
+git restore . # restores files recursively
+
+#T# create a tag for the HEAD commit, e.g. for a new version 
+# SYNTAX git tag -a tag_name1 -m "tag message"
+#T# the -a flag makes an annotated tag (it has meta-data like date, etc)
+git tag -a v1.0 -m "version 1.0"
+
+#T# push tags to a remote repository with the --tags flag
+git push origin --tags
+
+#T# delete a tag
+# SYNTAX git tag -d tag_name1
+git tag -d v1.0
+# |-------------------------------------------------------------
+
+#C# Branches
+
+# |-------------------------------------------------------------
+#T# see the branch upstream repository
+# SYNTAX git branch -vv
+#T# the upstream appears in blue color (if nothing is blue then the branch has no upstream)
+git branch -vv
+
+#T# set a branch upstream repository
+# SYNTAX git push --set-upstream remote1 branch1
+git push --set-upstream origin master
+
+#T# see the differences between two branches
+# SYNTAX git diff remote1/branch1 branch2
+git diff master origin/master
+# |-------------------------------------------------------------
+
+#C# Submodules
+
+# |-------------------------------------------------------------
+#T# create a git project within a project, a submodule
+# SYNTAX git submodule add project1
+#T# the submodule can be embedded in the main project
+git submodule add ./path/to/project1 path/to/project1
+
+#T# clone a git project with submodules
 git submodule init
 git submodule update
 
-#T# list submodules a nested submodules with git submodule status --recursive
+#T# list submodules and nested submodules
 git submodule status --recursive
 
-#T# remove a submodule
-git submodule deinit submoduleName
-git rm submoduleName
-# delete submodule from .git/config
-# remove submodule dir in .git/modules/submoduleName
-rm -rf .git/modules/submoduleName
+#T# remove a submodule with the following four steps
+# SYNTAX git submodule deinit submodule1
+# SYNTAX git rm submodule1
+# SYNTAX delete submodule from the .git/config file
+# SYNTAX rm -rf .git/modules/submodule1
+# |-------------------------------------------------------------
 
-#T# unstage all staged files with git reset
-git reset
+#C# Configuration
 
-#T# uncommit last commit with git reset --hard HEAD^
-git reset --hard HEAD^
-
-#T# set the git logs with git log
-git log
-
-#T# if the HEAD is detached, reattach with git checkout branch
-git checkout master
-
-#T# restore deleted or changed files with git restore fileNames
-git restore .
-
-#T# see a branch upstream with git branch -vv, the upstream appears in blue color (if nothing is blue, the branch has no upstream)
-git branch -vv
-
-#T# set a branch upstream repo with git push --set-upstream repo branch
-git push --set-upstream origin master
-
-#T# create a tag for a special commit, like a new version with 
-# git tag -a tagName -m "tag message"
-#T# the option -a makes an annotated tag (it has meta-data like date, etc). NOTE: the tag will NOT create a commit, it will be applied to the HEAD commit
-git tag -a v1.0 -m "version 1.0"
-
-#T# push tags to remote repo with the --tags flag
-git push origin --tags
-
-#T# delete a tag with git tag -d tagName
-git tag -d v1.0
-
-#T# see current user configuration with git config --list
+# |-------------------------------------------------------------
+#T# see current user configuration
 git config --list
 
 #T# change global user with the --global flag
@@ -92,6 +155,7 @@ git config --global user.email "New-email@email.dom"
 git config user.name "New-user-name"
 git config user.email "New-email@email.dom"
 
-#T# save git password with git config credential.helper store
+#T# save the git password of the user
 git config credential.helper store
-#T# the password gets stored in the next login prompt (i.e. a pull, push, etc)
+#| the password gets stored in the next login prompt (i.e. a pull, push, etc)
+# |-------------------------------------------------------------
