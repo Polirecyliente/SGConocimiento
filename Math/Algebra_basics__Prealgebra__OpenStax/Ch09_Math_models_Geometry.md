@@ -251,3 +251,15 @@ The surface area of a cone is the sum of the area of the base, plus the area of 
 
 ## Solve a formula for a specific variable (Despejar una variable específica en una fórmula)
 [Ch09_S07](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=836)
+
+To solve a formula for a specific variable means isolating said specific variable from the formula, by using the properties of equality.
+
+(Fórmula de la velocidad, distancia y tiempo)
+**Velocity, distance and time formula**: velocity is defined as the rate of distance change over time.
+
+> Velocity definition formula
+>
+> Let $d$ be the distance in length units, $t$ be the time in time units, $v$ be the velocity in distance over time units, then
+> $$v = \frac{d}{t}$$
+
+Solving this formula for $d$ gives $d = vt$, and solving it for $t$ gives $t = \frac{d}{v}$.

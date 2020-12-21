@@ -159,6 +159,8 @@ Note, in spanish this property may be bundled as part of the addition property o
 > $$a + b = c + d
 > $$Isolate $a$ using the subtraction property of equality, by subtracting $b$ from each side. $$a = c + d - b$$
 
+Isolating a variable in an equation can be synonymous with solving said equation for the variable isolated.
+
 ## Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
 [Ch02_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=158)
 
