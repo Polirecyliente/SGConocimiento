@@ -10,6 +10,7 @@
 #C# --- Equation solving
 #C# --- Simplification
 #C# --- Arithmetic
+#C# --- Algebra
 
 #T# Beginning of content
 
@@ -162,6 +163,10 @@ var1 = sympy.Symbol('x', integer = True)
 var1 = sympy.Symbol('x', odd = True)
 var1 = sympy.Symbol('x', real = True)
 
+#T# the Poly constructor is used to create polynomials
+var1 = sympy.Symbol('x') # x
+P1 = sympy.Poly(3*var1**2 + 5*var1 + 8) # Poly(3*x**2 + 5*x + 8, x, domain='ZZ')
+
 #C# --- Numeric constants
 
 # |-----
@@ -246,6 +251,11 @@ expr2 = 5*var1 + 6
 expr3 = sympy.expand(expr1*expr2)
 # 5*x**3 + 21*x**2 + 28*x + 12
 
+#T# the factor function expresses a polynomial as a product of its factors
+var1 = sympy.Symbol('x') # x
+expr1 = 3*var1**2 + 6*var1  # 3*x**2 + 6*x
+expr2 = sympy.factor(expr1) # 3*x*(x + 2)
+
 #T# the div function divides a polynomial by another, it returns a tuple with the quotient and the remainder
 var1 = sympy.Symbol('x') # x
 expr1 = 3*var1**2 -5*var1 + 8
@@ -264,6 +274,16 @@ expr1 = sympy.sqrt(var1) # sqrt(x)
 var1 = sympy.Symbol('x')      # x
 num1 = 2
 expr1 = sympy.Pow(var1, num1) # x**2
+# |-----
+
+#C# --- Algebra
+
+# |-----
+#T# the gcd function calculates the greatest common divisor, or greatest common factor, of two expressions
+var1 = sympy.Symbol('x')        # x
+expr1 = 3*var1**2 + 6*var1      # 3*x**2 + 6*x
+expr2 = 9*var1                  # 9*x
+expr3 = sympy.gcd(expr1, expr2) # 3*x
 # |-----
 
 # |-------------------------------------------------------------

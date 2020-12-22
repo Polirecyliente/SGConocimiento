@@ -160,3 +160,16 @@ To convert the given number $N$ to scientific notation, only its first nonzero d
 
 ## Polynomial factoring (Factorización de polinomios)
 [Ch10_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=940)
+
+(Factorización)
+**Factoring**: the process of finding the factors of a product.
+
+(Máximo factor común de dos expresiones)
+**Greatest common factor of two expressions**: the largest expression that is a factor of the two given expressions.
+[Greatest common factor of two expressions code](Programs/Ch10/S06_01_Greatest_common_factor_of_two_expressions.py)
+
+(Máximo factor común de un polinomio)
+**Greatest common factor of a polynomial**: the largest expression that is a factor of all the terms in a given polynomial.
+
+After doing polynomial factoring, a polynomial is represented as factors that are multiplying each other.
+[Polynomial factoring code](Programs/Ch10/S06_02_Polynomial_factoring.py)
