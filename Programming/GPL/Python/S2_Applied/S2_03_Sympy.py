@@ -238,6 +238,13 @@ expr1 = var1**num1 * var1**num2            # x**a*x**b
 expr2 = var1**num1 * var2**num1            # x**a*y**a
 expr3 = sympy.powsimp(expr1)               # x**(a + b)
 expr3 = sympy.powsimp(expr2, force = True) # (x*y)**a #| the force kwarg must be set to True to show the simplification
+
+#T# the expand function expands the product of polynomials and combines like terms
+var1 = sympy.Symbol('x') # x
+expr1 = var1**2 + 3*var1 + 2
+expr2 = 5*var1 + 6
+expr3 = sympy.expand(expr1*expr2)
+# 5*x**3 + 21*x**2 + 28*x + 12
 # |-----
 
 #C# --- Arithmetic
