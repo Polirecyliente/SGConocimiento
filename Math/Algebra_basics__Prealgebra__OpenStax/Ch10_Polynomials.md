@@ -123,6 +123,7 @@ This is because, with any number $n$, $\frac{a^n}{a^n} = a^0 = 1$.
 **Division of polynomials**: this operation is done according to the degrees of the polynomials in the dividend and divisor. In a fraction of polynomials, if the degree of the numerator is less than the degree of the denominator, then that fraction can not be simplified further, i.e. it behaves as a proper fraction.
 
 Long division of polynomials (División larga de polinomios) is a way to divide polynomials. With the polynomials in the fraction written in standard form, each individual term of the numerator from left to right is divided by the first term of the denominator, until the degree of the term being divided is less than the degree of the polynomial in the denominator.
+[Division of polynomials code](Programs/Ch10/S04_01_Division_of_polynomials.py)
 
 > Division of polynomials
 >
@@ -145,8 +146,17 @@ This result follows the same form of mixed numbers, but instead of numbers, poly
 > \end{aligned}
 > $$ Then $$\frac{3x^2 - 5x + 8}{2x - 7} = \frac{3x}{2} +  \frac{11}{4} + \frac{109/4}{2x - 7}$$
 
-## Integer exponents, scientific notation (Exponentes enteros, notación científica)
+## Scientific notation (Notación científica)
 [Ch10_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=922)
+
+Scientific notation is a way to express numbers. A given number written in scientific notation is represented as a number greater than or equal to 1 and less than 10, multiplied by a power of 10.
+
+> Scientific notation
+>
+> Let $N$ be a number, $a$ be a number such that $a \ge 1$ and $a < 10$, and let $n$ be an integer, then
+> $$N = a \cdot 10^n$$
+
+To convert the given number $N$ to scientific notation, only its first nonzero digit is left as the first digit of $a$, and the remaining digits become decimals of $a$, this conversion is compensated as necessary using $n$, so that the equality $N = a \cdot 10^n$ is maintained. If $|N| \ge 1$ then $n$ must be zero or positive, while if $|N| < 1$ then $n$ must be negative.
 
 ## Polynomial factoring (Factorización de polinomios)
 [Ch10_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=940)

@@ -245,6 +245,12 @@ expr1 = var1**2 + 3*var1 + 2
 expr2 = 5*var1 + 6
 expr3 = sympy.expand(expr1*expr2)
 # 5*x**3 + 21*x**2 + 28*x + 12
+
+#T# the div function divides a polynomial by another, it returns a tuple with the quotient and the remainder
+var1 = sympy.Symbol('x') # x
+expr1 = 3*var1**2 -5*var1 + 8
+expr2 = 2*var1 - 7
+expr3 = sympy.div(expr1, expr2) # (3*x/2 + 11/4, 109/4)
 # |-----
 
 #C# --- Arithmetic
