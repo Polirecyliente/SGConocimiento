@@ -156,10 +156,26 @@ ax1.set_aspect('equal')
 
 #T# draw a horizontal line with the axhline function
 
-# SYNTAX axes1.axhline([y = flo1])
-#T# the line is drawn in axes1, the y kwarg is for the ordinate position flo1 of the line
+# SYNTAX axes1.axhline(y = flo1)
+#T# the line is drawn in axes1, the y kwarg is for the ordinate position flo1 of the line, the y kwarg is optional and if omitted it defaults to 0
 
 ax1.axhline()
+
+#T# draw a vertical line with the axvline function
+
+# SYNTAX axes1.axvline(x = flo1)
+#T# the line is drawn in axes1, the x kwarg is for the abscissa position flo1 of the line, the x kwarg is optional and if omitted it defaults to 0
+
+ax1.axvline()
+
+#T# draw a line in a given inclination with the axline function
+
+# SYNTAX axes1.axline((x1, y1), (x2, y2))
+# SYNTAX axes1.axline((x1, y1), slope = num1)
+#T# these syntaxes represent a line given two points, and a line given a point and the slope, the tuples (x1, y1) and (x2, y2) are the points where the line passes, num1 is the slope, a line is created with one of these syntaxes
+
+ax1.axline((4, 3), (7, 5))
+ax1.axline((5, 3), slope = 1.5)
 
 #T# set the margins of the axes as a proportion of the data interval with the margins function
 
@@ -326,7 +342,7 @@ spine1 = ax1.spines['top']
 #T# the set_visible function of the spines is used the set their visibility
 spine1.set_visible(False)
 
-#T# the set_position function is used to set the position of a spine
+#T# the set_position function is used to set the position of a spine, for example to make the axes intersect at the origin
 
 # SYNTAX spine1.set_position(('position_type1', num1))
 #T# 'position_type1' and num1 form a tuple, num1 indicates the exact position in which spine1 will be placed

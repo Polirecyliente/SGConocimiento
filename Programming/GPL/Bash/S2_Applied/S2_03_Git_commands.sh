@@ -10,6 +10,7 @@
 #C# Branches
 #C# Submodules
 #C# Configuration
+#C# Git Large File Storage (LFS)
 
 #T# Beginning of content
 
@@ -158,4 +159,23 @@ git config user.email "New-email@email.dom"
 #T# save the git password of the user
 git config credential.helper store
 #| the password gets stored in the next login prompt (i.e. a pull, push, etc)
+# |-------------------------------------------------------------
+
+#C# Git Large File Storage (LFS)
+
+# |-------------------------------------------------------------
+#T# Git LFS is a git related application that facilitates the use of large files in repositories, because with it, only a pointer to the latest version of a large file is pulled (and not all of its versions), the actual large file is stored in a cache, if another version is wanted it is pulled via git checkout
+
+#T# install the git lfs package
+sudo apt install git-lfs
+
+#T# change to the dir of a repository and install lfs for that repository, so it can be used with that project
+cd dir1/project1 #| dir1/project1 represents the relative path of the root directory of project1
+git lfs install
+
+#T# tracked files are treated as large files
+# SYNTAX git lfs track file1
+git lfs track "*.png" #| tracks .png files
+
+#T# the .gitattributes file must be part of the project if it already isn't
 # |-------------------------------------------------------------
