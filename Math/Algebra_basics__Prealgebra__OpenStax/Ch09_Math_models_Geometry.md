@@ -127,7 +127,7 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 (Volumen)
 **Volume**: in a three dimensional shape, the measure of the space occupied by it.
 
-(Cuadrilatero)
+(Cuadrilátero)
 **Quadrilateral**: a shape with four straight sides.
 
 (Rectángulo)

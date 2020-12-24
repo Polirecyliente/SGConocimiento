@@ -1,0 +1,2 @@
+
+#   Rigid transformations (Transformaciones rígidas)
