@@ -22,6 +22,10 @@ plt.plot([B[0], C[0], D[0], A[0], B[0], D[0]], [B[1], C[1], D[1], A[1], B[1], D[
 #T# create the height guide
 plt.plot([B[0], B[0]], [A[1], B[1]], '--', color = '#000000')
 
+#T# set the math text font to the Latex default, Computer Modern
+import matplotlib
+matplotlib.rcParams['mathtext.fontset'] = 'cm'
+
 #T# name the bases, the height, and the areas
 plt.text((B[0] + C[0])/2, (B[1] + C[1])/2, r'$b$', ha = 'center', va = 'bottom', size = 18)
 plt.text((A[0] + D[0])/2, (A[1] + D[1])/2 - 0.05, r'$B$', ha = 'center', va = 'top', size = 18)

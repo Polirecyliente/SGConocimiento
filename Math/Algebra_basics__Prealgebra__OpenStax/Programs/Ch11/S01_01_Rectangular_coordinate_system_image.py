@@ -28,13 +28,17 @@ plt.plot(2.04, 0, 'k>', clip_on = False)
 plt.plot(0, -2.04, 'kv', clip_on = False)
 plt.plot(0, 2.04, 'k^', clip_on = False)
 
+#T# set the math text font to the Latex default, Computer Modern
+import matplotlib
+matplotlib.rcParams['mathtext.fontset'] = 'cm'
+
 #T# annotate the axes and the quadrants
 plt.text(2, 0.05, r'$x$', va = 'bottom')
 plt.text(0.1, 2, r'$y$', ha = 'left')
-plt.text(1, 1, 'I', ha = 'center', va = 'center', size = 15)
-plt.text(-1, 1, 'II', ha = 'center', va = 'center', size = 15)
-plt.text(-1, -1, 'III', ha = 'center', va = 'center', size = 15)
-plt.text(1, -1, 'IV', ha = 'center', va = 'center', size = 15)
+plt.text(1, 1, r'$I$', ha = 'center', va = 'center', size = 15)
+plt.text(-1, 1, r'$II$', ha = 'center', va = 'center', size = 15)
+plt.text(-1, -1, r'$III$', ha = 'center', va = 'center', size = 15)
+plt.text(1, -1, r'$IV$', ha = 'center', va = 'center', size = 15)
 
 #T# show the results
 plt.show()

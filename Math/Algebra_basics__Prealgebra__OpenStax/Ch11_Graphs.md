@@ -15,7 +15,7 @@ The rectangular coordinate system forms a grid in which there is a vertical line
 ![Rectangular coordinate system image](Images/Ch11/S01_01_Rectangular_coordinate_system.png)
 *Rectangular coordinate system*
 
-Each of the four divisions of the $x$-$y$ plane is called a quadrant, they are denoted with roman numerals, 'I', 'II', 'III', and 'IV', as shown in the image.
+Each of the four divisions of the $x$-$y$ plane is called a quadrant, they are denoted with roman numerals, $I$, $II$, $III$, and $IV$, as shown in the *Rectangular coordinate system* image.
 
 (Par ordenado)
 **Ordered pair**: a pair of numbers that can be used to represent a point in the rectangular coordinate system. Just as in the number line a single number is required to know the location of a point, in the $x$-$y$ plane two numbers are required, which should be ordered to know which number goes in the $x$-axis and which in the $y$-axis. By convention, the first number in an ordered pair indicates the value in the $x$-axis, and the second number indicates the value in the $y$-axis.

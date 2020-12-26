@@ -20,8 +20,10 @@
 #C# --- Latex symbols
 #C# Coordinate systems
 #C# Plot types
+#C# --- Patches
 #C# Backends
 #C# Interactive sessions
+#C# Configuration
 
 #T# Beginning of content
 
@@ -223,6 +225,10 @@ ax1.axis([-7, 5, -0.5, 0.5])
 
 ax1_yaxis = ax1.axes.get_yaxis()
 
+#T# the x, y axis can each be accessed as an attribute of a pair of axes
+ax1_xaxis = ax1.xaxis
+ax1_yaxis = ax1.yaxis
+
 #T# the visibility of an axis can be changed
 
 # SYNTAX axis1.set_visible(bool1)
@@ -250,8 +256,8 @@ ax1.minorticks_on()
 
 #T# customize the grid with the kwargs of the grid function
 
-# SYNTAX axes1.grid(kwarg1 = value1, kwarg2 = value2)
-#T# this sets the grid of axes1, by setting kwarg1 to value1, up to kwargN to valueN
+# SYNTAX axes1.grid(kwargs1)
+#T# this sets the grid of axes1, by setting kwargs1 which are the kwarg value pairs
 
 #T# the which kwarg chooses the grid lines to affect, it can be "major", "minor", or "both"
 
@@ -368,8 +374,8 @@ spine1.set_position(('outward', 2)) # spine1 is places 2 points outwards
 # |-----
 #T# the ticks can be modified with the tick_params function
 
-# SYNTAX axes1.tick_params(kwarg1 = value1, kwarg2 = value2)
-#T# this sets the ticks of axes1, setting kwarg1 to value1, up to kwargN to valueN
+# SYNTAX axes1.tick_params(kwargs1)
+#T# this sets the ticks of axes1, setting kwargs1 which are the kwarg value pairs
 
 #T# the direction kwarg is used to set the direction, in or out the axes, in which to draw the ticks, its value can be, 'in', 'out', 'inout'
 
@@ -399,10 +405,11 @@ ax1.set_xticklabels(['0', '2/3', '4/3']) #| without this, the tick at 2/3 appear
 
 #T# the text function serves to put text in the image
 
-# SYNTAX plt.text(width_coord1, height_coord1, 'text_string1', kwarg1 = value1, kwarg2 = value2)
-#T# width_coord1, height_coord1 are the horizontal, and verical coordinates, 'text_string1' is the string that will be displayed, kwarg1 = value1 up to kwargN = valueN are the kwargs used to set aspects of the text annotation
+# SYNTAX plt.text(width_coord1, height_coord1, 'text_string1', kwargs1)
+#T# width_coord1, height_coord1 are the horizontal, and verical coordinates, 'text_string1' is the string that will be displayed, kwargs1 are the kwarg value pairs
 
 #T# the following are a few of the kwargs used in annotations
+#T#     font, sets the font, to see the available fonts print 'matplotlib.font_manager.fontManager.ttflist'
 #T#     ha, stands for horizontal alignment, it can be, 'left', 'center', 'right
 #T#     size, sets the font size of the annotation
 #T#     va, stands for vertical alignment, it can be, 'bottom', 'center', 'top'
@@ -410,13 +417,16 @@ ax1.set_xticklabels(['0', '2/3', '4/3']) #| without this, the tick at 2/3 appear
 fig1 = plt.Figure() # type: plt.Figure
 ax1 = plt.axes() # type: plt.Axes
 plt.text(1, 1, 'text in the image')
+plt.text(1, 1, 'text1', font = 'cmmi10') #| this sets the font to the italic Latex default, Computer Modern Italic 10, other fonts in this family are cmr10 (roman font), cmb10 (bold font)
 
 #T# the annotate function serves to put annotations in the image
 
-# SYNTAX plt.annotate('text_string1', xy_tuple1, xy_text_tuple1, kwarg1 = value1, kwarg2 = value2)
-#T# 'text_string1' is the string that will be displayed, xy_tuple1 is a tuple with the x, y coordinates of the annotation, xy_text_tuple1 is optional and is a tuple with the x, y coordinates for the text of the annotation, kwarg1 = value1, up to kwargN = valueN are used to set aspects of the annotation
+# SYNTAX plt.annotate('text_string1', xy_tuple1, xy_text_tuple1, kwargs1)
+#T# 'text_string1' is the string that will be displayed, xy_tuple1 is a tuple with the x, y coordinates of the annotation, xy_text_tuple1 is optional and is a tuple with the x, y coordinates for the text of the annotation, kwargs1 are the kwarg value pairs
 
 #T# the arrowprops kwarg is a dictionary with the properties (also kwargs) of the arrow that connects the point of annotation with its text
+
+#T# xy_tuple1 and xy_text_tuple1 can be input via the xy and xytext kwargs respectively
 
 ax1.annotate('annotation in the image', (.4, .8), (.5, .7), arrowprops = {'arrowstyle': '->'})
 
@@ -503,8 +513,8 @@ plt.arrow(0, 0, 3, 5, width = 0.2, length_includes_head = True, shape = "left", 
 
 #T# create a rectangle with the Rectangle constructor
 
-# SYNTAX plt.Rectangle(origin_tuple1, width1, height1, kwarg1 = value1, kwarg2 = value2)
-#T# origin_tuple1 is tuple with the x, y coordinates of the rectangle's bottom left corner, width1 and height1 set width and height, kwarg1 = value1, up to kwargN = valueN, are used to set aspects of the rectangle
+# SYNTAX plt.Rectangle(origin_tuple1, width1, height1, kwargs1)
+#T# origin_tuple1 is tuple with the x, y coordinates of the rectangle's bottom left corner, width1 and height1 set width and height, kwargs1 are the kwarg value pairs
 
 rect1 = plt.Rectangle((0, 0), 3, 5, fill = True, alpha = 0.3, hatch = '*', linewidth = 4, edgecolor = '#99DD33', facecolor = "#4499EF", linestyle = ":")
 ax1.add_patch(rect1)
@@ -527,6 +537,30 @@ ax1.add_patch(rect1)
 
 rect1 = plt.Rectangle((.2,.2), .6, .4, hatch = '*-.+x\\oO|/')
 
+#T# other patches are defined in the patches module of the matplotlib package
+import matplotlib.patches as mpatches
+
+#T# the FancyArrowPatch patch allows the creation of bidirectional arrows
+
+# SYNTAX mpatches.FancyArrowPatch(tuple1, tuple2, kwargs1)
+#T# tuple1 is a tuple with the x-y coordinates of the tail of the arrow, tuple2 is a tuple with the x-y coordinates of the head of the arrow, kwargs1 are the kwarg value pairs
+
+#T# the mutation_scale kwarg is a number that scales the size of the arrow
+
+#T# the arrowstyle kwarg is a string used to set the style of the arrow, its value can be
+#T#     '-', no arrowhead
+#T#     '->', a regular arrowhead
+#T#     '<->', bidirectional regular arrowhead
+#T#     '<-', tail regular arrowhead
+#T#     '-[', the arrowhead is an opening bracket
+#T#     ']-[', bidirectional opening bracket arrowheads
+#T#     ']-', tail opening bracket arrowhead
+#T#     '-|>', a filled arrowhead
+#T#     '<|-|>', bidirectional filled arrowheads
+#T#     '<|-', tail filled arrowhead
+#T#     '|-|', bidirectional perpendicular line arrowheads
+
+arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrowstyle = '|-|')
 # |--------------------------------------------------/
 
 # |-----
@@ -561,4 +595,21 @@ plt.ioff()
 
 #T# if the interactive session doesn't update a plot, it can be redrawn with the draw function
 plt.draw()
+# |-------------------------------------------------------------
+
+#C# Configuration
+
+# |-------------------------------------------------------------
+#T# configuration is done in matplotlib with the rcParams dictionary, or with the rc function
+
+# SYNTAX matplotlib.rcParams[part1.param1] = value1
+# SYNTAX matplotlib.rc('part1', param1 = value1, param2 = value2)
+#T# part1 is the part of matplotlib being configured, such as lines, or font, etcetera, param1 is the parameter being set to value1, param2 is set to value2, up to paramN set to valueN
+
+import matplotlib
+matplotlib.rcParams['lines.linewidth'] = 2
+matplotlib.rcParams['lines.color'] = 'r'
+matplotlib.rc('lines', linewidth = 2, color = 'r') #| equivalent to the former two lines of configuration
+
+matplotlib.rcParams['mathtext.fontset'] = 'cm' #| sets the math text font to the Latex default 'cm' which stands for Computer Modern
 # |-------------------------------------------------------------

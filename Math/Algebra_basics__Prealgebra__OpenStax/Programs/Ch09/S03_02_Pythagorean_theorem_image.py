@@ -39,6 +39,10 @@ plt.plot([A4[0], B4[0]], [A4[1], B4[1]], color = '#000000')
 plt.plot([A4[0], C4[0]], [A4[1], C4[1]], color = '#000000')
 plt.plot([B4[0], C4[0]], [B4[1], C4[1]], color = '#000000')
 
+#T# set the math text font to the Latex default, Computer Modern
+import matplotlib
+matplotlib.rcParams['mathtext.fontset'] = 'cm'
+
 #T# Name the sides
 plt.text((B1[0] + C1[0])/2 + 0.1, (B1[1] + C1[1])/2 + 0.0, r'$a$', ha = 'left', va = 'center', size = 18)
 plt.text((A1[0] + C1[0])/2 + 0.0, (A1[1] + C1[1])/2 - 0.1, r'$b$', ha = 'center', va = 'top', size = 18)

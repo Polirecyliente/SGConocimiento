@@ -9,7 +9,7 @@ ax1 = plt.axes()
 
 #T# set the limits of the number line
 xmin = -2.5; xmax = 5.5
-ax1.axis([xmin, xmax, 0, 0])
+ax1.axis([xmin, xmax, -0.1, 0.1])
 
 #T# leave the number line alone
 for it1 in ['top', 'left', 'right']:

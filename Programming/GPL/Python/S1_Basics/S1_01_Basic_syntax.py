@@ -94,6 +94,19 @@ print("Hello, Python!")
 
 #T# basic input from stdin with the input function
 input                   ("\nGive an input to continue the script\n")
+
+#T# the arguments to a function contain positional arguments and kwarg pairs
+
+# SYNTAX func1(pos1, pos2, kwarg1 = value1, kwarg2 = value2)
+# SYNTAX func1(pos1, pos2, kwargs1)
+#T# pos1 and pos2 represent positional arguments so they must be written in that order of positions at the start of the parentheses
+
+#T# kwarg1 = value1, and kwarg2 = value2 are kwarg value pairs that allow naming arguments, these can be written in any order
+
+#T# kwargs1 are the kwarg value pairs, this is a shorthand notation to indicate the kwarg value pairs without writing them one by one
+
+str1 = 'string to print'
+print(str1, end = '\n') #| str1 is a positional argument, and the end kwarg is used to set the character at the end of the string
 # |-------------------------------------------------------------
 
 #C# Statements
