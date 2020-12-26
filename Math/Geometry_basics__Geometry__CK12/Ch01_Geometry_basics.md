@@ -4,6 +4,26 @@
 ## Points, lines, and planes (Puntos, líneas, y planos)
 [Ch01_S01](https://www.ck12.org/reader/reader-index.html#section/2932917/1.1/9549314)
 
+Geometry (Geometría) means the study of shapes and their spatial properties. Spatial refering to the space occupied by the shapes, or their location with regards to one another.
+
+(Diagrama)
+**Diagram**: a picture or drawing used to show shapes and their geometry.
+
+(Punto)
+**Point**: a single piece of space that has no extension, i.e. a shape with zero dimensions. Points are used to indicate locations in space, they are represented with dots in diagrams.
+[Points in space image code](Programs/Ch01/S01_01_Points_in_space_image.py)
+![Points in space image](Images/Ch01/S01_01_Points_in_space.png)
+*Points in space*
+
+The points shown in the *Points in space* image, are in the shape of blue dots. These shapes have an extension, a size, they are two dimensional, and they must be, otherwise they would be invisible if they truly were zero dimensional. These dots represent points with no dimensions.
+
+Points are commonly labeled using a capital letter. The image shown has four points, namely $A$, $B$, $C$, and $D$.
+
+(Línea)
+**Line**: 
+
+<!-- # TODO plane, postulate -->
+
 ## Segments and distance (Segmentos y distancia)
 [Ch01_S02](https://www.ck12.org/reader/reader-index.html#section/2932918/1.2/9549314)
 

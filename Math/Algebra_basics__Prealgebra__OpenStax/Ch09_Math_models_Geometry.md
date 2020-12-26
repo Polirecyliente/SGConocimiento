@@ -67,7 +67,8 @@ Given those measures, half a whole rotation is $180\degree$ or $\pi$ radians
 
 This is shown in the following figure.
 [Triangle angles sum image code](Programs/Ch09/S03_01_Triangle_angles_sum_image.py)
-![Triangle angles sum image](Images/Ch09/S03_01_Triangle_angles_sum_image.png)
+![Triangle angles sum image](Images/Ch09/S03_01_Triangle_angles_sum.png)
+*Triangle angles sum*
 
 As the figure shows, the straight line that passes through $C$ and is parallel to the side between $A$ and $B$, is composed of the angles $\angle A$, $\angle B$, and $\angle C$, which means that the sum of the three angles in a triangle forms a straight line whose angle is $180\degree$ or $\pi$ radians.
 
@@ -102,7 +103,8 @@ Similar triangles are similar figures.
 
 This theorem can be proved with the following image.
 [Pythagorean theorem image code](Programs/Ch09/S03_02_Pythagorean_theorem_image.py)
-![Pythagorean theorem image](Images/Ch09/S03_02_Pythagorean_theorem_image.png)
+![Pythagorean theorem image](Images/Ch09/S03_02_Pythagorean_theorem.png)
+*Pythagorean theorem*
 
 From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cdot b + b^2 = c^2 + 2 \cdot a \cdot b$, and then $a^2 + b^2 = c^2$.
 
@@ -169,7 +171,8 @@ The two parallel sides in a trapezoid have different sizes, and they are called 
 
 The area of a trapezoid can be understood with the following image.
 [Trapezoid area image code](Programs/Ch09/S04_01_Trapezoid_area_image.py)
-![Trapezoid area image](Images/Ch09/S04_01_Trapezoid_area_image.png)
+![Trapezoid area image](Images/Ch09/S04_01_Trapezoid_area.png)
+*Trapezoid area*
 
 As shown in the image, the area of the trapezoid $A$ is equal to the sum of the areas $A_1$ and $A_2$. In turn, each of these areas is the area of a triangle, $A_1 = \frac{b \cdot h}{2}$ and $A_2 = \frac{B \cdot h}{2}$, then $A = A_1 + A_2 = \frac{b \cdot h + B \cdot h}{2} = \frac{1}{2}h(b + B)$.
 
@@ -245,7 +248,8 @@ The volume of the cylinder is the product of the area of its base and its height
 > S = \pi r^2 + \pi r l$$
 
 The volume of a cone is one third of the volume of a cylinder with the same base and same height. This is a general rule for shapes that end in an apex, as can be seen in the following image, one cube can hold exactly three pyramids with a square base.
-![One third volume image](Images/Ch09/S06_01_One_third_volume_image.png)
+![One third volume image](Images/Ch09/S06_01_One_third_volume.png)
+*One third volume*
 
 The surface area of a cone is the sum of the area of the base, plus the area of the surface that connects the circumference to the apex, which when unrolled can be seen as a sector of a circle, with an arc the size of $2 \pi r$ and a radius of $l$. So as shown in the formula of the area of a cirle, the area of this sector is $\frac{2 \pi r l}{2} = \pi r l$.
 

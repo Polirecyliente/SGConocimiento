@@ -11,8 +11,9 @@ The horizontal number line is called the $x$-axis (el eje $x$) or abscissa axis 
 The rectangular coordinate system is also called the $x$-$y$ plane (el plano $x$-$y$), the coordinate plane (el plano coordenado), or the Cartesian coordinate system (el plano cartesiano)
 
 The rectangular coordinate system forms a grid in which there is a vertical line that passes through each number in the $x$-axis, and there is an horizontal line that passes through each number in the $y$-axis.
-[Rectangular coordinate system code](Programs/Ch11/S01_01_Rectangular_coordinate_system.py)
+[Rectangular coordinate system image code](Programs/Ch11/S01_01_Rectangular_coordinate_system_image.py)
 ![Rectangular coordinate system image](Images/Ch11/S01_01_Rectangular_coordinate_system.png)
+*Rectangular coordinate system*
 
 Each of the four divisions of the $x$-$y$ plane is called a quadrant, they are denoted with roman numerals, 'I', 'II', 'III', and 'IV', as shown in the image.
 
@@ -53,12 +54,14 @@ The amount of solutions of a linear equation is infinite, the line formed by the
 [Ch11_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=984)
 
 The graph of a given linear equation shows the solutions of the given linear equation, because the graph is constructed from a few solutions of the equation, and then by extending the line in the graph.
-[Graph of a linear equation code](Programs/Ch11/S02_01_Graph_of_a_linear_equation.py)
+[Graph of a linear equation image code](Programs/Ch11/S02_01_Graph_of_a_linear_equation_image.py)
 ![Graph of a linear equation image](Images/Ch11/S02_01_Graph_of_a_linear_equation.png)
+*Graph of a linear equation*
 
 A polynomial can be graphed similarly
-[Graph of a polynomial code](Programs/Ch11/S02_02_Graph_of_a_polynomial.py)
+[Graph of a polynomial image code](Programs/Ch11/S02_02_Graph_of_a_polynomial_image.py)
 ![Graph of a polynomial image](Images/Ch11/S02_02_Graph_of_a_polynomial.png)
+*Graph of a polynomial*
 
 (Graficar puntos)
 **Point plotting method**: individual points from an equation can be plotted, e.g. in a linear equation, individual points can be plotted and then a single line can be passed through them to form the graph of the equation. This method starts by plotting points of a given equation and then joining them with a line or lines as necessary.

@@ -14,8 +14,9 @@
 For example, $\frac{2}{3}$ means $2$ divided by $3$, and using the definition of division, this calculates the amount of times that the number $3$ is subtracted from $2$ until 0 is reached, but subtracting $3$ from $2$ gives $-1$ because $2 - 3 = -1$, so to reach 0, a proportion, fraction, or part of $3$ must be subtracted from $2$, and not the full unity of the number $3$. 
 
 By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is subtracted from $2$ to reach 0. This amount, $\frac{2}{3}$ is between $0$ and $1$ and it occupies the same proportional distance to $1$, as the number $2$ occupies to $3$, as shown in the figure.
-[Fraction diagram code](Programs/Ch04/S01_02_Fraction_diagram.py)
+[Fraction diagram image code](Programs/Ch04/S01_02_Fraction_diagram_image.py)
 ![Fraction diagram image](Images/Ch04/S01_02_Fraction_diagram.png)
+*Fraction diagram*
 
 (Numerador y denominador)
 **Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). For example, in $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.

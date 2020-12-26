@@ -154,6 +154,14 @@ plt.sca(ax1)
 
 ax1.set_aspect('equal')
 
+# SYNTAX axes1.set_aspect('aspect_string1', adjustable = str1)
+#T# same as before, the adjustable kwarg sets what is adjusted to get to the aspect ratio, str1 can be 'box' (adjusts the box of the axes) or 'datalim' (adjusts the data limits)
+
+p1 = (4, 3)
+p2 = (7, 5)
+ax1.axline(p1, p2)
+ax1.set_aspect('equal', adjustable = 'datalim')
+
 #T# draw a horizontal line with the axhline function
 
 # SYNTAX axes1.axhline(y = flo1)

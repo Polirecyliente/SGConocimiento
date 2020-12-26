@@ -14,6 +14,7 @@
 #C# Internet
 #C# --- Package manager
 #C# --- Firewall
+#C# --- Networking
 #C# Languages
 #C# --- Latex
 #C# --- Python
@@ -324,7 +325,7 @@ ufw allow from 192.168.0.0/24 to 192.168.0.13 port 443
 #T# net1 is the network interface protected by the rule, ip1 is the connecting IP number or range
 
 ufw deny incoming on wlp3s0 from 236.217.38.92
-#T# this denies connections from the IP 236.217.38.92 to the wireless network interface identified by wlp3s0
+#| this denies connections from the IP 236.217.38.92 to the wireless network interface identified by wlp3s0
 
 #T# list the available firewall rules by number
 ufw status numbered
@@ -334,6 +335,25 @@ ufw delete 2
 
 #T# reset the firewall rules to default settings
 ufw reset
+# |-----
+
+#C# --- Networking
+
+# |-----
+#T# the ifconfig command displays the network interfaces on the system along with information and metadata about those interfaces
+ifconfig #| output too large
+
+#T# the iwconfig command displays wireless information about the network interfaces, such as their current mode
+iwconfig #| output too large
+
+#T# the iwconfig command can be used to configure the wireless network interfaces
+
+# SYNTAX sudo iwconfig interface1 mode mode1
+#T# interface1 is the wireless interface being configured, mode1 is the mode being set
+
+#T# mode1 can be, 'managed' (this is the default), 'ad-hoc', 'master'
+
+sudo iwconfig wlp3s0 mode ad-hoc
 # |-----
 
 # |-------------------------------------------------------------

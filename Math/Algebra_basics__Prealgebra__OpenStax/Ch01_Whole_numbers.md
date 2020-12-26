@@ -8,9 +8,10 @@
 **Counting numbers**: these are, 1, 2, 3, 4, ...
 
 (Recta real)
-**Number line**
-[Number line code](Programs/Ch01/S01_01_Number_line.py)
+**Number line**: the numbers depicted in a line.
+[Number line image code](Programs/Ch01/S01_01_Number_line_image.py)
 ![Number line image](Images/Ch01/S01_01_Number_line.png)
+*Number line*
 
 (Origen)
 **Origin**: this is the point at 0.
