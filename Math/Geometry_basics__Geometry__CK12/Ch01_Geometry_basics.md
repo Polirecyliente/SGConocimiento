@@ -19,7 +19,7 @@ The points shown in the *Points in space* image, are in the shape of blue dots. 
 
 Points are commonly labeled using an uppercase letter. The image shown has four points, namely $A$, $B$, $C$, and $D$.
 
-(Línea)
+(Línea|Recta)
 **Line**: a shape with infinite points that extends in a single dimension indefinitely. A line has no start nor ending, it has a given direction and a location in space.
 [Line in space image code](Programs/Ch01/S01_02_Line_in_space_image.py)
 ![Line in space image](Images/Ch01/S01_02_Line_in_space.png)
@@ -56,7 +56,37 @@ Planes extend indefinitely in two dimensions, the planes shown in the *Planes in
 
 Line segments are labeled using its endpoints and a horizontal bar on top of them, such as $\overline{AB}$ and $\overline{BA}$.
 
-<!-- # TODO postulate -->
+(Rayo)
+**Ray**: a line that is only truncated in one side, while the other side extends indefinitely. A ray has one endpoint.
+[Ray image code](Programs/Ch01/S01_05_Ray_image.py)
+![Ray image](Images/Ch01/S01_05_Ray.png)
+*Ray*
+
+Rays are labeled using the endpoint and the point inside the ray with an arrow on top, such as $\overrightarrow{AB}$ and $\overleftarrow{BA}$. The arrow on top points in the same direction as the ray.
+
+(Intersección)
+**Intersection**: the point or points where two shapes cross each other. When two distinct lines intersect, the intersection is a point. When two distinct planes intersect, the intersection is a line. When a line outside of a plane intersects said plane, the intersection is a point. When three distinct planes intersect, the intersection is a point.
+
+(Postulado)
+**Postulate**: the axioms of geometry, i.e. facts of geometry that are accepted as true. Postulates act as definitions.
+
+(Teorema)
+**Theorem**: a statement that can be proved with postulates and/or with other theorems.
+
+(Postulado de línea)
+**Unique line postulate**: given two points, only one line passes through the points.
+
+(Postulado de plano)
+**Unique plane postulate**: given three non-collinear points, only one plane contains them.
+
+(Postulado de plano línea)
+**Plane-line postulate**: a line that connects points from a plane, is in the plane. 
+
+(Postulado de la intersección entre dos rectas)
+**Line intersection postulate**: if two distinct lines intersect, then their intersection is a point.
+
+(Postulado de la intersección entre dos planos)
+**Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line.
 
 ## Segments and distance (Segmentos y distancia)
 [Ch01_S02](https://www.ck12.org/reader/reader-index.html#section/2932918/1.2/9549314)

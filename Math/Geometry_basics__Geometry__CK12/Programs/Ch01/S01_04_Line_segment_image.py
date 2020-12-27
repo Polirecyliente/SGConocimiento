@@ -9,7 +9,7 @@ fig1, ax1 = plt.subplots(1, 1)
 #T# set the aspect of the axes
 ax1.set_aspect('equal')
 
-#T# hide the spines and scales
+#T# hide the spines and the axes ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.xaxis.set_visible(False)

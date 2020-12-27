@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 #T# create the figure and axes
 fig1, ax1 = plt.subplots(1, 1)
 
-#T# hide the spines and the scales of the axes
+#T# hide the spines and the axes ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.get_xaxis().set_visible(False)

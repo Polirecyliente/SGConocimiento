@@ -508,8 +508,8 @@ plt.scatter(x, y)
 
 #T# plot an arrow with the arrow function
 
-# SYNTAX plt.arrow(x_pos1, y_pos1, x_delta1, y_delta1, kwargs)
-#T# x_pos1, y_pos1 are the x, y coordinates of the arrow's origin, x_delta1 is the distance in the x axis traveled by the arrow, and y_delta1 is the homologous for the y axis
+# SYNTAX plt.arrow(x_pos1, y_pos1, x_delta1, y_delta1, kwargs1)
+#T# x_pos1, y_pos1 are the x, y coordinates of the arrow's origin, x_delta1 is the distance in the x axis traveled by the arrow, and y_delta1 is the homologous for the y axis, kwargs1 are the kwarg value pairs
 
 #T# the shape kwarg can have one of the values, 'full', 'left', or 'right', to determine the side, or sides of the arrow to draw
 
