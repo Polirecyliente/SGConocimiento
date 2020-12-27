@@ -20,7 +20,7 @@ The points shown in the *Points in space* image, are in the shape of blue dots. 
 Points are commonly labeled using an uppercase letter. The image shown has four points, namely $A$, $B$, $C$, and $D$.
 
 (Línea)
-**Line**: a shape with infinite points that extends in a single dimension indefinitely. A line has no start nor ending, it has a given direction and a given location in space.
+**Line**: a shape with infinite points that extends in a single dimension indefinitely. A line has no start nor ending, it has a given direction and a location in space.
 [Line in space image code](Programs/Ch01/S01_02_Line_in_space_image.py)
 ![Line in space image](Images/Ch01/S01_02_Line_in_space.png)
 *Line in space*
@@ -28,7 +28,33 @@ Points are commonly labeled using an uppercase letter. The image shown has four 
 Lines are labeled using a single lowercase letter, such as $g$, or with the labels of two points and a bidirectional arrow on top, such as $\overleftrightarrow{PQ}$ and $\overleftrightarrow{QP}$. All these three labels denote the same line.
 
 (Plano)
-**Plane**: 
+**Plane**: a shape with infinite lines that extends in two dimensions indefinitely. A plane has no start nor ending, it has a given direction and a location in space.
+![Planes in space image](Images/Ch01/S01_03_Planes_in_space.png)
+*Planes in space*
+
+Planes are labeled using a single uppercase letter in a calligraphic font, such as $\mathcal{M}$. A plane can also be named with the labels of any three points on the plane, such as the plane $ABC$, or $BCA$, or $CAB$ or any other combination.
+
+Planes extend indefinitely in two dimensions, the planes shown in the *Planes in space* image are only squares, but the planes they represent, extend beyond these squares. Any shape in two dimensions can be used to represent a plane.
+
+(Espacio tridimensional)
+**3D space**: space in which the basic geometric shapes exist. Shapes in zero, one, or two dimensions, can be seen in 3D space. This space has three dimensions, it extends indefinitely in width, length, and height.
+
+(Puntos colineales)
+**Collinear points**: points that are on the same line. All the points on a given line are collinear.
+
+(Puntos coplanares)
+**Coplanar points**: points that are on the same plane. All the points on a given plane are coplanar.
+
+(Líneas coplanares)
+**Coplanar lines**: lines that are on the same plane. All the lines on a given plane are coplanar.
+
+(Segmento de línea)
+**Line segment**: a truncated line that ends in both of its sides and does not extend indefinitely. The points where the line ends are called endpoints (puntos extremos).
+[Line segment image code](Programs/Ch01/S01_04_Line_segment_image.py)
+![Line segment image](Images/Ch01/S01_04_Line_segment.png)
+*Line segment*
+
+Line segments are labeled using its endpoints and a horizontal bar on top of them, such as $\overline{AB}$ and $\overline{BA}$.
 
 <!-- # TODO postulate -->
 

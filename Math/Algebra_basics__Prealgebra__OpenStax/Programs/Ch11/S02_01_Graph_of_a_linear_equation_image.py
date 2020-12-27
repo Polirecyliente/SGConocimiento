@@ -4,8 +4,7 @@
 import matplotlib.pyplot as plt
 
 #T# create the figure and axes to graph the linear equation
-fig1 = plt.Figure()
-ax1 = plt.axes()
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# set the aspect ratio of the axes
 ax1.set_aspect('equal')

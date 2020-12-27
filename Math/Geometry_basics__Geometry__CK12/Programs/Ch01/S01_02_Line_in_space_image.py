@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 #T# create the figure and axes to draw the line
-fig1 = plt.Figure()
-ax1 = plt.axes()
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# hide the spines and the scales
 for it1 in ['top', 'bottom', 'left', 'right']:

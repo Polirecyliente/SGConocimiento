@@ -3,9 +3,8 @@
 #T# to do this drawing, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# create the figure and the axes
-fig1 = plt.Figure()
-ax1 = plt.axes()
+#T# create the figure and axes
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# hide the spines and the scales of the axes
 for it1 in ['top', 'bottom', 'left', 'right']:

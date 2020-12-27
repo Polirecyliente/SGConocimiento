@@ -4,8 +4,7 @@
 import matplotlib.pyplot as plt
 
 #T# create the figure and axes
-fig1 = plt.Figure()
-ax1 = plt.axes() # type: plt.Axes
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# set the axes aspect ratio
 ax1.set_aspect('equal')

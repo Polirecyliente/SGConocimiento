@@ -4,8 +4,7 @@
 import matplotlib.pyplot as plt
 
 #T# create the figure and axes
-fig1 = plt.Figure()
-ax1 = plt.axes()
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# hide the spines and the scales of the axes
 for it1 in ['top', 'bottom', 'left', 'right']:

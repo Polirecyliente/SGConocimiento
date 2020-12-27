@@ -4,8 +4,7 @@
 import matplotlib.pyplot as plt
 
 #T# create the figure and axes to graph the polynomial
-fig1 = plt.Figure()
-ax1 = plt.axes()
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# create a list of points of the polynomial in the x-axis, and another list in the y-axis
 list1 = [it1 for it1 in range(-16, 20)]

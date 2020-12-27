@@ -4,8 +4,7 @@
 import matplotlib.pyplot as plt
 
 #T# create the figure and the axes
-fig1 = plt.Figure()
-ax1 = plt.axes()
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# set the limits of the number line
 xmin = -2.5; xmax = 5.5

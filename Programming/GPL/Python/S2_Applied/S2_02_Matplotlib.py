@@ -71,11 +71,13 @@ plt.show()
 
 #T# create a figure with the figure constructor, it returns a figure object
 
-# SYNTAX plt.figure("figure_name1")
-#T# the argument "figure_name1" is the figure identification, and the figure title
+# SYNTAX plt.figure("figure_name1", kwargs1)
+#T# the argument "figure_name1" is the figure identification, and the figure title, kwargs1 are the kwarg value pairs
+
+#T# the figsize kwarg is a tuple of two numbers, that sets the horizontal and vertical size of the figure
 
 fig1 = plt.figure() # type: plt.Figure
-fig2 = plt.figure("Second figure")
+fig2 = plt.figure("Second figure", figsize = (2, 1))
 
 #T# each figure has a number attribute with a unique number among the figures, get a list of these numbers with the get_fignums function
 list1 = plt.get_fignums() # [1, 2]
@@ -134,8 +136,12 @@ ax1 = fig1.add_axes([0, 0, 1, 1], label = 'new axes one')
 
 # |-----
 #T# the axes attribute of a figure object has a list of the axes in the figure
+fig1, axes1 = plt.subplots(2, 1)
 axes_in_fig1 = fig1.axes
 int1 = len(axes_in_fig1) # 2
+
+#T# the figure attribute of an axes object contains the figure of the axes object
+fig1 = ax1.figure # <Figure size 640x480 with 1 Axes>
 
 #T# get the current axes with the gca function
 current_axes1 = plt.gca()
@@ -281,6 +287,14 @@ fig1, axes_ndarr1 = plt.subplots(2, 3)
 #T# access subplots in an axes ndarray
 axes_ndarr1[0][2].plot([2, 4], [7, 12])
 #T# this figure has 6 axes, and the plot goes in rwo 1, col 3
+
+#T# set the transparency (or alpha value) and the color of the figure and the axes with the set_facecolor function, it interprets colors as a hex value, the last two hex numbers indicate the alpha value
+fig1.set_facecolor('#EEEEEE00') #| creates a transparent figure
+ax1.set_facecolor('#EEEEEE00')  #| creates transparent axes
+
+#T# set the width of a figure with the set_figwidth function, and the height of a figure with the set_figheight function
+fig1.set_figwidth(4)
+fig1.set_figheight(3)
 # |-----
 
 # |-------------------------------------------------------------

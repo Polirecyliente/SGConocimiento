@@ -4,12 +4,11 @@
 import matplotlib.pyplot as plt
 
 #T# create the figure and axes to draw the points
-fig1 = plt.Figure()
-ax1 = plt.axes()
+fig1, ax1 = plt.subplots(1, 1)
 
 #T# create the points to draw
-list1 = [3, 5, 6, 8] #| list of the x coordinates of the points
-list2 = [7, 2, 5, 4] #| list of the y coordinates of the points
+list1 = [3, 5, 6, 8] #| x coordinates of the points
+list2 = [7, 2, 5, 4] #| y coordinates of the points
 
 #T# plot the points
 plt.scatter(list1, list2)
