@@ -32,8 +32,8 @@ rise1 = rise1*k1
 run1 = run1*k1
 
 #T# create the coordinates of the endpoint and of the point inside the ray
-list1 = [1, 7] #| x coordinates of the points
-list2 = [4, 2] #| y coordinates of the points
+list1 = [1, 7] #| x coordinates
+list2 = [4, 2] #| y coordinates
 
 #T# plot the ray
 ray1 = mpatches.FancyArrowPatch((p1[0], p1[1]), (p1[0] + run1, p1[1] + rise1), arrowstyle = '->', mutation_scale = 12)

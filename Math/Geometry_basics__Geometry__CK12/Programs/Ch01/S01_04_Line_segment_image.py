@@ -20,8 +20,8 @@ p1 = (2, 3)
 p2 = (5, 4)
 
 #T# create the coordinates of the endpoints of the line segment
-list1 = [2, 5] #| x coordinates of the endpoints
-list2 = [3, 4] #| y coordinates of the endpoints
+list1 = [2, 5] #| x coordinates
+list2 = [3, 4] #| y coordinates
 
 #T# plot the line segment
 plt.plot(list1, list2, 'k')

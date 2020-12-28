@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 #T# create the figure and axes to draw the points
 fig1, ax1 = plt.subplots(1, 1)
 
-#T# create the points to draw
-list1 = [3, 5, 6, 8] #| x coordinates of the points
-list2 = [7, 2, 5, 4] #| y coordinates of the points
+#T# create the coordinates of the points to draw
+list1 = [3, 5, 6, 8] #| x coordinates
+list2 = [7, 2, 5, 4] #| y coordinates
 
 #T# plot the points
 plt.scatter(list1, list2)

@@ -91,6 +91,34 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 ## Segments and distance (Segmentos y distancia)
 [Ch01_S02](https://www.ck12.org/reader/reader-index.html#section/2932918/1.2/9549314)
 
+(Distancia)
+**Distance**: the length between two given points.
+
+(Medición de distancia)
+**Measure of distance**: the process of determining the distance between two points. The ruler (la regla) is the basic instrument to measure distance. Rulers measure distance in units such as inches (pulgadas) and centimeters (centímetros).
+
+> Distance notation
+>
+> Let $A$ and $B$ be two points, the segment that they form as endpoints is $\overline{AB}$, and the measure of the distance of this segment is denoted by $AB$ or $m\overline{AB}$.
+
+(Postulado de la regla)
+**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler.
+
+(Postulado de adición de segmentos)
+**Segment addition postulate**: given three collinear points with one point being between the other two (the endpoints), the measure of the distance between the endpoints, is equal to the sum of the distances of each endpoint to the point between them.
+
+> Segment addition postulate
+>
+> Let $A$, $B$, and $C$, be three collinear points, with $B$ being between $A$ and $C$, then
+> $$AB + BC = AC$$
+
+[Segment addition postulate image code](Programs/Ch01/S02_01_Segment_addition_postulate_image.py)
+![Segment addition postulate image](Images/Ch01/S02_01_Segment_addition_postulate.png)
+*Segment addition postulate*
+
+(Plano coordenado)
+**Coordinate grid**: the two dimensional plane that uses tuples of two numbers, $x$ and $y$, to represent the location of points in the plane. The $x$ coordinate measures horizontal distance, and the $y$ coordinate measures vertical distance.
+
 ## Angles (Ángulos)
 [Ch01_S03](https://www.ck12.org/reader/reader-index.html#section/2932919/1.3/9549314)
 
