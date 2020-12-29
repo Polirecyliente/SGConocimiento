@@ -368,9 +368,23 @@ import numpy as np
 #T# the arange function creates an array given a numeric range
 
 # SYNTAX np.arange(int1, int2, int3, dtype = 'str1')
-#T# the dtype kwarg determines the type of the data in the returned numpy array, so str1 must be a valid numpy data type, int1 is the initial number, int2 is the step, and int3 - 1 is the final number in the range
+#T# the dtype kwarg determines the type of the data in the returned numpy array, so str1 must be a valid numpy data type, int1 is the starting number, int2 - 1 is the ending number, and int3 is the step, if int3 is omitted it defaults to 1
 
 arr1 = np.arange(1, 12, 3) # array([ 1,  4,  7, 10])
+
+#T# the linspace function creates an array given a numeric range and the number of elements of the array, evenly spacing the values of its elements
+
+# SYNTAX np.linspace(int1, int2, int3)
+#T# int1 is the starting number, int2 is the ending number, int3 is the number of elements in the array
+
+arr1 = np.linspace(1, 12, 3) # array([ 1. ,  6.5, 12. ])
+
+#T# the ones function creates an array of a given shape, filled with ones
+
+# SYNTAX np.ones(tuple1)
+#T# tuple1 is a tuple with the shape of the array
+
+arr1 = np.ones((2, 1, 3)) # array([[[1., 1., 1.]], [[1., 1., 1.]]])
 # |-----
 
 #C# --- Random number generation

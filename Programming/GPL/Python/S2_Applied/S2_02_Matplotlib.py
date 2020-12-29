@@ -288,6 +288,18 @@ fig1, axes_ndarr1 = plt.subplots(2, 3)
 axes_ndarr1[0][2].plot([2, 4], [7, 12])
 #T# this figure has 6 axes, and the plot goes in rwo 1, col 3
 
+#T# the subplot function creates a single axes pair in a given position of the subplots
+
+# SYNTAX plt.subplot(int1, int2, int3, kwargs1)
+#T# int1 is the number of rows of subplots, int2 is the number of columns of subplots, int3 is the particular subplot in which the axes will be created, kwargs1 are the kwarg value pairs
+
+#T# int3 is counted by rows, from left to right, starting at the first row
+
+#T# the projection kwarg is a string to set the type of projection of the axes, its value can be, 'aitoff', 'hammer', 'lambert', 'mollweide', 'polar', and 'rectilinear' which is the default
+
+ax1 = plt.subplot(3, 2, 3) #| creates the axes in a grid of subplots with 3 rows and 2 columns, the axes pair is created on the first column second row (which is the third subplot counting left to right, row by row)
+ax1 = plt.subplot(1, 1, 1, projection = 'mollweide')
+
 #T# set the transparency (or alpha value) and the color of the figure and the axes with the set_facecolor function, it interprets colors as a hex value, the last two hex numbers indicate the alpha value
 fig1.set_facecolor('#EEEEEE00') #| creates a transparent figure
 ax1.set_facecolor('#EEEEEE00')  #| creates transparent axes
@@ -366,6 +378,9 @@ ax1.set_title('Axes title string')
 # |-----
 #T# each of the four sides of the axes is called a spine, the spines attribute of an axes object is used to access each spine individually, using the spines attribute as a dictionary. The spine names are: 'left', 'bottom', 'right', 'top'
 spine1 = ax1.spines['top']
+
+#T# the spine in polar projection is called 'polar' and is the only spine
+spine1 = ax1.spines['polar']
 
 #T# the set_visible function of the spines is used the set their visibility
 spine1.set_visible(False)
@@ -500,11 +515,13 @@ plt.hist(z)
 
 #T# create a scatter plot with the scatter function
 
-# SYNTAX plt.scatter(list1, list2)
-#T# each dot in the scatter plot comes from each value in list1 paired with each value in list2 in the same position of the lists
+# SYNTAX plt.scatter(list1, list2, kwargs1)
+#T# each dot in the scatter plot comes from each value in list1 paired with each value in list2 in the same position of the lists, kwargs1 is the kwarg value pair
+
+#T# the s kwarg (for scale) is a number that sets the scale of the markers of the scatter plot
 
 x = [4, 1]
-plt.scatter(x, y)
+plt.scatter(x, y, s = 6)
 
 #T# plot an arrow with the arrow function
 
@@ -514,6 +531,18 @@ plt.scatter(x, y)
 #T# the shape kwarg can have one of the values, 'full', 'left', or 'right', to determine the side, or sides of the arrow to draw
 
 plt.arrow(0, 0, 3, 5, width = 0.2, length_includes_head = True, shape = "left", overhang = 0.2, linestyle = '--', fill = False, facecolor = "#FF99DD", edgecolor = "#33FF99", hatch = '/', zorder = 3, alpha = 0.7)
+
+#T# the polar function creates a plot like the plot function but in polar coordinates
+
+# SYNTAX plt.polar(list1, list2, kwargs1)
+#T# list1 is a list with the angles, list2 is a list with the radii, so the axes should use polar projection, kwargs1 are the kwarg value pairs
+
+# SYNTAX plt.polar(list1, list2, str1)
+#T# same as before, str1 is the formatting string that behaves like in the plot function
+
+list1 = [0, 3.14/2]
+list2 = [1, 1]
+plt.polar(list1, list2) #| plots a line segment, in rectangular coordinates the segment goes from (1, 0) to (0, 1)
 
 #C# --- Patches
 
@@ -575,6 +604,15 @@ import matplotlib.patches as mpatches
 #T#     '|-|', bidirectional perpendicular line arrowheads
 
 arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrowstyle = '|-|')
+
+#T# the Arc patch is used to create arcs
+
+# SYNTAX mpatches.Arc(tuple1, num1, num2, kwargs1)
+#T# tuple1 is a tuple of two numbers with the x-y coordinates of the center of the arc, num1 is the horizontal diameter of the arc, num2 is the vertical diameter of the arc, kwargs1 are the kwarg value pairs
+
+#T# the theta1, theta2 kwargs are numbers used to indicate the starting angle and the ending angle respectively (measured in degrees)
+
+arc1 = mpatches.Arc((3, 2), 1, 1, theta1 = 15, theta2 = 60)
 # |--------------------------------------------------/
 
 # |-----

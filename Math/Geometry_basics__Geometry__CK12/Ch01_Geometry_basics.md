@@ -101,6 +101,15 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 >
 > Let $A$ and $B$ be two points, the segment that they form as endpoints is $\overline{AB}$, and the measure of the distance of this segment is denoted by $AB$ or $m\overline{AB}$.
 
+> Method of distance measurement using a ruler
+>
+> 1. Make sure that the ruler can be fitted in the space between the two points whose distance is being measured.
+> 2. Place the $0$ tick of the ruler in one of the points.
+> 3. Place the ruler so that the ticks touch the second point.
+> 4. Read the number of the tick nearest to the second point, this is the measure of the distance.
+
+This method can be used to draw a given length.
+
 (Postulado de la regla)
 **Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler.
 
@@ -121,6 +130,103 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 
 ## Angles (Ángulos)
 [Ch01_S03](https://www.ck12.org/reader/reader-index.html#section/2932919/1.3/9549314)
+
+Given two distinct rays that share their endpoint, the angle formed between the two rays is the measure of the rotation needed to get from one ray to the other.
+
+> Angle notation
+>
+> Let $A$, $B$, and $C$, be three points, such that they form two distinct rays, $\overrightarrow{BA}$ and $\overrightarrow{BC}$, then the angle that these rays form is denoted as $\angle ABC$ or $\angle CBA$ or $\angle B$, letting $B$ as the point in the middle or the only one to denote the angle.
+
+[Angle from two rays image code](Programs/Ch01/S03_01_Angle_from_two_rays_image.py)
+![Angle from two rays image](Images/Ch01/S03_01_Angle_from_two_rays.png)
+*Angle from two rays*
+
+Angles are commonly shown in diagrams with an arc between the two rays. In the *Angle from two rays* image, the angle $\angle B$ is $\theta$.
+
+(Vértice)
+**Vertex**: in an angle, the vertex is the endpoint where the two rays join. In the angle $\angle ABC$, the vertex is the point $B$.
+
+(Lados)
+**Sides**: in an angle, the sides are each of the rays that form the angle.
+
+(Transportador)
+**Protractor**: instrument to measure angles. The most common units of measure are degrees and radians. Degrees denote a rotation of a full circle as $360 \degree$, and in radians this is denoted as $2 \pi$.
+
+An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another. The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \degree$ or $\pi$ radians.
+
+> Angle measure notation
+>
+> Let $A$, $B$, $C$, be three points that form an angle with vertex $B$, then the angle $\angle ABC$ has a measure denoted as $m \angle ABC$, or also $m \angle B$.
+
+> Method of angle measurement using a protractor
+>
+> 1. Place the vertex of the protractor on top of the vertex of the rays whose angle is being measured.
+> 2. Make sure that both rays extend beyond the protractor.
+> 3. Rotate the protractor around its vertex so that the $0$ tick is aligned with one of the rays. The other ray must be under the protractor, otherwise put the $0$ tick under the other ray.
+> 4. Read the number of the tick nearest to the other ray, this is the measure of the angle.
+
+This method can be used to draw a given angle.
+
+(Postulado del transportador)
+**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor.
+
+(Ángulo llano)
+**Straight angle**: the angle of half a circle, i.e. $180 \degree$ or $\pi$ radians. Two rays that have this angle form a straight line. 
+
+(Rayos opuestos)
+**Opposite rays**: two rays with a straight angle between them.
+
+(Ángulo recto)
+**Right angle**: the angle of a quarter of a circle, i.e. $90 \degree$ or $\pi/2$ radians. The arc between the rays that is used to denote a right angle is a small square instead of an arc.
+
+(Ángulo agudo)
+**Acute angle**: an angle greater than or equal to $0 \degree$ ($0$ radians) and less than $90 \degree$ ($\pi/2$ radians).
+
+(Ángulo obtuso)
+**Obtuse angle**: an angle greater than $90 \degree$ ($\pi/2$ radians) and less than $180 \degree$ ($\pi$ radians).
+
+(Líneas perpendiculares)
+**Perpendicular lines**: two lines (or rays, or segments) that cross each other at right angles, i.e. the angles formed at the intersection of the lines are right angles.
+[Perpendicular lines image code](Programs/Ch01/S03_02_Perpendicular_lines_image.py)
+![Perpendicular lines image](Images/Ch01/S03_02_Perpendicular_lines.png)
+*Perpendicular lines*
+
+Perpendicularity is denoted with the $\perp$ symbol. From the *Perpendicular lines* image, the lines $l$ and $m$ are perpendicular to each other, so $l \perp m$, which is the same as $m \perp l$, or $\overleftrightarrow{BC} \perp \overleftrightarrow{DE}$.
+
+(Regla no graduada)
+**Straightedge**: an instrument used to make straight lines, like a ruler but without tick marks.
+
+(Compás)
+**Compass**: an instrument used to draw arcs.
+
+(Centrar el compás en un punto dado)
+**Center the compass on a given point**: put the needle of the compass in the given point.
+
+(Construcciones geométricas)
+**Geometric constructions**: a drawing made with straightedge and compass, commonly with the intention to follow given steps in the use of said instruments, to obtain a given geometric shape.
+
+(Copiar un ángulo)
+**Copy an angle**: it's possible to copy an angle by doing a construction.
+
+> Method to copy an angle using a straightedge and a compass
+>
+> This method assumes both angles are being depicted in paper or in a similar way.
+> 1. Choose which is the first ray and which the second ray in the angle being copied.
+> 2. Make a copy of the first ray with the straightedge.
+> 3. Center the compass on the vertex of the angle being copied, draw an arc at any radius such that the arc passes over both rays. Repeat this arc in the copied ray from step 2.
+> 4. Center the compass in the angle being copied at the intersection of the arc from step 3 and the first ray. Open (or close) the compass to draw an arc that passes through the intersection of the arc from step 3 and the second ray. Repeat this arc in the copied ray from step 2.
+> 5. Draw a line with the straightedge in the new copy of the angle, that passes through its vertex and the intersection of the two arcs that should have formed from the previous steps, the resulting angle is a copy of the first one.
+
+(Marcas de los ángulos)
+**Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marca del ángulo). Arc marcs are commonly of two types: several repeated arcs, or these arcs with small perpendicular lines crossing them.
+[Angle markings image code](Programs/Ch01/S03_03_Angle_markings_image.py)
+![Angle markings image](Images/Ch01/S03_03_Angle_markings.png)
+*Angle markings*
+
+
+
+
+<!-- # TODO angle addition postulate -->
 
 ## Midpoint and bisector (Punto medio y bisectriz)
 [Ch01_S04](https://www.ck12.org/reader/reader-index.html#section/2932920/1.4/9549314)
