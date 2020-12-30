@@ -23,17 +23,13 @@ ax1.spines['polar'].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
 
-#T# create one point and four angles to draw five rays with a common vertex
+#T# create one point and five angles to draw five rays with a common vertex
 p0 = (0, 0)
 a0 = 0
 a1 = np.pi/8
 a2 = 2*a1
 a3 = a2 + np.pi/2 + .15
 a4 = np.pi + .5
-
-#T# set the axes size
-#num1 = 1
-#ax1.axis([-num1, num1, -num1, num1])
 
 #T# plot the angles with their arc marks
 list_patches1 = []

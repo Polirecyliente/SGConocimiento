@@ -218,15 +218,30 @@ Perpendicularity is denoted with the $\perp$ symbol. From the *Perpendicular lin
 > 5. Draw a line with the straightedge in the new copy of the angle, that passes through its vertex and the intersection of the two arcs that should have formed from the previous steps, the resulting angle is a copy of the first one.
 
 (Marcas de los ángulos)
-**Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marca del ángulo). Arc marcs are commonly of two types: several repeated arcs, or these arcs with small perpendicular lines crossing them.
+**Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marcas del ángulo). Arc marks are commonly of two types: several repeated arcs, or these arcs with small perpendicular lines crossing them.
 [Angle markings image code](Programs/Ch01/S03_03_Angle_markings_image.py)
 ![Angle markings image](Images/Ch01/S03_03_Angle_markings.png)
 *Angle markings*
 
+(Marcas de los segmentos)
+**Segment markings**: segments can be marked to differentiate between them. Segments are marked with hash marks (marcas del segmento). Hash marks are commonly repeated small lines perpendicular to the segment, placed around the center of the segment.
+[Segment markings image code](Programs/Ch01/S03_04_Segment_markings_image.py)
+![Segment markings image](Images/Ch01/S03_04_Segment_markings.png)
+*Segment markings*
 
+In the *Segment markings* image, the two segments at the bottom have the same length, as shown by their equal markings. The rest of the segments are different from each other, so each one has it's unique marking.
 
+(Postulado de adición de ángulos)
+**Angle addition postulate**: given two angles that share a common ray, the measure of the angle between the two non common rays, is equal to the sum of the two angles given.
 
-<!-- # TODO angle addition postulate -->
+> Angle addition postulate
+>
+> Let $\overrightarrow{DA}$, $\overrightarrow{DB}$, and $\overrightarrow{DC}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{DB}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then
+> $$m \angle ADB + m \angle CDB = m \angle ADC$$
+
+[Angle addition postulate image code](Programs/Ch01/S03_05_Angle_addition_postulate_image.py)
+![Angle addition postulate image](Images/Ch01/S03_05_Angle_addition_postulate.png)
+*Angle addition postulate*
 
 ## Midpoint and bisector (Punto medio y bisectriz)
 [Ch01_S04](https://www.ck12.org/reader/reader-index.html#section/2932920/1.4/9549314)

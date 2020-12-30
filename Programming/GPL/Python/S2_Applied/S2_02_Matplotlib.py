@@ -16,6 +16,7 @@
 #C# --- Titles
 #C# --- Spines
 #C# --- Ticks
+#C# --- Markers
 #C# Annotations
 #C# --- Latex symbols
 #C# Coordinate systems
@@ -316,7 +317,9 @@ fig1.set_figheight(3)
 # |-------------------------------------------------------------
 #T# basic formatting of a plot
 
-# SYNTAX plt.plot(x, y, 'basic_formatting_string1', kwargs)
+# SYNTAX plt.plot(list1, list2, 'basic_formatting_string1', kwargs1)
+#T# list1 is a list with the x coordinates to plot, list2 is a list with the respective y coordinates, kwargs1 are the kwarg value pairs
+
 #T# the 'basic_formatting_string1' is a string whose characters have formatting meaning, these characters can have one of three meanings, marker shape, line style, or color, and the order should be marker_char1-line_char1-color_char1
 
 #T# marker shape
@@ -358,6 +361,8 @@ fig1.set_figheight(3)
 #T#     'w' white
 
 #T# the clip_on kwarg is a boolean, that sets whether or not to the plot clips at the axes borders, so when False, the plot outside of the axes will be rendered
+
+#T# the marker kwarg is a string used to set the marker directly, this is string can be any of the chars for marker shapes shown before, or it also can be a tuple 
 
 plt.plot([3, 7], [-1, 5], 'w')
 
@@ -423,6 +428,31 @@ ax1.set_xticks([-8, 0, 8, 16, 24])
 #T# when the numeric ticks are float numbers, but want to be represented as fractions, the set_xticklabels, set_yticklabels functions can be used
 ax1.set_xticks([0, 2/3, 4/3])
 ax1.set_xticklabels(['0', '2/3', '4/3']) #| without this, the tick at 2/3 appears as 0.6666
+# |-----
+
+#C# --- Markers
+
+# |-----
+#T# to create markers, the MarkerStyle constructor is used
+from matplotlib.markers import MarkerStyle
+marker1 = MarkerStyle(r'$|||$') #| the argument to the constructor is the marker, see "marker shape" in this file to see valid values of this string
+
+#T# markers can be transformed in several ways by using methods of the _transform private attribute
+
+#T# the translate function moves the marker, its arguments are in x-y coordinates
+marker1._transform.translate(-1, -1) #| moves the marker to the left and down
+
+#T# the rotate function rotates the marker in a given amount of radians
+marker1._transform.rotate(1) #| rotates the marker 1 radian
+
+#T# the rotate_deg function rotates the marker in a given amount of degrees
+marker1._transform.rotate_deg(45) #| rotates the marker 45 degrees
+
+#T# the scale function scales the marker in two dimensions, x and y
+marker1._transform.scale(2, 3) #| scales the marker twice horizontally and three times vertically
+
+#T# the skew function skews the marker in two dimensions, x and y
+marker1._transform.skew(1, 1) #| skews the marker once in each dimension
 # |-----
 
 # |-------------------------------------------------------------
