@@ -3,7 +3,7 @@
 #T# to draw hash marks, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# to transform the markers, import the MarkerStyle constructor
+#T# to transform the markers of a plot, import the MarkerStyle constructor
 from matplotlib.markers import MarkerStyle
 
 #T# create the figure and axes
@@ -57,7 +57,7 @@ marker1 = MarkerStyle(r'$|$')
 marker2 = MarkerStyle(r'$||$')
 marker3 = MarkerStyle(r'$|||$')
 
-#T# transform the markers to make them the correct size
+#T# transform the markers to make them the correct shape and size
 marker1._transform.scale(1.6, 1.4)
 marker2._transform.scale(1.6, 1.4)
 marker3._transform.scale(1.6, 1.4)

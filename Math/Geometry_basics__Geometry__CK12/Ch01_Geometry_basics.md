@@ -246,6 +246,98 @@ In the *Segment markings* image, the two segments at the bottom have the same le
 ## Midpoint and bisector (Punto medio y bisectriz)
 [Ch01_S04](https://www.ck12.org/reader/reader-index.html#section/2932920/1.4/9549314)
 
+(Congruencia)
+**Congruence**: when two geometric figures have the same shape and size, e.g. two segments with the same length, two angles with the same measure, two triangles with the same shape and size.
+
+> Congruence notation
+>
+> Let $\overline{AB}$ be a segment, the congruence with itself is denoted as
+> $$\overline{AB} \cong \overline{BA}$$
+> This symbol \cong is used in general to indicate two congruent geometric figures.
+
+(Punto medio)
+**Midpoint**: the point on a segment, that divides it into two congruent segments.
+[Midpoint image code](Programs/Ch01/S04_01_Midpoint_image.py)
+![Midpoint image](Images/Ch01/S04_01_Midpoint.png)
+*Midpoint*
+
+As shown in the *Midpoint* image, the lengths $AB$ and $BC$ are equal, i.e. $AB = BC$, so the point $B$ is the midpoint of the segment $\overline{AC}$.
+
+(Postulado del punto medio)
+**Midpoint postulate**: a segment has exactly one midpoint.
+
+(Fórmula del punto medio)
+**Midpoint formula**: a formula to calculate the midpoint from two points.
+
+> Midpoint formula
+>
+> Let $(x_1, y_1)$ and $(x_2, y_2)$ be two points in the $x$-$y$ plane, then the midpoint of the segment they form is
+> $$\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$$
+
+This formula can be derived from a more general formula
+
+> General formula to divide a segment into $n$ subsegments and get the location of the $k$-th subsegment
+>
+> Let $(x_1, y_1)$ and $(x_2, y_2)$ be the two points that define a segment, this segment can be divided into $n$ subsegments. Counting from $(x_1, y_1)$, the coordinates of the $k$-th subsegment are
+> $$\left(x_1 + k\frac{x_2 - x_1}{n}, y_1 + k\frac{y_2 - y_1}{n}\right)$$
+
+Making $k = 1$ and $n = 2$ results in the midpoint formula.
+
+(Bisectriz de un segmento)
+**Segment bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in any angle.
+[Segment bisector image code](Programs/Ch01/S04_02_Segment_bisector_image.py)
+![Segment bisector image](Images/Ch01/S04_02_Segment_bisector.png)
+*Segment bisector*
+
+(Mediatriz)
+**Perpendicular bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in a perpendicular way.
+[Perpendicular bisector image code](Programs/Ch01/S04_03_Perpendicular_bisector_image.py)
+![Perpendicular bisector image](Images/Ch01/S04_03_Perpendicular_bisector.png)
+*Perpendicular bisector*
+
+(Postulado de la mediatriz)
+**Perpendicular bisector postulate**: a given segment has only one line that is its perpendicular bisector.
+
+There are infinitely many segment bisectors and only one perpendicular bisector to a given segment. As shown in the *Perpendicular bisector* image, $\overleftrightarrow{DE} \perp \overline{AC}$, and $\overline{AB} \cong \overline{BC}$, so the line $\overleftrightarrow{DE}$ is the perpendicular bisector of $\overline{AC}$.
+
+(Construcción de la mediatriz)
+**Perpendicular bisector construction**: a geometric construction to draw the perpendicular bisector of a given segment
+
+> Perpendicular bisector construction
+>
+> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials)
+> 1. Draw the segment whose perpendicular bisector will be constructed, with space around it.
+> 2. Center the compass on one of the endpoints of the segment from step 1, with a radius greater than half the length of the segment. Draw arcs above and below the segment. Repeat this step with the other endpoing of the segment, ensuring that the arcs above and below intercept, and being careful to not change the radius of the compass.
+> 3. Draw a line that passes through both arc interceptions above and below the segment, this line bisects the segment perpendicularly.
+>
+> This construction works as long as the radius of the compass is the same on both endpoints, because this would create two circles of equal radii, and the line that passes through their arc interceptions must be at equal distance from both centers, which is the midpoint of the segment between the centers.
+>
+> If one radius is smaller, this can serve to create lines that cross the segment at other fractions different from one half the lenght of the segment.
+
+(Bisectriz de un ángulo)
+**Angle bisector**: a line, ray, or segment, that divides a given angle into two congruent angles, each with half the measure of the given angle.
+[Angle bisector image code](Programs/Ch01/S04_04_Angle_bisector_image.py)
+![Angle bisector image](Images/Ch01/S04_04_Angle_bisector.png)
+*Angle bisector*
+
+The segment $\overline{AC}$ is the angle bisector of the angle $\angle DAB$, so $m \angle DAC = m \angle BAC$.
+
+(Postulado de la bisectriz de un ángulo)
+**Angle bisector postulate**: a given angle has only one line that is its angle bisector.
+
+In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into a line, then the line $\overleftrightarrow{AC}$ is the angle bisector of the angle $\angle DAB$. The angle bisector does not have to be a line, but if it's a line then it's guaranteed to be the only one that is the angle bisector.
+
+(Construcción de la bisectriz de un ángulo)
+**Angle bisector construction**: a geometric construction to draw the angle bisector of a given angle
+
+> Angle bisector construction
+>
+> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials)
+> 1. Draw the angle whose bisector will be constructed, with space around it.
+> 2. Center the compass on the vertex of the angle, draw an arc at any radius such that it crosses both sides of the angle.
+> 3. Apply the perpendicular bisector construction, taking as endpoints the intersections of the arc with the sides of the angle.
+> 4. Extend the line of the perpendicular bisector construction made in step 3 until it crosses the vertex of the angle, this line is the angle bisector.
+
 ## Angle pairs (Pares de ángulos)
 [Ch01_S05](https://www.ck12.org/reader/reader-index.html#section/4668241/1.5/9549314)
 

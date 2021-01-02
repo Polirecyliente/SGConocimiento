@@ -489,6 +489,10 @@ plt.text(1, 1, 'text1', font = 'cmmi10') #| this sets the font to the italic Lat
 
 ax1.annotate('annotation in the image', (.4, .8), (.5, .7), arrowprops = {'arrowstyle': '->'})
 
+#T# the draggable function serves to be able to drag an annotation in a figure after plotting it
+annotation1 = ax1.annotate('str1', (0, 0), (0, 0))
+annotation1.draggable()
+
 #C# --- Latex symbols
 
 # |-----
