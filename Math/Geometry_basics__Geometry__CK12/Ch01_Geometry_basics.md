@@ -341,5 +341,39 @@ In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into 
 ## Angle pairs (Pares de ángulos)
 [Ch01_S05](https://www.ck12.org/reader/reader-index.html#section/4668241/1.5/9549314)
 
+(Ángulos complementarios)
+**Complementary angles**: two angles whose measures when added together add up to $90 \degree$ or $\pi/2$ radians.
+
+(Ángulos suplementarios)
+**Supplementary angles**: two angles whose measures when added together add up to $180 \degree$ or $\pi$ radians.
+
+(Ángulos adyacentes)
+**Adjacent angles**: two angles that have the same vertex and share one side, which means that only three rays are required to create two adjacent angles.
+
+(Par lineal)
+**Linear pair**: two adjacent angles such that the two non-shared sides form a straight line.
+
+(Postulado del par lineal)
+**Linear pair postulate**: the two angles of a linear pair are supplementary.
+
+(Ángulos verticales)
+**Vertical angles**: in the intersection of two lines, vertical angles are pairs of angles that are on opposite sides of the intersection.
+[Vertical angles image code](Programs/Ch01/S05_01_Vertical_angles_image.py)
+![Vertical angles image](Images/Ch01/S05_01_Vertical_angles.png)
+*Vertical angles*
+
+As shown in the *Vertical angles* image, the angles $\alpha_1$ and $\alpha_2$ are vertical angles, and also the angles $\beta_1$ and $\beta_2$ are vertical angles. Each of these pairs have their angles located in opposite sides of the intersection of the lines.
+
+(Teorema de los ángulos verticales)
+**Vertical angles theorem**: two angles that are vertical angles, are also congruent.
+
+> Proof of the vertical angles theorem
+>
+> Using the *Vertical angles* image, the angles $\alpha_1$ and $\beta_1$ form a linear pair, as do the angles $\alpha_2$ and $\beta_1$. This means that the measures of the angles $\alpha_1$ and $\alpha_2$ must be the same, and so $\alpha_1 \cong \alpha_2$.
+>
+> On the other hand, the angles $\alpha_1$ and $\beta_2$ form a linear pair, as do the angles $\alpha_1$ and $\beta_1$, which means that also $\beta_1 \cong \beta_2$. $\blacksquare$
+
+The black square $\blacksquare$ means that the proof of the theorem is finished.
+
 ## Polygon classification (Clasificación de polígonos)
 [Ch01_S06](https://www.ck12.org/reader/reader-index.html#section/2932922/1.6/9549314)
