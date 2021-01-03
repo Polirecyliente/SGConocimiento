@@ -143,11 +143,11 @@ Given two distinct rays that share their endpoint, the angle formed between the 
 
 Angles are commonly shown in diagrams with an arc between the two rays. In the *Angle from two rays* image, the angle $\angle B$ is $\theta$.
 
-(Vértice)
-**Vertex**: in an angle, the vertex is the endpoint where the two rays join. In the angle $\angle ABC$, the vertex is the point $B$.
+(Vértice de un ángulo)
+**Vertex of an angle**: in an angle, the vertex is the endpoint where the two rays join. In the angle $\angle ABC$, the vertex is the point $B$.
 
-(Lados)
-**Sides**: in an angle, the sides are each of the rays that form the angle.
+(Lados de un ángulo)
+**Sides of an angle**: each of the rays that form the angle.
 
 (Transportador)
 **Protractor**: instrument to measure angles. The most common units of measure are degrees and radians. Degrees denote a rotation of a full circle as $360 \degree$, and in radians this is denoted as $2 \pi$.
@@ -377,3 +377,97 @@ The black square $\blacksquare$ means that the proof of the theorem is finished.
 
 ## Polygon classification (Clasificación de polígonos)
 [Ch01_S06](https://www.ck12.org/reader/reader-index.html#section/2932922/1.6/9549314)
+
+(Triángulo)
+**Triangle**: a shape formed with three segments in which each segment is connected to the other two with their endpoints.
+[Triangle image code](Programs/Ch01/S06_01_Triangle_image.py)
+![Triangle image](Images/Ch01/S06_01_Triangle.png)
+*Triangle*
+
+The triangle in the image can be denoted as $\triangle ABC$ or $\triangle BCA$ or using any other order of the points of the triangle.
+
+(Clasificación de triángulos según sus ángulos)
+**Classification of triangles based on angles**:
+
+- **Right triangle** (Triángulo rectángulo): a triangle that has one right angle.
+[Right triangle image code](Programs/Ch01/S06_02_Right_triangle_image.py)
+![Right triangle image](Images/Ch01/S06_02_Right_triangle.png)
+*Right triangle*
+
+- **Obtuse triangle** (Triángulo obtuso): a triangle that has one obtuse angle.
+[Obtuse triangle image code](Programs/Ch01/S06_03_Obtuse_triangle_image.py)
+![Obtuse triangle image](Images/Ch01/S06_03_Obtuse_triangle.png)
+*Obtuse triangle*
+
+- **Acute triangle** (Triángulo agudo): a triangle whose three angles are acute.
+[Acute triangle image code](Programs/Ch01/S06_04_Acute_triangle_image.py)
+![Acute triangle image](Images/Ch01/S06_04_Acute_triangle.png)
+*Acute triangle*
+
+- **Equiangular triangle** (Triángulo equiángulo): a triangle whose three angles are congruent.
+[Equiangular triangle image code](Programs/Ch01/S06_05_Equiangular_triangle_image.py)
+![Equiangular triangle image](Images/Ch01/S06_05_Equiangular_triangle.png)
+*Equiangular triangle*
+
+(Clasificación de triángulos según sus lados)
+**Classification of triangles based on sides**:
+
+- **Scalene triangle** (Triángulo escaleno): a triangle whose three sides have different lengths from each other.
+[Scalene triangle image code](Programs/Ch01/S06_06_Scalene_triangle_image.py)
+![Scalene triangle image](Images/Ch01/S06_06_Scalene_triangle.png)
+*Scalene triangle*
+
+- **Isosceles triangle** (Triángulo isósceles): a triangle with two sides of equal length.
+[Isosceles triangle image code](Programs/Ch01/S06_07_Isosceles_triangle_image.py)
+![Isosceles triangle image](Images/Ch01/S06_07_Isosceles_triangle.png)
+*Isosceles triangle*
+
+- **Equilateral triangle** (Triángulo equilátero): a triangle whose three sides have equal length. An equilateral triangle is also isosceles.
+[Equilateral triangle image code](Programs/Ch01/S06_08_Equilateral_triangle_image.py)
+![Equilateral triangle image](Images/Ch01/S06_08_Equilateral_triangle.png)
+*Equilateral triangle*
+
+(Polígono)
+**Polygon**: any geometric figure made with segments joined by their endpoints. Each of the endpoints of the segments in a polygon must be intersecting the endpoint of another segment.
+
+(Lados de un polígono)
+**Sides of a polygon**: the segments of the polygon.
+
+(Vértices de un polígono)
+**Vertices of a polygon**: the points of a polygon where the segments intersect.
+
+(Polígono convexo)
+**Convex polygon**: a polygon such that in each of its vertices, the angle measured inside the polygon is less than the angle measured outside the polygon.
+[Convex polygon image code](Programs/Ch01/S06_09_Convex_polygon_image.py)
+![Convex polygon image](Images/Ch01/S06_09_Convex_polygon.png)
+*Convex polygon*
+
+(Polígono cóncavo)
+**Concave polygon**: a polygon such that in at least one of its vertices, the angle measured inside the polygon is greater than the angle measured outside the polygon.
+[Concave polygon image code](Programs/Ch01/S06_10_Concave_polygon_image.py)
+![Concave polygon image](Images/Ch01/S06_10_Concave_polygon.png)
+*Concave polygon*
+
+In the image, the marked angle has a measure greater than the measure of the angle from that same vertex but outside the polygon, this makes the polygon to be concave.
+
+(Diagonales de un polígono)
+**Polygon diagonals**: the segments that are formed by connecting all the vertices of the polygon with each other, but that are not the sides of the polygon.
+[Polygon diagonals image code](Programs/Ch01/S06_11_Polygon_diagonals_image.py)
+![Polygon diagonals image](Images/Ch01/S06_11_Polygon_diagonals.png)
+*Polygon diagonals*
+
+The blue lines in the image are the diagonals of the polygon.
+
+(Clasificación de polígonos según el número de lados)
+**Classification of polygons based on the number of sides**:
+
+- **Triangle** (Triángulo): a polygon with three sides.
+- **Quadrilateral** (Cuadrilátero): a polygon with four sides.
+- **Pentagon** (Pentágono): a polygon with five sides.
+- **Hexagon** (Hexágono): a polygon with six sides.
+- **Heptagon** (Heptágono): a polygon with seven sides.
+- **Octagon** (Octágono): a polygon with eight sides.
+- **Nonagon** (Nonágono): a polygon with nine sides.
+- **Decagon** (Decágono): a polygon with ten sides.
+- **Undecagon** (Undecágono): a polygon with eleven sides.
+- **Dodecagon** (Dodecágono): a polygon with twelve sides.

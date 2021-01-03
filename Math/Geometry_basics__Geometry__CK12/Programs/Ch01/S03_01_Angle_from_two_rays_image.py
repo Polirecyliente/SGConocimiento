@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 #T# the patches module of the matplotlib package is used to draw arrows and arcs
 import matplotlib.patches as mpatches
 
+#T# import the math module to calculate the angle between the rays
+import math
+
 #T# create the figure and axes
 fig1, ax1 = plt.subplots(1, 1)
 
@@ -17,9 +20,6 @@ for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
-
-#T# import the math module to calculate the angle between the rays
-import math
 
 #T# create three points, i.e. one single endpoint and two points each on its own distinct ray
 p1 = (3, 2)

@@ -10,6 +10,7 @@
 #C# --- Array creation
 #C# --- Random number generation
 #C# --- Arithmetic
+#C# --- Trigonometry
 
 #T# Beginning of content
 
@@ -577,6 +578,22 @@ num3 = np.gcd(num1, num2) # 4
 #T# the reduce function from the gcd module calculates the greatest common divisor of a set of numbers inside a one dimensional array
 arr1 = np.array([12, 18, 36, 60])
 num1 = np.gcd.reduce(arr1) # 6
+# |-----
+
+#C# --- Trigonometry
+
+# |-----
+#T# the sin function returns the sine of its argument
+arr1 = np.sin([np.pi/4, np.pi/2, np.pi, 3/2*np.pi, 2*np.pi])
+# array([ 7.07106781e-01,  1.00000000e+00,  1.22464680e-16, -1.00000000e+00, -2.44929360e-16])
+
+#T# the cos function returns the cosine of its argument
+arr1 = np.cos([np.pi/4, np.pi/2, np.pi, 3/2*np.pi, 2*np.pi])
+# array([ 7.07106781e-01,  6.12323400e-17, -1.00000000e+00, -1.83697020e-16, 1.00000000e+00])
+
+#T# the tan function return the tangent of its argument
+arr1 = np.tan([np.pi/4, np.pi/2, np.pi, 3/2*np.pi, 2*np.pi])
+# array([ 1.00000000e+00,  1.63312394e+16, -1.22464680e-16,  5.44374645e+15, -2.44929360e-16])
 # |-----
 
 # |-------------------------------------------------------------

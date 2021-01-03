@@ -48,8 +48,8 @@ marker2 = MarkerStyle(r'$|$')
 
 #T# transform the markers to make them the correct shape and size
 marker1._transform.scale(1, 2.2)
-marker2._transform.scale(1, 2.2)
 marker1._transform.rotate(np.pi/2 + (a1 + a0)/2)
+marker2._transform.scale(1, 2.2)
 marker2._transform.rotate(np.pi/2 + (a2 + a1)/2)
 
 #T# plot the markers
