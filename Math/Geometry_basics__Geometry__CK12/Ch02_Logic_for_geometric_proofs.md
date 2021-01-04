@@ -41,6 +41,8 @@ Conditional statements are also called if-then statements, they are called in th
 
 In a conditional statement if the hypothesis happens then the conclusion happens.
 
+The hypothesis is also known as the antecedent (antecedente), and the conclusion is also known as the consequent (consecuente).
+
 (Lógica proposicional)
 **Propositional logic**: branch of logic that condenses events into symbols to operate over them and create propositions or statements.
 
@@ -49,7 +51,7 @@ In a conditional statement if the hypothesis happens then the conclusion happens
 > Let $p$, $q$ be two events, then those symbols, $p$ and $q$, represent said events.
 
 (Partes de una proposición condicional)
-**Parts of a conditional statement**: a conditional statement has three parts, the hyphotesis, the conclusion, and the connector between them.
+**Parts of a conditional statement**: a conditional statement has three parts, the hypothesis, the conclusion, and the connector between them.
 
 > Conditional statement notation
 >
@@ -91,7 +93,7 @@ In a conditional statement if the hypothesis happens then the conclusion happens
 > Let $p$, $q$ be two events, such that $p \rarr q$, then the inverse is
 > $$\neg p \rarr \neg q$$
 
-(Contrapositivo de una proposición)
+(Contrapositivo de una proposición|Contrarrecíproco de una proposición)
 **Contrapositive of a statement**: the result of negating and switching the order of the events of the statement.
 
 > Contrapositive of a conditional statement
@@ -105,6 +107,8 @@ In a conditional statement if the hypothesis happens then the conclusion happens
 > Example of truth value
 >
 > Let $p$ be the event 'I am healthy today', assigning it a truth value of $1$ means that $p$ happens, and assigning it a truth value of $0$ means that $p$ does not happen.
+
+Truth values are also called logical values (valores lógicos).
 
 (Proposiciones lógicas equivalentes)
 **Logically equivalent statements**: two distinct statements with the same events that lead to the same truth values.
@@ -136,6 +140,121 @@ The converse, inverse, and contrapositive of a biconditional statement are logic
 
 ## Deductive reasoning (Razonamiento deductivo)
 [Ch02_S03](https://www.ck12.org/reader/reader-index.html#section/2932927/2.3/9549314)
+
+Deductive reasoning means reasoning on the basis of given facts.
+
+> Example of deductive reasoning
+>
+> Let $p$, $q$ be two events, such that $p \rarr q$. Given the fact that $p$ happens, the conclusion is that $q$ happens or will happen. Concluding that $q$ happens is a deduction, because it's a conclusion that was arrived to by reasoning on the basis of the given facts $p$ and $p \rarr q$.
+
+(Ley de separación)
+**Law of detachment**: given two facts as true, that there exists a conditional statement and that the hypothesis of said conditional statement happens, the conclusion of the conditional statement can be deduced as a third true fact with no need for any other information.
+
+> Law of detachment
+>
+> Let $p$, $q$ be two events, let $p$ be true, and let the conditional $p \rarr q$ be also true, then $q$ is true by deduction.
+>
+> The law of detachment can be denoted as follows
+> $$p \rarr q\\
+> p\\
+> \therefore q
+> $$ The $\therefore$ symbol is the therefore symbol, read as therefore (por lo tanto). The statements before the $\therefore$ are assumed true, and the statements after the $\therefore$ are deduced to be true.
+
+The law of detachment is also known as modus ponendo ponens, which is latin for the mode that by affirming affirms.
+
+(Falacia lógica)
+**Logic fallacy**: a set of logical statements that are wrong or misconstrued.
+
+(Falacia del converso)
+**Fallacy of the converse**: also known as affirming the consequent (afirmación del consecuente), this fallacy states that given two true facts, a conditional statement and the consequent of said conditional, then the antecedent is deduced as being true.
+
+> Fallacy of the converse
+>
+> Let $p$, $q$ be two events, then
+> $$p \rarr q\\
+> q\\
+> \therefore p
+> $$ These logical statements are wrong, because if $p \rarr q$ is true and $q$ is true, then $p$ may or may not be true. It could be the case that $\neg p \rarr q$.
+
+The fallacy of the converse is also known as the converse error (error converso), because it would only be true if the converse $q \rarr p$ was true, instead of the actual conditional $p \rarr q$.
+
+(Ley contrarrecíproca)
+**Law of contrapositive**: given two facts as true, that there exists a conditional statement and that the consecuent negated happens, then the negation of the antecedent can be deduced as a third true fact.
+
+> Law of contrapositive
+>
+> Let $p$, $q$ be two events, let the conditional $p \rarr q$ be true and let $\neg q$ be also true, then $\neg p$ is true by deduction.
+>
+> The law of contrapositive can be denoted as follows
+> $$p \rarr q\\
+> \neg q\\
+> \therefore \neg p$$
+
+This law is true because the contrapositive of a conditional is logically equivalent to said conditional.
+
+(Ley del silogismo)
+**Law of syllogism**: a chain of conditionals can be made, so that the consequent of one conditional is the antecedent of the next conditional. Given a chain of conditionals, one extra conditional can be deduced, namely if the first antecedent in the chain is true, then the last consequent in the chain is true.
+
+> Law of syllogism
+>
+> Let $p$, $q$, $r$, $s$ events, then
+> $$p \rarr q\\
+> q \rarr r\\
+> r \rarr s\\
+> \therefore p \rarr s$$
+
+For that matter, several other conditionals could be deduced if needed, such as $p \rarr r$ and $q \rarr s$.
+
+(Conjunción lógica)
+**Logical conjunction**: the operation over two logical statements that returns a logical value of true if both logical statements are true. This is also known as the AND operation, because the first logical statement and the second must be true for the conjunction of them to be true.
+
+> Logical conjunction notation
+>
+> Let $p$, $q$ be two events, their conjunction is denoted as
+> $$p \land q$$
+
+The symbol $\land$ is the AND operator, $p \land q$ is read as $p$ and $q$ ($p$ y $q$).
+
+(Disyunción lógica)
+**Logical disjunction**: the operation over two logical statements that returns a logical value of true if either one or both logical statements are true. This is also known as the OR operation, because the first or the second logical statement or both can be true for the disjunction of them to be true.
+
+> Logical disjunction notation
+>
+> Let $p$, $q$ be two events, their disjunction is denoted as
+> $$p \lor q$$
+
+The symbol $\lor$ is the OR operator, $p \lor q$ is read as $p$ or $q$ ($p$ o $q$).
+
+(Tablas de verdad)
+**Truth tables**: tables made to organize the logical values of logical statements. They serve to compare side by side the logical values that result after applying different logical operators to logical statements and events.
+
+To indicate true and false, truth tables commonly use $1$ for true and $0$ for false, or also $T$ for true and $F$ for false. Truth tables consider all the possible combinations of logical values.
+
+In the following tables, let $p$, $q$ be logical statements.
+
+| $p$ | $\neg p$ |
+| :-: | :------: |
+| $1$ | $0$      |
+| $0$ | $1$      |
+*Truth table for the negation operation*
+
+| $p$ | $q$ | $p \land q$ |
+| :-: | :-: | :---------: |
+| $1$ | $1$ | $1$         |
+| $1$ | $0$ | $0$         |
+| $0$ | $1$ | $0$         |
+| $0$ | $0$ | $0$         |
+*Truth table for the and operation*
+
+| $p$ | $q$ | $p \lor q$ |
+| :-: | :-: | :--------: |
+| $1$ | $1$ | $1$        |
+| $1$ | $0$ | $1$        |
+| $0$ | $1$ | $1$        |
+| $0$ | $0$ | $0$        |
+*Truth table for the or operation*
+
+Truth tables can be used not only for binary operations but for more complex logical expressions, e.g. let $p$, $q$, $r$ be three logical statements, a truth table can be made for the expression $p \land (\neg q \lor r)$, this truth table would have $8$ rows, one for each possible combination of the logical values of $p$, $q$, and $r$, and with the logical value of the expression $p \land (\neg q \lor r)$ in the last column.
 
 ## Equality and congruence properties, two column proofs (Propiedades de la igualdad y la congruencia, demostraciones a dos columnas)
 [Ch02_S04](https://www.ck12.org/reader/reader-index.html#section/2932928/2.4/9549314)
