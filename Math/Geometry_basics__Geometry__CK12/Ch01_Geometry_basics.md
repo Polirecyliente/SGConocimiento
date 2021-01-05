@@ -4,13 +4,22 @@
 ## Points, lines, and planes (Puntos, líneas, y planos)
 [Ch01_S01](https://www.ck12.org/reader/reader-index.html#section/2932917/1.1/9549314)
 
-Geometry (Geometría) means the study of shapes and their spatial properties. Spatial refering to the space occupied by the shapes, or their location with regards to one another.
+Geometry (Geometría) means the study of figures and their spatial properties. Spatial refering to the space occupied by the figures, or their location with regards to one another.
+
+(Figura)
+**Figure**: a geometric object that occupies space.
 
 (Diagrama)
-**Diagram**: a picture or drawing used to show shapes and their geometry.
+**Diagram**: a picture or drawing used to show figures and their geometry.
+
+(Forma de una figura)
+**Shape of a figure**: the form of the figure.
+
+(Tamaño de una figura)
+**Size of a figure**: the amount of space occupied by the figure.
 
 (Punto)
-**Point**: a single piece of space that has no extension, i.e. a shape with zero dimensions. Points are used to indicate locations in space, they are represented with dots in diagrams.
+**Point**: a single piece of space that has no extension, i.e. a figure with zero dimensions. Points are used to indicate locations in space, they are represented with dots in diagrams.
 [Points in space image code](Programs/Ch01/S01_01_Points_in_space_image.py)
 ![Points in space image](Images/Ch01/S01_01_Points_in_space.png)
 *Points in space*
@@ -379,7 +388,7 @@ The black square $\blacksquare$ means that the proof of the theorem is finished.
 [Ch01_S06](https://www.ck12.org/reader/reader-index.html#section/2932922/1.6/9549314)
 
 (Triángulo)
-**Triangle**: a shape formed with three segments in which each segment is connected to the other two with their endpoints.
+**Triangle**: a figure formed with three segments in which each segment is connected to the other two with their endpoints.
 [Triangle image code](Programs/Ch01/S06_01_Triangle_image.py)
 ![Triangle image](Images/Ch01/S06_01_Triangle.png)
 *Triangle*

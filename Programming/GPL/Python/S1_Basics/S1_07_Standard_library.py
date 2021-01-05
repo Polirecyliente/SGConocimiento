@@ -35,6 +35,7 @@
 #C# --- Anchors and boundaries
 #C# --- Lookarounds
 #C# --- Regex modifiers
+#C# Iterator creation
 #C# Builtin values
 #C# --- Constants
 
@@ -507,6 +508,11 @@ bool1 = all(list1) # False
 dict1 = {'key1': 85, 'key2': 85}
 dict1.setdefault('new_key', 'new_val') # new_val
 dict1.setdefault('key2', 'val2') # 85
+
+#T# create a dictionary from two lists, the first list with they keys, and the second with the values, with the zip function
+list1 = [1, 3, 5]
+list2 = ['a', 'c', 'e']
+dict1 = dict(zip(list1, list2)) # {1: 'a', 3: 'c', 5: 'e'} #| the return of the zip function must be casted to dictionary because the zip function returns a zip object
 # |-------------------------------------------------------------
 
 #C# Datetime functions
@@ -1169,6 +1175,25 @@ search1 = regex.search(r'(?ix-m)S  T  R1', 'str1', flags = regex.V1) # <regex.Ma
 search1 = regex.search(r'(?i:STR)1 (?-i:STR)2', 'str1 STR2') # <regex.Match object; span=(0, 9), match='str1 STR2'>
 # |-----
 
+# |-------------------------------------------------------------
+
+#C# Iterator creation
+
+# |-------------------------------------------------------------
+#T# the itertools module is used to create iterators
+import itertools
+
+#T# the cartesian product of the elements of several iterables, is created with the product function, it can be casted to a list
+
+# SYNTAX itertools.product(list1, list2, kwargs1)
+#T# list1, list2, up to listN, are the iterables whose cartesian product is returned, kwargs1 are the kwarg value pairs
+
+#T# the repeat kwarg is a number that sets the amount of times that all the iterables are repeated, the cartesian product is calculated with this extended set of iterables
+
+product1 = itertools.product(['a', 'b', 'c'], [1, 2], repeat = 2) # <itertools.product object at 0x7f7d47bde8c0>
+list1 = list(product1)
+# [('a', 1, 'a', 1), ('a', 1, 'a', 2), ('a', 1, 'b', 1), ('a', 1, 'b', 2), ('a', 1, 'c', 1), ('a', 1, 'c', 2), ('a', 2, 'a', 1), ('a', 2, 'a', 2), ('a', 2, 'b', 1), ('a', 2, 'b', 2), ('a', 2, 'c', 1), ('a', 2, 'c', 2), ('b', 1, 'a', 1), ('b', 1, 'a', 2), ('b', 1, 'b', 1), ('b', 1, 'b', 2), ('b', 1, 'c', 1), ('b', 1, 'c', 2), ('b', 2, 'a', 1), ('b', 2, 'a', 2), ('b', 2, 'b', 1), ('b', 2, 'b', 2), ('b', 2, 'c', 1), ('b', 2, 'c', 2), ('c', 1, 'a', 1), ('c', 1, 'a', 2), ('c', 1, 'b', 1), ('c', 1, 'b', 2), ('c', 1, 'c', 1), ('c', 1, 'c', 2), ('c', 2, 'a', 1), ('c', 2, 'a', 2), ('c', 2, 'b', 1), ('c', 2, 'b', 2), ('c', 2, 'c', 1), ('c', 2, 'c', 2)]
+#| the cartesian product results in all possible combinations of the elements of the iterables, by changing the elements one by one from right to left
 # |-------------------------------------------------------------
 
 #C# Builtin values

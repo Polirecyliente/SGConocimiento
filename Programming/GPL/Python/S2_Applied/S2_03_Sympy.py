@@ -7,10 +7,12 @@
 #C# Data types
 #C# --- Numeric constants
 #C# Functions
+#C# --- Iterator creation
 #C# --- Equation solving
 #C# --- Simplification
 #C# --- Arithmetic
 #C# --- Algebra
+#C# --- Logic
 
 #T# Beginning of content
 
@@ -59,8 +61,17 @@ expr1 = var1 + var2                      # x + y
 expr2 = expr1.subs(var1 + var2, var3)    # z
 expr2 = expr1.subs(var1, var2 + var3)    # 2*y + z
 int1 = expr1.subs(var1, 3).subs(var2, 4) # 7
+bool1 = var1.subs(var1, True)            # True
 
-#T# to substitute several variables for numeric values in a single function, the evalf function can be used
+# SYNTAX expr1.subs(dict1)
+#T# same as before, but this syntax uses the dictionary dict1 to substitute its keys for its values in expr1
+
+var1 = sympy.Symbol('x')            # x
+var2 = sympy.Symbol('y')            # y
+expr1 = var1 + var2                 # x + y
+int1 = expr1.subs({var1:3, var2:4}) # 7
+
+#T# another way to substitute several variables for numeric values in a single function call, is using the evalf function
 
 # SYNTAX expr1.evalf(subs = {var1:val1, var2:val2})
 #T# the subs kwarg receives a dictionary of symbols of variables mapped to numeric values, each variable is replaced with each value, up to varN:valN
@@ -196,6 +207,14 @@ bool1 = sympy.S.false # False
 # |-------------------------------------------------------------
 import sympy
 
+#C# --- Iterator creation
+
+# |-----
+#T# the cartes function is an alias for the product function of the itertools module which is part of the Python standard library
+product1 = sympy.cartes([1, 0], repeat = 2)
+list1 = list(product1) # [(1, 1), (1, 0), (0, 1), (0, 0)]
+# |-----
+
 #C# --- Equation solving
 
 # |-----
@@ -284,6 +303,59 @@ var1 = sympy.Symbol('x')        # x
 expr1 = 3*var1**2 + 6*var1      # 3*x**2 + 6*x
 expr2 = 9*var1                  # 9*x
 expr3 = sympy.gcd(expr1, expr2) # 3*x
+# |-----
+
+#C# --- Logic
+
+# |-----
+#T# the logic and operator is the ampersand &
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = var1 & var2 # p & q
+expr1.subs({var1:sympy.S.true, var2:sympy.S.false}) # False
+expr1.subs({var1:sympy.S.true, var2:sympy.S.true})  # True
+
+#T# the And constructor is equivalent to the logic and
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = sympy.And(var1, var2) # p & q
+
+#T# the logic or operator is the vartical bar |
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = var1 | var2 # p | q
+
+#T# the Or constructor is equivalent to the logic or
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = sympy.Or(var1, var2) # p | q
+
+#T# a logical negation can be created with the ~ operator
+var1 = sympy.Symbol('p')
+expr1 = ~var1 # ~p
+
+#T# the Not constructor creates a logical negation
+var1 = sympy.Symbol('p')
+expr1 = sympy.Not(var1) # ~p
+
+#T# a conditional statement can be created with the >> operator
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = var1 >> var2 # Implies(p, q) #| p implies q
+
+#T# the Implies constructor creates a conditional statement
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = sympy.Implies(var1, var2) # Implies(p, q) #| p implies q
+
+#T# the Equivalent constructor creates a test to see if its arguments are logically equivalent to each other, to carry out the test the logical variables should be substituted for specific logical values
+var1 = sympy.Symbol('p')
+var2 = sympy.Symbol('q')
+expr1 = var1 >> var2
+expr2 = var2 >> var1 #| the converse of expr1
+expr3 = sympy.Equivalent(expr1, expr2) # Equivalent(Implies(p, q), Implies(q, p))
+bool1 = expr3.subs({var1:True, var2:True})  # True
+bool2 = expr3.subs({var1:False, var2:True}) # False #| expr1 and expr2 are not equivalent in all cases, which means that they are not logically equivalent
 # |-----
 
 # |-------------------------------------------------------------
