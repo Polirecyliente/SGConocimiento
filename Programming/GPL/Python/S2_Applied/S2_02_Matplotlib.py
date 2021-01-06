@@ -554,8 +554,10 @@ plt.hist(z)
 
 #T# the s kwarg (for scale) is a number that sets the scale of the markers of the scatter plot
 
+#T# the linewidths kwarg is a number that sets the linewidth of the markers
+
 x = [4, 1]
-plt.scatter(x, y, s = 6)
+plt.scatter(x, y, s = 6, linewidths = .1)
 
 #T# plot an arrow with the arrow function
 
