@@ -316,3 +316,45 @@ Step1 is supported by Reason1, Step2 is supported by Reason2, and so on.
 
 ## Proofs about angle pairs and segments (Demostraciones sobre pares de ángulos y segmentos)
 [Ch02_S05](https://www.ck12.org/reader/reader-index.html#section/2932929/2.5/9549314)
+
+(Teorema del ángulo recto)
+**Right angle theorem**: all right angles are congruent.
+
+> Proof of the right angle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\angle A$ and $\angle B$ be any two right angles | Given |
+> | $m \angle A = \pi/2$ and $m \angle B = \pi/2$ | Definition of right angles |
+> | $m \angle A = m \angle B$ | Transitive property of equality |
+> | $\angle A \cong \angle B$ | Definition of congruence |
+
+[Right angle theorem image code](Programs/Ch02/S05_01_Right_angle_theorem_image.py)
+![Right angle theorem image](Images/Ch02/S05_01_Right_angle_theorem.png)
+*Right angle theorem example*
+
+The segments may not be congruent but the right angles are.
+
+(Teorema de los suplementos congruentes)
+**Congruent supplements theorem**: two angles are congruent when they are supplementary to another angle, or when they are supplementary to two other congruent angles.
+
+> Proof of the congruent supplements theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\angle A$, $\angle B$, $\angle C$ be angles | Given |
+> | Let $\angle A$ and $\angle C$ be supplements of $\angle B$ | Given |
+> | $m \angle A + m \angle B = \pi$, $m \angle C + m \angle B = \pi$ | Definition of supplementary angles |
+> | $m \angle A + m \angle B = m \angle C + m \angle B$ | Transitive property of equality |
+> | $m \angle A = m \angle C$ | Subtraction property of equality |
+> | $\angle A \cong \angle C$ | Definition of congruence |
+
+(Demostración textual)
+**Paragraph proof**: a proof that is written in paragraphs. To know where it ends, the symbol $\blacksquare$ is used.
+
+(Teorema de los complementos congruentes)
+**Congruent complements theorem**: two angles are congruent when they are complementary to another angle, or when they are complementary to two other congruent angles.
+
+> Proof of the congruent complements theorem
+>
+> Let $\angle A$, $\angle B$, $\angle C$ be angles, such that $\angle A$ and $\angle C$ are complements of $\angle B$. This means that $m \angle A + m \angle B = \pi/2$ and $m \angle C + m \angle B = \pi/2$, then by transitivity $m \angle A + m \angle B = m \angle C + m \angle B$ which can be simplified to $m \angle A = m \angle C$, and in turn $\angle A \cong \angle C$ by definition. $\blacksquare$

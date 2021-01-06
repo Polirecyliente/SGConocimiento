@@ -144,7 +144,7 @@ Given two distinct rays that share their endpoint, the angle formed between the 
 
 > Angle notation
 >
-> Let $A$, $B$, and $C$, be three points, such that they form two distinct rays, $\overrightarrow{BA}$ and $\overrightarrow{BC}$, then the angle that these rays form is denoted as $\angle ABC$ or $\angle CBA$ or $\angle B$, letting $B$ as the point in the middle or the only one to denote the angle.
+> Let $A$, $B$, and $C$, be three points, such that they form two distinct rays, $\overrightarrow{BA}$ and $\overrightarrow{BC}$, then the angle that these rays form is denoted as $\angle ABC$ or $\angle CBA$ or $\angle B$ if no more than one angle stems from $B$.
 
 [Angle from two rays image code](Programs/Ch01/S03_01_Angle_from_two_rays_image.py)
 ![Angle from two rays image](Images/Ch01/S03_01_Angle_from_two_rays.png)
@@ -351,10 +351,10 @@ In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into 
 [Ch01_S05](https://www.ck12.org/reader/reader-index.html#section/4668241/1.5/9549314)
 
 (Ángulos complementarios)
-**Complementary angles**: two angles whose measures when added together add up to $90 \degree$ or $\pi/2$ radians.
+**Complementary angles**: two angles whose measures when added together add up to $90 \degree$ or $\pi/2$ radians. Each angle is the complement (complemento) of the other.
 
 (Ángulos suplementarios)
-**Supplementary angles**: two angles whose measures when added together add up to $180 \degree$ or $\pi$ radians.
+**Supplementary angles**: two angles whose measures when added together add up to $180 \degree$ or $\pi$ radians. Each angle is the supplement (suplemento) of the other.
 
 (Ángulos adyacentes)
 **Adjacent angles**: two angles that have the same vertex and share one side, which means that only three rays are required to create two adjacent angles.
