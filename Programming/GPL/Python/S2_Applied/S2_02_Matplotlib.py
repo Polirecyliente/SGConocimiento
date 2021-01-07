@@ -20,8 +20,10 @@
 #C# Annotations
 #C# --- Latex symbols
 #C# Coordinate systems
+#C# Colors
 #C# Plot types
 #C# --- Patches
+#C# 3D plotting
 #C# Backends
 #C# Interactive sessions
 #C# Configuration
@@ -45,6 +47,7 @@ import matplotlib.pyplot as plt
 
 #T# a few of the plot kwargs are
 #T#     color, accepts a hexadecimal string that starts with a hash, such as '#A178B9'
+#T#     zorder, a number that sets the order of plotting, a lower zorder value makes the plot be behind other plots, and a greater zorder value brings the plot in front of other plots, a value of 4 commonly guarantees that the plot will be in front of everything else
 
 x = [4, 1]
 y = [3, 5]
@@ -209,6 +212,12 @@ ax1.margins(0.5)
 #T# the get_xlim, get_ylim functions return the limits of x, y from a given set of axes
 tuple1 = ax1.get_xlim() # (0.0, 1.0)
 tuple1 = ax1.get_ylim() # (0.0, 1.0)
+
+#T# the set_xlim, set_ylim function serve to set the limits of x, y, kwargs can be used, such as the left, right kwargs and the bottom, top kwargs respectively
+ax1.set_xlim(0, 5)
+ax1.set_xlim(left = 0, right = 5)
+ax1.set_ylim(-1, 4)
+ax1.set_ylim(bottom = -1, top = 4)
 # |-----
 
 #C# --- Axis
@@ -300,6 +309,10 @@ axes_ndarr1[0][2].plot([2, 4], [7, 12])
 
 ax1 = plt.subplot(3, 2, 3) #| creates the axes in a grid of subplots with 3 rows and 2 columns, the axes pair is created on the first column second row (which is the third subplot counting left to right, row by row)
 ax1 = plt.subplot(1, 1, 1, projection = 'mollweide')
+
+#T# add a subplot directly to a figure with the add_subplot function, the syntax is the same as with the subplot function
+fig1 = plt.figure()
+ax1 = fig1.add_subplot(1, 1, 1)
 
 #T# set the transparency (or alpha value) and the color of the figure and the axes with the set_facecolor function, it interprets colors as a hex value, the last two hex numbers indicate the alpha value
 fig1.set_facecolor('#EEEEEE00') #| creates a transparent figure
@@ -417,10 +430,10 @@ ax1.tick_params(direction = 'inout')
 
 #T# the ticks in the x, y axis can be set at particular values
 
-# SYNTAX axes1.set_xtick(list1)
+# SYNTAX axes1.set_xticks(list1)
 #T# list1 is the list of values at which a tick mark will appear in the x axis
 
-# SYNTAX axes1.set_ytick(list1)
+# SYNTAX axes1.set_yticks(list1)
 #T# list1 is the list of values at which a tick mark will appear in the y axis
 
 ax1.set_xticks([-8, 0, 8, 16, 24])
@@ -524,6 +537,19 @@ plt.text(1, 1, 'axes coords', transform = ax1.transAxes)
 
 #T# the figure coordinates are a proportional location in the figure, in the horizontal axis 0 means to the left of the figure, 1 to the right, in the vertical axis 0 means the bottom, 1 is the top, the transFigure attribute of a figure object serves to set the coordinates to figure coordinates in the transform kwarg
 plt.text(.9, .9, 'figure coords', transform = fig1.transFigure)
+# |-------------------------------------------------------------
+
+#C# Colors
+
+# |-------------------------------------------------------------
+#T# the colors module of the matplotlib package contains values that store the supported named colors
+import matplotlib.colors as mcolors
+
+#T# the CSS4_colors dictionary containts valid named colors in its keys
+dict1 = mcolors.CSS4_COLORS # {'aliceblue': '#F0F8FF', 'antiquewhite': '#FAEBD7', 'aqua': '#00FFFF', 'aquamarine': '#7FFFD4', 'azure': '#F0FFFF', 'beige': '#F5F5DC', 'bisque': '#FFE4C4', 'black': '#000000', 'blanchedalmond': '#FFEBCD', 'blue': '#0000FF', 'blueviolet': '#8A2BE2', 'brown': '#A52A2A', 'burlywood': '#DEB887', 'cadetblue': '#5F9EA0', 'chartreuse': '#7FFF00', 'chocolate': '#D2691E', 'coral': '#FF7F50', 'cornflowerblue': '#6495ED', 'cornsilk': '#FFF8DC', 'crimson': '#DC143C', 'cyan': '#00FFFF', 'darkblue': '#00008B', 'darkcyan': '#008B8B', 'darkgoldenrod': '#B8860B', 'darkgray': '#A9A9A9', 'darkgreen': '#006400', 'darkgrey': '#A9A9A9', 'darkkhaki': '#BDB76B', 'darkmagenta': '#8B008B', 'darkolivegreen': '#556B2F', 'darkorange': '#FF8C00', 'darkorchid': '#9932CC', 'darkred': '#8B0000', 'darksalmon': '#E9967A', 'darkseagreen': '#8FBC8F', 'darkslateblue': '#483D8B', 'darkslategray': '#2F4F4F', 'darkslategrey': '#2F4F4F', 'darkturquoise': '#00CED1', 'darkviolet': '#9400D3', 'deeppink': '#FF1493', 'deepskyblue': '#00BFFF', 'dimgray': '#696969', 'dimgrey': '#696969', 'dodgerblue': '#1E90FF', 'firebrick': '#B22222', 'floralwhite': '#FFFAF0', 'forestgreen': '#228B22', 'fuchsia': '#FF00FF', 'gainsboro': '#DCDCDC', 'ghostwhite': '#F8F8FF', 'gold': '#FFD700', 'goldenrod': '#DAA520', 'gray': '#808080', 'green': '#008000', 'greenyellow': '#ADFF2F', 'grey': '#808080', 'honeydew': '#F0FFF0', 'hotpink': '#FF69B4', 'indianred': '#CD5C5C', 'indigo': '#4B0082', 'ivory': '#FFFFF0', 'khaki': '#F0E68C', 'lavender': '#E6E6FA', 'lavenderblush': '#FFF0F5', 'lawngreen': '#7CFC00', 'lemonchiffon': '#FFFACD', 'lightblue': '#ADD8E6', 'lightcoral': '#F08080', 'lightcyan': '#E0FFFF', 'lightgoldenrodyellow': '#FAFAD2', 'lightgray': '#D3D3D3', 'lightgreen': '#90EE90', 'lightgrey': '#D3D3D3', 'lightpink': '#FFB6C1', 'lightsalmon': '#FFA07A', 'lightseagreen': '#20B2AA', 'lightskyblue': '#87CEFA', 'lightslategray': '#778899', 'lightslategrey': '#778899', 'lightsteelblue': '#B0C4DE', 'lightyellow': '#FFFFE0', 'lime': '#00FF00', 'limegreen': '#32CD32', 'linen': '#FAF0E6', 'magenta': '#FF00FF', 'maroon': '#800000', 'mediumaquamarine': '#66CDAA', 'mediumblue': '#0000CD', 'mediumorchid': '#BA55D3', 'mediumpurple': '#9370DB', 'mediumseagreen': '#3CB371', 'mediumslateblue': '#7B68EE', 'mediumspringgreen': '#00FA9A', 'mediumturquoise': '#48D1CC', 'mediumvioletred': '#C71585', 'midnightblue': '#191970', 'mintcream': '#F5FFFA', 'mistyrose': '#FFE4E1', 'moccasin': '#FFE4B5', 'navajowhite': '#FFDEAD', 'navy': '#000080', 'oldlace': '#FDF5E6', 'olive': '#808000', 'olivedrab': '#6B8E23', 'orange': '#FFA500', 'orangered': '#FF4500', 'orchid': '#DA70D6', 'palegoldenrod': '#EEE8AA', 'palegreen': '#98FB98', 'paleturquoise': '#AFEEEE', 'palevioletred': '#DB7093', 'papayawhip': '#FFEFD5', 'peachpuff': '#FFDAB9', 'peru': '#CD853F', 'pink': '#FFC0CB', 'plum': '#DDA0DD', 'powderblue': '#B0E0E6', 'purple': '#800080', 'rebeccapurple': '#663399', 'red': '#FF0000', 'rosybrown': '#BC8F8F', 'royalblue': '#4169E1', 'saddlebrown': '#8B4513', 'salmon': '#FA8072', 'sandybrown': '#F4A460', 'seagreen': '#2E8B57', 'seashell': '#FFF5EE', 'sienna': '#A0522D', 'silver': '#C0C0C0', 'skyblue': '#87CEEB', 'slateblue': '#6A5ACD', 'slategray': '#708090', 'slategrey': '#708090', 'snow': '#FFFAFA', 'springgreen': '#00FF7F', 'steelblue': '#4682B4', 'tan': '#D2B48C', 'teal': '#008080', 'thistle': '#D8BFD8', 'tomato': '#FF6347', 'turquoise': '#40E0D0', 'violet': '#EE82EE', 'wheat': '#F5DEB3', 'white': '#FFFFFF', 'whitesmoke': '#F5F5F5', 'yellow': '#FFFF00', 'yellowgreen': '#9ACD32'}
+
+#T# the colormaps function returns a list with the current colormaps supported
+list1 = plt.colormaps() # ['Accent', 'Accent_r', 'Blues', 'Blues_r', 'BrBG', 'BrBG_r', 'BuGn', 'BuGn_r', 'BuPu', 'BuPu_r', 'CMRmap', 'CMRmap_r', 'Dark2', 'Dark2_r', 'GnBu', 'GnBu_r', 'Greens', 'Greens_r', 'Greys', 'Greys_r', 'OrRd', 'OrRd_r', 'Oranges', 'Oranges_r', 'PRGn', 'PRGn_r', 'Paired', 'Paired_r', 'Pastel1', 'Pastel1_r', 'Pastel2', 'Pastel2_r', 'PiYG', 'PiYG_r', 'PuBu', 'PuBuGn', 'PuBuGn_r', 'PuBu_r', 'PuOr', 'PuOr_r', 'PuRd', 'PuRd_r', 'Purples', 'Purples_r', 'RdBu', 'RdBu_r', 'RdGy', 'RdGy_r', 'RdPu', 'RdPu_r', 'RdYlBu', 'RdYlBu_r', 'RdYlGn', 'RdYlGn_r', 'Reds', 'Reds_r', 'Set1', 'Set1_r', 'Set2', 'Set2_r', 'Set3', 'Set3_r', 'Spectral', 'Spectral_r', 'Wistia', 'Wistia_r', 'YlGn', 'YlGnBu', 'YlGnBu_r', 'YlGn_r', 'YlOrBr', 'YlOrBr_r', 'YlOrRd', 'YlOrRd_r', 'afmhot', 'afmhot_r', 'autumn', 'autumn_r', 'binary', 'binary_r', 'bone', 'bone_r', 'brg', 'brg_r', 'bwr', 'bwr_r', 'cividis', 'cividis_r', 'cool', 'cool_r', 'coolwarm', 'coolwarm_r', 'copper', 'copper_r', 'cubehelix', 'cubehelix_r', 'flag', 'flag_r', 'gist_earth', 'gist_earth_r', 'gist_gray', 'gist_gray_r', 'gist_heat', 'gist_heat_r', 'gist_ncar', 'gist_ncar_r', 'gist_rainbow', 'gist_rainbow_r', 'gist_stern', 'gist_stern_r', 'gist_yarg', 'gist_yarg_r', 'gnuplot', 'gnuplot2', 'gnuplot2_r', 'gnuplot_r', 'gray', 'gray_r', 'hot', 'hot_r', 'hsv', 'hsv_r', 'inferno', 'inferno_r', 'jet', 'jet_r', 'magma', 'magma_r', 'nipy_spectral', 'nipy_spectral_r', 'ocean', 'ocean_r', 'pink', 'pink_r', 'plasma', 'plasma_r', 'prism', 'prism_r', 'rainbow', 'rainbow_r', 'seismic', 'seismic_r', 'spring', 'spring_r', 'summer', 'summer_r', 'tab10', 'tab10_r', 'tab20', 'tab20_r', 'tab20b', 'tab20b_r', 'tab20c', 'tab20c_r', 'terrain', 'terrain_r', 'turbo', 'turbo_r', 'twilight', 'twilight_r', 'twilight_shifted', 'twilight_shifted_r', 'viridis', 'viridis_r', 'winter', 'winter_r']
 # |-------------------------------------------------------------
 
 #C# Plot types
@@ -653,6 +679,52 @@ arc1 = mpatches.Arc((3, 2), 1, 1, theta1 = 15, theta2 = 60)
 
 # |-----
 
+# |-------------------------------------------------------------
+
+#C# 3D plotting
+
+# |-------------------------------------------------------------
+#T# plotting in 3D requires a z tuple along with the regular x and y tuples from 2D plotting
+
+#T# some of the 3D plotting functions require Numpy arrays as arguments
+
+#T# to create a pair of axes for 3D plotting, they must be created with a 3D projection via the projection kwarg
+fig1 = plt.figure()
+ax1 = fig1.add_subplot(1, 1, 1, projection = '3d')
+
+#T# set the axes limits as shown before, with the set_xlim, set_ylim, set_zlim functions
+ax1.set_xlim(-1, 2)
+ax1.set_ylim(3, 7)
+ax1.set_zlim(0, 5)
+
+#T# set the 3D box aspect with the set_box_aspect function, it receives a list with three values for the aspect ratio in x, y, z
+ax1.set_box_aspect([5, 5, 5]) #| means an equal aspect ratio
+ax1.set_box_aspect([6, 4, 2]) #| means that the ratio x:y is 6:4, the ratio x:z is 6:2, the ratio y:z is 4:2, which means that the x length of the box has the largest size, then y, and then z
+
+#T# the set_axis_on, set_axis_off functions are used to turn on or off the 3D box visibility
+ax1.set_axis_on()
+ax1.set_axis_off()
+
+#T# the basic surface plot is made with the plot_surface function, it requires two dimensional numpy arrays, so the set of points in space must be allocated in two dimensional arrays
+
+# SYNTAX axes1.plot_surface(arr1, arr2, arr3, kwargs1)
+#T# arr1, arr2, arr3 are the numpy two dimensional arrays for x, y, z respectively, kwargs1 are the kwarg value pairs
+
+#T# the color kwarg is a string that sets the color of the surface, it receives any valid color string in Matplotlib
+
+#T# the cmap kwarg is a string that sets the colormap of the surface, to know its possible values, see the colormaps function
+
+import numpy as np
+arr1 = np.array([[2, 2], [3, 3]])
+arr2 = np.array([[4, 5], [4, 4]])
+arr3 = np.array([[7, 7], [6, 6]])
+ax1.plot_surface(arr1, arr2, arr3) #| this produces a triangle, with vertices (2, 4, 7), (2, 5, 7), and (3, 4, 6), because plot_surface requires two dimensional arrays, the point (3, 4, 6) is repeated twice
+
+#T# a line plot in 3D is done with the plot function, its syntax is the same as the regular plot function, except this takes three arguments, one for each axis
+arr1 = [2, 2.25, 3]
+arr2 = [4, 4.75, 5]
+arr3 = [6, 6.5, 7]
+ax1.plot(arr1, arr2, arr3) #| this plots a polyline in space that has the vertices (2, 4, 6), (2.25, 4.75, 6.5), and (3, 5, 7)
 # |-------------------------------------------------------------
 
 #C# Backends

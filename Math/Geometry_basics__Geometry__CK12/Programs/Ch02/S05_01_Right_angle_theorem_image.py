@@ -38,7 +38,7 @@ list2_2 = [p1_2[1], p2_2[1], p3_2[1]] #| y coordinates
 plt.plot(list1_1, list2_1, 'k')
 plt.plot(list1_2, list2_2, 'k')
 
-#T# set the math font text to the Latex default, Computer Modern
+#T# set the math text font to the Latex default, Computer Modern
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 

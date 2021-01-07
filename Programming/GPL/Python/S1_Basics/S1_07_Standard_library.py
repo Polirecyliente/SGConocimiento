@@ -163,7 +163,7 @@ tuple1 = math.modf(x) # (-0.15, -5.0); x == -5.15
 flo1 = tuple1[0]      # -0.15
 int1 = int(tuple1[1]) # -5
 
-#T# the round function rounds a number to a given precision, if the precision is negative it's is rounded to the left of the decimal point
+#T# the round function rounds a number to a given precision, if the precision is negative it's rounded to the left of the decimal point
 x = -5.15
 flo1 = round(100*x, -1) # -520.0
 # |-----
@@ -214,7 +214,7 @@ str2 = random.choice(str1) # 'd', or another element in str1
 
 #T# the randrange function returns a random number from a range
 # SYNTAX random.randrange(iniN, endN, stepN)
-#T# the random number is one the numbers starting at iniN, stepping by stepN, and ending at endN - 1
+#T# the random number is one of the numbers starting at iniN, stepping by stepN, and ending at endN - 1
 int1 = random.randrange(1, 12, 3) # 7, or another element from the range
 
 #T# the random function generates a random number in the [0, 1) interval

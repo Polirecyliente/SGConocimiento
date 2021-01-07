@@ -193,7 +193,7 @@ num1 = ((3 + 4) * 5) + 1 # 36 #| ((7) * 5) + 1 == 35 + 1
 #C# Membership operators
 
 # |-------------------------------------------------------------
-#T# in operator
+#T# the in keyword is the basic membership operator
 list1 = ['memb1', 'memb3', 'memb4']
 bool1 = 'memb3' in list1     # True
 
@@ -205,7 +205,7 @@ bool1 = 'memb2' not in list1 # True
 #C# Identity operators
 
 # |-------------------------------------------------------------
-#T# is operator
+#T# the is keyword is the basic identity operator
 a = 7; b = 7
 bool1 = (a is b)     # True
 

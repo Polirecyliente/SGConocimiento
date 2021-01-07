@@ -48,7 +48,7 @@ plt.plot([p3_1[0], p3_2[0]], [p3_1[1], p3_2[1]], 'k')
 plt.plot([p4_1[0], p4_2[0]], [p4_1[1], p4_2[1]], 'k')
 plt.scatter(list1, list2, s = 6, color = 'k')
 
-#T# set the math font text to the Latex default, Computer Modern
+#T# set the math text font to the Latex default, Computer Modern
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
