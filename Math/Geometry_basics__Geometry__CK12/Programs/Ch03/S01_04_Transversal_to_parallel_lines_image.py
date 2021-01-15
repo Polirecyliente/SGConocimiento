@@ -43,6 +43,12 @@ ax1.add_patch(line1)
 ax1.add_patch(line2)
 ax1.add_patch(line3)
 
+#T# plot the parallel line marks
+mark1 = mpatches.FancyArrowPatch((3.9, 0), (5.5,0), arrowstyle = '->', mutation_scale = 20)
+mark2 = mpatches.FancyArrowPatch((3.9, 2), (4.5,2), arrowstyle = '->', mutation_scale = 20)
+ax1.add_patch(mark1)
+ax1.add_patch(mark2)
+
 #T# set the math text font to the Latex default, Computer Modern
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
