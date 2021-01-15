@@ -349,6 +349,20 @@ The segments may not be congruent but the right angles are.
 > | $m \angle A = m \angle C$ | Subtraction property of equality |
 > | $\angle A \cong \angle C$ | Definition of congruence |
 
+(Converso del teorema de los suplementos congruentes)
+**Converse of the congruent supplements theorem**: if two angles are congruent, and one of them is supplementary to a third angle, then both angles are supplementary to the third angle.
+
+> Proof of the converse of the congruent supplements theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\angle A$, $\angle B$, $\angle C$ be angles | Given |
+> | Let $\angle A \cong \angle C$, and $\angle A$ and $\angle B$ be supplementary | Given |
+> | $m \angle A = m \angle C$ | Definition of congruence |
+> | $m \angle A + m \angle B = \pi$ | Definition of supplementary angles |
+> | $m \angle C + m \angle B = \pi$ | Substitution property of equality |
+> | $\angle B$ and $\angle C$ are supplementary | Definition of supplementary angles |
+
 (Demostración textual)
 **Paragraph proof**: a proof that is written in paragraphs. To know where it ends, the symbol $\blacksquare$ is used.
 

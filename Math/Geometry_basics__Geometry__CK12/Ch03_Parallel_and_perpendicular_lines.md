@@ -80,10 +80,10 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 [Ch03_S02](https://www.ck12.org/reader/reader-index.html#section/2932933/3.2/9549314)
 
 (Postulado de los ángulos correspondientes)
-**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$.
+**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$. Its converse is also a postulate.
 
 (Teorema de los ángulos alternos internos)
-**Alternate interior angles theorem**: Two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
+**Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
 
 > Proof of the alternate interior angles theorem
 >
@@ -97,7 +97,7 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 The same proof applies for the other three pairs of alternate interior angles.
 
 (Teorema de los ángulos alternos externos)
-**Alternate exterior angles theorem**: Two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent.
+**Alternate exterior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent.
 
 > Proof of the alternate exterior angles theorem
 >
@@ -111,7 +111,7 @@ The same proof applies for the other three pairs of alternate interior angles.
 The same proof applies for the other three pairs of alternate exterior angles.
 
 (Teorema de los ángulos conjugados internos)
-**Same side interior angles theorem**: Two parallel lines that are intersected by a transversal, have supplementary same side interior angles.
+**Same side interior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side interior angles.
 
 > Proof of the same side interior angles theorem
 >
@@ -120,12 +120,12 @@ The same proof applies for the other three pairs of alternate exterior angles.
 > | $l \parallel m$, with transversal $t$ | From the *Transversal to parallel lines* image |
 > | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
 > | $\angle 1$ and $\angle 3$ are supplementary | Linear pair postulate |
-> | $\angle 3$ and $\angle 5$ are supplementary | Congruent supplements theorem |
+> | $\angle 3$ and $\angle 5$ are supplementary | Converse of the congruent supplements theorem |
 
 The same proof applies for the other pair of same side interior angles.
 
 (Teorema de los ángulos conjugados externos)
-**Same side exterior angles theorem**: Two parallel lines that are intersected by a transversal, have supplementary same side exterior angles.
+**Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles.
 
 > Proof of the same side exterior angles theorem
 >
@@ -134,12 +134,67 @@ The same proof applies for the other pair of same side interior angles.
 > | $l \parallel m$, with transversal $t$ | From the *Transversal to parallel lines* image |
 > | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
 > | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
-> | $\angle 1$ and $\angle 7$ are supplementary | Congruent supplements theorem |
+> | $\angle 1$ and $\angle 7$ are supplementary | Converse of the congruent supplements theorem |
 
 The same proof applies for the other pair of same side exterior angles.
 
 ## Proving lines parallel (Demostrar el paralelismo entre líneas)
 [Ch03_S03](https://www.ck12.org/reader/reader-index.html#section/2932934/3.3/9549314)
+
+(Converso del teorema de los ángulos alternos internos)
+**Converse of the alternate interior angles theorem**: given two lines intersected by a transversal, if their alternate interior angles are congruent, then the two lines are parallel.
+
+> Proof of the converse of the alternate interior angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3 \cong \angle 6$ | From the *Transversal to parallel lines* image |
+> | $\angle 3 \cong \angle 2$ | Vertical angles theorem |
+> | $\angle 2 \cong \angle 6$ | Transitive property of congruence |
+> | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+(Converso del teorema de los ángulos alternos externos)
+**Converse of the alternate exterior angles theorem**: given two lines intersected by a transversal, if their alternate exterior angles are congruent, then the two lines are parallel.
+
+> Proof of the converse of the alternate exterior angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1 \cong \angle 8$ | From the *Transversal to parallel lines* image |
+> | $\angle 5 \cong \angle 8$ | Vertical angles theorem |
+> | $\angle 1 \cong \angle 5$ | Transitive property of congruence |
+> | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+(Converso del teorema de los ángulos conjugados internos)
+**Converse of the same side interior angles theorem**: given two lines intersected by a transversal, if their same side interior angles are supplementary, then the two lines are parallel.
+
+> Proof of the converse of the same side interior angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3$ and $\angle 5$ are supplementary | From the *Transversal to parallel lines* image |
+> | $\angle 1$ and $\angle 3$ are supplementary | Linear pair postulate |
+> | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
+> | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+(Converso del teorema de los ángulos conjugados externos)
+**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel.
+
+> Proof of the converse of the same side exterior angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1$ and $\angle 7$ are supplementary | From the *Transversal to parallel lines* image |
+> | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
+> | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
+> | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+(Propiedad transitiva de las líneas paralelas)
+**Transitive property of parallel lines**: given two parallel lines, if the first one is parallel to a third line, then the second line is also parallel to the third.
+
+> Transitive property of parallel lines
+>
+> Let $k$, $l$, $m$, be lines, if $k \parallel l$ and $l \parallel m$, then $k \parallel m$.
 
 ## Properties of perpendicular lines (Propiedades de las líneas perpendiculares)
 [Ch03_S04](https://www.ck12.org/reader/reader-index.html#section/2932935/3.4/9549314)
