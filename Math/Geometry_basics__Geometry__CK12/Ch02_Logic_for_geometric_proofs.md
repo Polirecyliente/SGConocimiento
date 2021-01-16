@@ -76,6 +76,8 @@ Truth values are also called logical values (valores lógicos).
 >
 > Let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \rarr q$ means that 'if I am healthy today then I work today'.
 
+The symbol of a double right arrow $\rArr$ is used outside of logic, in mathematics in general, to signify 'then'.
+
 (Negación lógica)
 **Logical negation**: an operator used to negate an event. A negated event means that its negation happens.
 [Logical negation code](Programs/Ch02/S02_03_Logical_negation.py)

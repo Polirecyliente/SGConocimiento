@@ -199,6 +199,62 @@ The same proof applies for the other pair of same side exterior angles.
 ## Properties of perpendicular lines (Propiedades de las líneas perpendiculares)
 [Ch03_S04](https://www.ck12.org/reader/reader-index.html#section/2932935/3.4/9549314)
 
+(Teorema de los pares lineales congruentes)
+**Congruent linear pairs theorem**: in a linear pair, if the two angles are congruent, then they have a measure of $\pi/2$, meaning that if both angles of a linear pair are congruent then they are right angles.
+
+> Proof of the congruent linear pairs theorem
+>
+> Let $\angle A$ and $\angle B$ form a linear pair, and let $\angle A \cong \angle B$, then $m \angle A = m \angle B$, $m \angle A + m \angle B = \pi \rArr 2 m \angle A = \pi \rArr m \angle A = \pi/2 = m \angle B$. $\blacksquare$
+
+(Teorema de las transversales perpendiculares)
+**Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line.
+[Perpendicular transversal image code](Programs/Ch03/S04_01_Perpendicular_transversal_image.py)
+![Perpendicular transversal image](Images/Ch03/S04_01_Perpendicular_transversal.png)
+*Perpendicular transversal*
+
+> Proof of the perpendicular transversals theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $l \parallel m$ and $l \perp t$ | Given |
+> | $\angle 1$, $\angle 2$, $\angle 3$, $\angle 4$, are right angles | Definition of perpendicular lines |
+> | $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, $\angle 4 \cong \angle 8$, so $\angle 4$, $\angle 5$, $\angle 6$, $\angle 7$, are right angles | Corresponding angles postulate |
+> | $m \perp t$ | Definition of perpendicular lines |
+
+(Converso del teorema de las transversales perpendiculares)
+**Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel.
+
+> Proof of the converse of the perpendicular transversals theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $l \perp t$ and $m \perp t$ | From the *Perpendicular transversal* image |
+> | All the angles, from $\angle 1$ to $\angle 8$ are right angles | Definition of perpendicular lines |
+> | $\angle 1 \cong \angle 5$ | Right angle theorem |
+> | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+(Teorema de los ángulos complementarios adyacentes)
+**Adjacent complementary angles theorem**: if two angles are adjacent and complementary, then the two non-shared sides form a right angle.
+
+> Proof of the adjacent complementary angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\angle A$ and $\angle B$ be two adjacent complementary angles | Given |
+> | $m \angle A + m \angle B = \pi/2$ | Definition of complementary angles |
+> | The angle between the non-shared sides is a right angle | Definition of a right angle |
+
+(Converso del teorema de los ángulos complementarios adyacentes)
+**Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary.
+
+> Proof of the converse of the adjacent complementary angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\angle A$ and $\angle B$ be adjacent angles, with the non-shared sides forming a right angle | Given |
+> | $m \angle A + m \angle B = \pi/2$ | Definition of right angle |
+> | $\angle A$ and $\angle B$ are complementary | Definition of complementary angles |
+
 ## Algebra of parallel and perpendicular lines (Álgebra de las líneas paralelas y perpendiculares)
 [Ch03_S05](https://www.ck12.org/reader/reader-index.html#section/2932936/3.5/9549314)
 

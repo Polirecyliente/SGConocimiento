@@ -195,7 +195,7 @@ This method can be used to draw a given angle.
 **Obtuse angle**: an angle greater than $90 \degree$ ($\pi/2$ radians) and less than $180 \degree$ ($\pi$ radians).
 
 (Líneas perpendiculares)
-**Perpendicular lines**: two lines (or rays, or segments) that cross each other at right angles, i.e. the angles formed at the intersection of the lines are right angles.
+**Perpendicular lines**: two lines (or rays, or segments) that cross each other at right angles, i.e. the four angles formed at the intersection of the lines are right angles.
 [Perpendicular lines image code](Programs/Ch01/S03_02_Perpendicular_lines_image.py)
 ![Perpendicular lines image](Images/Ch01/S03_02_Perpendicular_lines.png)
 *Perpendicular lines*
