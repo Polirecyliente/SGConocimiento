@@ -128,7 +128,7 @@ ax1 = plt.axes(label = 'axes one') # type:plt.Axes
 ax2 = plt.axes(label = 'axes two')
 #T# ax2 overwrites ax1, so the only axes in fig1 is ax2
 
-#T# add axes to a figure
+#T# add axes to a figure with the add_axes function
 
 # SYNTAX axes1 = fig1.add_axes([rect1])
 #T# the axes1 is added to fig1, rect1 is the same as before
@@ -167,7 +167,7 @@ plt.sca(ax1)
 ax1.set_aspect('equal')
 
 # SYNTAX axes1.set_aspect('aspect_string1', adjustable = str1)
-#T# same as before, the adjustable kwarg sets what is adjusted to get to the aspect ratio, str1 can be 'box' (adjusts the box of the axes) or 'datalim' (adjusts the data limits)
+#T# same as before, the adjustable kwarg sets what is adjusted to get to the aspect ratio, str1 can be 'box' (adjusts the box of the axes, and with aspect 'equal' creates a square box) or 'datalim' (adjusts the data limits)
 
 p1 = (4, 3)
 p2 = (7, 5)
@@ -321,6 +321,19 @@ ax1.set_facecolor('#EEEEEE00')  #| creates transparent axes
 #T# set the width of a figure with the set_figwidth function, and the height of a figure with the set_figheight function
 fig1.set_figwidth(4)
 fig1.set_figheight(3)
+
+#T# the tight_layout function arranges the axes inside the figure to have space around them while being tightly packed together
+
+# SYNTAX plt.tight_layout(kwargs1)
+#T# kwargs1 are the kwarg value pairs
+
+#T# the pad kwarg is a number that sets the padding between the edges of the figure and the edges of the subplots
+
+#T# the h_pad kwarg is a number that sets the height padding between the subplots
+
+#T# the w_pad kwarg is a number that sets the width padding between the subplots
+
+plt.tight_layout(h_pad = 2)
 # |-----
 
 # |-------------------------------------------------------------
@@ -387,8 +400,14 @@ fig1 = plt.figure() # type: plt.Figure
 fig1.suptitle("Title string")
 
 #T# put the title of the axes, in the top side, with the set_title function
+
+# SYNTAX ax1.set_title(str1, kwargs1)
+#T# str1 is the title being set, kwargs1 are the kwarg value pairs
+
+#T# the y kwarg is a number that sets the proportion in the y-axis in which to position the title, the value 1 indicates the top of the y-axis, a value greater than 1 moves the title upwards
+
 ax1 = plt.axes() # type: plt.Axes
-ax1.set_title('Axes title string')
+ax1.set_title('Axes title string', y = 1.3)
 # |-----
 
 #C# --- Spines
@@ -424,9 +443,13 @@ spine1.set_position(('outward', 2)) # spine1 is places 2 points outwards
 # SYNTAX axes1.tick_params(kwargs1)
 #T# this sets the ticks of axes1, setting kwargs1 which are the kwarg value pairs
 
-#T# the direction kwarg is used to set the direction, in or out the axes, in which to draw the ticks, its value can be, 'in', 'out', 'inout'
+#T# the direction kwarg is a string used to set the direction, in or out the axes, in which to draw the ticks, its value can be, 'in', 'out', 'inout'
 
-ax1.tick_params(direction = 'inout')
+#T# the size kwarg is a number used to set the length of the ticks
+
+#T# the labelsize kwarg is a number used to set the size of the labels
+
+ax1.tick_params(direction = 'inout', size = 5)
 
 #T# the ticks in the x, y axis can be set at particular values
 

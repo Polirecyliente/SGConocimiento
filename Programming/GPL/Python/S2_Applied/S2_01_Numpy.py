@@ -147,7 +147,7 @@ arr2 = arr1.astype('i') # array([1, 2], dtype=int32) #| the argument 'i' changes
 # |-----
 #T# in numpy, the words dimension and axis are almost synonyms, axis is the same as dimension - 1, dimensions count from 1, axes count from 0
 
-#T# numpy arrays can be iterated like regular arrays, but also with the nditer function, this has the difference that the nditer function iterates over each individual element, and so nested arrays are not necessary
+#T# numpy arrays can be iterated like regular arrays, but also with the nditer function, this has the difference that the nditer function iterates or loops over each individual element, and so nested arrays are not necessary
 arr1 = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 for it1 in np.nditer(arr1):
     it1

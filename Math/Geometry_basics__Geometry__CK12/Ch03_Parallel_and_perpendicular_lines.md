@@ -258,5 +258,42 @@ The same proof applies for the other pair of same side exterior angles.
 ## Algebra of parallel and perpendicular lines (Álgebra de las líneas paralelas y perpendiculares)
 [Ch03_S05](https://www.ck12.org/reader/reader-index.html#section/2932936/3.5/9549314)
 
+(Pendiente de una línea)
+**Slope of a line**: the amount of inclination of a line. An horizontal line has zero slope, a vertical line has undefined (positive or negative infinity) slope.
+
+From basic algebra, the slope of a line can be defined as an equation in terms of the $x$-$y$ plane coordinates of two points on the line.
+
+> Algebraic definition of the slope of a line
+>
+> Let $(x_1, y_1)$, $(x_2, y_2)$, be two points on the $x$-$y$ plane, and let $m$ be the slope of the line that passes through these two points, then
+> $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
+
+According to this definition of the slope of a line, a positive slope means a line that goes upwards from left to right, and a negative slope means a line that goes downwards from left to right.
+[Values of the slope of a line image code](Programs/Ch03/S05_01_Values_of_the_slope_of_a_line_image.py)
+![Values of the slope of a line image](Images/Ch03/S05_01_Values_of_the_slope_of_a_line.png)
+*Values of the slope of a line*
+
+The rise (elevación) of a slope is the amount changed in the $y$ axis, namely $y_2 - y_1$. The run (avance) of a slope is the amount changed in the $x$ axis, namely $x_2 - x_1$. So the algebraic definition of the slope can also be interpreted as rise over run.
+
+(Forma pendiente intercepto de una línea)
+**Slope-intercept form of a line**: an equation that expresses the $y$ coordinate of each point of a line, as the the slope multiplied by the $x$ coordinate of that point, plus the $y$-intercept.
+
+> Slope-intercept form of a line
+>
+> Let $y$ be the $y$ coordinate of a given point, let $x$ be the $x$ coordinate of the same point, let $m$ be the slope, $b$ be the $y$-intercept, then
+> $$y = mx + b$$
+
+(Pendiente de líneas paralelas)
+**Slope of parallel lines**: the slope of a set of parallel lines is the same for all the lines, i.e. all parallel lines have the same slope. This is because for lines to be parallel, they must have the same rise and run.
+
+Using the slope-intercept form of a line, parallel lines have the same slope but different $y$-intercept values.
+
+(Pendiente de líneas perpendiculares)
+**Slope of perpendicular lines**: given the slope $m$ of a line, the slope of a perpendicular line to it, is $-1/m$. This is because given the slope of a line, the slope of a line perpendicular to it, is the opposite reciprocal of the slope of the given line.
+[Slope of perpendicular lines image code](Programs/Ch03/S05_02_Slope_of_perpendicular_lines_image.py)
+![Slope of perpendicular lines image](Images/Ch03/S05_02_Slope_of_perpendicular_lines.png)
+
+The blue line is the first line, the lime green line has a slope that is the opposite of the slope of the blue line. The crimson line is perpendicular to the blue line, and has a slope that is the reciprocal of the slope of the lime green line.
+
 ## Distance fórmula (Fórmula de distancia)
 [Ch03_S06](https://www.ck12.org/reader/reader-index.html#section/2932937/3.6/9549314)
