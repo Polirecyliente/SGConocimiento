@@ -156,7 +156,7 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 (Triángulo isósceles)
 **Isosceles triangle**: a triangle in which two of its sides have the same measure of length.
 
-(Triángulo equilatero)
+(Triángulo equilátero)
 **Equilateral triangle**: a triangle in which all the sides have the same measure of length. All equilateral triangles are similar or congruent.
 
 (Trapezoide)

@@ -295,5 +295,58 @@ Using the slope-intercept form of a line, parallel lines have the same slope but
 
 The blue line is the first line, the lime green line has a slope that is the opposite of the slope of the blue line. The crimson line is perpendicular to the blue line, and has a slope that is the reciprocal of the slope of the lime green line.
 
-## Distance fórmula (Fórmula de distancia)
+## Distance formula (Fórmula de distancia)
 [Ch03_S06](https://www.ck12.org/reader/reader-index.html#section/2932937/3.6/9549314)
+
+The distance formula is derived from the Pythagorean theorem (Teorema de Pitágoras).
+
+(Teorema de Pitágoras)
+**Pythagorean theorem**: in a right triangle the length of the largest side squared is equal to the sum of the other two lengths individually squared. The largest side is named the hypotenuse (hipotenusa), and the other sides are called legs (catetos).
+
+> Pythagorean theorem
+>
+> Let $a$, $b$, $c$, be the sides of a right triangle, with $a$ and $b$ being the legs, and $c$ being the hypotenuse, then
+> $$c^2 = a^2 + b^2$$
+
+This theorem can be proved with the following image.
+[Pythagorean theorem image code](../Algebra_basics__Prealgebra__OpenStax/Programs/Ch09/S03_02_Pythagorean_theorem_image.py)
+![Pythagorean theorem image](../Algebra_basics__Prealgebra__OpenStax/Images/Ch09/S03_02_Pythagorean_theorem.png)
+*Pythagorean theorem*
+
+From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cdot b + b^2 = c^2 + 2 \cdot a \cdot b$, and then $a^2 + b^2 = c^2$.
+
+The distance formula takes the distance between two points as the hypotenuse of a right triangle, and the legs as the rise and run in the $x$-$y$ plane.
+[Rise and run between two points image code](Programs/Ch03/S06_01_Rise_and_run_between_two_points_image.py)
+![Rise and run between two points image](Images/Ch03/S06_01_Rise_and_run_between_two_points.png)
+
+Using the Pythagorean theorem, the distance squared between two points, is the sum of the squared rise plus the squared run.
+
+> Distance formula
+>
+> Let $(x_1, y_1)$, $(x_2, y_2)$, be two points in the $x$-$y$ plane, and let $d$ be the distance between them, then
+> $$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+
+(Distancia más corta entre un punto y una recta)
+**Shortest distance between a point and a line**: given a point and a line, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line to the given line that passes through the given point, is used to measure this shortest distance, as the distance between the given point and the intersection of the perpendicular line and the given line.
+[Shortest distance between a point and a line image code](Programs/Ch03/S06_02_Shortest_distance_between_a_point_and_a_line_image.py)
+![Shortest distance between a point and a line image](Images/Ch03/S06_02_Shortest_distance_between_a_point_and_a_line.png)
+*Shortest distance between a point and a line*
+
+The shortest distance between the point $A$ and the line $l$ is the distance $AB$.
+
+> Process to find the shortest distance between a point and a line
+>
+> 1. Use the *Shortest distance between a point and a line* image, let $A$ be the point and $l$ be the line, such that the line $l$ is defined by the equation $y = m_1x + b_1$, and let $B$ be the point of intersection of the line $l$ and a perpendicular line to it that passes through $A$. The shortest distance being measured is the distance $AB$.
+> 2. Calculate the slope of the perpendicular line as $m_2 = -\frac{1}{m_1}$.
+> 3. Calculate the $y$-intercept of the perpendicular line as $b_2 = y_A - m_2x_A$, where $x_A$ and $y_A$ are the $x$ and $y$ coordinates of the point $A$ respectively.
+> 4. Find the coordinates of the point of intersection $B$, namely $x_B$, $y_B$, by equating the equation of the line $l$ and the equation of the perpendicular line, $m_1x_B + b_1 = m_2x_B + b_2$. From this equation, isolate $x_B$ as $x_B = \frac{b_2 - b_1}{m_1 - m_2}$.
+> 5. Find $y_B$ as $y_B = m_1x_B + b_1$.
+> 6. Calculate the distance between $A$ and $B$ with the distance formula, $AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$.
+
+(Distancia más corta entre dos líneas paralelas)
+**Shortest distance between two parallel lines**: given two parallel lines, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line that passes through both parallel lines, is used to measure this shortest distance, as the distance between the two intersections of the perpendicular line with the two parallel lines.
+
+> Process to find the shortest distance between two parallel lines
+>
+> 1. Pick a point in one of the two parallel lines, name it $A$.
+> 2. Apply the Process to find the shortest distance between a point and a line, using $A$ as a point$, and the line is the other parallel line that does not contain $A$. The result is the shortest distance between the two parallel lines.
