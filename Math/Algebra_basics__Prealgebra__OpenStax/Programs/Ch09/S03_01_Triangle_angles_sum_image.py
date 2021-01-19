@@ -1,6 +1,6 @@
-#T# this program draws a triangle and shows that the sum of its angles is 180 degrees or pi radians
+#T# the following code shows how to draw a triangle and show that the sum of its angles is 180 degrees or pi radians
 
-#T# to do this drawing, the pyplot module of the matplotlib package is used
+#T# to draw a triangle and show that the sum of its angles is 180 degrees or pi radians, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
 #T# create the figure and axes

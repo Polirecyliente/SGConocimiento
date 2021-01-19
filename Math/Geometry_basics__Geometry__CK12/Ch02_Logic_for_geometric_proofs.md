@@ -271,7 +271,7 @@ In the following tables, let $p$, $q$ be logical statements.
 
 Truth tables can be used not only for binary operations but for more complex logical expressions, e.g. let $p$, $q$, $r$ be three logical statements, a truth table can be made for the expression $p \land (\neg q \lor r)$, this truth table would have $8$ rows, one for each possible combination of the logical values of $p$, $q$, and $r$, and with the logical value of the expression $p \land (\neg q \lor r)$ in the last column.
 
-## Equality and congruence properties, two column proofs (Propiedades de la igualdad y la congruencia, demostraciones a dos columnas)
+## Equality and congruence properties, operation properties, two column proofs (Propiedades de la igualdad y la congruencia, propiedades de las operaciones, demostraciones a dos columnas)
 [Ch02_S04](https://www.ck12.org/reader/reader-index.html#section/2932928/2.4/9549314)
 
 (Propiedades de la igualdad)
@@ -293,8 +293,6 @@ Truth tables can be used not only for binary operations but for more complex log
 
 - **Division property of equality** (Propiedad divisiva de la igualdad): dividing both sides of an equality by a real number different from zero, preserves the equality. Let $a$, $b$, $c$ be real numbers with $c \ne 0$, if $a = b$ then $\frac{a}{c} = \frac{b}{c}$.
 
-- **Distributive property of multiplication over addition** (Propiedad distributiva de la multiplicación respecto a la suma): a real number multiplying the sum of other real numbers, is equal to the sum of the products of the real number by each of the other real numbers. Let $a$, $b$, $c$ be real numbers, then $a(b + c) = ab + ac$.
-
 (Propiedades de la congruencia)
 **Properties of congruence**: the following are some of the several properties that congruence has.
 
@@ -303,6 +301,15 @@ Truth tables can be used not only for binary operations but for more complex log
 - **Symmetric property of congruence** (Propiedad simétrica de la congruencia): if a first figure is congruent to a second, then the second figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$ be segments, if $\overline{AB} \cong \overline{CD}$ then $\overline{CD} \cong \overline{AB}$.
 
 - **Transitive property of congruence** (Propiedad transitiva de la congruencia): if a first figure is congruent to a second, and the second figure is congruent to a third, then the third figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$, $\overline{EF}$ be segments, if $\overline{AB} \cong \overline{CD}$ and $\overline{CD} \cong \overline{EF}$ then $\overline{AB} \cong \overline{EF}$.
+
+(Propiedades de las operaciones)
+**Operation properties**: the following properties apply to operations such as addition and multiplication.
+
+- **Commutative property of addition and multiplication** (Propiedad conmutativa de la adición y la multiplicación): changing the order of the operands doesn't change the result. Let $a$, $b$ be real numbers, then $a + b = b + a$, $ab = ba$.
+
+- **Associative property of addition and multiplication** (Propiedad asociativa de la adición y la multiplicación): the operands can be arbitrarily associated with parentheses and that doesn't change the result. Let $a$, $b$, $c$, be real numbers, then $(a + b) + c = a + (b + c)$, $(ab)c = a(bc)$.
+
+- **Distributive property of multiplication over addition** (Propiedad distributiva de la multiplicación respecto a la suma): a real number multiplying the sum of other real numbers, is equal to the sum of the products of the real number by each of the other real numbers. Let $a$, $b$, $c$ be real numbers, then $a(b + c) = ab + ac$.
 
 (Demostraciones a dos columnas)
 **Two column proofs**: a way to write mathematical proofs in a structured manner. The proof is written in a table with two columns. The first column has the header of 'Statement', and its rows contain the steps of the proof. The second column has the header of 'Reason', and its rows state the reason why the step they accompany is correct.
@@ -314,7 +321,7 @@ Truth tables can be used not only for binary operations but for more complex log
 | Step3     | Reason3 |
 *Two column proof template*
 
-Step1 is supported by Reason1, Step2 is supported by Reason2, and so on.
+Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement.
 
 ## Proofs about angle pairs and segments (Demostraciones sobre pares de ángulos y segmentos)
 [Ch02_S05](https://www.ck12.org/reader/reader-index.html#section/2932929/2.5/9549314)

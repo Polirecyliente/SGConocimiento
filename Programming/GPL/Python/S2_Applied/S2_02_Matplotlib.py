@@ -688,7 +688,11 @@ import matplotlib.patches as mpatches
 #T#     '<|-', tail filled arrowhead
 #T#     '|-|', bidirectional perpendicular line arrowheads
 
-arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrowstyle = '|-|')
+#T# the shrinkA kwarg is a number that sets the amount of reduction in the length of the arrow, from the tuple1 side
+
+#T# the shrinkB kwarg is a number that sets the amount of reduction in the length of the arrow, from the tuple2 side
+
+arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrowstyle = '|-|', shrinkA = 50, shrinkB = 25)
 
 #T# the Arc patch is used to create arcs
 
