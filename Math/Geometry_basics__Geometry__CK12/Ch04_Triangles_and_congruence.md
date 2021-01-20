@@ -114,6 +114,10 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 ## Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
 [Ch04_S03](https://www.ck12.org/reader/reader-index.html#section/6707215/4.3/9549314)
 
+
+
+<!-- # TODO SSS postulate, SAS postulate -->
+
 ## Triangle congruence criteria 2 (Criterios de congruencia de triángulos 2)
 [Ch04_S04](https://www.ck12.org/reader/reader-index.html#section/2932943/4.4/9549314)
 
