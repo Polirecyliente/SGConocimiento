@@ -3,7 +3,7 @@
 #T# to draw a ray, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to create arrows
+#T# the patches module of the matplotlib package is used to draw arrows
 import matplotlib.patches as mpatches
 
 #T# create the figure and axes

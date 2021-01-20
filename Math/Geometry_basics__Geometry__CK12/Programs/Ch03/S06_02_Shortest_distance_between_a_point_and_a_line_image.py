@@ -3,7 +3,7 @@
 #T# to draw the shortest distance between a point and a line, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to create bidirectional arrows
+#T# the patches module of the matplotlib package is used to draw arrows
 import matplotlib.patches as mpatches
 
 #T# to transform the markers of a plot, import the MarkerStyle constructor

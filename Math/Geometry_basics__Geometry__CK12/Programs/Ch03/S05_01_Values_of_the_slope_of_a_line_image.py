@@ -3,7 +3,7 @@
 #T# to draw the slope of a line with different values, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to create bidirectional arrows
+#T# the patches module of the matplotlib package is used to draw arrows
 import matplotlib.patches as mpatches
 
 #T# the numpy package is used to manage and use numpy arrays

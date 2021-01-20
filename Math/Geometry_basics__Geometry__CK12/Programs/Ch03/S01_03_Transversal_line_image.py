@@ -3,7 +3,7 @@
 #T# to draw a transversal line, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to create bidirectional arrows
+#T# the patches module of the matplotlib package is used to draw arrows
 import matplotlib.patches as mpatches
 
 #T# create the figure and axes

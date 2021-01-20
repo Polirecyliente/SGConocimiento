@@ -392,7 +392,9 @@ plt.tight_layout(h_pad = 2)
 
 #T# the marker kwarg is a string used to set the marker directly, this is string can be any of the chars for marker shapes shown before, or it also can be a tuple 
 
-plt.plot([3, 7], [-1, 5], 'w')
+#T# the markersize kwarg is a number that sets the size of the marker
+
+plt.plot([3, 7], [-1, 5], 'w', marker = 'o', markersize = 6)
 
 #C# --- Titles
 
@@ -723,9 +725,18 @@ import matplotlib.transforms as mtransforms
 
 transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
 
+#T# transformations can affect a given coordinate system, for this, the transformation and the coordinate system are added together, making sure to add the coordinate system last, because this addition is not commutative
+transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
+transformation2 = transformation1 + ax1.transData
+transformation2 = transformation1 + ax1.transAxes
+
 #T# the get_matrix function returns the transformation matrix of an Affine2D object
 transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
 arr1 = transformation1.get_matrix() # [[3, 4, 1], [2, 5, 91], [15, 65, 2]]
+
+#T# the set_matrix function sets the transformation matrix of an Affine2D object
+transformation1 = mtransforms.Affine2D()
+transformation1.set_matrix([[4, 5, 6], [2, 4, 6], [5, 50, 500]])
 
 #T# the clear function makes the transformation matrix of an Affine2D object to be the identity matrix
 transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
@@ -737,10 +748,53 @@ transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
 arr1 = transformation1.identity()
 arr1.get_matrix() # array([[1., 0., 0.], [0., 1., 0.], [0., 0., 1.]])
 
-#T# the rotate function returns an Affine2D object with a given rotation in radians
+#T# the rotate function rotates an Affine2D object a given amount of radians, around the origin
 transformation1 = mtransforms.Affine2D([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
 transformation1.rotate(1.5)
 arr1 = transformation1.get_matrix() # array([[ 0.0707372 , -0.99749499, 0. ], [ 0.99749499,  0.0707372 ,  0. ], [ 0. ,  0. ,  1.]])
+
+#T# the rotate_around function rotates an Affine2D object a given amount of radians, around a given point
+
+# SYNTAX transformation1.rotate_around(num1, num2, num3)
+#T# num1 is the horizontal offset from left to right, num2 is the vertical offset upwards, num3 is the amount of rotation in radians
+
+transformation1 = mtransforms.Affine2D()
+transformation1.rotate_around(328, 237.5, 3) #| this coordinate (328, 237.5) empirically makes the rotation around the plot itself, if the transformation coordinates are added first in the transformation (which means this addition is not commutative)
+
+#T# the rotate_deg function rotates an Affine2D object a given amount of degrees, around the origin
+transformation1 = mtransforms.Affine2D()
+transformation1.rotate_deg(45)
+
+#T# the rotate_deg_around function rotates an Affine2D object a given amount of degrees, around a given point, the syntax is the same as that of the rotate_around function
+transformation1.rotate_deg_around(2, 4, 180)
+
+#T# the scale function scales a given Affine2D object
+
+# SYNTAX transformation1.scale(num1, num2)
+#T# num1 is the scale factor in the horizontal dimension, num2 is the scale factor in the vertical dimension, if num2 is omitted then num1 applies the same scale factor in both dimensions
+
+transformation1 = mtransforms.Affine2D()
+transformation1.scale(3, 4)
+
+#T# the skew function skews an Affine2D object a given amount of radians in each of two dimensions
+
+# SYNTAX transformation1.skew(num1, num2)
+#T# num1 is the amount of skew in the horizontal dimension, num2 is the amount of skew in the vertical dimension
+
+transformation1 = mtransforms.Affine2D()
+transformation1.skew(5, 6)
+
+#T# the skew_deg function skews an Affine2D object a given amount of degrees in each of two dimensions, its syntax is the same as that of the skew function
+transformation1 = mtransforms.Affine2D()
+transformation1.skew_deg(45, 60)
+
+#T# the translate function translates an Affine2D object in two dimensions
+
+# SYNTAX transformation1.translate(num1, num2)
+#T# num1 is the amount of translation in the horizontal dimension, num2 is the amount of translation in the vertical dimension
+
+transformation1 = mtransforms.Affine2D()
+transformation1.translate(200, 100)
 # |-------------------------------------------------------------
 
 #C# 3D plotting
