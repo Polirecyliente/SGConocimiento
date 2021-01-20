@@ -88,7 +88,28 @@ In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior an
 ![Congruent triangles image](Images/Ch04/S02_01_Congruent_triangles.png)
 *Congruent triangles*
 
-<!-- # TODO third angle theorem, properties of triangle congruence -->
+The triangle $\triangle ABC$ is congruent to the triangle $\triangle DEF$, because their corresponding sides are congruent and also their corresponding angles are congruent.
+
+> Triangle congruence
+>
+> The congruence $\triangle ABC \cong \triangle DEF$, because $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$.
+
+In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
+
+(Teorema del tercer ángulo)
+**Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent.
+
+> Proof of the third angle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The triangles $\triangle ABC$ and $\triangle DEF$, have $\angle A \cong \angle D$ and $\angle B \cong \angle E$ | Given |
+> | $m \angle A = m \angle D$, $m \angle B = m \angle E$ | Definition of congruence |
+> | $m \angle A + m \angle B + m \angle C = \pi$, $m \angle D + m \angle E + m \angle F = \pi$ | Triangle interior angles sum theorem |
+> | $m \angle A + m \angle B + m \angle C = m \angle D + m \angle E + m \angle F$ | Transitive property of equality |
+> | $m \angle A + m \angle B + m \angle C = m \angle A + m \angle B + m \angle F$ | Substitution property of equality |
+> | $m \angle C = m \angle F$ | Subtraction property of equality |
+> | $\angle C \cong \angle F$ | Definition of congruence |
 
 ## Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
 [Ch04_S03](https://www.ck12.org/reader/reader-index.html#section/6707215/4.3/9549314)

@@ -49,7 +49,31 @@ ax1.plot(list1_1, list2_1, 'k', transform = trans1)
 ax1.scatter(list1_1, list2_1, s = 12, color = 'k', transform = trans1)
 
 #T# plot the arcs for the angle markings
-arc1_1 = mpatches.A
+arc1_1 = mpatches.Arc(p1, 1, 1, theta1 = 15, theta2 = 140)
+arc2a_1 = mpatches.Arc(p2, 1, 1, theta1 = 160, theta2 = 200)
+arc2b_1 = mpatches.Arc(p2, 1.18, 1.18, theta1 = 160, theta2 = 200)
+arc3a_1 = mpatches.Arc(p3, 1, 1, theta1 = 320, theta2 = 340)
+arc3b_1 = mpatches.Arc(p3, 1.18, 1.18, theta1 = 320, theta2 = 340)
+arc3c_1 = mpatches.Arc(p3, 1.36, 1.36, theta1 = 320, theta2 = 340)
+ax1.add_patch(arc1_1)
+ax1.add_patch(arc2a_1)
+ax1.add_patch(arc2b_1)
+ax1.add_patch(arc3a_1)
+ax1.add_patch(arc3b_1)
+ax1.add_patch(arc3c_1)
+
+arc1_2 = mpatches.Arc(p1, 1, 1, theta1 = 15, theta2 = 140, transform = trans1)
+arc2a_2 = mpatches.Arc(p2, 1, 1, theta1 = 160, theta2 = 200, transform = trans1)
+arc2b_2 = mpatches.Arc(p2, 1.18, 1.18, theta1 = 160, theta2 = 200, transform = trans1)
+arc3a_2 = mpatches.Arc(p3, 1, 1, theta1 = 320, theta2 = 340, transform = trans1)
+arc3b_2 = mpatches.Arc(p3, 1.18, 1.18, theta1 = 320, theta2 = 340, transform = trans1)
+arc3c_2 = mpatches.Arc(p3, 1.36, 1.36, theta1 = 320, theta2 = 340, transform = trans1)
+ax1.add_patch(arc1_2)
+ax1.add_patch(arc2a_2)
+ax1.add_patch(arc2b_2)
+ax1.add_patch(arc3a_2)
+ax1.add_patch(arc3b_2)
+ax1.add_patch(arc3c_2)
 
 #T# set the math text font to the Latex default, Computer Modern
 import matplotlib
@@ -80,13 +104,29 @@ marker3_2._transform.scale(1.6, 2.2)
 marker3_2._transform.rotate(-1.2)
 
 #T# plot the markers
-plt.plot(p_marker_1_2[0], p_marker_1_2[1], 'k', marker = marker1_1)
-plt.plot(p_marker_1_3[0], p_marker_1_3[1], 'k', marker = marker2_1)
-plt.plot(p_marker_2_3[0], p_marker_2_3[1], 'k', marker = marker3_1)
+ax1.plot(p_marker_1_2[0], p_marker_1_2[1], 'k', marker = marker1_1)
+ax1.plot(p_marker_1_3[0], p_marker_1_3[1], 'k', marker = marker2_1)
+ax1.plot(p_marker_2_3[0], p_marker_2_3[1], 'k', marker = marker3_1)
 
-plt.plot(p_marker_1_2[0], p_marker_1_2[1], 'k', marker = marker1_2, transform = trans1)
-plt.plot(p_marker_1_3[0], p_marker_1_3[1], 'k', marker = marker2_2, transform = trans1)
-plt.plot(p_marker_2_3[0], p_marker_2_3[1], 'k', marker = marker3_2, transform = trans1)
+ax1.plot(p_marker_1_2[0], p_marker_1_2[1], 'k', marker = marker1_2, transform = trans1)
+ax1.plot(p_marker_1_3[0], p_marker_1_3[1], 'k', marker = marker2_2, transform = trans1)
+ax1.plot(p_marker_2_3[0], p_marker_2_3[1], 'k', marker = marker3_2, transform = trans1)
+
+#T# label the points
+label_A = ax1.annotate(r'$A$', p1, size = 16)
+label_B = ax1.annotate(r'$B$', p2, size = 16)
+label_C = ax1.annotate(r'$C$', p3, size = 16)
+label_D = ax1.annotate(r'$D$', p_marker_1_2, size = 16)
+label_E = ax1.annotate(r'$E$', p_marker_1_3, size = 16)
+label_F = ax1.annotate(r'$F$', p_marker_2_3, size = 16)
+
+#T# drag the labels into better positions after plotting them
+label_A.draggable()
+label_B.draggable()
+label_C.draggable()
+label_D.draggable()
+label_E.draggable()
+label_F.draggable()
 
 #T# show the results
 plt.show()
