@@ -23,10 +23,12 @@
 #C# Colors
 #C# Plot types
 #C# --- Patches
+#C# Transforms
 #C# 3D plotting
 #C# Backends
 #C# Interactive sessions
 #C# Configuration
+#C# Matplotlib toolkits
 
 #T# Beginning of content
 
@@ -708,6 +710,39 @@ arc1 = mpatches.Arc((3, 2), 1, 1, theta1 = 15, theta2 = 60)
 
 # |-------------------------------------------------------------
 
+#C# Transforms
+
+# |-------------------------------------------------------------
+#T# the transforms module of the matplotlib package is used to do transformations of a plot
+import matplotlib.transforms as mtransforms
+
+#T# transformations can be made via the methods of Affine2D objects created with the Affine2D constructor
+
+# SYNTAX mtransforms.Affine2D(array1)
+#T# array1 is an array containing the 3x3 transformation matrix, if omitted the default is the identity matrix, the returned Affine2D object consists of a transformation matrix
+
+transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
+
+#T# the get_matrix function returns the transformation matrix of an Affine2D object
+transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
+arr1 = transformation1.get_matrix() # [[3, 4, 1], [2, 5, 91], [15, 65, 2]]
+
+#T# the clear function makes the transformation matrix of an Affine2D object to be the identity matrix
+transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
+transformation1.clear()
+arr1 = transformation1.get_matrix() # array([[1., 0., 0.], [0., 1., 0.], [0., 0., 1.]])
+
+#T# the identity function returns an identity matrix, it does not change the caller Affine2D object
+transformation1 = mtransforms.Affine2D([[3, 4, 1], [2, 5, 91], [15, 65, 2]])
+arr1 = transformation1.identity()
+arr1.get_matrix() # array([[1., 0., 0.], [0., 1., 0.], [0., 0., 1.]])
+
+#T# the rotate function returns an Affine2D object with a given rotation in radians
+transformation1 = mtransforms.Affine2D([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+transformation1.rotate(1.5)
+arr1 = transformation1.get_matrix() # array([[ 0.0707372 , -0.99749499, 0. ], [ 0.99749499,  0.0707372 ,  0. ], [ 0. ,  0. ,  1.]])
+# |-------------------------------------------------------------
+
 #C# 3D plotting
 
 # |-------------------------------------------------------------
@@ -799,4 +834,16 @@ matplotlib.rcParams['lines.color'] = 'r'
 matplotlib.rc('lines', linewidth = 2, color = 'r') #| equivalent to the former two lines of configuration
 
 matplotlib.rcParams['mathtext.fontset'] = 'cm' #| sets the math text font to the Latex default 'cm' which stands for Computer Modern
+# |-------------------------------------------------------------
+
+#C# Matplotlib toolkits
+
+# |-------------------------------------------------------------
+#T# the matplotlib toolkits are extra packages and modules that extend the functionality of matplotlib
+
+#T# all of the matplotlib toolkits are part of the mpl_toolkits package
+import mpl_toolkits.axes_grid  #| deprecated
+import mpl_toolkits.axes_grid1 #| used to manage a grid of axes
+import mpl_toolkits.axisartist #| used to manage curvilinear axes and floating axes
+import mpl_toolkits.mplot3d    #| used to generate more 3d plots
 # |-------------------------------------------------------------

@@ -82,6 +82,14 @@ In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior an
 ## Congruent figures (Figuras congruentes)
 [Ch04_S02](https://www.ck12.org/reader/reader-index.html#section/2932941/4.2/9549314)
 
+(Triángulos congruentes)
+**Congruent triangles**: given two triangles, they are congruent if they have their corresponding sides congruent and their corresponding angles congruent.
+[Congruent triangles images code](Programs/Ch04/S02_01_Congruent_triangles_image.py)
+![Congruent triangles image](Images/Ch04/S02_01_Congruent_triangles.png)
+*Congruent triangles*
+
+<!-- # TODO third angle theorem, properties of triangle congruence -->
+
 ## Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
 [Ch04_S03](https://www.ck12.org/reader/reader-index.html#section/6707215/4.3/9549314)
 
