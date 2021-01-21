@@ -692,6 +692,8 @@ import matplotlib.patches as mpatches
 #T#     '<|-', tail filled arrowhead
 #T#     '|-|', bidirectional perpendicular line arrowheads
 
+#T# the connectionstyle kwarg 
+
 #T# the shrinkA kwarg is a number that sets the amount of reduction in the length of the arrow, from the tuple1 side
 
 #T# the shrinkB kwarg is a number that sets the amount of reduction in the length of the arrow, from the tuple2 side

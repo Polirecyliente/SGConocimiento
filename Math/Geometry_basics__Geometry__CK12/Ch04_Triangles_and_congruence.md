@@ -206,3 +206,11 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 
 ## Isosceles and equilateral triangles (Triángulos isósceles y equiláteros)
 [Ch04_S05](https://www.ck12.org/reader/reader-index.html#section/6042181/4.5/9549314)
+
+(Partes de un triángulo isósceles)
+**Isosceles triangle parts**: in an isosceles triangle, the congruent sides are called the legs (patas), the remaining side is called the base (base). The two angles formed by the base and each of the legs, are called base angles (ángulos de la base), and the included angle of the two legs is called the vertex angle (ángulo del vértice).
+[Isosceles triangle parts image code](Programs/Ch04/S05_01_Isosceles_triangle_parts_image.py)
+![Isosceles triangle parts image](Images/Ch04/S05_01_Isosceles_triangle_parts.png)
+*Isosceles triangle parts*
+
+<!-- # TODO base angles theorem, converse of the base angles theorem -->
