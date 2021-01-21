@@ -314,7 +314,7 @@ There are infinitely many segment bisectors and only one perpendicular bisector 
 
 > Perpendicular bisector construction
 >
-> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials)
+> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials).
 > 1. Draw the segment whose perpendicular bisector will be constructed, with space around it.
 > 2. Center the compass on one of the endpoints of the segment from step 1, with a radius greater than half the length of the segment. Draw arcs above and below the segment. Repeat this step with the other endpoing of the segment, ensuring that the arcs above and below intercept, and being careful to not change the radius of the compass.
 > 3. Draw a line that passes through both arc interceptions above and below the segment, this line bisects the segment perpendicularly.
@@ -341,7 +341,7 @@ In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into 
 
 > Angle bisector construction
 >
-> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials)
+> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials).
 > 1. Draw the angle whose bisector will be constructed, with space around it.
 > 2. Center the compass on the vertex of the angle, draw an arc at any radius such that it crosses both sides of the angle.
 > 3. Apply the perpendicular bisector construction, taking as endpoints the intersections of the arc with the sides of the angle.

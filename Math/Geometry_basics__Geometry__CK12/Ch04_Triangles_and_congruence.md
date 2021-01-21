@@ -119,44 +119,90 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 
 > Triangle from three sides construction
 >
-> This construction requires paper, pencil, ruler, and compass (or equivalent tools and materials)
-> 1. Set the three values of the lengths of the three sides from the triangle to draw. Let $a$, $b$, $c$ be the measures of the lengths of the three sides respectively.
+> This construction requires paper, pencil, ruler, and compass (or equivalent tools and materials).
+> 1. Set the measures of the three sides from the triangle to draw. Let $a$, $b$, $c$ be the measures of the three sides respectively.
 > 2. Draw the length $a$ as a segment.
 > 3. Open the compass to the length of $b$. Center the compass in one of the endpoints of the segment from step 2 and draw a wide arc.
 > 4. Open the compass to the length of $c$. Center the compass in the other endpoint of the segment from step 2 and draw a wide arc, such that it intersects with the arc from step 3.
 > 5. Draw two segments, one from each endpoint of the segment from step 2 to the intersection of the arcs. The result is the triangle given the three measures of its sides.
 
 (Postulado LLL de congruencia de triángulos)
-**SSS postulate of triangle congruence**: SSS stands for Side-Side-Side (Lado-Lado-Lado). This postulate says that two triangles with side-side-side of the same lengths, are congruent, i.e. if the three sides of a triangle are individually congruent to the three sides of another triangle, then the two triangles are congruent.
+**SSS triangle congruence postulate**: SSS stands for Side-Side-Side (Lado-Lado-Lado). This postulate says that two triangles with side-side-side of the same lengths, are congruent, i.e. if the three sides of a triangle are individually congruent to the three sides of another triangle, then the two triangles are congruent.
 
-> SSS postulate of triangle congruence
+> SSS triangle congruence postulate
 >
-> Let $\triangle ABC$ have sides with lengths $a$, $b$, $c$, and $\triangle DEF$ have sides with lengths $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
+> Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
 
 (Ángulo incluido por dos lados)
 **Included angle between two sides**: the angle between two given sides, is the included angle.
 
 (Construcción de un triángulo dados dos lados y su ángulo incluido)
-**Triangle from two sides and their included angle construction**: a geometric construction to draw a triangle given two sides and the included angle of these two sides.
+**Triangle from two sides and their included angle construction**: a geometric construction to draw a triangle given two sides and their included angle.
 
 > Triangle from two sides and their included angle construction
 >
-> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials)
-> 1. Set the two values of the lengths of the sides, and the measure of their included angle from the triangle to draw. Let $a$, $c$ be the measures of the two sides, and $\beta$ be the measure of the included angle.
+> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials).
+> 1. Set the two measures of the sides, and the measure of their included angle from the triangle to draw. Let $a$, $c$ be the measures of the two sides, and $\beta$ be the measure of the included angle.
 > 2. Draw the length $a$ as a segment.
-> 3. Measure the angle $\beta$ with the protractor, using the segment from step 2 as the first side of the angle. Mark the angle.
+> 3. Measure the angle $\beta$ using the segment from step 2 as the first side of the angle. Mark the angle.
 > 4. Draw the length $c$ as a segment in the direction of the angle mark from step 3.
 > 5. Join the remaining two points to close the triangle. The result is the triangle.
 
 (Postulado LAL de congruencia de triángulos)
-**SAS postulate of triangle congruence**: SAS stands for Side-Angle-Side (Lado-Ángulo-Lado). This postulate says that if two sides and their included angle are individually congruent to two sides and their included angle of another triangle, then the two triangles are congruent.
+**SAS triangle congruence postulate**: SAS stands for Side-Angle-Side (Lado-Ángulo-Lado). This postulate says that if two sides and their included angle are individually congruent to two sides and their included angle of another triangle, then the two triangles are congruent.
 
-> SAS postulate of triangle congruence
+> SAS triangle congruence postulate
 >
-> Let $\triangle ABC$ have two sides with lengths $a$, $c$, and let their included angle measure $\beta$. Let $\triangle DEF$ have two sides with lengths $d$, $f$, and let their included angle measure $\epsilon$. If $a = d$, $c = f$, and $\beta = \epsilon$, then $\triangle ABC \cong \triangle DEF$.
+> Let $\triangle ABC$ have two sides with measures $a$, $c$, and let their included angle measure $\beta$. Let $\triangle DEF$ have two sides with measures $d$, $f$, and let their included angle measure $\epsilon$. If $a = d$, $c = f$, and $\beta = \epsilon$, then $\triangle ABC \cong \triangle DEF$.
 
 ## Triangle congruence criteria 2 (Criterios de congruencia de triángulos 2)
 [Ch04_S04](https://www.ck12.org/reader/reader-index.html#section/2932943/4.4/9549314)
+
+(Lado incluido por dos ángulos)
+**Included side between two angles**: a side that is common to two differnt angles. The angles surround the side by placing themselves at each endpoint of the side.
+
+(Construcción de un triángulo dados dos ángulos y su lado incluido)
+**Triangle from two angles and their included side construction**: geometric construction to draw a triangle given two angles and their included side.
+
+> Triangle from two angles and their included side construction
+>
+> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials).
+> 1. Set the two measures of the angles, and the measure of their included side from the triangle to draw. Let $\alpha$, $\gamma$ be the measures of the two angles, and $b$ be the measure of the included side.
+> 2. Draw the length $b$ as a segment.
+> 3. Measure the angle $\alpha$ using the segment from step 2 as the first side of the angle. Mark the angle.
+> 4. Repeat step 3 but with the angle $\gamma$, with vertex on the remaining endpoint of the segment from step 2.
+> 5. Extend the lines in each of the marked angles from step 3 and step 4 so that they cross each other. The result is the triangle.
+
+(Postulado ALA de congruencia de triángulos)
+**ASA triangle congruence postulate**: ASA stands for Angle-Side-Angle (Ángulo-Lado-Ángulo). This postulate says that if two angles and their included side are individually congruent to two angles and their included side in another triangle, then the two triangles are congruent.
+
+> ASA triangle congruence postulate
+>
+> Let $\triangle ABC$ have two angles with measures $\alpha$, $\gamma$, and let their included side measure $b$. Let $\triangle DEF$ have two angles with measures $\delta$, $\zeta$, and let their included side measure $e$. If $\alpha = \delta$, $\gamma = \zeta$, and $b = e$, then $\triangle ABC = \triangle DEF$.
+
+(Teorema AAS de congruencia de triángulos)
+**AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration.
+[AAS triangle congruence theorem image code](Programs/Ch04/S04_01_AAS_triangle_congruence_theorem_image.py)
+![AAS triangle congruence theorem image](Images/Ch04/S04_01_AAS_triangle_congruence_theorem.png)
+*AAS triangle congruence theorem*
+
+> Proof of the AAS triangle congruence theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\overline{BC} \cong \overline{EF}$ | Given |
+> | $\angle C \cong \angle F$ | Third angle theorem |
+> | $\overline{BC}$ is the included side of $\angle B$ and $\angle C$, and $\overline{EF}$ is the included side of $\angle E$ and $\angle F$ | Definition of included side between two angles |
+> | $\triangle ABC \cong \triangle DEF$ | ASA triangle congruence postulate |
+
+(Teorema de la congruencia de la hipotenusa-cateto)
+**Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent.
+
+> Proof of the hypotenuse-leg congruence theorem
+>
+> All right triangles have at least one congruent angle with each other, the right angle. If the hypotenuse of one of the legs is congruent in two triangles, then the two triangles are congruent because of the AAS triangle congruence theorem. $\blacksquare$
+
+The configurations AAA and SSA do not necessarily lead to congruent triangles.
 
 ## Isosceles and equilateral triangles (Triángulos isósceles y equiláteros)
 [Ch04_S05](https://www.ck12.org/reader/reader-index.html#section/6042181/4.5/9549314)

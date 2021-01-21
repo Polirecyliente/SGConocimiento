@@ -39,7 +39,7 @@ The blue line and the crimson line are not parallel, and yet they never intersec
 
 > Perpendicular line construction
 >
-> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials)
+> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials).
 > 1. Draw a segment and a point outside of it, with space around it.
 > 2. Center the compass on the point outside the segment, with a radius that goes beyond the segment. Draw an arc such that it intersects the segment two times.
 > 3. Apply the perpendicular bisector construction, taking as endpoints the two arc intersections with the segment. The resulting line is perpendicular to the segment and passes through the point outside of it.
