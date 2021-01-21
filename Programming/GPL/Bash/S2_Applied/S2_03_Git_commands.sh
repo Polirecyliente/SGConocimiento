@@ -177,5 +177,9 @@ git lfs install
 # SYNTAX git lfs track file1
 git lfs track "*.png" #| tracks .png files
 
+#T# get the actual files instead of their file pointers
+git lfs fetch
+git lfs pull
+
 #T# the .gitattributes file must be part of the project if it already isn't
 # |-------------------------------------------------------------
