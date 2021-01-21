@@ -336,6 +336,10 @@ fig1.set_figheight(3)
 #T# the w_pad kwarg is a number that sets the width padding between the subplots
 
 plt.tight_layout(h_pad = 2)
+
+#T# the autoscale function automatically scales the axes to fit to content
+arrow1 = mpatches.FancyArrowPatch((0, 0), (2, 1), arrowstyle = '<->', mutation_scale = 30); ax1.add_patch(arrow1)
+ax1.autoscale() #| without autoscale, the arrow is shown incompletely
 # |-----
 
 # |-------------------------------------------------------------
@@ -523,7 +527,7 @@ plt.text(1, 1, 'text1', font = 'cmmi10') #| this sets the font to the italic Lat
 # SYNTAX plt.annotate('text_string1', xy_tuple1, xy_text_tuple1, kwargs1)
 #T# 'text_string1' is the string that will be displayed, xy_tuple1 is a tuple with the x, y coordinates of the annotation, xy_text_tuple1 is optional and is a tuple with the x, y coordinates for the text of the annotation, kwargs1 are the kwarg value pairs
 
-#T# the arrowprops kwarg is a dictionary with the properties (also kwargs) of the arrow that connects the point of annotation with its text
+#T# the arrowprops kwarg is a dictionary with the properties (also kwargs, see the kwargs from the FancyArrowPatch constructor) of the arrow that connects the point of annotation with its text
 
 #T# xy_tuple1 and xy_text_tuple1 can be input via the xy and xytext kwargs respectively
 
@@ -692,13 +696,21 @@ import matplotlib.patches as mpatches
 #T#     '<|-', tail filled arrowhead
 #T#     '|-|', bidirectional perpendicular line arrowheads
 
-#T# the connectionstyle kwarg 
+#T# the connectionstyle kwarg is a string used to set the connection style between the starting point and the ending point of the arrow, this kwarg can also accept a ConnectionStyle object
+
+#T# the string of the connectionstyle kwarg acts as the constructor of a ConnectionStyle object, the first word is the class of the connection style, and arguments are placed separated by comma
+#T#     'angle, angleA = 60, angleB = 15, rad = 20'
+#T#     'angle3, angleA = 180, angleB = 40'
+#T#     'arc, angleA = 30, angleB = 80, armA = 100, armB = 150, rad = 20'
+#T#     'arc3, rad = 3'
+#T#     'bar, armA = 90, armB = 50, fraction = .5, angle = 10'
+#T# 'angleA' and 'angleB' set the starting and ending angle, 'rad' sets the rounding radius of a corner or edge, 'armA' and 'armB' set the straight length at the start and end, 'fraction' sets a fraction of length of the bar, 'angle' sets the rotation angle of the bar
 
 #T# the shrinkA kwarg is a number that sets the amount of reduction in the length of the arrow, from the tuple1 side
 
 #T# the shrinkB kwarg is a number that sets the amount of reduction in the length of the arrow, from the tuple2 side
 
-arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrowstyle = '|-|', shrinkA = 50, shrinkB = 25)
+arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrowstyle = '|-|', connectionstyle = 'arc3, rad = 3', shrinkA = 50, shrinkB = 25)
 
 #T# the Arc patch is used to create arcs
 

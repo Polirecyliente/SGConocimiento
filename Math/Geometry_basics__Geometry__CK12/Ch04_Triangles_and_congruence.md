@@ -213,4 +213,6 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 ![Isosceles triangle parts image](Images/Ch04/S05_01_Isosceles_triangle_parts.png)
 *Isosceles triangle parts*
 
+
+
 <!-- # TODO base angles theorem, converse of the base angles theorem -->
