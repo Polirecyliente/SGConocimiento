@@ -92,7 +92,7 @@ The triangle $\triangle ABC$ is congruent to the triangle $\triangle DEF$, becau
 
 > Triangle congruence
 >
-> The congruence $\triangle ABC \cong \triangle DEF$, because $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$.
+> The congruence $\triangle ABC \cong \triangle DEF$, because $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$. This can be expressed as "corresponding parts of congruent triangles are congruent".
 
 In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
 
@@ -213,6 +213,92 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 ![Isosceles triangle parts image](Images/Ch04/S05_01_Isosceles_triangle_parts.png)
 *Isosceles triangle parts*
 
+(Teorema de los ángulos de la base)
+**Base angles theorem**: in an isosceles triangle, the base angles are congruent.
+[Base angles theorem image code](Programs/Ch04/S05_02_Base_angles_theorem_image.py)
+![Base angles theorem image](Images/Ch04/S05_02_Base_angles_theorem.png)
+*Base angles theorem*
 
+> Proof of the base angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{CB}$, $\angle ABD \cong \angle CBD$ | Given |
+> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
+> | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |
+> | $\angle A \cong \angle C$ | Corresponding parts of congruent triangles are congruent |
 
-<!-- # TODO base angles theorem, converse of the base angles theorem -->
+(Converso del teorema de los ángulos de la base)
+**Converse of the base angles theorem**: if two angles in a triangle are congruent, it is an isosceles triangle.
+
+> Proof of the converse of the base angles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\angle A \cong \angle C$ | From the *Base angles theorem* image |
+> | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
+> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
+> | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
+> | $\overline{AB} \cong \overline{CB} | Corresponding parts of congruent triangles are congruent |
+> | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
+
+(Teorema del triángulo isósceles)
+**Isosceles triangle theorem**: in an isosceles triangle, the angle bisector of the vertex angle is a perpendicular bisector of the base.
+
+> Proof of the isosceles triangle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ABC$ is isosceles, $\overline{AB} \cong \overline{CB}$, and $\overline{BD}$ is the angle bisector | From the *Base angles theorem* image |
+> | $\angle A \cong \angle C$ | Base angles theorem |
+> | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
+> | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
+> | $\angle ADB$ and $\angle CDB$ are supplementary | Linear pair postulate |
+> | $\angle ADB \cong \angle CDB$ | Corresponding parts of congruent triangles are congruent |
+> | $m \angle ADB = m \angle CDB$ | Definition of congruence |
+> | $m \angle ADB + m \angle CDB = \pi$ | Definition of supplementary angles |
+> | $m \angle ADB + m \angle ADB = \pi$ | Substitution property of equality |
+> | $m \angle ADB = \pi/2$ | Division property of equality |
+> | $m \angle CDB = \pi/2$ | Substitution property of equality |
+> | $\angle ADB$ and $\angle CDB$ are right angles | Definition of right angle |
+> | $\overline{BD} \perp \overline{AC}$ | Definition of perpendicular lines |
+> | $\overline{AD} \cong \overline{DC}$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | Definition of perpendicular bisector |
+
+(Converso del teorema del triángulo isósceles)
+**Converse of the isosceles triangle theorem**: in an isosceles triangle, the perpendicular bisector of the base is an angle bisector of the vertex angle.
+
+> Proof of the converse of the isosceles triangle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | From the *Base angles theorem* image |
+> | $\overline{AD} \cong \overline{DC}$, $\angle ADC \cong \angle CDB$ | Definition of perpendicular bisector |
+> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
+> | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |
+> | $\angle ABD \cong \angle CBD$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{BD}$ is an angle bisector of $\angle ABC$ | Definition of angle bisector |
+
+(Teorema de los triángulos equiláteros)
+**Equilateral triangles theorem**: an equilateral triangle is also equiangular.
+
+> Proof of the equilateral triangles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ABC$ has sides with measures $a$, $b$, $c$, such that $a = b = c$ | Given |
+> | $\angle A \cong \angle B$ | Base angles theorem |
+> | $\angle B \cong \angle C$ | Base angles theorem |
+> | $\angle A \cong \angle C$ | Transitive property of congruence |
+
+(Converso del teorema de los triángulos equiláteros)
+**Converse of the equilateral triangles theorem**: an equiangular triangle is also equilateral.
+
+> Proof of the converse of the equilateral triangles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ABC$ has $\angle A \cong \angle B \cong \angle C$, and sides with measures $a$, $b$, $c$ | Given |
+> | $a = b$ | Converse of the base angles theorem |
+> | $b = c$ | Converse of the base angles theorem |
+> | $a = c$ | Transitive property of equality |
