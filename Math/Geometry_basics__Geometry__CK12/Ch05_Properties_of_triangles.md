@@ -40,9 +40,30 @@ Every triangle has three midsegments.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
+> | $\overleftrightarrow{CD} \perp \overline{AB}$, $\overline{AD} \cong \overline{DB}$, $\angle CDA$ and $\angle CDB$ are right angles | Given |
+> | $\overline{CD} \cong \overline{CD}$ | Reflexive property of congruence |
+> | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
+> | $\overline{AC} \cong \overline{CB}$ | Corresponding parts of congruent triangles are congruent |
 
+(Converso del teorema de la mediatriz)
+**Converse of the perpendicular bisector theorem**: given a segment, any point equidistant to both endpoints, is in the perpendicular bisector of the segment.
 
-<!-- # TODO points of concurrency -->
+> Proof of the converse of the perpendicular bisector theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AC} \cong \overline{CB}$, $D$ is the midpoint of $\overline{AB}$ | From the *Perpendicular bisector theorem* image |
+> | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
+> | $\angle A \cong \angle B$ | Base angles theorem |
+> | $\overline{AD} \cong \overline{DB}$ | Definition of midpoint |
+> | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
+> | $\angle CDA \cong \angle CDB$ | Corresponding parts of congruent triangles are congruent |
+> | $\angle CDA$ and $\angle CDB$ are supplementary | Linear pair postulate |
+> | $\angle CDA$ and $\angle CDB$ are right angles | Congruent linear pairs theorem |
+> | $\overleftrightarrow{CD}$ is a perpendicular bisector of $\overline{AB}$ | Definition of perpendicular bisector |
+
+(Punto de concurrencia)
+**Point of concurrency**: the intersection in a single point, of three or more lines, rays, or segments.
 
 ## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)

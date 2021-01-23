@@ -239,7 +239,7 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
-> | $\overline{AB} \cong \overline{CB} | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AB} \cong \overline{CB}$ | Corresponding parts of congruent triangles are congruent |
 > | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
 
 (Teorema del triángulo isósceles)
@@ -255,12 +255,7 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
 > | $\angle ADB$ and $\angle CDB$ are supplementary | Linear pair postulate |
 > | $\angle ADB \cong \angle CDB$ | Corresponding parts of congruent triangles are congruent |
-> | $m \angle ADB = m \angle CDB$ | Definition of congruence |
-> | $m \angle ADB + m \angle CDB = \pi$ | Definition of supplementary angles |
-> | $m \angle ADB + m \angle ADB = \pi$ | Substitution property of equality |
-> | $m \angle ADB = \pi/2$ | Division property of equality |
-> | $m \angle CDB = \pi/2$ | Substitution property of equality |
-> | $\angle ADB$ and $\angle CDB$ are right angles | Definition of right angle |
+> | $\angle ADB$ and $\angle CDB$ are right angles | Congruent linear pairs theorem |
 > | $\overline{BD} \perp \overline{AC}$ | Definition of perpendicular lines |
 > | $\overline{AD} \cong \overline{DC}$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | Definition of perpendicular bisector |
@@ -273,7 +268,7 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
 > | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | From the *Base angles theorem* image |
-> | $\overline{AD} \cong \overline{DC}$, $\angle ADC \cong \angle CDB$ | Definition of perpendicular bisector |
+> | $\overline{AD} \cong \overline{DC}$, $\angle ADB \cong \angle CDB$ | Definition of perpendicular bisector |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |
 > | $\angle ABD \cong \angle CBD$ | Corresponding parts of congruent triangles are congruent |

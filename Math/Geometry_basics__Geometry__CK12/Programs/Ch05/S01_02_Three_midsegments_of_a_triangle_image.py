@@ -49,7 +49,6 @@ list2_3 = [p_mid_AF[1], p_mid_FB[1]]
 #T# plot the figure
 ax1.plot(list1, list2, 'k')
 
-#T# plot the points
 ax1.scatter(list1, list2, s = 12, color = 'k')
 
 #T# set the math text font to the Latex default, Computer Modern

@@ -340,7 +340,7 @@ Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If Reas
 
 [Right angle theorem image code](Programs/Ch02/S05_01_Right_angle_theorem_image.py)
 ![Right angle theorem image](Images/Ch02/S05_01_Right_angle_theorem.png)
-*Right angle theorem example*
+*Right angle theorem*
 
 The segments may not be congruent but the right angles are.
 
