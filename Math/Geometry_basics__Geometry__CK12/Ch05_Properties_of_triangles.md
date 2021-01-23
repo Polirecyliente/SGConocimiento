@@ -27,6 +27,23 @@ Every triangle has three midsegments.
 ## Perpendicular bisectors of a triangle (Mediatrices de un triángulo)
 [Ch05_S02](https://www.ck12.org/reader/reader-index.html#section/2932948/5.2/9549314)
 
+(Punto equidistante a otros puntos)
+**Equidistant point to other points**: a given point is equidistant to other points when its distance to all the other points is the same.
+
+(Teorema de la mediatriz)
+**Perpendicular bisector theorem**: given a segment and its perpendicular bisector, any point in the perpendicular bisector is equidistant to both endpoints of the segment.
+[Perpendicular bisector theorem image code](Programs/Ch05/S02_01_Perpendicular_bisector_theorem_image.py)
+![Perpendicular bisector theorem image](Images/Ch05/S02_01_Perpendicular_bisector_theorem.png)
+*Perpendicular bisector theorem*
+
+> Proof of the perpendicular bisector theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+
+
+<!-- # TODO points of concurrency -->
+
 ## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)
 
