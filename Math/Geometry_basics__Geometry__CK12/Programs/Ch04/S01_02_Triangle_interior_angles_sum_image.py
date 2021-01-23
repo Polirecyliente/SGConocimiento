@@ -44,7 +44,7 @@ ax1.scatter(D[0], D[1], s = 12, color = 'k')
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
-#T# Name the vertices
+#T# label the parts of the plot
 label_A = ax1.annotate(r'$A$', (A[0], A[1]), ha = 'right', va = 'top', size = 18)
 label_B = ax1.annotate(r'$B$', (B[0], B[1]), ha = 'left', va = 'top', size = 18)
 label_C = ax1.annotate(r'$C$', (C[0], C[1]), ha = 'center', va = 'bottom', size = 18)
