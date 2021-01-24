@@ -80,6 +80,7 @@ bash -c 'echo str1 "$0" "$1"' "name1" "name2" # str1 name1 name2
 #T# the following list is the list of shell options
 #T#     extglob, allows the use of an extended set of operators for globbing (see S1_03_Operators.sh)
 #T#     lastpipe, the last command in a pipeline executes in the current shell (see S1_12_System_calls.sh), job control must be turned off with 'set +m'
+#T#     nullglob, if the filename expansion * returns no files, then do not return a literal asterisk *, e.g. doing 'ls *' in an empty dir tries to list a file named '*', unless nullglob is set in which case nothing is listed
 
 shopt -s extglob
 shopt -u extglob

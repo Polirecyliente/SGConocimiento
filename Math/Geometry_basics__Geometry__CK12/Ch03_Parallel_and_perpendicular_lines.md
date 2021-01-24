@@ -309,7 +309,6 @@ The distance formula is derived from the Pythagorean theorem (Teorema de Pitágo
 > $$c^2 = a^2 + b^2$$
 
 This theorem can be proved with the following image.
-[Pythagorean theorem image code](../Algebra_basics__Prealgebra__OpenStax/Programs/Ch09/S03_02_Pythagorean_theorem_image.py)
 ![Pythagorean theorem image](../Algebra_basics__Prealgebra__OpenStax/Images/Ch09/S03_02_Pythagorean_theorem.png)
 *Pythagorean theorem*
 
@@ -320,6 +319,7 @@ The distance formula takes the distance between two points as the hypotenuse of 
 ![Rise and run between two points image](Images/Ch03/S06_01_Rise_and_run_between_two_points.png)
 
 Using the Pythagorean theorem, the distance squared between two points, is the sum of the squared rise plus the squared run.
+[Distance formula code](Programs/Ch03/S06_02_Distance_formula.py)
 
 > Distance formula
 >
@@ -328,8 +328,8 @@ Using the Pythagorean theorem, the distance squared between two points, is the s
 
 (Distancia más corta entre un punto y una recta)
 **Shortest distance between a point and a line**: given a point and a line, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line to the given line that passes through the given point, is used to measure this shortest distance, as the distance between the given point and the intersection of the perpendicular line and the given line.
-[Shortest distance between a point and a line image code](Programs/Ch03/S06_02_Shortest_distance_between_a_point_and_a_line_image.py)
-![Shortest distance between a point and a line image](Images/Ch03/S06_02_Shortest_distance_between_a_point_and_a_line.png)
+[Shortest distance between a point and a line image code](Programs/Ch03/S06_03_Shortest_distance_between_a_point_and_a_line_image.py)
+![Shortest distance between a point and a line image](Images/Ch03/S06_03_Shortest_distance_between_a_point_and_a_line.png)
 *Shortest distance between a point and a line*
 
 The shortest distance between the point $A$ and the line $l$ is the distance $AB$.

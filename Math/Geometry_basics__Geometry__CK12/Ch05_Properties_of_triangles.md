@@ -92,6 +92,10 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 ## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)
 
+
+
+<!-- # TODO angle bisector theorem -->
+
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
 

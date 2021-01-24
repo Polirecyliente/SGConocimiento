@@ -10,7 +10,7 @@
 #C# Basic debugging
 
 # |-------------------------------------------------------------
-#T# the Bash shell has a few options that can be used for debugging (see S1_14_Interpreter.sh), the most prominent are -u (errors when expanding unset variables), -v (prints the line read), and -x (prints debug information)
+#T# the Bash shell has a few options that can be used for debugging (see S1_14_Interpreter.sh), the most prominent are -u (errors when expanding unset variables), -v (prints the line read), and -x (prints debug information, for example it shows expansions)
 
 #T# these options can be turned on before a piece of code under debugging, and turned off after said piece
 set -uvx

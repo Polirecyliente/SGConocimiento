@@ -432,6 +432,10 @@ readlink -f link_file1 # /path/to/original_file1
 #T# remove everything but .file with rm !(*.file), this uses pattern matching (see S1_03_Operators.sh)
 rm !(*.tex|*.bib)
 
+#T# rename a file by changing only part of its filename, using substring parameter expansion, e.g augment a number in a filename by 1
+var1='S01_05_Remote_interior_angles_image.py' #| rename by augmenting '5' to '6'
+mv "${var1}" "${var1::5}$((${var1:5:1} + 1))${var1:6}"
+
 #T# print numbered from the start in file1 up to line up_to_l, but taking only the last N lines
 # head -up_to_l file1 | nl -b 'a' | tail -N
 head -80 file1 | nl -b 'a' | tail -10

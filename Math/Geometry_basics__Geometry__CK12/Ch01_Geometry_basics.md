@@ -284,6 +284,7 @@ As shown in the *Midpoint* image, the lengths $AB$ and $BC$ are equal, i.e. $AB 
 > $$\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$$
 
 This formula can be derived from a more general formula
+[Divide segment formula code](Programs/Ch01/S04_02_Divide_segment_formula.py)
 
 > General formula to divide a segment into $n$ subsegments and get the location of the $k$-th subsegment
 >
@@ -294,14 +295,14 @@ Making $k = 1$ and $n = 2$ results in the midpoint formula.
 
 (Bisectriz de un segmento)
 **Segment bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in any angle.
-[Segment bisector image code](Programs/Ch01/S04_02_Segment_bisector_image.py)
-![Segment bisector image](Images/Ch01/S04_02_Segment_bisector.png)
+[Segment bisector image code](Programs/Ch01/S04_03_Segment_bisector_image.py)
+![Segment bisector image](Images/Ch01/S04_03_Segment_bisector.png)
 *Segment bisector*
 
 (Mediatriz)
 **Perpendicular bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in a perpendicular way.
-[Perpendicular bisector image code](Programs/Ch01/S04_03_Perpendicular_bisector_image.py)
-![Perpendicular bisector image](Images/Ch01/S04_03_Perpendicular_bisector.png)
+[Perpendicular bisector image code](Programs/Ch01/S04_04_Perpendicular_bisector_image.py)
+![Perpendicular bisector image](Images/Ch01/S04_04_Perpendicular_bisector.png)
 *Perpendicular bisector*
 
 (Postulado de la mediatriz)
@@ -325,8 +326,8 @@ There are infinitely many segment bisectors and only one perpendicular bisector 
 
 (Bisectriz de un ángulo)
 **Angle bisector**: a line, ray, or segment, that divides a given angle into two congruent angles, each with half the measure of the given angle.
-[Angle bisector image code](Programs/Ch01/S04_04_Angle_bisector_image.py)
-![Angle bisector image](Images/Ch01/S04_04_Angle_bisector.png)
+[Angle bisector image code](Programs/Ch01/S04_05_Angle_bisector_image.py)
+![Angle bisector image](Images/Ch01/S04_05_Angle_bisector.png)
 *Angle bisector*
 
 The segment $\overline{AC}$ is the angle bisector of the angle $\angle DAB$, so $m \angle DAC = m \angle BAC$.
