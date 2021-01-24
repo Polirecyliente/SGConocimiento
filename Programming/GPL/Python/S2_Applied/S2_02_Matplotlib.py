@@ -178,17 +178,21 @@ ax1.set_aspect('equal', adjustable = 'datalim')
 
 #T# draw a horizontal line with the axhline function
 
-# SYNTAX axes1.axhline(y = flo1)
-#T# the line is drawn in axes1, the y kwarg is for the ordinate position flo1 of the line, the y kwarg is optional and if omitted it defaults to 0
+# SYNTAX axes1.axhline(y = flo1, kwargs1)
+#T# the line is drawn in axes1, the y kwarg is for the ordinate position flo1 of the line, the y kwarg is optional and if omitted it defaults to 0, kwargs1 are the kwarg value pairs
 
-ax1.axhline()
+#T# the xmin, xmax kwargs are numbers that set the start and end values of the horizontal line
+
+ax1.axhline(y = 5, xmin = .5, xmax = 3)
 
 #T# draw a vertical line with the axvline function
 
-# SYNTAX axes1.axvline(x = flo1)
-#T# the line is drawn in axes1, the x kwarg is for the abscissa position flo1 of the line, the x kwarg is optional and if omitted it defaults to 0
+# SYNTAX axes1.axvline(x = flo1, kwargs1)
+#T# the line is drawn in axes1, the x kwarg is for the abscissa position flo1 of the line, the x kwarg is optional and if omitted it defaults to 0, kwargs1 are the kwarg value pairs
 
-ax1.axvline()
+#T# the ymin, ymax kwargs are numbers that set the start and end values of the vertical line
+
+ax1.axvline(x = 2, ymin = -3, ymax = 9)
 
 #T# draw a line in a given inclination with the axline function
 
@@ -338,6 +342,7 @@ fig1.set_figheight(3)
 plt.tight_layout(h_pad = 2)
 
 #T# the autoscale function automatically scales the axes to fit to content
+import matplotlib.patches as mpatches
 arrow1 = mpatches.FancyArrowPatch((0, 0), (2, 1), arrowstyle = '<->', mutation_scale = 30); ax1.add_patch(arrow1)
 ax1.autoscale() #| without autoscale, the arrow is shown incompletely
 # |-----
@@ -516,6 +521,7 @@ marker1._transform.skew(1, 1) #| skews the marker once in each dimension
 #T#     ha, stands for horizontal alignment, it can be, 'left', 'center', 'right
 #T#     size, sets the font size of the annotation
 #T#     va, stands for vertical alignment, it can be, 'bottom', 'center', 'top'
+#T#     rotation, a number that sets the rotation of the annotation in degrees
 
 fig1 = plt.Figure() # type: plt.Figure
 ax1 = plt.axes() # type: plt.Axes
@@ -526,6 +532,8 @@ plt.text(1, 1, 'text1', font = 'cmmi10') #| this sets the font to the italic Lat
 
 # SYNTAX plt.annotate('text_string1', xy_tuple1, xy_text_tuple1, kwargs1)
 #T# 'text_string1' is the string that will be displayed, xy_tuple1 is a tuple with the x, y coordinates of the annotation, xy_text_tuple1 is optional and is a tuple with the x, y coordinates for the text of the annotation, kwargs1 are the kwarg value pairs
+
+#T# see the text function for the kwarg value pairs available for the annotate function
 
 #T# the arrowprops kwarg is a dictionary with the properties (also kwargs, see the kwargs from the FancyArrowPatch constructor) of the arrow that connects the point of annotation with its text
 

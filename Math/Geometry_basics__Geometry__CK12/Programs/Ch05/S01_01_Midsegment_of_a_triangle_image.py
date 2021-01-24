@@ -12,13 +12,13 @@ fig1, ax1 = plt.subplots(1, 1)
 #T# set the aspect of the axes
 ax1.set_aspect('equal', adjustable = 'box')
 
-#T# hide the spines and the axes ticks
+#T# hide the spines and ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.get_xaxis().set_visible(False)
 ax1.get_yaxis().set_visible(False)
 
-#T# create the points of the plot
+#T# create the variables that define the plot
 A, B, C = (1, 2), (8, 2), (3.5, 7)
 D = ((A[0] + C[0])/2, (A[1] + C[1])/2)
 E = ((B[0] + C[0])/2, (B[1] + C[1])/2)
@@ -63,14 +63,14 @@ marker2._transform.rotate_deg(-48)
 ax1.plot(list1_1, list2_1, 'k', marker = marker1)
 ax1.plot(list1_2, list2_2, 'k', marker = marker2)
 
-#T# label the parts of the plot
+#T# create the labels
 label_A = ax1.annotate(r'$A$', (A[0], A[1]), ha = 'right', va = 'top', size = 18)
 label_B = ax1.annotate(r'$B$', (B[0], B[1]), ha = 'left', va = 'top', size = 18)
 label_C = ax1.annotate(r'$C$', (C[0], C[1]), ha = 'center', va = 'bottom', size = 18)
 label_D = ax1.annotate(r'$D$', (D[0], D[1]), ha = 'right', va = 'center', size = 18)
 label_E = ax1.annotate(r'$E$', (E[0], E[1]), ha = 'left', va = 'center', size = 18)
 
-#T# drag the labels into better positions after plotting them
+#T# drag the labels if needed
 label_A.draggable()
 label_B.draggable()
 label_C.draggable()

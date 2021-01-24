@@ -15,13 +15,13 @@ fig1, ax1 = plt.subplots(1, 1)
 #T# set the aspect of the axes
 ax1.set_aspect('equal', adjustable = 'datalim')
 
-#T# hide the spines and the axes ticks
+#T# hide the spines and ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
 
-#T# create the points of the plot
+#T# create the variables that define the plot
 A = (0, 0)
 B = (1, 0)
 C = (.5, 1.2)
@@ -59,13 +59,13 @@ marker1._transform.scale(1, 2.6)
 #T# plot the markers
 ax1.plot([p_mid_AD[0], p_mid_DB[0]], [p_mid_AD[1], p_mid_DB[1]], 'k', marker = marker1)
 
-#T# place the labels
+#T# create the labels
 label1 = ax1.annotate(r'$A$', A, ha = 'right', va = 'top', size = 16)
 label2 = ax1.annotate(r'$B$', B, ha = 'left', va = 'top', size = 16)
 label3 = ax1.annotate(r'$C$', C, ha = 'right', va = 'bottom', size = 16)
 label4 = ax1.annotate(r'$D$', D, ha = 'right', va = 'top', size = 16)
 
-#T# drag the labels into better positions after plotting them
+#T# drag the labels if needed
 label1.draggable()
 label2.draggable()
 label3.draggable()

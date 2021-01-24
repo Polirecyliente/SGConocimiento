@@ -64,6 +64,30 @@ Every triangle has three midsegments.
 
 (Punto de concurrencia)
 **Point of concurrency**: the intersection in a single point, of three or more lines, rays, or segments.
+[Point of concurrency image code](Programs/Ch05/S02_02_Point_of_concurrency_image.py)
+![Point of concurrency image](Images/Ch05/S02_02_Point_of_concurrency.png)
+*Point of concurrency*
+
+The point $A$ is a point of concurrency.
+
+(Circuncentro de un triángulo)
+**Circumcenter of a triangle**: in a triangle, the circumcenter is the point of concurrency formed at the intersection of the three perpendicular bisectors, one from each side.
+[Circumcenter of a triangle image code](Programs/Ch05/S02_03_Circumcenter_of_a_triangle_image.py)
+![Circumcenter of a triangle image](Images/Ch05/S02_03_Circumcenter_of_a_triangle.png)
+*Circumcenter of a triangle*
+
+The circumcenter is in the three perpendicular bisectors of a triangle, and due to the perpendicular bisector theorem, the circumcenter is equidistant to the three vertices of the triangle. This allows building a circle that circumscribes (circunscribe) the triangle, using the circumcenter as center of said circle, and the distance from the circumcenter to any vertex as the radius.
+
+(Teorema de la concurrencia de las mediatrices de un triángulo)
+**Concurrency of the perpendicular bisectors of a triangle theorem**: in a triangle, the three perpendicular bisectors, one from each side, intersect each other at a single point which is the circumcenter.
+
+> Proof of the concurrency of the perpendicular bisectors of a triangle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{GD}$ is a perpendicular bisector of $\overline{AB}$, $\overline{GE}$ is a perpendicular bisector of $\overline{AC}$, $\overline{GF}$ is a perpendicular bisector of $\overline{BC}$ | From the *Circumcenter of a triangle* image |
+> | $G$ is equidistant to $A$, $B$, $C$ | Perpendicular bisector theorem |
+> | $G$ is the circumcenter of $\triangle ABC$ | Definition of circumcenter |
 
 ## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)
