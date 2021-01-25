@@ -100,7 +100,9 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 
 > Proof of the equidistance in an angle bisector theorem
 >
-
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | 
 
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)

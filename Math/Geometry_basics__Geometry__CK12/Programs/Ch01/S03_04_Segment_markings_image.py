@@ -1,6 +1,6 @@
 #T# the following code shows how to draw segment markings with hash marks
 
-#T# to draw hash marks, the pyplot module of the matplotlib package is used
+#T# to draw segment markings with hash marks, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
 #T# to transform the markers of a plot, import the MarkerStyle constructor
@@ -60,7 +60,7 @@ marker2._transform.scale(1.6, 1.4)
 marker3 = MarkerStyle(r'$|||$')
 marker3._transform.scale(1.6, 1.4)
 
-#T# plot the hash marks
+#T# plot the markers
 plt.plot(p1[0], p1[1], 'k', marker = marker1)
 plt.plot(p2[0], p2[1], 'k', marker = marker2)
 plt.plot(p3[0], p3[1], 'k', marker = marker3)
