@@ -38,14 +38,14 @@ ax1.set_yticks(list2_1)
 ax1.set_xticklabels(list1_2)
 ax1.set_yticklabels(list2_2)
 
-#T# create a point per line and its slope
+#T# create the variables that define the plot
 p1 = (0, 0)
 m1 = 3
 
 p2 = (0, 0)
 m2 = -1/m1
 
-#T# plot the lines
+#T# plot the figure
 ax1.axline((p1[0], p1[1]), slope = m1)
 ax1.axline((p1[0], p1[1]), slope = -m1, color = 'limegreen')
 ax1.axline((p2[0], p2[1]), slope = m2, color = 'crimson')

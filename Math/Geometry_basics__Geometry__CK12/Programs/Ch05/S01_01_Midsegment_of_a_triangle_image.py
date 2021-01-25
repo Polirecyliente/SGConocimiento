@@ -23,18 +23,15 @@ A, B, C = (1, 2), (8, 2), (3.5, 7)
 D = ((A[0] + C[0])/2, (A[1] + C[1])/2)
 E = ((B[0] + C[0])/2, (B[1] + C[1])/2)
 
-#T# create the coordinates of the points
 list1 = [A[0], B[0], C[0], A[0], D[0], E[0]]
 list2 = [A[1], B[1], C[1], A[1], D[1], E[1]]
 
-#T# create auxiliary points for the markers
-p_mid_AD = ((A[0] + D[0])/2, (A[1] + D[1])/2)
+p_mid_AD = ((A[0] + D[0])/2, (A[1] + D[1])/2) #| auxiliary points for the markers
 p_mid_DC = ((D[0] + C[0])/2, (D[1] + C[1])/2)
 p_mid_BE = ((B[0] + E[0])/2, (B[1] + E[1])/2)
 p_mid_EC = ((E[0] + C[0])/2, (E[1] + C[1])/2)
 
-#T# create the coordinates of the markers
-list1_1 = [p_mid_AD[0], p_mid_DC[0]]
+list1_1 = [p_mid_AD[0], p_mid_DC[0]] #| coordinates of the markers
 list2_1 = [p_mid_AD[1], p_mid_DC[1]]
 
 list1_2 = [p_mid_BE[0], p_mid_EC[0]]

@@ -38,23 +38,23 @@ ax1.set_yticklabels(list2_2)
 #T# draw the grid
 ax1.grid(True, alpha = .3)
 
-#T# create a point and the slope for the line, and three points for the rise and run
+#T# create the variables that define the plot
 p1 = (0, 4/3)
 m1 = 2/3
 
-p1_1 = (1, 2)
+p1_1 = (1, 2) #| points for the rise and run
 p2_1 = (4, 2)
 p3_1 = (4, 4)
 
-#T# plot the line, and the rise and run
+#T# plot the figure
 ax1.axline(p1, slope = m1)
 ax1.plot([p1_1[0], p2_1[0], p3_1[0]], [p1_1[1], p2_1[1], p3_1[1]], 'k')
 
-#T# label the rise and run
+#T# create the labels
 label1 = ax1.annotate('rise', p3_1)
 label2 = ax1.annotate('run', p1_1)
 
-#T# drag the labels into better positions after plotting them
+#T# drag the labels if needed
 label1.draggable()
 label2.draggable()
 

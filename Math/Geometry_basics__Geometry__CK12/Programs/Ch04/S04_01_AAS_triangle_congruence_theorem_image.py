@@ -3,7 +3,7 @@
 #T# to draw two triangles to prove the AAS triangle congruence theorem, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to draw arcs
+#T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
 
 #T# the transforms module of the matplotlib package, is used to do affine transforms
@@ -18,25 +18,23 @@ fig1, ax1 = plt.subplots(1, 1)
 #T# set the aspect of the axes
 ax1.set_aspect('equal', adjustable = 'box')
 
-#T# hide the spines and the axes ticks
+#T# hide the spines and ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.get_xaxis().set_visible(False)
 ax1.get_yaxis().set_visible(False)
 
-#T# create the vertices of one triangle, the other will be the same but rotated and translated
+#T# create the variables that define the plot
 p1 = (0, 0)
 p2 = (3, 1)
 p3 = (-5, 4)
 
-#T# create the coordinates of these points
 list1_1 = [p1[0], p2[0], p3[0], p1[0]] #| x coordinates
 list2_1 = [p1[1], p2[1], p3[1], p1[1]] #| y coordinates
 
-#T# create auxiliary points for the segment markers
-p_marker_2_3 = ((p2[0] + p3[0])/2, (p2[1] + p3[1])/2)
+p_marker_2_3 = ((p2[0] + p3[0])/2, (p2[1] + p3[1])/2) #| auxiliary points for the segment markers
 
-#T# plot the triangles and their vertices
+#T# plot the figure
 ax1.plot(list1_1, list2_1, 'k')
 ax1.scatter(list1_1, list2_1, s = 12, color = 'k')
 
@@ -46,7 +44,6 @@ trans1 = trans1 + ax1.transData
 ax1.plot(list1_1, list2_1, 'k', transform = trans1)
 ax1.scatter(list1_1, list2_1, s = 12, color = 'k', transform = trans1)
 
-#T# plot the arcs for the angle markings
 arc1_1 = mpatches.Arc(p1, 1, 1, theta1 = 15, theta2 = 140)
 arc2a_1 = mpatches.Arc(p2, 1, 1, theta1 = 160, theta2 = 200)
 arc2b_1 = mpatches.Arc(p2, 1.18, 1.18, theta1 = 160, theta2 = 200)
@@ -67,13 +64,10 @@ matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
 #T# create the markers
 marker3_1 = MarkerStyle(r'$|$')
-
-marker3_2 = MarkerStyle(r'$|$')
-
-#T# transform the markers to make them the correct shape and size
 marker3_1._transform.scale(1.6, 2.2)
 marker3_1._transform.rotate(-.35)
 
+marker3_2 = MarkerStyle(r'$|$')
 marker3_2._transform.scale(1.6, 2.2)
 marker3_2._transform.rotate(-1.2)
 
@@ -82,7 +76,7 @@ ax1.plot(p_marker_2_3[0], p_marker_2_3[1], 'k', marker = marker3_1)
 
 ax1.plot(p_marker_2_3[0], p_marker_2_3[1], 'k', marker = marker3_2, transform = trans1)
 
-#T# label the points
+#T# create the labels
 label_A = ax1.annotate(r'$A$', p1, size = 16)
 label_B = ax1.annotate(r'$B$', p2, size = 16)
 label_C = ax1.annotate(r'$C$', p3, size = 16)
@@ -90,7 +84,7 @@ label_D = ax1.annotate(r'$D$', (1, 0), size = 16)
 label_E = ax1.annotate(r'$E$', (2, 0), size = 16)
 label_F = ax1.annotate(r'$F$', (3, 0), size = 16)
 
-#T# drag the labels into better positions after plotting them
+#T# drag the labels if needed
 label_A.draggable()
 label_B.draggable()
 label_C.draggable()

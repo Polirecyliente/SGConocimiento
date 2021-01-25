@@ -3,7 +3,7 @@
 #T# to draw a perpendicular bisector to show the perpendicular bisector theorem, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to draw arrows
+#T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
 
 #T# to transform the markers of a plot, import the MarkerStyle constructor
@@ -30,13 +30,11 @@ D = ((A[0] + B[0])/2, (A[1] + B[1])/2)
 C2 = (.5, 1.47)
 D2 = (.5, -.27)
 
-#T# create the coordinates of the points
 list1 = [A[0], B[0], C[0], A[0]] #| x coordinates
 list2 = [A[1], B[1], C[1], A[1]] #| y coordinates
 
-#T# create auxiliary points for the markers
-p_mid_AD = ((A[0] + D[0])/2, (A[1] + D[1])/2)
-p_mid_DB = ((D[0] + B[0])/2, (D[1] + B[1])/2)
+p_mid_AD = ((A[0] + D[0])/2, (A[1] + D[1])/2) #| auxiliary point for the markers
+p_mid_DB = ((D[0] + B[0])/2, (D[1] + B[1])/2) #| auxiliary point for the markers
 
 #T# plot the figure
 ax1.plot(list1, list2, 'k')

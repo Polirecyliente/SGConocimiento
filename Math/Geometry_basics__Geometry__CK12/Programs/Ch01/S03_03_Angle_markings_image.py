@@ -3,7 +3,7 @@
 #T# to draw arc marks, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to draw arrows
+#T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
 
 #T# the numpy package is used to facilitate drawing arcs in polar coordinates
@@ -18,12 +18,12 @@ ax1 = plt.subplot(1, 1, 1, projection = 'polar')
 #T# set the aspect of the axes
 ax1.set_aspect('equal')
 
-#T# hide the spine and axes ticks
+#T# hide the spines and ticks
 ax1.spines['polar'].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
 
-#T# create one point and five angles to draw five rays with a common vertex
+#T# create the variables that define the plot
 p0 = (0, 0)
 a0 = 0
 a1 = np.pi/8
@@ -31,7 +31,7 @@ a2 = 2*a1
 a3 = a2 + np.pi/2 + .15
 a4 = np.pi + .5
 
-#T# plot the angles with their arc marks
+#T# plot the figure
 list_patches1 = []
 ray1 = mpatches.FancyArrowPatch(p0, (a0, 1), arrowstyle = '->', mutation_scale = 12)
 list_patches1.append(ray1)

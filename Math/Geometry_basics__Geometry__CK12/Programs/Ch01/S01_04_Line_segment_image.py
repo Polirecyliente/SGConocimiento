@@ -9,21 +9,20 @@ fig1, ax1 = plt.subplots(1, 1)
 #T# set the aspect of the axes
 ax1.set_aspect('equal')
 
-#T# hide the spines and the axes ticks
+#T# hide the spines and ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
 
-#T# create the endpoints of the line segment
+#T# create the variables that define the plot
 p1 = (2, 3)
 p2 = (5, 4)
 
-#T# create the coordinates of the endpoints of the line segment
 list1 = [2, 5] #| x coordinates
 list2 = [3, 4] #| y coordinates
 
-#T# plot the line segment
+#T# plot the figure
 plt.plot(list1, list2, 'k')
 plt.scatter(list1, list2, color = 'k')
 
@@ -31,7 +30,7 @@ plt.scatter(list1, list2, color = 'k')
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
-#T# label the endpoints
+#T# create the labels
 plt.text(p1[0], p1[1] - 0.08, r'$A$', ha = 'center', va = 'top', size = 16)
 plt.text(p2[0], p2[1] - 0.08, r'$B$', ha = 'center', va = 'top', size = 16)
 

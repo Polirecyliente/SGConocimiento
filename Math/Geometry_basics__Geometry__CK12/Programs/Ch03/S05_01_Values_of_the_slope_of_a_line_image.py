@@ -3,7 +3,7 @@
 #T# to draw the slope of a line with different values, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to draw arrows
+#T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
 
 #T# the numpy package is used to manage and use numpy arrays
@@ -70,7 +70,7 @@ fig1.axes[3].set_title('Undefined slope', y = 1.1)
 #T# set the position of the subplots with regards to one another
 fig1.tight_layout()
 
-#T# create two points per line
+#T# create the variables that define the plot
 p1_1 = (-8, -3)
 p2_1 = (2, 5)
 
@@ -83,7 +83,7 @@ p2_3 = (6, 2)
 p1_4 = (-5, -6)
 p2_4 = (-5, 6)
 
-#T# plot the lines
+#T# plot the figure
 line1 = mpatches.FancyArrowPatch(p1_1, p2_1, color = 'cornflowerblue', arrowstyle = '<->', mutation_scale = 16)
 line2 = mpatches.FancyArrowPatch(p1_2, p2_2, color = 'cornflowerblue', arrowstyle = '<->', mutation_scale = 16)
 line3 = mpatches.FancyArrowPatch(p1_3, p2_3, color = 'cornflowerblue', arrowstyle = '<->', mutation_scale = 16)

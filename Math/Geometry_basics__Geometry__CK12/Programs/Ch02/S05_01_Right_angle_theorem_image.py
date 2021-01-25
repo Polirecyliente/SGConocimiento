@@ -12,13 +12,13 @@ fig1, ax1 = plt.subplots(1, 1)
 #T# set the aspect of the axes
 ax1.set_aspect('equal', adjustable = 'datalim')
 
-#T# hide the spines and the axes ticks
+#T# hide the spines and ticks
 for it1 in ['top', 'bottom', 'left', 'right']:
     ax1.spines[it1].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
 
-#T# create the endpoints of the segments that form the right angles
+#T# create the variables that define the plot
 p1_1 = (2, 0)
 p2_1 = (0, 0) #| vertex
 p3_1 = (0, 3)
@@ -27,14 +27,13 @@ p1_2 = (1, 6)
 p2_2 = (-1, 4) #| vertex
 p3_2 = (-3, 6)
 
-#T# create the coordinates of these points
 list1_1 = [p1_1[0], p2_1[0], p3_1[0]] #| x coordinates
 list2_1 = [p1_1[1], p2_1[1], p3_1[1]] #| y coordinates
 
 list1_2 = [p1_2[0], p2_2[0], p3_2[0]] #| x coordinates
 list2_2 = [p1_2[1], p2_2[1], p3_2[1]] #| y coordinates
 
-#T# plot the segments
+#T# plot the figure
 plt.plot(list1_1, list2_1, 'k')
 plt.plot(list1_2, list2_2, 'k')
 
@@ -50,7 +49,7 @@ marker2 = MarkerStyle(r'$\ulcorner$')
 marker2._transform.rotate_deg(-45)
 marker2._transform.translate(-.2, .3)
 
-#T# plot the right angle marks
+#T# plot the markers
 plt.scatter(p2_1[0], p2_1[1], s = 250, color = 'k', marker = marker1, linewidths = 0.1)
 plt.scatter(p2_2[0], p2_2[1], s = 250, color = 'k', marker = marker2, linewidths = 0.1)
 

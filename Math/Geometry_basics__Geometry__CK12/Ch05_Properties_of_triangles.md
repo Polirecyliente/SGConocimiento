@@ -92,9 +92,15 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 ## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)
 
+(Teorema de la equidistancia en la bisectriz de un ángulo)
+**Equidistance in an angle bisector theorem**: given an angle, any point in its angle bisector is equidistant to the sides of the angle, using the shortest distance between the point and the sides.
+[Equidistance in an angle bisector theorem image code](Programs/Ch05/S03_01_Equidistance_in_an_angle_bisector_theorem_image.py)
+![Equidistance in an angle bisector theorem image](Images/Ch05/S03_01_Equidistance_in_an_angle_bisector_theorem.png)
+*Equidistance in an angle bisector theorem*
 
+> Proof of the equidistance in an angle bisector theorem
+>
 
-<!-- # TODO angle bisector theorem -->
 
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)

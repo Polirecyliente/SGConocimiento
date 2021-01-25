@@ -3,7 +3,7 @@
 #T# to draw the shortest distance between a point and a line, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to draw arrows
+#T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
 
 #T# to transform the markers of a plot, import the MarkerStyle constructor
@@ -44,32 +44,27 @@ ax1.set_yticklabels(list2_2)
 #T# draw the grid
 ax1.grid(True, alpha = .3)
 
-#T# create the point, and two points for the line
+#T# create the variables that define the plot
 p1 = (1, 6)
 
 p1_1 = (-7, -2)
 p2_1 = (7, 5)
 
-#T# calculate the slope of the line, and the slope of the perpendicular line
-m1 = (p2_1[1] - p1_1[1])/(p2_1[0] - p1_1[0])
-m2 = -1/m1
+m1 = (p2_1[1] - p1_1[1])/(p2_1[0] - p1_1[0]) #| slope of the line
+m2 = -1/m1 #| slope of the perpendicular line
 
-#T# calculate the y-intercepts of both lines
-b1 = p1_1[1] - m1*p1_1[0]
+b1 = p1_1[1] - m1*p1_1[0] #| y-intercepts
 b2 = p1[1] - m2*p1[0]
 
-#T# calculate the point of intersection between the line and the perpendicular line
 x2 = (b2 - b1)/(m1 - m2)
 y2 = m1*x2 + b1
-p2 = (x2, y2)
+p2 = (x2, y2) #| point of intersection between the line and the perpendicular line
 
-#T# plot the points and the line
+#T# plot the figure
 ax1.scatter([p1[0], p2[0]], [p1[1], p2[1]], s = 6, color = 'k')
 line1 = mpatches.FancyArrowPatch(p1_1, p2_1, arrowstyle = '<->', mutation_scale = 16)
 ax1.add_patch(line1)
-
-#T# plot the perpendicular line
-ax1.plot([p1[0], p2[0]], [p1[1], p2[1]], 'k')
+ax1.plot([p1[0], p2[0]], [p1[1], p2[1]], 'k') #| perpendicular line
 
 #T# set the math text font to the Latex default, Computer Modern
 import matplotlib
@@ -83,13 +78,13 @@ marker1._transform.translate(.16, .23)
 #T# place the perpendicular mark
 ax1.scatter(p2[0], p2[1], s = 250, color = 'k', marker = marker1, linewidths = .1)
 
-#T# label the points and the line
+#T# create the labels
 label1 = ax1.annotate(r'$A$', p1, ha = 'center', va = 'bottom', size = 16)
 label2 = ax1.annotate(r'$B$', p2, ha = 'center', va = 'top', size = 16)
 label3 = ax1.annotate(r'$l$', p2_1, ha = 'left', va = 'center', size = 16)
 label4 = ax1.annotate(r'$y = m_1x + b_1$', p2_1, ha = 'center', va = 'top', size = 16)
 
-#T# drag the labels into better positions after plotting them
+#T# drag the labels if needed
 label1.draggable()
 label2.draggable()
 label3.draggable()

@@ -3,11 +3,8 @@
 #T# to draw the circumcenter of a triangle, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
-#T# the patches module of the matplotlib package is used to draw arcs
+#T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
-
-#T# to transform the markers of a plot, import the MarkerStyle constructor
-from matplotlib.markers import MarkerStyle
 
 #T# create the figure and axes
 fig1, ax1 = plt.subplots(1, 1)
@@ -44,7 +41,6 @@ G = (mid_AB[0], mid_AC[1] + m_perp_AC*(mid_AB[0] - mid_AC[0])) #| circumcenter
 import math
 d_AD = math.sqrt((G[0] - A[0])**2 + (G[1] - A[1])**2)
 
-#T# create the coordinates of the points
 list_x_1 = [A[0], B[0], C[0], A[0]]
 list_y_1 = [A[1], B[1], C[1], A[1]]
 
@@ -68,19 +64,6 @@ ax1.add_patch(arc1)
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
-#T# create the markers
-marker1 = MarkerStyle(r'$\urcorner$')
-marker1._transform.scale(2, 2.4)
-marker1._transform.rotate_deg(63)
-
-marker2 = MarkerStyle(r'$||$')
-marker2._transform.scale(2, 2.4)
-marker2._transform.rotate_deg(-48)
-
-marker3 = MarkerStyle(r'$|||$')
-marker3._transform.scale(2.4, 2.4)
-marker3._transform.rotate_deg(0)
-
 #T# create the labels
 label_A = ax1.annotate(r'$A$', A, ha = 'right', va = 'top', size = 16)
 label_B = ax1.annotate(r'$B$', B, ha = 'left', va = 'top', size = 16)
@@ -89,6 +72,7 @@ label_D = ax1.annotate(r'$D$', mid_AB, ha = 'center', va = 'top', size = 16)
 label_E = ax1.annotate(r'$E$', mid_AC, ha = 'right', va = 'bottom', size = 16)
 label_F = ax1.annotate(r'$F$', mid_BC, ha = 'left', va = 'bottom', size = 16)
 label_G = ax1.annotate(r'$G$', G, ha = 'right', va = 'center', size = 16)
+
 label_angle1 = ax1.annotate(r'$\urcorner$', mid_AB, size = 26)
 label_angle2 = ax1.annotate(r'$\urcorner$', mid_AC, size = 26, rotation = 245)
 label_angle3 = ax1.annotate(r'$\urcorner$', mid_BC, size = 26, rotation = -137)
@@ -101,6 +85,7 @@ label_D.draggable()
 label_E.draggable()
 label_F.draggable()
 label_G.draggable()
+
 label_angle1.draggable()
 label_angle2.draggable()
 label_angle3.draggable()

@@ -18,18 +18,18 @@ ax1 = plt.subplot(1, 1, 1, projection = 'polar')
 #T# set the aspect of the axes
 ax1.set_aspect('equal')
 
-#T# hide the spine and axes ticks
+#T# hide the spines and ticks
 ax1.spines['polar'].set_visible(False)
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
 
-#T# create the vertex and three angles
+#T# create the variables that define the plot
 p0 = (0, 0)
 a0 = 0
 a1 = 1.1
 a2 = 2*a1
 
-#T# plot the segments and the angle markings so it shows that the angle bisector divides an angle into two equal ones
+#T# plot the figure
 plt.polar([p0[0], a0], [p0[1], 1], 'k')
 plt.polar([p0[0], a1], [p0[1], 1], 'k')
 plt.polar([p0[0], a2], [p0[1], 1], 'k')
@@ -44,11 +44,10 @@ matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
 #T# create the markers
 marker1 = MarkerStyle(r'$|$')
-marker2 = MarkerStyle(r'$|$')
-
-#T# transform the markers to make them the correct shape and size
 marker1._transform.scale(1, 2.2)
 marker1._transform.rotate(np.pi/2 + (a1 + a0)/2)
+
+marker2 = MarkerStyle(r'$|$')
 marker2._transform.scale(1, 2.2)
 marker2._transform.rotate(np.pi/2 + (a2 + a1)/2)
 
@@ -56,13 +55,13 @@ marker2._transform.rotate(np.pi/2 + (a2 + a1)/2)
 plt.plot([(a1 + a0)/2], [.18], 'k', marker = marker1)
 plt.plot([(a2 + a1)/2], [.18], 'k', marker = marker2)
 
-#T# label the points
+#T# create the labels
 label1 = plt.annotate(r'$A$', p0, ha = 'right', va = 'top', size = 16)
 label2 = plt.annotate(r'$B$', (a0, 1), ha = 'center', va = 'top', size = 16)
 label3 = plt.annotate(r'$C$', (a1, 1), ha = 'left', va = 'top', size = 16)
 label4 = plt.annotate(r'$D$', (a2, 1), ha = 'right', va = 'top', size = 16)
 
-#T# drag the labels into better positions after plotting them
+#T# drag the labels if needed
 label1.draggable()
 label2.draggable()
 label3.draggable()
