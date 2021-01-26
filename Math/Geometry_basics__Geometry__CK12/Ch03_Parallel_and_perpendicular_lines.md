@@ -89,7 +89,7 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | From the *Transversal to parallel lines* image |
+> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
 > | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
 > | $\angle 1 \cong \angle 4$ | Vertical angles theorem |
 > | $\angle 4 \cong \angle 5$ | Transitive property of congruence |
@@ -103,7 +103,7 @@ The same proof applies for the other three pairs of alternate interior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | From the *Transversal to parallel lines* image |
+> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
 > | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
 > | $\angle 5 \cong \angle 8$ | Vertical angles theorem |
 > | $\angle 1 \cong \angle 8$ | Transitive property of congruence |
@@ -117,7 +117,7 @@ The same proof applies for the other three pairs of alternate exterior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | From the *Transversal to parallel lines* image |
+> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
 > | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
 > | $\angle 1$ and $\angle 3$ are supplementary | Linear pair postulate |
 > | $\angle 3$ and $\angle 5$ are supplementary | Converse of the congruent supplements theorem |
@@ -131,7 +131,7 @@ The same proof applies for the other pair of same side interior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | From the *Transversal to parallel lines* image |
+> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
 > | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
 > | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
 > | $\angle 1$ and $\angle 7$ are supplementary | Converse of the congruent supplements theorem |
@@ -148,7 +148,7 @@ The same proof applies for the other pair of same side exterior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3 \cong \angle 6$ | From the *Transversal to parallel lines* image |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3 \cong \angle 6$ | Given, from the *Transversal to parallel lines* image |
 > | $\angle 3 \cong \angle 2$ | Vertical angles theorem |
 > | $\angle 2 \cong \angle 6$ | Transitive property of congruence |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
@@ -160,7 +160,7 @@ The same proof applies for the other pair of same side exterior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1 \cong \angle 8$ | From the *Transversal to parallel lines* image |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1 \cong \angle 8$ | Given, from the *Transversal to parallel lines* image |
 > | $\angle 5 \cong \angle 8$ | Vertical angles theorem |
 > | $\angle 1 \cong \angle 5$ | Transitive property of congruence |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
@@ -172,7 +172,7 @@ The same proof applies for the other pair of same side exterior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3$ and $\angle 5$ are supplementary | From the *Transversal to parallel lines* image |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3$ and $\angle 5$ are supplementary | Given, from the *Transversal to parallel lines* image |
 > | $\angle 1$ and $\angle 3$ are supplementary | Linear pair postulate |
 > | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
@@ -184,7 +184,7 @@ The same proof applies for the other pair of same side exterior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1$ and $\angle 7$ are supplementary | From the *Transversal to parallel lines* image |
+> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1$ and $\angle 7$ are supplementary | Given, rom the *Transversal to parallel lines* image |
 > | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
 > | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
@@ -228,7 +228,7 @@ The same proof applies for the other pair of same side exterior angles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $l \perp t$ and $m \perp t$ | From the *Perpendicular transversal* image |
+> | $l \perp t$ and $m \perp t$ | Given, from the *Perpendicular transversal* image |
 > | All the angles, from $\angle 1$ to $\angle 8$ are right angles | Definition of perpendicular lines |
 > | $\angle 1 \cong \angle 5$ | Right angle theorem |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |

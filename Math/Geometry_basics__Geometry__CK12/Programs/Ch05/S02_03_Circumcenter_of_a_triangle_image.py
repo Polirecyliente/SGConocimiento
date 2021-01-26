@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 #T# the patches module of the matplotlib package is used to draw shapes
 import matplotlib.patches as mpatches
 
+#T# import the math module to do calculations
+import math
+
 #T# create the figure and axes
 fig1, ax1 = plt.subplots(1, 1)
 
@@ -38,8 +41,7 @@ p_perp_BC = (mid_BC[0] - 2.35, mid_BC[1] - 2.35*m_perp_BC)
 
 G = (mid_AB[0], mid_AC[1] + m_perp_AC*(mid_AB[0] - mid_AC[0])) #| circumcenter
 
-import math
-d_AD = math.sqrt((G[0] - A[0])**2 + (G[1] - A[1])**2)
+d_AG = math.sqrt((G[0] - A[0])**2 + (G[1] - A[1])**2)
 
 list_x_1 = [A[0], B[0], C[0], A[0]]
 list_y_1 = [A[1], B[1], C[1], A[1]]

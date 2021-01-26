@@ -235,7 +235,7 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\angle A \cong \angle C$ | From the *Base angles theorem* image |
+> | $\angle A \cong \angle C$ | Given, from the *Base angles theorem* image |
 > | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
@@ -249,7 +249,7 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\triangle ABC$ is isosceles, $\overline{AB} \cong \overline{CB}$, and $\overline{BD}$ is the angle bisector | From the *Base angles theorem* image |
+> | $\triangle ABC$ is isosceles, $\overline{AB} \cong \overline{CB}$, and $\overline{BD}$ is the angle bisector | Given, from the *Base angles theorem* image |
 > | $\angle A \cong \angle C$ | Base angles theorem |
 > | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
@@ -267,7 +267,7 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | From the *Base angles theorem* image |
+> | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | Given, from the *Base angles theorem* image |
 > | $\overline{AD} \cong \overline{DC}$, $\angle ADB \cong \angle CDB$ | Definition of perpendicular bisector |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |

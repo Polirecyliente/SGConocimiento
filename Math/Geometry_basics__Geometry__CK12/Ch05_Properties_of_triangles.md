@@ -52,7 +52,7 @@ Every triangle has three midsegments.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AC} \cong \overline{CB}$, $D$ is the midpoint of $\overline{AB}$ | From the *Perpendicular bisector theorem* image |
+> | $\overline{AC} \cong \overline{CB}$, $D$ is the midpoint of $\overline{AB}$ | Given, from the *Perpendicular bisector theorem* image |
 > | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
 > | $\angle A \cong \angle B$ | Base angles theorem |
 > | $\overline{AD} \cong \overline{DB}$ | Definition of midpoint |
@@ -85,7 +85,7 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{GD}$ is a perpendicular bisector of $\overline{AB}$, $\overline{GE}$ is a perpendicular bisector of $\overline{AC}$, $\overline{GF}$ is a perpendicular bisector of $\overline{BC}$ | From the *Circumcenter of a triangle* image |
+> | $\overline{GD}$ is a perpendicular bisector of $\overline{AB}$, $\overline{GE}$ is a perpendicular bisector of $\overline{AC}$, $\overline{GF}$ is a perpendicular bisector of $\overline{BC}$ | Given, from the *Circumcenter of a triangle* image |
 > | $G$ is equidistant to $A$, $B$, $C$ | Perpendicular bisector theorem |
 > | $G$ is the circumcenter of $\triangle ABC$ | Definition of circumcenter |
 
@@ -102,7 +102,44 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | 
+> | $\overline{BD}$ is an angle bisector of $\angle ABC$, $\angle DEB$ and $\angle DFB$ are right angles | Given |
+> | $\angle EBD \cong \angle FBD$ | Definition of angle bisector |
+> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
+> | $\triangle EBD \cong \triangle FBD$ | AAS triangle congruence theorem |
+> | $\overline{DE} \cong \overline{DF}$ | Corresponding parts of congruent triangles are congruent |
+
+(Converso del teorema de la equidistancia en la bisectriz de un ángulo)
+**Converse of the equidistance in an angle bisector theorem**: in an angle, if a given point is equidistant to the sides of the angle, using the shortest distance between the point and the sides, then the point lies in the angle bisector.
+
+> Proof of the converse of the equidistance in an angle bisector theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{DE} \cong \overline{DF}$, $\angle DEB$ and $\angle DFB$ are right angles | Given, from the *Equidistance in an angle bisector theorem* image |
+> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
+> | $\triangle EBD \cong \triangle FBD$ | Hypotenuse-leg congruence theorem |
+> | $\angle EBD \cong \angle FBD$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{BD}$ is an angle bisector of $\angle ABC$ | Definition of angle bisector |
+
+(Incentro de un triángulo)
+**Incenter of a triangle**: in a triangle, the incenter is the point of concurrency formed at the intersection of the three angle bisectors, one from each vertex.
+[Incenter of a triangle image code](Programs/Ch05/S03_02_Incenter_of_a_triangle_image.py)
+![Incenter of a triangle image](Images/Ch05/S03_02_Incenter_of_a_triangle.png)
+*Incenter of a triangle*
+
+(Teorema de la concurrencia de las bisectrices de los ángulos de un triángulo)
+**Concurrency of the angle bisectors of a triangle theorem**: in a triangle, the three angle bisectors, one from each vertex, intersect each other at a single point which is the incenter.
+
+> Proof of the concurrency of the angle bisectors of a triangle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\angle GAB \cong \angle GAC$, $\angle GBA \cong \angle GBC$, $\angle GCA \cong GCB$ | Given, from the *Incenter of a triangle* image |
+> | $\overline{GD} \cong \overline{GE}$ | Equidistance in an angle bisector theorem |
+> | $\overline{GE} \cong \overline{GF}$ | Equidistance in an angle bisector theorem |
+> | $\overline{GD} \cong \overline{GF}$ | Transitive property of congruence |
+> | $G$ lies in the three angle bisectors of $\triangle ABC$ | Converse of the equidistance in an angle bisector theorem |
+> | $G$ is the incenter of $\triangle ABC$ | Definition of incenter |
 
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
