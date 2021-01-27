@@ -144,6 +144,10 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
 
+
+
+<!-- # TODO median of a triangle, altitude of a triangle -->
+
 ## Inequalities in triangles (Desigualdades en los triángulos)
 [Ch05_S05](https://www.ck12.org/reader/reader-index.html#section/2932951/5.5/9549314)
 

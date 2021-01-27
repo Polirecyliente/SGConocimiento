@@ -21,6 +21,7 @@
 #C# File system hierarchy management
 #C# --- File compression
 #C# --- find and xargs commands
+#C# Cryptographic keys
 #C# Root privileges
 
 #T# Beginning of content
@@ -90,9 +91,9 @@ id serveruser # uid=1001(serveruser) gid=1001(serveruser) groups=1001(serveruser
 #T# append user to an existing group with usermod, reboot may be necessary for this to take effect
 
 # SYNTAX usermod -o1 -o2 val2 group1 user1
-#T# -o1 represents a flag, -o2 val2 represent a kwarg pair, user1 is added to group1
+#T# -o1 is a flag, -o2 val2 is a kwarg value pair, user1 is added to group1
 
-usermod -a -G audio jul #  # the -a flag is to append the user, the -G group1 kwarg pair determines the group in which the user will be appended
+usermod -a -G audio jul #  # the -a flag is to append the user, the -G group1 kwarg value pair determines the group in which the user will be appended
 
 #T# list the existing users along with their passwd information
 nl /etc/passwd
@@ -493,9 +494,9 @@ xz -d compressed_file1.tar.xz
 #T# the find command is used to find files
 
 # SYNTAX find -o1 -o2 val2 /path/to/search1 -option1 -option2 value2 '!' -option3
-#T# this searches in /path/to/search1, -o1 represents a flag, -o2 val2 represent a kwarg pair, up to -oN, these must be written before the path
+#T# this searches in /path/to/search1, -o1 is a flag, -o2 val2 is a kwarg value pair, up to -oN, these must be written before the path
 
-#T# -option1 represents a flag, -option2 value2 represent a kwarg pair, -option1, -option2, -option3, up to -optionN are long options with a single hyphen, they are used as expressions to refine the search
+#T# -option1 is a flag, -option2 value2 is a kwarg value pair, -option1, -option2, -option3, up to -optionN are long options with a single hyphen, they are used as expressions to refine the search
 
 #T# the pairs -option2 value2 in which value2 is a measure of time, or size, are written as a number with a plus or minus sign, e.g. if value2 is in minutes then '+5' means more than 5 minutes ago, '-5' means less than 5 minutes ago, '5' means exactly five minutes ago, it can be a float using comma, for example '6,1', when comparing sizes '+5M' means more than 5 mebibytes and so on
 
@@ -581,7 +582,7 @@ find . -regex '..[A-z]+[0-9]*' #| finds files with the given regex pattern
 #T# the xargs command is used as an improved -exec action from the find command, xargs applies a command (echo by default) over a set of arguments, separated by space or newline
 
 # SYNTAX xargs -o1 -o2 val2 command1 args1
-#T# some of these parts can be optional depending on the context, -o1 represents a flag, -o2 val2 represent a kwarg pair, command1 args1 is the command and the arguments (separated by space) that will be applied to the input of the xargs command
+#T# some of these parts can be optional depending on the context, -o1 is a flag, -o2 val2 is a kwarg value pair, command1 args1 is the command and the arguments (separated by space) that will be applied to the input of the xargs command
 
 #T# -o1 and -o2 val2 can be one of the following
 #T#     -0, use the null char to identify separated inputs
@@ -600,13 +601,43 @@ find . -name 'file*' | xargs -I str1 mv str1 str1_new #| finds any files and dir
 
 # |-------------------------------------------------------------
 
+#C# Cryptographic keys
+
+# |-------------------------------------------------------------
+#T# when using public key (asymmetric) encryption to communicate with a remote repository via ssh protocol, the plain text contents of the public key must be used to create an ssh key in the remote repository
+
+#T# generate an ssh key with the ssh-keygen command
+
+# SYNTAX ssh-keygen -o1 -o2 val2
+#T# -o1 is a flag, -o2 val2 is a kwarg value pair
+
+#T# -o1 and -o2 val2 can be one of the following
+#T#     -t str1, create an ssh key of the type str1, so str1 can be 'dsa', 'ecdsa', 'ed25519', 'rsa'
+
+ssh-keygen -t rsa
+
+#T# start the ssh agent that stores the private keys, using the output of the ssh-agent command
+eval $(ssh-agent -s)
+
+#T# add an ssh private key to the ssh agent with the ssh-add command
+
+# SYNTAX ssh-add /path/to/private_key1
+#T# the path to private_key1 is commonly the .ssh directory inside the home directory of the user that creates the cryptographic keys
+
+ssh-add ~/.ssh/id_rsa
+
+#T# list the current keys stored by the agent
+ssh-add -l #| short form
+ssh-add -L #| long form
+# |-------------------------------------------------------------
+
 #C# Root privileges
 
 # |-------------------------------------------------------------
 #T# the sudo command grants root privileges
 
 # SYNTAX sudo -o1 command1
-#T# command1 is executed with root privileges, -o1 represents a flag
+#T# command1 is executed with root privileges, -o1 is a flag
 
 #T# command1 is optional, the -s flag without command1 starts a shell session with the shell found in the SHELL environment variable, and with root as the user
 
