@@ -144,9 +144,31 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
 
+(Mediana de un triángulo)
+**Median of a triangle**: in a triangle, a median is a segment that connects one vertex with the midpoint of the segment opposite to the vertex.
+[Median of a triangle image code](Programs/Ch05/S04_01_Median_of_a_triangle_image.py)
+![Median of a triangle image](Images/Ch05/S04_01_Median_of_a_triangle.png)
+*Median of a triangle*
 
+The segment $\overline{CD}$ is a median of the triangle $\triangle ABC$.
 
-<!-- # TODO median of a triangle, altitude of a triangle -->
+(Centroide de un triángulo)
+**Centroid of a triangle**: in a triangle, the centroid is the point of concurrency formed at the intersection of the three medians, one from each vertex.
+[Centroid of a triangle image code](Programs/Ch05/S04_02_Centroid_of_a_triangle_image.py)
+[Centroid of a triangle image](Images/Ch05/S04_02_Centroid_of_a_triangle.png)
+*Centroid of a triangle*
+
+(Teorema de la concurrencia de las medianas de un triángulo)
+**Concurrency of the medians of a triangle theorem**: in a triangle, the three medians, one from each vertex to the midpoint of the side opposite to the vertex, intersect each other at a single point which is the centroid. In any given median, the length from the centroid to the vertex is twice the length from the centroid to the midpoint.
+[Concurrency of the medians of a triangle theorem image code](Programs/Ch05/S04_03_Concurrency_of_the_medians_of_a_triangle_theorem_image.py)
+[Concurrency of the medians of a triangle theorem image](Images/Ch05/S04_03_Concurrency_of_the_medians_of_a_triangle_theorem.png)
+*Concurrency of the medians of a triangle theorem*
+
+> Proof of the concurrency of the medians of a triangle theorem
+>
+> The segment $\overline{DE}$ is a midsegment of $\triangle ABC$, which means that the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, because of the midsegment theorem. By the alternate interior angles theorem, $\angle AED \cong \angle BAE$ and $\angle BDE \cong \angle ABD$, which means that $\triangle GED$ is similar to $\triangle GAB$. The scale factor to obtain $\triangle GAB$ from $\triangle GED$ is $2$, because of the said proportion between $\overline{AB}$ and $\overline{DE}$. $\overline{AE}$ intersects $\overline{BD}$ at two thirds of its length from $B$, and by using this same logic $\overline{CF}$ intersects $\overline{BD}$ at two thirds of its length from $B$, which means that the three medians intersect at a single point, the centroid. $\blacksquare$
+
+<!-- # TODO altitude of a triangle -->
 
 ## Inequalities in triangles (Desigualdades en los triángulos)
 [Ch05_S05](https://www.ck12.org/reader/reader-index.html#section/2932951/5.5/9549314)

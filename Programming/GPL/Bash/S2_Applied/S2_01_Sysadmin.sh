@@ -19,6 +19,7 @@
 #C# --- Latex
 #C# --- Python
 #C# File system hierarchy management
+#C# --- File permissions
 #C# --- File compression
 #C# --- find and xargs commands
 #C# Cryptographic keys
@@ -433,9 +434,12 @@ readlink -f link_file1 # /path/to/original_file1
 #T# remove everything but .file with rm !(*.file), this uses pattern matching (see S1_03_Operators.sh)
 rm !(*.tex|*.bib)
 
-#T# rename a file by changing only part of its filename, using substring parameter expansion, e.g augment a number in a filename by 1
+#T# rename a file by changing only part of its filename, using substring parameter expansion, e.g augment a number in a filename by 1, with the mv command
 var1='S01_05_Remote_interior_angles_image.py' #| rename by augmenting '5' to '6'
 mv "${var1}" "${var1::5}$((${var1:5:1} + 1))${var1:6}"
+
+#T# merge directories with the rsync command
+rsync -rv /path/to/dir1/ /path/to/dir2/ #| make sure to put an ending slash after the paths, otherwise dir1 is copied inside dir2 instead of merging the contents of dir1 inside dir2
 
 #T# print numbered from the start in file1 up to line up_to_l, but taking only the last N lines
 # head -up_to_l file1 | nl -b 'a' | tail -N
@@ -444,6 +448,19 @@ head -80 file1 | nl -b 'a' | tail -10
 #T# make a directory
 mkdir -p /tmp/parent_dir1/child_dir1
 #T# the p flag creates any parent directories needed, if they don't exist
+
+#C# --- File permissions
+
+# |-----
+#T# set the owner and group of a file or directory with the chown command
+
+# SYNTAX chown -o1 owner1.group1 file1
+#T# -o1 is a flag, owner1 is the new owner of file1 and group1 is the new group of file1
+
+#T# the -R flag changes the ownership recursively in subdirectories
+
+sudo chown -R root.root ./dir1/file1
+# |-----
 
 #C# --- File compression
 
@@ -643,4 +660,7 @@ ssh-add -L #| long form
 
 sudo echo "str1" # str1
 sudo -s # starts a shell session with the root user
+
+#T# switch user to the root user
+sudo su
 # |-------------------------------------------------------------

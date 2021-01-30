@@ -61,6 +61,8 @@ Text<sub>subscript text</sub>
 <!-- #C# Bulleted lists -->
 
 <!-- # |------------------------------------------------------------- -->
+<!-- #T# sublists are introduced with 4 spaces before the list symbol -->
+
 <!-- #T# make ordered lists with any number and a dot, num1. -->
 1. item1
     1. subitem1
