@@ -45,11 +45,7 @@ import matplotlib.pyplot as plt
 #T# plot a set of points with the plot function
 
 # SYNTAX plt.plot(list1, list2)
-#T# list1 and list2 must be the same size, list1 has the abscissa values, list2 has the ordinate values, the plot can be modified using kwargs
-
-#T# a few of the plot kwargs are
-#T#     color, accepts a hexadecimal string that starts with a hash, such as '#A178B9'
-#T#     zorder, a number that sets the order of plotting, a lower zorder value makes the plot be behind other plots, and a greater zorder value brings the plot in front of other plots, a value of 4 commonly guarantees that the plot will be in front of everything else
+#T# list1 and list2 must be the same size, list1 has the abscissa values, list2 has the ordinate values, the plot can be modified using kwargs (see the section "Parts of a plot")
 
 x = [4, 1]
 y = [3, 5]
@@ -397,13 +393,21 @@ ax1.autoscale() #| without autoscale, the arrow is shown incompletely
 #T#     'k' black
 #T#     'w' white
 
-#T# the clip_on kwarg is a boolean, that sets whether or not to the plot clips at the axes borders, so when False, the plot outside of the axes will be rendered
+#T# the marker kwarg is a string used to set the marker directly, this string can be any of the chars for marker shapes shown before, or it also can be a tuple
 
-#T# the marker kwarg is a string used to set the marker directly, this is string can be any of the chars for marker shapes shown before, or it also can be a tuple 
+#T# the linestyle kwarg is a string, it can be one of the line style strings shown before
+
+#T# the color kwarg is a string of 6 or 8 hexadecimal numbers starting with a hash, such as '#A178B9', or it can also be one of the color strings shown before
+
+#T# the clip_on kwarg is a boolean that sets whether or not to the plot clips at the axes borders, so when False, the plot outside of the axes will be rendered
+
+#T# the alpha kwarg is a number that sets the transparency level, 1 being opaque, 0 being transparent
 
 #T# the markersize kwarg is a number that sets the size of the marker
 
-plt.plot([3, 7], [-1, 5], 'w', marker = 'o', markersize = 6)
+#T# the zorder kwarg is a number that sets the order of plotting, a lower zorder value makes the plot be behind other plots, and a greater zorder value brings the plot in front of other plots, a value of 4 commonly guarantees that the plot will be in front of everything else
+
+plt.plot([3, 7], [-1, 5], 'w', marker = 'o', markersize = 6, color = '#A178B955', zorder = 4)
 
 #C# --- Titles
 

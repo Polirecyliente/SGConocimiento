@@ -55,6 +55,12 @@ ax1.add_patch(mark2)
 import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
+#T# create the markers
+marker1 = MarkerStyle(r'$\urcorner$')
+
+#T# plot the markers
+plt.scatter(3.1, 2.04, s = 250, color = 'k', marker = marker1, linewidths = 0.1)
+
 #T# create the labels
 label1 = plt.annotate(r'$m$', p2_1, ha = 'left', va = 'bottom', size = 16)
 label2 = plt.annotate(r'$l$', p2_2, ha = 'left', va = 'bottom', size = 16)
@@ -68,12 +74,6 @@ label_a5 = plt.annotate(r'$5$', (2.8, .45), ha = 'right', va = 'top', size = 16)
 label_a6 = plt.annotate(r'$6$', (3.4, .45), ha = 'right', va = 'top', size = 16)
 label_a7 = plt.annotate(r'$7$', (2.8, -.15), ha = 'right', va = 'top', size = 16)
 label_a8 = plt.annotate(r'$8$', (3.4, -.15), ha = 'right', va = 'top', size = 16)
-
-#T# create the right angle mark
-marker1 = MarkerStyle(r'$\urcorner$')
-
-#T# plot the right angle mark
-plt.scatter(3.1, 2.04, s = 250, color = 'k', marker = marker1, linewidths = 0.1)
 
 #T# drag the labels if needed
 label1.draggable()

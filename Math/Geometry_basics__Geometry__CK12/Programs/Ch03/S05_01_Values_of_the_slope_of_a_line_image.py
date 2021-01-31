@@ -61,13 +61,13 @@ for it1 in fig1.axes:
     it1.plot(-8.3, 0, '<k', clip_on = False)
     it1.plot(8.3, 0, '>k', clip_on = False)
 
-#T# set the title of each pair of axes
+#T# title the axes
 fig1.axes[0].set_title('Positive slope', y = 1.1)
 fig1.axes[1].set_title('Negative slope', y = 1.1)
 fig1.axes[2].set_title('Zero slope', y = 1.1)
 fig1.axes[3].set_title('Undefined slope', y = 1.1)
 
-#T# set the position of the subplots with regards to one another
+#T# layout the subplots
 fig1.tight_layout()
 
 #T# create the variables that define the plot

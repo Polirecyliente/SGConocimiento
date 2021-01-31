@@ -1,6 +1,6 @@
 #T# the following code shows how to draw a few right angles as an example of the right angle theorem
 
-#T# to draw right angles, the pyplot module of the matplotlib package is used
+#T# to draw a few right angles as an example of the right angle theorem, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
 #T# to transform the markers of a plot, import the MarkerStyle constructor

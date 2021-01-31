@@ -145,7 +145,7 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
 
 (Mediana de un triángulo)
-**Median of a triangle**: in a triangle, a median is a segment that connects one vertex with the midpoint of the segment opposite to the vertex.
+**Median of a triangle**: in a triangle, a median is a segment that connects one vertex with the midpoint of the side opposite to the vertex.
 [Median of a triangle image code](Programs/Ch05/S04_01_Median_of_a_triangle_image.py)
 ![Median of a triangle image](Images/Ch05/S04_01_Median_of_a_triangle.png)
 *Median of a triangle*
@@ -168,7 +168,21 @@ The segment $\overline{CD}$ is a median of the triangle $\triangle ABC$.
 >
 > The segment $\overline{DE}$ is a midsegment of $\triangle ABC$, which means that the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, because of the midsegment theorem. By the alternate interior angles theorem, $\angle AED \cong \angle BAE$ and $\angle BDE \cong \angle ABD$, which means that $\triangle GED$ is similar to $\triangle GAB$. The scale factor to obtain $\triangle GAB$ from $\triangle GED$ is $2$, because of the said proportion between $\overline{AB}$ and $\overline{DE}$. $\overline{AE}$ intersects $\overline{BD}$ at two thirds of its length from $B$, and by using this same logic $\overline{CF}$ intersects $\overline{BD}$ at two thirds of its length from $B$, which means that the three medians intersect at a single point, the centroid. $\blacksquare$
 
-<!-- # TODO altitude of a triangle -->
+(Altura de un triángulo)
+**Altitude of a triangle**: in a triangle, an altitude is a segment that connects one vertex perpendicularly to the side opposite to the vertex.
+[Altitude of a triangle image code](Programs/Ch05/S04_04_Altitude_of_a_triangle_image.py)
+![Altitude of a triangle image](Images/Ch05/S04_04_Altitude_of_a_triangle.png)
+*Altitude of a triangle*
+
+The altitude $\overline{CD}$ of the triangle $\triangle ABC$ is outside of the triangle, and $D$ does not lie on the side $\overline{AB}$. The altitudes of a triangle don't have to be inside the triangle itself.
+
+(Ortocentro de un triángulo)
+**Orthocenter of a triangle**: in a triangle, the orthocenter is the point of concurrency formed at the intersection of the three altitudes, one from each vertex.
+[Orthocenter of a triangle image code](Programs/Ch05/S04_05_Orthocenter_of_a_triangle_image.py)
+![Orthocenter of a triangle image](Images/Ch05/S04_05_Orthocenter_of_a_triangle.png)
+*Orthocenter of a triangle*
+
+The location of the orthocenter depends on the type of triangle. In an obtuse triangle, the orthocenter is outside the triangle. In a right triangle, the orthocenter is the vertex opposite to the hypotenuse. In an acute triangle, the orthocenter is inside the triangle.
 
 ## Inequalities in triangles (Desigualdades en los triángulos)
 [Ch05_S05](https://www.ck12.org/reader/reader-index.html#section/2932951/5.5/9549314)
