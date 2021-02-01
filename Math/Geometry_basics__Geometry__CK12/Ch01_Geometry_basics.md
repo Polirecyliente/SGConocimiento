@@ -1,6 +1,19 @@
 
 #   Geometry basics (Bases de la geometría)
 
+<!--
+#T# Table of contents
+
+#C# Points, lines, and planes (Puntos, líneas, y planos)
+#C# Segments and distance (Segmentos y distancia)
+#C# Angles (Ángulos)
+#C# Midpoint and bisector (Punto medio y bisectriz)
+#C# Angle pairs (Pares de ángulos)
+#C# Polygon classification (Clasificación de polígonos)
+
+#T# Beginning of content
+-->
+
 ## Points, lines, and planes (Puntos, líneas, y planos)
 [Ch01_S01](https://www.ck12.org/reader/reader-index.html#section/2932917/1.1/9549314)
 

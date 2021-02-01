@@ -1,6 +1,18 @@
 
 #   Logic for geometric proofs (Lógica para pruebas geométricas)
 
+<!--
+#T# Table of contents
+
+#C# Inductive reasoning (Razonamiento inductivo)
+#C# Conditional statements (Proposiciones condicionales)
+#C# Deductive reasoning (Razonamiento deductivo)
+#C# Equality and congruence properties, operation properties, two column proofs (Propiedades de la igualdad y la congruencia, propiedades de las operaciones, demostraciones a dos columnas)
+#C# Proofs about angle pairs and segments (Demostraciones sobre pares de ángulos y segmentos)
+
+#T# Beginning of content
+-->
+
 ## Inductive reasoning (Razonamiento inductivo)
 [Ch02_S01](https://www.ck12.org/reader/reader-index.html#section/2932925/2.1/9549314)
 
@@ -270,6 +282,10 @@ In the following tables, let $p$, $q$ be logical statements.
 *Truth table for the or operation*
 
 Truth tables can be used not only for binary operations but for more complex logical expressions, e.g. let $p$, $q$, $r$ be three logical statements, a truth table can be made for the expression $p \land (\neg q \lor r)$, this truth table would have $8$ rows, one for each possible combination of the logical values of $p$, $q$, and $r$, and with the logical value of the expression $p \land (\neg q \lor r)$ in the last column.
+
+(Demostración por contradicción)
+**Indirect proof**: type of proof in which the consequent is negated, and by deduction a contradiction is found, which means that the consequent is true.
+[Ch05_S06](https://www.ck12.org/reader/reader-index.html#section/2932952/5.6/9549314)
 
 ## Equality and congruence properties, operation properties, two column proofs (Propiedades de la igualdad y la congruencia, propiedades de las operaciones, demostraciones a dos columnas)
 [Ch02_S04](https://www.ck12.org/reader/reader-index.html#section/2932928/2.4/9549314)

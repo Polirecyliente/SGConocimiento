@@ -1,6 +1,17 @@
 
 #   Linear equations (Ecuaciones lineales)
 
+<!--
+#T# Table of contents
+
+#C# Solve equations using the subtraction and addition properties of equality (Solucionar ecuaciones usando las propiedades sustractiva y aditiva de la igualdad)
+#C# Solve equations using the division and multiplication properties of equality (Solucionar ecuaciones usando las propiedades divisiva y multiplicativa de la igualdad)
+#C# Linear equation definitions (Definiciones de ecuaciones lineales)
+#C# Solve equations with fraction or decimal coefficients (Solucionar ecuaciones con coeficientes fraccionales o decimales)
+
+#T# Beginning of content
+-->
+
 ## Solve equations using the subtraction and addition properties of equality (Solucionar ecuaciones usando las propiedades sustractiva y aditiva de la igualdad)
 [Ch08_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=671)
 

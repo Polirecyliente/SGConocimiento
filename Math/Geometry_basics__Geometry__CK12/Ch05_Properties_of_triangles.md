@@ -1,6 +1,18 @@
 
 #   Properties of triangles (Propiedades de los triángulos)
 
+<!--
+#T# Table of contents
+
+#C# Midsegments of a triangle (Segmentos medios de un triángulo)
+#C# Perpendicular bisectors of a triangle (Mediatrices de un triángulo)
+#C# Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
+#C# Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
+#C# Inequalities in triangles (Desigualdades en los triángulos)
+
+#T# Beginning of content
+-->
+
 ## Midsegments of a triangle (Segmentos medios de un triángulo)
 [Ch05_S01](https://www.ck12.org/reader/reader-index.html#section/2932947/5.1/9549314)
 
@@ -187,5 +199,67 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 ## Inequalities in triangles (Desigualdades en los triángulos)
 [Ch05_S05](https://www.ck12.org/reader/reader-index.html#section/2932951/5.5/9549314)
 
-## Indirect proof (Demostración por contradicción)
-[Ch05_S06](https://www.ck12.org/reader/reader-index.html#section/2932952/5.6/9549314)
+(Teorema del lado mayor de un triángulo)
+**Triangle longer side theorem**: in a triangle, given two sides, if one side is longer than the other side, then the angle opposite to the longer side is greater than the angle opposite to the other side.
+[Triangle longer side theorem image code](Programs/Ch05/S05_01_Triangle_longer_side_theorem_image.py)
+![Triangle longer side theorem image](Images/Ch05/S05_01_Triangle_longer_side_theorem.png)
+*Triangle longer side theorem*
+
+> Proof of the triangle longer side theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $CB > AC$ | Given |
+> | $AC = CD$ | Ruler postulate |
+> | $\triangle ACD$ is isosceles | Definition of isosceles triangle |
+> | $m \angle CAD = m \angle CDA$ | Base angles theorem |
+> | $m \angle CDA = m \angle B + m \angle DAB$ | Exterior angle theorem |
+> | $m \angle CAD = m \angle B + m \angle DAB$ | Substitution property of equality |
+> | $m \angle CAB = m \angle CAD + m \angle DAB$ | Angle addition postulate |
+> | $m \angle CAB = m \angle B + 2 m \angle DAB$ | Substitution property of equality |
+> | $m \angle CAB > m \angle B$ | Definition of the greater than operator |
+
+(Converso del teorema del lado mayor de un triángulo)
+**Converse of the triangle longer side theorem**: in a triangle, given two angles, if the measure of one angle is greater than the measure of the other angle, then the side opposite to the greater angle is longer than the side opposite to the other angle.
+
+> Proof of the converse of the triangle longer side theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $m \angle CAB > m \angle B$ | Given, from the *Triangle longer side theorem* image |
+> | $AC = CD$ | Ruler postulate |
+> | $\triangle ACD$ is isosceles | Definition of isosceles triangle |
+> | $m \angle CDA = m \angle B + m \angle DAB$ | Exterior angle theorem |
+> | $m \angle DAB + m \angle B + m \angle ADB = \pi$ | Triangle interior angles sum theorem |
+> | $m \angle CDA + m \angle ADB = \pi$ | Substitution property of equality |
+> | $\angle CDA$ and $\angle ADB$ form a linear pair | Linear pair postulate |
+> | The non-shared sides of $\angle CDA$ and $\angle ADB$ form the straight segment $\overline{CDB}$ | Definition of linear pair |
+> | $D$ is between $B$ and $C$ | Definition of collinearity |
+> | $CB = CD + DB$ | Segment addition postulate |
+> | $CB = AC + DB$ | Substitution property of equality |
+> | $CB > AC$ | Definition of the greater than operator |
+
+(Teorema de la desigualdad del triángulo)
+**Triangle inequality theorem**: in a triangle, the sum of the lengths of any two sides, is greater than the length of the remaining side.
+[Triangle inequality theorem image code](Programs/Ch05/S05_02_Triangle_inequality_theorem_image.py)
+![Triangle inequality theorem image](Images/Ch05/S05_02_Triangle_inequality_theorem.png)
+*Triangle inequality theorem*
+
+> Proof of the triangle inequality theorem
+>
+> Let $\triangle ABC$ have sides with lengths $a$, $b$, $c$. As shown in the image, a triangle can't be formed when $c \ge a + b$ or $c \le |a - b|$. A triangle can be formed when
+> $$|a - b| < c < a + b\ \ \blacksquare$$
+
+(Teorema de la bisagra)
+**Hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle has a measure greater than the one from the second triangle, then the remaining side of the first triangle is longer than the one of the second triangle.
+
+> Proof of the hinge theorem
+>
+> Let $\triangle ABC$ and $\triangle DEF$ be two triangles, let $AB = DE$ and $BC = EF$, and let $m \angle B > m \angle E$, then $AC > DF$ because of the converse of the triangle longer side theorem. $\blacksquare$
+
+(Converso del teorema de la bisagra)
+**Converse of the hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the remaining side of the first triangle is longer than the one of the second triangle, then the included angle from the first triangle has a measure greater than the one from the second triangle.
+
+> Proof of the converse of the hinge theorem
+>
+> Let $\triangle ABC$ and $\triangle DEF$ be two triangles, let $AB = DE$ and $BC = EF$, and let $AC > DF$, then $m \angle B > m \angle E$ because of the triangle longer side theorem. $\blacksquare$

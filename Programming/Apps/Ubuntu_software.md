@@ -1,6 +1,7 @@
-<!--
+
 #   Ubuntu software
 
+<!--
 #T# Table of contents
 
 #C# Connect two computers with an Ethernet cable
@@ -8,7 +9,7 @@
 #T# Beginning of content
 -->
 
-# Connect two computers with an Ethernet cable
+## Connect two computers with an Ethernet cable
 
 These steps require the `network-manager` service and the `nm-connection-editor` command
 1. Label the computers as computer A and computer B.

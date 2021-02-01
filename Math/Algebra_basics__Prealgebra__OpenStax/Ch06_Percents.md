@@ -1,6 +1,18 @@
 
 #   Percents
 
+<!--
+#T# Table of contents
+
+#C# Definitions of percents (Definiciones de porcentajes)
+#C# Percentage applications (Aplicaciones de porcentajes)
+#C# Sales tax, commissions, discounts (Impuesto de ventas, comisiones, descuentos)
+#C# Simple interest (Interés simple)
+#C# Proportions (Proporciones)
+
+#T# Beginning of content
+-->
+
 ## Definitions of percents (Definiciones de porcentajes)
 [Ch06_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=525)
 

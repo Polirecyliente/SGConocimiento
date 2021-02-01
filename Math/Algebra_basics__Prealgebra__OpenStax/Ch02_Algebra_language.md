@@ -1,6 +1,18 @@
 
 #   Algebra language (Lenguaje del álgebra)
 
+<!--
+#T# Table of contents
+
+#C# The language of algebra (El lenguaje del álgebra)
+#C# Evaluation and simplification of expressions (Evaluación y simplificación de expresiones)
+#C# Solution of an equation, subtraction and addition properties of equality (Soluciones de una ecuación, propiedades de sustracción y adición de la igualdad)
+#C# Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
+#C# Prime factorization, least common multiple (Descomposición en factores primos, mínimo común múltiplo)
+
+#T# Beginning of content
+-->
+
 ## The language of algebra (El lenguaje del álgebra)
 [Ch02_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=109)
 

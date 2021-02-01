@@ -1,6 +1,18 @@
 
 #   Real numbers (Números reales)
 
+<!--
+#T# Table of contents
+
+#C# Rational and irrational numbers (Números racionales e irracionales)
+#C# Associative properties (Propiedades asociativas)
+#C# Distributive property (Propiedad distributiva)
+#C# Inverse properties, zero properties (Propiedades inversas, propiedades del cero)
+#C# Systems of measurement (Sistemas de medida)
+
+#T# Beginning of content
+-->
+
 ## Rational and irrational numbers (Números racionales e irracionales)
 [Ch07_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=603)
 

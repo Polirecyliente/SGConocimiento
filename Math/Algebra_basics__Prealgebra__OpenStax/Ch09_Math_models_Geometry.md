@@ -1,6 +1,20 @@
 
 #   Math models and Geometry (Modelos matemáticos y geometría)
 
+<!--
+#T# Table of contents
+
+#C# Number problems (Problemas con números)
+#C# Combine mixed units (Combinar unidades mixtas)
+#C# Angles, triangles, pythagorean theorem (Ángulos, triángulos, teorema de Pitágoras)
+#C# Rectangles, triangles, trapezoids (Rectángulos, triángulos, trapezoides)
+#C# Irregular figures (Figuras irregulares)
+#C# Volume, surface area (Volumen, área superficial)
+#C# Solve a formula for a specific variable (Despejar una variable específica en una fórmula)
+
+#T# Beginning of content
+-->
+
 ## Number problems (Problemas con números)
 [Ch09_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=727)
 

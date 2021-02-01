@@ -1,6 +1,18 @@
 
 #   Triangles and congruence (Triángulos y congruencia)
 
+<!--
+#T# Table of contents
+
+#C# Triangle angles sum (Suma de los ángulos de un triángulo)
+#C# Congruent figures (Figuras congruentes)
+#C# Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
+#C# Triangle congruence criteria 2 (Criterios de congruencia de triángulos 2)
+#C# Isosceles and equilateral triangles (Triángulos isósceles y equiláteros)
+
+#T# Beginning of content
+-->
+
 ## Triangle angles sum (Suma de los ángulos de un triángulo)
 [Ch04_S01](https://www.ck12.org/reader/reader-index.html#section/2932940/4.1/9549314)
 
@@ -64,7 +76,7 @@ In a given vertex of a polygon, the interior angle and one exterior angle (any o
 ![Remote interior angles image](Images/Ch04/S01_05_Remote_interior_angles.png)
 *Remote interior angles*
 
-In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior angle, its two remote interior angles are $\angle B$ and $\angle C$.
+In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior angle, its two remote interior angles are $\angle B$ and $\angle C$. The auxiliary segment $\overline{AC_2}$ is placed there to show that the measure of $\angle DAC$ can be seen as the sum of the measures of $\angle B$ and $\angle C$, with the corresponding angles postulate for $\angle B$, and the alternate interior angles theorem for $\angle C$. This is proven in the exterior angle theorem.
 
 (Teorema del ángulo exterior)
 **Exterior angle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles.
@@ -133,10 +145,10 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 >
 > Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
 
-(Ángulo incluido por dos lados)
+(Ángulo comprendido entre dos lados)
 **Included angle between two sides**: the angle between two given sides, is the included angle.
 
-(Construcción de un triángulo dados dos lados y su ángulo incluido)
+(Construcción de un triángulo dados dos lados y su ángulo comprendido)
 **Triangle from two sides and their included angle construction**: a geometric construction to draw a triangle given two sides and their included angle.
 
 > Triangle from two sides and their included angle construction
@@ -158,10 +170,10 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 ## Triangle congruence criteria 2 (Criterios de congruencia de triángulos 2)
 [Ch04_S04](https://www.ck12.org/reader/reader-index.html#section/2932943/4.4/9549314)
 
-(Lado incluido por dos ángulos)
+(Lado comprendido entre dos ángulos)
 **Included side between two angles**: a side that is common to two differnt angles. The angles surround the side by placing themselves at each endpoint of the side.
 
-(Construcción de un triángulo dados dos ángulos y su lado incluido)
+(Construcción de un triángulo dados dos ángulos y su lado comprendido)
 **Triangle from two angles and their included side construction**: geometric construction to draw a triangle given two angles and their included side.
 
 > Triangle from two angles and their included side construction

@@ -1,6 +1,19 @@
 
 #   Polynomials (Polinomios)
 
+<!--
+#T# Table of contents
+
+#C# Addition and subtraction of polynomials (Adición y sustracción de polinomios)
+#C# Multiplication properties of exponents (Propiedades de los exponentes)
+#C# Multiplication of polynomials (Multiplicación de polinomios)
+#C# Division of polynomials (División de polinomios)
+#C# Scientific notation (Notación científica)
+#C# Polynomial factoring (Factorización de polinomios)
+
+#T# Beginning of content
+-->
+
 ## Addition and subtraction of polynomials (Adición y sustracción de polinomios)
 [Ch10_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=861)
 

@@ -1,6 +1,19 @@
 
 #   Parallel and perpendicular lines (Líneas paralelas y perpendiculares)
 
+<!--
+#T# Table of contents
+
+#C# Parallel lines, skew lines, perpendicular lines, transversals (Líneas paralelas, líneas alabeadas, líneas perpendiculares, transversales)
+#C# Properties of parallel lines (Propiedades de las líneas paralelas)
+#C# Proving lines parallel (Demostrar el paralelismo entre líneas)
+#C# Properties of perpendicular lines (Propiedades de las líneas perpendiculares)
+#C# Algebra of parallel and perpendicular lines (Álgebra de las líneas paralelas y perpendiculares)
+#C# Distance formula (Fórmula de distancia)
+
+#T# Beginning of content
+-->
+
 ## Parallel lines, skew lines, perpendicular lines, transversals (Líneas paralelas, líneas alabeadas, líneas perpendiculares, transversales)
 [Ch03_S01](https://www.ck12.org/reader/reader-index.html#section/9509902/3.1/9549314)
 

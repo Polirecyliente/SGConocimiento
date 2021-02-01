@@ -1,6 +1,18 @@
 
 #   Whole numbers (Números naturales y el cero)
 
+<!--
+#T# Table of contents
+
+#C# Introduction (Introducción)
+#C# Addition (Adición)
+#C# Subtraction (Sustracción)
+#C# Multiplication (Multiplicación)
+#C# Division (División)
+
+#T# Beginning of content
+-->
+
 ## Introduction (Introducción)
 [Ch01_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=15)
 

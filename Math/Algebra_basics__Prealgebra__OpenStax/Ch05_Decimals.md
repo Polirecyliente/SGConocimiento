@@ -1,6 +1,20 @@
 
 #   Decimals (Decimales)
 
+<!--
+#T# Table of contents
+
+#C# Definitions of decimals (Definiciones de decimales)
+#C# Decimal operations (Operaciones con decimales)
+#C# Decimals and fractions (Decimales y fracciones)
+#C# Solution of an equation with decimals (Solución de una ecuación con decimales)
+#C# Averages, probability (Promedios, probabilidad)
+#C# Ratios, rates (Ratios, tasas)
+#C# Square roots, simplification of square roots (Raíces cuadradas, simplificación de raíces cuadradas)
+
+#T# Beginning of content
+-->
+
 ## Definitions of decimals (Definiciones de decimales)
 [Ch05_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=415)
 

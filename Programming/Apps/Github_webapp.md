@@ -1,6 +1,7 @@
-<!--
+
 #   Github webapp
 
+<!--
 #T# Table of contents
 
 #C# Add an SSH public key
@@ -8,7 +9,7 @@
 #T# Beginning of content
 -->
 
-# Add an SSH public key
+## Add an SSH public key
 
 These steps require having an SSH public key file already created.
 1. Login to github.com.

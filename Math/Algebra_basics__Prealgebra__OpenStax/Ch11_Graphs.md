@@ -1,6 +1,17 @@
 
 #   Graphs (Diagramas)
 
+<!--
+#T# Table of contents
+
+#C# Rectangular coordinate system (Sistema de coordenadas rectangulares)
+#C# Graphs of linear equations (Gráficas de ecuaciones lineales)
+#C# Intercept (Intercepto)
+#C# Slope of a linear equation (Pendiente de una ecuación lineal)
+
+#T# Beginning of content
+-->
+
 ## Rectangular coordinate system (Sistema de coordenadas rectangulares)
 [Ch11_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=961)
 

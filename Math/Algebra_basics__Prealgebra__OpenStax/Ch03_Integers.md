@@ -1,6 +1,18 @@
 
 #   Integers (Números enteros)
 
+<!--
+#T# Table of contents
+
+#C# Introduction to integers (Introducción a los enteros)
+#C# Addition of integers (Adición de enteros)
+#C# Subtraction of integers (Sustracción de enteros)
+#C# Multiplication and division of integers (Multiplicación y división de enteros)
+#C# Solution of an equation with integers, multiplication and division properties of equality (Soluciones de una ecuación con enteros, propiedades multiplicativa y divisiva de la igualdad)
+
+#T# Beginning of content
+-->
+
 ## Introduction to integers (Introducción a los enteros)
 [Ch03_S01](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=191)
 
