@@ -115,6 +115,40 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 > | $\angle ABC \cong \angle CDA$ | Corresponding parts of congruent triangles are congruent |
 > | $\angle DAB \cong \angle BCD$ | Repeating this proof but with $\overline{BD}$ as diagonal |
 
+(Teorema de los ángulos consecutivos de un paralelogramo)
+**Consecutive angles of a parallelogram theorem**: in a parallelogram, the consecutive angles are supplementary.
+[Consecutive angles of a parallelogram theorem image code](Programs/Ch06/S02_03_Consecutive_angles_of_a_parallelogram_theorem_image.py)
+![Consecutive angles of a parallelogram theorem image](Images/Ch06/S02_03_Consecutive_angles_of_a_parallelogram_theorem.png)
+*Consecutive angles of a parallelogram theorem*
+
+> Proof of the consecutive angles of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $A$, $B$, and $E$ are collinear | Given |
+> | $\angle ABC$ and $\angle CBE$ are supplementary | Linear pair postulate |
+> | $\angle DAB \cong \angle CBE$ | Corresponding angles postulate |
+> | $\angle DAB$ and $\angle ABC$ are supplementary | Converse of the congruent supplements theorem | ASA triangle congruence postulate |
+
+The rest of consecutive angle pairs are supplementary by following this same proof, but placing $E$ as a point that extends each of the other three sides of the parallelogram.
+
+(Teorema de las diagonales de un paralelogramo)
+**Diagonals of a parallelogram theorem**: in a parallelogram, the two diagonals bisect each other.
+[Diagonals of a parallelogram theorem image code](Programs/Ch06/S02_04_Diagonals_of_a_parallelogram_theorem_image.py)
+![Diagonals of a parallelogram theorem image](Images/Ch06/S02_04_Diagonals_of_a_parallelogram_theorem.png)
+*Diagonals of a parallelogram theorem*
+
+> Proof of the diagonals of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $E$ lies at the intersection of $\overline{AC}$ and $\overline{BD}$ | Given |
+> | $\overline{AB} \cong \overline{DC}$, and also $\overline{AD} \cong \overline{BC}$ | Opposite sides of a parallelogram theorem |
+> | $\angle BAC \cong \angle DCA$, $\angle ABD \cong \angle CDB$, and also $\angle DAC \cong \angle BCA$, $\angle ADB \cong \angle CBD$ | Alternate interior angles theorem |
+> | $\triangle ABE \cong \triangle CDE$, and also $\triangle ADE \cong \triangle CBE$ | ASA triangle congruence postulate |
+> | $\overline{AE} \cong \overline{CE}$, and also $\overline{DE} \cong \overline{BE}$ | Corresponding parts of congruent triangles are congruent |
+> | $E$ is the midpoint of $\overline{AC}$, and also $E$ is the midpoint of $\overline{BD}$ | Definition of midpoint |
+
 ## Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
 [Ch06_S03](https://www.ck12.org/reader/reader-index.html#section/2932957/6.3/9549314)
 

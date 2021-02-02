@@ -99,6 +99,8 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 
 - **Same side exterior angles** (Ángulos conjugados externos): two angles that lie on the exterior area, are distinct, and are on the same side of the transversal, e.g. $\angle 1$ and $\angle 7$ are same side exterior angles, like $\angle 2$ and $\angle 8$.
 
+- **Consecutive angles** (Ángulos consecutivos): same side angles are also known as consecutive angles.
+
 ## Properties of parallel lines (Propiedades de las líneas paralelas)
 [Ch03_S02](https://www.ck12.org/reader/reader-index.html#section/2932933/3.2/9549314)
 
