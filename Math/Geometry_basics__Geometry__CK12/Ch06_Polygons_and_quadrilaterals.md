@@ -85,7 +85,35 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 > 1. Draw two non-parallel lines that intersect each other.
 > 2. Apply the two parallel lines construction, once per line from step 1, so that the resulting lines close the parallelogram.
 
+(Teorema de los lados opuestos de un paralelogramo)
+**Opposite sides of a parallelogram theorem**: in a parallelogram, the opposite sides are congruent.
+[Opposite sides of a parallelogram theorem image code](Programs/Ch06/S02_02_Opposite_sides_of_a_parallelogram_theorem_image.py)
+![Opposite sides of a parallelogram theorem image](Images/Ch06/S02_02_Opposite_sides_of_a_parallelogram_theorem.png)
+*Opposite sides of a parallelogram theorem*
 
+> Proof of the opposite sides of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $\overline{AC}$ is a diagonal of the parallelogram | Given |
+> | $\angle DCA \cong \angle BAC$, $\angle DAC \cong \angle BCA$ | Alternate interior angles theorem |
+> | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
+> | $\triangle ABC \cong \triangle CDA$ | ASA triangle congruence postulate |
+> | $\overline{AB} \cong \overline{DC}$, $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
+
+(Teorema de los ángulos opuestos de un paralelogramo)
+**Opposite angles of a parallelogram theorem**: in a parallelogram, the opposite angles are congruent.
+
+> Proof of the opposite angles of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $\overline{AC}$ is a diagonal of the parallelogram | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\angle DCA \cong \angle BAC$, $\angle DAC \cong \angle BCA$ | Alternate interior angles theorem |
+> | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
+> | $\triangle ABC \cong \triangle CDA$ | ASA triangle congruence postulate |
+> | $\angle ABC \cong \angle CDA$ | Corresponding parts of congruent triangles are congruent |
+> | $\angle DAB \cong \angle BCD$ | Repeating this proof but with $\overline{BD}$ as diagonal |
 
 ## Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
 [Ch06_S03](https://www.ck12.org/reader/reader-index.html#section/2932957/6.3/9549314)
