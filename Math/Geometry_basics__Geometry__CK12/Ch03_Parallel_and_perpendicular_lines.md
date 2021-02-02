@@ -59,6 +59,16 @@ The blue line and the crimson line are not parallel, and yet they never intersec
 >
 > This construction can also be used to draw a perpendicular through a point on the line. In that case, the arc from step 2 is drawn so that it intersects the segment at both sides of the point.
 
+(Construcción de dos líneas paralelas)
+**Two parallel lines construction**: a geometric construction to draw two lines such that they are parallel to each other.
+
+> Two parallel lines construction
+>
+> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials).
+> 1. Draw the first line and a point where the second line will pass through.
+> 2. Apply the perpendicular line construction, taking the line and the point from step 1, as the segment and the point needed for that construction.
+> 3. Apply the perpendicular line construction again, taking the segment created in step 2, and the point from step 1, as the segment and the point needed for that construction. The result is the two parallel lines connected with a perpendicular line that can be erased if needed.
+
 (Línea transversal)
 **Transversal line**: a line that intersects two other distinct lines.
 [Transversal line image code](Programs/Ch03/S01_03_Transversal_line_image.py)

@@ -70,6 +70,23 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 ## Properties of parallelograms (Propiedades de los paralelogramos)
 [Ch06_S02](https://www.ck12.org/reader/reader-index.html#section/2932956/6.2/9549314)
 
+(Paralelogramo)
+**Parallelogram**: a quadrilateral that consists of two pairs of parallel sides.
+[Parallelogram image code](Programs/Ch06/S02_01_Parallelogram_image.py)
+![Parallelogram image](Images/Ch06/S02_01_Parallelogram.png)
+*Parallelogram*
+
+(Construcción de un paralelogramo)
+**Parallelogram construction**: a geometric construction to draw a parallelogram.
+
+> Parallelogram construction
+>
+> This construction requires paper, pencil, and straightedge (or equivalent tools and materials).
+> 1. Draw two non-parallel lines that intersect each other.
+> 2. Apply the two parallel lines construction, once per line from step 1, so that the resulting lines close the parallelogram.
+
+
+
 ## Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
 [Ch06_S03](https://www.ck12.org/reader/reader-index.html#section/2932957/6.3/9549314)
 
