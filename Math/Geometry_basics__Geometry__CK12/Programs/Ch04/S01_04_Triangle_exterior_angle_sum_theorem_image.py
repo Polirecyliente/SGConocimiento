@@ -1,6 +1,6 @@
-#T# the following code shows how to draw the exterior angles of a triangle
+#T# the following code shows how to draw the exterior angles of a triangle to show the triangle exterior angle sum theorem
 
-#T# to draw the exterior angles of a triangle, the pyplot module of the matplotlib package is used
+#T# to draw the exterior angles of a triangle to show the triangle exterior angle sum theorem, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
 #T# the patches module of the matplotlib package is used to draw shapes

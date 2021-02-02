@@ -1,4 +1,4 @@
-#T# the following code shows how to divide a segment into subsegments and get the location of any given endpoint of a subsegment
+#T# the following code shows how to calculate the divide segment formula
 
 #T# define the points of the segment to be divided
 p1 = (2, 1)

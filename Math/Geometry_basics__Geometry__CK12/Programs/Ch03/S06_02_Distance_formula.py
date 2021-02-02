@@ -1,4 +1,4 @@
-#T# the following code shows how to calculate the distance between two given points using the distance formula
+#T# the following code shows how to calculate the distance formula
 
 #T# import the math module to do calculations
 import math

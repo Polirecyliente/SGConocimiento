@@ -55,9 +55,9 @@ In a given vertex of a polygon, the interior angle and one exterior angle (any o
 
 (Teorema de la suma de los ángulos exteriores de un triángulo)
 **Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2\pi$, taking only one exterior angle per vertex.
-[Triangle exterior angle sum image code](Programs/Ch04/S01_04_Triangle_exterior_angle_sum_image.py)
-![Triangle exterior angle sum image](Images/Ch04/S01_04_Triangle_exterior_angle_sum.png)
-*Triangle exterior angle sum*
+[Triangle exterior angle sum theorem image code](Programs/Ch04/S01_04_Triangle_exterior_angle_sum_theorem_image.py)
+![Triangle exterior angle sum theorem image](Images/Ch04/S01_04_Triangle_exterior_angle_sum_theorem.png)
+*Triangle exterior angle sum theorem*
 
 > Proof of the triangle exterior angle sum theorem
 >
