@@ -152,6 +152,81 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 ## Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
 [Ch06_S03](https://www.ck12.org/reader/reader-index.html#section/2932957/6.3/9549314)
 
+(Converso del teorema de los lados opuestos de un paralelogramo)
+**Converse of the opposite sides of a parallelogram theorem**: in a quadrilateral, if the opposite sides are congruent, then the quadrilateral is a parallelogram.
+
+> Proof of the converse of the opposite sides of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{DC}$ and $\overline{AD} \cong \overline{BC}$ | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
+> | $\triangle ABC \cong \triangle CDA$ | SSS triangle congruence postulate |
+> | $\angle ACD \cong \angle CAB$, and $\angle DAC \cong \angle BCA$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the alternate interior angles theorem |
+> | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+(Teorema de los lados opuestos paralelos y congruentes de un cuadrilátero)
+**Parallel and congruent opposite sides of a quadrilateral theorem**: in a quadrilateral, if a single pair of opposite sides is congruent and parallel, then the quadrilateral is a parallelogram.
+
+> Proof of the parallel and congruent opposite sides of a quadrilateral theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{DC}$ and $\overline{AB} \cong \overline{DC}$ | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\angle DCA \cong \angle BAC$ | Alternate interior angles theorem |
+> | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
+> | $\triangle ABC \cong \triangle CDA$ | SAS triangle congruence postulate |
+> | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
+> | The figure $ABCD$ is a parallelogram | Converse of the opposite sides of a parallelogram theorem |
+
+(Converso del teorema de los ángulos opuestos de un paralelogramo)
+**Converse of the opposite angles of a parallelogram theorem**: in a quadrilateral, if the opposite angles are congruent, then the quadrilateral is a parallelogram.
+
+> Proof of the converse of the opposite angles of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\angle ABC \cong \angle CDA$ and $\angle DAB \cong \angle BCD$ | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $m \angle ABC = m \angle CDA$, and $m \angle DAB = m \angle BCD$ | Definition of congruence |
+> | $m \angle ABC + m \angle CDA + m \angle DAB + m \angle BCD = 2 \pi$ | Polygon interior angles sum theorem |
+> | $m \angle ABC + m \angle ABC + m \angle DAB + m \angle DAB = 2 \pi$ | Substitution property of equality |
+> | $2 m \angle ABC + 2 m \angle DAB = 2 \pi$ | Combine like terms |
+> | $m \angle ABC + m \angle DAB = \pi$ | Division property of equality |
+> | $m \angle ABC + m \angle BCD = \pi$ | Substitution property of equality |
+> | $\angle ABC$ and $\angle DAB$ are supplementary, and also $\angle ABC$ and $\angle BCD$ are supplementary | Definition of supplementary angles |
+> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Same side interior angles theorem |
+> | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+(Converso del teorema de los ángulos consecutivos de un paralelogramo)
+**Converse of the consecutive angles of a parallelogram theorem**: in a quadrilateral, if the consecutive angles are supplementary, then the quadrilateral is a parallelogram.
+
+> Proof of the converse of the consecutive angles of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\angle DAB$ and $\angle ABC$ are supplementary, $\angle ABC$ and $\angle BCD$ are supplementary, $\angle BCD$ and $\angle CDA$ are supplementary, $\angle CDA$ and $\angle DAB$ are supplementary | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the same side interior angles theorem |
+> | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+(Converso del teorema de las diagonales de un paralelogramo)
+**Converse of the diagonals of a parallelogram theorem**: in a quadrilateral, if the two diagonals bisect each other, then the quadrilateral is a parallelogram.
+
+> Proof of the converse of the diagonals of a parallelogram theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AE} \cong \overline{EC}$ and $\overline{BE} \cong \overline{ED}$, $E$ is the midpoint of $\overline{AC}$ and $\overline{BD}$ | Given, from the *Diagonals of a parallelogram theorem* image |
+> | $\angle AEB \cong \angle CED$, and $\angle AED \cong \angle CEB$ | Vertical angles theorem |
+> | $\triangle ABE \cong \triangle CDE$, and $\triangle ADE \cong \triangle CBE$ | SAS triangle congruence postulate |
+> | $\angle BAE \cong \angle DCE$, and $\angle DAE \cong \angle BCE$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the alternate interior angles theorem |
+> | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+(Determinación algebraica de que un cuadrilátero es un paralelogramo)
+**Algebraic determination that a quadrilateral is a parallelogram**: There are algebraic ways to show that a quadrilateral is a parallelogram. Using the definition of parallelogram, calculating the slope of the four sides shows if a figure is a parallelogram or not, i.e. the slopes of the opposite sides must be equal.
+[Algebraic determination that a quadrilateral is a parallelogram code](Programs/Ch06/S03_01_Algebraic_determination_that_a_quadrilateral_is_a_parallelogram.py)
+
 ## Rectangles, rhombi, and squares (Rectángulos, rombos, y cuadrados)
 [Ch06_S04](https://www.ck12.org/reader/reader-index.html#section/2932958/6.4/9549314)
 
