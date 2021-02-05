@@ -230,5 +230,146 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 ## Rectangles, rhombi, and squares (Rectángulos, rombos, y cuadrados)
 [Ch06_S04](https://www.ck12.org/reader/reader-index.html#section/2932958/6.4/9549314)
 
+(Paralelogramos especiales)
+**Special parallelograms**: a set of figures that are parallelograms with a few other characteristics in their definition.
+
+(Rectángulo)
+**Rectangle**: a parallelogram in which all its four angles are right angles.
+[Rectangle image code](Programs/Ch06/S04_01_Rectangle_image.py)
+![Rectangle image](Images/Ch06/S04_01_Rectangle.png)
+*Rectangle*
+
+(Rombo)
+**Rhombus**: a parallelogram in which all its four sides are congruent.
+[Rhombus image code](Programs/Ch06/S04_02_Rhombus_image.py)
+![Rhombus image](Images/Ch06/S04_02_Rhombus.png)
+*Rhombus*
+
+(Cuadrado)
+**Square**: a parallelogram that is also a rectangle and a rhombus, i.e. a parallelogram in which all its four angles are right angles, and all its four sides are congruent.
+[Square image code](Programs/Ch06/S04_03_Square_image.py)
+![Square image](Images/Ch06/S04_03_Square.png)
+*Square*
+
+(Teorema de las diagonales de un rectángulo)
+**Diagonals of a rectangle theorem**: in a rectangle, the diagonals are congruent.
+[Diagonals of a rectangle theorem image code](Programs/Ch06/S04_04_Diagonals_of_a_rectangle_theorem_image.py)
+![Diagonals of a rectangle theorem image](Images/Ch06/S04_04_Diagonals_of_a_rectangle_theorem.png)
+*Diagonals of a rectangle theorem*
+
+> Proof of the diagonals of a rectangle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | ${AC}^2 = {AB}^2 + {BC}^2$ | Pythagorean theorem |
+> | ${BD}^2 = {AB}^2 + {AD}^2$ | Pythagorean theorem |
+> | $AD = BC$ | Opposite sides of a parallelogram theorem |
+> | ${BD}^2 = {AB}^2 + {BC}^2$ | Substitution property of equality |
+> | ${AC}^2 = {BD}^2$ | Transitive property of equality |
+> | $AC = BD$ | Take the square root at both sides of the equation |
+> | $\overline{AC} \cong \overline{BD}$ | Definition of congruence |
+
+(Converso del teorema de las diagonales de un rectángulo)
+**Converse of the diagonals of a rectangle theorem**: in a parallelogram, if the diagonals are congruent, then the parallelogram is a rectangle.
+
+> Proof of the converse of the diagonals of a rectangle theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AC} \cong \overline{BD}$ | Given, from the *Diagonals of a rectangle theorem* image |
+> | $\overline{AE} \cong \overline{BE} \cong \overline{CE} \cong \overline{DE}$ | Definition of midpoint |
+> | $\triangle AEB$, $\triangle BEC$, $\triangle CED$, and $\triangle AED$, are isosceles triangles | Definition of isosceles triangle |
+> | $\angle AEB \cong \angle CED$, and $\angle BEC \cong \angle AED$ | Vertical angles theorem |
+> | $\triangle AEB \cong \triangle CED$, and $\triangle BEC \cong \triangle AED$ | SAS triangle congruence postulate |
+> | $\angle BAE \cong \angle ABE \cong \angle DCE \cong \angle CDE$, and $\angle DAE \cong \angle ADE \cong \angle CBE \cong \angle BCE$ | Base angles theorem, and corresponding parts of congruent triangles are congruent |
+> | $m \angle BAE = m \angle ABE = m \angle DCE = m \angle CDE$, and $m \angle DAE = m \angle ADE = m \angle CBE = m \angle BCE$ | Definition of congruence |
+> | $m \angle DAE = m \angle CBE = m \angle BCE = m \angle ADE$ | Commutative property of addition |
+> | $m \angle BAE + m \angle DAE = m \angle ABE + m \angle CBE = m \angle BCE + m \angle DCE = m \angle ADE + m \angle CDE$ | Addition property of equality, and substitution property of equality |
+> | $m \angle DAB + m \angle ABC + m \angle BCD + m \angle ADC = 2 \pi$ | Polygon interior angles sum theorem |
+> | $m \angle DAB = m \angle BAE + m \angle DAE$, $m \angle ABC = m \angle ABE + m \angle CBE$, $m \angle BCD = m \angle BCE + m \angle DCE$, and $m \angle ADC = m \angle ADE + m \angle CDE$ | Angle addition postulate |
+> | $m \angle BAE + m \angle DAE + m \angle ABE + m \angle CBE + m \angle BCE + m \angle DCE + m \angle ADE + m \angle CDE = 2 \pi$ | Substitution property of equality |
+> | $m \angle BAE + m \angle DAE + m \angle BAE + m \angle DAE + m \angle BAE + m \angle DAE + m \angle BAE + m \angle DAE = 2 \pi$ | Substitution property of equality |
+> | $4(m \angle BAE + m \angle DAE) = 2 \pi$ | Combine like terms |
+> | $m \angle BAE + m \angle DAE = \frac{\pi}{2}$ | Division property of equality |
+> | $m \angle BAE + m \angle DAE = m \angle ABE + m \angle CBE = m \angle BCE + m \angle DCE = m \angle ADE + m \angle CDE = \frac{\pi}{2}$ | Transitive property of equality |
+> | $m \angle DAB = m \angle ABC = m \angle BCD = m \angle ADC = \frac{\pi}{2}$ | Substitution property of equality |
+> | $\angle DAB$, $\angle ABC$, $\angle BCD$, and $\angle ADC$ are right angles | Definition of right angle |
+> | The figure $ABCD$ is a rectangle | Definition of rectangle |
+
+(Teorema de las diagonales perpendiculares de un rombo)
+**Perpendicular diagonals of a rhombus theorem**: in a rhombus, the diagonals are perpendicular.
+[Perpendicular diagonals of a rhombus theorem image code](Programs/Ch06/S04_05_Perpendicular_diagonals_of_a_rhombus_theorem_image.py)
+![Perpendicular diagonals of a rhombus theorem image](Images/Ch06/S04_05_Perpendicular_diagonals_of_a_rhombus_theorem.png)
+*Perpendicular diagonals of a rhombus theorem*
+
+> Proof of the perpendicular diagonals of a rhombus theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{BC} \cong \overline{CD} \cong \overline{AD}$ | Given |
+> | $\overline{AE} \cong \overline{CE}$, and $\overline{BE} \cong \overline{DE}$ | Diagonals of a parallelogram theorem |
+> | $\overline{AE} \cong \overline{AE}$, $\overline{BE} \cong \overline{BE}$, $\overline{CE} \cong \overline{CE}$, and $\overline{DE} \cong \overline{DE}$ | Reflexive property of congruence |
+> | $\triangle AEB \cong \triangle CEB \cong \triangle CED \cong \triangle AED$ | SSS triangle congruence postulate |
+> | $\angle AEB \cong \angle CEB \cong \angle CED \cong \angle AED$ | Corresponding parts of congruent triangles are congruent |
+> | $m \angle AEB = m \angle CEB = m \angle CED = m \angle AED$ | Definition of congruence |
+> | $m \angle AEB + m \angle CEB + m \angle CED + m \angle AED = 2 \pi$ | Definition of full circle |
+> | $m \angle AEB + m \angle AEB + m \angle AEB + m \angle AEB = 2 \pi$ | Substitution property of equality |
+> | $4(m \angle AEB) = 2 \pi$ | Combine like terms |
+> | $m \angle AEB = \frac{\pi}{2}$ | Division property of equality |
+> | $m \angle AEB = m \angle CEB = m \angle CED = m \angle AED = \frac{\pi}{2}$ | Transitive property of equality |
+> | $\angle AEB$, $\angle CEB$, $\angle CED$, and $\angle AED$ are right angles | Definition of right angle |
+> | $\overline{AC} \perp \overline{BD}$ | Definition of perpendicular lines |
+
+(Converso del teorema de las diagonales perpendiculares de un rombo)
+**Converse of the perpendicular diagonals of a rhombus theorem**: in a parallelogram, if the diagonals are perpendicular, then the parallelogram is a rhombus.
+
+> Proof of the converse of the perpendicular diagonals of a rhombus theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AC} \perp \overline{BD}$ | Given, from the *Perpendicular diagonals of a rhombus theorem* image |
+> | $\overline{AE} \cong \overline{CE}$, and $\overline{BE} \cong \overline{DE}$ | Diagonals of a parallelogram theorem |
+> | $AE = CE$, and $BE = DE$ | Definition of congruence |
+> | ${AB}^2 = {AE}^2 + {BE}^2$ | Pythagorean theorem |
+> | ${BC}^2 = {CE}^2 + {BE}^2$ | Pythagorean theorem |
+> | ${BC}^2 = {AE}^2 + {BE}^2$ | Substitution property of equality |
+> | ${CD}^2 = {CE}^2 + {DE}^2$ | Pythagorean theorem |
+> | ${CD}^2 = {AE}^2 + {BE}^2$ | Substitution property of equality |
+> | ${AD}^2 = {AE}^2 + {DE}^2$ | Pythagorean theorem |
+> | ${AD}^2 = {AE}^2 + {BE}^2$ | Substitution property of equality |
+> | ${AB}^2 = {BC}^2 = {CD}^2 = {AD}^2$ | Transitive property of equality |
+> | $AB = BC = CD = AD$ | Take the square root at all sides of the equations |
+> | $\overline{AB} \cong \overline{BC} \cong \overline{CD} \cong \overline{AD}$ | Definition of congruence |
+> | The figure $ABCD$ is a rhombus | Definition of rhombus |
+
+(Teorema de los ángulos bisecados de un rombo)
+**Bisected angles of a rhombus theorem**: in a rhombus, the diagonals are angle bisectors of the interior angles of the rhombus.
+
+> Proof of the bisected angles of a rhombus theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{BC} \cong \overline{CD} \cong \overline{AD}$ | Given, from the *Perpendicular diagonals of a rhombus theorem* image |
+> | $\overline{AE} \cong \overline{CE}$, and $\overline{BE} \cong \overline{DE}$ | Diagonals of a parallelogram theorem |
+> | $\overline{AE} \cong \overline{AE}$, $\overline{BE} \cong \overline{BE}$, $\overline{CE} \cong \overline{CE}$, and $\overline{DE} \cong \overline{DE}$ | Reflexive property of congruence |
+> | $\triangle AEB \cong \triangle CEB \cong \triangle CED \cong \triangle AED$ | SSS triangle congruence postulate |
+> | $\angle DAE \cong \angle BAE \cong \angle BCE \cong \angle DCE$, and $\angle ABE \cong \angle CBE \cong \angle CDE \cong \angle ADE$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AC}$ is an angle bisector of $\angle DAB$ and $\angle BCD$, and $\overline{BD}$ is an angle bisector of $\angle ABC$ and $\angle ADC$ | Definition of angle bisector |
+
+(Converso del teorema de los ángulos bisecados de un rombo)
+**Converse of the bisected angles of a rhombus theorem**: in a parallelogram, if the diagonals bisect the interior angles, then the parallelogram is a rhombus.
+
+> Proof of the converse of the bisected angles of a rhombus theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AC}$ is an angle bisector of $\angle DAB$ and $\angle BCD$, and $\overline{BD}$ is an angle bisector of $\angle ABC$ and $\angle ADC$, $E$ is the intersection of $\overline{AC}$ and $\overline{BD}$ | Given, from the *Perpendicular diagonals of a rhombus theorem* image |
+> | $\angle DAB \cong \angle BCD$, and $\angle ABC \cong \angle ADC$ | Opposite angles of a parallelogram theorem |
+> | $\angle DAE \cong \angle BAE \cong \angle BCE \cong \angle DCE$, and $\angle ABE \cong \angle CBE \cong \angle CDE \cong \angle ADE$ | Definition of angle bisector |
+> | $\overline{AE} \cong \overline{AE}$, $\overline{BE} \cong \overline{BE}$, $\overline{CE} \cong \overline{CE}$, and $\overline{DE} \cong \overline{DE}$ | Reflexive property of congruence |
+> | $\triangle AEB \cong \triangle CEB \cong \triangle CED \cong \triangle AED$ | AAS triangle congruence theorem |
+> | $\overline{AB} \cong \overline{BC} \cong \overline{CD} \cong \overline{AD}$ | Corresponding parts of congruent triangles are congruent |
+> | The figure $ABCD$ is a rhombus | Definition of rhombus |
+
 ## Trapezoids and kites (Trapezoides y deltoides)
 [Ch06_S05](https://www.ck12.org/reader/reader-index.html#section/2932959/6.5/9549314)

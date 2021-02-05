@@ -192,7 +192,7 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 >
 > Let $\triangle ABC$ have two angles with measures $\alpha$, $\gamma$, and let their included side measure $b$. Let $\triangle DEF$ have two angles with measures $\delta$, $\zeta$, and let their included side measure $e$. If $\alpha = \delta$, $\gamma = \zeta$, and $b = e$, then $\triangle ABC = \triangle DEF$.
 
-(Teorema AAS de congruencia de triángulos)
+(Teorema AAL de congruencia de triángulos)
 **AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration.
 [AAS triangle congruence theorem image code](Programs/Ch04/S04_01_AAS_triangle_congruence_theorem_image.py)
 ![AAS triangle congruence theorem image](Images/Ch04/S04_01_AAS_triangle_congruence_theorem.png)

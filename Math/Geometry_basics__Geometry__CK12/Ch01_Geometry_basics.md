@@ -192,6 +192,9 @@ This method can be used to draw a given angle.
 (Postulado del transportador)
 **Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor.
 
+(Vuelta completa)
+**Full circle**: the angle measure of $2 \pi$ radians or $360 \degree$.
+
 (Ángulo llano)
 **Straight angle**: the angle of half a circle, i.e. $180 \degree$ or $\pi$ radians. Two rays that have this angle form a straight line. 
 
