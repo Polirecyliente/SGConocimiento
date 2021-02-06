@@ -16,8 +16,14 @@
 #C# Basic system calls
 
 # |-------------------------------------------------------------
-#T# the sleep command suspends the execution of the script or program for a given time in secods
-sleep 3 # suspends the execution for 3 seconds
+#T# the sleep command suspends the execution of the script or program for a given time in seconds, or on another time unit given as suffix to the number
+
+# SYNTAX sleep num1str1
+#T# str1 is the time unit, it can be 's' for seconds, 'm' for minutes, 'h' for hours, 'd' for days, num1 is a number
+
+sleep 3  #| suspends the execution for 3 seconds
+sleep 5m #| suspends the execution for 5 minutes
+sleep 2d #| suspends the execution for 2 days
 
 #T# the exit command serves to quit the current script or interpreter session, the number after it is the exit status
 exit 0

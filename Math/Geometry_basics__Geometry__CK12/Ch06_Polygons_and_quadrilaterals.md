@@ -373,3 +373,44 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 
 ## Trapezoids and kites (Trapezoides y deltoides)
 [Ch06_S05](https://www.ck12.org/reader/reader-index.html#section/2932959/6.5/9549314)
+
+(Trapecio)
+**Trapezoid**: a quadrilateral that consists of two opposite sides parallel, and the other two sides non-parallel.
+[Trapezoid image code](Programs/Ch06/S05_01_Trapezoid_image.py)
+![Trapezoid image](Images/Ch06/S05_01_Trapezoid.png)
+*Trapezoid*
+
+(Trapecio isósceles)
+**Isosceles trapezoid**: a trapezoid with its two non-parallel sides congruent.
+[Isosceles trapezoid image code](Programs/Ch06/S05_02_Isosceles_trapezoid_image.py)
+![Isosceles trapezoid image](Images/Ch06/S05_02_Isosceles_trapezoid.png)
+*Isosceles trapezoid*
+
+The parts of an isosceles trapezoid are named the same as the parts of an isosceles triangle, except there is no vertex angle, and there is a long base (base larga) and a short base (base corta).
+
+(Teorema de los ángulos de las bases de un trapecio isósceles)
+**Bases angles of an isosceles trapezoid theorem**: in an isosceles trapezoid, the long base angles are congruent, and the short base angles are congruent.
+[Bases angles of an isosceles trapezoid theorem image code](Programs/Ch06/S05_03_Bases_angles_of_an_isosceles_trapezoid_theorem_image.py)
+![Bases angles of an isosceles trapezoid theorem image](Images/Ch06/S05_03_Bases_angles_of_an_isosceles_trapezoid_theorem.png)
+*Bases angles of an isosceles trapezoid theorem*
+
+> Proof of the bases angles of an isosceles trapezoid theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{CD}$, $\overline{AD} \cong \overline{BC}$ | Given |
+> | $\triangle ABE$ is isosceles | Definition of isosceles triangle |
+> | $\angle CDE \cong \angle DCE$ | Base angles theorem |
+> | $\angle ADC$ and $\angle CDE$ are supplementary, and also $\angle BCD$ and $\angle DCE$ are supplementary | Linear pair postulate |
+> | $\angle BCD$ and $\angle CDE$ are supplementary | Converse of the congruent supplements theorem |
+> | $\angle ADC \cong \angle BCD$ | Congruent supplements theorem |
+> | $\angle A \cong \angle B$ | Base angles theorem |
+
+(Converso del teorema de los ángulos de las bases de un trapecio isósceles)
+**Converse of the bases angles of an isosceles trapezoid theorem**: in a trapezoid, if the two angles in each of the parallel sides are congruent, then the trapezoid is an isosceles trapezoid.
+
+> Proof of the converse of the bases angles of an isosceles trapezoid theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | 
