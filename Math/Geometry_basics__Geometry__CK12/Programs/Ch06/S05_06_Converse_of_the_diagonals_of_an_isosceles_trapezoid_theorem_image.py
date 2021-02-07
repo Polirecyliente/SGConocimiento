@@ -1,6 +1,6 @@
-#T# the following code shows how to draw an isosceles trapezoid to show the bases angles of an isosceles trapezoid theorem
+#T# the following code shows how to draw an isosceles trapezoid to show the converse of the diagonals of an isosceles trapezoid theorem
 
-#T# to draw an isosceles trapezoid to show the bases angles of an isosceles trapezoid theorem, the pyplot module of the matplotlib package is used
+#T# to draw an isosceles trapezoid to show the converse of the diagonals of an isosceles trapezoid theorem, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
 #T# the patches module of the matplotlib package is used to draw shapes
@@ -26,17 +26,19 @@ A = (0, 0)
 B = (12, 0)
 C = (9, 6)
 D = (3, 6)
+E = (18, 0)
 
 a1 = math.atan2(D[1] - A[1], D[0] - A[0])
 a2 = math.pi - a1
 
-E = (6, 6*math.tan(a1))
+list_x1 = [A[0], B[0], C[0], D[0], A[0], C[0]]
+list_y1 = [A[1], B[1], C[1], D[1], A[1], C[1]]
 
-list_x1 = [A[0], B[0], C[0], D[0], A[0]]
-list_y1 = [A[1], B[1], C[1], D[1], A[1]]
+list_x2 = [B[0], D[0]]
+list_y2 = [B[1], D[1]]
 
-list_x2 = [C[0], E[0], D[0]]
-list_y2 = [C[1], E[1], D[1]]
+list_x3 = [B[0], E[0], C[0]]
+list_y3 = [B[1], E[1], C[1]]
 
 p_mid_AB_1 = (A[0] + .45*(B[0] - A[0]), A[1] + .45*(B[1] - A[1]))
 p_mid_AB_2 = (A[0] + .50*(B[0] - A[0]), A[1] + .50*(B[1] - A[1]))
@@ -46,14 +48,23 @@ p_mid_CD_2 = (C[0] + .45*(D[0] - C[0]), C[1] + .45*(D[1] - C[1]))
 
 p_mid_BC = ((B[0] + C[0])/2, (B[1] + C[1])/2)
 p_mid_AD = ((A[0] + D[0])/2, (A[1] + D[1])/2)
-p_mid_CE = ((C[0] + E[0])/2, (C[1] + E[1])/2)
-p_mid_DE = ((D[0] + E[0])/2, (D[1] + E[1])/2)
 
 r = 1
+
+p_mid_BD_1 = (B[0] + .48*(D[0] - B[0]), B[1] + .48*(D[1] - B[1]))
+p_mid_BD_2 = (B[0] + .50*(D[0] - B[0]), B[1] + .50*(D[1] - B[1]))
+p_mid_BD_3 = (B[0] + .43*(D[0] - B[0]), B[1] + .43*(D[1] - B[1]))
+p_mid_BD_4 = (B[0] + .45*(D[0] - B[0]), B[1] + .45*(D[1] - B[1]))
+
+p_mid_EC_1 = (E[0] + .48*(C[0] - E[0]), E[1] + .48*(C[1] - E[1]))
+p_mid_EC_2 = (E[0] + .50*(C[0] - E[0]), E[1] + .50*(C[1] - E[1]))
+p_mid_EC_3 = (E[0] + .43*(C[0] - E[0]), E[1] + .43*(C[1] - E[1]))
+p_mid_EC_4 = (E[0] + .45*(C[0] - E[0]), E[1] + .45*(C[1] - E[1]))
 
 #T# plot the figure
 ax1.plot(list_x1, list_y1, 'k', marker = 'o', markersize = 3)
 ax1.plot(list_x2, list_y2, 'k', marker = 'o', markersize = 3)
+ax1.plot(list_x3, list_y3, '--k', marker = 'o', markersize = 3)
 
 arc1_1 = mpatches.Arc(A, 2*r, 2*r, theta1 = 0, theta2 = math.degrees(a1))
 arc1_2 = mpatches.Arc(A, 2.2*r, 2.2*r, theta1 = 0, theta2 = math.degrees(a1))
@@ -79,9 +90,17 @@ ax1.add_patch(arc4_3)
 
 mark1 = mpatches.FancyArrowPatch(p_mid_AB_1, p_mid_AB_2, arrowstyle = '->', mutation_scale = 20)
 mark2 = mpatches.FancyArrowPatch(p_mid_CD_1, p_mid_CD_2, arrowstyle = '->', mutation_scale = 20)
+mark1_1 = mpatches.FancyArrowPatch(p_mid_BD_1, p_mid_BD_2, arrowstyle = '->', mutation_scale = 20)
+mark2_1 = mpatches.FancyArrowPatch(p_mid_BD_3, p_mid_BD_4, arrowstyle = '->', mutation_scale = 20)
+mark1_2 = mpatches.FancyArrowPatch(p_mid_EC_1, p_mid_EC_2, arrowstyle = '->', mutation_scale = 20)
+mark2_2 = mpatches.FancyArrowPatch(p_mid_EC_3, p_mid_EC_4, arrowstyle = '->', mutation_scale = 20)
 
 ax1.add_patch(mark1)
 ax1.add_patch(mark2)
+ax1.add_patch(mark1_1)
+ax1.add_patch(mark2_1)
+ax1.add_patch(mark1_2)
+ax1.add_patch(mark2_2)
 
 #T# set the math text font to the Latex default, Computer Modern
 import matplotlib
@@ -96,8 +115,6 @@ label_E = ax1.annotate(r'$E$', E, size = 18)
 
 ax1.annotate(r'$|$', p_mid_AD, ha = 'center', va = 'center', size = 20, rotation = math.degrees(a1))
 ax1.annotate(r'$|$', p_mid_BC, ha = 'center', va = 'center', size = 20, rotation = math.degrees(-a1))
-ax1.annotate(r'$||$', p_mid_CE, ha = 'center', va = 'center', size = 20, rotation = math.degrees(-a1))
-ax1.annotate(r'$||$', p_mid_DE, ha = 'center', va = 'center', size = 20, rotation = math.degrees(a1))
 
 #T# drag the labels if needed
 label_A.draggable()

@@ -1,6 +1,6 @@
-#T# the following code shows how to draw an isosceles trapezoid to show the bases angles of an isosceles trapezoid theorem
+#T# the following code shows how to draw a trapezoid to show the converse of the bases angles of an isosceles trapezoid theorem
 
-#T# to draw an isosceles trapezoid to show the bases angles of an isosceles trapezoid theorem, the pyplot module of the matplotlib package is used
+#T# to draw a trapezoid to show the converse of the bases angles of an isosceles trapezoid theorem, the pyplot module of the matplotlib package is used
 import matplotlib.pyplot as plt
 
 #T# the patches module of the matplotlib package is used to draw shapes
@@ -26,28 +26,23 @@ A = (0, 0)
 B = (12, 0)
 C = (9, 6)
 D = (3, 6)
+E = (3, 0)
+F = (9, 0)
 
 a1 = math.atan2(D[1] - A[1], D[0] - A[0])
 a2 = math.pi - a1
 
-E = (6, 6*math.tan(a1))
+list_x1 = [D[0], E[0], A[0], D[0], C[0], B[0], F[0], C[0]]
+list_y1 = [D[1], E[1], A[1], D[1], C[1], B[1], F[1], C[1]]
 
-list_x1 = [A[0], B[0], C[0], D[0], A[0]]
-list_y1 = [A[1], B[1], C[1], D[1], A[1]]
-
-list_x2 = [C[0], E[0], D[0]]
-list_y2 = [C[1], E[1], D[1]]
+list_x2 = [E[0], F[0]]
+list_y2 = [E[1], F[1]]
 
 p_mid_AB_1 = (A[0] + .45*(B[0] - A[0]), A[1] + .45*(B[1] - A[1]))
 p_mid_AB_2 = (A[0] + .50*(B[0] - A[0]), A[1] + .50*(B[1] - A[1]))
 
 p_mid_CD_1 = (C[0] + .50*(D[0] - C[0]), C[1] + .50*(D[1] - C[1]))
 p_mid_CD_2 = (C[0] + .45*(D[0] - C[0]), C[1] + .45*(D[1] - C[1]))
-
-p_mid_BC = ((B[0] + C[0])/2, (B[1] + C[1])/2)
-p_mid_AD = ((A[0] + D[0])/2, (A[1] + D[1])/2)
-p_mid_CE = ((C[0] + E[0])/2, (C[1] + E[1])/2)
-p_mid_DE = ((D[0] + E[0])/2, (D[1] + E[1])/2)
 
 r = 1
 
@@ -93,11 +88,9 @@ label_B = ax1.annotate(r'$B$', B, size = 18)
 label_C = ax1.annotate(r'$C$', C, size = 18)
 label_D = ax1.annotate(r'$D$', D, size = 18)
 label_E = ax1.annotate(r'$E$', E, size = 18)
-
-ax1.annotate(r'$|$', p_mid_AD, ha = 'center', va = 'center', size = 20, rotation = math.degrees(a1))
-ax1.annotate(r'$|$', p_mid_BC, ha = 'center', va = 'center', size = 20, rotation = math.degrees(-a1))
-ax1.annotate(r'$||$', p_mid_CE, ha = 'center', va = 'center', size = 20, rotation = math.degrees(-a1))
-ax1.annotate(r'$||$', p_mid_DE, ha = 'center', va = 'center', size = 20, rotation = math.degrees(a1))
+label_F = ax1.annotate(r'$F$', F, size = 18)
+label_ra_E = ax1.annotate(r'$\ulcorner$', E, size = 30)
+label_ra_F = ax1.annotate(r'$\urcorner$', F, size = 30)
 
 #T# drag the labels if needed
 label_A.draggable()
@@ -105,6 +98,9 @@ label_B.draggable()
 label_C.draggable()
 label_D.draggable()
 label_E.draggable()
+label_F.draggable()
+label_ra_E.draggable()
+label_ra_F.draggable()
 
 #T# show the results
 plt.show()

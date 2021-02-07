@@ -20,7 +20,7 @@
 (Paralelismo en geometría)
 **Geometric parallelism**: the relationship that is produced when two distinct figures extend indefinitely and never intersect each other.
 
-Two parallel lines that belong to the same plane, extend indefinitely and never intersect each other. Two parallel planes in space, extend indefinitely and never intersect each other.
+Two parallel lines that belong to the same plane, extend indefinitely and never intersect each other. Two parallel planes in space, extend indefinitely and never intersect each other. The distance between parallel lines or planes is constant.
 
 > Parallel relation notation
 >
@@ -375,3 +375,5 @@ The shortest distance between the point $A$ and the line $l$ is the distance $AB
 >
 > 1. Pick a point in one of the two parallel lines, name it $A$.
 > 2. Apply the Process to find the shortest distance between a point and a line, using $A$ as a point$, and the line is the other parallel line that does not contain $A$. The result is the shortest distance between the two parallel lines.
+
+By definition of parallel lines, the shortest distance between them is a constant.

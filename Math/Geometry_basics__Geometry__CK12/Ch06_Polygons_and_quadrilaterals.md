@@ -399,6 +399,7 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
 > | $\overline{AB} \parallel \overline{CD}$, $\overline{AD} \cong \overline{BC}$ | Given |
+> | $\overline{AE} \cong \overline{BE}$ | By definition of parallel lines, congruent segments separating two parallel lines, have the same inclination |
 > | $\triangle ABE$ is isosceles | Definition of isosceles triangle |
 > | $\angle CDE \cong \angle DCE$ | Base angles theorem |
 > | $\angle ADC$ and $\angle CDE$ are supplementary, and also $\angle BCD$ and $\angle DCE$ are supplementary | Linear pair postulate |
@@ -408,9 +409,54 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 
 (Converso del teorema de los ángulos de las bases de un trapecio isósceles)
 **Converse of the bases angles of an isosceles trapezoid theorem**: in a trapezoid, if the two angles in each of the parallel sides are congruent, then the trapezoid is an isosceles trapezoid.
+[Converse of the bases angles of an isosceles trapezoid theorem image code](Programs/Ch06/S05_04_Converse_of_the_bases_angles_of_an_isosceles_trapezoid_theorem_image.py)
+![Converse of the bases angles of an isosceles trapezoid theorem image](Images/Ch06/S05_04_Converse_of_the_bases_angles_of_an_isosceles_trapezoid_theorem.png)
+*Converse of the bases angles of an isosceles trapezoid theorem*
 
 > Proof of the converse of the bases angles of an isosceles trapezoid theorem
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | 
+> | $\overline{AB} \parallel \overline{CD}$, $\angle A \cong \angle B$, and $\angle ADC \cong \angle BCD$ | Given |
+> | $\overline{DE} \cong \overline{CF}$ | Definition of parallel lines |
+> | $\angle AED \cong \angle BFC$ | Right angle theorem |
+> | $\triangle AED \cong \triangle BFC$ | AAS triangle congruence theorem |
+> | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
+> | The figure $ABCD$ is an isosceles trapezoid | Definition of isosceles trapezoid |
+
+(Teorema de las diagonales de un trapecio isósceles)
+**Diagonals of an isosceles trapezoid theorem**: in an isosceles trapezoid, the diagonals are congruent.
+[Diagonals of an isosceles trapezoid theorem image code](Programs/Ch06/S05_05_Diagonals_of_an_isosceles_trapezoid_theorem_image.py)
+![Diagonals of an isosceles trapezoid theorem image](Images/Ch06/S05_05_Diagonals_of_an_isosceles_trapezoid_theorem.png)
+*Diagonals of an isosceles trapezoid theorem*
+
+> Proof of the diagonals of an isosceles trapezoid theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AD} \cong \overline{BC}$, $\angle A \cong \angle B$ | Given |
+> | $\overline{AB} \cong \overline{AB}$ | Reflexive property of congruence |
+> | $\triangle ABD \cong \triangle BAC$ | SAS triangle congruence postulate |
+> | $\overline{AC} \cong \overline{BD}$ | Corresponding parts of congruent triangles are congruent |
+
+(Converso del teorema de las diagonales de un trapecio isósceles)
+**Converse of the diagonals of an isosceles trapezoid theorem**: in a trapezoid, if the diagonals are congruent, then the trapezoid is an isosceles trapezoid.
+[Converse of the diagonals of an isosceles trapezoid theorem image code](Programs/Ch06/S05_06_Converse_of_the_diagonals_of_an_isosceles_trapezoid_theorem_image.py)
+![Converse of the diagonals of an isosceles trapezoid theorem image](Images/Ch06/S05_06_Converse_of_the_diagonals_of_an_isosceles_trapezoid_theorem.png)
+*Converse of the diagonals of an isosceles trapezoid theorem*
+
+> Proof of the converse of the diagonals of an isosceles trapezoid theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{CD}$, $\overline{BD} \parallel \overline{CE}$, and $\overline{AC} \cong \overline{BD}$ | Given |
+> | $\overline{BD} \cong \overline{CE}$ | Opposite sides of a parallelogram theorem |
+> | $\overline{AC} \cong \overline{CE}$ | Transitive property of congruence |
+> | $\triangle ACE$ is an isosceles triangle | Definition of isosceles triangle |
+> | $\angle BAC \cong \angle E$ | Base angles theorem |
+> | $\angle E \cong \angle ABD$ | Corresponding angles postulate |
+> | $\angle ABD \cong \angle BAC$ | Transitive property of congruence |
+> | $\overline{AB} \cong \overline{AB}$ | Reflexive property of congruence |
+> | $\triangle ABD \cong \triangle BAC$ | SAS triangle congruence postulate |
+> | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
+> | The figure $ABCD$ is an isosceles trapezoid | Definition of isosceles trapezoid |
