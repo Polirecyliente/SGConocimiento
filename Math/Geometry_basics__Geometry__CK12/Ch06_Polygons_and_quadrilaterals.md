@@ -506,3 +506,64 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 
 (Partes de un deltoide)
 **Kite parts**: in a kite, the angles between the congruent sides are called vertex angles (ángulos de los vértices), and the two remaining angles are called non-vertex angles (ángulos no de los vértices).
+[Kite parts image code](Programs/Ch06/S05_11_Kite_parts.py)
+![Kite parts image](Images/Ch06/S05_11_Kite_parts.png)
+*Kite parts*
+
+(Teorema de los ángulos no de los vértices de un deltoide)
+**Non-vertex angles of a kite theorem**: the non-vertex angles of a kite are congruent.
+[Non-vertex angles of a kite theorem image code](Programs/Ch06/S05_12_Non-vertex_angles_of_a_kite_theorem_image.py)
+![Non-vertex angles of a kite theorem image](Images/Ch06/S05_12_Non-vertex_angles_of_a_kite_theorem.png)
+*Non-vertex angles of a kite theorem*
+
+> Proof of the non-vertex angles of a kite theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$ | Given |
+> | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
+> | $\triangle ABC \cong \triangle ADC$ | SSS triangle congruence postulate |
+> | $\angle B \cong \angle D$ | Corresponding parts of congruent triangles are congruent |
+
+(Teorema de los ángulos de los vértices de un deltoide)
+**Vertex angles of a kite theorem**: in a kite, the vertex angles are bisected by the diagonal that connects them.
+
+> Proof of the vertex angles of a kite theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$ | Given, from the *Non-vertex angles of a kite theorem* image |
+> | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
+> | $\triangle ABC \cong \triangle ADC$ | SSS triangle congruence postulate |
+> | $m \angle DAB = m \angle CAD + m \angle BAC$, and $m \angle BCD = m \angle ACB + m \angle ACD$ | Angle addition postulate |
+> | $\angle CAD \cong \angle BAC$, and $\angle ACB \cong \angle ACD$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AC}$ is an angle bisector of $\angle DAB$ and $\angle BCD$ | Definition of angle bisector |
+
+(Teorema de las diagonales de un deltoide)
+**Diagonals of a kite theorem**: in a kite, the diagonals are perpendicular.
+[Diagonals of a kite theorem image code](Programs/Ch06/S05_13_Diagonals_of_a_kite_theorem_image.py)
+![Diagonals of a kite theorem image](Images/Ch06/S05_13_Diagonals_of_a_kite_theorem.png)
+*Diagonals of a kite theorem*
+
+> Proof of the diagonals of a kite theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$ | Given |
+> | $\triangle BCD$ is an isosceles triangle | Definition of isosceles triangle |
+> | $\angle CBD \cong \angle BDC$ | Base angles theorem |
+> | $\overline{AC}$ is an angle bisector of $\angle BCD$ | Vertex angles of a kite theorem |
+> | $\angle ACB \cong \angle ACD$ | Definition of angle bisector |
+> | $\triangle BCE \cong \triangle DCE$ | ASA triangle congruence postulate |
+> | $\angle BEC \cong \angle CED$ | Corresponding parts of congruent triangles are congruent |
+> | $\angle AEB \cong \angle CED$ | Vertical angles theorem |
+> | $\angle AED \cong \angle BEC$ | Vertical angles theorem |
+> | $m \angle BEC = m \angle CED$, $m \angle AEB = m \angle CED$, and $m \angle AED = m \angle BEC$ | Definition of congruence |
+> | $m \angle AEB = m \angle BEC = m \angle CED = m \angle AED$ | Transitive property of equality |
+> | $m \angle AEB + m \angle BEC + m \angle CED + m \angle AED = 2 \pi$ | Definition of full circle |
+> | $m \angle AEB + m \angle AEB + m \angle AEB + m \angle AEB = 2 \pi$ | Substitution property of equality |
+> | $4 m \angle AEB = 2 \pi$ | Combine like terms |
+> | $m \angle AEB = \frac{\pi}{2}$ | Division property of equality |
+> | $m \angle AEB = m \angle BEC = m \angle CED = m \angle AED = \frac{\pi}{2}$ | Transitive property of equality |
+> | $\angle AEB$, $\angle BEC$, $\angle CED$, and $\angle AED$ are right angles | Definition of right angle |
+> | $\overline{AC} \perp \overline{BD}$ | Definition of perpendicular lines |
