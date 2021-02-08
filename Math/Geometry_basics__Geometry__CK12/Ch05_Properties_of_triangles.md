@@ -17,7 +17,7 @@
 [Ch05_S01](https://www.ck12.org/reader/reader-index.html#section/2932947/5.1/9549314)
 
 (Segmento medio de un triángulo)
-**Midsegment of a triangle**: a segment that connects the two midpoints of adjacent sides.
+**Midsegment of a triangle**: in a triangle, the midsegment is a segment that connects the two midpoints of adjacent sides.
 [Midsegment of a triangle image code](Programs/Ch05/S01_01_Midsegment_of_a_triangle_image.py)
 ![Midsegment of a triangle image](Images/Ch05/S01_01_Midsegment_of_a_triangle.png)
 *Midsegment of a triangle*
@@ -29,12 +29,19 @@ Every triangle has three midsegments.
 ![Three midsegments of a triangle image](Images/Ch05/S01_02_Three_midsegments_of_a_triangle.png)
 *Three midsegments of a triangle*
 
-(Teorema del segmento medio)
-**Midsegment theorem**: a midsegment of a triangle measures half the length of its parallel side.
+(Teorema del segmento medio de un triángulo)
+**Midsegment of a triangle theorem**: a midsegment of a triangle measures half the length of its parallel side.
 
-> Proof of the midsegment theorem
+> Proof of the midsegment of a triangle theorem
 >
 > The proof of this theorem requires the concept of similarity, which is explained in detail in another file (see Ch07_Similarity.md). Two figures are similar when they have the same shape but not necessarily the same size. By SAS, the triangle $\triangle ABC$ is similar to $\triangle DEC$. Given that $D$ is the midpoint of $\overline{AC}$, then $\overline{DC}$ has half the length of $\overline{AC}$, and so by similarity, the scale factor needed to obtain $\triangle DEC$ from $\triangle ABC$ is one half, therefore the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$. $\blacksquare$
+
+(Converso del teorema del segmento medio de un triángulo)
+**Converse of the midsegment of a triangle theorem**: in a triangle, if a segment connects two sides, is parallel to the non-connected side, and measures half the length of its parallel side, then the segment is a midsegment of the triangle.
+
+> Proof of the converse of the midsegment of a triangle theorem
+>
+> Similarly to the proof of the midsegment of a triangle theorem, by similarity, the triangle $\triangle ABC$ is similar to $\triangle DEC$, because by the corresponding angles postulate, $\angle ABC \cong \angle CED$ and $\angle BAC \cong \angle CDE$. The scale factor needed to obtain $\triangle ABC$ from $\triangle DEC$ is two, because $\overline{AB}$ has double the length of $\overline{DE}$. Using this scale factor, $\overline{AC}$ has double the length of $\overline{CD}$, and $\overline{BC}$ has double the length of $\overline{CE}$, which means that $D$ is the midpoint of $\overline{AC}$, and $E$ is the midpoint of $\overline{BC}$, which makes $\overline{DE}$ a midsegment of $\triangle ABC$. $\blacksquare$
 
 ## Perpendicular bisectors of a triangle (Mediatrices de un triángulo)
 [Ch05_S02](https://www.ck12.org/reader/reader-index.html#section/2932948/5.2/9549314)

@@ -460,3 +460,49 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $\triangle ABD \cong \triangle BAC$ | SAS triangle congruence postulate |
 > | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
 > | The figure $ABCD$ is an isosceles trapezoid | Definition of isosceles trapezoid |
+
+(Segmento medio de un trapecio | mediana de un trapecio)
+**Midsegment of a trapezoid**: in a trapezoid, the midsegment is a segment that connects the two midpoints of the non-parallel sides.
+[Midsegment of a trapezoid image code](Programs/Ch06/S05_07_Midsegment_of_a_trapezoid_image.py)
+![Midsegment of a trapezoid image](Images/Ch06/S05_07_Midsegment_of_a_trapezoid.png)
+*Midsegment of a trapezoid*
+
+(Teorema del segmento medio de un trapecio)
+**Midsegment of a trapezoid theorem**: the length of the midsegment of a trapezoid is the average of the two lengths of the long base and the short base.
+[Midsegment of a trapezoid theorem image code](Programs/Ch06/S05_08_Midsegment_of_a_trapezoid_theorem_image.py)
+![Midsegment of a trapezoid theorem image](Images/Ch06/S05_08_Midsegment_of_a_trapezoid_theorem.png)
+*Midsegment of a trapezoid theorem*
+
+> Proof of the midsegment of a trapezoid theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\overline{AB} \parallel \overline{EF} \parallel \overline{CD}$, $E$ is the midpoint of $\overline{AD}$, $F$ is the midpoint of $\overline{BC}$ | Given |
+> | $\angle BFG \cong \angle CFD$ | Vertical angles theorem |
+> | $\angle CDF \cong \angle BGF$ | Alternate interior angles theorem |
+> | $\overline{BF} \cong \overline{CF}$ | Definition of midpoint |
+> | $\triangle BFG \cong \triangle CFD$ | AAS triangle congruence theorem |
+> | $\overline{DF} \cong \overline{FG}$ | Corresponding parts of congruent triangles are congruent |
+> | $F$ is the midpoint of $\overline{DG}$ | Definition of midpoint |
+> | $\overline{EF}$ is a midsegment of $\triangle ADG$ | Definition of midsegment |
+> | $EF = \frac{AG}{2}$ | Midsegment of a triangle theorem |
+> | $AG = AB + BG$ | Segment addition postulate |
+> | $\overline{BG} \cong \overline{CD}$ | Corresponding parts of congruent triangles are congruent |
+> | $BG = CD$ | Definition of congruence |
+> | $AG = AB + CD$ | Substitution property of equality |
+> | $EF = \frac{AB + CD}{2}$ | Substitution property of equality |
+
+(Deltoide | Cometa)
+**Kite**: a quadrilateral that consists of two pairs of congruent adjacent sides.
+[Kite image code](Programs/Ch06/S05_09_Kite_image.py)
+![Kite image](Images/Ch06/S05_09_Kite.png)
+*Kite*
+
+(Deltoide cóncavo | Punta de flecha)
+**Dart**: a concave kite.
+[Dart image code](Programs/Ch06/S05_10_Dart_image.py)
+![Dart image](Images/Ch06/S05_10_Dart.png)
+*Dart*
+
+(Partes de un deltoide)
+**Kite parts**: in a kite, the angles between the congruent sides are called vertex angles (ángulos de los vértices), and the two remaining angles are called non-vertex angles (ángulos no de los vértices).
