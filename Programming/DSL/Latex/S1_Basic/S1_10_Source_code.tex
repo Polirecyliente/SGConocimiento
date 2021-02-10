@@ -19,7 +19,8 @@
 
 %T% write source code with the lstlisting tag, 
 %T% use mathescape=true to escape math within dollar symbols $$
-\begin{lstlisting}[mathescape=true]
+%T% use literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 to map letters with diacritics in a way that can be used inside lstlisting, since this environment can't use regular utf-8 encoding
+\begin{lstlisting}[mathescape=true, literate={á}{{\'a}}1 {é}{{\'e}}1]
     int a_1 = 10;
     $\widetilde{K} = \frac{n}{2}$
     printf("debug string");
