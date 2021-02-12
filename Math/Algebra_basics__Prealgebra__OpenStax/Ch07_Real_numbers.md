@@ -42,7 +42,7 @@ See Ch01_Whole_numbers.md for the commutative properties of addition and multipl
 > Associative property of addition
 >
 > Let $a$, $b$, $c$ be numbers, then
-> $$a + b + c = (a + b) + c = a + (b + c)
+> $$a + b + c = (a + b) + c = a + (b + c)$$
 
 (Propiedad asociativa de la multiplicación)
 **Associative property of multiplication**: using grouping symbols to group multiplication operations does not change the product.
@@ -102,7 +102,7 @@ $1$ is the multiplicative identity. (see Ch01_Whole_numbers.md)
 > Multiply a number by 0
 >
 > Let $a$ be a number, then
-> $a \cdot 0 = 0$
+> $$a \cdot 0 = 0$$
 
 This is because $a$ is added $0$ times with itself.
 

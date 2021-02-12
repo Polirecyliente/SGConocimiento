@@ -75,9 +75,11 @@ Repeating decimals are denoted with a horizontal bar over the digits that repeat
 > Circumference formula
 >
 > Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then
-> $$\pi := \frac{C}{d}\\
+> $$\begin{gathered}
+> \pi := \frac{C}{d}\\
 > d = 2 \cdot r\\
-> C = \pi \cdot d = 2 \cdot \pi \cdot r$$
+> C = \pi \cdot d = 2 \cdot \pi \cdot r
+> \end{gathered}$$
 
 (Sector circular)
 **Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
@@ -146,7 +148,7 @@ Ratios can be considered rates when the particular units in the numerator and de
 **Unit rate**: a rate expressed with a denominator of $1$.
 
 (Precio unitario)
-**Unit price**: a unit rate in which the unit is $\$/unit$, it tells the price per unit.
+**Unit price**: a unit rate in which the unit is $\text{\textdollar}/unit$, it tells the price per unit.
 
 ## Square roots, simplification of square roots (Raíces cuadradas, simplificación de raíces cuadradas)
 [Ch05_S07](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=502)

@@ -90,8 +90,8 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 > General exponential notation
 >
 > Let $a$ be a number, $n$ be a whole number, then
-> $$a \cdot a \cdot a \cdot \ldots \cdot a = a^n
-> $$ The value $n$ is the amount of times that $a$ is multiplied by itself.
+> $$a \cdot a \cdot a \cdot \ldots \cdot a = a^n$$
+> The value $n$ is the amount of times that $a$ is multiplied by itself.
 
 Using the shown symbols, the exponential notation is read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
 
@@ -148,8 +148,10 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 > Subtraction property of equality
 >
 > Let $a$, $b$, $c$ be numbers
-> $$if\ a = b\\
-> then\ a - c = b - c$$
+> $$\begin{gathered}
+> if\ a = b\\
+> then\ a - c = b - c
+> \end{gathered}$$
 
 Note, in spanish this property may be bundled as part of the addition property of equality, since changing the sign of $c$ shows both properties.
 
@@ -159,8 +161,10 @@ Note, in spanish this property may be bundled as part of the addition property o
 > Addition property of equality
 >
 > Let $a$, $b$, $c$ be numbers
-> $$if\ a = b\\
-> then\ a + c = b + c$$
+> $$\begin{gathered}
+> if\ a = b\\
+> then\ a + c = b + c
+> \end{gathered}$$
 
 (Despejar una variable)
 **Isolate a variable**: using properties of equality (such as the ones from addition and subtraction, but also from multiplication and division, see Ch03_Integers.md), to make a variable stand alone in one side of an equation.
@@ -168,8 +172,9 @@ Note, in spanish this property may be bundled as part of the addition property o
 > Isolating a variable using the properties of equality
 >
 > Let $a$, $b$, $c$, $d$ be numbers, and let
-> $$a + b = c + d
-> $$Isolate $a$ using the subtraction property of equality, by subtracting $b$ from each side. $$a = c + d - b$$
+> $$a + b = c + d$$
+> Isolate $a$ using the subtraction property of equality, by subtracting $b$ from each side.
+> $$a = c + d - b$$
 
 Isolating a variable in an equation can be synonymous with solving said equation for the variable isolated.
 

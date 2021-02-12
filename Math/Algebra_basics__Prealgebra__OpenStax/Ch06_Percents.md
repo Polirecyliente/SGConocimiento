@@ -88,8 +88,10 @@ The commission rate $c$ is commonly expressed as a percent, which means the perc
 > Basic discount formula
 >
 > Let $D$ be the amount of discount in monetary units, $P_i$ be the regular price in monetary units, $P$ be the price after discount in monetary units, $d$ be the discount rate (tasa de descuento) as a ratio, then
-> $$D = d \cdot P_i\\
-> P = P_i - D = P_i - d \cdot P_i$$
+> $$\begin{gathered}
+> D = d \cdot P_i\\
+> P = P_i - D = P_i - d \cdot P_i
+> \end{gathered}$$
 
 The discount rate $d$ is commonly expressed as a percent, which means the percent of each monetary unit of the price that becomes discounted.
 
@@ -99,8 +101,10 @@ The discount rate $d$ is commonly expressed as a percent, which means the percen
 > Basic mark-up formula
 >
 > Let $W$ be the wholesale price of a good in monetary units, $M$ be the amount of mark-up in monetary units, $L$ be the list price in monetary units, and $m$ be the mark-up rate as a ratio, then
-> $$M = m \cdot W\\
-> L = W + M = W + m \cdot W$$
+> $$\begin{gathered}
+> M = m \cdot W\\
+> L = W + M = W + m \cdot W
+> \end{gathered}$$
 
 The mark-up rate is commonly expressed as a percent, which means the percent of each monetary unit of the wholesale price that becomes mark-up.
 
@@ -133,8 +137,8 @@ The mark-up rate is commonly expressed as a percent, which means the percent of 
 > Proportion
 >
 > Let $a$, $b$, $c$, $d$, be numbers, with $b$ and $d$ being nonzero, then
-> $$\frac{a}{b} = \frac{c}{d}
-> $$ This is a proportion, it's read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
+> $$\frac{a}{b} = \frac{c}{d}$$
+> This is a proportion, it's read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
 
 (Producto cruzado)
 **Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $a \cdot d = c \cdot b$. This concept is used to test if a proportion is true without dividing.

@@ -53,6 +53,15 @@
 **Rounding**: approximating a number with another of less significant digits.
 [Rounding code](Programs/Ch01/S01_02_Rounding.py)
 
+(Función techo)
+**Ceiling function**: a function that approximates a number to the nearest bigger integer. Denoted as $\lceil x \rceil$, where $x$ is the number being rounded, e.g. $\lceil 2.5 \rceil = 3$, $\lceil -2.5 \rceil = -2$.
+
+(Función piso)
+**Floor function**: a function that approximates a number to the nearest smaller integer. Denoted as $\lfloor x \rfloor$, where $x$ is the number being rounded, e.g. $\lfloor 2.5 \rfloor = 2$, $\lfloor -2.5 \rfloor = -3$.
+
+(Truncamiento)
+**Truncation**: rounding a number by removing all digits after the decimal point, e.g. $2.5$ truncated is $2$, and $-2.5$ truncated is $-2$.
+
 ## Addition (Adición)
 [Ch01_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=32)
 
@@ -72,7 +81,7 @@ Addition is the operation of adding numbers together. Addition means starting at
 **Math statement**: any math writing that can be read as a statement, with symbols, signs, numbers, operators, etc.
 
 (Expresión matemática)
-**Math expression**: a statement of numbers, symbols, and operations together.
+**Math expression**: a math statement of numbers, symbols, and operations together.
 
 > Example of a mathematical expression
 > $$a + b + c$$
@@ -81,24 +90,24 @@ Addition is the operation of adding numbers together. Addition means starting at
 **Equality sign**: this sign is $=$, the equal sign.
 
 (Ecuación)
-**Equation**: the statement of two expressions that are equal
+**Equation**: the math statement of two expressions that are equal
 
 > Example of an equation
 > $$a + b = c + d$$
 
-(Definición)
-**Definition**: an equation in which a symbol is defined.
+(Definición matemática)
+**Math definition**: an equation in which a symbol is defined.
 
 > Definition notation
 >
 > Let $a$, $b$ be symbols, then
-> $$a := b
-> $$ This is read as $a$ is defined as $b$ ($a$ es definido como $b$).
+> $$a := b$$
+> This is read as $a$ is defined as $b$ ($a$ es definido como $b$).
 
 The sign $:=$ is used to make definitions, to differentiate it from the equal sign.
 
-(Fórmula)
-**Formula**: an equation whose purpose is to find the value of a quantity or variable, i.e. formulas are equations expressly intended to find the value of a quantity, they are the "formula" to find said value.
+(Fórmula matemática)
+**Math formula**: an equation whose purpose is to find the value of a quantity or variable, i.e. formulas are equations expressly intended to find the value of a quantity, they are the "formula" to find said value.
 
 (Propiedad de identidad de la suma)
 **Identity property of addition**: adding to zero doesn't change the number
@@ -119,7 +128,7 @@ The sign $:=$ is used to make definitions, to differentiate it from the equal si
 > Let $a$, $b$ be numbers, then
 > $$a + b = b + a$$
 
-Given that addition means after the first number move the amount of the second, commutativity means that no matter which number comes first and which second, the end result is the same.
+Given that addition means after the first number move the amount of the second, commutativity means that no matter which number comes first and which second, the end position is the same.
 
 (Símbolo de sumatoria)
 **Summation symbol**: the symbol $\sum_i$ that represents the sum of the elements of the set to which $i$ belongs.
@@ -140,8 +149,8 @@ Subtraction is the operation of subtracting a number from another. Subtraction m
 **Subtraction notation**: the subtraction of $a$ from $b$ is $b - a$, read as $b$ minus $a$ ($b$ menos $a$), $b$ is called the minuend (minuendo), $a$ is called the subtrahend (sustraendo), the result is called the difference (diferencia)
 
 > The subtraction of $b$ from $a$ is
-> $$b - a = c 
-> $$ The value $c$ is the difference.
+> $$b - a = c$$
+> The value $c$ is the difference.
 
 Addition and subtraction are inverse operations. 
 
@@ -150,8 +159,11 @@ Subtraction is not commutative.
 > Non commutativity of subtraction
 >
 > Let $a$, $b$ be numbers,
-> $$if\ a \ne b\\
-> then\ a - b \ne b - a$$
+>
+> $$\begin{gathered}
+> if\ a \ne b\\
+> then\ a - b \ne b - a
+> \end{gathered}$$
 
 > General example of subtraction
 > $$5 - 3 = 2$$
@@ -169,11 +181,11 @@ Multiplication is the operation of multiplying numbers together. Multiplication 
 **Multiplication notation**: the multiplication of $a$ and $b$ is $a \cdot b$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result is called the product (producto).
 
 > The multiplication of $a$ and $b$ is
-> $$a \cdot b = c
-> $$ The value $c$ is the product.
+> $$a \cdot b = c$$
+> The value $c$ is the product.
 
 (Propiedad anulativa de la multiplicación)
-**Multiplication property of zero**: the product of any number multiplied by 0, is 0
+**Multiplication property of zero**: the product of any number multiplied by 0, is 0.
 
 > Multiplication property of zero
 >
@@ -181,7 +193,7 @@ Multiplication is the operation of multiplying numbers together. Multiplication 
 > $$a \cdot 0 = 0$$
 
 (Propiedad modulativa de la multiplicación)
-**Identity property of multiplication**: the product of any number multiplied by 1, is the number itself
+**Identity property of multiplication**: the product of any number multiplied by 1, is the number itself.
 
 > Identity property of multiplication
 >
@@ -214,14 +226,14 @@ Division is the operation of dividing a first number by a second number. Divisio
 **Division operator**: this operator is $\div$, the division sign. Another is $/$, the slash sign. Another is $\text{---}$, the horizontal line sign.
 
 (Notación de la división)
-**Division notation**: the division of $b$ over $a$ is $b/a$ or $\frac{b}{a}$, read as $b$ divided by $a$ ($b$ dividido $a$), $b$ is called the dividend (dividendo), $a$ is called the divisor (divisor), the result is called the quotient (cociente)
+**Division notation**: the division of $b$ over $a$ is $b/a$ or $\frac{b}{a}$, read as $b$ divided by $a$ ($b$ dividido $a$), $b$ is called the dividend (dividendo), $a$ is called the divisor (divisor), the result is called the quotient (cociente).
 
 > The division of $b$ over $a$ is
-> $$\frac{b}{a} = c
-> $$ The value $c$ is the quotient.
+> $$\frac{b}{a} = c$$
+> The value $c$ is the quotient.
 
 (Propiedad modulativa de la división)
-**Identity property of division**: the quotient of any number divided by 1, is the number itself
+**Identity property of division**: the quotient of any number divided by 1, is the number itself.
 
 > Identity property of division
 >
@@ -232,7 +244,7 @@ Division is the operation of dividing a first number by a second number. Divisio
 **Divisive identity**: The number 1.
 
 (Propiedad del cociente uno de la división)
-**Division property of quotient one**: any non zero number divided by itself gives a quotient of 1
+**Division property of quotient one**: any non zero number divided by itself gives a quotient of 1.
 
 > Division property of quotient one
 >
@@ -268,8 +280,10 @@ Division is not commutative.
 > Non commutativity of division
 >
 > Let $a$, $b$ be numbers,
-> $$if\ a \ne b\\
-> then\ \frac{a}{b} \ne \frac{b}{a}$$
+> $$\begin{gathered}
+> if\ a \ne b\\
+> then\ \frac{a}{b} \ne \frac{b}{a}
+> \end{gathered}$$
 
 > General example of division
 > $$\frac{28}{8} = 3 + \frac{4}{8}$$

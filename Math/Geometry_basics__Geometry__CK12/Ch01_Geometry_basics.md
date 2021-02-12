@@ -41,7 +41,7 @@ The points shown in the *Points in space* image, are in the shape of blue dots. 
 
 Points are commonly labeled using an uppercase letter. The image shown has four points, namely $A$, $B$, $C$, and $D$.
 
-(Línea|Recta)
+(Línea | Recta)
 **Line**: a shape with infinite points that extends in a single dimension indefinitely. A line has no start nor ending, it has a given direction and a location in space.
 [Line in space image code](Programs/Ch01/S01_02_Line_in_space_image.py)
 ![Line in space image](Images/Ch01/S01_02_Line_in_space.png)
@@ -172,9 +172,9 @@ Angles are commonly shown in diagrams with an arc between the two rays. In the *
 **Sides of an angle**: each of the rays that form the angle.
 
 (Transportador)
-**Protractor**: instrument to measure angles. The most common units of measure are degrees and radians. Degrees denote a rotation of a full circle as $360 \degree$, and in radians this is denoted as $2 \pi$.
+**Protractor**: instrument to measure angles. The most common units of measure are degrees and radians. Degrees denote a rotation of a full circle as $360 \text{\textdegree}$, and in radians this is denoted as $2 \pi$.
 
-An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another. The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \degree$ or $\pi$ radians.
+An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another. The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians.
 
 > Angle measure notation
 >
@@ -193,22 +193,22 @@ This method can be used to draw a given angle.
 **Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor.
 
 (Vuelta completa)
-**Full circle**: the angle measure of $2 \pi$ radians or $360 \degree$.
+**Full circle**: the angle measure of $2 \pi$ radians or $360 \text{\textdegree}$.
 
 (Ángulo llano)
-**Straight angle**: the angle of half a circle, i.e. $180 \degree$ or $\pi$ radians. Two rays that have this angle form a straight line. 
+**Straight angle**: the angle of half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Two rays that have this angle form a straight line. 
 
 (Rayos opuestos)
 **Opposite rays**: two rays with a straight angle between them.
 
 (Ángulo recto)
-**Right angle**: the angle of a quarter of a circle, i.e. $90 \degree$ or $\pi/2$ radians. The arc between the rays that is used to denote a right angle is a small square instead of an arc.
+**Right angle**: the angle of a quarter of a circle, i.e. $90 \text{\textdegree}$ or $\pi/2$ radians. The arc between the rays that is used to denote a right angle is a small square instead of an arc.
 
 (Ángulo agudo)
-**Acute angle**: an angle greater than or equal to $0 \degree$ ($0$ radians) and less than $90 \degree$ ($\pi/2$ radians).
+**Acute angle**: an angle greater than or equal to $0 \text{\textdegree}$ ($0$ radians) and less than $90 \text{\textdegree}$ ($\pi/2$ radians).
 
 (Ángulo obtuso)
-**Obtuse angle**: an angle greater than $90 \degree$ ($\pi/2$ radians) and less than $180 \degree$ ($\pi$ radians).
+**Obtuse angle**: an angle greater than $90 \text{\textdegree}$ ($\pi/2$ radians) and less than $180 \text{\textdegree}$ ($\pi$ radians).
 
 (Líneas perpendiculares)
 **Perpendicular lines**: two lines (or rays, or segments) that cross each other at right angles, i.e. the four angles formed at the intersection of the lines are right angles.
@@ -278,7 +278,7 @@ In the *Segment markings* image, the two segments at the bottom have the same le
 >
 > Let $\overline{AB}$ be a segment, the congruence with itself is denoted as
 > $$\overline{AB} \cong \overline{BA}$$
-> This symbol \cong is used in general to indicate two congruent geometric figures.
+> This symbol $\cong$ is used in general to indicate two congruent geometric figures.
 
 (Punto medio)
 **Midpoint**: the point on a segment, that divides it into two congruent segments.
@@ -368,10 +368,10 @@ In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into 
 [Ch01_S05](https://www.ck12.org/reader/reader-index.html#section/4668241/1.5/9549314)
 
 (Ángulos complementarios)
-**Complementary angles**: two angles whose measures when added together add up to $90 \degree$ or $\pi/2$ radians. Each angle is the complement (complemento) of the other.
+**Complementary angles**: two angles whose measures when added together add up to $90 \text{\textdegree}$ or $\pi/2$ radians. Each angle is the complement (complemento) of the other.
 
 (Ángulos suplementarios)
-**Supplementary angles**: two angles whose measures when added together add up to $180 \degree$ or $\pi$ radians. Each angle is the supplement (suplemento) of the other.
+**Supplementary angles**: two angles whose measures when added together add up to $180 \text{\textdegree}$ or $\pi$ radians. Each angle is the supplement (suplemento) of the other.
 
 (Ángulos adyacentes)
 **Adjacent angles**: two angles that have the same vertex and share one side, which means that only three rays are required to create two adjacent angles.

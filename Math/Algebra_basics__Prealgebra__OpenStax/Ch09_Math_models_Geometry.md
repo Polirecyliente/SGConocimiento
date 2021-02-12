@@ -33,8 +33,10 @@ Money measured in different currency valued coins and bills can be combined toge
 > Combine mixed monetary units
 >
 > Let $I$ be the set of unique coins and bills with different values, let $i$ be a subindex that indicates a particular element of $I$, let $v_i$ be the value of the coin or bill $i$, let $a_i$ be the amount in possession of the coin or bill $i$, let $V_i$ be the subtotal value of the coin or bill $i$, let $V$ be the total monetary value, then
-> $$V_i = a_i \cdot v_i\\
-> V = \sum_i{V_i}$$
+> $$\begin{gathered}
+> V_i = a_i \cdot v_i\\
+> V = \sum_i{V_i}
+> \end{gathered}$$
 
 These formulas can be used to combine mixed units, $V_i$ is the partial value of the coin or bill $i$, and $V$ is the combination of the mixed units into a single unit. The same can be used for problems with tickets or stamps, where there are different types of tickets or stamps, and each with a different value.
 
@@ -53,15 +55,15 @@ If a vertex has only two lines, then an angle can be named after said vertex.
 >
 > Let $A$ be a vertex with two lines stemming from it, then $\angle A$ is the angle formed between the two lines, and $m \angle A$ is the measure of said angle.
 
-Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360\degree$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes).
+Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes).
 
-Given those measures, half a whole rotation is $180\degree$ or $\pi$ radians
+Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians
 
 (Ángulos suplementarios)
-**Supplementary angles**: two angles that added together measure $180\degree$ or $\pi$ radians. Each angle in this pair is the supplement (suplemento) of the other.
+**Supplementary angles**: two angles that added together measure $180 \text{\textdegree}$ or $\pi$ radians. Each angle in this pair is the supplement (suplemento) of the other.
 
 (Ángulos complementarios)
-**Complementary angles**: two angles that added together measure $90\degree$ or $\pi/2$ radians. Each angle in this pair is the complement (complemento) of the other.
+**Complementary angles**: two angles that added together measure $90 \text{\textdegree}$ or $\pi/2$ radians. Each angle in this pair is the complement (complemento) of the other.
 
 (Triángulo)
 **Triangle**: shape with three straight sides and therefore three angles. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex.
@@ -71,26 +73,28 @@ Given those measures, half a whole rotation is $180\degree$ or $\pi$ radians
 > Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). The opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $AB$, $AC$, $BC$.
 
 (Suma de los ángulos de un triángulo)
-**Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180\degree$ or $\pi$ radians.
+**Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180 \text{\textdegree}$ or $\pi$ radians.
 
 > Sum of the measures of the angles of a triangle
 >
 > Let $A$, $B$, $C$, be three vertices that form a triangle, then
-> $$m \angle A + m \angle B + m \angle C = 180\degree\\
-> m \angle A + m \angle B + m \angle C = \pi$$
+> $$\begin{gathered}
+> m \angle A + m \angle B + m \angle C = 180 \text{\textdegree}\\
+> m \angle A + m \angle B + m \angle C = \pi
+> \end{gathered}$$
 
 This is shown in the following figure.
 [Triangle angles sum image code](Programs/Ch09/S03_01_Triangle_angles_sum_image.py)
 ![Triangle angles sum image](Images/Ch09/S03_01_Triangle_angles_sum.png)
 *Triangle angles sum*
 
-As the figure shows, the straight line that passes through $C$ and is parallel to the side between $A$ and $B$, is composed of the angles $\angle A$, $\angle B$, and $\angle C$, which means that the sum of the three angles in a triangle forms a straight line whose angle is $180\degree$ or $\pi$ radians.
+As the figure shows, the straight line that passes through $C$ and is parallel to the side between $A$ and $B$, is composed of the angles $\angle A$, $\angle B$, and $\angle C$, which means that the sum of the three angles in a triangle forms a straight line whose angle is $180 \text{\textdegree}$ or $\pi$ radians.
 
 (Ángulo recto)
-**Right angle**: a $90\degree$ angle, or $\pi/2$ radians angle.
+**Right angle**: a $90 \text{\textdegree}$ angle, or $\pi/2$ radians angle.
 
 (Triángulo rectángulo)
-**Right triangle**: a triangle in which one of its angles measures $90\degree$ or $\pi/2$ radians, i.e. a triangle with a right angle. The right angle is denoted in the triangle with a square.
+**Right triangle**: a triangle in which one of its angles measures $90 \text{\textdegree}$ or $\pi/2$ radians, i.e. a triangle with a right angle. The right angle is denoted in the triangle with a square.
 
 Right triangles have three sides, one hypotenuse (hipotenusa) which is the side opposite to the right angle, and two legs (catetos) which are the two sides that stem from the vertex with the right angle.
 
@@ -152,8 +156,10 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 > Rectangle properties
 >
 > Let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, and $A$ be the area of the rectangle, then
-> $$P = 2(L + W)\\
-> A = L \cdot W$$
+> $$\begin{gathered}
+> P = 2(L + W)\\
+> A = L \cdot W
+> \end{gathered}$$
 
 (Propiedades del triángulo)
 **Triangle properties**: the perimeter of a triangle is the sum of the lengths of its three sides, the area of a triangle is half the area of the rectangle created with any of the sides of the triangle and that is just big enough to contain the complete triangle.
@@ -161,8 +167,10 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 > Triangle properties
 >
 > Let $a$, $b$, $c$, be the lengths of the sides of a triangle, let $h$ be the height of the triangle as measured when $b$ is the floor, let $P$ be the perimeter of the triangle, and $A$ be the area of the triangle, then
-> $$P = a + b + c\\
-> A = \frac{b \cdot h}{2}$$
+> $$\begin{gathered}
+> P = a + b + c\\
+> A = \frac{b \cdot h}{2}
+> \end{gathered}$$
 
 (Triángulo escaleno)
 **Scalene triangle**: a triangle in which all the sides have different measures of length.
@@ -215,8 +223,10 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 > Rectangular solid properties
 >
 > In a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
-> $$V = L \cdot W \cdot H\\
-> S = 2 \cdot (L \cdot W + L \cdot H + W \cdot H)$$
+> $$\begin{gathered}
+> V = L \cdot W \cdot H\\
+> S = 2 \cdot (L \cdot W + L \cdot H + W \cdot H)
+> \end{gathered}$$
 
 (Cubo)
 **Cube**: rectangular solid with all its sides equal in length. This configuration creates a shape in which all of its faces have equal areas.
@@ -224,9 +234,11 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 > Cube properties
 >
 > In a cube, let $s$ be the the length of any of its sides, $L$ be its length, $W$ be its widht, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
-> $$s = L = W = H\\
+> $$\begin{gathered}
+> s = L = W = H\\
 > V = s^3\\
-> S = 6s^2$$
+> S = 6s^2
+> \end{gathered}$$
 
 (Esfera)
 **Sphere**: three dimensional shape in which all of its points are at the same distance from its center, this distance is called the radius.
@@ -234,8 +246,10 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 > Sphere properties
 >
 > In a sphere, let $r$ be its radius, $V$ be its volume, and $S$ be its surface area, then
-> $$V = \frac{4}{3} \pi r^3\\
-> S = 4 \pi r^2$$
+> $$\begin{gathered}
+> V = \frac{4}{3} \pi r^3\\
+> S = 4 \pi r^2
+> \end{gathered}$$
 
 The formula for the surface area of a sphere can be understood from the surface area of a cylinder (see later in this file). Let there be a cylinder of radius $r$ and height $2r$, then its surface area without the two circles is $4 \pi r^2$, which is the same as for the sphere. This is because when cutting a transversal thin strip of area from the cylinder, its area is equal to that of the same cut in the sphere. Even though the radius of the cut can be smaller in the sphere, the height of said cut increases proportionally, this makes both areas equal.
 
@@ -247,8 +261,10 @@ The formula for the volume of a sphere can be understood from the surface area o
 > Cylinder properties
 >
 > In a cylinder, let $r$ be the radius of its circles, $h$ be its height, $V$ be its volume, and $S$ be its surface area, then
-> $$V = \pi r^2 h \\
-> S = 2 \pi r^2 + 2 \pi r h$$
+> $$\begin{gathered}
+> V = \pi r^2 h \\
+> S = 2 \pi r^2 + 2 \pi r h
+> \end{gathered}$$
 
 The volume of the cylinder is the product of the area of its base and its height. The surface area of a cylinder is the sum of the areas of the two circles and the area of its side, which is the surface between the two circles.
 
@@ -258,8 +274,10 @@ The volume of the cylinder is the product of the area of its base and its height
 > Cone properties
 >
 > In a cone, let $r$ be the radius of its base, $h$ be the distance from the apex to its base, $l$ be the distance from the apex to its circumference, $V$ be its volume, and $S$ be its surface area, then
-> $$V = \frac{1}{3} \pi r^2 h\\[5 pt]
-> S = \pi r^2 + \pi r l$$
+> $$\begin{gathered}
+> V = \frac{1}{3} \pi r^2 h\\[5 pt]
+> S = \pi r^2 + \pi r l
+> \end{gathered}$$
 
 The volume of a cone is one third of the volume of a cylinder with the same base and same height. This is a general rule for shapes that end in an apex, as can be seen in the following image, one cube can hold exactly three pyramids with a square base.
 ![One third volume image](Images/Ch09/S06_01_One_third_volume.png)

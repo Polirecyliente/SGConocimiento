@@ -37,7 +37,7 @@ A number pattern may be represented as an equation in two variables, one variabl
 
 > Example of a conjecture
 >
-> In the pattern $2$, $4$, $6$, $8$... the conjecture is that the value of the next term is $10$, and that the equation of this pattern is $P_n = 2n$ where $n$ is the term and $P_n$ is the pattern value of the term $n$. But it can happen that the value of the next term is not $10$ but another value, for example it could be $15%.
+> In the pattern $2$, $4$, $6$, $8$... the conjecture is that the value of the next term is $10$, and that the equation of this pattern is $P_n = 2n$ where $n$ is the term and $P_n$ is the pattern value of the term $n$. But it can happen that the value of the next term is not $10$ but another value, for example it could be $15%$.
 
 (Contraejemplo)
 **Counterexample**: in a pattern, a counterexample is a pattern value that disproves a given conjecture.
@@ -81,14 +81,14 @@ Truth values are also called logical values (valores lógicos).
 > Conditional statement notation
 >
 > Let $p$, $q$ be two events, such that $p$ is the hypothesis of a conditional statement, and $q$ is the conclusion of the same conditional statement, then
-> $$p \rarr q
-> $$ denotes the conditional statement. It is read as if $p$ then $q$ (si $p$ entonces $q$), also read as $p$ implies $q$ ($p$ implica $q$).
+> $$p \to q$$
+> denotes the conditional statement. It is read as if $p$ then $q$ (si $p$ entonces $q$), also read as $p$ implies $q$ ($p$ implica $q$).
 
 > Example of a conditional statement
 >
-> Let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \rarr q$ means that 'if I am healthy today then I work today'.
+> Let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \to q$ means that 'if I am healthy today then I work today'.
 
-The symbol of a double right arrow $\rArr$ is used outside of logic, in mathematics in general, to signify 'then'.
+The symbol of a double right arrow $\Rightarrow$ is used outside of logic, in mathematics in general, to signify 'then'.
 
 (Negación lógica)
 **Logical negation**: an operator used to negate an event. A negated event means that its negation happens.
@@ -97,9 +97,11 @@ The symbol of a double right arrow $\rArr$ is used outside of logic, in mathemat
 > Notation of the logical negation
 >
 > Let $p$ be an event, then its negation is
-> $$\neg p\\
+> $$\begin{gathered}
+> \neg p\\
 > \sim p
-> $$ Both symbols $\neg$ and $\sim$ are used as the negation operator. $\neg p$ is read as not $p$ (no $p$).
+> \end{gathered}$$
+> Both symbols $\neg$ and $\sim$ are used as the negation operator. $\neg p$ is read as not $p$ (no $p$).
 
 > Example of a negation
 >
@@ -110,24 +112,24 @@ The symbol of a double right arrow $\rArr$ is used outside of logic, in mathemat
 
 > Converse of a conditional statement
 >
-> Let $p$, $q$ be two events, such that $p \rarr q$, then the converse is
-> $$q \rarr p$$
+> Let $p$, $q$ be two events, such that $p \to q$, then the converse is
+> $$q \to p$$
 
 (Inverso de una proposición)
 **Inverse of a statement**: the result of negating the events of the statement.
 
 > Inverse of a conditional statement
 >
-> Let $p$, $q$ be two events, such that $p \rarr q$, then the inverse is
-> $$\neg p \rarr \neg q$$
+> Let $p$, $q$ be two events, such that $p \to q$, then the inverse is
+> $$\neg p \to \neg q$$
 
-(Contrapositivo de una proposición|Contrarrecíproco de una proposición)
+(Contrapositivo de una proposición | Contrarrecíproco de una proposición)
 **Contrapositive of a statement**: the result of negating and switching the order of the events of the statement.
 
 > Contrapositive of a conditional statement
 >
-> Let $p$, $q$ be two events, such that $p \rarr q$, then the contrapositive is
-> $$\neg q \rarr \neg p$$
+> Let $p$, $q$ be two events, such that $p \to q$, then the contrapositive is
+> $$\neg q \to \neg p$$
 
 (Proposiciones lógicas equivalentes)
 **Logically equivalent statements**: two distinct statements with the same events that lead to the same truth values.
@@ -135,11 +137,11 @@ The symbol of a double right arrow $\rArr$ is used outside of logic, in mathemat
 
 > Example of logically equivalent statements
 >
-> Let $p$, $q$ be two events, such that $p \rarr q$, then its contrapositive is logically equivalent, i.e. $\neg q \rarr \neg p$ has the same logical meaning as $p \rarr q$.
+> Let $p$, $q$ be two events, such that $p \to q$, then its contrapositive is logically equivalent, i.e. $\neg q \to \neg p$ has the same logical meaning as $p \to q$.
 >
-> As a concrete example, let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \rarr q$ means that 'if I am healthy today then I work today'. On the other hand, $\neg q$ means 'I don't work today', and for this to happen, $\neg p$ 'I am not healthy today' must also happen, so $\neg q \rarr \neg p$.
+> As a concrete example, let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \to q$ means that 'if I am healthy today then I work today'. On the other hand, $\neg q$ means 'I don't work today', and for this to happen, $\neg p$ 'I am not healthy today' must also happen, so $\neg q \to \neg p$.
 >
-> The converse and the inverse of a conditional statement are not necessarily true. In the example, the converse $q \rarr p$ means 'if I work today, then I am healthy today', but this is not logically guaranteed, because it can be that 'I work today' and 'I am not healthy today'. The statement $p \rarr q$ does not invalidate the statement $\neg p \rarr q$, both can be true at the same time. For this same reason the inverse $\neg p \rarr \neg q$ is not necessarily true.
+> The converse and the inverse of a conditional statement are not necessarily true. In the example, the converse $q \to p$ means 'if I work today, then I am healthy today', but this is not logically guaranteed, because it can be that 'I work today' and 'I am not healthy today'. The statement $p \to q$ does not invalidate the statement $\neg p \to q$, both can be true at the same time. For this same reason the inverse $\neg p \to \neg q$ is not necessarily true.
 >
 > Only the contrapositive of a conditional statement is logically equivalent to the conditional statement. But the converse and the inverse of a conditional statement are logically equivalent to each other as well, because one is the contrapositive of the other.
 
@@ -150,14 +152,14 @@ The symbol of a double right arrow $\rArr$ is used outside of logic, in mathemat
 > Biconditional statement notation
 >
 > Let $p$, $q$ be two events, such that each is a condition for the other to happen, then
-> $$p \lrarr q
-> $$ denotes the biconditional statement. It is read as $p$ if and only if $q$ ($p$ sí y solo sí $q$).
+> $$p \leftrightarrow q$$
+> denotes the biconditional statement. It is read as $p$ if and only if $q$ ($p$ sí y solo sí $q$).
 
-The converse, inverse, and contrapositive of a biconditional statement are logically equivalent to each other. $p \lrarr q$ implies $q \lrarr p$ and also $\neg p \lrarr \neg q$ and $\neg q \lrarr \neg p$.
+The converse, inverse, and contrapositive of a biconditional statement are logically equivalent to each other. $p \leftrightarrow q$ implies $q \leftrightarrow p$ and also $\neg p \leftrightarrow \neg q$ and $\neg q \leftrightarrow \neg p$.
 
 > Example of a biconditional statement
 >
-> Let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the biconditional statement $p \lrarr q$ means that 'I am healthy today if and only if I work today'.
+> Let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the biconditional statement $p \leftrightarrow q$ means that 'I am healthy today if and only if I work today'.
 
 ## Deductive reasoning (Razonamiento deductivo)
 [Ch02_S03](https://www.ck12.org/reader/reader-index.html#section/2932927/2.3/9549314)
@@ -166,7 +168,7 @@ Deductive reasoning means reasoning on the basis of given facts.
 
 > Example of deductive reasoning
 >
-> Let $p$, $q$ be two events, such that $p \rarr q$. Given the fact that $p$ happens, the conclusion is that $q$ happens or will happen. Concluding that $q$ happens is a deduction, because it's a conclusion that was arrived to by reasoning on the basis of the given facts $p$ and $p \rarr q$.
+> Let $p$, $q$ be two events, such that $p \to q$. Given the fact that $p$ happens, the conclusion is that $q$ happens or will happen. Concluding that $q$ happens is a deduction, because it's a conclusion that was arrived to by reasoning on the basis of the given facts $p$ and $p \to q$.
 
 (Ley de separación)
 **Law of detachment**: given two facts as true, that there exists a conditional statement and that the hypothesis of said conditional statement happens, the conclusion of the conditional statement can be deduced as a third true fact with no need for any other information.
@@ -174,13 +176,15 @@ Deductive reasoning means reasoning on the basis of given facts.
 
 > Law of detachment
 >
-> Let $p$, $q$ be two events, let $p$ be true, and let the conditional $p \rarr q$ be also true, then $q$ is true by deduction.
+> Let $p$, $q$ be two events, let $p$ be true, and let the conditional $p \to q$ be also true, then $q$ is true by deduction.
 >
 > The law of detachment can be denoted as follows
-> $$p \rarr q\\
+> $$\begin{gathered}
+> p \to q\\
 > p\\
 > \therefore q
-> $$ The $\therefore$ symbol is the therefore symbol, read as therefore (por lo tanto). The statements before the $\therefore$ are assumed true, and the statements after the $\therefore$ are deduced to be true.
+> \end{gathered}$$
+> The $\therefore$ symbol is the therefore symbol, read as therefore (por lo tanto). The statements before the $\therefore$ are assumed true, and the statements after the $\therefore$ are deduced to be true.
 
 The law of detachment is also known as modus ponendo ponens, which is latin for the mode that by affirming affirms.
 
@@ -193,12 +197,14 @@ The law of detachment is also known as modus ponendo ponens, which is latin for 
 > Fallacy of the converse
 >
 > Let $p$, $q$ be two events, then
-> $$p \rarr q\\
+> $$\begin{gathered}
+> p \to q\\
 > q\\
 > \therefore p
-> $$ These logical statements are wrong, because if $p \rarr q$ is true and $q$ is true, then $p$ may or may not be true. It could be the case that $\neg p \rarr q$.
+> \end{gathered}$$
+> These logical statements are wrong, because if $p \to q$ is true and $q$ is true, then $p$ may or may not be true. It could be the case that $\neg p \to q$.
 
-The fallacy of the converse is also known as the converse error (error converso), because it would only be true if the converse $q \rarr p$ was true, instead of the actual conditional $p \rarr q$.
+The fallacy of the converse is also known as the converse error (error converso), because it would only be true if the converse $q \to p$ was true, instead of the actual conditional $p \to q$.
 
 (Ley contrarrecíproca)
 **Law of contrapositive**: given two facts as true, that there exists a conditional statement and that the consecuent negated happens, then the negation of the antecedent can be deduced as a third true fact.
@@ -206,12 +212,14 @@ The fallacy of the converse is also known as the converse error (error converso)
 
 > Law of contrapositive
 >
-> Let $p$, $q$ be two events, let the conditional $p \rarr q$ be true and let $\neg q$ be also true, then $\neg p$ is true by deduction.
+> Let $p$, $q$ be two events, let the conditional $p \to q$ be true and let $\neg q$ be also true, then $\neg p$ is true by deduction.
 >
 > The law of contrapositive can be denoted as follows
-> $$p \rarr q\\
+> $$\begin{gathered}
+> p \to q\\
 > \neg q\\
-> \therefore \neg p$$
+> \therefore \neg p
+> \end{gathered}$$
 
 This law is true because the contrapositive of a conditional is logically equivalent to said conditional.
 
@@ -222,12 +230,14 @@ This law is true because the contrapositive of a conditional is logically equiva
 > Law of syllogism
 >
 > Let $p$, $q$, $r$, $s$ events, then
-> $$p \rarr q\\
-> q \rarr r\\
-> r \rarr s\\
-> \therefore p \rarr s$$
+> $$\begin{gathered}
+> p \to q\\
+> q \to r\\
+> r \to s\\
+> \therefore p \to s
+> \end{gathered}$$
 
-For that matter, several other conditionals could be deduced if needed, such as $p \rarr r$ and $q \rarr s$.
+For that matter, several other conditionals could be deduced if needed, such as $p \to r$ and $q \to s$.
 
 (Conjunción lógica)
 **Logical conjunction**: the operation over two logical statements that returns a logical value of true if both logical statements are true. This is also known as the AND operation, because the first logical statement and the second must be true for the conjunction of them to be true.
@@ -295,7 +305,7 @@ Truth tables can be used not only for binary operations but for more complex log
 
 - **Reflexive property of equality** (Propiedad reflexiva de la igualdad): a real number is equal to itself. Let $a$ be a real number, then $a = a$.
 
-- **Symmetric property of equality** (Propiedad simétrica de la igualdad): if a first real number is equal to a second, then the second number is equal to the first. Let $a$, $b$ be real numbers, then $a = b \lrarr b = a$.
+- **Symmetric property of equality** (Propiedad simétrica de la igualdad): if a first real number is equal to a second, then the second number is equal to the first. Let $a$, $b$ be real numbers, then $a = b \leftrightarrow b = a$.
 
 - **Transitive property of equality** (Propiedad transitiva de la igualdad): if a first real number is equal to a second, and the second number is equal to a third, then the third number is equal to the first. Let $a$, $b$, $c$ be real numbers, if $a = b$ and $b = c$ then $a = c$.
 

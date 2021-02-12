@@ -26,10 +26,10 @@
 > Opposite numbers
 >
 > Let $a$ be a number, and $-a$ be its opposite, then
-> $$-(-a) = a
-> $$ which means that the opposite of $-a$ is $a$, and
-> $$-(a) = -a
-> $$ which means that the opposite of $a$ is $-a$.
+> $$-(-a) = a$$
+> which means that the opposite of $-a$ is $a$, and
+> $$-(a) = -a$$
+> which means that the opposite of $a$ is $-a$.
 
 (Números enteros)
 **Integers**: the set of the whole numbers and the negative numbers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two integer numbers.
@@ -57,7 +57,7 @@ Addition means moving in the same direction of the number being added, if the nu
 
 Subtraction of integers is no different from regular subtraction. Subtracting a negative number means moving opposite to its direction, i.e. moving in the positive direction.
 
-In $a - (-b)$ the expression $- (-b)$ subtracts negative $b$, subtracting means moving in the opposite direction, so moving opposite to negative $b$ means adding positive $b$, and $a - (-b) = a + b$
+In $a - (-b)$ the expression $- (-b)$ subtracts negative $b$, subtracting means moving in the opposite direction, so moving opposite to negative $b$ means adding positive $b$, and $a - (-b) = a + b$.
 
 ## Multiplication and division of integers (Multiplicación y división de enteros)
 [Ch03_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=244)
@@ -99,8 +99,10 @@ The solution of an equation with integers is no different from a regular solutio
 > Multiplication property of equality
 >
 > Let $a$, $b$, $c$ be numbers
-> $$if\ a = b\\
-> then\ a \cdot c = b \cdot c$$
+> $$\begin{gathered}
+> if\ a = b\\
+> then\ a \cdot c = b \cdot c
+> \end{gathered}$$
 
 (Propiedad divisiva de la igualdad)
 **Division property of equality**: dividing both sides of an equality by a nonzero number preserves the equality.
@@ -108,5 +110,7 @@ The solution of an equation with integers is no different from a regular solutio
 > Division property of equality
 >
 > Let $a$, $b$, $c$ be numbers, with $c$ being nonzero
-> $$if\ a = b\\
-> then\ \frac{a}{c} = \frac{b}{c}$$
+> $$\begin{gathered}
+> if\ a = b\\
+> then\ \frac{a}{c} = \frac{b}{c}
+> \end{gathered}$$

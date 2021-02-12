@@ -88,9 +88,11 @@ The multiplication of polynomials is based on the distributive property of multi
 > Example of multiplication of polynomials
 >
 > Let $ax^2 + bx + c$ and $dx + e$ be two polynomials, then their product is
-> $$(ax^2 + bx + c)(dx + e)\\
+> $$\begin{gathered}
+> (ax^2 + bx + c)(dx + e)\\
 > = adx^3 + aex^2 + bdx^2 + bex + cdx + ce\\
-> = adx^3 + (ae + bd)x^2 + (be + cd)x + ce$$
+> = adx^3 + (ae + bd)x^2 + (be + cd)x + ce
+> \end{gathered}$$
 
 ## Division of polynomials (División de polinomios)
 [Ch10_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=902)
@@ -148,16 +150,18 @@ This result follows the same form of mixed numbers, but instead of numbers, poly
 > Example of division of polynomials
 >
 > Let $3x^2 - 5x + 8$ and $2x - 7$ be the two polynomials being divided, then
-> $$\frac{2x - 7}{3x^2 - 5x + 8} = \frac{2x - 7}{3x^2 - 5x + 8}
-> $$ This division can not be made any further, the degree of the numerator is less than the degree of the denominator.
-> $$\frac{3x^2 - 5x + 8}{2x - 7} \rarr
-> \begin{aligned}3x^2\ -\ 5x\ +\ 8\hspace{8pt}            &\underline{|\ 2x - 7}\\
->               -3x^2 + \frac{21}{2}x\hspace{25pt}    & \ \frac{3}{2}x + \frac{11}{4}\\
->                   0 + \frac{11}{2}x + 8\hspace{8pt} &\\
->                     - \frac{11}{2}x + \frac{77}{4} &\\
->                                   0 + \frac{109}{4} &
-> \end{aligned}
-> $$ Then $$\frac{3x^2 - 5x + 8}{2x - 7} = \frac{3x}{2} +  \frac{11}{4} + \frac{109/4}{2x - 7}$$
+> $$\frac{2x - 7}{3x^2 - 5x + 8} = \frac{2x - 7}{3x^2 - 5x + 8}$$
+> This division can not be made any further, the degree of the numerator is less than the degree of the denominator. The reciprocal can be done.
+> $$\frac{3x^2 - 5x + 8}{2x - 7} \quad \to \qquad
+> \begin{aligned}
+> 3x^2\ -\ 5x\ +\ 8\hspace{8pt} &\underline{|\ 2x - 7}\\
+> -3x^2 + \frac{21}{2}x\hspace{25pt} & \ \frac{3}{2}x + \frac{11}{4}\\
+> 0 + \frac{11}{2}x + 8\hspace{8pt} &\\
+> - \frac{11}{2}x + \frac{77}{4} &\\
+> 0 + \frac{109}{4} &
+> \end{aligned}$$
+> So
+> $$\frac{3x^2 - 5x + 8}{2x - 7} = \frac{3x}{2} +  \frac{11}{4} + \frac{109/4}{2x - 7}$$
 
 ## Scientific notation (Notación científica)
 [Ch10_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=922)
