@@ -25,10 +25,10 @@
 The use of a letter of the alphabet as a variable or as a constant is determined from the context, so the context must state which letters are variables and which are constants.
 
 (Funciones)
-**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators act as functions, e.g. $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a$, $b$.
+**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators (Operadores) act as functions, e.g. $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a$, $b$.
 
 (Símbolos algebraicos)
-**Algebraic symbols**: operators, functions, variables, numbers.
+**Algebraic symbols**: numbers, variables, constants, operators, functions.
 
 (Operadores relacionales)
 **Relational operators**: operators that compare the values of two numbers. These operators serve to make the set of numbers an ordered set, ordered according to the values of the numbers.
@@ -133,7 +133,7 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 **Like terms**: terms that can be added together directly, like terms can only differ from each other in the coefficient, so their symbol(s) (variable or constant) has to be the same, e.g. $3x$ and $4x$ are like terms, they may be added (or subtracted) directly.
 
 (Reducción de términos semejantes)
-**Combining like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
+**Combining like terms | Combine like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
 ## Solution of an equation, subtraction and addition properties of equality (Soluciones de una ecuación, propiedades de sustracción y adición de la igualdad)
 [Ch02_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=144)
@@ -189,10 +189,10 @@ Isolating a variable in an equation can be synonymous with solving said equation
 [Divisibility code](Programs/Ch02/S04_01_Divisibility.py)
 
 (Números pares)
-**Even numbers**: 0 and the multiples of 2
+**Even numbers**: 0 and the multiples of 2.
 
 (Números impares)
-**Odd numbers**: the whole numbers that are not even numbers
+**Odd numbers**: the whole numbers that are not even numbers.
 
 (Pruebas de divisibilidad)
 **Divisibility tests**: a quick test made to check if a number is divisible by another. The following are the divisibility tests of the first numbers.
@@ -219,7 +219,7 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 **Prime numbers**: each of the numbers with only 2 different factors, the number 1 and the number itself.
 
 (Números compuestos)
-**Composite numbers**: the numbers that are not prime, i.e. the numbers that have at least 3 different factors.
+**Composite numbers**: the numbers that are not prime, i.e. the numbers that have more than one factor pair.
 
 ## Prime factorization, least common multiple (Descomposición en factores primos, mínimo común múltiplo)
 [Ch02_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=172)
@@ -235,10 +235,10 @@ A given number is divisible by 11 if the alternating sum of its digits (i.e. the
 **Multiplicity of a prime factor**: the amount of times that a prime factor of a given number is repeated, e.g. in the number $60$ the prime factors are $2$, $2$, $3$, $5$, the number $2$ has a multiplicity of $2$, the number $3$ has a multiplicity of $1$, and the number $5$ has a multiplicity of $1$.
 
 (Múltiplos comunes)
-**Common multiples**: the numbers that are multiples of a given set of numbers (at least two)
+**Common multiples**: given a set of at least two numbers, the common multiples are the numbers that are multiples of all the numbers in the set.
 
 (Mínimo común múltiplo)
-**Least common multiple**: the smallest common multiple of a given set of numbers (at least two)
+**Least common multiple**: the smallest common multiple of a given set of at least two numbers.
 [Least common multiple code](Programs/Ch02/S05_02_Least_common_multiple.py)
 
 The least common multiple of two numbers can be calculated using their prime factors. The least common multiple of two numbers is the product of all their unique prime factors, each raised to the power of their maximum multiplicity.
@@ -246,7 +246,7 @@ The least common multiple of two numbers can be calculated using their prime fac
 For example, to find the least common multiple of $12$ and $18$, the prime factors of $12$ are $2$, $2$, $3$, and the prime factors of $18$ are $2$, $3$, $3$. The least common multiple is $2 \cdot 2 \cdot 3 \cdot 3 = 36$, the number $2$ has a maximum multiplicity of $2$ (in $12$), and $3$ has a maximum multiplicity of $2$ (in $18$).
 
 (Máximo común divisor)
-**Greatest common divisor**: the biggest common divisor of a given set of numbers (at least two)
+**Greatest common divisor**: the biggest common divisor of a given set of at least two numbers.
 [Greatest common divisor code](Programs/Ch02/S05_03_Greatest_common_divisor.py)
 
 The greatest common divisor of two numbers can be calculated using their prime factors. The greatest common divisor of two numbers is the product of their common prime factors, each raised to the power of their minimum multiplicity.
