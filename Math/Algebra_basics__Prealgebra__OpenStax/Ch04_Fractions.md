@@ -31,15 +31,7 @@ By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is 
 *Fraction diagram*
 
 (Numerador y denominador)
-**Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). For example, in $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.
-
-(Propiedad del 1 en la división)
-**Division property of 1**: any non zero number divided by itself is 1.
-
-> Division property of 1
->
-> Let $a$ be a nonzero number, then
-> $$\frac{a}{a} = 1$$
+**Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). In $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.
 
 (Fracciones propias)
 **Proper fractions**: a fraction $\frac{a}{b}$ in which $a < b$. A proper fraction is always between 0 and 1.
@@ -56,7 +48,7 @@ By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is 
 > Let $a$ be an integer, and $\frac{b}{c}$ be a proper fraction, the mixed number they form together is denoted as
 > $$a\frac{b}{c}$$
 
-When adding together this numbers, $a + \frac{b}{c}$ the result is an improper fraction with the same value.
+When adding together this numbers, $a + \frac{b}{c}$ the result is the improper fraction $\frac{ac + b}{c}$ with the same value.
 
 (Fracciones equivalentes)
 **Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. This can be also seen in the figure shown earlier.
@@ -81,11 +73,11 @@ The same simplification can be done with variables, e.g. $\frac{2 \cdot x}{x}$ c
 **Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
 
 (Recíproco de un número)
-**Reciprocal of a number**: another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
+**Reciprocal of a number**: given a number, its reciprocal is another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
 
-Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \cdot \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends.
+Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \cdot \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends, this place is the definition of the reciprocal of $a$.
 
-Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \cdot \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the place of $\frac{a}{b}$.
+Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \cdot \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the same place of $\frac{a}{b}$.
 
 Multiplication by a number is the same as division by its reciprocal, $a \cdot b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a \cdot b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
 
@@ -119,19 +111,19 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 [Ch04_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=338)
 
 (Adición de fracciones con denominador común)
-**Addition of fractions with common denominators**: the same as normal addition. It must be noted that $\frac{a}{b} = \frac{1}{b} \cdot a$, which means that $\frac{a}{b} + \frac{c}{b} = \frac{1}{b} \cdot (a + c) = \frac{a + c}{b}$, because $a$ and $c$ are multiples of $\frac{1}{b}$ which are then added together.
+**Addition of fractions with common denominators**: the same as normal addition. It must be noted that $\frac{a}{b} = a\frac{1}{b}$, which means that $\frac{a}{b} + \frac{c}{b} = a\frac{1}{b} + c\frac{1}{b} = (a + c)\frac{1}{b} = \frac{a + c}{b}$.
 
-(sustracción de fracciones con denominador común)
+(Sustracción de fracciones con denominador común)
 **Subtraction of fractions with common denominators**: the same as normal subtraction, and following the logic shown for addition, $\frac{a}{b} - \frac{c}{b} = \frac{a - c}{b}$.
 
 ## Addition and subtraction of fractions with different denominators (Adición y sustracción de fracciones con denominador diferente)
 [Ch04_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=350)
 
 (Mínimo común denominador)
-**Least common denominator**: the least common multiple of the denominators from a set of fractions.
+**Least common denominator**: the least common multiple of the denominators from a set of at least two fractions.
 
 (Adición de fracciones con denominador diferente)
-**Addition of fractions with different denominators**: first the fractions being added must have common denominators, for this, each fraction is converted to an equivalent fraction such that its denominator is the common one. The common denominator is found as the least common denominator of the fractions. The addition is done like regular addition when the denominators are common.
+**Addition of fractions with different denominators**: first the fractions being added must have common denominators, for this, each fraction is converted to an equivalent fraction such that its denominator is the common one. The common denominator can be found as the least common denominator of the fractions. The addition is done like regular addition when the denominators are common.
 
 (Sustracción de fracciones con denominador diferente)
 **Subtraction of fractions with different denominator**: like regular subtraction, but first applying the steps in addition of fractions with different denominators, such that the denominators are common.
@@ -143,7 +135,7 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 [Ch04_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=372)
 
 (Adición de números mixtos)
-**Addition of mixed numbers**: like regular addition. The integer parts of the mixed numbers can be added directly, and the proper fraction parts are added with the rules of addition of fractions, the result number is the sum of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
+**Addition of mixed numbers**: like regular addition. The integer parts of the mixed numbers can be added directly, and the proper fraction parts are added with the rules of addition of fractions, the result is the sum of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
 
 (Sustracción de números mixtos)
 **Subtraction of mixed numbers**: like regular subtraction. As with addition, the integer parts are subtracted separately from the fraction parts.

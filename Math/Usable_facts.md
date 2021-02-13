@@ -10,6 +10,7 @@
 #C# Counting numbers (Números naturales)
 #C# Whole numbers (Números naturales y el cero)
 #C# Integer numbers (Números enteros)
+#C# Rational numbers (Números racionales)
 #C# Number approximation (Aproximación de números)
 #C# Equations and inequalities (Ecuaciones y desigualdades)
 #C# Addition of real numbers (Adición de números reales)
@@ -21,6 +22,7 @@
 #C# Properties of real numbers (Propiedades de los números reales)
 #C# Multiples and factors of integers (Múltiplos y factores de los enteros)
 #C# Algebra definitions (Definiciones de álgebra)
+#C# Simplifications (Simplificaciones)
 
 #T# Beginning of content
 -->
@@ -99,6 +101,46 @@ The set of integers is the set of the whole numbers and the negative numbers. Th
 **Opposite numbers**: pairs of numbers only differentiated by their sign, one is positive and the other one is negative, but their value is the same. Opposite numbers are obtained with the minus sign.
 
 The opposite of $a$ is $-a$, so $-(a) = -a$. The opposite of $-a$ is $a$, so $-(-a) = a$.
+
+## Rational numbers (Números racionales)
+
+This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two rational numbers.
+
+(Fracciones)
+**Fractions**: numbers that represent a part of a whole number or an integer, so there are many fractions between any two integers.
+
+(Notación de las fracciones)
+**Fraction notation**: given that fractions are numbers that can be between two integers, they are represented with a division, a fraction that is not integer has a remainder different from 0 when represented as a division. Given two integers $a$ and $b$, with $b$ being nonzero, the fraction $\frac{a}{b}$ is calculated as $a$ divided by $b$.
+
+For example, $\frac{2}{3}$ means $2$ divided by $3$, and using the definition of division, this calculates the amount of times that the number $3$ is subtracted from $2$ until 0 is reached, but subtracting $3$ from $2$ gives $-1$ because $2 - 3 = -1$, so to reach 0, a proportion, fraction, or part of $3$ must be subtracted from $2$, and not the full unity of the number $3$. 
+
+By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is subtracted from $2$ to reach 0. This amount, $\frac{2}{3}$ is between $0$ and $1$ and it occupies the same proportional distance to $1$, as the number $2$ occupies to $3$.
+
+(Numerador y denominador)
+**Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). In $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.
+
+(Fracciones propias)
+**Proper fractions**: a fraction $\frac{a}{b}$ in which $a < b$. A proper fraction is always between 0 and 1.
+
+(Fracciones impropias)
+**Improper fractions**: a fraction $\frac{a}{b}$ in which $a \ge b$. An improper fraction can be an integer (when $a$ is a multiple of $b$), and it is always greater than or equal to 1, which means that an improper fraction has an integer part and a proper fraction part, when said parts are added the result is the improper fraction.
+
+(Números mixtos)
+**Mixed numbers**: the representation of an improper fraction as an integer part and a proper fraction part. The improper fraction $\frac{ac + b}{c} = a + \frac{b}{c}$ is represented as a mixed number as $a\frac{b}{c}$, so the addition of the integer part and the proper fraction part of a mixed number result in an equivalent improper fraction.
+
+The term $ac$ in the numerator of $\frac{ac + b}{c}$, is a multiple of $c$, and when dividing $ac$ by $c$ the result is an integer $a$. In the mixed number $a\frac{b}{c}$, $a$ is the integer part, and $\frac{b}{c}$ is the proper fraction part.
+
+(Fracciones equivalentes)
+**Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. The value of each fraction itself is the same in equivalent fractions.
+
+(Propiedad de las fracciones equivalentes)
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a \cdot c}{b \cdot c}$.
+
+(Fracciones complejas)
+**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
+
+(Fracciones negativas)
+**Negative fractions**: when either the numerator is negative, or the denominator is negative, the fraction itself is negative, $\frac{-a}{b} = -\frac{a}{b}$, and $\frac{a}{-b} = -\frac{a}{b}$.
 
 ## Number approximation (Aproximación de números)
 
@@ -196,6 +238,15 @@ Adding a negative number is the same as subtracting its opposite (just as adding
 (Símbolo de sumatoria)
 **Summation symbol**: the symbol $\sum_i$ that represents the sum of the elements of the set to which $i$ belongs, e.g. $\sum_{i = 1}^{n}{x_i} = x_1 + x_2 + ... + x_n$, where $1, 2, ..., n$ is the set of values of $i$ over which the summation is done.
 
+(Adición de fracciones con denominador común)
+**Addition of fractions with common denominators**: the same as normal addition. It must be noted that $\frac{a}{b} = a\frac{1}{b}$, which means that $\frac{a}{b} + \frac{c}{b} = a\frac{1}{b} + c\frac{1}{b} = (a + c)\frac{1}{b} = \frac{a + c}{b}$.
+
+(Adición de fracciones con denominador diferente)
+**Addition of fractions with different denominators**: first the fractions being added must have common denominators, for this, each fraction is converted to an equivalent fraction such that its denominator is the common one. The common denominator can be found as the least common denominator of the fractions. The addition is done like regular addition when the denominators are common.
+
+(Adición de números mixtos)
+**Addition of mixed numbers**: like regular addition. The integer parts of the mixed numbers can be added directly, and the proper fraction parts are added with the rules of addition of fractions, the result is the sum of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
+
 ## Subtraction of real numbers (Sustracción de números reales)
 
 Subtraction is the operation of subtracting a number from another. Subtraction means starting at the end of the first number, and then moving in the opposite direction the amount of units being subtracted by the second number.
@@ -210,6 +261,15 @@ Subtracting a negative number means moving opposite to its direction, i.e. movin
 (Notación de la resta)
 **Subtraction notation**: the subtraction of $a$ from $b$ is $b - a = c$, read as $b$ minus $a$ ($b$ menos $a$), $b$ is called the minuend (minuendo), $a$ is called the subtrahend (sustraendo), the result $c$ is called the difference (diferencia)
 
+(Sustracción de fracciones con denominador común)
+**Subtraction of fractions with common denominators**: the same as normal subtraction. It must be noted that $\frac{a}{b} = a\frac{1}{b}$, which means that $\frac{a}{b} - \frac{c}{b} = a\frac{1}{b} - c\frac{1}{b} = (a - c)\frac{1}{b} = \frac{a - c}{b}$.
+
+(Sustracción de fracciones con denominador diferente)
+**Subtraction of fractions with different denominator**: first the fractions being subtracted must have common denominators, for this, each fraction is converted to an equivalent fraction such that its denominator is the common one. The common denominator can be found as the least common denominator of the fractions. The subtraction is done like regular subtraction when the denominators are common.
+
+(Sustracción de números mixtos)
+**Subtraction of mixed numbers**: like regular subtraction. The integer parts of the mixed numbers can be subtracted directly, and the proper fraction parts are subtracted with the rules of subtraction of fractions, the result is the difference of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
+
 ## Multiplication of real numbers (Multiplicación de números reales)
 
 Multiplication is the operation of multiplying numbers together. Multiplication means the repeated addition of a number with itself, the amount of repeated additions is the other number in the operation.
@@ -219,6 +279,8 @@ Multiplication is the inverse operation of division. Given that multiplication m
 When multiplying or dividing by a negative number, it changes the sign of the other number, so multiplying or dividing a negative number by another negative number results in a positive number, and multiplying or dividing a positive number by a negative number results in a negative number.
 
 In a multiplication operation, if the amount of repeated additions is negative, then this means repeated addition with each addition done in the opposite direction. For example, $4 \cdot -3 = -4 -4 -4$, each addition is done in the opposite direction of $4$, and in $-4 \cdot -3 = 4 + 4 + 4$, each addition is done in the opposite direction of $-4$.
+
+Multiplication by a number is the same as division by its reciprocal, $a \cdot b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a \cdot b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
 
 (Operador multiplicación)
 **Multiplication operator**: this operator is $\times$, the times sign. Another is $\cdot$, the dot sign. Another is $()$, the parentheses signs.
@@ -241,6 +303,9 @@ In a multiplication operation, if the amount of repeated additions is negative, 
 (Multiplicación por -1)
 **Multiplication by -1**: a number multiplied by $-1$ results in its opposite, $-1 \cdot a = -a$. Using the definition of multiplication, multiplying $a$ by $-1$ is the same as adding $a$ one time in its opposite direction, which is $-a$, the opposite of $a$.
 
+(Multiplicación de fracciones)
+**Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
+
 (Paradigma de la multiplicación y división)
 **Multiplication and division paradigm**: multiplication and division both deal with three concepts: a set of elements, groups of elements, and the size of said groups. Each of this concepts is associated with a number, the total number of elements, the amount of groups, and the size of each group.
 
@@ -259,6 +324,8 @@ Division is the operation of dividing a first number by a second number. Divisio
 Division is the inverse operation of Multiplication. Division is not commutative.
 
 If the amount of repeated subtractions is negative, then this means repeated subtraction with each subtraction done in the opposite direction. For example, $24 \div -8 = -3$ so the number $-8$ is subtracted $-3$ times from $24$, i.e. $-8$ is subtracted three times in its opposite direction to reach 0 starting at 24. In $-24 \div -8 = 3$ the amount of repeated subtractions is positive, so $-8$ is subtracted directly from $-24$ three times to reach 0.
+
+Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \cdot \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the same place of $\frac{a}{b}$.
 
 (Operador división)
 **Division operator**: this operator is $\div$, the division sign. Another is $/$, the slash sign. Another is $\text{---}$, the horizontal line sign.
@@ -280,6 +347,17 @@ If the amount of repeated subtractions is negative, then this means repeated sub
 
 (División por -1)
 **Division by -1**: a number divided by $-1$ results in its opposite, $a \div -1 = -a$. Using the definition of division, dividing $a$ by $-1$ is the same as subtracting $-1$ from $a$ until reaching 0, which is $-a$ times, the opposite of $a$.
+
+(Recíproco de un número)
+**Reciprocal of a number**: given a number, its reciprocal is another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
+
+Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \cdot \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends, this place is the definition of the reciprocal of $a$.
+
+(Invertir un número)
+**Invert a number**: the process of finding the reciprocal of a number. When a number is inverted the result is its reciprocal.
+
+(División de fracciones)
+**Fraction division**: the operation $\frac{a}{b} \div \frac{c}{d}$. This implies two operations, division by $c$ and division by the reciprocal of $d$ which is the same as multiplication by $d$, so $\frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
 
 (Residuo | Resto)
 **Remainder**: in division, this is the number that is left over after doing the repeated subtraction, if any. In $\frac{a}{b} = q + \frac{r}{b}$, $a$, $b$ are numbers with $b$ being nonzero, $q$ is the quotient, and $r$ is the remainder.
@@ -389,6 +467,9 @@ The least common multiple of two integers can be calculated using their prime fa
 
 For example, to find the least common multiple of $12$ and $18$, the prime factors of $12$ are $2$, $2$, $3$, and the prime factors of $18$ are $2$, $3$, $3$. The least common multiple is $2 \cdot 2 \cdot 3 \cdot 3 = 36$, the number $2$ has a maximum multiplicity of $2$ (in $12$), and $3$ has a maximum multiplicity of $2$ (in $18$).
 
+(Mínimo común denominador)
+**Least common denominator**: the least common multiple of the denominators from a set of at least two fractions.
+
 (Máximo común divisor)
 **Greatest common divisor**: the biggest common divisor of a given set of at least two integers.
 
@@ -412,3 +493,15 @@ The greatest common divisor of two integers can be calculated using their prime 
 
 (Reducción de términos semejantes)
 **Combining like terms | Combine like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
+
+## Simplifications (Simplificaciones)
+
+(Reducir fracciones)
+**Reduce fractions**: form of simplification in which a fraction is expressed as an equivalent fraction that has no common factors between the numerator and the denominator. If there is a common factor, both the numerator and the denominator are divided by it, this simplifies the fraction.
+
+For example $\frac{6}{9} = \frac{4}{6}$, but their reduced form is $\frac{2}{3}$. In $\frac{6}{9}$ a common factor is $3$ and dividing the numerator and denominator by $3$ results in $\frac{2}{3}$. In $\frac{4}{6}$ a common factor is $2$ and dividing the numerator and denominator by $2$ results in $\frac{2}{3}$.
+
+The same simplification can be done with variables, e.g. $\frac{2 \cdot x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
+
+(Fracción irreducible)
+**Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
