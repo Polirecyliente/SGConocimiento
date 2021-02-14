@@ -27,9 +27,7 @@ About their place value, the first place to the right of the dot has its value m
 **Equivalent decimals**: different decimal numbers that have the same value. For example $10.3$ has the same value as $10.30$, or $10.300$.
 
 (Conversión entre decimales y fracciones)
-**Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from non repeating finite decimal (see repeating decimals in this file) to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
-
-Non repeating infinite decimals can't be converted to fraction (they are irrational numbers). The conversion from repeating decimal to fraction is done by 
+**Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from finite decimal (see finite decimals in this file) to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
 [Conversion decimal fraction code](Programs/Ch05/S01_01_Conversion_decimal_fraction.py)
 
 (Redondeo de decimales)
@@ -42,7 +40,7 @@ Non repeating infinite decimals can't be converted to fraction (they are irratio
 **Addition and subtraction of decimals**: like regular addition and subtraction. When using decimals, the decimal places are added or subtracted correspondingly.
 
 (Multiplicación y división de decimales)
-**Multiplication and division of decimals**: like regular multiplication and division. When doing division, an infinite amount of decimals can appear. When doing multiplication, the amount of decimals is up to the sum of the decimals in the factors.
+**Multiplication and division of decimals**: like regular multiplication and division. When doing division, an infinite amount of decimal digits can appear. When doing multiplication, the amount of decimal digits is up to the sum of the decimal digits in the factors.
 
 (Multiplicación y división por 10)
 **Multiplication and division by 10**: given that 10 is the base of the decimal place value system, multiplying a number by 10 moves the number one digit to the left, while dividing a number by 10 moves the number one digit to the right. For example, $2 \cdot 10 = 20$, and $2 \div 10 = 0.2$.
@@ -50,11 +48,23 @@ Non repeating infinite decimals can't be converted to fraction (they are irratio
 ## Decimals and fractions (Decimales y fracciones)
 [Ch05_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=453)
 
-(Decimales periódicos)
-**Repeating decimals**: a decimal in which a group of digits repeats itselft continuously. They can be expressed as fractions and vice versa.
+(Decimal finito)
+**Finite decimal**: a decimal with a finite amount of digits after the decimal period.
+
+(Decimal periódico)
+**Repeating decimal**: a decimal in which a group of digits after the decimal period repeats itself indefinitely. They can be expressed as fractions and vice versa.
 [Repeating decimals code](Programs/Ch05/S03_01_Repeating_decimals.py)
 
 Repeating decimals are denoted with a horizontal bar over the digits that repeat. For example, in $\frac{8}{7} = 1.\overline{142857}$, the line over $142857$ indicates that it repeats itself infinitely many times.
+
+(Conversión de decimal periódico a fracción)
+**Conversion from repeating decimal to fraction**: The conversion from repeating decimal to fraction is done by creating two numbers, each of which is the product of the decimal by a different power of 10, and then subtracting both numbers and dividing that difference by the subtraction of said powers of 10 (See Programs/Ch05/S03_01_Repeating_decimals.py).
+
+Repeating decimals have a few parts, for example, in the number $894.57448132653448132653448132653448132653448132653$, the unique part (parte única) is $894.57$, and the repeating part (parte periódica) is $448132653$. In itself, the unique part has two parts (as any decimal number), the decimal part and the integer part.
+
+For the unique part $894.57$, the original number is multiplied by 10 to the positive power of the place of the rightmost digit of the unique part, in this case $10^2$. For the repeating part, the original number is multiplied by 10 to the power of the sum of the amount of repeating digits and the power of 10 used for the unique part (in this case $2$). The amount of digits in $448132653$ is $9$, so for the repeating part, the original number is multiplied by $10^{9 + 2} = 10^{11}$.
+
+Now to subtract these two products, let $a = 894.57448132653448132653448132653448132653448132653$, so $a 10^2 = 89457.448132653448132653448132653448132653448132653$, and $a 10^{11} = 89457448132653.448132653448132653448132653448132653448132653$, therefore $a 10^{11} - a 10^2 = 89457448043196$, as can be seen, this subtraction results in an integer. Continuing, $a 10^{11} - a 10^2 = a (10^{11} - 10^2)$, so $a = \frac{89457448043196}{(10^{11} - 10^2)} = \frac{89457448043196}{99999999900}$.
 
 (Círculo)
 **Circle**: shape in which all of its points are at the same distance from its center.
@@ -111,7 +121,7 @@ An equation with decimals can have a decimal solution, just like a regular solut
 **Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
 
 (La media)
-**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of said set.
+**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of the set.
 
 > Definition of the mean
 >
@@ -139,7 +149,7 @@ An equation with decimals can have a decimal solution, just like a regular solut
 The notation of ratios in particular, includes the use of the colon : symbol to replace the division symbol. So the ratio $\frac{a}{b}$ can be denoted as $a:b$. If $b = 1$ then the ratio is still presented as $\frac{a}{1}$, and if the ratio is an improper fraction, it is not converted to a mixed number.
 
 (elevación sobre avance de una pendiente)
-**rise over run of a slope**: the fraction of vertical distance called "rise" over the horizontal distance called "run" in a slope.
+**rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
 
 (Tasa)
 **Rate**: a fraction of any two numbers that are measured in differente units or scales, so the unit of a rate is the fraction of the units. For example the rate of speed which is measured as a fraction of distance over time.
@@ -158,15 +168,14 @@ Ratios can be considered rates when the particular units in the numerator and de
 Simplification of square roots is done like regular simplification.
 [Simplification of radicals code](Programs/Ch05/S07_01_Simplification_of_radicals.py)
 
-Squared numbers can be seen as squares in a 2D grid. Let $n$ be the area of a given square, then $\sqrt{n}$ is the measure of its side's length.
-
-The symbol around $n$ in $\sqrt{n}$ is called the radical sign (signo de radical), it acts as a grouping symbol for the expression inside it.
+(Signo de radical)
+**Radical sign**: The symbol around $n$ in $\sqrt{n}$ is the radical sign, it acts as a grouping symbol for the expression inside it. $\sqrt{n} = n^{1/2}$, and $\sqrt[7]{n} = n^{1/7}$, in general $\sqrt[k]{n} = n^{1/k}$.
 
 (Cuadrado perfecto)
 **Perfect square**: any whole number that is the square of an integer. For example $9$ is the perfect square of $3$, because $3^2 = 9$ and $\sqrt{9} = 3$.
 
 (Raíz cuadrada)
-**Square root**: given two numbers $m$, $n$, such that $m = n^2$, then $n$ is the square root of $m$, $n = \sqrt{m}$.
+**Square root**: given two numbers $m$, $n$, such that $m = n^2$, then $n$ is the square root of $m$, $n = \sqrt{m}$. Squared numbers can be seen as squares in a 2D grid. Let $m$ be the area of a given square, then $n$ is the measure of its side's length.
 
 (Raíz cuadrada principal)
 **Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.

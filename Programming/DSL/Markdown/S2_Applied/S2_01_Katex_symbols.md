@@ -444,43 +444,44 @@
 <!-- #C# --- Functions -->
 
 <!-- # |----- -->
-| Function description    | Example                              |
-| :---------------------- | :----------------------------------: |
-| Fraction                | $\frac{A}{B}$ or $A \over B$         |
-| Textstyle fraction      | $\tfrac{A}{B}$                       |
-| Displaystyle fraction   | $\dfrac{A}{B}$                       |
-| Continued fraction      | $\cfrac{A}{B}$                       |
-| Combination             | $\binom{n}{k}$ or $n \choose k$      |
-| Square root             | $\sqrt{A}$                           |
-| Sine                    | $\sin{x}$                            |
-| Hyperbolic sine         | $\sinh{x}$ or $\sh{x}$               |
-| Arcsine                 | $\arcsin{x}$                         |
-| Cosine                  | $\cos{x}$                            |
-| Hyperbolic cosine       | $\cosh{x}$ or $\ch{x}$               |
-| Arccosine               | $\arccos{x}$                         |
-| Tangent                 | $\tan{x}$ or $\tg{x}$                |
-| Hyperbolic tangent      | $\tanh{x}$ or $\th{x}$               |
-| Arctangent              | $\arctan{x}$ or $\arctg{x}$          |
-| Cotangent               | $\cot{x}$ or $\cotg{x}$ or $\ctg{x}$ |
-| Hyperbolic cotangent    | $\coth{x}$ or $\cth{x}$              |
-| Arccotangent            | $\arcctg{x}$                         |
-| Secant                  | $\sec{x}$                            |
-| Cosecant                | $\csc{x}$ or $\cosec{x}$             |
-| Logarithm               | $\log{x}$                            |
-| Natural logarithm       | $\ln{x}$                             |
-| Base 2 logarithm        | $\lg{x}$                             |
-| Exponential             | $\exp{x}$                            |
-| Determinant             | $\det{x}$                            |
-| Maximum                 | $\max{x}$                            |
-| Minimum                 | $\min{x}$                            |
-| Supremum                | $\sup{x}$                            |
-| Infimum                 | $\inf{x}$                            |
-| Greatest common divisor | $\gcd{x}$                            |
-| Limit                   | $\lim{x}$                            |
-| Probability limit       | $\plim{x}$                           |
-| Hom functor             | $\hom{x}$                            |
-| Kernel                  | $\ker{x}$                            |
-| Degree of polynomial    | $\deg{x}$                            |
+| Function description     | Example                              |
+| :----------------------- | :----------------------------------: |
+| Fraction                 | $\frac{A}{B}$ or $A \over B$         |
+| Textstyle fraction       | $\tfrac{A}{B}$                       |
+| Displaystyle fraction    | $\dfrac{A}{B}$                       |
+| Continued fraction       | $\cfrac{A}{B}$                       |
+| Combination              | $\binom{n}{k}$ or $n \choose k$      |
+| Square root              | $\sqrt{A}$                           |
+| General root of a number | $\sqrt[n]{A}$                        |
+| Sine                     | $\sin{x}$                            |
+| Hyperbolic sine          | $\sinh{x}$ or $\sh{x}$               |
+| Arcsine                  | $\arcsin{x}$                         |
+| Cosine                   | $\cos{x}$                            |
+| Hyperbolic cosine        | $\cosh{x}$ or $\ch{x}$               |
+| Arccosine                | $\arccos{x}$                         |
+| Tangent                  | $\tan{x}$ or $\tg{x}$                |
+| Hyperbolic tangent       | $\tanh{x}$ or $\th{x}$               |
+| Arctangent               | $\arctan{x}$ or $\arctg{x}$          |
+| Cotangent                | $\cot{x}$ or $\cotg{x}$ or $\ctg{x}$ |
+| Hyperbolic cotangent     | $\coth{x}$ or $\cth{x}$              |
+| Arccotangent             | $\arcctg{x}$                         |
+| Secant                   | $\sec{x}$                            |
+| Cosecant                 | $\csc{x}$ or $\cosec{x}$             |
+| Logarithm                | $\log{x}$                            |
+| Natural logarithm        | $\ln{x}$                             |
+| Base 2 logarithm         | $\lg{x}$                             |
+| Exponential              | $\exp{x}$                            |
+| Determinant              | $\det{x}$                            |
+| Maximum                  | $\max{x}$                            |
+| Minimum                  | $\min{x}$                            |
+| Supremum                 | $\sup{x}$                            |
+| Infimum                  | $\inf{x}$                            |
+| Greatest common divisor  | $\gcd{x}$                            |
+| Limit                    | $\lim{x}$                            |
+| Probability limit        | $\plim{x}$                           |
+| Hom functor              | $\hom{x}$                            |
+| Kernel                   | $\ker{x}$                            |
+| Degree of polynomial     | $\deg{x}$                            |
 <!-- # |----- -->
 
 <!-- #C# --- Relational operators -->

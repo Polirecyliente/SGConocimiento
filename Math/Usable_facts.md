@@ -11,6 +11,7 @@
 #C# Whole numbers (Números naturales y el cero)
 #C# Integer numbers (Números enteros)
 #C# Rational numbers (Números racionales)
+#C# Transcendental numbers (Números trascendentes)
 #C# Number approximation (Aproximación de números)
 #C# Equations and inequalities (Ecuaciones y desigualdades)
 #C# Addition of real numbers (Adición de números reales)
@@ -22,7 +23,13 @@
 #C# Properties of real numbers (Propiedades de los números reales)
 #C# Multiples and factors of integers (Múltiplos y factores de los enteros)
 #C# Algebra definitions (Definiciones de álgebra)
+#C# Linear equations (Ecuaciones lineales)
 #C# Simplifications (Simplificaciones)
+#C# Basic shapes and their formulas (Formas básicas y sus fórmulas)
+#C# Measures of central tendency (Medidas de tendencia central)
+#C# Probability basics (Bases de la probabilidad)
+#C# Science and engineering definitions (Definiciones de ciencia e ingeniería)
+#C# Science and engineering formulas (Fórmulas de ciencia e ingeniería)
 
 #T# Beginning of content
 -->
@@ -150,8 +157,23 @@ About their place value, the first place to the right of the dot has its value m
 (Decimales equivalentes)
 **Equivalent decimals**: different decimal numbers that have the same value. For example $10.3$ has the same value as $10.30$, or $10.300$.
 
-(Conversión entre decimales y fracciones)
-**Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from non repeating finite decimal to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
+(Decimal finito)
+**Finite decimal**: a decimal with a finite amount of digits after the decimal period.
+
+(Decimal periódico)
+**Repeating decimal**: a decimal in which a group of digits after the decimal period repeats itself indefinitely. Repeating decimals are denoted with a horizontal bar over the digits that repeat. For example, in $\frac{8}{7} = 1.\overline{142857}$, the line over $142857$ indicates that it repeats itself infinitely many times.
+
+## Transcendental numbers (Números trascendentes)
+
+The transcendental numbers are numbers that can't be obtained as a solution of a polynomial with rational coefficients.
+
+For example $\sqrt{2}$ is not transcendental because it is the solution of $x^2 = 2$, which is a polynomial with rational coefficients.
+
+(La constante pi)
+**The pi constant**: the fraction of the circumference over the diameter. It's represented with the greek letter pi, which is $\pi$. The value of pi is roughly $\pi = 3.14159...$, this is a non repeating decimal. $\pi$ is a transcendental number because there is no polynomial with rational coefficients whose solution is $\pi$.
+
+(Aproximación fraccionaria de pi)
+**Fractional approximation of pi**: there are infinitely many fractional approximations of pi, one of the simplest is $\frac{22}{7}$.
 
 ## Number approximation (Aproximación de números)
 
@@ -317,6 +339,12 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 (Multiplicación de fracciones)
 **Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
 
+(Multiplicación de decimales)
+**Multiplication of decimals**: in the product of decimal numbers, the amount of decimal digits is up to the sum of the decimal digits in the factors.
+
+(Multiplicación y división por 10)
+**Multiplication and division by 10**: given that 10 is the base of the decimal place value system, multiplying a number by 10 moves the number one digit to the left, while dividing a number by 10 moves the number one digit to the right. For example, $2 \cdot 10 = 20$, and $2 \div 10 = 0.2$.
+
 (Paradigma de la multiplicación y división)
 **Multiplication and division paradigm**: multiplication and division both deal with three concepts: a set of elements, groups of elements, and the size of said groups. Each of this concepts is associated with a number, the total number of elements, the amount of groups, and the size of each group.
 
@@ -392,8 +420,23 @@ Using the shown symbols, the exponential notation is read as $a$ to the $n$-th p
 (Números al cuadrado)
 **Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. $3$ to the power of $2$ is $9$, or $3$ squared is $9$ ($3$ al cuadrado es $9$).
 
+(Cuadrado perfecto)
+**Perfect square**: any whole number that is the square of an integer. For example $9$ is the perfect square of $3$, because $3^2 = 9$ and $\sqrt{9} = 3$.
+
 (Números al cubo)
 **Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. $5$ to the power of $3$ is $125$, or $5$ cubed is $125$ ($5$ al cubo es $125$).
+
+(Radicación de números)
+**Taking a root of a number**: the exponentiation operation using as exponent the reciprocal of an integer, e.g. $a^{1/7}$ in which the exponent is the reciprocal of $7$, this is read as taking the seventh root of $a$ (sacar la raíz séptima de $a$).
+
+(Signo de radical)
+**Radical sign**: The symbol around $n$ in $\sqrt{n}$ is the radical sign, it acts as a grouping symbol for the expression inside it. $\sqrt{n} = n^{1/2}$, and $\sqrt[7]{n} = n^{1/7}$, in general $\sqrt[k]{n} = n^{1/k}$.
+
+(Raíz cuadrada)
+**Square root**: given two numbers $m$, $n$, such that $m = n^2$, then $n$ is the square root of $m$, $n = \sqrt{m}$. Squared numbers can be seen as squares in a 2D grid. Let $m$ be the area of a given square, then $n$ is the measure of its side's length.
+
+(Raíz cuadrada principal)
+**Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.
 
 ## Order of operations (Orden de las operaciones)
 
@@ -505,6 +548,11 @@ The greatest common divisor of two integers can be calculated using their prime 
 (Reducción de términos semejantes)
 **Combining like terms | Combine like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
+## Linear equations (Ecuaciones lineales)
+
+(elevación sobre avance de una pendiente)
+**rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
+
 ## Simplifications (Simplificaciones)
 
 (Reducir fracciones)
@@ -516,3 +564,90 @@ The same simplification can be done with variables, e.g. $\frac{2 \cdot x}{x}$ c
 
 (Fracción irreducible)
 **Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
+
+(Conversión entre decimales y fracciones)
+**Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from finite decimal to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
+
+(Conversión de decimal periódico a fracción)
+**Conversion from repeating decimal to fraction**: The conversion from repeating decimal to fraction is done by creating two numbers, each of which is the product of the decimal by a different power of 10, and then subtracting both numbers and dividing that difference by the subtraction of said powers of 10 (See Programs/Ch05/S03_01_Repeating_decimals.py).
+
+Repeating decimals have a few parts, for example, in the number $894.57448132653448132653448132653448132653448132653$, the unique part (parte única) is $894.57$, and the repeating part (parte periódica) is $448132653$. In itself, the unique part has two parts (as any decimal number), the decimal part and the integer part.
+
+For the unique part $894.57$, the original number is multiplied by 10 to the positive power of the place of the rightmost digit of the unique part, in this case $10^2$. For the repeating part, the original number is multiplied by 10 to the power of the sum of the amount of repeating digits and the power of 10 used for the unique part (in this case $2$). The amount of digits in $448132653$ is $9$, so for the repeating part, the original number is multiplied by $10^{9 + 2} = 10^{11}$.
+
+Now to subtract these two products, let $a = 894.57448132653448132653448132653448132653448132653$, so $a 10^2 = 89457.448132653448132653448132653448132653448132653$, and $a 10^{11} = 89457448132653.448132653448132653448132653448132653448132653$, therefore $a 10^{11} - a 10^2 = 89457448043196$, as can be seen, this subtraction results in an integer. Continuing, $a 10^{11} - a 10^2 = a (10^{11} - 10^2)$, so $a = \frac{89457448043196}{(10^{11} - 10^2)} = \frac{89457448043196}{99999999900}$.
+
+## Basic shapes and their formulas (Formas básicas y sus fórmulas)
+
+(Círculo)
+**Circle**: shape in which all of its points are at the same distance from its center.
+
+(Radio de un círculo)
+**Radius of a circle**: the distance from the center of a circle to any of its points.
+
+(Diámetro de un círculo)
+**Diameter of a circle**: the maximum possible distance between two points in a circle. This is the same as twice the radius.
+
+(Circunferencia de un círculo)
+**Circumference of a circle**: the measure of the distance around a circle, i.e. the distance covered by its points.
+
+(Sector circular)
+**Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
+
+(Fórmula de la circunferencia)
+**Circumference formula**: formula to find the length of the circumference of a circle. Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then $C = \pi d$ or also $C = 2 \pi r$.
+
+(Fórmula del área de un círculo)
+**Circle area formula**: formula to find the area occupied by a circle. Let $A$ be the area of a circle in squared length units, $r$ be the radius in length units, then $A = \pi \cdot r^2$.
+
+## Measures of central tendency (Medidas de tendencia central)
+
+(Promedios)
+**Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
+
+(La media)
+**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of the set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then $\bar{x} = \sum_i{\frac{x_i}{N}}$.
+
+(Mediana)
+**Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
+
+(Moda)
+**Mode**: the number with the highest frequency in a set. A set of numbers can have several modes if several numbers have the same highest frequency, or none if all the numbers have the same frequency.
+
+## Probability basics (Bases de la probabilidad)
+
+(Frecuencia de un número en un conjunto)
+**Frequency of a number in a set**: the amount of times a given number is repeated in a set.
+
+(Probabilidad de un evento)
+**Probability of an event**: the fraction of the number of times an event happens over the number of general outcomes with or without the event.
+
+For example, in a set of $N$ numbers, the probability $P(x)$ to obtain a given number $x$ that has a frequency of $f_x$ is $P(x) = \frac{f_x}{N}$.
+
+## Science and engineering definitions (Definiciones de ciencia e ingeniería)
+
+(Ratio)
+**Ratio**: a fraction of any two numbers that are measured with the same unit or scale, therefore ratios have no units themselves. For example the ratio of height to width, both are measured in distance.
+
+The notation of ratios in particular, includes the use of the colon : symbol to replace the division symbol. So the ratio $\frac{a}{b}$ can be denoted as $a:b$. If $b = 1$ then the ratio is still presented as $\frac{a}{1}$, and if the ratio is an improper fraction, it is not converted to a mixed number.
+
+(Tasa)
+**Rate**: a fraction of any two numbers that are measured in differente units or scales, so the unit of a rate is the fraction of the units. For example the rate of speed which is measured as a fraction of distance over time.
+
+Ratios can be considered rates when the particular units in the numerator and denominator are also considered, even though they are the same. For example, width over height can be seen as a ratio, but also as the rate of width per unit of height, this rate is still dimensionless like a ratio.
+
+(Tasa unitaria)
+**Unit rate**: a rate expressed with a denominator of $1$.
+
+(Precio unitario)
+**Unit price**: a unit rate in which the unit is $\text{\textdollar}/unit$, it tells the price per unit.
+
+## Science and engineering formulas (Fórmulas de ciencia e ingeniería)
+
+(Fórmula de tiempo en caída libre)
+**Free fall time formula**: formula to find the fall time in a free fall scenario. The fall starts at a given height, and the time calculated by this formula is the time from the moment the fall starts, to the moment of reaching the ground.
+
+Let $t$ be the fall time in time units, $h$ be the starting height in length units, $g$ be the standard gravity (gravedad estándar), then $t = \sqrt{\frac{2 \cdot h}{g}}$.
+
+(Fórmula de la velocidad antes de frenar)
+**Formula of the speed before braking**: formula to find the speed of a car before braking, from the length of the skid mark. Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then $v = \sqrt{24 \cdot d}$.
