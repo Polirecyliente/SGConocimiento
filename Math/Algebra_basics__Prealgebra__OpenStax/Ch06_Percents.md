@@ -47,13 +47,13 @@ The reciprocal of a percent, $\frac{1}{p\%}$, means the reciprocal of a ratio. I
 
 Isolating the percent allows finding its value from the amount and the base, $p\% = \frac{A}{B}$.
 
-(porcentaje de aumento, porcentaje de disminución)
-**percent increase, percent decrease**: in general, the percent change (porcentaje de cambio) from a variable is measured as the difference of final value minus initial value, divided over the initial value, this result tells the amount of units changed per group of $1$ unit before change, and this can be converted to a percent.
+(Porcentaje de aumento, porcentaje de disminución)
+**Percent increase, percent decrease**: in general, the percent change (porcentaje de cambio) from a variable is measured as the difference of final value minus initial value, divided over the initial value, this result tells the amount of units changed per group of $1$ unit before change, and this can be converted to a percent.
 
 > Percent change notation
 >
 > Let $V_i$ be the initial value of a given variable, $V_f$ be the final value of said variable, $\Delta p\%$ be the percent change, then
-> $$\Delta p\% = \frac{V_f - V_i}{V_i} \cdot 100\%$$
+> $$\Delta p\% = \frac{V_f - V_i}{V_i} 100\%$$
 
 Note that the words "initial" and "final" do not have to mean that they are separated in time, they can be separated under any criteria wanted.
 
@@ -68,9 +68,9 @@ Given that $V_f$ can be smaller or bigger than $V_i$, $\Delta p\%$ can be negati
 > Price with sales tax formula
 >
 > Let $P_i$ be the price before taxes in monetary units, $P$ be the price with sales tax in monetary units, and $t$ be the sales tax as a ratio, then
-> $$P = P_i + t \cdot P_i$$
+> $$P = P_i + t P_i$$
 
-The term $t \cdot P_i$ is hold as taxes by businesses, and then paid to the government.
+The term $t P_i$ is hold as taxes by businesses, and then paid to the government.
 
 (Comisión por ventas)
 **Sales commission**: extra wage paid to a sales person for the value sold by them.
@@ -78,7 +78,7 @@ The term $t \cdot P_i$ is hold as taxes by businesses, and then paid to the gove
 > Basic commission formula
 >
 > Let $C$ be the commission earned by the sales person in monetary units, $P$ be the sales value of the goods or services sold in monetary units, and $c$ be the commission rate (tasa de comisión) as a ratio, then
-> $$C = c \cdot P$$
+> $$C = c P$$
 
 The commission rate $c$ is commonly expressed as a percent, which means the percent of each monetary unit sold that becomes commission.
 
@@ -89,8 +89,8 @@ The commission rate $c$ is commonly expressed as a percent, which means the perc
 >
 > Let $D$ be the amount of discount in monetary units, $P_i$ be the regular price in monetary units, $P$ be the price after discount in monetary units, $d$ be the discount rate (tasa de descuento) as a ratio, then
 > $$\begin{gathered}
-> D = d \cdot P_i\\
-> P = P_i - D = P_i - d \cdot P_i
+> D = d P_i\\
+> P = P_i - D = P_i - d P_i
 > \end{gathered}$$
 
 The discount rate $d$ is commonly expressed as a percent, which means the percent of each monetary unit of the price that becomes discounted.
@@ -102,14 +102,16 @@ The discount rate $d$ is commonly expressed as a percent, which means the percen
 >
 > Let $W$ be the wholesale price of a good in monetary units, $M$ be the amount of mark-up in monetary units, $L$ be the list price in monetary units, and $m$ be the mark-up rate as a ratio, then
 > $$\begin{gathered}
-> M = m \cdot W\\
-> L = W + M = W + m \cdot W
+> M = m W\\
+> L = W + M = W + m W
 > \end{gathered}$$
 
 The mark-up rate is commonly expressed as a percent, which means the percent of each monetary unit of the wholesale price that becomes mark-up.
 
 ## Simple interest (Interés simple)
 [Ch06_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=568)
+
+The simple interest is a way to calculate the amount of interest to be received for an investment or paid for a loan.
 
 (Principal de una inversión)
 **Investment principal**: the amount of money put into an investment.
@@ -120,8 +122,8 @@ The mark-up rate is commonly expressed as a percent, which means the percent of 
 (Interés financiero)
 **Financial interest**: money received in return for an investment, or paid for a loan.
 
-(Interés simple)
-**Simple interest**: a way to calculate the amount of interest to be received for an investment or paid for a loan.
+(Fórmula del interés simple)
+**Simple interest formula**: formula to calculate the simple interest from the loan principal, the interest rate, and the time elapsed since the loan started.
 
 > Simple interest formula
 >
@@ -132,7 +134,7 @@ The mark-up rate is commonly expressed as a percent, which means the percent of 
 [Ch06_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=578)
 
 (Proporción)
-**Proportion**: an equation in which two fractions (ratios or rates) are equated
+**Proportion**: an equation in which two fractions (ratios or rates) are equated.
 
 > Proportion
 >
@@ -141,7 +143,7 @@ The mark-up rate is commonly expressed as a percent, which means the percent of 
 > This is a proportion, it's read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
 
 (Producto cruzado)
-**Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $a \cdot d = c \cdot b$. This concept is used to test if a proportion is true without dividing.
+**Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $ad = cb$. This concept is used to test if a proportion is true without dividing.
 
 (Proporción con porcentajes)
 **Percent proportion**: a proportion in which one of the fractions is a percentage. Using terms from before, let $B$ be the base, $A$ the amount, then $\frac{A}{B} = \frac{p}{100}$, this means that the amount $A$ is to the base $B$ as $p$ is to $100$.
