@@ -19,12 +19,10 @@
 (Números racionales)
 **Rational numbers**: the set of numbers that can be represented via fractions. This is an ordered set in which the relational operators can be used to compare the values of two rational numbers.
 
-Rational numbers when represented as decimals, have their decimal part with a finite amount of digits, or if the amount is infinite then it repeats itself.
+Rational numbers when represented as decimals, have their decimal part with a finite amount of digits, or if the amount is infinite then it repeats itself, which means that a decimal number that is rational can always be represented as a fraction.
 
 (Números irracionales)
-**Irrational numbers**: the set of numbers such as $\pi$, in which the decimal part of the number is infinite and never repeats itself.
-
-The square root of numbers that are not perfect squares is also irrational.
+**Irrational numbers**: the set of numbers such as $\pi$, in which the decimal part of the number is infinite and never repeats itself. The square root of numbers that are not perfect squares is also irrational.
 
 The fact that they are called irrational, doesn't necessarily mean that they can't have predictable patterns, for example, a number such as $0.101001000100001000001...$ is irrational by definition, but it can be understood as the number with a $1$ in between a steady growing number of $0$s. This pattern is infinite and never repeats itself, so it's an irrational number.
 
@@ -61,11 +59,9 @@ See Ch01_Whole_numbers.md for the commutative properties of addition and multipl
 > Distributive property
 >
 > Let $a$, $b$, $c$ be numbers, then
-> $$a \cdot (b + c) = a \cdot b + a \cdot c$$
+> $$a (b + c) = a b + a c$$
 
-This property shows itself when multiplying $a$ by the sum $b + c$, the resulting product can be seen as the sum of $a \cdot b$ and $a \cdot c$.
-
-This property actually includes subtraction as a case of the sum, given that the addends can be negative numbers.
+This property shows itself when multiplying $a$ by the sum $b + c$, the resulting product can be seen as the sum of $a b$ and $a c$. This property actually includes subtraction as a case of the sum, given that the addends can be negative numbers.
 
 ## Inverse properties, zero properties (Propiedades inversas, propiedades del cero)
 [Ch07_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=635)
@@ -92,12 +88,12 @@ $0$ is the additive identity. (see Ch01_Whole_numbers.md)
 > Inverse property of multiplication
 >
 > Let $a$ be a number, then
-> $$a \cdot \frac{1}{a} = 1$$
+> $$a \frac{1}{a} = 1$$
 
 $1$ is the multiplicative identity. (see Ch01_Whole_numbers.md)
 
 (Multiplicación por 0)
-**Multiplication by 0**: the product of any number and 0 is 0
+**Multiplication by 0**: the product of any number and 0 is 0.
 
 > Multiply a number by 0
 >
@@ -111,7 +107,7 @@ See Ch01_Whole_numbers.md for the properties of 0 in the division operation.
 ## Systems of measurement (Sistemas de medida)
 [Ch07_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=646)
 
-The systems of measurement are systems intended to be internally consistent, to provide a unit of measure for any physical quantity. The main quantities measured in these systems are time and space (distance, area, volume, see Ch09_Math_models_Geometry.md), derived quantities are also included like speed (distance divided by time), and also units of measure for other quantities, like electric field, radiation levels, etcetera.
+The systems of measurement are systems intended to be internally consistent, to provide a unit of measure for any physical quantity. The main quantities measured in these systems are time and space (time, distance, area, volume, see Ch09_Math_models_Geometry.md), derived quantities are also included like speed (distance divided by time), and also units of measure for other quantities, like electric field, radiation levels, etcetera.
 
 There are two main systems of measurement used at the time of this writing, the U.S. system and the international metric system.
 

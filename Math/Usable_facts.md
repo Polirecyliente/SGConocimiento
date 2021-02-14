@@ -11,6 +11,8 @@
 #C# Whole numbers (Números naturales y el cero)
 #C# Integer numbers (Números enteros)
 #C# Rational numbers (Números racionales)
+#C# Irrational numbers (Números irracionales)
+#C# Real numbers (Números reales)
 #C# Transcendental numbers (Números trascendentes)
 #C# Number approximation (Aproximación de números)
 #C# Equations and inequalities (Ecuaciones y desigualdades)
@@ -111,7 +113,9 @@ The opposite of $a$ is $-a$, so $-(a) = -a$. The opposite of $-a$ is $a$, so $-(
 
 ## Rational numbers (Números racionales)
 
-This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two rational numbers.
+The rational numbers form the set of numbers that can be represented via fractions. This is an ordered set in which the relational operators can be used to compare the values of two rational numbers.
+
+Rational numbers when represented as decimals, have their decimal part with a finite amount of digits, or if the amount is infinite then it repeats itself, which means that a decimal number that is rational can always be represented as a fraction.
 
 (Fracciones)
 **Fractions**: numbers that represent a part of a whole number or an integer, so there are many fractions between any two integers.
@@ -172,6 +176,16 @@ About their place value, the first place to the right of the dot has its value m
 Let $p\%$ be a percent, $B$ be the base, $A$ be the amount, then $A = p\% \cdot B$. Isolating the percent allows finding its value from the amount and the base, $p\% = \frac{A}{B}$.
 
 The reciprocal of a percent, $\frac{1}{p\%}$, means the reciprocal of a ratio. If a percent $p\%$ means the part over the total, i.e. there are $p$ part units per group of $100$ total units, then $\frac{1}{p\%}$ means that there are $100$ total units per group of $p$ part units.
+
+## Irrational numbers (Números irracionales)
+
+The irrational numbers form the set of numbers such as $\pi$, in which the decimal part of the number is infinite and never repeats itself. The square root of numbers that are not perfect squares is also irrational.
+
+The fact that they are called irrational, doesn't necessarily mean that they can't have predictable patterns, for example, a number such as $0.101001000100001000001...$ is irrational by definition, but it can be understood as the number with a $1$ in between a steady growing number of $0$s. This pattern is infinite and never repeats itself, so it's an irrational number.
+
+## Real numbers (Números reales)
+
+The set of real numbers is the union of the sets of rational and irrational numbers.
 
 ## Transcendental numbers (Números trascendentes)
 
@@ -287,6 +301,15 @@ Adding a negative number is the same as subtracting its opposite (just as adding
 (Propiedad conmutativa de la suma)
 **Commutative property of addition**: changing the order of the addends doesn't change the sum, $a + b = b + a$.
 
+(Propiedad asociativa de la adición)
+**Associative property of addition**: using grouping symbols to group addition operations does not change the sum, $a + b + c = (a + b) + c = a + (b + c)$.
+
+(Inverso aditivo)
+**Additive inverse**: the opposite of a number, is its additive inverse. The additive inverse of a number $a$ is $-a$.
+
+(Propiedad inversa aditiva)
+**Inverse property of addition**: the sum of a number and its additive inverse is zero, $a + (-a) = a - a = 0$.
+
 (Símbolo de sumatoria)
 **Summation symbol**: the symbol $\sum_i$ that represents the sum of the elements of the set to which $i$ belongs, e.g. $\sum_{i = 1}^{n}{x_i} = x_1 + x_2 + ... + x_n$, where $1, 2, ..., n$ is the set of values of $i$ over which the summation is done.
 
@@ -352,8 +375,25 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 (Propiedad conmutativa de la multiplicación)
 **Commutative property of multiplication**: changing the order of the factors doesn't change the product, $a \cdot b = b \cdot a$.
 
+(Propiedad asociativa de la multiplicación)
+**Associative property of multiplication**: using grouping symbols to group multiplication operations does not change the product, $a \cdot b \cdot c = (a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+
+(Propiedad distributiva de la multiplicación respecto a la suma)
+**Distributive property of multiplication over addition**: when a group of addends (grouped using a grouping symbol) is multiplied by a number, it's the same as the sum of the products of said number by each addend, $a (b + c) = a b + a c$.
+
+This property shows itself when multiplying $a$ by the sum $b + c$, the resulting product can be seen as the sum of $a b$ and $a c$. This property actually includes subtraction as a case of the sum, given that the addends can be negative numbers.
+
+(Inverso multiplicativo)
+**Multiplicative inverse**: the reciprocal of a number, is its multiplicative inverse. The multiplicative inverse of a number $a$ is $\frac{1}{a}$.
+
+(Propiedad inversa de la multiplicación)
+**Inverse property of multiplication**: the product of a number and its multiplicative inverse is one, $a \frac{1}{a} = 1$.
+
 (Multiplicación por -1)
 **Multiplication by -1**: a number multiplied by $-1$ results in its opposite, $-1 \cdot a = -a$. Using the definition of multiplication, multiplying $a$ by $-1$ is the same as adding $a$ one time in its opposite direction, which is $-a$, the opposite of $a$.
+
+(Multiplicación por 0)
+**Multiplication by 0**: the product of any number and 0 is 0, $a \cdot 0 = 0$. This is because $a$ is added $0$ times with itself.
 
 (Multiplicación de fracciones)
 **Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
@@ -676,6 +716,105 @@ Ratios can be considered rates when the particular units in the numerator and de
 Let $V_i$ be the initial value of a given variable, $V_f$ be the final value of said variable, $\Delta p\%$ be the percent change, then $\Delta p\% = \frac{V_f - V_i}{V_i} 100\%$. Note that the words "initial" and "final" do not have to mean that they are separated in time, they can be separated under any criteria wanted.
 
 Given that $V_f$ can be smaller or bigger than $V_i$, $\Delta p\%$ can be negative or positive, if it's negative then that means that the percent change is a percent decrease, whereas if it's positive then that means that the percent change is a percent increase.
+
+(Sistemas de medida)
+**Systems of measurement**: The systems of measurement are systems intended to be internally consistent, to provide a unit of measure for any physical quantity. The main quantities measured in these systems are time and space (time, distance, area, volume), derived quantities are also included like speed (distance divided by time), and also units of measure for other quantities, like electric field, radiation levels, etcetera.
+
+There are two main systems of measurement used at the time of this writing, the U.S. system and the international metric system.
+
+(Sistema anglosajón de unidades)
+**United States customary units**: system of measurement with units for length, volume, weight, time, and more.
+
+The following table contains a few of the units of the United States customary units system of measurement. Inside parentheses appears the abbreviation of each unit of measure.
+
+| United States customary units      | Sistema anglosajón de unidades |
+| :--------------------------------: | :----------------------------: |
+| **Length**                         | **Longitud**                   |
+| 1 foot (ft) = 12 inches (in)       | 1 pie = 12 pulgadas            |
+| 1 yard (yd) = 3 feet (ft)          | 1 yarda = 3 pies               |
+| 1 mile (mi) = 5280 feet (ft)       | 1 milla = 5280 pies            |
+| **Volume**                         | **Volumen**                    |
+| 3 teaspoons (t) = 1 tablespoon (T) | 3 cucharaditas = 1 cucharada   |
+| 16 tablespoons (T) = 1 cup (C)     | 16 cucharadas = 1 taza         |
+| 1 cup (C) = 8 fluid ounces (fl oz) | 1 taza = 8 onzas fluidas       |
+| 1 pint (pt) = 2 cups (C)           | 1 pinta = 2 tazas              |
+| 1 quart (qt) = 2 pints (pt)        | 1 cuarto de galón = 2 pintas   |
+| 1 gallon (gal) = 4 quarts (qt)     | 1 galón = 4 cuartos de galón   |
+| **Weight**                         | **Peso**                       |
+| 1 pound (lb) = 16 ounces (oz)      | 1 libra = 16 onzas             |
+| 1 ton (ton) = 2000 pounds (lb)     | 1 tonelada = 2000 libras       |
+| **Time**                           | **Tiempo**                     |
+| 1 minute (min) = 60 seconds (s)    | 1 minuto = 60 segundos         |
+| 1 hour (h) = 60 minutes (min)      | 1 hora = 60 minutos            |
+| 1 day (day) = 24 hours (h)         | 1 día = 24 horas               |
+| 1 week (wk) = 7 days (days)        | 1 semana = 7 días              |
+| 1 year (yr) = 365 days (days)      | 1 año = 365 días               |
+
+(Sistema métrico internacional)
+**International metric system**: system of measurement whose units are based on powers of 10. Prefixes are used to indicate the power of 10.
+
+The following table contains a few of the units of the international metric system of measurement. Inside parentheses appears the abbreviation of each unit of measure.
+
+| International metric system | Sistema métrico internacional |
+| :-------------------------: | :---------------------------: |
+| **Length**                  | **Longitud**                  |
+| 1 meter (m) = 1 m           | 1 metro = 1 m                 |
+| 1 kilometer (km) = 1000 m   | 1 kilómetro = 1000 m          |
+| 1 hectometer (hm) = 100 m   | 1 hectómetro = 100 m          |
+| 1 dekameter (dam) = 10 m    | 1 decámetro = 10 m            |
+| 1 decimeter (dm) = 0.1 m    | 1 decímetro = 0.1 m           |
+| 1 centimeter (cm) = 0.01 m  | 1 centímetro = 0.01 m         |
+| 1 millimeter (mm) = 0.001 m | 1 milímetro = 0.001 m         |
+| **Mass**                    | **Masa**                      |
+| 1 gram (g) = 1 g            | 1 gramo = 1 g                 |
+| 1 kilogram (kg) = 1000 g    | 1 kilogramo = 1000 g          |
+| 1 hectogram (hg) = 100 g    | 1 hectogramo = 100 g          |
+| 1 dekagram (dag) = 10 g     | 1 decagramo = 10 g            |
+| 1 decigram (dg) = 0.1 g     | 1 decigramo = 0.1 g           |
+| 1 centigram (cg) = 0.01 g   | 1 centigramo = 0.01 g         |
+| 1 milligram (mg) = 0.001 g  | 1 miligramo = 0.001 g         |
+| **Volume**                  | **Volumen**                   |
+| 1 liter (L) = 1 L           | 1 litro = 1 L                 |
+| 1 kiloliter (kL) = 1000 L   | 1 kilolitro = 1000 L          |
+| 1 hectoliter (hL) = 100 L   | 1 hectolitro = 100 L          |
+| 1 dekaliter (daL) = 10 L    | 1 decalitro = 10 L            |
+| 1 deciliter (dL) = 0.1 L    | 1 decilitro = 0.1 L           |
+| 1 centiliter (cL) = 0.01 L  | 1 centilitro = 0.01 L         |
+| 1 milliliter (mL) = 0.001 L | 1 mililitro = 0.001 L         |
+
+(Conversión de unidades)
+**Unit conversion**: changing the units of a measure. Unit conversion is based on multiplying the unit to be changed by $1$, but writing $1$ in such a way that it changes the unit of measure. In general, given the units of measure $unit1$ and $unit2$, and given $A\ unit1 = B\ unit2$ meaning that $A$ units of $unit1$ are equal in measure to $B$ units of $unit2$, so $1 = \frac{B\ unit2}{A\ unit1}$, and also $1 = \frac{A\ unit1}{B\ unit2}$. These fractions are called conversion factors (factores de conversión).
+
+Using real units, $1\ foot = 12\ inches$, so $1 = \frac{1\ foot}{12\ inches}$, and $1 = \frac{12\ inches}{1\ foot}$. The fraction chosen to do the unit conversion is the one that divides the unit being changed, so, the one that has the unit being changed in the denominator. For example, to convert $60\ inches$ to $feet$, the conversion factor must have $inches$ in the denominator, $60\ inches \cdot \frac{1\ foot}{12\ inches} = 5 feet$.
+
+Several conversions can be made one after the other, for example, $60\ inches \cdot \frac{1\ foot}{12\ inches} \cdot \frac{1\ yard}{3\ feet} = \frac{5}{3}\ yard$.
+
+(Conversión entre sistemas de medida)
+**Conversion between systems of measurement**: units of measure can be converted from one system to another by having their equivalencies (equivalencias), and then performing regular unit conversion using said equivalencies.
+
+The following table contains a few of the equivalencies between units in the U.S. customary units system and units in the international metric system. The values presented in the table are approximations.
+
+| Equivalencies   |
+| :------------:  |
+| **Length**      |
+| 1 in = 2.54 cm  |
+| 1 ft = 0.305 m  |
+| 1 yd = 0.914 m  |
+| 1 mi = 1.61 km  |
+| **Weight**      |
+| 1 lb = 0.45 kg  |
+| 1 oz = 28 g     |
+| **Volume**      |
+| 1 qt = 0.95 L   |
+| 1 fl oz = 30 mL |
+
+(Unidades de medida mixtas)
+**Mixed units of measurement**: units of measure that are combined together to measure a single quantity. For example, using hours and minutes together to measure time.
+
+When handling mixed units of measurement, each separate unit is added or subtracted separately. In the case of using hours and minutes together, for example $3\ hours, 12\ minutes$ plus $2\ hours, 20\ minutes$ is $5\ hours, 32\ minutes$, because hours and minutes are added separately. In this particular case, any amount of minutes over 60 is converted to hours accordingly, and in general the smaller unit is converted to the bigger unit if needed.
+
+(Conversión Fahrenheit Celsius)
+**Fahrenheit Celsius conversion**: two formulas that allow converting temperature (temperatura) measured in the Fahrenheit scale to the Celsius scale, and vice versa, Let $C$ be the temperature in Celsius, $F$ be the temperature in Fahrenheit, then $C = \frac{5}{9}(F - 32)$ and $F = \frac{9}{5}C + 32$.
 
 (Interés simple)
 **Simple interest**: The simple interest is a way to calculate the amount of interest to be received for an investment or paid for a loan.
