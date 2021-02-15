@@ -58,7 +58,7 @@ Addition and subtraction of polynomials can be done programatically.
 > Product property of exponents
 >
 > Let $a$, $m$, $n$ be numbers, then
-> $$a^m \cdot a^n = a^{m + n}$$
+> $$a^m a^n = a^{m + n}$$
 
 (Potencia de una potencia)
 **Power property of exponents**: the result of raising a base to an exponent and then raising that power to another exponent, is equal to the base raised to the power of the product of the exponents.
@@ -66,7 +66,7 @@ Addition and subtraction of polynomials can be done programatically.
 > Power property of exponents
 >
 > Let $a$, $m$, $n$ be numbers, then
-> $$(a^m)^n = a^{m \cdot n}$$
+> $$(a^m)^n = a^{m n}$$
 
 (Producto de potencias con el mismo exponente)
 **Product to a power property of exponents**: the product of two bases with the same exponent, is equal to the product of the bases raised to the power of the exponent.
@@ -74,7 +74,7 @@ Addition and subtraction of polynomials can be done programatically.
 > Product to a power property of exponents
 >
 > Let $a$, $b$, $n$ be numbers, then
-> $$a^n \cdot b^n = (a \cdot b)^n$$
+> $$a^n b^n = (a b)^n$$
 
 (Multiplicación de monomios)
 **Monomial multiplication**: let $a$, $b$, $k$, $l$, $m$, $n$, be numbers and $x$, $y$ be variables, then the product of the monomials $ax^ky^l$ and $bx^my^n$ is $abx^{k + m}y^{l + n}$.
@@ -171,9 +171,9 @@ Scientific notation is a way to express numbers. A given number written in scien
 > Scientific notation
 >
 > Let $N$ be a number, $a$ be a number such that $a \ge 1$ and $a < 10$, and let $n$ be an integer, then
-> $$N = a \cdot 10^n$$
+> $$N = a 10^n$$
 
-To convert the given number $N$ to scientific notation, only its first nonzero digit is left as the first digit of $a$, and the remaining digits become decimals of $a$, this conversion is compensated as necessary using $n$, so that the equality $N = a \cdot 10^n$ is maintained. If $|N| \ge 1$ then $n$ must be zero or positive, while if $|N| < 1$ then $n$ must be negative.
+To convert the given number $N$ to scientific notation, only its first nonzero digit is left as the first digit of $a$, and the remaining digits become decimals of $a$, this conversion is compensated as necessary using $n$, so that the equality $N = a 10^n$ is maintained. If $|N| \ge 1$ then $n$ must be zero or positive, while if $|N| < 1$ then $n$ must be negative.
 
 ## Polynomial factoring (Factorización de polinomios)
 [Ch10_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=940)

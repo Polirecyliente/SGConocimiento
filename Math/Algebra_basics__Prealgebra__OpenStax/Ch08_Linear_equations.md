@@ -49,9 +49,9 @@ Linear equations can start with variable terms on both sides. When equations hav
 > Form of a linear equation in one variable
 >
 > Let $a$, $b$, be numbers, $x$ be a variable, then
-> $$ a \cdot x = b$$
+> $$a x = b$$
 
-Every linear equation in one variable can be simplified through the use of the properties of equality, to leave it in the form $a \cdot x = b$. The side $a \cdot x$ is the variable side, and the side $b$ is the constant side.
+Every linear equation in one variable can be simplified through the use of the properties of equality, to leave it in the form $a x = b$. The side $a x$ is the variable side, and the side $b$ is the constant side.
 
 (Combinar términos variables)
 **Collect variable terms**: the process of combining the like terms of a variable in one side, this creates the variable side of the equation.
@@ -65,4 +65,4 @@ Every linear equation in one variable can be simplified through the use of the p
 Equations with fractions and decimals behave ultimately the same as regular equations.
 
 (Eliminar los denominadores de una ecuación)
-**Clear an equation of fractions**: the process of clearing the fractions of an equation, by multiplying each term by the least common denominator.
+**Clear an equation of fractions**: the process of clearing the fractions of an equation, by multiplying each term on both sides by the least common denominator.

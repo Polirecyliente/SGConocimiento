@@ -90,7 +90,7 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 > General exponential notation
 >
 > Let $a$ be a number, $n$ be a whole number, then
-> $$a \cdot a \cdot a \cdot \ldots \cdot a = a^n$$
+> $$a a a \ldots a = a^n$$
 > The value $n$ is the amount of times that $a$ is multiplied by itself.
 
 Using the shown symbols, the exponential notation is read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
@@ -105,7 +105,7 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 **Base and exponent**: in the operation $a^n$, $a$ is called the base and $n$ is called the exponent.
 
 (Expresión exponencial en forma expandida)
-**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a \cdot a \cdot a \cdot ... \cdot a$ where $a$ is multiplied by itself $n$ times.
+**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a a a \ldots a$ where $a$ is multiplied by itself $n$ times.
 
 (Números al cuadrado)
 **Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. $3$ to the power of $2$ is $9$, or $3$ squared is $9$ ($3$ al cuadrado es $9$).

@@ -5,7 +5,6 @@
 #T# Table of contents
 
 #C# Math definitions (Definiciones de matemática)
-#C# Points (Puntos)
 #C# Numeral systems (Sistemas de numeración)
 #C# Counting numbers (Números naturales)
 #C# Whole numbers (Números naturales y el cero)
@@ -26,10 +25,11 @@
 #C# Multiples and factors of integers (Múltiplos y factores de los enteros)
 #C# Algebra definitions (Definiciones de álgebra)
 #C# Linear equations (Ecuaciones lineales)
-#C# Simplifications (Simplificaciones)
+#C# Geometry definitions (Definiciones de geometría)
 #C# Basic shapes and their formulas (Formas básicas y sus fórmulas)
+#C# Probability definitions (Definiciones de probabilidad)
 #C# Measures of central tendency (Medidas de tendencia central)
-#C# Probability basics (Bases de la probabilidad)
+#C# Simplifications (Simplificaciones)
 #C# Science and engineering definitions (Definiciones de ciencia e ingeniería)
 #C# Science and engineering formulas (Fórmulas de ciencia e ingeniería)
 
@@ -63,8 +63,6 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 
 (Evaluar una expresión)
 **Evaluate an expression**: this means substitute symbols for specific values and calculate the result, e.g. in $x + 7$ substitute $x$ for $4$ and calculate, $4 + 7 = 11$. Expressions without symbols are ready to be evaluated.
-
-## Points (Puntos)
 
 (Origen)
 **Origin**: this is the point at 0 in all dimensions, e.g. in three dimensions, the origin is $(0, 0, 0)$.
@@ -111,6 +109,9 @@ The set of integers is the set of the whole numbers and the negative numbers. Th
 
 The opposite of $a$ is $-a$, so $-(a) = -a$. The opposite of $-a$ is $a$, so $-(-a) = a$.
 
+(Números enteros consecutivos)
+**Consecutive integers**: integers that follow each other by adding $1$ repeatedly, e.g. $-4$, $-3$, $-2$, or $19$, $20$, $21$, etcetera.
+
 ## Rational numbers (Números racionales)
 
 The rational numbers form the set of numbers that can be represented via fractions. This is an ordered set in which the relational operators can be used to compare the values of two rational numbers.
@@ -145,10 +146,10 @@ The term $ac$ in the numerator of $\frac{ac + b}{c}$, is a multiple of $c$, and 
 **Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. The value of each fraction itself is the same in equivalent fractions.
 
 (Propiedad de las fracciones equivalentes)
-**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a \cdot c}{b \cdot c}$.
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
 
 (Fracciones complejas)
-**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
+**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a d}{b c}$.
 
 (Fracciones negativas)
 **Negative fractions**: when either the numerator is negative, or the denominator is negative, the fraction itself is negative, $\frac{-a}{b} = -\frac{a}{b}$, and $\frac{a}{-b} = -\frac{a}{b}$.
@@ -257,6 +258,17 @@ For example $\sqrt{2}$ is not transcendental because it is the solution of $x^2 
 (Despejar una variable)
 **Isolate a variable**: using properties of equality, to make a variable stand alone in one side of an equation, e.g. $4 + y/2 = x + 1 \Rightarrow y = 2x - 6$, here the variable $y$ is isolated.
 
+(Solucionar ecuaciones)
+**Solve equations**: Solving an equation commonly means isolating a variable to find its value.
+
+The addition property of equality is used to solve equations when there is a negative term which subtracts from the variable, then said term is added to both sides of the equality, helping in isolating the variable.
+
+The subtraction property of equality is used to solve equations when there is a positive term added to the variable, then said term is subtracted from both sides of the equality, helping in isolating the variable.
+
+The multiplication property of equality is used to solve equations when there is a number dividing the variable, then said number is multiplied to both sided of the equality, helping in isolating the variable.
+
+The division property of equality is used to solve equations when there is a factor multiplying the variable, then both sides of the equality are divided by said factor, helping in isolating the variable.
+
 (Propiedad aditiva de la igualdad)
 **Addition property of equality**: adding a number to both sides of an equality preserves the equality. Given $a = b$, then $a + c = b + c$.
 
@@ -264,7 +276,7 @@ For example $\sqrt{2}$ is not transcendental because it is the solution of $x^2 
 **Subtraction property of equality**: subtracting a number from both sides of an equality preserves the equality. Given $a = b$, then $a - c = b - c$.
 
 (Propiedad multiplicativa de la igualdad)
-**Multiplication property of equality**: multiplying a number to both sides of an equality preserves the equality. Given $a = b$, then $a \cdot c = b \cdot c$.
+**Multiplication property of equality**: multiplying a number to both sides of an equality preserves the equality. Given $a = b$, then $a c = b c$.
 
 (Propiedad divisiva de la igualdad)
 **Division property of equality**: dividing both sides of an equality by a nonzero number preserves the equality. Given $a = b$ and $c \ne 0$, then $\frac{a}{c} = \frac{b}{c}$.
@@ -355,13 +367,13 @@ When multiplying or dividing by a negative number, it changes the sign of the ot
 
 In a multiplication operation, if the amount of repeated additions is negative, then this means repeated addition with each addition done in the opposite direction. For example, $4 \cdot -3 = -4 -4 -4$, each addition is done in the opposite direction of $4$, and in $-4 \cdot -3 = 4 + 4 + 4$, each addition is done in the opposite direction of $-4$.
 
-Multiplication by a number is the same as division by its reciprocal, $a \cdot b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a \cdot b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
+Multiplication by a number is the same as division by its reciprocal, $a b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
 
 (Operador multiplicación)
 **Multiplication operator**: this operator is $\times$, the times sign. Another is $\cdot$, the dot sign. Another is $()$, the parentheses signs.
 
 (Notación de la multiplicación)
-**Multiplication notation**: the multiplication of $a$ and $b$ is $a \cdot b = c$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result $c$ is called the product (producto).
+**Multiplication notation**: the multiplication of $a$ and $b$ is $a b = c$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result $c$ is called the product (producto).
 
 (Propiedad anulativa de la multiplicación)
 **Multiplication property of zero**: the product of any number multiplied by 0, is 0, $a \cdot 0 = 0$.
@@ -373,10 +385,10 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 **Multiplicative identity**: The number 1.
 
 (Propiedad conmutativa de la multiplicación)
-**Commutative property of multiplication**: changing the order of the factors doesn't change the product, $a \cdot b = b \cdot a$.
+**Commutative property of multiplication**: changing the order of the factors doesn't change the product, $a b = b a$.
 
 (Propiedad asociativa de la multiplicación)
-**Associative property of multiplication**: using grouping symbols to group multiplication operations does not change the product, $a \cdot b \cdot c = (a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+**Associative property of multiplication**: using grouping symbols to group multiplication operations does not change the product, $a b c = (a b) c = a (b c)$.
 
 (Propiedad distributiva de la multiplicación respecto a la suma)
 **Distributive property of multiplication over addition**: when a group of addends (grouped using a grouping symbol) is multiplied by a number, it's the same as the sum of the products of said number by each addend, $a (b + c) = a b + a c$.
@@ -396,7 +408,7 @@ This property shows itself when multiplying $a$ by the sum $b + c$, the resultin
 **Multiplication by 0**: the product of any number and 0 is 0, $a \cdot 0 = 0$. This is because $a$ is added $0$ times with itself.
 
 (Multiplicación de fracciones)
-**Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
+**Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \frac{c}{d} = \frac{a c}{b d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
 
 (Multiplicación de decimales)
 **Multiplication of decimals**: in the product of decimal numbers, the amount of decimal digits is up to the sum of the decimal digits in the factors.
@@ -423,7 +435,7 @@ Division is the inverse operation of Multiplication. Division is not commutative
 
 If the amount of repeated subtractions is negative, then this means repeated subtraction with each subtraction done in the opposite direction. For example, $24 \div -8 = -3$ so the number $-8$ is subtracted $-3$ times from $24$, i.e. $-8$ is subtracted three times in its opposite direction to reach 0 starting at 24. In $-24 \div -8 = 3$ the amount of repeated subtractions is positive, so $-8$ is subtracted directly from $-24$ three times to reach 0.
 
-Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \cdot \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the same place of $\frac{a}{b}$.
+Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the same place of $\frac{a}{b}$.
 
 (Operador división)
 **Division operator**: this operator is $\div$, the division sign. Another is $/$, the slash sign. Another is $\text{---}$, the horizontal line sign.
@@ -447,15 +459,15 @@ Division by a number is the same as multiplication by its reciprocal, $\frac{a}{
 **Division by -1**: a number divided by $-1$ results in its opposite, $a \div -1 = -a$. Using the definition of division, dividing $a$ by $-1$ is the same as subtracting $-1$ from $a$ until reaching 0, which is $-a$ times, the opposite of $a$.
 
 (Recíproco de un número)
-**Reciprocal of a number**: given a number, its reciprocal is another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
+**Reciprocal of a number**: given a number, its reciprocal is another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \frac{b}{a} = \frac{a b}{b a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
 
-Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \cdot \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends, this place is the definition of the reciprocal of $a$.
+Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends, this place is the definition of the reciprocal of $a$.
 
 (Invertir un número)
 **Invert a number**: the process of finding the reciprocal of a number. When a number is inverted the result is its reciprocal.
 
 (División de fracciones)
-**Fraction division**: the operation $\frac{a}{b} \div \frac{c}{d}$. This implies two operations, division by $c$ and division by the reciprocal of $d$ which is the same as multiplication by $d$, so $\frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
+**Fraction division**: the operation $\frac{a}{b} \div \frac{c}{d}$. This implies two operations, division by $c$ and division by the reciprocal of $d$ which is the same as multiplication by $d$, so $\frac{a}{b} \div \frac{c}{d} = \frac{a d}{b c}$.
 
 (Residuo | Resto)
 **Remainder**: in division, this is the number that is left over after doing the repeated subtraction, if any. In $\frac{a}{b} = q + \frac{r}{b}$, $a$, $b$ are numbers with $b$ being nonzero, $q$ is the quotient, and $r$ is the remainder.
@@ -463,7 +475,7 @@ Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{
 ## Exponentiation of real numbers (Exponenciación de números reales)
 
 (Notación exponencial)
-**Exponential notation**: used in expressions where a number is multiplied by itself several times, for example, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$. In general $a \cdot a \cdot a \cdot \ldots \cdot a = a^n$, where the value $n$ is the amount of times that $a$ is multiplied by itself.
+**Exponential notation**: used in expressions where a number is multiplied by itself several times, for example, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$. In general $a a a \ldots a = a^n$, where the value $n$ is the amount of times that $a$ is multiplied by itself.
 
 Using the shown symbols, the exponential notation is read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$). The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
 
@@ -474,7 +486,7 @@ Using the shown symbols, the exponential notation is read as $a$ to the $n$-th p
 **Base and exponent**: in the operation $a^n$, $a$ is called the base and $n$ is called the exponent.
 
 (Expresión exponencial en forma expandida)
-**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a \cdot a \cdot a \cdot ... \cdot a$ where $a$ is multiplied by itself $n$ times.
+**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a a a \ldots a$ where $a$ is multiplied by itself $n$ times.
 
 (Números al cuadrado)
 **Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. $3$ to the power of $2$ is $9$, or $3$ squared is $9$ ($3$ al cuadrado es $9$).
@@ -609,8 +621,237 @@ The greatest common divisor of two integers can be calculated using their prime 
 
 ## Linear equations (Ecuaciones lineales)
 
-(elevación sobre avance de una pendiente)
-**rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
+A linear equation is an equation in which the variables have an exponent of $1$.
+
+Linear equations can start with variable terms on both sides. When equations have variables and constants on both sides, the properties of equality can be used to move the variables and put them in one side if needed. For example, if a variable is dividing a number, it can be passed to the other side by using the multiplication property of equality, multiplying both sides by the variable.
+
+(Lado para variables de una ecuación)
+**Variable side of an equation**: A side of an equation that can be arbitrarily chosen to hold variables, or a single variable, in order to isolate it and find its value.
+
+(Lado para constantes de una ecuación)
+**Constant side of an equation**: The other side of an equation that is produced when choosing a variable side.
+
+(Ecuación lineal en una variable)
+**Linear equation in one variable**: linear equation in which there is only one variable. These equations can be simplified by using the properties of equality to create a variable side and a constant side.
+
+Let $a$, $b$, be numbers, $x$ be a variable, then $a x = b$ is the basic form of a linear equation.
+
+Every linear equation in one variable can be simplified through the use of the properties of equality, to leave it in the form $a x = b$. The side $a x$ is the variable side, and the side $b$ is the constant side.
+
+(Combinar términos variables)
+**Collect variable terms**: the process of combining the like terms of a variable in one side, this creates the variable side of the equation.
+
+(Combinar términos constantes)
+**Collect constant terms**: the process of combining like terms without variables, this creates the constant side of the equation.
+
+(Elevación sobre avance de una pendiente)
+**Rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
+
+## Geometry definitions (Definiciones de geometría)
+
+(Vértice)
+**Vertex**: any point from which one or more lines stem.
+
+(Ángulo)
+**Angle**: in two lines that share a vertex, the angle is the measure of rotation of one line to get to the other. If a vertex has only two lines, then an angle can be named after said vertex. Let $A$ be a vertex with two lines stemming from it, then $\angle A$ is the angle formed between the two lines, and $m \angle A$ is the measure of said angle.
+
+Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes). Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians.
+
+(Ángulo recto)
+**Right angle**: a $90 \text{\textdegree}$ angle, or $\pi/2$ radians angle.
+
+(Ángulos suplementarios)
+**Supplementary angles**: two angles that added together measure $180 \text{\textdegree}$ or $\pi$ radians. Each angle in this pair is the supplement (suplemento) of the other.
+
+(Ángulos complementarios)
+**Complementary angles**: two angles that added together measure $90 \text{\textdegree}$ or $\pi/2$ radians. Each angle in this pair is the complement (complemento) of the other.
+
+(Figuras similares)
+**Similar figures**: figures that have the same shape but not the same size.
+
+(Figuras congruentes)
+**Congruent figures**: figures that have the same shape and also the same size.
+
+(Figuras irregulares)
+**Irregular figures**: irregular figures are figures whose shape is not a basic shape.
+
+(Lados y ángulos correspondientes)
+**Corresponding sides and angles**: in similar or congruent figures, the sides and angles that would be the same if replacing one figure for the other. The corresponding sides of two figures have the same ratio (which is $1$ for congruent figures), and their corresponding angles have the same value. Similar triangles are similar figures.
+
+(Medida lineal)
+**Linear measure**: measure for length, like distances, width, height, depth, etcetera, in linear units (unidades lineales).
+
+(Medida cuadrada)
+**Square measure**: measure for area size, in square units (unidades cuadradas).
+
+(Medida cúbica)
+**Cubic measure**: measure for volume, in cubic units (unidades cúbicas).
+
+(Perímetro)
+**Perimeter**: in a two dimensional shape, the measure of the distance around it.
+
+(Área)
+**Area**: in a two dimensional shape, the measure of the surface covered by it.
+
+(Área superficial)
+**Surface area**: in a three dimensional shape, the amount of area covered by its surface.
+
+(Volumen)
+**Volume**: in a three dimensional shape, the measure of the space occupied by it.
+
+(Sólidos)
+**Solids**: three dimensional shapes.
+
+## Basic shapes and their formulas (Formas básicas y sus fórmulas)
+
+(Triángulo)
+**Triangle**: shape with three straight sides and therefore three angles. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex. Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
+
+(Lado opuesto a un vértice en un triángulo)
+**Opposite side of a vertex in a triangle**: In a triangle $\triangle ABC$, each vertex has an opposite side, the opposite side to $A$ is the side with measure $BC$, the opposite side to $B$ is $AC$, and the opposite side to $C$ is $AB$.
+
+(Suma de los ángulos de un triángulo)
+**Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180 \text{\textdegree}$ or $\pi$ radians. Let $A$, $B$, $C$, be three vertices that form a triangle, then $m \angle A + m \angle B + m \angle C = \pi$.
+
+(Teorema de Pitágoras)
+**Pythagorean theorem**: in a right triangle, the hypotenuse squared has the same value as the sum of each leg squared. Let $a$, $b$, $c$, be the sides of a right triangle, with $a$ and $b$ being the legs, and $c$ being the hypotenuse, then $c^2 = a^2 + b^2$.
+
+(Triángulo rectángulo)
+**Right triangle**: a triangle in which one of its angles measures $90 \text{\textdegree}$ or $\pi/2$ radians, i.e. a triangle with a right angle. The right angle is denoted in the triangle with a square.
+
+Right triangles have three sides, one hypotenuse (hipotenusa) which is the side opposite to the right angle, and two legs (catetos) which are the two sides that stem from the vertex with the right angle.
+
+(Triángulo escaleno)
+**Scalene triangle**: a triangle in which all the sides have different measures of length.
+
+(Triángulo isósceles)
+**Isosceles triangle**: a triangle in which two of its sides have the same measure of length.
+
+(Triángulo equilátero)
+**Equilateral triangle**: a triangle in which all the sides have the same measure of length. All equilateral triangles are similar or congruent.
+
+(Perímetro de un triángulo)
+**Triangle perimeter**: let $a$, $b$, $c$, be the lengths of the sides of a triangle, then $P = a + b + c$.
+
+(Área de un triángulo)
+**Triangle area**: let $h$ be the height of the triangle as measured when $b$ is the floor, then $A = \frac{b h}{2}$.
+
+(Cuadrilátero)
+**Quadrilateral**: a shape with four straight sides.
+
+(Lados opuestos en un cuadrilátero)
+**Opposite sides in a quadrilateral**: in a quadrilateral, each side has an opposite side. Given a side of a quadrilateral, its opposite side is the one without any common vertex. In a quadrilateral $ABCD$ the opposite side to $\overline{AB}$ is $\overline{CD}$, and the opposite side to $\overline{AD}$ is $\overline{BC}$.
+
+(Rectángulo)
+**Rectangle**: a quadrilateral with four right angles. This configuration produces a shape in which the opposite sides are of equal length. Its perimeter is equal to the sum of its four sides, and its area is equal to the product of any two adjacent sides.
+
+(Perímetro de un rectángulo)
+**Rectangle perimeter**: let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, then $P = 2(L + W)$.
+
+(Área de un rectángulo)
+**Rectangle area**: let $L$ and $W$ be the lengths of the sides of a rectangle, let $A$ be the area of the rectangle, then $A = L W$.
+
+(Sólido rectangular)
+**Rectangular solid**: solid with six faces and with right angles between its faces.
+
+A rectangular solid can be defined with only three measures, length (largo), widht (ancho), and height (alto). When looking at the front of one of the faces from a rectangular solid, the length is defined as the horizontal left to right distance, the width is defined as the horizontal front to back distance, and the height is defined as the vertical distance.
+
+(Área superficial de un sólido rectangular)
+**Rectangular solid surface area**: in a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, and $S$ be its surface area, then $S = 2 (L W + L H + W H)$.
+
+(Volumen de un sólido rectangular)
+**Rectangular solid volume**: in a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, and $V$ be its volume, then $V = L W H$.
+
+(Cubo)
+**Cube**: rectangular solid with all its sides equal in length. This configuration creates a shape in which all of its faces have equal areas.
+
+(Área superficial de un cubo)
+**Cube surface area**: in a cube, let $s$ be the the length of any of its sides, and $S$ be its surface area, then $S = 6s^2$.
+
+(Volumen de un cubo)
+**Cube volume**: in a cube, let $s$ be the the length of any of its sides, and $V$ be its volume, then $V = s^3$.
+
+(Trapezoide)
+**Trapezoid**: a quadrilateral with two parallel sides and two non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and the non parallel sides are also opposite. 
+
+The two parallel sides in a trapezoid have different sizes, and they are called the bases (las bases), there is a smaller base and a bigger base. The height of a trapezoid is the distance between its bases.
+
+(Área de un trapezoide)
+**Trapezoid area**: in a trapezoid, let $b$ be the length of the smaller base, let $B$ be the length of the bigger base, let $h$ be the height, and let $A$ be the area, then $A = \frac{1}{2}h(b + B)$.
+
+(Círculo)
+**Circle**: shape in which all of its points are at the same distance from its center.
+
+(Radio de un círculo)
+**Radius of a circle**: the distance from the center of a circle to any of its points.
+
+(Diámetro de un círculo)
+**Diameter of a circle**: the maximum possible distance between two points in a circle. This is the same as twice the radius.
+
+(Sector circular)
+**Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
+
+(Circunferencia de un círculo)
+**Circumference of a circle**: the measure of the distance around a circle, i.e. the distance covered by its points. This is the same as the perimeter of the circle.
+
+Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then $C = \pi d$ or also $C = 2 \pi r$.
+
+(Área de un círculo)
+**Circle area**: let $A$ be the area of a circle in squared length units, $r$ be the radius in length units, then $A = \pi r^2$.
+
+(Esfera)
+**Sphere**: three dimensional shape in which all of its points are at the same distance from its center, this distance is called the radius.
+
+(Área superficial de una esfera)
+**Sphere surface area**: in a sphere, let $r$ be its radius, and $S$ be its surface area, then $S = 4 \pi r^2$.
+
+(Volumen de una esfera)
+**Sphere volume**: in a sphere, let $r$ be its radius, and $V$ be its volume, then $V = \frac{4}{3} \pi r^3$.
+
+(Cilindro)
+**Cylinder**: a solid made with two parallel circles separated along an axis.
+
+(Área superficial de un cilindro)
+**Cylinder surface area**: in a cylinder, let $r$ be the radius of its circles, $h$ be its height, and $S$ be its surface area, then $S = 2 \pi r^2 + 2 \pi r h$.
+
+(Volumen de un cilindro)
+**Cylinder volume**: in a cylinder, let $r$ be the radius of its circles, $h$ be its height, and $V$ be its volume, then $V = \pi r^2 h$.
+
+(Cono)
+**Cone**: a solid made with a circle called the base (base) and a point called the apex (ápice) above the center of the base, in such a way that the circumference of the base converges to the apex.
+
+(Área superficial de un cono)
+**Cone surface area**: in a cone, let $r$ be the radius of its base, $l$ be the distance from the apex to its circumference, and $S$ be its surface area, then $S = \pi r^2 + \pi r l$.
+
+(Volumen de un cono)
+**Cone volume**: in a cone, let $r$ be the radius of its base, $h$ be the distance from the apex to its base, and $V$ be its volume, then $V = \frac{1}{3} \pi r^2 h$.
+
+(Área de una figura irregular)
+**Area of an irregular figure**: there is no single formula for the area of an irregular figure, but rather, said area is divided into smaller areas with basic shapes, such as triangles and quadrilaterals, and then the area of the irregular figure is calculated as the sum of the areas of the smaller shapes.
+
+## Probability definitions (Definiciones de probabilidad)
+
+(Frecuencia de un número en un conjunto)
+**Frequency of a number in a set**: the amount of times a given number is repeated in a set.
+
+(Probabilidad de un evento)
+**Probability of an event**: the fraction of the number of times an event happens over the number of general outcomes with or without the event.
+
+For example, in a set of $N$ numbers, the probability $P(x)$ to obtain a given number $x$ that has a frequency of $f_x$ is $P(x) = \frac{f_x}{N}$.
+
+## Measures of central tendency (Medidas de tendencia central)
+
+(Promedios)
+**Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
+
+(La media)
+**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of the set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then $\bar{x} = \sum_i{\frac{x_i}{N}}$.
+
+(Mediana)
+**Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
+
+(Moda)
+**Mode**: the number with the highest frequency in a set. A set of numbers can have several modes if several numbers have the same highest frequency, or none if all the numbers have the same frequency.
 
 ## Simplifications (Simplificaciones)
 
@@ -619,10 +860,13 @@ The greatest common divisor of two integers can be calculated using their prime 
 
 For example $\frac{6}{9} = \frac{4}{6}$, but their reduced form is $\frac{2}{3}$. In $\frac{6}{9}$ a common factor is $3$ and dividing the numerator and denominator by $3$ results in $\frac{2}{3}$. In $\frac{4}{6}$ a common factor is $2$ and dividing the numerator and denominator by $2$ results in $\frac{2}{3}$.
 
-The same simplification can be done with variables, e.g. $\frac{2 \cdot x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
+The same simplification can be done with variables, e.g. $\frac{2 x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
 
 (Fracción irreducible)
 **Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
+
+(Eliminar los denominadores de una ecuación)
+**Clear an equation of fractions**: the process of clearing the fractions of an equation, by multiplying each term on both sides by the least common denominator.
 
 (Conversión entre decimales y fracciones)
 **Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from finite decimal to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
@@ -644,53 +888,6 @@ The conversion from decimal or fraction to percent is based on equivalent fracti
 A decimal can be converted directly to a percent, by multiplying it for $100$, e.g. $0.6 = 0.6 \cdot 100 \% = 60\%$. The opposite consists in dividing a percent by $100$ to obtain its decimal form.
 
 When handling improper fractions, the resulting percent is greater than $100\%$, for example $\frac{5}{4} = 1.25 = 1.25 \cdot 100\% = 125\%$.
-
-## Basic shapes and their formulas (Formas básicas y sus fórmulas)
-
-(Círculo)
-**Circle**: shape in which all of its points are at the same distance from its center.
-
-(Radio de un círculo)
-**Radius of a circle**: the distance from the center of a circle to any of its points.
-
-(Diámetro de un círculo)
-**Diameter of a circle**: the maximum possible distance between two points in a circle. This is the same as twice the radius.
-
-(Circunferencia de un círculo)
-**Circumference of a circle**: the measure of the distance around a circle, i.e. the distance covered by its points.
-
-(Sector circular)
-**Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
-
-(Fórmula de la circunferencia)
-**Circumference formula**: formula to find the length of the circumference of a circle. Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then $C = \pi d$ or also $C = 2 \pi r$.
-
-(Fórmula del área de un círculo)
-**Circle area formula**: formula to find the area occupied by a circle. Let $A$ be the area of a circle in squared length units, $r$ be the radius in length units, then $A = \pi \cdot r^2$.
-
-## Measures of central tendency (Medidas de tendencia central)
-
-(Promedios)
-**Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
-
-(La media)
-**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of the set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then $\bar{x} = \sum_i{\frac{x_i}{N}}$.
-
-(Mediana)
-**Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
-
-(Moda)
-**Mode**: the number with the highest frequency in a set. A set of numbers can have several modes if several numbers have the same highest frequency, or none if all the numbers have the same frequency.
-
-## Probability basics (Bases de la probabilidad)
-
-(Frecuencia de un número en un conjunto)
-**Frequency of a number in a set**: the amount of times a given number is repeated in a set.
-
-(Probabilidad de un evento)
-**Probability of an event**: the fraction of the number of times an event happens over the number of general outcomes with or without the event.
-
-For example, in a set of $N$ numbers, the probability $P(x)$ to obtain a given number $x$ that has a frequency of $f_x$ is $P(x) = \frac{f_x}{N}$.
 
 ## Science and engineering definitions (Definiciones de ciencia e ingeniería)
 
@@ -785,9 +982,9 @@ The following table contains a few of the units of the international metric syst
 (Conversión de unidades)
 **Unit conversion**: changing the units of a measure. Unit conversion is based on multiplying the unit to be changed by $1$, but writing $1$ in such a way that it changes the unit of measure. In general, given the units of measure $unit1$ and $unit2$, and given $A\ unit1 = B\ unit2$ meaning that $A$ units of $unit1$ are equal in measure to $B$ units of $unit2$, so $1 = \frac{B\ unit2}{A\ unit1}$, and also $1 = \frac{A\ unit1}{B\ unit2}$. These fractions are called conversion factors (factores de conversión).
 
-Using real units, $1\ foot = 12\ inches$, so $1 = \frac{1\ foot}{12\ inches}$, and $1 = \frac{12\ inches}{1\ foot}$. The fraction chosen to do the unit conversion is the one that divides the unit being changed, so, the one that has the unit being changed in the denominator. For example, to convert $60\ inches$ to $feet$, the conversion factor must have $inches$ in the denominator, $60\ inches \cdot \frac{1\ foot}{12\ inches} = 5 feet$.
+Using real units, $1\ foot = 12\ inches$, so $1 = \frac{1\ foot}{12\ inches}$, and $1 = \frac{12\ inches}{1\ foot}$. The fraction chosen to do the unit conversion is the one that divides the unit being changed, so, the one that has the unit being changed in the denominator. For example, to convert $60\ inches$ to $feet$, the conversion factor must have $inches$ in the denominator, $60\ inches \frac{1\ foot}{12\ inches} = 5 feet$.
 
-Several conversions can be made one after the other, for example, $60\ inches \cdot \frac{1\ foot}{12\ inches} \cdot \frac{1\ yard}{3\ feet} = \frac{5}{3}\ yard$.
+Several conversions can be made one after the other, for example, $60\ inches \frac{1\ foot}{12\ inches} \frac{1\ yard}{3\ feet} = \frac{5}{3}\ yard$.
 
 (Conversión entre sistemas de medida)
 **Conversion between systems of measurement**: units of measure can be converted from one system to another by having their equivalencies (equivalencias), and then performing regular unit conversion using said equivalencies.
@@ -813,8 +1010,18 @@ The following table contains a few of the equivalencies between units in the U.S
 
 When handling mixed units of measurement, each separate unit is added or subtracted separately. In the case of using hours and minutes together, for example $3\ hours, 12\ minutes$ plus $2\ hours, 20\ minutes$ is $5\ hours, 32\ minutes$, because hours and minutes are added separately. In this particular case, any amount of minutes over 60 is converted to hours accordingly, and in general the smaller unit is converted to the bigger unit if needed.
 
+(Combinar unidades mixtas)
+**Combine mixed units**: Mixed units of measure can be combined together into a single unit. For example, time measured in minutes and seconds can be combined into minutes alone, by adding the seconds divided by $60$ to the minutes.
+
+Money measured in different currency valued coins and bills can be combined together into a single currency value (a standard value), by converting the total of each type of coin and bill to said currency value and then adding them.
+
+Let $I$ be the set of unique units to be mixed, $i$ be a subindex of $I$, $v_i$ be the standard value per unit $i$, $a_i$ be the amount of unit $i$, $V_i$ be the subtotal standard value of unit $i$, and let $V$ be the total standard value, then $V_i = a_i v_i$ and $V = \sum_i{V_i}$.
+
 (Conversión Fahrenheit Celsius)
-**Fahrenheit Celsius conversion**: two formulas that allow converting temperature (temperatura) measured in the Fahrenheit scale to the Celsius scale, and vice versa, Let $C$ be the temperature in Celsius, $F$ be the temperature in Fahrenheit, then $C = \frac{5}{9}(F - 32)$ and $F = \frac{9}{5}C + 32$.
+**Fahrenheit Celsius conversion**: two formulas that allow converting temperature (temperatura) measured in the Fahrenheit scale to the Celsius scale, and vice versa, let $C$ be the temperature in Celsius, $F$ be the temperature in Fahrenheit, then $C = \frac{5}{9}(F - 32)$ and $F = \frac{9}{5}C + 32$.
+
+(Problemas con números)
+**Number problems**: Problems with numbers stated as words, for example, there is a number whose product with $3$ is $24$, finding that number gives $8$.
 
 (Interés simple)
 **Simple interest**: The simple interest is a way to calculate the amount of interest to be received for an investment or paid for a loan.
@@ -830,13 +1037,18 @@ When handling mixed units of measurement, each separate unit is added or subtrac
 
 ## Science and engineering formulas (Fórmulas de ciencia e ingeniería)
 
+(Fórmula de la velocidad, distancia y tiempo)
+**Velocity, distance and time formula**: velocity is defined as the rate of distance change over time.
+
+Let $d$ be the distance in length units, $t$ be the time in time units, $v$ be the velocity in distance over time units, then $v = \frac{d}{t}$. From this formula it can be deduced that $d = vt$, and $t = \frac{d}{v}$.
+
 (Fórmula de tiempo en caída libre)
 **Free fall time formula**: formula to find the fall time in a free fall scenario. The fall starts at a given height, and the time calculated by this formula is the time from the moment the fall starts, to the moment of reaching the ground.
 
-Let $t$ be the fall time in time units, $h$ be the starting height in length units, $g$ be the standard gravity (gravedad estándar), then $t = \sqrt{\frac{2 \cdot h}{g}}$.
+Let $t$ be the fall time in time units, $h$ be the starting height in length units, $g$ be the standard gravity (gravedad estándar), then $t = \sqrt{\frac{2 h}{g}}$.
 
 (Fórmula de la velocidad antes de frenar)
-**Formula of the speed before braking**: formula to find the speed of a car before braking, from the length of the skid mark. Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then $v = \sqrt{24 \cdot d}$.
+**Formula of the speed before braking**: formula to find the speed of a car before braking, from the length of the skid mark. Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then $v = \sqrt{24 d}$.
 
 (Impuesto de ventas)
 **Sales tax**: percent applied to the price of a good or service (bien o servicio), the resulting amount of which is paid as taxes. Let $P_i$ be the price before taxes in monetary units, $P$ be the price with sales tax in monetary units, and $t$ be the sales tax as a ratio, then $P = P_i + t P_i$. The term $t P_i$ is hold as taxes by businesses, and then paid to the government.

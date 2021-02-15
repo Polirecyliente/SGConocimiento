@@ -54,7 +54,7 @@ When adding together this numbers, $a + \frac{b}{c}$ the result is the improper 
 **Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. This can be also seen in the figure shown earlier.
 
 (Propiedad de las fracciones equivalentes)
-**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a \cdot c}{b \cdot c}$.
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
 
 ## Multiplication and division of fractions (Multiplicación y división de fracciones)
 [Ch04_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=305)
@@ -64,28 +64,28 @@ When adding together this numbers, $a + \frac{b}{c}$ the result is the improper 
 
 For example $\frac{6}{9} = \frac{4}{6}$, but their reduced form is $\frac{2}{3}$. In $\frac{6}{9}$ a common factor is $3$ and dividing the numerator and denominator by $3$ results in $\frac{2}{3}$. In $\frac{4}{6}$ a common factor is $2$ and dividing the numerator and denominator by $2$ results in $\frac{2}{3}$.
 
-The same simplification can be done with variables, e.g. $\frac{2 \cdot x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
+The same simplification can be done with variables, e.g. $\frac{2 x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
 
 (Fracción irreducible)
 **Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
 
 (Multiplicación de fracciones)
-**Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
+**Fraction multiplication**: the product of two fractions is the product of the numerators over the product of the denominators, $\frac{a}{b} \frac{c}{d} = \frac{a c}{b d}$, this implies two operations, first the multiplication by $c$ and then the division by $d$. Given the PEMDAS order of operations, it's the same if the division by $d$ is done first.
 
 (Recíproco de un número)
-**Reciprocal of a number**: given a number, its reciprocal is another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
+**Reciprocal of a number**: given a number, its reciprocal is another number such that when multipled together the product is 1. In $\frac{a}{b}$, the reciprocal is $\frac{b}{a}$, because $\frac{a}{b} \frac{b}{a} = \frac{a b}{b a} = 1$, and so $a \ne 0$, $b \ne 0$, which means that 0 doesn't have a reciprocal.
 
-Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \cdot \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends, this place is the definition of the reciprocal of $a$.
+Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{a}$ because $a \frac{1}{a} = 1$. Using the definition of division, $\frac{1}{a}$ means taking the number $1$ and dividing it into $a$ groups, then $\frac{1}{a}$ is the size of each group, which is the same as the place where the first group ends, this place is the definition of the reciprocal of $a$.
 
-Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \cdot \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the same place of $\frac{a}{b}$.
+Division by a number is the same as multiplication by its reciprocal, $\frac{a}{b} = a \frac{1}{b}$, because having $a$ elements divided in $b$ groups, has each group with size $\frac{a}{b}$, and adding $a$ with itself only a fraction $\frac{1}{b}$ times, ends being at the same place of $\frac{a}{b}$.
 
-Multiplication by a number is the same as division by its reciprocal, $a \cdot b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a \cdot b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
+Multiplication by a number is the same as division by its reciprocal, $a b = a \div \frac{1}{b}$, because it follows the definition of division as repeated subtraction. Starting from $a$, to reach 0 by subtracting $\frac{1}{b}$, it must be done $a b$ times, this is because to reach 0 by subtracting $1$ it is done $a$ times, $\frac{a}{1} = a$, and to do it by subtracting $\frac{1}{b}$, it must be done $b$ times as much.
 
 (Invertir un número)
 **Invert a number**: the process of finding the reciprocal of a number. When a number is inverted the result is its reciprocal.
 
 (División de fracciones)
-**Fraction division**: the operation $\frac{a}{b} \div \frac{c}{d}$. This implies two operations, division by $c$ and division by the reciprocal of $d$ which is the same as multiplication by $d$, so $\frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
+**Fraction division**: the operation $\frac{a}{b} \div \frac{c}{d}$. This implies two operations, division by $c$ and division by the reciprocal of $d$ which is the same as multiplication by $d$, so $\frac{a}{b} \div \frac{c}{d} = \frac{a d}{b c}$.
 
 ## Multiplication and division of mixed numbers and complex fractions (Multiplicación y división de números mixtos y fracciones complejas)
 [Ch04_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=325)
@@ -94,7 +94,7 @@ Multiplication by a number is the same as division by its reciprocal, $a \cdot b
 **Multiplication and division of mixed numbers**: this operations are done the same as multiplication and division of proper fractions. The mixed numbers should be converted to improper fractions first, as shown earlier.
 
 (Fracciones complejas)
-**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$.
+**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a d}{b c}$.
 
 (Simplificación de fracciones complejas)
 **Simplification of complex fractions**: complex fractions are simplified like regular fractions.

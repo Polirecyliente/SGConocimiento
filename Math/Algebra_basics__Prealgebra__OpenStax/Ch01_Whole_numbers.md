@@ -178,10 +178,10 @@ Multiplication is the operation of multiplying numbers together. Multiplication 
 **Multiplication operator**: this operator is $\times$, the times sign. Another is $\cdot$, the dot sign. Another is $()$, the parentheses signs.
 
 (Notación de la multiplicación)
-**Multiplication notation**: the multiplication of $a$ and $b$ is $a \cdot b$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result is called the product (producto).
+**Multiplication notation**: the multiplication of $a$ and $b$ is $a b$, read as $a$ times $b$ ($a$ veces $b$), $a$, $b$ are called the factors (factores), the result is called the product (producto).
 
 > The multiplication of $a$ and $b$ is
-> $$a \cdot b = c$$
+> $$a b = c$$
 > The value $c$ is the product.
 
 (Propiedad anulativa de la multiplicación)
@@ -209,7 +209,7 @@ Multiplication is the operation of multiplying numbers together. Multiplication 
 > Commutative property of multiplication
 >
 > Let $a$, $b$, be numbers, then
-> $$a \cdot b = b \cdot a$$
+> $$a b = b a$$
 
 Given that multiplication means the repeated addition of the first number with itself a number of times equal to the second number, this means that no matter which number comes first and which second, the final repeated addition is the same.
 

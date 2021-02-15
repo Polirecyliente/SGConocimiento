@@ -48,7 +48,7 @@ See Ch01_Whole_numbers.md for the commutative properties of addition and multipl
 > Associative property of multiplication
 >
 > Let $a$, $b$, $c$ be numbers, then
-> $$a \cdot b \cdot c = (a \cdot b) \cdot c = a \cdot (b \cdot c)$$
+> $$a b c = (a b) c = a (b c)$$
 
 ## Distributive property (Propiedad distributiva)
 [Ch07_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=623)
@@ -174,9 +174,9 @@ The following table contains a few of the units of the international metric syst
 (Conversión de unidades)
 **Unit conversion**: changing the units of a measure. Unit conversion is based on multiplying the unit to be changed by $1$, but writing $1$ in such a way that it changes the unit of measure. In general, given the units of measure $unit1$ and $unit2$, and given $A\ unit1 = B\ unit2$ meaning that $A$ units of $unit1$ are equal in measure to $B$ units of $unit2$, so $1 = \frac{B\ unit2}{A\ unit1}$, and also $1 = \frac{A\ unit1}{B\ unit2}$. These fractions are called conversion factors (factores de conversión).
 
-Using real units, $1\ foot = 12\ inches$, so $1 = \frac{1\ foot}{12\ inches}$, and $1 = \frac{12\ inches}{1\ foot}$. The fraction chosen to do the unit conversion is the one that divides the unit being changed, so, the one that has the unit being changed in the denominator. For example, to convert $60\ inches$ to $feet$, the conversion factor must have $inches$ in the denominator, $60\ inches \cdot \frac{1\ foot}{12\ inches} = 5 feet$.
+Using real units, $1\ foot = 12\ inches$, so $1 = \frac{1\ foot}{12\ inches}$, and $1 = \frac{12\ inches}{1\ foot}$. The fraction chosen to do the unit conversion is the one that divides the unit being changed, so, the one that has the unit being changed in the denominator. For example, to convert $60\ inches$ to $feet$, the conversion factor must have $inches$ in the denominator, $60\ inches \frac{1\ foot}{12\ inches} = 5 feet$.
 
-Several conversions can be made one after the other, for example, $60\ inches \cdot \frac{1\ foot}{12\ inches} \cdot \frac{1\ yard}{3\ feet} = \frac{5}{3}\ yard$.
+Several conversions can be made one after the other, for example, $60\ inches \frac{1\ foot}{12\ inches} \frac{1\ yard}{3\ feet} = \frac{5}{3}\ yard$.
 
 (Conversión entre sistemas de medida)
 **Conversion between systems of measurement**: units of measure can be converted from one system to another by having their equivalencies (equivalencias), and then performing regular unit conversion using said equivalencies.

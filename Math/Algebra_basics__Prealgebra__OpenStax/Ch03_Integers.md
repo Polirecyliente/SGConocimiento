@@ -101,7 +101,7 @@ The solution of an equation with integers is no different from a regular solutio
 > Let $a$, $b$, $c$ be numbers
 > $$\begin{gathered}
 > if\ a = b\\
-> then\ a \cdot c = b \cdot c
+> then\ a c = b c
 > \end{gathered}$$
 
 (Propiedad divisiva de la igualdad)

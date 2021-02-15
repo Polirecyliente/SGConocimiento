@@ -89,8 +89,8 @@ Now to subtract these two products, let $a = 894.5744813265344813265344813265344
 > Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then
 > $$\begin{gathered}
 > \pi := \frac{C}{d}\\
-> d = 2 \cdot r\\
-> C = \pi \cdot d = 2 \cdot \pi \cdot r
+> d = 2 r\\
+> C = \pi d = 2 \pi r
 > \end{gathered}$$
 
 (Sector circular)
@@ -102,9 +102,9 @@ Now to subtract these two products, let $a = 894.5744813265344813265344813265344
 > Circle area formula
 >
 > Let $A$ be the area of a circle in squared length units, $r$ be the radius in length units, then
-> $$A = \pi \cdot r^2$$
+> $$A = \pi r^2$$
 
-This is because when dividing the circle in many small sectors, and then lining the circumference $C$ (measured in length units) to make a straight line, the result is half a rectangle of sides $C$ and $r$, so $A = \frac{C \cdot r}{2} = \frac{2 \cdot \pi \cdot r \cdot r}{2} = \pi \cdot r^2$.
+This is because when dividing the circle in many small sectors, and then lining the circumference $C$ (measured in length units) to make a straight line, the result is half a rectangle of sides $C$ and $r$, so $A = \frac{C r}{2} = \frac{2 \pi r r}{2} = \pi r^2$.
 
 (Aproximación fraccionaria de pi)
 **Fractional approximation of pi**: there are infinitely many fractional approximations of pi, one of the simplest is $\frac{22}{7}$.
@@ -148,8 +148,8 @@ An equation with decimals can have a decimal solution, just like a regular solut
 
 The notation of ratios in particular, includes the use of the colon : symbol to replace the division symbol. So the ratio $\frac{a}{b}$ can be denoted as $a:b$. If $b = 1$ then the ratio is still presented as $\frac{a}{1}$, and if the ratio is an improper fraction, it is not converted to a mixed number.
 
-(elevación sobre avance de una pendiente)
-**rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
+(Elevación sobre avance de una pendiente)
+**Rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
 
 (Tasa)
 **Rate**: a fraction of any two numbers that are measured in differente units or scales, so the unit of a rate is the fraction of the units. For example the rate of speed which is measured as a fraction of distance over time.
@@ -186,9 +186,9 @@ Simplification of square roots is done like regular simplification.
 > Free fall time formula
 >
 > Let $t$ be the fall time in time units, $h$ be the starting height in length units, $g$ be the standard gravity (gravedad estándar), then
-> $$t = \sqrt{\frac{2 \cdot h}{g}}$$
+> $$t = \sqrt{\frac{2 h}{g}}$$
 
-The constant $g$ is measured as a rate, its units are length over squared time units (see Ch07_Real_numbers.md). When using feet and seconds, $g = 32 ft/s^2$, and when using meters and seconds $g = 9.81 m/s^2$. Using $g = 32 ft/s^2$, then $t = \sqrt{\frac{2 \cdot h}{32}} = \sqrt{\frac{h}{16}} = \frac{\sqrt{h}}{4}$, $h$ must be in feet, and $t$ is in seconds.
+The constant $g$ is measured as a rate, its units are length over squared time units (see Ch07_Real_numbers.md). When using feet and seconds, $g = 32 ft/s^2$, and when using meters and seconds $g = 9.81 m/s^2$. Using $g = 32 ft/s^2$, then $t = \sqrt{\frac{2 h}{32}} = \sqrt{\frac{h}{16}} = \frac{\sqrt{h}}{4}$, $h$ must be in feet, and $t$ is in seconds.
 
 (Fórmula de la velocidad antes de frenar)
 **Formula of the speed before braking**: formula to find the speed of a car before braking, from the length of the skid mark.
@@ -196,4 +196,4 @@ The constant $g$ is measured as a rate, its units are length over squared time u
 > Formula of the speed before braking
 >
 > Let $d$ be the skid mark distance in feet, $v$ be the speed of the car before braking in miles per hour, then
-> $$v = \sqrt{24 \cdot d}$$
+> $$v = \sqrt{24 d}$$

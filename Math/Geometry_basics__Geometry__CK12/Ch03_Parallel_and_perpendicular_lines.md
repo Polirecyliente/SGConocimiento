@@ -337,7 +337,7 @@ This theorem can be proved with the following image.
 ![Pythagorean theorem image](../Algebra_basics__Prealgebra__OpenStax/Images/Ch09/S03_02_Pythagorean_theorem.png)
 *Pythagorean theorem*
 
-From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cdot b + b^2 = c^2 + 2 \cdot a \cdot b$, and then $a^2 + b^2 = c^2$.
+From the image, $(a + b)^2 = c^2 + 2 a b$, then $a^2 + 2 a b + b^2 = c^2 + 2 a b$, and then $a^2 + b^2 = c^2$.
 
 The distance formula takes the distance between two points as the hypotenuse of a right triangle, and the legs as the rise and run in the $x$-$y$ plane.
 [Rise and run between two points image code](Programs/Ch03/S06_01_Rise_and_run_between_two_points_image.py)

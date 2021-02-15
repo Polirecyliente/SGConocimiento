@@ -34,7 +34,7 @@ Money measured in different currency valued coins and bills can be combined toge
 >
 > Let $I$ be the set of unique coins and bills with different values, let $i$ be a subindex that indicates a particular element of $I$, let $v_i$ be the value of the coin or bill $i$, let $a_i$ be the amount in possession of the coin or bill $i$, let $V_i$ be the subtotal value of the coin or bill $i$, let $V$ be the total monetary value, then
 > $$\begin{gathered}
-> V_i = a_i \cdot v_i\\
+> V_i = a_i v_i\\
 > V = \sum_i{V_i}
 > \end{gathered}$$
 
@@ -47,9 +47,9 @@ These formulas can be used to combine mixed units, $V_i$ is the partial value of
 **Vertex**: any point from which one or more lines stem.
 
 (Ángulo)
-**Angle**: in two lines that share a vertex, the angle is the measure of rotation of one line with respect to the other.
+**Angle**: in two lines that share a vertex, the angle is the measure of rotation of one line to get to the other. 
 
-If a vertex has only two lines, then an angle can be named after said vertex. 
+If a vertex has only two lines, then an angle can be named after said vertex.
 
 > Angle notation
 >
@@ -57,7 +57,7 @@ If a vertex has only two lines, then an angle can be named after said vertex.
 
 Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes).
 
-Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians
+Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians.
 
 (Ángulos suplementarios)
 **Supplementary angles**: two angles that added together measure $180 \text{\textdegree}$ or $\pi$ radians. Each angle in this pair is the supplement (suplemento) of the other.
@@ -70,7 +70,7 @@ Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$
 
 > Triangle notation
 >
-> Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). The opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $AB$, $AC$, $BC$.
+> Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
 
 (Suma de los ángulos de un triángulo)
 **Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180 \text{\textdegree}$ or $\pi$ radians.
@@ -105,9 +105,9 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 **Congruent figures**: figures that have the same shape and also the same size.
 
 (Lados y ángulos correspondientes)
-**Corresponding sides and angles**: in similar figures, the sides and angles that would be the same if replacing one figure for the other.
+**Corresponding sides and angles**: in similar or congruent figures, the sides and angles that would be the same if replacing one figure for the other.
 
-The corresponding sides of two figures have the same ratio, and their corresponding angles have the same value.
+The corresponding sides of two figures have the same ratio (which is $1$ for congruent figures), and their corresponding angles have the same value.
 
 Similar triangles are similar figures.
 
@@ -124,7 +124,7 @@ This theorem can be proved with the following image.
 ![Pythagorean theorem image](Images/Ch09/S03_02_Pythagorean_theorem.png)
 *Pythagorean theorem*
 
-From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cdot b + b^2 = c^2 + 2 \cdot a \cdot b$, and then $a^2 + b^2 = c^2$.
+From the image, $(a + b)^2 = c^2 + 2 a b$, then $a^2 + 2 a b + b^2 = c^2 + 2 a b$, and then $a^2 + b^2 = c^2$.
 
 ## Rectangles, triangles, trapezoids (Rectángulos, triángulos, trapezoides)
 [Ch09_S04](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=774)
@@ -158,7 +158,7 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 > Let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, and $A$ be the area of the rectangle, then
 > $$\begin{gathered}
 > P = 2(L + W)\\
-> A = L \cdot W
+> A = L W
 > \end{gathered}$$
 
 (Propiedades del triángulo)
@@ -169,7 +169,7 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 > Let $a$, $b$, $c$, be the lengths of the sides of a triangle, let $h$ be the height of the triangle as measured when $b$ is the floor, let $P$ be the perimeter of the triangle, and $A$ be the area of the triangle, then
 > $$\begin{gathered}
 > P = a + b + c\\
-> A = \frac{b \cdot h}{2}
+> A = \frac{b h}{2}
 > \end{gathered}$$
 
 (Triángulo escaleno)
@@ -182,7 +182,7 @@ From the image, $(a + b)^2 = c^2 + 2 \cdot a \cdot b$, then $a^2 + 2 \cdot a \cd
 **Equilateral triangle**: a triangle in which all the sides have the same measure of length. All equilateral triangles are similar or congruent.
 
 (Trapezoide)
-**Trapezoid**: a quadrilateral with two parallel sides and two non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and also the non parallel sides. 
+**Trapezoid**: a quadrilateral with two parallel sides and two non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and the non parallel sides are also opposite. 
 
 The two parallel sides in a trapezoid have different sizes, and they are called the bases (las bases), there is a smaller base and a bigger base. The height of a trapezoid is the distance between its bases.
 
@@ -196,7 +196,7 @@ The area of a trapezoid can be understood with the following image.
 ![Trapezoid area image](Images/Ch09/S04_01_Trapezoid_area.png)
 *Trapezoid area*
 
-As shown in the image, the area of the trapezoid $A$ is equal to the sum of the areas $A_1$ and $A_2$. In turn, each of these areas is the area of a triangle, $A_1 = \frac{b \cdot h}{2}$ and $A_2 = \frac{B \cdot h}{2}$, then $A = A_1 + A_2 = \frac{b \cdot h + B \cdot h}{2} = \frac{1}{2}h(b + B)$.
+As shown in the image, the area of the trapezoid $A$ is equal to the sum of the areas $A_1$ and $A_2$. In turn, each of these areas is the area of a triangle, $A_1 = \frac{b h}{2}$ and $A_2 = \frac{B h}{2}$, then $A = A_1 + A_2 = \frac{b h + B h}{2} = \frac{1}{2}h(b + B)$.
 
 ## Irregular figures (Figuras irregulares)
 [Ch09_S05](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=803)
@@ -210,7 +210,7 @@ Irregular figures are figures whose shape is not a basic shape.
 [Ch09_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=815)
 
 (Área superficial)
-**Surface area**: in a three dimensional shape, the amount of area that covers its surface.
+**Surface area**: in a three dimensional shape, the amount of area covered by its surface.
 
 (Sólidos)
 **Solids**: three dimensional shapes.
@@ -224,8 +224,8 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 >
 > In a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
 > $$\begin{gathered}
-> V = L \cdot W \cdot H\\
-> S = 2 \cdot (L \cdot W + L \cdot H + W \cdot H)
+> V = L W H\\
+> S = 2 (L W + L H + W H)
 > \end{gathered}$$
 
 (Cubo)
@@ -253,7 +253,7 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 
 The formula for the surface area of a sphere can be understood from the surface area of a cylinder (see later in this file). Let there be a cylinder of radius $r$ and height $2r$, then its surface area without the two circles is $4 \pi r^2$, which is the same as for the sphere. This is because when cutting a transversal thin strip of area from the cylinder, its area is equal to that of the same cut in the sphere. Even though the radius of the cut can be smaller in the sphere, the height of said cut increases proportionally, this makes both areas equal.
 
-The formula for the volume of a sphere can be understood from the surface area of the same sphere. If the volume of a sphere is filled with several very thin cones (see later in this file), such that the apex of each cone is at the center of the sphere, and the base of each cone is on the surface of the sphere, then the volume of each cone is the area of its base times $\frac{1}{3}r$. The volume of the sphere is the sum of the volumes of the cones. The total base area of the cones is $4 \pi r^2$, so the total volume of the cones is $4 \pi r^2 \cdot \frac{1}{3}r = \frac{4}{3} \pi r^3$, which is the volume of the sphere.
+The formula for the volume of a sphere can be understood from the surface area of the same sphere. If the volume of a sphere is filled with several very thin cones (see later in this file), such that the apex of each cone is at the center of the sphere, and the base of each cone is on the surface of the sphere, then the volume of each cone is the area of its base times $\frac{1}{3}r$. The volume of the sphere is the sum of the volumes of the cones. The total base area of the cones is $4 \pi r^2$, so the total volume of the cones is $4 \pi r^2 \frac{1}{3}r = \frac{4}{3} \pi r^3$, which is the volume of the sphere.
 
 (Cilindro)
 **Cylinder**: a solid made with two parallel circles separated along an axis.
