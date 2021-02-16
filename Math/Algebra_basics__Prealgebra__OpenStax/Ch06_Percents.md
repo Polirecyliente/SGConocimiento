@@ -88,6 +88,7 @@ The commission rate $c$ is commonly expressed as a percent, which means the perc
 > Basic discount formula
 >
 > Let $D$ be the amount of discount in monetary units, $P_i$ be the regular price in monetary units, $P$ be the price after discount in monetary units, $d$ be the discount rate (tasa de descuento) as a ratio, then
+>
 > $$\begin{gathered}
 > D = d P_i\\
 > P = P_i - D = P_i - d P_i
@@ -101,6 +102,7 @@ The discount rate $d$ is commonly expressed as a percent, which means the percen
 > Basic mark-up formula
 >
 > Let $W$ be the wholesale price of a good in monetary units, $M$ be the amount of mark-up in monetary units, $L$ be the list price in monetary units, and $m$ be the mark-up rate as a ratio, then
+>
 > $$\begin{gathered}
 > M = m W\\
 > L = W + M = W + m W

@@ -20,7 +20,7 @@
 Terms (see Ch02_Algebra_language.md) can be represented using symbols, $ax^n$ is a general representation of a term, where $x$ is the variable and $a$, $n$ are constants.
 
 (Polinomio)
-**Polynomial**: expression of one or more terms added together. If the variable in a polynomial is $x$, the polynomial can be denoted as $p(x)$ or using other letters.
+**Polynomial**: expression of one or more terms added together. If the only variable in a polynomial is $x$, the polynomial can be denoted as $p(x)$ or using other letters, as $q(x)$. For example $p(x) = x^2 + 5x^3 - 4x - 7$.
 
 (Monomio)
 **Monomial**: a polynomial with only one term.
@@ -32,22 +32,22 @@ Terms (see Ch02_Algebra_language.md) can be represented using symbols, $ax^n$ is
 **Trinomial**: a polynomial with three terms.
 
 (Grado de un polinomio)
-**Degree of a polynomial**: the degree of the term $ax^n$ is the exponent $n$. In a polynomial with several terms, the degree is the maximum of the exponents.
+**Degree of a polynomial**: the degree of the term $ax^n$ is the exponent $n$. In a polynomial with several terms, the degree is the maximum of the exponents. For example, in $p(x) = x^2 + 5x^3 - 4x - 7$, the degree of $p(x)$ is $3$ because that's the maximum exponent in the terms.
 
 (Forma estándar de un polinomio)
-**Standard form of a polynomial**: a polynomial with its terms written in descending order of their exponents.
+**Standard form of a polynomial**: a polynomial with its terms written in descending order of the exponents of one given variable. For example, the standard form of $p(x) = x^2 + 5x^3 - 4x - 7$ is $p(x) = 5x^3 + x^2 - 4x - 7$.
 
 (Adición de polinomios)
-**Addition of polynomials**: the operation of addition made with polynomials. Addition of polynomials is based on combining like terms, i.e. only the terms with the same variables and exponents are added together.
+**Addition of polynomials**: the operation of addition made with polynomials. Addition of polynomials is based on combining like terms, i.e. only the terms with the same variables and exponents are added together. For example, given $p(x) = 2x^3 + 4x - 7$ and $q(x) = 3x - 2$, then $p(x) + q(x) = 2x^3 + 7x - 9$.
 
 (Sustracción de polinomios)
-**Subtraction of polynomials**: the operation of subtraction made with polynomials. Subtraction of polynomials is bases on combining like terms, i.e. only the terms with the same variables and exponents can be subtracted from one another.
+**Subtraction of polynomials**: the operation of subtraction made with polynomials. Subtraction of polynomials is bases on combining like terms, i.e. only the terms with the same variables and exponents can be subtracted from one another. For example, given $p(x) = 2x^3 + 4x - 7$ and $q(x) = 3x - 2$, then $p(x) - q(x) = 2x^3 + x - 5$.
 
 Addition and subtraction of polynomials can be done programatically.
 [Addition and subtraction of polynomials code](Programs/Ch10/S01_01_Addition_and_subtraction_of_polynomials.py)
 
 (Evaluación de polinomios)
-**Polynomial evaluation**: polynomial evaluation is done like regular evaluation of expressions.
+**Polynomial evaluation**: polynomial evaluation is done like regular evaluation of expressions. For example, in $p(x) = 5x^3 + x^2 - 4x - 7$ evaluating $p(x)$ in $2$ gives $p(2) = 5(2)^3 + (2)^2 - 4(2) - 7 = 40 + 4 - 8 - 7 = 44 - 15 = 29$, so evaluating $p(x)$ in $2$ gives $29$.
 
 ## Multiplication properties of exponents (Propiedades de los exponentes)
 [Ch10_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=873)
@@ -66,7 +66,7 @@ Addition and subtraction of polynomials can be done programatically.
 > Power property of exponents
 >
 > Let $a$, $m$, $n$ be numbers, then
-> $$(a^m)^n = a^{m n}$$
+> $${(a^m)}^n = a^{m n}$$
 
 (Producto de potencias con el mismo exponente)
 **Product to a power property of exponents**: the product of two bases with the same exponent, is equal to the product of the bases raised to the power of the exponent.
@@ -74,7 +74,7 @@ Addition and subtraction of polynomials can be done programatically.
 > Product to a power property of exponents
 >
 > Let $a$, $b$, $n$ be numbers, then
-> $$a^n b^n = (a b)^n$$
+> $$a^n b^n = {(a b)}^n$$
 
 (Multiplicación de monomios)
 **Monomial multiplication**: let $a$, $b$, $k$, $l$, $m$, $n$, be numbers and $x$, $y$ be variables, then the product of the monomials $ax^ky^l$ and $bx^my^n$ is $abx^{k + m}y^{l + n}$.
@@ -88,6 +88,7 @@ The multiplication of polynomials is based on the distributive property of multi
 > Example of multiplication of polynomials
 >
 > Let $ax^2 + bx + c$ and $dx + e$ be two polynomials, then their product is
+> 
 > $$\begin{gathered}
 > (ax^2 + bx + c)(dx + e)\\
 > = adx^3 + aex^2 + bdx^2 + bex + cdx + ce\\
@@ -152,6 +153,7 @@ This result follows the same form of mixed numbers, but instead of numbers, poly
 > Let $3x^2 - 5x + 8$ and $2x - 7$ be the two polynomials being divided, then
 > $$\frac{2x - 7}{3x^2 - 5x + 8} = \frac{2x - 7}{3x^2 - 5x + 8}$$
 > This division can not be made any further, the degree of the numerator is less than the degree of the denominator. The reciprocal can be done.
+>
 > $$\frac{3x^2 - 5x + 8}{2x - 7} \quad \to \qquad
 > \begin{aligned}
 > 3x^2\ -\ 5x\ +\ 8\hspace{8pt} &\underline{|\ 2x - 7}\\
@@ -173,7 +175,9 @@ Scientific notation is a way to express numbers. A given number written in scien
 > Let $N$ be a number, $a$ be a number such that $a \ge 1$ and $a < 10$, and let $n$ be an integer, then
 > $$N = a 10^n$$
 
-To convert the given number $N$ to scientific notation, only its first nonzero digit is left as the first digit of $a$, and the remaining digits become decimals of $a$, this conversion is compensated as necessary using $n$, so that the equality $N = a 10^n$ is maintained. If $|N| \ge 1$ then $n$ must be zero or positive, while if $|N| < 1$ then $n$ must be negative.
+To convert the given number $N$ to scientific notation, only its first nonzero digit is left as the first digit of $a$, and the remaining digits become decimals of $a$, this conversion is compensated as necessary using $n$, so that the equality $N = a 10^n$ is maintained. If $|N| \ge 1$ then $n$ must be zero or positive, while if $|N| < 1$ then $n$ must be negative. The sign of the number itself $N$ is not changed.
+
+For example, the number $-3894.15509$ expressed in scientific notation is $-3.89415509 \cdot 10^3$, given that the decimal point was moved to the left (higher place values) the value of $n$ is positive $3$.
 
 ## Polynomial factoring (Factorización de polinomios)
 [Ch10_S06](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=940)
@@ -182,11 +186,11 @@ To convert the given number $N$ to scientific notation, only its first nonzero d
 **Factoring**: the process of finding the factors of a product.
 
 (Máximo factor común de dos expresiones)
-**Greatest common factor of two expressions**: the largest expression that is a factor of the two given expressions.
+**Greatest common factor of two expressions**: the largest expression that is a factor of the two given expressions. For example, given $3x^2 + 6x$ and $9x$, the greatest common factor is $3x$.
 [Greatest common factor of two expressions code](Programs/Ch10/S06_01_Greatest_common_factor_of_two_expressions.py)
 
 (Máximo factor común de un polinomio)
-**Greatest common factor of a polynomial**: the largest expression that is a factor of all the terms in a given polynomial.
+**Greatest common factor of a polynomial**: the largest expression that is a factor of all the terms in a given polynomial. For example, in $12x^2 + 24x$ the greatest common factor is $12x$.
 
 After doing polynomial factoring, a polynomial is represented as factors that are multiplying each other.
 [Polynomial factoring code](Programs/Ch10/S06_02_Polynomial_factoring.py)

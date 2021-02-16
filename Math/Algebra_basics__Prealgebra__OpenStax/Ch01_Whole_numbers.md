@@ -280,6 +280,7 @@ Division is not commutative.
 > Non commutativity of division
 >
 > Let $a$, $b$ be numbers,
+>
 > $$\begin{gathered}
 > if\ a \ne b\\
 > then\ \frac{a}{b} \ne \frac{b}{a}

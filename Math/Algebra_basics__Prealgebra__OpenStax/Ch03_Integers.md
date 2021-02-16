@@ -99,6 +99,7 @@ The solution of an equation with integers is no different from a regular solutio
 > Multiplication property of equality
 >
 > Let $a$, $b$, $c$ be numbers
+>
 > $$\begin{gathered}
 > if\ a = b\\
 > then\ a c = b c
@@ -110,6 +111,7 @@ The solution of an equation with integers is no different from a regular solutio
 > Division property of equality
 >
 > Let $a$, $b$, $c$ be numbers, with $c$ being nonzero
+>
 > $$\begin{gathered}
 > if\ a = b\\
 > then\ \frac{a}{c} = \frac{b}{c}

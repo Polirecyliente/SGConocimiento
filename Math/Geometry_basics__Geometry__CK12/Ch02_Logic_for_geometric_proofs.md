@@ -97,6 +97,7 @@ The symbol of a double right arrow $\Rightarrow$ is used outside of logic, in ma
 > Notation of the logical negation
 >
 > Let $p$ be an event, then its negation is
+>
 > $$\begin{gathered}
 > \neg p\\
 > \sim p
@@ -179,6 +180,7 @@ Deductive reasoning means reasoning on the basis of given facts.
 > Let $p$, $q$ be two events, let $p$ be true, and let the conditional $p \to q$ be also true, then $q$ is true by deduction.
 >
 > The law of detachment can be denoted as follows
+>
 > $$\begin{gathered}
 > p \to q\\
 > p\\
@@ -197,6 +199,7 @@ The law of detachment is also known as modus ponendo ponens, which is latin for 
 > Fallacy of the converse
 >
 > Let $p$, $q$ be two events, then
+>
 > $$\begin{gathered}
 > p \to q\\
 > q\\
@@ -215,6 +218,7 @@ The fallacy of the converse is also known as the converse error (error converso)
 > Let $p$, $q$ be two events, let the conditional $p \to q$ be true and let $\neg q$ be also true, then $\neg p$ is true by deduction.
 >
 > The law of contrapositive can be denoted as follows
+>
 > $$\begin{gathered}
 > p \to q\\
 > \neg q\\
@@ -230,6 +234,7 @@ This law is true because the contrapositive of a conditional is logically equiva
 > Law of syllogism
 >
 > Let $p$, $q$, $r$, $s$ events, then
+>
 > $$\begin{gathered}
 > p \to q\\
 > q \to r\\

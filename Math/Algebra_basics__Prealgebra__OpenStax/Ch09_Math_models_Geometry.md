@@ -33,6 +33,7 @@ Money measured in different currency valued coins and bills can be combined toge
 > Combine mixed monetary units
 >
 > Let $I$ be the set of unique coins and bills with different values, let $i$ be a subindex that indicates a particular element of $I$, let $v_i$ be the value of the coin or bill $i$, let $a_i$ be the amount in possession of the coin or bill $i$, let $V_i$ be the subtotal value of the coin or bill $i$, let $V$ be the total monetary value, then
+>
 > $$\begin{gathered}
 > V_i = a_i v_i\\
 > V = \sum_i{V_i}
@@ -78,6 +79,7 @@ Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$
 > Sum of the measures of the angles of a triangle
 >
 > Let $A$, $B$, $C$, be three vertices that form a triangle, then
+>
 > $$\begin{gathered}
 > m \angle A + m \angle B + m \angle C = 180 \text{\textdegree}\\
 > m \angle A + m \angle B + m \angle C = \pi
@@ -156,6 +158,7 @@ From the image, $(a + b)^2 = c^2 + 2 a b$, then $a^2 + 2 a b + b^2 = c^2 + 2 a b
 > Rectangle properties
 >
 > Let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, and $A$ be the area of the rectangle, then
+>
 > $$\begin{gathered}
 > P = 2(L + W)\\
 > A = L W
@@ -167,6 +170,7 @@ From the image, $(a + b)^2 = c^2 + 2 a b$, then $a^2 + 2 a b + b^2 = c^2 + 2 a b
 > Triangle properties
 >
 > Let $a$, $b$, $c$, be the lengths of the sides of a triangle, let $h$ be the height of the triangle as measured when $b$ is the floor, let $P$ be the perimeter of the triangle, and $A$ be the area of the triangle, then
+>
 > $$\begin{gathered}
 > P = a + b + c\\
 > A = \frac{b h}{2}
@@ -223,6 +227,7 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 > Rectangular solid properties
 >
 > In a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
+>
 > $$\begin{gathered}
 > V = L W H\\
 > S = 2 (L W + L H + W H)
@@ -234,6 +239,7 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 > Cube properties
 >
 > In a cube, let $s$ be the the length of any of its sides, $L$ be its length, $W$ be its widht, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
+>
 > $$\begin{gathered}
 > s = L = W = H\\
 > V = s^3\\
@@ -246,6 +252,7 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 > Sphere properties
 >
 > In a sphere, let $r$ be its radius, $V$ be its volume, and $S$ be its surface area, then
+>
 > $$\begin{gathered}
 > V = \frac{4}{3} \pi r^3\\
 > S = 4 \pi r^2
@@ -261,6 +268,7 @@ The formula for the volume of a sphere can be understood from the surface area o
 > Cylinder properties
 >
 > In a cylinder, let $r$ be the radius of its circles, $h$ be its height, $V$ be its volume, and $S$ be its surface area, then
+>
 > $$\begin{gathered}
 > V = \pi r^2 h \\
 > S = 2 \pi r^2 + 2 \pi r h
@@ -274,6 +282,7 @@ The volume of the cylinder is the product of the area of its base and its height
 > Cone properties
 >
 > In a cone, let $r$ be the radius of its base, $h$ be the distance from the apex to its base, $l$ be the distance from the apex to its circumference, $V$ be its volume, and $S$ be its surface area, then
+>
 > $$\begin{gathered}
 > V = \frac{1}{3} \pi r^2 h\\[5 pt]
 > S = \pi r^2 + \pi r l

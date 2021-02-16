@@ -87,6 +87,7 @@ Now to subtract these two products, let $a = 894.5744813265344813265344813265344
 > Circumference formula
 >
 > Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then
+>
 > $$\begin{gathered}
 > \pi := \frac{C}{d}\\
 > d = 2 r\\

@@ -5,33 +5,37 @@
 #T# Table of contents
 
 #C# Math definitions (Definiciones de matemática)
-#C# Numeral systems (Sistemas de numeración)
-#C# Counting numbers (Números naturales)
-#C# Whole numbers (Números naturales y el cero)
-#C# Integer numbers (Números enteros)
-#C# Rational numbers (Números racionales)
-#C# Irrational numbers (Números irracionales)
-#C# Real numbers (Números reales)
-#C# Transcendental numbers (Números trascendentes)
-#C# Number approximation (Aproximación de números)
-#C# Equations and inequalities (Ecuaciones y desigualdades)
-#C# Addition of real numbers (Adición de números reales)
-#C# Subtraction of real numbers (Sustracción de números reales)
-#C# Multiplication of real numbers (Multiplicación de números reales)
-#C# Division of real numbers (División de números reales)
-#C# Exponentiation of real numbers (Exponenciación de números reales)
-#C# Order of operations (Orden de las operaciones)
-#C# Properties of real numbers (Propiedades de los números reales)
-#C# Multiples and factors of integers (Múltiplos y factores de los enteros)
+#C# --- Numeral systems (Sistemas de numeración)
+#C# --- Subsets of the real numbers (Subconjuntos de los números reales)
+#C# ---| Counting numbers (Números naturales)
+#C# ---| Whole numbers (Números naturales y el cero)
+#C# ---| Integer numbers (Números enteros)
+#C# ---| Rational numbers (Números racionales)
+#C# ---| Irrational numbers (Números irracionales)
+#C# ---| Real numbers (Números reales)
+#C# ---| Transcendental numbers (Números trascendentes)
+#C# --- Number approximation (Aproximación de números)
+#C# --- Equations and inequalities (Ecuaciones y desigualdades)
+#C# --- Operations with real numbers (Operaciones con números reales)
+#C# ---| Addition of real numbers (Adición de números reales)
+#C# ---| Subtraction of real numbers (Sustracción de números reales)
+#C# ---| Multiplication of real numbers (Multiplicación de números reales)
+#C# ---| Division of real numbers (División de números reales)
+#C# ---| Exponentiation of real numbers (Exponenciación de números reales)
+#C# ---| Order of operations (Orden de las operaciones)
+#C# --- Properties of real numbers (Propiedades de los números reales)
+#C# --- Multiples and factors of integers (Múltiplos y factores de los enteros)
 #C# Algebra definitions (Definiciones de álgebra)
-#C# Linear equations (Ecuaciones lineales)
+#C# --- Linear equations (Ecuaciones lineales)
+#C# --- Polynomials (Polinomios)
+#C# ---| Operations with polynomials (Operaciones con polinomios)
 #C# Geometry definitions (Definiciones de geometría)
-#C# Basic shapes and their formulas (Formas básicas y sus fórmulas)
+#C# --- Basic shapes and their formulas (Formas básicas y sus fórmulas)
 #C# Probability definitions (Definiciones de probabilidad)
-#C# Measures of central tendency (Medidas de tendencia central)
+#C# --- Measures of central tendency (Medidas de tendencia central)
 #C# Simplifications (Simplificaciones)
 #C# Science and engineering definitions (Definiciones de ciencia e ingeniería)
-#C# Science and engineering formulas (Fórmulas de ciencia e ingeniería)
+#C# --- Science and engineering formulas (Fórmulas de ciencia e ingeniería)
 
 #T# Beginning of content
 -->
@@ -70,7 +74,7 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 (Coordenada de un punto)
 **Coordinate of a point**: an ordered tuple of numbers indicating the location of the point. In the three dimensional tuple $(a, b, c)$, $a$ indicates the location of the point along the first dimension, $b$ indicates the location of the point along the second dimension, and $c$ indicates the location of the point along the third dimension. This pattern continues if the tuple has more numbers.
 
-## Numeral systems (Sistemas de numeración)
+### Numeral systems (Sistemas de numeración)
 
 (Dígitos | Cifras)
 **Digits**: each of the numeric values that makes up a number, e.g. the number $834$ has three digits, namely $8$, $3$, and $4$.
@@ -87,17 +91,19 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 (Grupos en la numeración posicional)
 **Plave value periods**: these periods are the separation of digits in groups of three, each has a name, ones, thousands, millions, thousandths, millionths, etcetera.
 
-## Counting numbers (Números naturales)
+### Subsets of the real numbers (Subconjuntos de los números reales)
+
+#### Counting numbers (Números naturales)
 
 (Números naturales)
 **Counting numbers**: these are, 1, 2, 3, 4, ..., up to infinity
 
-## Whole numbers (Números naturales y el cero)
+#### Whole numbers (Números naturales y el cero)
 
 (Números naturales y el cero)
 **Whole numbers**: these are, 0, 1, 2, 3, 4, ..., so the set of whole numbers is the same as the set of counting numbers and zero.
 
-## Integer numbers (Números enteros)
+#### Integer numbers (Números enteros)
 
 The set of integers is the set of the whole numbers and the negative numbers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two integer numbers.
 
@@ -112,7 +118,7 @@ The opposite of $a$ is $-a$, so $-(a) = -a$. The opposite of $-a$ is $a$, so $-(
 (Números enteros consecutivos)
 **Consecutive integers**: integers that follow each other by adding $1$ repeatedly, e.g. $-4$, $-3$, $-2$, or $19$, $20$, $21$, etcetera.
 
-## Rational numbers (Números racionales)
+#### Rational numbers (Números racionales)
 
 The rational numbers form the set of numbers that can be represented via fractions. This is an ordered set in which the relational operators can be used to compare the values of two rational numbers.
 
@@ -178,17 +184,17 @@ Let $p\%$ be a percent, $B$ be the base, $A$ be the amount, then $A = p\% \cdot 
 
 The reciprocal of a percent, $\frac{1}{p\%}$, means the reciprocal of a ratio. If a percent $p\%$ means the part over the total, i.e. there are $p$ part units per group of $100$ total units, then $\frac{1}{p\%}$ means that there are $100$ total units per group of $p$ part units.
 
-## Irrational numbers (Números irracionales)
+#### Irrational numbers (Números irracionales)
 
 The irrational numbers form the set of numbers such as $\pi$, in which the decimal part of the number is infinite and never repeats itself. The square root of numbers that are not perfect squares is also irrational.
 
 The fact that they are called irrational, doesn't necessarily mean that they can't have predictable patterns, for example, a number such as $0.101001000100001000001...$ is irrational by definition, but it can be understood as the number with a $1$ in between a steady growing number of $0$s. This pattern is infinite and never repeats itself, so it's an irrational number.
 
-## Real numbers (Números reales)
+#### Real numbers (Números reales)
 
 The set of real numbers is the union of the sets of rational and irrational numbers.
 
-## Transcendental numbers (Números trascendentes)
+#### Transcendental numbers (Números trascendentes)
 
 The transcendental numbers are numbers that can't be obtained as a solution of a polynomial with rational coefficients.
 
@@ -200,7 +206,7 @@ For example $\sqrt{2}$ is not transcendental because it is the solution of $x^2 
 (Aproximación fraccionaria de pi)
 **Fractional approximation of pi**: there are infinitely many fractional approximations of pi, one of the simplest is $\frac{22}{7}$.
 
-## Number approximation (Aproximación de números)
+### Number approximation (Aproximación de números)
 
 (Redondeo)
 **Rounding**: approximating a number with another of less significant digits.
@@ -214,7 +220,7 @@ For example $\sqrt{2}$ is not transcendental because it is the solution of $x^2 
 (Truncamiento)
 **Truncation**: rounding a number by removing all digits after the decimal point, e.g. $2.5$ truncated is $2$, and $-2.5$ truncated is $-2$.
 
-## Equations and inequalities (Ecuaciones y desigualdades)
+### Equations and inequalities (Ecuaciones y desigualdades)
 
 (Signo de igualdad)
 **Equality sign**: this sign is $=$, the equal sign.
@@ -290,7 +296,9 @@ The division property of equality is used to solve equations when there is a fac
 (Proporción con porcentajes)
 **Percent proportion**: a proportion in which one of the fractions is a percentage. Using terms from before, let $B$ be the base, $A$ the amount, then $\frac{A}{B} = \frac{p}{100}$, this means that the amount $A$ is to the base $B$ as $p$ is to $100$.
 
-## Addition of real numbers (Adición de números reales)
+### Operations with real numbers (Operaciones con números reales)
+
+#### Addition of real numbers (Adición de números reales)
 
 Addition is the operation of adding numbers together. Addition means starting at the end of the first number, and then moving the amount being added by the second number.
 
@@ -334,7 +342,7 @@ Adding a negative number is the same as subtracting its opposite (just as adding
 (Adición de números mixtos)
 **Addition of mixed numbers**: like regular addition. The integer parts of the mixed numbers can be added directly, and the proper fraction parts are added with the rules of addition of fractions, the result is the sum of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
 
-## Subtraction of real numbers (Sustracción de números reales)
+#### Subtraction of real numbers (Sustracción de números reales)
 
 Subtraction is the operation of subtracting a number from another. Subtraction means starting at the end of the first number, and then moving in the opposite direction the amount of units being subtracted by the second number.
 
@@ -357,7 +365,7 @@ Subtracting a negative number means moving opposite to its direction, i.e. movin
 (Sustracción de números mixtos)
 **Subtraction of mixed numbers**: like regular subtraction. The integer parts of the mixed numbers can be subtracted directly, and the proper fraction parts are subtracted with the rules of subtraction of fractions, the result is the difference of the integer and fraction parts. To show the result as a mixed number, the integer part is left alone, and the fraction part is converted to a proper fraction if necessary, this may change the integer part.
 
-## Multiplication of real numbers (Multiplicación de números reales)
+#### Multiplication of real numbers (Multiplicación de números reales)
 
 Multiplication is the operation of multiplying numbers together. Multiplication means the repeated addition of a number with itself, the amount of repeated additions is the other number in the operation.
 
@@ -427,7 +435,7 @@ Division has a similar behavior, the total number of elements is the dividend, b
 
 The interpretation of $24 \div 8 = 3$ as $24$ elements divided in $8$ groups have a group size of $3$, means that there are $3$ elements per each $1$ group, so $24 \div 8 = 3 \div 1$, in words it could be read as, there are $24$ elements each $8$ groups, or there are $3$ elements each $1$ group.
 
-## Division of real numbers (División de números reales)
+#### Division of real numbers (División de números reales)
 
 Division is the operation of dividing a first number by a second number. Division means the repeated subtraction of the second number from the first number until reaching 0, the amount of repeated subtractions is the result of the operation.
 
@@ -472,7 +480,7 @@ Non fraction numbers also have a reciprocal, the reciprocal of $a$ is $\frac{1}{
 (Residuo | Resto)
 **Remainder**: in division, this is the number that is left over after doing the repeated subtraction, if any. In $\frac{a}{b} = q + \frac{r}{b}$, $a$, $b$ are numbers with $b$ being nonzero, $q$ is the quotient, and $r$ is the remainder.
 
-## Exponentiation of real numbers (Exponenciación de números reales)
+#### Exponentiation of real numbers (Exponenciación de números reales)
 
 (Notación exponencial)
 **Exponential notation**: used in expressions where a number is multiplied by itself several times, for example, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$. In general $a a a \ldots a = a^n$, where the value $n$ is the amount of times that $a$ is multiplied by itself.
@@ -509,7 +517,28 @@ Using the shown symbols, the exponential notation is read as $a$ to the $n$-th p
 (Raíz cuadrada principal)
 **Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.
 
-## Order of operations (Orden de las operaciones)
+(Producto de potencias de igual base)
+**Product property of exponents**: the product of two equal bases, each with their exponent, is equal to the base raised to the sum of the exponents, $a^m a^n = a^{m + n}$.
+
+(Potencia de una potencia)
+**Power property of exponents**: the result of raising a base to an exponent and then raising that power to another exponent, is equal to the base raised to the power of the product of the exponents, ${(a^m)}^n = a^{m n}$.
+
+(Producto de potencias con el mismo exponente)
+**Product to a power property of exponents**: the product of two bases with the same exponent, is equal to the product of the bases raised to the power of the exponent, $a^n b^n = {(a b)}^n$.
+
+(Cociente de potencias de la misma base)
+**Quotient property of exponents**: the quotient of two exponents that have the same base, is equal to the base raised to the power of the exponent in the numerator minus the exponent in the denominator, $\frac{a^m}{a^n} = a^{m - n}$.
+
+(Exponente negativo)
+**Negative exponent**: the reciprocal of the base raised to the power of the exponent, $a^{-n} = \frac{1}{a^n}$.
+
+(Exponente cero)
+**Zero exponent**: a nonzero base raised to the power of zero is equal to one, $a^0 = 1$ such that $a \ne 0$.
+
+(Potencia de un cociente)
+**Quotient to a power property of exponents**: the quotient of two bases with the same exponent, is equal to the quotient of the bases raised to the power of the exponent, $\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$.
+
+#### Order of operations (Orden de las operaciones)
 
 The order in which to execute the operations. In $5 + \frac{10}{2}$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first. This can be modified with grouping symbols.
 
@@ -528,12 +557,12 @@ The order in which to execute the operations. In $5 + \frac{10}{2}$, the result 
 (PEMDAS)
 **PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general. Multiplication and division have the same relevance, so they can be switched in order, same with addition and subtraction.
 
-## Properties of real numbers (Propiedades de los números reales)
+### Properties of real numbers (Propiedades de los números reales)
 
 (Valor absoluto)
 **Absolute value**: the distance between 0 and a given number, it's always positive and it's the same for any number and its opposite. For a given number $a$, its absolute value is denoted as $\lvert a \rvert$, e.g. $\lvert 5 \rvert = \lvert -5 \rvert = 5$.
 
-## Multiples and factors of integers (Múltiplos y factores de los enteros)
+### Multiples and factors of integers (Múltiplos y factores de los enteros)
 
 (Múltiplos de un número)
 **Multiples of an number**: given an integer, its multiples are the result of multiplying it by any of the counting numbers, so an integer has infinite multiples. The smallest multiple (in absolute value) is the integer itself.
@@ -619,7 +648,7 @@ The greatest common divisor of two integers can be calculated using their prime 
 (Reducción de términos semejantes)
 **Combining like terms | Combine like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
-## Linear equations (Ecuaciones lineales)
+### Linear equations (Ecuaciones lineales)
 
 A linear equation is an equation in which the variables have an exponent of $1$.
 
@@ -646,6 +675,68 @@ Every linear equation in one variable can be simplified through the use of the p
 
 (Elevación sobre avance de una pendiente)
 **Rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
+
+### Polynomials (Polinomios)
+
+A polynomial is an expression of one or more terms added together. The terms may contain variables. If the only variable in a polynomial is $x$, the polynomial can be denoted as $p(x)$ or using other letters, as $q(x)$. For example $p(x) = x^2 + 5x^3 - 4x - 7$.
+
+(Monomio)
+**Monomial**: a polynomial with only one term.
+
+(Binomio)
+**Binomial**: a polynomial with two terms.
+
+(Trinomio)
+**Trinomial**: a polynomial with three terms.
+
+(Grado de un polinomio)
+**Degree of a polynomial**: the degree of the term $ax^n$ is the exponent $n$. In a polynomial with several terms, the degree is the maximum of the exponents. For example, in $p(x) = x^2 + 5x^3 - 4x - 7$, the degree of $p(x)$ is $3$ because that's the maximum exponent in the terms.
+
+(Forma estándar de un polinomio)
+**Standard form of a polynomial**: a polynomial with its terms written in descending order of the exponents of one given variable. For example, the standard form of $p(x) = x^2 + 5x^3 - 4x - 7$ is $p(x) = 5x^3 + x^2 - 4x - 7$.
+
+(Evaluación de polinomios)
+**Polynomial evaluation**: polynomial evaluation is done like regular evaluation of expressions. For example, in $p(x) = 5x^3 + x^2 - 4x - 7$ evaluating $p(x)$ in $2$ gives $p(2) = 5(2)^3 + (2)^2 - 4(2) - 7 = 40 + 4 - 8 - 7 = 44 - 15 = 29$, so evaluating $p(x)$ in $2$ gives $29$.
+
+#### Operations with polynomials (Operaciones con polinomios)
+
+(Adición de polinomios)
+**Addition of polynomials**: the operation of addition made with polynomials. Addition of polynomials is based on combining like terms, i.e. only the terms with the same variables and exponents are added together. For example, given $p(x) = 2x^3 + 4x - 7$ and $q(x) = 3x - 2$, then $p(x) + q(x) = 2x^3 + 7x - 9$.
+
+(Sustracción de polinomios)
+**Subtraction of polynomials**: the operation of subtraction made with polynomials. Subtraction of polynomials is bases on combining like terms, i.e. only the terms with the same variables and exponents can be subtracted from one another. For example, given $p(x) = 2x^3 + 4x - 7$ and $q(x) = 3x - 2$, then $p(x) - q(x) = 2x^3 + x - 5$.
+
+(Multiplicación de monomios)
+**Monomial multiplication**: let $a$, $b$, $k$, $l$, $m$, $n$, be numbers and $x$, $y$ be variables, then the product of the monomials $ax^ky^l$ and $bx^my^n$ is $abx^{k + m}y^{l + n}$.
+
+(Multiplicación de polinomios)
+**Multiplication of polynomials**: the multiplication of polynomials is based on the distributive property of multiplication over addition (and subtraction). In the product of two polynomials, each term of the first polynomial is multiplied by the second polynomial using the distributive property.
+
+For example, given $p(x) = 2x^3 + 4x - 7$ and $q(x) = 3x - 2$, then $p(x)q(x) = (2x^3)(3x) + (2x^3)(-2) + (4x)(3x) + (4x)(-2) + (-7)(3x) + (-7)(-2) = 6x^4 - 4x^3 + 12x^2 - 8x - 21x + 14 = 6x^4 - 4x^3 + 12x^2 - 29x + 14$, so $p(x)q(x) = 6x^4 - 4x^3 + 12x^2 - 29x + 14$.
+
+(División de monomios)
+**Monomial division**: let $a$, $b$, $k$, $l$, $m$, $n$, be numbers and $x$, $y$ be variables, then the division of the monomial $ax^ky^l$ over $bx^my^n$ is $\frac{a}{b}x^{k - m}y^{l - n}$.
+
+(División de polinomios)
+**Division of polynomials**: this operation is done according to the degrees of the polynomials in the dividend and divisor. In a fraction of polynomials, if the degree of the numerator is less than the degree of the denominator, then that fraction can not be simplified further, i.e. it behaves as a proper fraction.
+
+Long division of polynomials (División larga de polinomios) is a way to divide polynomials. With the polynomials in the fraction written in standard form, each individual term of the numerator from left to right is divided by the first term of the denominator, until the degree of the term being divided is less than the degree of the polynomial in the denominator.
+
+In general, let $x$ be a variable, $p(x)$, $g(x)$ be the two polynomials being divided, let $q(x)$ be the quotient of the division, and $r(x)$ be the remainder, then $\frac{p(x)}{g(x)} = q(x) + \frac{r(x)}{g(x)}$.
+
+For example, given $p(x) = 3x^2 + 7x + 4$ and $g(x) = x + 1$, then $\frac{p(x)}{g(x)} = \frac{3x^2 + 7x + 4}{x + 1}$. The first term in the quotient is $3x$ because $3x(x) = 3x^2$ which is the first term in the dividend. Multiplying $3x$ by the divisor and then subtracting the result from the dividend gives, $3x(x + 1) = 3x^2 + 3x$, $3x^2 + 7x + 4 - 3x^2 - 3x = 4x + 4$, now the current dividend is $4x + 4$. The second term in the quotient is $4$, because $4(x) = 4x$ which is the first term in the current dividend. Doing the same process as before gives, $4(x + 1) = 4x + 4$, $4x + 4 - 4x - 4 = 0$. A current dividend of $0$ means that the division is over, and this $0$ is the remainder of the division, and so $\frac{p(x)}{g(x)} = 4x + 4$.
+
+(Factorización)
+**Factoring**: the process of finding the factors of a product.
+
+(Factorización de polinomios)
+**Polynomial factoring**: factoring applied to a polynomial, treating the polynomial as the product. After doing polynomial factoring, a polynomial is represented as factors that are multiplying each other.
+
+(Máximo factor común de dos expresiones)
+**Greatest common factor of two expressions**: the largest expression that is a factor of the two given expressions. For example, given $3x^2 + 6x$ and $9x$, the greatest common factor is $3x$.
+
+(Máximo factor común de un polinomio)
+**Greatest common factor of a polynomial**: the largest expression that is a factor of all the terms in a given polynomial. For example, in $12x^2 + 24x$ the greatest common factor is $12x$.
 
 ## Geometry definitions (Definiciones de geometría)
 
@@ -702,7 +793,7 @@ Angles are commonly measured in degrees and in radians. In degrees a whole rotat
 (Sólidos)
 **Solids**: three dimensional shapes.
 
-## Basic shapes and their formulas (Formas básicas y sus fórmulas)
+### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
 (Triángulo)
 **Triangle**: shape with three straight sides and therefore three angles. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex. Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
@@ -839,7 +930,7 @@ Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ 
 
 For example, in a set of $N$ numbers, the probability $P(x)$ to obtain a given number $x$ that has a frequency of $f_x$ is $P(x) = \frac{f_x}{N}$.
 
-## Measures of central tendency (Medidas de tendencia central)
+### Measures of central tendency (Medidas de tendencia central)
 
 (Promedios)
 **Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
@@ -913,6 +1004,13 @@ Ratios can be considered rates when the particular units in the numerator and de
 Let $V_i$ be the initial value of a given variable, $V_f$ be the final value of said variable, $\Delta p\%$ be the percent change, then $\Delta p\% = \frac{V_f - V_i}{V_i} 100\%$. Note that the words "initial" and "final" do not have to mean that they are separated in time, they can be separated under any criteria wanted.
 
 Given that $V_f$ can be smaller or bigger than $V_i$, $\Delta p\%$ can be negative or positive, if it's negative then that means that the percent change is a percent decrease, whereas if it's positive then that means that the percent change is a percent increase.
+
+(Notación científica)
+**Scientific notation**: scientific notation is a way to express numbers. A given number written in scientific notation is represented as a number greater than or equal to 1 and less than 10, multiplied by a power of 10.
+
+Any number $N$ can be expressed in scientific notation, for this let $a$ be a number such that $a \ge 1$ and $a < 10$, and let $n$ be an integer, then $N = a 10^n$. To convert the given number $N$ to scientific notation, only its first nonzero digit is left as the first digit of $a$, and the remaining digits become decimals of $a$, this conversion is compensated as necessary using $n$, so that the equality $N = a 10^n$ is maintained. If $|N| \ge 1$ then $n$ must be zero or positive, while if $|N| < 1$ then $n$ must be negative.
+
+For example, the number $-3894.15509$ expressed in scientific notation is $-3.89415509 \cdot 10^3$, given that the decimal point was moved to the left (higher place values) the value of $n$ is positive $3$.
 
 (Sistemas de medida)
 **Systems of measurement**: The systems of measurement are systems intended to be internally consistent, to provide a unit of measure for any physical quantity. The main quantities measured in these systems are time and space (time, distance, area, volume), derived quantities are also included like speed (distance divided by time), and also units of measure for other quantities, like electric field, radiation levels, etcetera.
@@ -1035,7 +1133,7 @@ Let $I$ be the set of unique units to be mixed, $i$ be a subindex of $I$, $v_i$ 
 (Interés financiero)
 **Financial interest**: money received in return for an investment, or paid for a loan.
 
-## Science and engineering formulas (Fórmulas de ciencia e ingeniería)
+### Science and engineering formulas (Fórmulas de ciencia e ingeniería)
 
 (Fórmula de la velocidad, distancia y tiempo)
 **Velocity, distance and time formula**: velocity is defined as the rate of distance change over time.

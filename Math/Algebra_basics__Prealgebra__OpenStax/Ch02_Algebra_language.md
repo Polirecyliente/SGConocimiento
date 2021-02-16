@@ -148,6 +148,7 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 > Subtraction property of equality
 >
 > Let $a$, $b$, $c$ be numbers
+>
 > $$\begin{gathered}
 > if\ a = b\\
 > then\ a - c = b - c
@@ -161,6 +162,7 @@ Note, in spanish this property may be bundled as part of the addition property o
 > Addition property of equality
 >
 > Let $a$, $b$, $c$ be numbers
+>
 > $$\begin{gathered}
 > if\ a = b\\
 > then\ a + c = b + c
