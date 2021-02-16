@@ -45,7 +45,7 @@ $a$ is the $x$-axis value, and $b$ is the $y$-axis value.
 **The origin**: the point in which both axes cross each other, i.e. the point $(0, 0)$.
 
 (Gráfica)
-**Graph**: the use of the $x$-$y$ plain to show points. These points can come from a mathematical function or equation, points scattered, etcetera. If the graph comes from an equation, it is read as the graph of the equation (la gráfica de la ecuación).
+**Graph**: the use of the $x$-$y$ plain to show points. These points can come from a mathematical function or equation, points scattered, etcetera. If the graph comes from an equation, it is read as the graph of the equation (la gráfica de la ecuación). The graph itself is the set of points that result from plotting the equation.
 
 (Ecuación en dos variables)
 **Equation in two variables**: an equation that has two variables. Setting the value of one of the variables allows finding the value of the other.
@@ -57,7 +57,7 @@ $a$ is the $x$-axis value, and $b$ is the $y$-axis value.
 >
 > Let $A$, $B$, $C$, be constants, $x$, $y$, be variables, then
 > $$Ax + By = C$$
-> This is a linear equation, its solutions form a line whem shown in a graph of the $x$-$y$ plain.
+> This is a linear equation, its solutions form a line when shown in a graph of the $x$-$y$ plain.
 
 The amount of solutions of a linear equation is infinite, the line formed by the equation can be extended indefinitely.
 
@@ -80,7 +80,7 @@ A polynomial can be graphed similarly
 (Gráfica de líneas horizontales y verticales)
 **Graph of horizontal and vertical lines**: in the $x$-$y$ plane, the equation $x = a$ represents a vertical line that passes through the point $(a, 0)$, and the equation $y = b$ represents an horizontal line that passes through the point $(0, b)$.
 
-## Intercept (Intercepto)
+## Intercept of a graph (Intercepto de una gráfica)
 [Ch11_S03](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=1002)
 
 In a graph, the intercepts are the points in which the graph crosses an axis, i.e. the points of the graph that have a $0$ in the $x$ coordinate or in the $y$ coordinate, or in both.
