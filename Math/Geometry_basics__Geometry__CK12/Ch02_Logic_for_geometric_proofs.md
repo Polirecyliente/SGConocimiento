@@ -25,7 +25,7 @@ Inductive reasoning means reasoning on the basis of observed patterns.
 >
 > The numbers $2$, $4$, $6$, $8$... form a pattern, in this pattern, the next numbers are most likely $10$, $12$, $14$, etcetera.
 
-A number pattern may be represented as an equation in two variables, one variable for position or term in the pattern (first, second, third, etcetera), and one variable for the value of the pattern in that position or term.
+A number pattern may be represented as an equation in two variables, one variable for the position or term in the pattern (first, second, third, etcetera), and one variable for the value of the pattern in that position or term.
 
 > Example of the equation of a number pattern
 >
@@ -33,11 +33,11 @@ A number pattern may be represented as an equation in two variables, one variabl
 > $$P_n = 2n$$
 
 (Conjetura)
-**Conjecture**: an explanation of a pattern that has not been proven.
+**Conjecture**: an unproven explanation of a pattern.
 
 > Example of a conjecture
 >
-> In the pattern $2$, $4$, $6$, $8$... the conjecture is that the value of the next term is $10$, and that the equation of this pattern is $P_n = 2n$ where $n$ is the term and $P_n$ is the pattern value of the term $n$. But it can happen that the value of the next term is not $10$ but another value, for example it could be $15%$.
+> In the pattern $2$, $4$, $6$, $8$... the conjecture is that the value of the next term is $10$, and that the equation of this pattern is $P_n = 2n$ where $n$ is the term and $P_n$ is the pattern value of the term $n$. But it can happen that the value of the next term is not $10$ but another value, for example it could be $15$.
 
 (Contraejemplo)
 **Counterexample**: in a pattern, a counterexample is a pattern value that disproves a given conjecture.
@@ -296,10 +296,10 @@ In the following tables, let $p$, $q$ be logical statements.
 | $0$ | $0$ | $0$        |
 *Truth table for the or operation*
 
-Truth tables can be used not only for binary operations but for more complex logical expressions, e.g. let $p$, $q$, $r$ be three logical statements, a truth table can be made for the expression $p \land (\neg q \lor r)$, this truth table would have $8$ rows, one for each possible combination of the logical values of $p$, $q$, and $r$, and with the logical value of the expression $p \land (\neg q \lor r)$ in the last column.
+Truth tables can be used not only for binary operations but for more complex logical statements, e.g. let $p$, $q$, $r$ be three logical statements, a truth table can be made for the statement $p \land (\neg q \lor r)$, this truth table would have $8$ rows, one for each possible combination of the logical values of $p$, $q$, and $r$, with several intermediate columns showing the logical values of $\neg q$, $\neg q \lor r$, and with the logical values of the statement $p \land (\neg q \lor r)$ in the last column.
 
 (Demostración por contradicción)
-**Indirect proof**: type of proof in which the consequent is negated, and by deduction a contradiction is found, which means that the consequent is true.
+**Indirect proof**: type of proof of a conditional in which the consequent is negated, and by deduction a contradiction is found, which means that the consequent is true.
 [Ch05_S06](https://www.ck12.org/reader/reader-index.html#section/2932952/5.6/9549314)
 
 ## Equality and congruence properties, operation properties, two column proofs (Propiedades de la igualdad y la congruencia, propiedades de las operaciones, demostraciones a dos columnas)

@@ -26,6 +26,9 @@
 #C# ---| Order of operations (Orden de las operaciones)
 #C# --- Properties of real numbers (Propiedades de los números reales)
 #C# --- Multiples and factors of integers (Múltiplos y factores de los enteros)
+#C# Logic definitions (Definiciones de lógica)
+#C# --- Propositional logic (Lógica proposicional)
+#C# --- Logic fallacies (Falacias lógicas)
 #C# Algebra definitions (Definiciones de álgebra)
 #C# --- Linear equations (Ecuaciones lineales)
 #C# --- Polynomials (Polinomios)
@@ -52,7 +55,20 @@
 (Teorema)
 **Theorem**: a statement that can be proved with postulates, axioms and/or with other theorems.
 
-The black square $\blacksquare$ means that the paragraph proof of the theorem is finished.
+(Demostración textual)
+**Paragraph proof**: a proof that is written in paragraphs. To know where it ends, the symbol $\blacksquare$ is used, because the black square $\blacksquare$ means that the paragraph proof of the theorem is finished.
+
+(Demostraciones a dos columnas)
+**Two column proofs**: a way to write mathematical proofs in a structured manner. The proof is written in a table with two columns. The first column has the header of 'Statement', and its rows contain the steps of the proof. The second column has the header of 'Reason', and its rows state the reason why the step they accompany is correct.
+
+| Statement | Reason  |
+| :-------: | :-----: |
+| Step1     | Reason1 |
+| Step2     | Reason2 |
+| Step3     | Reason3 |
+*Two column proof template*
+
+Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement.
 
 (Variables)
 **Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$.
@@ -82,6 +98,9 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 
 (Subíndice de un símbolo)
 **Subscript of a symbol**: a small number put at the bottom front of a symbol (a constant or a variable), to differentiate between related symbols. For example $(x_1, y_1)$ and $(x_2, y_2)$ represent two different points in the $x$-$y$ plane.
+
+(Símbolo entonces)
+**Then symbol**: the symbol of a double right arrow $\Rightarrow$ is used in mathematics in general, to signify 'then'.
 
 ### Numeral systems (Sistemas de numeración)
 
@@ -329,6 +348,18 @@ The subtraction property of equality is used to solve equations when there is a 
 The multiplication property of equality is used to solve equations when there is a number dividing the variable, then said number is multiplied to both sided of the equality, helping in isolating the variable.
 
 The division property of equality is used to solve equations when there is a factor multiplying the variable, then both sides of the equality are divided by said factor, helping in isolating the variable.
+
+(Propiedad reflexiva de la igualdad)
+**Reflexive property of equality**: a real number is equal to itself, $a = a$.
+
+(Propiedad simétrica de la igualdad)
+**Symmetric property of equality**: if a first real number is equal to a second, then the second number is equal to the first, $a = b \leftrightarrow b = a$.
+
+(Propiedad transitiva de la igualdad)
+**Transitive property of equality**: if a first real number is equal to a second, and the second number is equal to a third, then the third number is equal to the first, if $a = b$ and $b = c$ then $a = c$.
+
+(Propiedad de sustitución de la igualdad)
+**Substitution property of equality**: if two real numbers are equal, one can be substituted by the other, if $a = b$ then $b$ can substitute $a$ and vice versa.
 
 (Propiedad aditiva de la igualdad)
 **Addition property of equality**: adding a number to both sides of an equality preserves the equality. Given $a = b$, then $a + c = b + c$.
@@ -689,6 +720,147 @@ In this use of the term "divisor", it is also a factor of the set of numbers. Th
 
 The greatest common divisor of two integers can be calculated using their prime factors. The greatest common divisor of two integers is the product of their common prime factors, each raised to the power of their minimum multiplicity.
 
+## Logic definitions (Definiciones de lógica)
+
+(Razonamiento inductivo)
+**Inductive reasoning**: inductive reasoning means reasoning on the basis of observed patterns.
+
+(Patrones numéricos)
+**Number patterns**: patterns made with numbers. Discovering the pattern requires inductive reasoning. For example, the numbers $2$, $4$, $6$, $8$... form a pattern, in this pattern, the next numbers are most likely $10$, $12$, $14$, etcetera.
+
+A number pattern may be represented as an equation in two variables, one variable for the position or term in the pattern (first, second, third, etcetera), and one variable for the value of the pattern in that position or term. Continuing the example, let the pattern be $2$, $4$, $6$, $8$..., let $n$ be the term of the pattern, and let $P_n$ be the value of the pattern in the term $n$, then $P_n = 2n$.
+
+(Conjetura)
+**Conjecture**: an unproven explanation of a pattern. For example, in the pattern $2$, $4$, $6$, $8$... the conjecture is that the value of the next term is $10$, and that the equation of this pattern is $P_n = 2n$ where $n$ is the term and $P_n$ is the pattern value of the term $n$. But it can happen that the value of the next term is not $10$ but another value, for example it could be $15$.
+
+(Contraejemplo)
+**Counterexample**: in a pattern, a counterexample is a pattern value that disproves a given conjecture. For example, in the pattern $2$, $4$, $6$, $8$..., if the conjecture is that the pattern value of the next term is $10$, then a counterexample would be that the pattern value of the next term was actually $15$, this disproves the conjecture.
+
+(Razonamiento deductivo)
+**Deductive reasoning**: deductive reasoning means reasoning on the basis of given facts. For example, let $p$, $q$ be two events, such that $p \to q$. Given the fact that $p$ happens, the conclusion is that $q$ happens or will happen. Concluding that $q$ happens is a deduction, because it's a conclusion that was arrived to by reasoning on the basis of the given facts $p$ and $p \to q$.
+
+(Demostración por contradicción)
+**Indirect proof**: type of proof of a conditional in which the consequent is negated, and by deduction a contradiction is found, which means that the consequent is true.
+
+### Propositional logic (Lógica proposicional)
+
+Propositional logic is a branch of logic that condenses events and logical statements into symbols to operate over them and create propositions, which are logical statements themselves. For example, let $p$, $q$ be two events or logical statements, then those symbols, $p$ and $q$, represent said events or logical statements. Logical operations can be made over $p$ and $q$.
+
+(Valor de verdad de una proposición o evento)
+**Truth value of a statement or event**: value that results from a statement, or that is assigned to an event. The value $1$ means true, and the value $0$ means false. An event can be assigned a truth value, $1$ if the event happens, and $0$ if the event does not happen. A statement results in a truth value, $1$ if the statement is true, and $0$ if the statement is false. For example let $p$ be the event 'I am healthy today', assigning it a truth value of $1$ means that $p$ happens, and assigning it a truth value of $0$ means that $p$ does not happen. Truth values are also called logical values (valores lógicos).
+
+(Proposiciones condicionales)
+**Conditional statements**: conditional statements are also called if-then statements, they are called in these ways because they put an event named conclusion (conclusión) to happen on the condition that another event named hypothesis (hipótesis) happens. In a conditional statement if the hypothesis happens then the conclusion happens. The hypothesis is also known as the antecedent (antecedente), and the conclusion is also known as the consequent (consecuente).
+
+(Partes de una proposición condicional)
+**Parts of a conditional statement**: a conditional statement has three parts, the hypothesis, the conclusion, and the connector between them. For example, let $p$, $q$ be two events, such that $p$ is the hypothesis of a conditional statement, and $q$ is the conclusion of the same conditional statement, then $p \to q$ denotes the conditional statement. It is read as if $p$ then $q$ (si $p$ entonces $q$), also read as $p$ implies $q$ ($p$ implica $q$).
+
+For example, let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \to q$ means that 'if I am healthy today then I work today'.
+
+(Negación lógica)
+**Logical negation**: an operator used to negate an event. A negated event means that its negation happens. For example, let $p$ be an event, then its negation is $\neg p$. As a particular example of negation, let $p$ be the event 'I am healthy today', then $\neg p$ means the event 'I am not healthy today', which asserts that the negation of the event $p$ happens.
+
+(Converso de una proposición)
+**Converse of a statement**: the result of switching the order of the events of the statement. For example, let $p$, $q$ be two events, such that $p \to q$, then the converse is $q \to p$.
+
+(Inverso de una proposición)
+**Inverse of a statement**: the result of negating the events of the statement. For example, let $p$, $q$ be two events, such that $p \to q$, then the inverse is $\neg p \to \neg q$.
+
+(Contrapositivo de una proposición | Contrarrecíproco de una proposición)
+**Contrapositive of a statement**: the result of negating and switching the order of the events of the statement. For example, let $p$, $q$ be two events, such that $p \to q$, then the contrapositive is $\neg q \to \neg p$.
+
+(Proposiciones lógicas equivalentes)
+**Logically equivalent statements**: two distinct statements with the same events that lead to the same truth values. For example, let $p$, $q$ be two events, such that $p \to q$, then its contrapositive is logically equivalent, i.e. $\neg q \to \neg p$ has the same logical meaning as $p \to q$.
+
+As a concrete example, let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the conditional statement $p \to q$ means that 'if I am healthy today then I work today'. On the other hand, $\neg q$ means 'I don't work today', and for this to happen, $\neg p$ 'I am not healthy today' must also happen, so $\neg q \to \neg p$.
+
+The converse and the inverse of a conditional statement are not necessarily true. In the example, the converse $q \to p$ means 'if I work today, then I am healthy today', but this is not logically guaranteed, because it can be that 'I work today' and 'I am not healthy today'. The statement $p \to q$ does not invalidate the statement $\neg p \to q$, both can be true at the same time. For this same reason the inverse $\neg p \to \neg q$ is not necessarily true. Only the contrapositive of a conditional statement is logically equivalent to the conditional statement. But the converse and the inverse of a conditional statement are logically equivalent to each other as well, because one is the contrapositive of the other.
+
+(Proposición bicondicional)
+**Biconditional statement**: a logical statement with a hypothesis that conditionates a conclusion, in which the conclusion conditionates the hypothesis. In a biconditional statement, the conclusion can be used as the hypothesis, and the hypothesis can be used as the conclusion. For example, let $p$, $q$ be two events, such that each is a condition for the other to happen, then $p \leftrightarrow q$ denotes the biconditional statement. It is read as $p$ if and only if $q$ ($p$ sí y solo sí $q$).
+
+The converse, inverse, and contrapositive of a biconditional statement are logically equivalent to each other. $p \leftrightarrow q$ implies $q \leftrightarrow p$ and also $\neg p \leftrightarrow \neg q$ and $\neg q \leftrightarrow \neg p$.
+
+As a particular example, let $p$ be the event 'I am healthy today', and $q$ be the event 'I work today', then the biconditional statement $p \leftrightarrow q$ means that 'I am healthy today if and only if I work today'.
+
+(Ley de separación)
+**Law of detachment**: given two facts as true, that there exists a conditional statement and that the hypothesis of said conditional statement happens, the conclusion of the conditional statement can be deduced as a third true fact with no need for any other information. Let $p$, $q$ be two events, let $p$ be true, and let the conditional $p \to q$ be also true, then $q$ is true by deduction. The law of detachment is also known as modus ponendo ponens, which is latin for the mode that by affirming affirms.
+
+The law of detachment is written as follows.
+$$\begin{gathered}
+p \to q\\
+p\\
+\therefore q
+\end{gathered}$$
+
+The $\therefore$ symbol is the therefore symbol, read as therefore (por lo tanto). The statements before the $\therefore$ are assumed true, and the statements after the $\therefore$ are deduced to be true.
+
+(Ley contrarrecíproca)
+**Law of contrapositive**: given two facts as true, that there exists a conditional statement and that the consecuent negated happens, then the negation of the antecedent can be deduced as a third true fact. Let $p$, $q$ be two events, let the conditional $p \to q$ be true and let $\neg q$ be also true, then $\neg p$ is true by deduction.
+
+The law of contrapositive is written as follows.
+$$\begin{gathered}
+p \to q\\
+\neg q\\
+\therefore \neg p
+\end{gathered}$$
+
+This law is true because the contrapositive of a conditional is logically equivalent to said conditional.
+
+(Ley del silogismo)
+**Law of syllogism**: a chain of conditionals can be made, so that the consequent of one conditional is the antecedent of the next conditional. Given a chain of conditionals, one extra conditional can be deduced, namely if the first antecedent in the chain is true, then the last consequent in the chain is true.
+
+The law of syllogism is written as follows.
+Let $p$, $q$, $r$, $s$ events, then
+$$\begin{gathered}
+p \to q\\
+q \to r\\
+r \to s\\
+\therefore p \to s
+\end{gathered}$$
+
+For that matter, several other conditionals could be deduced if needed, such as $p \to r$ and $q \to s$.
+
+(Conjunción lógica)
+**Logical conjunction**: the operation over two logical statements that returns a logical value of true if both logical statements are true. This is also known as the AND operation, because the first logical statement and the second must be true for the conjunction of them to be true. Let $p$, $q$ be two events, their conjunction is denoted as $p \land q$. The symbol $\land$ is the AND operator, $p \land q$ is read as $p$ and $q$ ($p$ y $q$).
+
+(Disyunción lógica)
+**Logical disjunction**: the operation over two logical statements that returns a logical value of true if either one or both logical statements are true. This is also known as the OR operation, because the first or the second logical statement or both can be true for the disjunction of them to be true. Let $p$, $q$ be two events, their disjunction is denoted as $p \lor q$. The symbol $\lor$ is the OR operator, $p \lor q$ is read as $p$ or $q$ ($p$ o $q$).
+
+(Tablas de verdad)
+**Truth tables**: tables made to organize the logical values of logical statements. They serve to compare side by side the logical values that result after applying different logical operators to logical statements and events. To indicate true and false, truth tables commonly use $1$ for true and $0$ for false, or also $T$ for true and $F$ for false. Truth tables consider all the possible combinations of logical values. 
+
+The following is a truth table for the statement $p \land (\neg q \lor r)$.
+
+| $p$ | $q$ | $r$ | $\neg q$ | $\neg q \lor r$ | $p \land (\neg q \lor r)$ |
+| :-: | :-: | :-: | :------: | :-------------: | :-----------------------: |
+| $1$ | $1$ | $1$ | $0$      | $1$             | $1$                       |
+| $1$ | $1$ | $0$ | $0$      | $0$             | $0$                       |
+| $1$ | $0$ | $1$ | $1$      | $1$             | $1$                       |
+| $1$ | $0$ | $0$ | $1$      | $1$             | $1$                       |
+| $0$ | $1$ | $1$ | $0$      | $1$             | $0$                       |
+| $0$ | $1$ | $0$ | $0$      | $0$             | $0$                       |
+| $0$ | $0$ | $1$ | $1$      | $1$             | $0$                       |
+| $0$ | $0$ | $0$ | $1$      | $1$             | $0$                       |
+*Truth table for the $p \land (\neg q \lor r)$ statement*
+
+### Logic fallacies (Falacias lógicas)
+
+(Falacia lógica)
+**Logic fallacy**: a set of logical statements that are wrong or misconstrued.
+
+(Falacia del converso)
+**Fallacy of the converse**: also known as affirming the consequent (afirmación del consecuente), this fallacy states that given two true facts, a conditional statement and the consequent of said conditional, then the antecedent is deduced as being true.
+
+Let $p$, $q$ be two events, then
+$$\begin{gathered}
+p \to q\\
+q\\
+\therefore p
+\end{gathered}$$
+
+These logical statements are wrong, because if $p \to q$ is true and $q$ is true, then $p$ may or may not be true. It could be the case that $\neg p \to q$.
+
 ## Algebra definitions (Definiciones de álgebra)
 
 (Expresión algebraica)
@@ -999,10 +1171,31 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Postulado del par lineal)
 **Linear pair postulate**: the two angles of a linear pair are supplementary.
 
+(Propiedad reflexiva de la congruencia)
+**Reflexive property of congruence**: a figure is congruent with itself. Let $\overline{AB}$ be a segment, and $\angle ABC$ be an angle, then $\overline{AB} \cong \overline{AB}$ and $\angle ABC \cong \angle ABC$.
+
+(Propiedad simétrica de la congruencia)
+**Symmetric property of congruence**: if a first figure is congruent to a second, then the second figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$ be segments, if $\overline{AB} \cong \overline{CD}$ then $\overline{CD} \cong \overline{AB}$.
+
+(Propiedad transitiva de la congruencia)
+**Transitive property of congruence**: if a first figure is congruent to a second, and the second figure is congruent to a third, then the third figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$, $\overline{EF}$ be segments, if $\overline{AB} \cong \overline{CD}$ and $\overline{CD} \cong \overline{EF}$ then $\overline{AB} \cong \overline{EF}$.
+
 ### Geometry theorems (Teoremas de geometría)
+
+(Teorema del ángulo recto)
+**Right angle theorem**: all right angles are congruent.
 
 (Teorema de los ángulos verticales)
 **Vertical angles theorem**: two angles that are vertical angles, are also congruent. Given that $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
+
+(Teorema de los suplementos congruentes)
+**Congruent supplements theorem**: two angles are congruent when they are supplementary to another angle, or when they are supplementary to two other congruent angles, if $\angle A$ and $\angle C$ are supplements of $\angle B$, then $\angle A \cong \angle C$.
+
+(Converso del teorema de los suplementos congruentes)
+**Converse of the congruent supplements theorem**: if two angles are congruent, and one of them is supplementary to a third angle, then both angles are supplementary to the third angle, if $\angle A \cong \angle C$, and $\angle A$ and $\angle B$ are supplementary, then $\angle B$ and $\angle C$ are supplementary.
+
+(Teorema de los complementos congruentes)
+**Congruent complements theorem**: two angles are congruent when they are complementary to another angle, or when they are complementary to two other congruent angles, if $\angle A$ and $\angle C$ are complements of $\angle B$, then $\angle A \cong \angle C$.
 
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
