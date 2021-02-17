@@ -31,17 +31,28 @@
 #C# --- Polynomials (Polinomios)
 #C# ---| Operations with polynomials (Operaciones con polinomios)
 #C# Geometry definitions (Definiciones de geometría)
+#C# --- Geometry postulates (Postulados de geometría)
+#C# --- Geometry theorems (Teoremas de geometría)
 #C# --- Basic shapes and their formulas (Formas básicas y sus fórmulas)
 #C# Probability definitions (Definiciones de probabilidad)
 #C# --- Measures of central tendency (Medidas de tendencia central)
 #C# Simplifications (Simplificaciones)
 #C# Science and engineering definitions (Definiciones de ciencia e ingeniería)
 #C# --- Science and engineering formulas (Fórmulas de ciencia e ingeniería)
+#C# --- Science and engineering procedure definitions (Definiciones de procedimientos de ciencia e ingeniería)
 
 #T# Beginning of content
 -->
 
 ## Math definitions (Definiciones de matemática)
+
+(Axioma)
+**Axiom**: facts of math that are accepted as true without proof.
+
+(Teorema)
+**Theorem**: a statement that can be proved with postulates, axioms and/or with other theorems.
+
+The black square $\blacksquare$ means that the paragraph proof of the theorem is finished.
 
 (Variables)
 **Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$.
@@ -100,8 +111,8 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 (Coordenada de un punto)
 **Coordinate of a point**: an ordered tuple of numbers indicating the location of the point. In the three dimensional tuple $(a, b, c)$, $a$ indicates the location of the point along the first dimension, $b$ indicates the location of the point along the second dimension, and $c$ indicates the location of the point along the third dimension. This pattern continues if the tuple has more numbers.
 
-(Sistema de coordenadas rectangulares)
-**Rectangular coordinate system**: the rectangular coordinate system is the 2D version of the number line, it is made with a horizontal number line and a vertical number line that cross each other at zero. The positive numbers in the horizontal number line are at the right of zero, and the positive numbers in the vertical number are above zero.
+(Sistema de coordenadas rectangulares | Plano coordenado)
+**Rectangular coordinate system | Coordinate grid**: the rectangular coordinate system is the 2D version of the number line, it is made with a horizontal number line and a vertical number line that cross each other at zero. The positive numbers in the horizontal number line are at the right of zero, and the positive numbers in the vertical number are above zero.
 
 The horizontal number line is called the $x$-axis (el eje $x$) or abscissa axis (eje de abscisas). The vertical number line is called the $y$-axis (el eje $y$) or ordinate axis (eje de ordenadas).
 
@@ -798,16 +809,100 @@ For example, given $p(x) = 3x^2 + 7x + 4$ and $g(x) = x + 1$, then $\frac{p(x)}{
 
 ## Geometry definitions (Definiciones de geometría)
 
+Geometry (Geometría) means the study of figures and their spatial properties. Spatial refering to the space occupied by the figures, or their location with regards to one another.
+
+(Postulado)
+**Postulate**: the axioms of geometry, i.e. facts of geometry that are accepted as true. Postulates act as definitions.
+
+(Figura)
+**Figure**: a geometric object that occupies space.
+
+(Diagrama)
+**Diagram**: a picture or drawing used to show figures and their geometry.
+
+(Forma de una figura)
+**Shape of a figure**: the form of the figure.
+
+(Tamaño de una figura)
+**Size of a figure**: the amount of space occupied by the figure.
+
+(Figuras similares)
+**Similar figures**: figures that have the same shape but not the same size.
+
+(Figuras congruentes)
+**Congruent figures**: figures that have the same shape and also the same size. Let $\overline{AB}$ be a segment, the congruence with itself is denoted as $\overline{AB} \cong \overline{BA}$. This symbol $\cong$ is used in general to indicate two congruent geometric figures.
+
+(Figuras irregulares)
+**Irregular figures**: irregular figures are figures whose shape is not a basic shape.
+
+(Lados y ángulos correspondientes)
+**Corresponding sides and angles**: in similar or congruent figures, the sides and angles that would be the same if replacing one figure for the other. The corresponding sides of two figures have the same ratio (which is $1$ for congruent figures), and their corresponding angles have the same value. Similar triangles are similar figures.
+
+(Punto)
+**Point**: a single piece of space that has no extension, i.e. a figure with zero dimensions. Points are used to indicate locations in space, they are represented with dots in diagrams. Points are commonly labeled using an uppercase letter, such as $A$, $B$, $C$, and $D$.
+
+(Línea | Recta)
+**Line**: a shape with infinite points that extends in a single dimension indefinitely. A line has no start nor ending, it has a given direction and a location in space. Lines are labeled using a single lowercase letter, such as $g$, or with the labels of two points on the line and a bidirectional arrow on top, such as $\overleftrightarrow{PQ}$ and $\overleftrightarrow{QP}$. All these three labels denote the same line.
+
+(Plano)
+**Plane**: a shape with infinite lines that extends in two dimensions (2D) indefinitely. A plane has no start nor ending, it has a given direction and a location in space. Planes are labeled using a single uppercase letter in a calligraphic font, such as $\mathcal{M}$. A plane can also be named with the labels of any three points on the plane, such as the plane $ABC$, or $BCA$, or $CAB$ or any other combination.
+
+(Espacio tridimensional)
+**3D space**: space in which the basic geometric shapes exist. Shapes in zero, one, or two dimensions, can be seen in 3D space. This space has three dimensions, it extends indefinitely in width, length, and height.
+
+(Puntos colineales)
+**Collinear points**: points that are on the same line. All the points on a given line are collinear.
+
+(Puntos coplanares)
+**Coplanar points**: points that are on the same plane. All the points on a given plane are coplanar.
+
+(Líneas coplanares)
+**Coplanar lines**: lines that are on the same plane. All the lines on a given plane are coplanar.
+
+(Segmento de línea)
+**Line segment**: a truncated line that ends in both of its sides and does not extend indefinitely. The points where the line ends are called endpoints (puntos extremos). Line segments are labeled using its endpoints and a horizontal bar on top of them, such as $\overline{AB}$ and $\overline{BA}$. They can also be simply called segments.
+
+(Rayo)
+**Ray**: a line that is only truncated in one side, while the other side extends indefinitely. A ray has one endpoint. Rays are labeled using the endpoint and the point inside the ray with an arrow on top, such as $\overrightarrow{AB}$ and $\overleftarrow{BA}$. The arrow on top points in the same direction as the ray.
+
+(Intersección)
+**Intersection**: the point or points where two shapes cross each other. When two distinct lines intersect, the intersection is a point. When two distinct planes intersect, the intersection is a line. When a line outside of a plane intersects said plane, the intersection is a point. When three distinct planes intersect, the intersection is a point.
+
 (Vértice)
 **Vertex**: any point from which one or more lines stem.
 
 (Ángulo)
-**Angle**: in two lines that share a vertex, the angle is the measure of rotation of one line to get to the other. If a vertex has only two lines, then an angle can be named after said vertex. Let $A$ be a vertex with two lines stemming from it, then $\angle A$ is the angle formed between the two lines, and $m \angle A$ is the measure of said angle.
+**Angle**: in two lines (or segments, or rays) that share a vertex, the angle is the measure of rotation of one line to get to the other. If a vertex has only two lines, then an angle can be named after said vertex. Let $A$ be a vertex with two lines stemming from it, then $\angle A$ is the angle formed between the two lines, and $m \angle A$ is the measure of said angle. Angles are commonly shown in diagrams with an arc between the two lines.
+
+If more than two lines stem from a vertex, then an unambiguous way to label an angle is using three points, the vertex and one point in each of the two lines in the angle. For example, given the vertex $A$, the point $B$ in one line, and the point $C$ in the other line, then the angle formed can be labeled as $\angle BAC$ or $\angle CAB$, putting the vertex $A$ in the middle.
 
 Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes). Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians.
 
+An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another (rotating the ray clockwise, and rotating the ray counterclockwise). The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Still, angles greater than $\pi$ can be considered.
+
+(Vértice de un ángulo)
+**Vertex of an angle**: in an angle, the vertex is the endpoint where the two lines join. In the angle $\angle ABC$, the vertex is the point $B$.
+
+(Lados de un ángulo)
+**Sides of an angle**: each of the two lines that form the angle.
+
 (Ángulo recto)
-**Right angle**: a $90 \text{\textdegree}$ angle, or $\pi/2$ radians angle.
+**Right angle**: the angle of a quarter of a circle, i.e. $90 \text{\textdegree}$ or $\pi/2$ radians. The arc between the rays that is used to denote a right angle is a small square instead of an arc.
+
+(Líneas perpendiculares)
+**Perpendicular lines**: two lines (or rays, or segments) that cross each other at right angles, i.e. the four angles formed at the intersection of the lines are right angles. Perpendicularity is denoted with the $\perp$ symbol, e.g. given two lines $l$ and $m$ that are perpendicular to each other, this is denoted as $l \perp m$, which is the same as $m \perp l$.
+
+(Ángulo llano)
+**Straight angle**: the angle of half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Two rays that have this angle form a straight line.
+
+(Rayos opuestos)
+**Opposite rays**: two rays with a straight angle between them.
+
+(Ángulo agudo)
+**Acute angle**: an angle greater than or equal to $0 \text{\textdegree}$ ($0$ radians) and less than $90 \text{\textdegree}$ ($\pi/2$ radians).
+
+(Ángulo obtuso)
+**Obtuse angle**: an angle greater than $90 \text{\textdegree}$ ($\pi/2$ radians) and less than $180 \text{\textdegree}$ ($\pi$ radians).
 
 (Ángulos suplementarios)
 **Supplementary angles**: two angles that added together measure $180 \text{\textdegree}$ or $\pi$ radians. Each angle in this pair is the supplement (suplemento) of the other.
@@ -815,17 +910,26 @@ Angles are commonly measured in degrees and in radians. In degrees a whole rotat
 (Ángulos complementarios)
 **Complementary angles**: two angles that added together measure $90 \text{\textdegree}$ or $\pi/2$ radians. Each angle in this pair is the complement (complemento) of the other.
 
-(Figuras similares)
-**Similar figures**: figures that have the same shape but not the same size.
+(Vuelta completa)
+**Full circle**: the angle measure of $2 \pi$ radians or $360 \text{\textdegree}$.
 
-(Figuras congruentes)
-**Congruent figures**: figures that have the same shape and also the same size.
+(Ángulos adyacentes)
+**Adjacent angles**: two angles that have the same vertex and share one side, without overlapping each other, which means that only three rays are required to create two adjacent angles.
 
-(Figuras irregulares)
-**Irregular figures**: irregular figures are figures whose shape is not a basic shape.
+(Par lineal)
+**Linear pair**: two adjacent angles such that the two non-shared sides form a straight line.
 
-(Lados y ángulos correspondientes)
-**Corresponding sides and angles**: in similar or congruent figures, the sides and angles that would be the same if replacing one figure for the other. The corresponding sides of two figures have the same ratio (which is $1$ for congruent figures), and their corresponding angles have the same value. Similar triangles are similar figures.
+(Ángulos verticales)
+**Vertical angles**: in the intersection of two lines, vertical angles are pairs of angles that are on opposite sides of the intersection.
+
+(Bisectriz de un segmento)
+**Segment bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in any angle.
+
+(Mediatriz)
+**Perpendicular bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in a perpendicular way.
+
+(Bisectriz de un ángulo)
+**Angle bisector**: a line, ray, or segment, that divides a given angle into two congruent angles, each with half the measure of the given angle. Given that the segment $\overline{AC}$ is the angle bisector of the angle $\angle DAB$, then $m \angle DAC = m \angle BAC$.
 
 (Medida lineal)
 **Linear measure**: measure for length, like distances, width, height, depth, etcetera, in linear units (unidades lineales).
@@ -835,6 +939,9 @@ Angles are commonly measured in degrees and in radians. In degrees a whole rotat
 
 (Medida cúbica)
 **Cubic measure**: measure for volume, in cubic units (unidades cúbicas).
+
+(Distancia)
+**Distance**: the length between two given points.
 
 (Perímetro)
 **Perimeter**: in a two dimensional shape, the measure of the distance around it.
@@ -851,10 +958,71 @@ Angles are commonly measured in degrees and in radians. In degrees a whole rotat
 (Sólidos)
 **Solids**: three dimensional shapes.
 
+### Geometry postulates (Postulados de geometría)
+
+(Postulado de línea)
+**Unique line postulate**: given two points, only one line passes through the points.
+
+(Postulado de plano)
+**Unique plane postulate**: given three non-collinear points, only one plane contains them.
+
+(Postulado de plano línea)
+**Plane-line postulate**: a line that connects points from a plane, is in the plane. 
+
+(Postulado de la intersección entre dos rectas)
+**Line intersection postulate**: if two distinct lines intersect, then their intersection is a point.
+
+(Postulado de la intersección entre dos planos)
+**Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line.
+
+(Postulado de la regla)
+**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler.
+
+(Postulado de adición de segmentos)
+**Segment addition postulate**: given three collinear points with one point being between the other two (the endpoints), the measure of the distance between the endpoints, is equal to the sum of the distances of each endpoint to the point between them. Let $A$, $B$, and $C$, be three collinear points, with $B$ being between $A$ and $C$, then $AB + BC = AC$.
+
+(Postulado del transportador)
+**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor.
+
+(Postulado de adición de ángulos)
+**Angle addition postulate**: given two angles that share a common ray and are adjacent, the measure of the angle between the two non common rays, is equal to the sum of the two angles given. Let $\overrightarrow{DA}$, $\overrightarrow{DB}$, and $\overrightarrow{DC}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{DB}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then $m \angle ADB + m \angle CDB = m \angle ADC$.
+
+(Postulado del punto medio)
+**Midpoint postulate**: a segment has exactly one midpoint.
+
+(Postulado de la mediatriz)
+**Perpendicular bisector postulate**: a given segment has only one line that is its perpendicular bisector. Given $\overleftrightarrow{DE} \perp \overline{AC}$, $B$ lies in $\overleftrightarrow{DE}$, and $\overline{AB} \cong \overline{BC}$, then the line $\overleftrightarrow{DE}$ is the perpendicular bisector of $\overline{AC}$.
+
+(Postulado de la bisectriz de un ángulo)
+**Angle bisector postulate**: a given angle has only one line that is its angle bisector. A line $\overleftrightarrow{AC}$ is the angle bisector of the angle $\angle DAB$, given that $m \angle DAC = m \angle BAC$.
+
+(Postulado del par lineal)
+**Linear pair postulate**: the two angles of a linear pair are supplementary.
+
+### Geometry theorems (Teoremas de geometría)
+
+(Teorema de los ángulos verticales)
+**Vertical angles theorem**: two angles that are vertical angles, are also congruent. Given that $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
+
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
+(Marcas de los ángulos)
+**Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marcas del ángulo). Arc marks are commonly of two types: several repeated arcs, or arcs with small perpendicular lines crossing them.
+
+(Marcas de los segmentos)
+**Segment markings**: segments can be marked to differentiate between them. Segments are marked with hash marks (marcas del segmento). Hash marks are commonly repeated small lines perpendicular to the segment, placed around the center of the segment.
+
+(Punto medio)
+**Midpoint**: the point on a segment, that divides it into two congruent segments. Given three collinear points $A$, $B$, and $C$, with $B$ between $A$ and $C$, and $AB = BC$, then point $B$ is the midpoint of the segment $\overline{AC}$.
+
+(Fórmula del punto medio)
+**Midpoint formula**: a formula to calculate the midpoint from two points, which can be the endpoints of a segment. Let $(x_1, y_1)$ and $(x_2, y_2)$ be two points in the $x$-$y$ plane, then the midpoint of the segment they form is $\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$.
+
+(Fórmula general para dividir un segmento en $n$ subsegmentos y calcular la localización del $k$-ésimo subsegmento)
+**General formula to divide a segment into $n$ subsegments and get the location of the $k$-th subsegment**: Let $(x_1, y_1)$ and $(x_2, y_2)$ be the two points that define a segment, this segment can be divided into $n$ subsegments. Counting from $(x_1, y_1)$, the coordinates of the $k$-th subsegment are $\left(x_1 + k\frac{x_2 - x_1}{n}, y_1 + k\frac{y_2 - y_1}{n}\right)$. Making $k = 1$ and $n = 2$ results in the midpoint formula.
+
 (Triángulo)
-**Triangle**: shape with three straight sides and therefore three angles. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex. Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
+**Triangle**: shape with three straight sides and therefore three angles. The three straight sides are three segments, in which each segment is connected to the other two with their endpoints. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex. Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). Other form to denote the same triangle is $\triangle BCA$, or any other order of the points of the triangle. The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
 
 (Lado opuesto a un vértice en un triángulo)
 **Opposite side of a vertex in a triangle**: In a triangle $\triangle ABC$, each vertex has an opposite side, the opposite side to $A$ is the side with measure $BC$, the opposite side to $B$ is $AC$, and the opposite side to $C$ is $AB$.
@@ -870,6 +1038,15 @@ Angles are commonly measured in degrees and in radians. In degrees a whole rotat
 
 Right triangles have three sides, one hypotenuse (hipotenusa) which is the side opposite to the right angle, and two legs (catetos) which are the two sides that stem from the vertex with the right angle.
 
+(Triángulo obtuso)
+**Obtuse triangle**: a triangle that has one obtuse angle.
+
+(Triángulo agudo)
+**Acute triangle**: a triangle whose three angles are acute.
+
+(Triángulo equiángulo)
+**Equiangular triangle**: a triangle whose three angles are congruent.
+
 (Triángulo escaleno)
 **Scalene triangle**: a triangle in which all the sides have different measures of length.
 
@@ -884,6 +1061,38 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 
 (Área de un triángulo)
 **Triangle area**: let $h$ be the height of the triangle as measured when $b$ is the floor, then $A = \frac{b h}{2}$.
+
+(Polígono)
+**Polygon**: any geometric figure made with segments joined by their endpoints. Each of the endpoints of the segments in a polygon must be intersecting the endpoint of another segment.
+
+(Lados de un polígono)
+**Sides of a polygon**: the segments of the polygon.
+
+(Vértices de un polígono)
+**Vertices of a polygon**: the points of a polygon where the segments intersect.
+
+(Polígono convexo)
+**Convex polygon**: a polygon such that in each of its vertices, the angle measured inside the polygon is less than the angle measured outside the polygon.
+
+(Polígono cóncavo)
+**Concave polygon**: a polygon such that in at least one of its vertices, the angle measured inside the polygon is greater than the angle measured outside the polygon.
+
+(Diagonales de un polígono)
+**Polygon diagonals**: the segments that are formed by connecting all the vertices of the polygon with each other, but that are not the sides of the polygon.
+
+(Clasificación de polígonos según el número de lados)
+**Classification of polygons based on the number of sides**:
+
+- **Triangle** (Triángulo): a polygon with three sides.
+- **Quadrilateral** (Cuadrilátero): a polygon with four sides.
+- **Pentagon** (Pentágono): a polygon with five sides.
+- **Hexagon** (Hexágono): a polygon with six sides.
+- **Heptagon** (Heptágono): a polygon with seven sides.
+- **Octagon** (Octágono): a polygon with eight sides.
+- **Nonagon** (Nonágono): a polygon with nine sides.
+- **Decagon** (Decágono): a polygon with ten sides.
+- **Undecagon** (Undecágono): a polygon with eleven sides.
+- **Dodecagon** (Dodecágono): a polygon with twelve sides.
 
 (Cuadrilátero)
 **Quadrilateral**: a shape with four straight sides.
@@ -1220,3 +1429,35 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 
 (Fórmula del interés simple)
 **Simple interest formula**: formula to calculate the simple interest from the loan principal, the interest rate, and the time elapsed since the loan started. Let $P$ be the principal of the investment or loan in monetary units, $I$ be the amount of interest in monetary units, $t$ be the time elapsed since the moment of the investment or loan in time units, and $r$ be the interest rate (tasa de interés) paid per period as a ratio, then $I = Prt$.
+
+### Science and engineering procedure definitions (Definiciones de procedimientos de ciencia e ingeniería)
+
+(Medición de distancia)
+**Measure of distance**: the process of determining the distance between two points. The ruler (la regla) is the basic instrument to measure distance. Rulers measure distance in units such as inches (pulgadas) and centimeters (centímetros). Let $A$ and $B$ be two points, the segment that they form as endpoints is $\overline{AB}$, and the measure of the distance of this segment is denoted by $AB$ or $m \overline{AB}$.
+
+(Transportador)
+**Protractor**: instrument to measure angles. The most common units of measure are degrees and radians. Degrees denote a rotation of a full circle as $360 \text{\textdegree}$, and in radians this is denoted as $2 \pi$.
+
+(Método de medición de un ángulo usando un transportador)
+**Method of angle measurement using a protractor**: a method to measure an angle using a protractor. This method can be used to draw a given angle.
+
+(Regla no graduada)
+**Straightedge**: an instrument used to make straight lines, like a ruler but without tick marks.
+
+(Compás)
+**Compass**: an instrument used to draw arcs.
+
+(Centrar el compás en un punto dado)
+**Center the compass on a given point**: put the needle of the compass in the given point.
+
+(Construcciones geométricas)
+**Geometric constructions**: a drawing made with straightedge and compass, commonly with the intention to follow given steps in the use of said instruments, to obtain a given geometric shape.
+
+(Construcción para copiar un ángulo)
+**Copy an angle construction**: it's possible to copy an angle by doing a construction.
+
+(Construcción de la mediatriz)
+**Perpendicular bisector construction**: a geometric construction to draw the perpendicular bisector of a given segment.
+
+(Construcción de la bisectriz de un ángulo)
+**Angle bisector construction**: a geometric construction to draw the angle bisector of a given angle.

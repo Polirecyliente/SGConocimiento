@@ -47,10 +47,10 @@ Points are commonly labeled using an uppercase letter. The image shown has four 
 ![Line in space image](Images/Ch01/S01_02_Line_in_space.png)
 *Line in space*
 
-Lines are labeled using a single lowercase letter, such as $g$, or with the labels of two points and a bidirectional arrow on top, such as $\overleftrightarrow{PQ}$ and $\overleftrightarrow{QP}$. All these three labels denote the same line.
+Lines are labeled using a single lowercase letter, such as $g$, or with the labels of two points on the line and a bidirectional arrow on top, such as $\overleftrightarrow{PQ}$ and $\overleftrightarrow{QP}$. All these three labels denote the same line.
 
 (Plano)
-**Plane**: a shape with infinite lines that extends in two dimensions indefinitely. A plane has no start nor ending, it has a given direction and a location in space.
+**Plane**: a shape with infinite lines that extends in two dimensions (2D) indefinitely. A plane has no start nor ending, it has a given direction and a location in space.
 ![Planes in space image](Images/Ch01/S01_03_Planes_in_space.png)
 *Planes in space*
 
@@ -76,7 +76,7 @@ Planes extend indefinitely in two dimensions, the planes shown in the *Planes in
 ![Line segment image](Images/Ch01/S01_04_Line_segment.png)
 *Line segment*
 
-Line segments are labeled using its endpoints and a horizontal bar on top of them, such as $\overline{AB}$ and $\overline{BA}$.
+Line segments are labeled using its endpoints and a horizontal bar on top of them, such as $\overline{AB}$ and $\overline{BA}$. They can also be simply called segments.
 
 (Rayo)
 **Ray**: a line that is only truncated in one side, while the other side extends indefinitely. A ray has one endpoint.
@@ -93,7 +93,7 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 **Postulate**: the axioms of geometry, i.e. facts of geometry that are accepted as true. Postulates act as definitions.
 
 (Teorema)
-**Theorem**: a statement that can be proved with postulates and/or with other theorems.
+**Theorem**: a statement that can be proved with postulates, axioms and/or with other theorems.
 
 (Postulado de línea)
 **Unique line postulate**: given two points, only one line passes through the points.
@@ -121,7 +121,7 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 
 > Distance notation
 >
-> Let $A$ and $B$ be two points, the segment that they form as endpoints is $\overline{AB}$, and the measure of the distance of this segment is denoted by $AB$ or $m\overline{AB}$.
+> Let $A$ and $B$ be two points, the segment that they form as endpoints is $\overline{AB}$, and the measure of the distance of this segment is denoted by $AB$ or $m \overline{AB}$.
 
 > Method of distance measurement using a ruler
 >
@@ -169,12 +169,12 @@ Angles are commonly shown in diagrams with an arc between the two rays. In the *
 **Vertex of an angle**: in an angle, the vertex is the endpoint where the two rays join. In the angle $\angle ABC$, the vertex is the point $B$.
 
 (Lados de un ángulo)
-**Sides of an angle**: each of the rays that form the angle.
+**Sides of an angle**: each of the two rays that form the angle.
 
 (Transportador)
 **Protractor**: instrument to measure angles. The most common units of measure are degrees and radians. Degrees denote a rotation of a full circle as $360 \text{\textdegree}$, and in radians this is denoted as $2 \pi$.
 
-An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another. The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians.
+An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another (rotating the ray clockwise, and rotating the ray counterclockwise). The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians.
 
 > Angle measure notation
 >
@@ -196,7 +196,7 @@ This method can be used to draw a given angle.
 **Full circle**: the angle measure of $2 \pi$ radians or $360 \text{\textdegree}$.
 
 (Ángulo llano)
-**Straight angle**: the angle of half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Two rays that have this angle form a straight line. 
+**Straight angle**: the angle of half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Two rays that have this angle form a straight line.
 
 (Rayos opuestos)
 **Opposite rays**: two rays with a straight angle between them.
@@ -230,8 +230,8 @@ Perpendicularity is denoted with the $\perp$ symbol. From the *Perpendicular lin
 (Construcciones geométricas)
 **Geometric constructions**: a drawing made with straightedge and compass, commonly with the intention to follow given steps in the use of said instruments, to obtain a given geometric shape.
 
-(Copiar un ángulo)
-**Copy an angle**: it's possible to copy an angle by doing a construction.
+(Construcción para copiar un ángulo)
+**Copy an angle construction**: it's possible to copy an angle by doing a construction.
 
 > Method to copy an angle using a straightedge and a compass
 >
@@ -243,7 +243,7 @@ Perpendicularity is denoted with the $\perp$ symbol. From the *Perpendicular lin
 > 5. Draw a line with the straightedge in the new copy of the angle, that passes through its vertex and the intersection of the two arcs that should have formed from the previous steps, the resulting angle is a copy of the first one.
 
 (Marcas de los ángulos)
-**Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marcas del ángulo). Arc marks are commonly of two types: several repeated arcs, or these arcs with small perpendicular lines crossing them.
+**Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marcas del ángulo). Arc marks are commonly of two types: several repeated arcs, or arcs with small perpendicular lines crossing them.
 [Angle markings image code](Programs/Ch01/S03_03_Angle_markings_image.py)
 ![Angle markings image](Images/Ch01/S03_03_Angle_markings.png)
 *Angle markings*
@@ -257,7 +257,7 @@ Perpendicularity is denoted with the $\perp$ symbol. From the *Perpendicular lin
 In the *Segment markings* image, the two segments at the bottom have the same length, as shown by their equal markings. The rest of the segments are different from each other, so each one has it's unique marking.
 
 (Postulado de adición de ángulos)
-**Angle addition postulate**: given two angles that share a common ray, the measure of the angle between the two non common rays, is equal to the sum of the two angles given.
+**Angle addition postulate**: given two angles that share a common ray and they cover distinct space, the measure of the angle between the two non common rays, is equal to the sum of the two angles given.
 
 > Angle addition postulate
 >
@@ -292,7 +292,7 @@ As shown in the *Midpoint* image, the lengths $AB$ and $BC$ are equal, i.e. $AB 
 **Midpoint postulate**: a segment has exactly one midpoint.
 
 (Fórmula del punto medio)
-**Midpoint formula**: a formula to calculate the midpoint from two points.
+**Midpoint formula**: a formula to calculate the midpoint from two points, which can be the endpoints of a segment.
 
 > Midpoint formula
 >
@@ -327,7 +327,7 @@ Making $k = 1$ and $n = 2$ results in the midpoint formula.
 There are infinitely many segment bisectors and only one perpendicular bisector to a given segment. As shown in the *Perpendicular bisector* image, $\overleftrightarrow{DE} \perp \overline{AC}$, and $\overline{AB} \cong \overline{BC}$, so the line $\overleftrightarrow{DE}$ is the perpendicular bisector of $\overline{AC}$.
 
 (Construcción de la mediatriz)
-**Perpendicular bisector construction**: a geometric construction to draw the perpendicular bisector of a given segment
+**Perpendicular bisector construction**: a geometric construction to draw the perpendicular bisector of a given segment.
 
 > Perpendicular bisector construction
 >
@@ -354,7 +354,7 @@ The segment $\overline{AC}$ is the angle bisector of the angle $\angle DAB$, so 
 In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into a line, then the line $\overleftrightarrow{AC}$ is the angle bisector of the angle $\angle DAB$. The angle bisector does not have to be a line, but if it's a line then it's guaranteed to be the only one that is the angle bisector.
 
 (Construcción de la bisectriz de un ángulo)
-**Angle bisector construction**: a geometric construction to draw the angle bisector of a given angle
+**Angle bisector construction**: a geometric construction to draw the angle bisector of a given angle.
 
 > Angle bisector construction
 >
@@ -374,7 +374,7 @@ In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into 
 **Supplementary angles**: two angles whose measures when added together add up to $180 \text{\textdegree}$ or $\pi$ radians. Each angle is the supplement (suplemento) of the other.
 
 (Ángulos adyacentes)
-**Adjacent angles**: two angles that have the same vertex and share one side, which means that only three rays are required to create two adjacent angles.
+**Adjacent angles**: two angles that have the same vertex and share one side, without overlapping each other, which means that only three rays are required to create two adjacent angles.
 
 (Par lineal)
 **Linear pair**: two adjacent angles such that the two non-shared sides form a straight line.
@@ -405,7 +405,7 @@ The black square $\blacksquare$ means that the proof of the theorem is finished.
 [Ch01_S06](https://www.ck12.org/reader/reader-index.html#section/2932922/1.6/9549314)
 
 (Triángulo)
-**Triangle**: a figure formed with three segments in which each segment is connected to the other two with their endpoints.
+**Triangle**: a shape formed with three segments in which each segment is connected to the other two with their endpoints.
 [Triangle image code](Programs/Ch01/S06_01_Triangle_image.py)
 ![Triangle image](Images/Ch01/S06_01_Triangle.png)
 *Triangle*
