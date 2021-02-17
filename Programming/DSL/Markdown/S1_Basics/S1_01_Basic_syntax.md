@@ -14,7 +14,6 @@
 <!-- #C# Source code -->
 <!-- #C# Equations -->
 <!-- #C# Decor -->
-<!-- #C# Diagrams -->
 
 <!-- #T# Beginning of content -->
 
@@ -143,7 +142,7 @@ second_cell_string1 |
 ```
 <!-- #T# available syntax highlighting options are, 'C' (as shown), 'json'  -->
 
-<!-- #T# extra options are, 'mermaid' (creates flow diagrams from plain text), 'smiles' (creates a 2D molecular diagram of a given molecule) -->
+<!-- #T# extra options are, 'mermaid' (creates diagrams from plain text), 'smiles' (creates a 2D molecular diagram of a given molecule) -->
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Equations -->
@@ -166,11 +165,4 @@ text before horizontal line
 
 ---
 text after horizontal line
-<!-- # |------------------------------------------------------------- -->
-
-<!-- #C# Diagrams -->
-
-<!-- # |------------------------------------------------------------- -->
-
-
 <!-- # |------------------------------------------------------------- -->
