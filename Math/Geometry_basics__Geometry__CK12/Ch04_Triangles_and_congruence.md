@@ -71,17 +71,17 @@ In a given vertex of a polygon, the interior angle and one exterior angle (any o
 > | $m \angle 4 + m \angle 5 + m \angle 6 = 2 \pi$ | Reflexive property of equality |
 
 (Ángulos interiores remotos)
-**Remote interior angles**: the angles that are not adjacent to a given exterior angle. In a triangle, given an exterior angle, the remote interior angles are the two interior angles that are not adjacent to said exterior angle.
+**Remote interior angles**: the interior angles that are not adjacent to a given exterior angle. In a triangle, given an exterior angle, the remote interior angles are the two interior angles that are not adjacent to said exterior angle.
 [Remote interior angles image code](Programs/Ch04/S01_05_Remote_interior_angles_image.py)
 ![Remote interior angles image](Images/Ch04/S01_05_Remote_interior_angles.png)
 *Remote interior angles*
 
-In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior angle, its two remote interior angles are $\angle B$ and $\angle C$. The auxiliary segment $\overline{AC_2}$ is placed there to show that the measure of $\angle DAC$ can be seen as the sum of the measures of $\angle B$ and $\angle C$, with the corresponding angles postulate for $\angle B$, and the alternate interior angles theorem for $\angle C$. This is proven in the exterior angle theorem.
+In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior angle, its two remote interior angles are $\angle B$ and $\angle C$. The auxiliary segment $\overline{AC_2}$ is placed there to show that the measure of $\angle DAC$ can be seen as the sum of the measures of $\angle B$ and $\angle C$, with the corresponding angles postulate for $\angle B$, and the alternate interior angles theorem for $\angle C$. This is proven in the exterior angle of a triangle theorem.
 
-(Teorema del ángulo exterior)
-**Exterior angle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles.
+(Teorema del ángulo exterior de un triángulo)
+**Exterior angle of a triangle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles.
 
-> Proof of the exterior angle theorem
+> Proof of the exterior angle of a triangle theorem
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
@@ -95,16 +95,16 @@ In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior an
 [Ch04_S02](https://www.ck12.org/reader/reader-index.html#section/2932941/4.2/9549314)
 
 (Triángulos congruentes)
-**Congruent triangles**: given two triangles, they are congruent if they have their corresponding sides congruent and their corresponding angles congruent.
+**Congruent triangles**: given two triangles, they are congruent if their corresponding sides are congruent and their corresponding angles are congruent.
 [Congruent triangles images code](Programs/Ch04/S02_01_Congruent_triangles_image.py)
 ![Congruent triangles image](Images/Ch04/S02_01_Congruent_triangles.png)
 *Congruent triangles*
 
-The triangle $\triangle ABC$ is congruent to the triangle $\triangle DEF$, because their corresponding sides are congruent and also their corresponding angles are congruent.
+The triangle $\triangle ABC$ is congruent to the triangle $\triangle DEF$, because their corresponding sides are congruent and their corresponding angles are congruent.
 
 > Triangle congruence
 >
-> The congruence $\triangle ABC \cong \triangle DEF$, because $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$. This can be expressed as "corresponding parts of congruent triangles are congruent".
+> The congruence $\triangle ABC \cong \triangle DEF$, is true because $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$. This can be expressed as "corresponding parts of congruent triangles are congruent".
 
 In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
 
@@ -146,7 +146,7 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 > Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
 
 (Ángulo comprendido entre dos lados)
-**Included angle between two sides**: the angle between two given sides, is the included angle.
+**Included angle between two sides**: the angle between two given sides, is the included angle, so the sides must share a vertex, which is the vertex of the angle.
 
 (Construcción de un triángulo dados dos lados y su ángulo comprendido)
 **Triangle from two sides and their included angle construction**: a geometric construction to draw a triangle given two sides and their included angle.

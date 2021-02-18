@@ -220,7 +220,7 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 > | $AC = CD$ | Ruler postulate |
 > | $\triangle ACD$ is isosceles | Definition of isosceles triangle |
 > | $m \angle CAD = m \angle CDA$ | Base angles theorem |
-> | $m \angle CDA = m \angle B + m \angle DAB$ | Exterior angle theorem |
+> | $m \angle CDA = m \angle B + m \angle DAB$ | Exterior angle of a triangle theorem |
 > | $m \angle CAD = m \angle B + m \angle DAB$ | Substitution property of equality |
 > | $m \angle CAB = m \angle CAD + m \angle DAB$ | Angle addition postulate |
 > | $m \angle CAB = m \angle B + 2 m \angle DAB$ | Substitution property of equality |
@@ -236,7 +236,7 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 > | $m \angle CAB > m \angle B$ | Given, from the *Triangle longer side theorem* image |
 > | $AC = CD$ | Ruler postulate |
 > | $\triangle ACD$ is isosceles | Definition of isosceles triangle |
-> | $m \angle CDA = m \angle B + m \angle DAB$ | Exterior angle theorem |
+> | $m \angle CDA = m \angle B + m \angle DAB$ | Exterior angle of a triangle theorem |
 > | $m \angle DAB + m \angle B + m \angle ADB = \pi$ | Triangle interior angles sum theorem |
 > | $m \angle CDA + m \angle ADB = \pi$ | Substitution property of equality |
 > | $\angle CDA$ and $\angle ADB$ form a linear pair | Linear pair postulate |

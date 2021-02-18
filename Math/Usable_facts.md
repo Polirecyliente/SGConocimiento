@@ -1145,6 +1145,12 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Ángulos verticales)
 **Vertical angles**: in the intersection of two lines, vertical angles are pairs of angles that are on opposite sides of the intersection.
 
+(Ángulo comprendido entre dos lados)
+**Included angle between two sides**: the angle between two given sides, is the included angle, so the sides must share a vertex, which is the vertex of the angle.
+
+(Lado comprendido entre dos ángulos)
+**Included side between two angles**: a side that is common to two differnt angles. The angles surround the side by placing themselves at each endpoint of the side.
+
 (Bisectriz de un segmento)
 **Segment bisector**: a line, ray, or segment, that passes through the midpoint of a given segment in any angle.
 
@@ -1184,34 +1190,34 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 ### Geometry postulates (Postulados de geometría)
 
 (Postulado de línea)
-**Unique line postulate**: given two points, only one line passes through the points.
+**Unique line postulate**: given two points, only one line passes through the points. Given the points $A$ and $B$, they lie on the line $l$ that passes through them.
 
 (Postulado de plano)
-**Unique plane postulate**: given three non-collinear points, only one plane contains them.
+**Unique plane postulate**: given three non-collinear points, only one plane contains them. Given the points $A$, $B$, and $C$, they lie on the plane $\mathcal{M}$ that contains them.
 
 (Postulado de plano línea)
-**Plane-line postulate**: a line that connects points from a plane, is in the plane. 
+**Plane-line postulate**: a line that connects points from a plane, is in the plane. If the line $l$ connects the points $A$ and $B$ in the plane $\mathcal{M}$, then $l$ lies on $\mathcal{M}$.
 
 (Postulado de la intersección entre dos rectas)
-**Line intersection postulate**: if two distinct lines intersect, then their intersection is a point.
+**Line intersection postulate**: if two distinct lines intersect, then their intersection is a point. If the lines $l$ and $m$ intersect, then they intersect at a single point $A$.
 
 (Postulado de la intersección entre dos planos)
-**Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line.
+**Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line. If the planes $\mathcal{M}$ and $\mathcal{N}$ intersect, then they intersect at a single line $l$.
 
 (Postulado de la regla)
-**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler.
+**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler. The distance between two points $A$ and $B$ is $B_value - A_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the ruler.
 
 (Postulado de adición de segmentos)
 **Segment addition postulate**: given three collinear points with one point being between the other two (the endpoints), the measure of the distance between the endpoints, is equal to the sum of the distances of each endpoint to the point between them. Let $A$, $B$, and $C$, be three collinear points, with $B$ being between $A$ and $C$, then $AB + BC = AC$.
 
 (Postulado del transportador)
-**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor.
+**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor. The measure of the angle $\angle ABC$ is $BC_value - BA_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the protractor.
 
 (Postulado de adición de ángulos)
 **Angle addition postulate**: given two angles that share a common ray and are adjacent, the measure of the angle between the two non common rays, is equal to the sum of the two angles given. Let $\overrightarrow{DA}$, $\overrightarrow{DB}$, and $\overrightarrow{DC}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{DB}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then $m \angle ADB + m \angle CDB = m \angle ADC$.
 
 (Postulado del punto medio)
-**Midpoint postulate**: a segment has exactly one midpoint.
+**Midpoint postulate**: a segment has exactly one midpoint. If the point $B$ is the midpoint of $\overline{AC}$, then $B$ is the only point that is the midpoint.
 
 (Postulado de la mediatriz)
 **Perpendicular bisector postulate**: a given segment has only one line that is its perpendicular bisector. Given $\overleftrightarrow{DE} \perp \overline{AC}$, $B$ lies in $\overleftrightarrow{DE}$, and $\overline{AB} \cong \overline{BC}$, then the line $\overleftrightarrow{DE}$ is the perpendicular bisector of $\overline{AC}$.
@@ -1220,22 +1226,31 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Angle bisector postulate**: a given angle has only one line that is its angle bisector. A line $\overleftrightarrow{AC}$ is the angle bisector of the angle $\angle DAB$, given that $m \angle DAC = m \angle BAC$.
 
 (Postulado del par lineal)
-**Linear pair postulate**: the two angles of a linear pair are supplementary.
+**Linear pair postulate**: the two angles of a linear pair are supplementary. If $\angle A$ and $\angle B$ form a linear pair, then $\angle A$ and $\angle B$ are supplementary.
 
 (Postulado de las paralelas)
-**Parallel postulate**: given a line and a point not on the line, there is only one parallel to the line that passes through the point.
+**Parallel postulate**: given a line and a point not on the line, there is only one parallel to the line that passes through the point. Given a line $l$ and a point $A$ that does not lie on $l$, then only one line $m$ passes through $A$ and $l \parallel m$.
 
 (Postulado de las perpendiculares)
-**Perpendicular postulate**: given a line and a point not on the line, there is only one perpendicular line to the line that passes through the point.
+**Perpendicular postulate**: given a line and a point not on the line, there is only one perpendicular line to the line that passes through the point. Given a line $l$ and a point $A$ that does not lie on $l$, then only one line $m$ passes through $A$ and $l \perp m$.
 
 (Postulado de los ángulos correspondientes)
-**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent.
+**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. If $l \parallel m$, with transversal $t$, the lines $l$ and $m$ are placed horizontally, and numerating the angles left to right and then top to bottom, then $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$.
 
 (Converso del postulado de los ángulos correspondientes)
-**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels.
+**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels. Using the same lines of the alternate interior angles theorem, if $\angle 1 \cong \angle 5$, and/or $\angle 2 \cong \angle 6$, and/or $\angle 3 \cong \angle 7$, and/or $\angle 4 \cong \angle 8$, then $l \parallel m$, with transversal $t$.
+
+(Postulado LLL de congruencia de triángulos)
+**SSS triangle congruence postulate**: SSS stands for Side-Side-Side (Lado-Lado-Lado). This postulate says that two triangles with side-side-side of the same lengths, are congruent, i.e. if the three sides of a triangle are individually congruent to the three sides of another triangle, then the two triangles are congruent. Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
+
+(Postulado LAL de congruencia de triángulos)
+**SAS triangle congruence postulate**: SAS stands for Side-Angle-Side (Lado-Ángulo-Lado). This postulate says that if two sides and their included angle are individually congruent to two sides and their included angle of another triangle, then the two triangles are congruent. Let $\triangle ABC$ have two sides with measures $a$, $c$, and let their included angle measure $\beta$. Let $\triangle DEF$ have two sides with measures $d$, $f$, and let their included angle measure $\epsilon$. If $a = d$, $c = f$, and $\beta = \epsilon$, then $\triangle ABC \cong \triangle DEF$.
+
+(Postulado ALA de congruencia de triángulos)
+**ASA triangle congruence postulate**: ASA stands for Angle-Side-Angle (Ángulo-Lado-Ángulo). This postulate says that if two angles and their included side are individually congruent to two angles and their included side in another triangle, then the two triangles are congruent. Let $\triangle ABC$ have two angles with measures $\alpha$, $\gamma$, and let their included side measure $b$. Let $\triangle DEF$ have two angles with measures $\delta$, $\zeta$, and let their included side measure $e$. If $\alpha = \delta$, $\gamma = \zeta$, and $b = e$, then $\triangle ABC = \triangle DEF$.
 
 (Propiedad reflexiva de la congruencia)
-**Reflexive property of congruence**: a figure is congruent with itself. Let $\overline{AB}$ be a segment, and $\angle ABC$ be an angle, then $\overline{AB} \cong \overline{AB}$ and $\angle ABC \cong \angle ABC$.
+**Reflexive property of congruence**: a figure is congruent with itself. Given $\overline{AB}$, and $\angle ABC$, then $\overline{AB} \cong \overline{AB}$ and $\angle ABC \cong \angle ABC$.
 
 (Propiedad simétrica de la congruencia)
 **Symmetric property of congruence**: if a first figure is congruent to a second, then the second figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$ be segments, if $\overline{AB} \cong \overline{CD}$ then $\overline{CD} \cong \overline{AB}$.
@@ -1246,58 +1261,94 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 ### Geometry theorems (Teoremas de geometría)
 
 (Teorema del ángulo recto)
-**Right angle theorem**: all right angles are congruent.
+**Right angle theorem**: all right angles are congruent. If $\angle A$ and $\angle B$ are right angles, then $\angle A \cong \angle B$.
 
 (Teorema de los ángulos verticales)
-**Vertical angles theorem**: two angles that are vertical angles, are also congruent. Given that $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
+**Vertical angles theorem**: two angles that are vertical angles, are also congruent. If $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
 
 (Teorema de los pares lineales congruentes)
-**Congruent linear pairs theorem**: in a linear pair, if the two angles are congruent, then they have a measure of $\pi/2$, meaning that if both angles of a linear pair are congruent then they are right angles.
+**Congruent linear pairs theorem**: in a linear pair, if the two angles are congruent, then they have a measure of $\pi/2$, meaning that if both angles of a linear pair are congruent then they are right angles. If $\angle A$ and $\angle B$ form a linear pair, and $\angle A \cong \angle B$, then $\angle A$ and $\angle B$ are right angles.
 
 (Teorema de los suplementos congruentes)
-**Congruent supplements theorem**: two angles are congruent when they are supplementary to another angle, or when they are supplementary to two other congruent angles, if $\angle A$ and $\angle C$ are supplements of $\angle B$, then $\angle A \cong \angle C$.
+**Congruent supplements theorem**: two angles are congruent when they are supplementary to another angle, or when they are supplementary to two other congruent angles. If $\angle A$ and $\angle C$ are supplements of $\angle B$, then $\angle A \cong \angle C$.
 
 (Converso del teorema de los suplementos congruentes)
-**Converse of the congruent supplements theorem**: if two angles are congruent, and one of them is supplementary to a third angle, then both angles are supplementary to the third angle, if $\angle A \cong \angle C$, and $\angle A$ and $\angle B$ are supplementary, then $\angle B$ and $\angle C$ are supplementary.
+**Converse of the congruent supplements theorem**: if two angles are congruent, and one of them is supplementary to a third angle, then both angles are supplementary to the third angle. If $\angle A \cong \angle C$, and $\angle A$ and $\angle B$ are supplementary, then $\angle B$ and $\angle C$ are supplementary.
 
 (Teorema de los complementos congruentes)
-**Congruent complements theorem**: two angles are congruent when they are complementary to another angle, or when they are complementary to two other congruent angles, if $\angle A$ and $\angle C$ are complements of $\angle B$, then $\angle A \cong \angle C$.
+**Congruent complements theorem**: two angles are congruent when they are complementary to another angle, or when they are complementary to two other congruent angles. If $\angle A$ and $\angle C$ are complements of $\angle B$, then $\angle A \cong \angle C$.
 
 (Teorema de los ángulos complementarios adyacentes)
-**Adjacent complementary angles theorem**: if two angles are adjacent and complementary, then the two non-shared sides form a right angle.
+**Adjacent complementary angles theorem**: if two angles are adjacent and complementary, then the two non-shared sides form a right angle. If $\angle A$ and $\angle B$ are adjacent complementary angles, then $m \angle A + m \angle B = \pi/2$, so the angle between the non-shared sides is a right angle.
 
 (Converso del teorema de los ángulos complementarios adyacentes)
-**Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary.
+**Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary. If $\angle A$ and $\angle B$ are adjacent angles, with the non-shared sides forming a right angle, then $\angle A$ and $\angle B$ are complementary.
 
 (Teorema de los ángulos alternos internos)
-**Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
+**Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent. If $l \parallel m$, with transversal $t$, the lines $l$ and $m$ are placed horizontally, and numerating the angles left to right and then top to bottom, then $\angle 3 \cong \angle 6$ and $\angle 4 \cong \angle 5$.
 
 (Converso del teorema de los ángulos alternos internos)
-**Converse of the alternate interior angles theorem**: given two lines intersected by a transversal, if their alternate interior angles are congruent, then the two lines are parallel.
+**Converse of the alternate interior angles theorem**: given two lines intersected by a transversal, if their alternate interior angles are congruent, then the two lines are parallel. Using the same lines of the alternate interior angles theorem, if $\angle 3 \cong \angle 6$ and/or $\angle 4 \cong \angle 5$, then $l \parallel m$, with transversal $t$.
 
 (Teorema de los ángulos alternos externos)
-**Alternate exterior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent.
+**Alternate exterior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent. Using the same lines of the alternate interior angles theorem, then $\angle 1 \cong \angle 8$ and $\angle 2 \cong \angle 7$.
 
 (Converso del teorema de los ángulos alternos externos)
-**Converse of the alternate exterior angles theorem**: given two lines intersected by a transversal, if their alternate exterior angles are congruent, then the two lines are parallel.
+**Converse of the alternate exterior angles theorem**: given two lines intersected by a transversal, if their alternate exterior angles are congruent, then the two lines are parallel. Using the same lines of the alternate interior angles theorem, if $\angle 1 \cong \angle 8$ and/or $\angle 2 \cong \angle 7$, then $l \parallel m$, with transversal $t$.
 
 (Teorema de los ángulos conjugados internos)
-**Same side interior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side interior angles.
+**Same side interior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side interior angles. Using the same lines of the alternate interior angles theorem, then $\angle 3$ and $\angle 5$ are supplementary, and $\angle 4$ and $\angle 6$ are supplementary.
 
 (Converso del teorema de los ángulos conjugados internos)
-**Converse of the same side interior angles theorem**: given two lines intersected by a transversal, if their same side interior angles are supplementary, then the two lines are parallel.
+**Converse of the same side interior angles theorem**: given two lines intersected by a transversal, if their same side interior angles are supplementary, then the two lines are parallel. Using the same lines of the alternate interior angles theorem, if $\angle 3$ and $\angle 5$ are supplementary, and $\angle 4$ and $\angle 6$ are supplementary, then $l \parallel m$, with transversal $t$.
 
 (Teorema de los ángulos conjugados externos)
-**Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles.
+**Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles. Using the same lines of the alternate interior angles theorem, then $\angle 1$ and $\angle 7$ are supplementary, and $\angle 2$ and $\angle 8$ are supplementary.
 
 (Converso del teorema de los ángulos conjugados externos)
-**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel.
+**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel. Using the same lines of the alternate interior angles theorem, if $\angle 1$ and $\angle 7$ are supplementary, and $\angle 2$ and $\angle 8$ are supplementary, then $l \parallel m$, with transversal $t$.
 
 (Teorema de las transversales perpendiculares)
-**Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line.
+**Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line. If $l \parallel m$ and $l \perp t$, then $m \perp t$.
 
 (Converso del teorema de las transversales perpendiculares)
-**Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel.
+**Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel. If $l \perp t$ and $m \perp t$, then $l \parallel m$.
+
+(Teorema de la suma de los ángulos interiores de un triángulo)
+**Triangle interior angles sum theorem**: the sum of the interior angles of a triangle, is exactly $\pi$. In $\triangle ABC$, $m \angle A + m \angle B + m \angle C = \pi$
+
+(Teorema de la suma de los ángulos exteriores de un triángulo)
+**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2\pi$, taking only one exterior angle per vertex. In $\triangle ABC$, $m \angle A_ext + m \angle B_ext + m \angle C_ext = 2 \pi$. The $ext$ subindex indicates an exterior angle.
+
+(Teorema del ángulo exterior de un triángulo)
+**Exterior angle of a triangle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles. In $\triangle ABC$, $m \angle A_ext = m \angle B + m \angle C$.
+
+(Teorema del tercer ángulo)
+**Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent, in triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
+
+(Teorema AAL de congruencia de triángulos)
+**AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration. In triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\overline{BC} \cong \overline{EF}$, then $\triangle ABC \cong \triangle DEF$.
+
+(Teorema de la congruencia de la hipotenusa-cateto)
+**Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent. In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong $\overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
+
+(Teorema de los ángulos de la base)
+**Base angles theorem**: in an isosceles triangle, the base angles are congruent. Given an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{CB}$, then $\angle A \cong \angle C$.
+
+(Converso del teorema de los ángulos de la base)
+**Converse of the base angles theorem**: if two angles in a triangle are congruent, it is an isosceles triangle. In a triangle $\triangle ABC$, if $\angle A \cong \angle C$, then $\triangle ABC$ is isosceles.
+
+(Teorema del triángulo isósceles)
+**Isosceles triangle theorem**: in an isosceles triangle, the angle bisector of the vertex angle is a perpendicular bisector of the base. If $\triangle ABC$ is isosceles, such that $\overline{AB} \cong \overline{CB}$, $D$ is a point in $\overline{AC}$, and $\overline{BD}$ is the angle bisector of $\angle ABC$, then $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$.
+
+(Converso del teorema del triángulo isósceles)
+**Converse of the isosceles triangle theorem**: in an isosceles triangle, the perpendicular bisector of the base is an angle bisector of the vertex angle. If $\triangle ABC$ is isosceles, $D$ is a point in $\overline{AC}$, and $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$, then $\overline{BD}$ is an angle bisector of $\angle ABC$.
+
+(Teorema de los triángulos equiláteros)
+**Equilateral triangles theorem**: an equilateral triangle is also equiangular. If a triangle $\triangle ABC$ has sides with measures $a$, $b$, $c$, such that $a = b = c$, then $\angle A \cong \angle B \cong \angle C$.
+
+(Converso del teorema de los triángulos equiláteros)
+**Converse of the equilateral triangles theorem**: an equiangular triangle is also equilateral. If a triangle $\triangle ABC$ has $\angle A \cong \angle B \cong \angle C$, then its measures $a$, $b$, $c$ are equal, $a = b = c$.
 
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
@@ -1348,8 +1399,16 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 (Triángulo isósceles)
 **Isosceles triangle**: a triangle in which two of its sides have the same measure of length.
 
+(Partes de un triángulo isósceles)
+**Isosceles triangle parts**: in an isosceles triangle, the congruent sides are called the legs (patas), the remaining side is called the base (base). The two angles formed by the base and each of the legs, are called base angles (ángulos de la base), and the included angle of the two legs is called the vertex angle (ángulo del vértice).
+
 (Triángulo equilátero)
 **Equilateral triangle**: a triangle in which all the sides have the same measure of length. All equilateral triangles are similar or congruent.
+
+(Triángulos congruentes)
+**Congruent triangles**: given two triangles, they are congruent if their corresponding sides are congruent and their corresponding angles are congruent. The congruence $\triangle ABC \cong \triangle DEF$, is true when $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$. This can be expressed as "corresponding parts of congruent triangles are congruent". In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
+
+The configurations AAA and SSA do not necessarily lead to congruent triangles.
 
 (Perímetro de un triángulo)
 **Triangle perimeter**: let $a$, $b$, $c$, be the lengths of the sides of a triangle, then $P = a + b + c$.
@@ -1366,11 +1425,16 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 (Vértices de un polígono)
 **Vertices of a polygon**: the points of a polygon where the segments intersect.
 
-(Polígono convexo)
-**Convex polygon**: a polygon such that in each of its vertices, the angle measured inside the polygon is less than the angle measured outside the polygon.
+(Ángulos interiores de un polígono)
+**Interior angles of a polygon**: each of the angles at any of the vertices of the polygon, that is inside the polygon.
 
-(Polígono cóncavo)
-**Concave polygon**: a polygon such that in at least one of its vertices, the angle measured inside the polygon is greater than the angle measured outside the polygon.
+(Ángulos exteriores de un polígono)
+**Exterior angles of a polygon**: each of the angles at any of the vertices of the polygon, that is outside the polygon, formed by a side of the vertex and the extension of the other side.
+
+Given that each vertex in a polygon has two sides, two exterior angles can be drawn from each vertex, both being congruent to each other due to the vertical angles theorem. In a given vertex of a polygon, the interior angle and one exterior angle (any of the two) form a linear pair, which means they are supplementary.
+
+(Ángulos interiores remotos)
+**Remote interior angles**: the interior angles that are not adjacent to a given exterior angle. In a triangle, given an exterior angle, the remote interior angles are the two interior angles that are not adjacent to said exterior angle.
 
 (Diagonales de un polígono)
 **Polygon diagonals**: the segments that are formed by connecting all the vertices of the polygon with each other, but that are not the sides of the polygon.
@@ -1388,6 +1452,12 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 - **Decagon** (Decágono): a polygon with ten sides.
 - **Undecagon** (Undecágono): a polygon with eleven sides.
 - **Dodecagon** (Dodecágono): a polygon with twelve sides.
+
+(Polígono convexo)
+**Convex polygon**: a polygon such that in each of its vertices, the angle measured inside the polygon is less than the angle measured outside the polygon.
+
+(Polígono cóncavo)
+**Concave polygon**: a polygon such that in at least one of its vertices, the angle measured inside the polygon is greater than the angle measured outside the polygon.
 
 (Cuadrilátero)
 **Quadrilateral**: a shape with four straight sides.
@@ -1762,6 +1832,15 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 
 (Construcción de dos líneas paralelas)
 **Two parallel lines construction**: a geometric construction to draw two lines such that they are parallel to each other.
+
+(Construcción de un triángulo dados tres lados)
+**Triangle from three sides construction**: a geometric construction to draw a triangle, given the lengths of its three sides.
+
+(Construcción de un triángulo dados dos lados y su ángulo comprendido)
+**Triangle from two sides and their included angle construction**: a geometric construction to draw a triangle given two sides and their included angle.
+
+(Construcción de un triángulo dados dos ángulos y su lado comprendido)
+**Triangle from two angles and their included side construction**: geometric construction to draw a triangle given two angles and their included side.
 
 (Algoritmo para encontrar la distancia más corta entre un punto y una línea)
 **Algorithm to find the shortest distance between a point and a line**: there is an algorithm to find this distance based on algebra in the rectangular coordinate system.

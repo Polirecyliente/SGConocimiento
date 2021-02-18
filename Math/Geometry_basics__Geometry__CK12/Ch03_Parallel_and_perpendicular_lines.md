@@ -232,7 +232,7 @@ The same proof applies for the other pair of same side exterior angles.
 
 > Proof of the congruent linear pairs theorem
 >
-> Let $\angle A$ and $\angle B$ form a linear pair, and let $\angle A \cong \angle B$, then $m \angle A = m \angle B$, $m \angle A + m \angle B = \pi \Rightarrow 2 m \angle A = \pi \Rightarrow m \angle A = \pi/2 = m \angle B$. $\blacksquare$
+> Let $\angle A$ and $\angle B$ form a linear pair, and let $\angle A \cong \angle B$, then $m \angle A = m \angle B$, $m \angle A + m \angle B = \pi \Rightarrow 2 m \angle A = \pi \Rightarrow m \angle A = \pi/2 = m \angle B$. So $\angle A$ and $\angle B$ are right angles. $\blacksquare$
 
 (Teorema de las transversales perpendiculares)
 **Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line.
