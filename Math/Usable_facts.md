@@ -909,13 +909,33 @@ Every linear equation in one variable can be simplified through the use of the p
 (Pendiente de una ecuación lineal)
 **Slope of a linear equation**: the slope of a line is a ratio that shows how many units in the $y$-axis change when a single unit in the $x$-axis changes. In a given line, the slope is measured as the value changed in the $y$-axis divided by the equivalent change in the $x$-axis.
 
-The slope of an horizontal line is $0$ and the slope of a vertical line is undefined. A negative slope means that whenever the value in the $x$-axis increases, the value in the $y$-axis decreases, and vice versa. A positive slope indicates that both values in $x$ and $y$ increase or decrease together.
+The slope of an horizontal line is $0$ and the slope of a vertical line is undefined (positive or negative infinity). A negative slope means that whenever the value in the $x$-axis increases, the value in the $y$-axis decreases, and vice versa. A positive slope indicates that both values in $x$ and $y$ increase or decrease together.
 
 (Fórmula de la pendiente)
 **Slope formula**: the slope of a line that passes through two given points, is equal to the ratio of the difference of the $y$-axis values of the two points over the difference of the $x$-axis values of the two points. Let $(x_1, y_1)$ and $(x_2, y_2)$ be two points in the $x$-$y$ plane, and let $m$ be the slope that they form, then $m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{y_1 - y_2}{x_1 - x_2}$.
 
+The rise (elevación) of a slope is the amount changed in the $y$ axis, namely $y_2 - y_1$. The run (avance) of a slope is the amount changed in the $x$ axis, namely $x_2 - x_1$. So the algebraic definition of the slope can also be interpreted as rise over run.
+
 (Elevación sobre avance de una pendiente)
 **Rise over run of a slope**: in a slope, rise over run is the fraction of the vertical distance called "rise" over the horizontal distance called "run".
+
+(Forma pendiente intercepto de una línea)
+**Slope-intercept form of a line**: an equation that expresses the $y$ coordinate of each point of a line, as the the slope multiplied by the $x$ coordinate of that point, plus the $y$-intercept. Let $y$ be the $y$ coordinate of a given point, let $x$ be the $x$ coordinate of the same point, let $m$ be the slope, $b$ be the $y$-intercept, then $y = mx + b$.
+
+(Pendiente de líneas paralelas)
+**Slope of parallel lines**: the slope of a set of parallel lines is the same for all the lines, i.e. all parallel lines have the same slope. This is because for lines to be parallel, they must have the same rise and run. Using the slope-intercept form of a line, parallel lines have the same slope but different $y$-intercept values.
+
+(Pendiente de líneas perpendiculares)
+**Slope of perpendicular lines**: given the slope $m$ of a line, the slope of a perpendicular line to it, is $-1/m$. This is because given the slope of a line, the slope of a line perpendicular to it, is the opposite reciprocal of the slope of the given line.
+
+(Fórmula de distancia)
+**Distance formula**: the distance formula is the application of the Pythagorean theorem in the rectangular coordinate system. Let $(x_1, y_1)$, $(x_2, y_2)$, be two points in the $x$-$y$ plane, and let $d$ be the distance between them, then $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.
+
+(Distancia más corta entre un punto y una recta)
+**Shortest distance between a point and a line**: given a point and a line, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line to the given line that passes through the given point, is used to measure this shortest distance, as the distance between the given point and the intersection of the perpendicular line and the given line.
+
+(Distancia más corta entre dos líneas paralelas)
+**Shortest distance between two parallel lines**: given two parallel lines, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line that passes through both parallel lines, is used to measure this shortest distance, as the distance between the two intersections of the perpendicular line with the two parallel lines. By definition of parallel lines, the shortest distance between them is a constant.
 
 ### Polynomials (Polinomios)
 
@@ -1064,6 +1084,37 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Líneas perpendiculares)
 **Perpendicular lines**: two lines (or rays, or segments) that cross each other at right angles, i.e. the four angles formed at the intersection of the lines are right angles. Perpendicularity is denoted with the $\perp$ symbol, e.g. given two lines $l$ and $m$ that are perpendicular to each other, this is denoted as $l \perp m$, which is the same as $m \perp l$.
 
+(Paralelismo en geometría)
+**Geometric parallelism**: the relationship that is produced when two distinct figures extend indefinitely and never intersect each other. Two parallel lines that belong to the same plane, extend indefinitely and never intersect each other. Two parallel planes in space, extend indefinitely and never intersect each other. The distance between parallel lines or planes is constant. The symbol $\parallel$ indicates a parallel relation. Let $\overleftrightarrow{AB}$, $\overleftrightarrow{CD}$ be two lines, such that they are parallel to each other, this can be denoted as $\overleftrightarrow{AB} \parallel \overleftrightarrow{CD}$, read as the line $AB$ is parallel to the line $CD$ (la línea $AB$ es paralela a la línea $CD$). In diagrams, parallel lines are indicated by placing arrowheads inside the lines. Each set of parallel lines has its own amount of arrowheads.
+
+(Propiedad transitiva de las líneas paralelas)
+**Transitive property of parallel lines**: given two parallel lines, if the first one is parallel to a third line, then the second line is also parallel to the third, if $k \parallel l$ and $l \parallel m$, then $k \parallel m$.
+
+(Líneas alabeadas)
+**skew lines**: a relationship between two lines, such that they are not parallel but also do not intersect. This is possible in lines that belong to different planes.
+
+(Línea transversal)
+**Transversal line**: a line that intersects two other distinct lines.
+
+(Partes de una transversal)
+**Parts of a transversal**: a few named parts of transversals in general.
+
+- **Interior area** (Área interna): the area between the two lines crossed by the transversal, e.g. the area between $l$ and $m$.
+
+- **Exterior area** (Área externa): the area outside of the two lines crossed by the transversal, e.g. the area outside of $l$ and $m$.
+
+- **Corresponding angles** (Ángulos correspondientes): two angles that are in the same position relative to the transversal, but each on a different line, e.g. $\angle 1$ and $\angle 5$ are corresponding angles, like $\angle 2$ and $\angle 6$, also $\angle 3$ and $\angle 7$, and lastly $\angle 4$ and $\angle 8$ form corresponding angle pairs.
+
+- **Alternate interior angles** (Ángulos alternos internos): two angles that lie on the interior area, do not form a linear pair, and are on opposite sides of the transversal, e.g. $\angle 3$ and $\angle 6$ are alternate interior angles, like $\angle 4$ and $\angle 5$.
+
+- **Alternate exterior angles** (Ángulos alternos externos): two angles that lie on the exterior area, do not form a linear pair, and are on opposite sides of the transversal, e.g. $\angle 1$ and $\angle 8$ are alternate exterior angles, like $\angle 2$ and $\angle 7$.
+
+- **Same side interior angles** (Ángulos conjugados internos): two angles that lie on the interior area, are distinct, and are on the same side of the transversal, e.g. $\angle 3$ and $\angle 5$ are same side interior angles, like $\angle 4$ and $\angle 6$.
+
+- **Same side exterior angles** (Ángulos conjugados externos): two angles that lie on the exterior area, are distinct, and are on the same side of the transversal, e.g. $\angle 1$ and $\angle 7$ are same side exterior angles, like $\angle 2$ and $\angle 8$.
+
+- **Consecutive angles** (Ángulos consecutivos): same side angles are also known as consecutive angles.
+
 (Ángulo llano)
 **Straight angle**: the angle of half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Two rays that have this angle form a straight line.
 
@@ -1171,6 +1222,18 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Postulado del par lineal)
 **Linear pair postulate**: the two angles of a linear pair are supplementary.
 
+(Postulado de las paralelas)
+**Parallel postulate**: given a line and a point not on the line, there is only one parallel to the line that passes through the point.
+
+(Postulado de las perpendiculares)
+**Perpendicular postulate**: given a line and a point not on the line, there is only one perpendicular line to the line that passes through the point.
+
+(Postulado de los ángulos correspondientes)
+**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent.
+
+(Converso del postulado de los ángulos correspondientes)
+**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels.
+
 (Propiedad reflexiva de la congruencia)
 **Reflexive property of congruence**: a figure is congruent with itself. Let $\overline{AB}$ be a segment, and $\angle ABC$ be an angle, then $\overline{AB} \cong \overline{AB}$ and $\angle ABC \cong \angle ABC$.
 
@@ -1188,6 +1251,9 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Teorema de los ángulos verticales)
 **Vertical angles theorem**: two angles that are vertical angles, are also congruent. Given that $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
 
+(Teorema de los pares lineales congruentes)
+**Congruent linear pairs theorem**: in a linear pair, if the two angles are congruent, then they have a measure of $\pi/2$, meaning that if both angles of a linear pair are congruent then they are right angles.
+
 (Teorema de los suplementos congruentes)
 **Congruent supplements theorem**: two angles are congruent when they are supplementary to another angle, or when they are supplementary to two other congruent angles, if $\angle A$ and $\angle C$ are supplements of $\angle B$, then $\angle A \cong \angle C$.
 
@@ -1196,6 +1262,42 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 
 (Teorema de los complementos congruentes)
 **Congruent complements theorem**: two angles are congruent when they are complementary to another angle, or when they are complementary to two other congruent angles, if $\angle A$ and $\angle C$ are complements of $\angle B$, then $\angle A \cong \angle C$.
+
+(Teorema de los ángulos complementarios adyacentes)
+**Adjacent complementary angles theorem**: if two angles are adjacent and complementary, then the two non-shared sides form a right angle.
+
+(Converso del teorema de los ángulos complementarios adyacentes)
+**Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary.
+
+(Teorema de los ángulos alternos internos)
+**Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
+
+(Converso del teorema de los ángulos alternos internos)
+**Converse of the alternate interior angles theorem**: given two lines intersected by a transversal, if their alternate interior angles are congruent, then the two lines are parallel.
+
+(Teorema de los ángulos alternos externos)
+**Alternate exterior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent.
+
+(Converso del teorema de los ángulos alternos externos)
+**Converse of the alternate exterior angles theorem**: given two lines intersected by a transversal, if their alternate exterior angles are congruent, then the two lines are parallel.
+
+(Teorema de los ángulos conjugados internos)
+**Same side interior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side interior angles.
+
+(Converso del teorema de los ángulos conjugados internos)
+**Converse of the same side interior angles theorem**: given two lines intersected by a transversal, if their same side interior angles are supplementary, then the two lines are parallel.
+
+(Teorema de los ángulos conjugados externos)
+**Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles.
+
+(Converso del teorema de los ángulos conjugados externos)
+**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel.
+
+(Teorema de las transversales perpendiculares)
+**Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line.
+
+(Converso del teorema de las transversales perpendiculares)
+**Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel.
 
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
@@ -1654,3 +1756,15 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 
 (Construcción de la bisectriz de un ángulo)
 **Angle bisector construction**: a geometric construction to draw the angle bisector of a given angle.
+
+(Construcción de una línea perpendicular)
+**Perpendicular line construction**: a geometric construction to draw the unique perpendicular line to a given line that passes through a given point.
+
+(Construcción de dos líneas paralelas)
+**Two parallel lines construction**: a geometric construction to draw two lines such that they are parallel to each other.
+
+(Algoritmo para encontrar la distancia más corta entre un punto y una línea)
+**Algorithm to find the shortest distance between a point and a line**: there is an algorithm to find this distance based on algebra in the rectangular coordinate system.
+
+(Algoritmo para encontrar la distancia más corta entre dos líneas paralelas)
+**Algorithm to find the shortest distance between two parallel lines**: there is an algorithm to find this distance based on algebra in the rectangular coordinate system.

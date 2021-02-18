@@ -85,9 +85,9 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 (Partes de una transversal)
 **Parts of a transversal**: the following parts will be defined using the *Transversal to parallel lines* image, but these concepts apply to transversals in general.
 
-- **Interior area** (Área interna): the area between the two lines, e.g. the area between $l$ and $m$.
+- **Interior area** (Área interna): the area between the two lines crossed by the transversal, e.g. the area between $l$ and $m$.
 
-- **Exterior area** (Área externa): the area outside of the two lines, e.g. the area outside of $l$ and $m$.
+- **Exterior area** (Área externa): the area outside of the two lines crossed by the transversal, e.g. the area outside of $l$ and $m$.
 
 - **Corresponding angles** (Ángulos correspondientes): two angles that are in the same position relative to the transversal, but each on a different line, e.g. $\angle 1$ and $\angle 5$ are corresponding angles, like $\angle 2$ and $\angle 6$, also $\angle 3$ and $\angle 7$, and lastly $\angle 4$ and $\angle 8$ form corresponding angle pairs.
 
@@ -105,7 +105,10 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 [Ch03_S02](https://www.ck12.org/reader/reader-index.html#section/2932933/3.2/9549314)
 
 (Postulado de los ángulos correspondientes)
-**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$. Its converse is also a postulate.
+**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$.
+
+(Converso del postulado de los ángulos correspondientes)
+**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels.
 
 (Teorema de los ángulos alternos internos)
 **Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
@@ -323,7 +326,7 @@ The blue line is the first line, the lime green line has a slope that is the opp
 ## Distance formula (Fórmula de distancia)
 [Ch03_S06](https://www.ck12.org/reader/reader-index.html#section/2932937/3.6/9549314)
 
-The distance formula is derived from the Pythagorean theorem (Teorema de Pitágoras).
+The distance formula is the application of the Pythagorean theorem in the rectangular coordinate system.
 
 (Teorema de Pitágoras)
 **Pythagorean theorem**: in a right triangle the length of the largest side squared is equal to the sum of the other two lengths individually squared. The largest side is named the hypotenuse (hipotenusa), and the other sides are called legs (catetos).
@@ -359,7 +362,7 @@ Using the Pythagorean theorem, the distance squared between two points, is the s
 
 The shortest distance between the point $A$ and the line $l$ is the distance $AB$.
 
-> Process to find the shortest distance between a point and a line
+> Algorithm to find the shortest distance between a point and a line
 >
 > 1. Use the *Shortest distance between a point and a line* image, let $A$ be the point and $l$ be the line, such that the line $l$ is defined by the equation $y = m_1x + b_1$, and let $B$ be the point of intersection of the line $l$ and a perpendicular line to it that passes through $A$. The shortest distance being measured is the distance $AB$.
 > 2. Calculate the slope of the perpendicular line as $m_2 = -\frac{1}{m_1}$.
@@ -371,7 +374,7 @@ The shortest distance between the point $A$ and the line $l$ is the distance $AB
 (Distancia más corta entre dos líneas paralelas)
 **Shortest distance between two parallel lines**: given two parallel lines, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line that passes through both parallel lines, is used to measure this shortest distance, as the distance between the two intersections of the perpendicular line with the two parallel lines.
 
-> Process to find the shortest distance between two parallel lines
+> Algorithm to find the shortest distance between two parallel lines
 >
 > 1. Pick a point in one of the two parallel lines, name it $A$.
 > 2. Apply the Process to find the shortest distance between a point and a line, using $A$ as a point, and the line is the other parallel line that does not contain $A$. The result is the shortest distance between the two parallel lines.
