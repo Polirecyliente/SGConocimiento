@@ -54,7 +54,7 @@ The angle $\angle B$ is an exterior angle of the polygon. Given that each vertex
 In a given vertex of a polygon, the interior angle and one exterior angle (any of the two) form a linear pair, which means they are supplementary.
 
 (Teorema de la suma de los ángulos exteriores de un triángulo)
-**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2\pi$, taking only one exterior angle per vertex.
+**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2 \pi$, taking only one exterior angle per vertex.
 [Triangle exterior angle sum theorem image code](Programs/Ch04/S01_04_Triangle_exterior_angle_sum_theorem_image.py)\
 ![Triangle exterior angle sum theorem image](Images/Ch04/S01_04_Triangle_exterior_angle_sum_theorem.png)
 *Triangle exterior angle sum theorem*

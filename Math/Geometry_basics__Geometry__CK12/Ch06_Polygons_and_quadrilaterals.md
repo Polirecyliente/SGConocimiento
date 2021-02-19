@@ -53,7 +53,7 @@ This formula can be derived from the polygon interior angles sum theorem. If all
 In a regular polygon, each side has a length of $d$, and each interior angle has a measure of $\theta$.
 
 (Teorema de la suma de los ángulos exteriores de un polígono)
-**Polygon exterior angle sum theorem**: the sum of the exterior angles of a polygon is exactly $2\pi$, taking only one exterior angle per vertex.
+**Polygon exterior angle sum theorem**: the sum of the exterior angles of a polygon is exactly $2 \pi$, taking only one exterior angle per vertex.
 
 > Proof of the polygon exterior angle sum theorem
 >

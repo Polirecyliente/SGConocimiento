@@ -1048,6 +1048,9 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 (Puntos coplanares)
 **Coplanar points**: points that are on the same plane. All the points on a given plane are coplanar.
 
+(Punto equidistante a otros puntos)
+**Equidistant point to other points**: a given point is equidistant to other points when its distance to all the other points is the same.
+
 (Líneas coplanares)
 **Coplanar lines**: lines that are on the same plane. All the lines on a given plane are coplanar.
 
@@ -1060,6 +1063,9 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 (Intersección)
 **Intersection**: the point or points where two shapes cross each other. When two distinct lines intersect, the intersection is a point. When two distinct planes intersect, the intersection is a line. When a line outside of a plane intersects said plane, the intersection is a point. When three distinct planes intersect, the intersection is a point.
 
+(Punto de concurrencia)
+**Point of concurrency**: the intersection in a single point, of three or more lines, rays, or segments.
+
 (Vértice)
 **Vertex**: any point from which one or more lines stem.
 
@@ -1068,7 +1074,7 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 
 If more than two lines stem from a vertex, then an unambiguous way to label an angle is using three points, the vertex and one point in each of the two lines in the angle. For example, given the vertex $A$, the point $B$ in one line, and the point $C$ in the other line, then the angle formed can be labeled as $\angle BAC$ or $\angle CAB$, putting the vertex $A$ in the middle.
 
-Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes). Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians.
+Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2 \pi$ read as $2 \pi$ radians ($2 \pi$ radianes). Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians.
 
 An angle can be measured in two ways, because there are two ways in which a ray can be rotated to coincide with another (rotating the ray clockwise, and rotating the ray counterclockwise). The standard definition of the measure of an angle, is that it's the smallest measure of the two. The smallest measure of an angle is always less than or equal to half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Still, angles greater than $\pi$ can be considered.
 
@@ -1284,6 +1290,18 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Converso del teorema de los ángulos complementarios adyacentes)
 **Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary. If $\angle A$ and $\angle B$ are adjacent angles, with the non-shared sides forming a right angle, then $\angle A$ and $\angle B$ are complementary.
 
+(Teorema de la mediatriz)
+**Perpendicular bisector theorem**: given a segment and its perpendicular bisector, any point in the perpendicular bisector is equidistant to both endpoints of the segment. If $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$, and $E$ is any point that lies on $\overline{CD}$, then $\overline{AE} \cong \overline{EB}$.
+
+(Converso del teorema de la mediatriz)
+**Converse of the perpendicular bisector theorem**: given a segment, any point equidistant to both endpoints, is in the perpendicular bisector of the segment. If $\overline{AC} \cong \overline{CB}$, and $D$ is the midpoint of $\overline{AB}$, then $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$.
+
+(Teorema de la equidistancia en la bisectriz de un ángulo)
+**Equidistance in an angle bisector theorem**: given an angle, any point in its angle bisector is equidistant to the sides of the angle, using the shortest distance between the point and the sides. If $\overline{BD}$ is an angle bisector of $\angle ABC$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, then $\overline{DE} \cong \overline{DF}$.
+
+(Converso del teorema de la equidistancia en la bisectriz de un ángulo)
+**Converse of the equidistance in an angle bisector theorem**: in an angle, if a given point is equidistant to the sides of the angle, using the shortest distance between the point and the sides, then the point lies in the angle bisector. In angle $\angle ABC$, given a point $D$, if $\overline{AD} \cong \overline{CD}$ , then $\overline{BD}$ is an angle bisector of $\angle ABC$.
+
 (Teorema de los ángulos alternos internos)
 **Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent. If $l \parallel m$, with transversal $t$, the lines $l$ and $m$ are placed horizontally, and numerating the angles left to right and then top to bottom, then $\angle 3 \cong \angle 6$ and $\angle 4 \cong \angle 5$.
 
@@ -1318,16 +1336,16 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Triangle interior angles sum theorem**: the sum of the interior angles of a triangle, is exactly $\pi$. In $\triangle ABC$, $m \angle A + m \angle B + m \angle C = \pi$
 
 (Teorema de la suma de los ángulos exteriores de un triángulo)
-**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2\pi$, taking only one exterior angle per vertex. In $\triangle ABC$, $m \angle A_ext + m \angle B_ext + m \angle C_ext = 2 \pi$. The $ext$ subindex indicates an exterior angle.
+**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2 \pi$, taking only one exterior angle per vertex. In $\triangle ABC$, $m \angle A_ext + m \angle B_ext + m \angle C_ext = 2 \pi$. The $ext$ subindex indicates an exterior angle.
 
 (Teorema del ángulo exterior de un triángulo)
 **Exterior angle of a triangle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles. In $\triangle ABC$, $m \angle A_ext = m \angle B + m \angle C$.
 
 (Teorema del tercer ángulo)
-**Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent, in triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
+**Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent, in the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
 
 (Teorema AAL de congruencia de triángulos)
-**AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration. In triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\overline{BC} \cong \overline{EF}$, then $\triangle ABC \cong \triangle DEF$.
+**AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration. In the triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\overline{BC} \cong \overline{EF}$, then $\triangle ABC \cong \triangle DEF$.
 
 (Teorema de la congruencia de la hipotenusa-cateto)
 **Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent. In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong $\overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
@@ -1350,6 +1368,36 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Converso del teorema de los triángulos equiláteros)
 **Converse of the equilateral triangles theorem**: an equiangular triangle is also equilateral. If a triangle $\triangle ABC$ has $\angle A \cong \angle B \cong \angle C$, then its measures $a$, $b$, $c$ are equal, $a = b = c$.
 
+(Teorema del segmento medio de un triángulo)
+**Midsegment of a triangle theorem**: a midsegment of a triangle measures half the length of its parallel side. In a triangle $\triangle ABC$, if $\overline{DE}$ is a midsegment of $\triangle ABC$ that is parallel to $\overline{AB}$, then the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, or $DE = \frac{AB}{2}$.
+
+(Converso del teorema del segmento medio de un triángulo)
+**Converse of the midsegment of a triangle theorem**: in a triangle, if a segment connects two sides, is parallel to the non-connected side, and measures half the length of its parallel side, then the segment is a midsegment of the triangle. In a triangle $\triangle ABC$, if the points $D$ and $E$ lie on different sides of the triangle, $\overline{DE} \parallel \overline{AB}$, and $DE = \frac{AB}{2}$, then $\overline{DE}$ is a midsegment of $\triangle ABC$.
+
+(Teorema de la concurrencia de las mediatrices de un triángulo)
+**Concurrency of the perpendicular bisectors of a triangle theorem**: in a triangle, the three perpendicular bisectors, one from each side, intersect each other at a single point which is the circumcenter. In a triangle $\triangle ABC$, there is a point $G$, such that $G$ is in the three perpendicular bisectors from the three sides of the triangle, $G$ is equidistant to $A$, $B$, $C$, and $G$ is the circumcenter of $\triangle ABC$.
+
+(Teorema de la concurrencia de las bisectrices de los ángulos de un triángulo)
+**Concurrency of the angle bisectors of a triangle theorem**: in a triangle, the three angle bisectors, one from each vertex, intersect each other at a single point which is the incenter. In a triangle $\triangle ABC$, if a point $G$ lies in the three angle bisectors of $\triangle ABC$ then $G$ is the incenter of $\triangle ABC$.
+
+(Teorema de la concurrencia de las medianas de un triángulo)
+**Concurrency of the medians of a triangle theorem**: in a triangle, the three medians, one from each vertex to the midpoint of the side opposite to the vertex, intersect each other at a single point which is the centroid. In any given median, the length from the centroid to the vertex is twice the length from the centroid to the midpoint. In a triangle $\triangle ABC$, if a point $G$ lies in the three medians of $\triangle ABC$ then $G$ is the centroid of $\triangle ABC$. If $D$ is the midpoint of $\overline{AC}$, $E$ is the midpoint of $\overline{BC}$, and $F$ is the midpoint of $\overline{AB}$, then $AG = 2 EG$, $BG = 2 DG$, and $CG = 2 FG$.
+
+(Teorema del lado mayor de un triángulo)
+**Triangle longer side theorem**: in a triangle, given two sides, if one side is longer than the other side, then the angle opposite to the longer side is greater than the angle opposite to the other side. In a triangle $\triangle ABC$, if $CB > AC$, then $m \angle A > m \angle B$.
+
+(Converso del teorema del lado mayor de un triángulo)
+**Converse of the triangle longer side theorem**: in a triangle, given two angles, if the measure of one angle is greater than the measure of the other angle, then the side opposite to the greater angle is longer than the side opposite to the other angle. In a triangle $\triangle ABC$, if $m \angle A > m \angle B$, then $CB > AC$.
+
+(Teorema de la desigualdad del triángulo)
+**Triangle inequality theorem**: in a triangle, the sum of the lengths of any two sides, is greater than the length of the remaining side. In a triangle $\triangle ABC$ that has sides with lengths $a$, $b$, $c$, the following relation is true, $|a - b| < c < a + b$, which is equivalent to $c < a + b$, $b < a + c$, and $a < b + c$.
+
+(Teorema de la bisagra)
+**Hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle has a measure greater than the one from the second triangle, then the remaining side of the first triangle is longer than the one of the second triangle. In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $m \angle B > m \angle E$, then $AC > DF$.
+
+(Converso del teorema de la bisagra)
+**Converse of the hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the remaining side of the first triangle is longer than the one of the second triangle, then the included angle from the first triangle has a measure greater than the one from the second triangle. In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $AC > DF$, then $m \angle B > m \angle E$.
+
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
 (Marcas de los ángulos)
@@ -1365,13 +1413,16 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Midpoint formula**: a formula to calculate the midpoint from two points, which can be the endpoints of a segment. Let $(x_1, y_1)$ and $(x_2, y_2)$ be two points in the $x$-$y$ plane, then the midpoint of the segment they form is $\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$.
 
 (Fórmula general para dividir un segmento en $n$ subsegmentos y calcular la localización del $k$-ésimo subsegmento)
-**General formula to divide a segment into $n$ subsegments and get the location of the $k$-th subsegment**: Let $(x_1, y_1)$ and $(x_2, y_2)$ be the two points that define a segment, this segment can be divided into $n$ subsegments. Counting from $(x_1, y_1)$, the coordinates of the $k$-th subsegment are $\left(x_1 + k\frac{x_2 - x_1}{n}, y_1 + k\frac{y_2 - y_1}{n}\right)$. Making $k = 1$ and $n = 2$ results in the midpoint formula.
+**General formula to divide a segment into $n$ subsegments and get the location of the $k$-th subsegment**: let $(x_1, y_1)$ and $(x_2, y_2)$ be the two points that define a segment, this segment can be divided into $n$ subsegments. Counting from $(x_1, y_1)$, the coordinates of the $k$-th subsegment are $\left(x_1 + k\frac{x_2 - x_1}{n}, y_1 + k\frac{y_2 - y_1}{n}\right)$. Making $k = 1$ and $n = 2$ results in the midpoint formula.
 
 (Triángulo)
 **Triangle**: shape with three straight sides and therefore three angles. The three straight sides are three segments, in which each segment is connected to the other two with their endpoints. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex. Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). Other form to denote the same triangle is $\triangle BCA$, or any other order of the points of the triangle. The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
 
 (Lado opuesto a un vértice en un triángulo)
-**Opposite side of a vertex in a triangle**: In a triangle $\triangle ABC$, each vertex has an opposite side, the opposite side to $A$ is the side with measure $BC$, the opposite side to $B$ is $AC$, and the opposite side to $C$ is $AB$.
+**Opposite side of a vertex in a triangle**: in a triangle $\triangle ABC$, each vertex has an opposite side, the opposite side to $A$ is the side $\overline{BC}$, the opposite side to $B$ is $\overline{AC}$, and the opposite side to $C$ is $\overline{AB}$.
+
+(Lado opuesto a un ángulo en un triángulo)
+**Opposite side of an angle in a triangle**: in a triangle $\triangle ABC$, each angle has an opposite side, the opposite side to $\angle A$ is the side $\overline{BC}$, the opposite side to $\angle B$ is $\overline{AC}$, and the opposite side to $\angle C$ is $\overline{AB}$.
 
 (Suma de los ángulos de un triángulo)
 **Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180 \text{\textdegree}$ or $\pi$ radians. Let $A$, $B$, $C$, be three vertices that form a triangle, then $m \angle A + m \angle B + m \angle C = \pi$.
@@ -1409,6 +1460,27 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 **Congruent triangles**: given two triangles, they are congruent if their corresponding sides are congruent and their corresponding angles are congruent. The congruence $\triangle ABC \cong \triangle DEF$, is true when $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$. This can be expressed as "corresponding parts of congruent triangles are congruent". In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
 
 The configurations AAA and SSA do not necessarily lead to congruent triangles.
+
+(Segmento medio de un triángulo)
+**Midsegment of a triangle**: in a triangle, the midsegment is a segment that connects the two midpoints of adjacent sides. In a triangle $\triangle ABC$, if $D$ is the midpoint of $\overline{AC}$, and $E$ is the midpoint of $\overline{BC}$, then the segment $\overline{DE}$ is a midsegment of the triangle $\triangle ABC$. Every triangle has three midsegments.
+
+(Circuncentro de un triángulo)
+**Circumcenter of a triangle**: in a triangle, the circumcenter is the point of concurrency formed at the intersection of the three perpendicular bisectors, one from each side. The circumcenter is in the three perpendicular bisectors of a triangle, and due to the perpendicular bisector theorem, the circumcenter is equidistant to the three vertices of the triangle. This allows building a circle that circumscribes (circunscribe) the triangle, using the circumcenter as center of said circle, and the distance from the circumcenter to any vertex as the radius.
+
+(Incentro de un triángulo)
+**Incenter of a triangle**: in a triangle, the incenter is the point of concurrency formed at the intersection of the three angle bisectors, one from each vertex. The incenter is in the three angle bisectors of a triangle, and due to the equidistance in an angle bisector theorem, the incenter is equidistant to the three sides of the triangle. This allows building a circle that inscribes (inscribe) the triangle, using the incenter as center of said circle, and the shortest distance from the incenter to any side as the radius.
+
+(Mediana de un triángulo)
+**Median of a triangle**: in a triangle, a median is a segment that connects one vertex with the midpoint of the side opposite to the vertex.
+
+(Centroide de un triángulo)
+**Centroid of a triangle**: in a triangle, the centroid is the point of concurrency formed at the intersection of the three medians, one from each vertex.
+
+(Altura de un triángulo)
+**Altitude of a triangle**: in a triangle, an altitude is a segment that connects one vertex perpendicularly to the side opposite to the vertex. The altitudes of a triangle don't have to be inside the triangle itself.
+
+(Ortocentro de un triángulo)
+**Orthocenter of a triangle**: in a triangle, the orthocenter is the point of concurrency formed at the intersection of the three altitudes, one from each vertex. The location of the orthocenter depends on the type of triangle. In an obtuse triangle, the orthocenter is outside the triangle. In a right triangle, the orthocenter is the vertex opposite to the hypotenuse. In an acute triangle, the orthocenter is inside the triangle.
 
 (Perímetro de un triángulo)
 **Triangle perimeter**: let $a$, $b$, $c$, be the lengths of the sides of a triangle, then $P = a + b + c$.

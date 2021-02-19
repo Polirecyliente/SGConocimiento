@@ -56,7 +56,7 @@ If a vertex has only two lines, then an angle can be named after said vertex.
 >
 > Let $A$ be a vertex with two lines stemming from it, then $\angle A$ is the angle formed between the two lines, and $m \angle A$ is the measure of said angle.
 
-Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2\pi$ read as $2\pi$ radians ($2\pi$ radianes).
+Angles are commonly measured in degrees and in radians. In degrees a whole rotation that ends at the starting position is measured as $360 \text{\textdegree}$ read as $360$ degrees ($360$ grados), and in radians this is measured as $2 \pi$ read as $2 \pi$ radians ($2 \pi$ radianes).
 
 Given those measures, half a whole rotation is $180 \text{\textdegree}$ or $\pi$ radians.
 

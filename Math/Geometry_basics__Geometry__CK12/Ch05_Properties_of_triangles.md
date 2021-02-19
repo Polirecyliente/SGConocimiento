@@ -146,6 +146,8 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 ![Incenter of a triangle image](Images/Ch05/S03_02_Incenter_of_a_triangle.png)
 *Incenter of a triangle*
 
+The incenter is in the three angle bisectors of a triangle, and due to the equidistance in an angle bisector theorem, the incenter is equidistant to the three sides of the triangle. This allows building a circle that inscribes (inscribe) the triangle, using the incenter as center of said circle, and the shortest distance from the incenter to any side as the radius.
+
 (Teorema de la concurrencia de las bisectrices de los ángulos de un triángulo)
 **Concurrency of the angle bisectors of a triangle theorem**: in a triangle, the three angle bisectors, one from each vertex, intersect each other at a single point which is the incenter.
 
@@ -185,7 +187,7 @@ The segment $\overline{CD}$ is a median of the triangle $\triangle ABC$.
 
 > Proof of the concurrency of the medians of a triangle theorem
 >
-> The segment $\overline{DE}$ is a midsegment of $\triangle ABC$, which means that the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, because of the midsegment theorem. By the alternate interior angles theorem, $\angle AED \cong \angle BAE$ and $\angle BDE \cong \angle ABD$, which means that $\triangle GED$ is similar to $\triangle GAB$. The scale factor to obtain $\triangle GAB$ from $\triangle GED$ is $2$, because of the said proportion between $\overline{AB}$ and $\overline{DE}$. $\overline{AE}$ intersects $\overline{BD}$ at two thirds of its length from $B$, and by using this same logic $\overline{CF}$ intersects $\overline{BD}$ at two thirds of its length from $B$, which means that the three medians intersect at a single point, the centroid. $\blacksquare$
+> The segment $\overline{DE}$ is a midsegment of $\triangle ABC$, which means that the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, because of the midsegment theorem. By the alternate interior angles theorem, $\angle AED \cong \angle BAE$ and $\angle BDE \cong \angle ABD$, which means that $\triangle GED$ is similar to $\triangle GAB$. The scale factor to obtain $\triangle GAB$ from $\triangle GED$ is $2$, because of the said proportion between $\overline{AB}$ and $\overline{DE}$. $\overline{AE}$ intersects $\overline{BD}$ at two thirds of its length from $B$, and by using this same logic $\overline{CF}$ intersects $\overline{BD}$ at two thirds of its length from $B$, which means that the three medians intersect at a single point, the centroid. $AG = 2 EG$, $BG = 2 DG$, and $CG = 2 FG$. $\blacksquare$
 
 (Altura de un triángulo)
 **Altitude of a triangle**: in a triangle, an altitude is a segment that connects one vertex perpendicularly to the side opposite to the vertex.
@@ -256,6 +258,8 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 >
 > Let $\triangle ABC$ have sides with lengths $a$, $b$, $c$. As shown in the image, a triangle can't be formed when $c \ge a + b$ or $c \le |a - b|$. A triangle can be formed when
 > $$|a - b| < c < a + b\ \ \blacksquare$$
+
+This result is equivalent to $c < a + b$, $b < a + c$, and $a < b + c$.
 
 (Teorema de la bisagra)
 **Hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle has a measure greater than the one from the second triangle, then the remaining side of the first triangle is longer than the one of the second triangle.
