@@ -96,19 +96,19 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 **Theorem**: a statement that can be proved with postulates, axioms and/or with other theorems.
 
 (Postulado de línea)
-**Unique line postulate**: given two points, only one line passes through the points.
+**Unique line postulate**: given two points, only one line passes through the points. Given the points $A$ and $B$, they lie on the line $l$ that passes through them.
 
 (Postulado de plano)
-**Unique plane postulate**: given three non-collinear points, only one plane contains them.
+**Unique plane postulate**: given three non-collinear points, only one plane contains them. Given the points $A$, $B$, and $C$, they lie on the plane $\mathcal{M}$ that contains them.
 
 (Postulado de plano línea)
-**Plane-line postulate**: a line that connects points from a plane, is in the plane. 
+**Plane-line postulate**: a line that connects points from a plane, is in the plane. If the line $l$ connects the points $A$ and $B$ in the plane $\mathcal{M}$, then $l$ lies on $\mathcal{M}$.
 
 (Postulado de la intersección entre dos rectas)
-**Line intersection postulate**: if two distinct lines intersect, then their intersection is a point.
+**Line intersection postulate**: if two distinct lines intersect, then their intersection is a point. If the lines $l$ and $m$ intersect, then they intersect at a single point $A$.
 
 (Postulado de la intersección entre dos planos)
-**Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line.
+**Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line. If the planes $\mathcal{M}$ and $\mathcal{N}$ intersect, then they intersect at a single line $l$.
 
 ## Segments and distance (Segmentos y distancia)
 [Ch01_S02](https://www.ck12.org/reader/reader-index.html#section/2932918/1.2/9549314)
@@ -133,7 +133,7 @@ Rays are labeled using the endpoint and the point inside the ray with an arrow o
 This method can be used to draw a given length.
 
 (Postulado de la regla)
-**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler.
+**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler. The distance between two points $A$ and $B$ is $B_value - A_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the ruler.
 
 (Postulado de adición de segmentos)
 **Segment addition postulate**: given three collinear points with one point being between the other two (the endpoints), the measure of the distance between the endpoints, is equal to the sum of the distances of each endpoint to the point between them.
@@ -190,7 +190,7 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 This method can be used to draw a given angle.
 
 (Postulado del transportador)
-**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor.
+**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor. The measure of the angle $\angle ABC$ is $BC_value - AB_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the protractor at the segments $\overline{AB}$ and $\overline{BC}$.
 
 (Vuelta completa)
 **Full circle**: the angle measure of $2 \pi$ radians or $360 \text{\textdegree}$.
@@ -261,7 +261,7 @@ In the *Segment markings* image, the two segments at the bottom have the same le
 
 > Angle addition postulate
 >
-> Let $\overrightarrow{DA}$, $\overrightarrow{DB}$, and $\overrightarrow{DC}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{DB}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then
+> Let $\overrightarrow{AD}$, $\overrightarrow{BD}$, and $\overrightarrow{CD}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{BD}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then
 > $$m \angle ADB + m \angle CDB = m \angle ADC$$
 
 [Angle addition postulate image code](Programs/Ch01/S03_05_Angle_addition_postulate_image.py)
@@ -289,7 +289,7 @@ In the *Segment markings* image, the two segments at the bottom have the same le
 As shown in the *Midpoint* image, the lengths $AB$ and $BC$ are equal, i.e. $AB = BC$, so the point $B$ is the midpoint of the segment $\overline{AC}$.
 
 (Postulado del punto medio)
-**Midpoint postulate**: a segment has exactly one midpoint.
+**Midpoint postulate**: a segment has exactly one midpoint. If the point $B$ is the midpoint of $\overline{AC}$, then $B$ is the only point that is the midpoint.
 
 (Fórmula del punto medio)
 **Midpoint formula**: a formula to calculate the midpoint from two points, which can be the endpoints of a segment.
@@ -380,7 +380,7 @@ In the *Angle bisector* image, if the segment $\overline{AC}$ is converted into 
 **Linear pair**: two adjacent angles such that the two non-shared sides form a straight line.
 
 (Postulado del par lineal)
-**Linear pair postulate**: the two angles of a linear pair are supplementary.
+**Linear pair postulate**: the two angles of a linear pair are supplementary. If $\angle A$ and $\angle B$ form a linear pair, then $\angle A$ and $\angle B$ are supplementary.
 
 (Ángulos verticales)
 **Vertical angles**: in the intersection of two lines, vertical angles are pairs of angles that are on opposite sides of the intersection.
@@ -400,6 +400,8 @@ As shown in the *Vertical angles* image, the angles $\alpha_1$ and $\alpha_2$ ar
 > On the other hand, the angles $\alpha_1$ and $\beta_2$ form a linear pair, as do the angles $\alpha_1$ and $\beta_1$, which means that also $\beta_1 \cong \beta_2$. $\blacksquare$
 
 The black square $\blacksquare$ means that the proof of the theorem is finished.
+
+If $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
 
 ## Polygon classification (Clasificación de polígonos)
 [Ch01_S06](https://www.ck12.org/reader/reader-index.html#section/2932922/1.6/9549314)

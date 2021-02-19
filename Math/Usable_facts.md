@@ -61,14 +61,14 @@
 (Demostraciones a dos columnas)
 **Two column proofs**: a way to write mathematical proofs in a structured manner. The proof is written in a table with two columns. The first column has the header of 'Statement', and its rows contain the steps of the proof. The second column has the header of 'Reason', and its rows state the reason why the step they accompany is correct.
 
-| Statement | Reason  |
-| :-------: | :-----: |
-| Step1     | Reason1 |
-| Step2     | Reason2 |
-| Step3     | Reason3 |
+| Statement | Reason           |
+| :-------: | :--------------: |
+| Step1     | Reason1          |
+| (1) Step2 | Reason2          |
+| Step3     | From (1) Reason3 |
 *Two column proof template*
 
-Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement.
+Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement. For clarity, a parentheses pair with a number can be added to a step, so that it's clear from which step a given reason stems. In the *Two column proof template* table, Reason3 stems from Step2, this is shown with the parentheses '(1)'.
 
 (Variables)
 **Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$.
@@ -1217,10 +1217,10 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Segment addition postulate**: given three collinear points with one point being between the other two (the endpoints), the measure of the distance between the endpoints, is equal to the sum of the distances of each endpoint to the point between them. Let $A$, $B$, and $C$, be three collinear points, with $B$ being between $A$ and $C$, then $AB + BC = AC$.
 
 (Postulado del transportador)
-**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor. The measure of the angle $\angle ABC$ is $BC_value - BA_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the protractor.
+**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor. The measure of the angle $\angle ABC$ is $BC_value - AB_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the protractor at the segments $\overline{AB}$ and $\overline{BC}$.
 
 (Postulado de adición de ángulos)
-**Angle addition postulate**: given two angles that share a common ray and are adjacent, the measure of the angle between the two non common rays, is equal to the sum of the two angles given. Let $\overrightarrow{DA}$, $\overrightarrow{DB}$, and $\overrightarrow{DC}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{DB}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then $m \angle ADB + m \angle CDB = m \angle ADC$.
+**Angle addition postulate**: given two angles that share a common ray and are adjacent, the measure of the angle between the two non common rays, is equal to the sum of the two angles given. Let $\overrightarrow{AD}$, $\overrightarrow{BD}$, and $\overrightarrow{CD}$, be three rays such that two angles are formed that share the common ray $\overrightarrow{BD}$, i.e. the angles $\angle ADB$ and $\angle CDB$, then $m \angle ADB + m \angle CDB = m \angle ADC$.
 
 (Postulado del punto medio)
 **Midpoint postulate**: a segment has exactly one midpoint. If the point $B$ is the midpoint of $\overline{AC}$, then $B$ is the only point that is the midpoint.
@@ -1244,7 +1244,7 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. If $l \parallel m$, with transversal $t$, the lines $l$ and $m$ are placed horizontally, and numerating the angles left to right and then top to bottom, then $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$.
 
 (Converso del postulado de los ángulos correspondientes)
-**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels. Using the same lines of the alternate interior angles theorem, if $\angle 1 \cong \angle 5$, and/or $\angle 2 \cong \angle 6$, and/or $\angle 3 \cong \angle 7$, and/or $\angle 4 \cong \angle 8$, then $l \parallel m$, with transversal $t$.
+**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels. Using the same lines of the corresponding angles postulate, if $\angle 1 \cong \angle 5$, and/or $\angle 2 \cong \angle 6$, and/or $\angle 3 \cong \angle 7$, and/or $\angle 4 \cong \angle 8$, then $l \parallel m$, with transversal $t$.
 
 (Postulado LLL de congruencia de triángulos)
 **SSS triangle congruence postulate**: SSS stands for Side-Side-Side (Lado-Lado-Lado). This postulate says that two triangles with side-side-side of the same lengths, are congruent, i.e. if the three sides of a triangle are individually congruent to the three sides of another triangle, then the two triangles are congruent. Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
@@ -1300,7 +1300,7 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Equidistance in an angle bisector theorem**: given an angle, any point in its angle bisector is equidistant to the sides of the angle, using the shortest distance between the point and the sides. If $\overline{BD}$ is an angle bisector of $\angle ABC$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, then $\overline{DE} \cong \overline{DF}$.
 
 (Converso del teorema de la equidistancia en la bisectriz de un ángulo)
-**Converse of the equidistance in an angle bisector theorem**: in an angle, if a given point is equidistant to the sides of the angle, using the shortest distance between the point and the sides, then the point lies in the angle bisector. In angle $\angle ABC$, given a point $D$, if $\overline{AD} \cong \overline{CD}$ , then $\overline{BD}$ is an angle bisector of $\angle ABC$.
+**Converse of the equidistance in an angle bisector theorem**: in an angle, if a given point is equidistant to the sides of the angle, using the shortest distance between the point and the sides, then the point lies in the angle bisector. In angle $\angle ABC$, given a point $D$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, if $\overline{DE} \cong \overline{DF}$, then $\overline{BD}$ is an angle bisector of $\angle ABC$.
 
 (Teorema de los ángulos alternos internos)
 **Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent. If $l \parallel m$, with transversal $t$, the lines $l$ and $m$ are placed horizontally, and numerating the angles left to right and then top to bottom, then $\angle 3 \cong \angle 6$ and $\angle 4 \cong \angle 5$.
@@ -1324,7 +1324,7 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles. Using the same lines of the alternate interior angles theorem, then $\angle 1$ and $\angle 7$ are supplementary, and $\angle 2$ and $\angle 8$ are supplementary.
 
 (Converso del teorema de los ángulos conjugados externos)
-**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel. Using the same lines of the alternate interior angles theorem, if $\angle 1$ and $\angle 7$ are supplementary, and $\angle 2$ and $\angle 8$ are supplementary, then $l \parallel m$, with transversal $t$.
+**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel. Using the same lines of the alternate interior angles theorem, if $\angle 1$ and $\angle 7$ are supplementary, and/or $\angle 2$ and $\angle 8$ are supplementary, then $l \parallel m$, with transversal $t$.
 
 (Teorema de las transversales perpendiculares)
 **Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line. If $l \parallel m$ and $l \perp t$, then $m \perp t$.
@@ -1336,22 +1336,22 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 **Triangle interior angles sum theorem**: the sum of the interior angles of a triangle, is exactly $\pi$. In $\triangle ABC$, $m \angle A + m \angle B + m \angle C = \pi$
 
 (Teorema de la suma de los ángulos exteriores de un triángulo)
-**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2 \pi$, taking only one exterior angle per vertex. In $\triangle ABC$, $m \angle A_ext + m \angle B_ext + m \angle C_ext = 2 \pi$. The $ext$ subindex indicates an exterior angle.
+**Triangle exterior angle sum theorem**: the sum of the exterior angles of a triangle is exactly $2 \pi$, taking only one exterior angle per vertex. In $\triangle ABC$, $m \angle A_{ext} + m \angle B_{ext} + m \angle C_{ext} = 2 \pi$. The $ext$ subindex indicates an exterior angle.
 
 (Teorema del ángulo exterior de un triángulo)
-**Exterior angle of a triangle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles. In $\triangle ABC$, $m \angle A_ext = m \angle B + m \angle C$.
+**Exterior angle of a triangle theorem**: in a triangle, the measure of an exterior angle is equal to the sum of the measures of its two remote interior angles. In $\triangle ABC$, $m \angle A_{ext} = m \angle B + m \angle C$.
 
 (Teorema del tercer ángulo)
-**Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent, in the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
+**Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent. In the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
 
 (Teorema AAL de congruencia de triángulos)
 **AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration. In the triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\overline{BC} \cong \overline{EF}$, then $\triangle ABC \cong \triangle DEF$.
 
 (Teorema de la congruencia de la hipotenusa-cateto)
-**Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent. In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong $\overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
+**Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent. In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong \overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
 
 (Teorema de los ángulos de la base)
-**Base angles theorem**: in an isosceles triangle, the base angles are congruent. Given an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{CB}$, then $\angle A \cong \angle C$.
+**Base angles theorem**: in an isosceles triangle, the base angles are congruent. In an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{CB}$, then $\angle A \cong \angle C$.
 
 (Converso del teorema de los ángulos de la base)
 **Converse of the base angles theorem**: if two angles in a triangle are congruent, it is an isosceles triangle. In a triangle $\triangle ABC$, if $\angle A \cong \angle C$, then $\triangle ABC$ is isosceles.
@@ -1397,6 +1397,81 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 
 (Converso del teorema de la bisagra)
 **Converse of the hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the remaining side of the first triangle is longer than the one of the second triangle, then the included angle from the first triangle has a measure greater than the one from the second triangle. In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $AC > DF$, then $m \angle B > m \angle E$.
+
+(Teorema de la suma de los ángulos interiores de un polígono)
+**Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
+
+(Teorema de la suma de los ángulos exteriores de un polígono)
+**Polygon exterior angle sum theorem**: the sum of the exterior angles of a polygon is exactly $2 \pi$, taking only one exterior angle per vertex. Let $Ang_{ext}$ be the sum of the exterior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{ext} = 2 \pi$.
+
+(Teorema de los lados opuestos de un paralelogramo)
+**Opposite sides of a parallelogram theorem**: in a parallelogram, the opposite sides are congruent. In a parallelogram $ABCD$, $\overline{AB} \cong \overline{CD}$, and $\overline{AD} \cong \overline{BC}$.
+
+(Converso del teorema de los lados opuestos de un paralelogramo)
+**Converse of the opposite sides of a parallelogram theorem**: in a quadrilateral, if the opposite sides are congruent, then the quadrilateral is a parallelogram. In a quadrilateral $ABCD$, if $\overline{AB} \cong \overline{CD}$, and $\overline{AD} \cong \overline{BC}$, then $ABCD$ is a parallelogram.
+
+(Teorema de los ángulos opuestos de un paralelogramo)
+**Opposite angles of a parallelogram theorem**: in a parallelogram, the opposite angles are congruent. In a parallelogram $ABCD$, $\angle A \cong \angle C$, and $\angle B \cong \angle D$.
+
+(Converso del teorema de los ángulos opuestos de un paralelogramo)
+**Converse of the opposite angles of a parallelogram theorem**: in a quadrilateral, if the opposite angles are congruent, then the quadrilateral is a parallelogram. In a quadrilateral $ABCD$, if $\angle A \cong \angle C$, and $\angle B \cong \angle D$, then $ABCD$ is a parallelogram.
+
+(Teorema de los ángulos consecutivos de un paralelogramo)
+**Consecutive angles of a parallelogram theorem**: in a parallelogram, the consecutive angles are supplementary. In a parallelogram $ABCD$, $\angle A$ and $\angle B$ are supplementary, $\angle B$ and $\angle C$ are supplementary, $\angle C$ and $\angle D$ are supplementary, and $\angle A$ and $\angle D$ are supplementary.
+
+(Converso del teorema de los ángulos consecutivos de un paralelogramo)
+**Converse of the consecutive angles of a parallelogram theorem**: in a quadrilateral, if the consecutive angles are supplementary, then the quadrilateral is a parallelogram. In a quadrilateral $ABCD$, if $\angle A$ and $\angle B$ are supplementary, $\angle B$ and $\angle C$ are supplementary, $\angle C$ and $\angle D$ are supplementary, and $\angle A$ and $\angle D$ are supplementary, then $ABCD$ is a parallelogram.
+
+(Teorema de las diagonales de un paralelogramo)
+**Diagonals of a parallelogram theorem**: in a parallelogram, the two diagonals bisect each other. In a parallelogram $ABCD$, $\overline{AC}$, and $\overline{BD}$ bisect each other.
+
+(Converso del teorema de las diagonales de un paralelogramo)
+**Converse of the diagonals of a parallelogram theorem**: in a quadrilateral, if the two diagonals bisect each other, then the quadrilateral is a parallelogram. In a quadrilateral $ABCD$, if $\overline{AC}$, and $\overline{BD}$ bisect each other, then $ABCD$ is a parallelogram.
+
+(Teorema de los lados opuestos paralelos y congruentes de un cuadrilátero)
+**Parallel and congruent opposite sides of a quadrilateral theorem**: in a quadrilateral, if a single pair of opposite sides is congruent and parallel, then the quadrilateral is a parallelogram. In a quadrilateral $ABCD$, if $\overline{AB} \parallel \overline{CD}$ and $\overline{AB} \cong \overline{CD}$, then $ABCD$ is a parallelogram.
+
+(Teorema de las diagonales de un rectángulo)
+**Diagonals of a rectangle theorem**: in a rectangle, the diagonals are congruent. In a rectangle $ABCD$, $\overline{AC} \cong \overline{BD}$.
+
+(Converso del teorema de las diagonales de un rectángulo)
+**Converse of the diagonals of a rectangle theorem**: in a parallelogram, if the diagonals are congruent, then the parallelogram is a rectangle. In a parallelogram $ABCD$, if $\overline{AC} \cong \overline{BD}$, then $ABCD$ is a rectangle.
+
+(Teorema de las diagonales perpendiculares de un rombo)
+**Perpendicular diagonals of a rhombus theorem**: in a rhombus, the diagonals are perpendicular. In a rhombus $ABCD$, $\overline{AC} \perp \overline{BD}$.
+
+(Converso del teorema de las diagonales perpendiculares de un rombo)
+**Converse of the perpendicular diagonals of a rhombus theorem**: in a parallelogram, if the diagonals are perpendicular, then the parallelogram is a rhombus. In a parallelogram $ABCD$, if $\overline{AC} \perp \overline{BD}$, then $ABCD$ is a rhombus.
+
+(Teorema de los ángulos bisecados de un rombo)
+**Bisected angles of a rhombus theorem**: in a rhombus, the diagonals are angle bisectors of the interior angles of the rhombus. In a rhombus $ABCD$, $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$, and $\overline{BD}$ is an angle bisector of $\angle B$ and $\angle D$.
+
+(Converso del teorema de los ángulos bisecados de un rombo)
+**Converse of the bisected angles of a rhombus theorem**: in a parallelogram, if the diagonals bisect the interior angles, then the parallelogram is a rhombus. In a parallelogram $ABCD$, if $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$, and $\overline{BD}$ is an angle bisector of $\angle B$ and $\angle D$, then $ABCD$ is a rhombus.
+
+(Teorema de los ángulos de las bases de un trapecio isósceles)
+**Bases angles of an isosceles trapezoid theorem**: in an isosceles trapezoid, the long base angles are congruent, and the short base angles are congruent. In an isosceles trapezoid $ABCD$, $\angle A \cong \angle B$ and $\angle C \cong \angle D$.
+
+(Converso del teorema de los ángulos de las bases de un trapecio isósceles)
+**Converse of the bases angles of an isosceles trapezoid theorem**: in a trapezoid, if the two angles in each of the parallel sides are congruent, then the trapezoid is an isosceles trapezoid. In a trapezoid $ABCD$, if $\angle A \cong \angle B$ and $\angle C \cong \angle D$, then $ABCD$ is an isosceles trapezoid.
+
+(Teorema de las diagonales de un trapecio isósceles)
+**Diagonals of an isosceles trapezoid theorem**: in an isosceles trapezoid, the diagonals are congruent. In an isosceles trapezoid $ABCD$, $\overline{AC} \cong \overline{BD}$.
+
+(Converso del teorema de las diagonales de un trapecio isósceles)
+**Converse of the diagonals of an isosceles trapezoid theorem**: in a trapezoid, if the diagonals are congruent, then the trapezoid is an isosceles trapezoid. In a trapezoid $ABCD$, if $\overline{AC} \cong \overline{BD}$, then $ABCD$ is an isosceles trapezoid.
+
+(Teorema del segmento medio de un trapecio)
+**Midsegment of a trapezoid theorem**: the length of the midsegment of a trapezoid is the average of the two lengths of the long base and the short base. In a trapezoid $ABCD$, in which $\overline{EF}$ is the midsegment of $ABCD$, then $EF = \frac{AB + CD}{2}$.
+
+(Teorema de los ángulos no de los vértices de un deltoide)
+**Non-vertex angles of a kite theorem**: the non-vertex angles of a kite are congruent. In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\angle B \cong \angle D$.
+
+(Teorema de los ángulos de los vértices de un deltoide)
+**Vertex angles of a kite theorem**: in a kite, the vertex angles are bisected by the diagonal that connects them. In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$.
+
+(Teorema de las diagonales de un deltoide)
+**Diagonals of a kite theorem**: in a kite, the diagonals are perpendicular. In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC} \perp \overline{BD}$.
 
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 
@@ -1528,8 +1603,17 @@ Given that each vertex in a polygon has two sides, two exterior angles can be dr
 (Polígono convexo)
 **Convex polygon**: a polygon such that in each of its vertices, the angle measured inside the polygon is less than the angle measured outside the polygon.
 
+(Polígono equiangular)
+**Equiangular polygon**: a convex polygon in which all the interior angles are congruent with each other.
+
+(Polígono regular)
+**Regular polygon**: a polygon that is both equilateral and equiangular, i.e. a polygon with all sides of equal length, and all interior angles of equal measure.
+
 (Polígono cóncavo)
 **Concave polygon**: a polygon such that in at least one of its vertices, the angle measured inside the polygon is greater than the angle measured outside the polygon.
+
+(Fórmula del ángulo en un polígono equiangular)
+**Angle in an equiangular polygon formula**: a formula to calculate the measure of the interior angles in an equiangular polygon. Let an equiangular polygon have $n$ sides, the measure of each interior angle is $\frac{(n - 2)\pi}{n}$.
 
 (Cuadrilátero)
 **Quadrilateral**: a shape with four straight sides.
@@ -1537,8 +1621,14 @@ Given that each vertex in a polygon has two sides, two exterior angles can be dr
 (Lados opuestos en un cuadrilátero)
 **Opposite sides in a quadrilateral**: in a quadrilateral, each side has an opposite side. Given a side of a quadrilateral, its opposite side is the one without any common vertex. In a quadrilateral $ABCD$ the opposite side to $\overline{AB}$ is $\overline{CD}$, and the opposite side to $\overline{AD}$ is $\overline{BC}$.
 
+(Paralelogramo)
+**Parallelogram**: a quadrilateral that consists of two pairs of parallel sides.
+
+(Paralelogramos especiales)
+**Special parallelograms**: a set of figures that are parallelograms with a few other characteristics in their definition, specifically the rectangle,the rhombus, and the square.
+
 (Rectángulo)
-**Rectangle**: a quadrilateral with four right angles. This configuration produces a shape in which the opposite sides are of equal length. Its perimeter is equal to the sum of its four sides, and its area is equal to the product of any two adjacent sides.
+**Rectangle**: a parallelogram with four right angles. This configuration produces a shape in which the opposite sides are of equal length. Its perimeter is equal to the sum of its four sides, and its area is equal to the product of any two adjacent sides.
 
 (Perímetro de un rectángulo)
 **Rectangle perimeter**: let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, then $P = 2(L + W)$.
@@ -1557,6 +1647,12 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 (Volumen de un sólido rectangular)
 **Rectangular solid volume**: in a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, and $V$ be its volume, then $V = L W H$.
 
+(Rombo)
+**Rhombus**: a parallelogram in which all its four sides are congruent.
+
+(Cuadrado)
+**Square**: a parallelogram that is also a rectangle and a rhombus, i.e. a parallelogram in which all of its four angles are right angles, and all of its four sides are congruent.
+
 (Cubo)
 **Cube**: rectangular solid with all its sides equal in length. This configuration creates a shape in which all of its faces have equal areas.
 
@@ -1566,10 +1662,25 @@ A rectangular solid can be defined with only three measures, length (largo), wid
 (Volumen de un cubo)
 **Cube volume**: in a cube, let $s$ be the the length of any of its sides, and $V$ be its volume, then $V = s^3$.
 
-(Trapezoide)
-**Trapezoid**: a quadrilateral with two parallel sides and two non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and the non parallel sides are also opposite. 
+(Trapecio)
+**Trapezoid**: a quadrilateral with two opposite parallel sides and two opposite non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and the non parallel sides are also opposite. 
 
-The two parallel sides in a trapezoid have different sizes, and they are called the bases (las bases), there is a smaller base and a bigger base. The height of a trapezoid is the distance between its bases.
+The two parallel sides in a trapezoid have different sizes, and they are called the bases (las bases), there is a short base (base corta) and a long base (base larga). The height of a trapezoid is the distance between its bases.
+
+(Trapecio isósceles)
+**Isosceles trapezoid**: a trapezoid with its two non-parallel sides congruent.
+
+(Segmento medio de un trapecio | mediana de un trapecio)
+**Midsegment of a trapezoid**: in a trapezoid, the midsegment is a segment that connects the two midpoints of the non-parallel sides. In a trapezoid $ABCD$, in which $E$ is the midpoint of $\overline{AD}$ and $F$ is the midpoint of $\overline{BC}$, $\overline{EF}$ is the midsegment of $ABCD$.
+
+(Deltoide | Cometa)
+**Kite**: a quadrilateral that consists of two pairs of congruent adjacent sides.
+
+(Deltoide cóncavo | Punta de flecha)
+**Dart**: a concave kite.
+
+(Partes de un deltoide)
+**Kite parts**: in a kite, the angles between the congruent sides are called vertex angles (ángulos de los vértices), and the two remaining angles are called non-vertex angles (ángulos no de los vértices).
 
 (Área de un trapezoide)
 **Trapezoid area**: in a trapezoid, let $b$ be the length of the smaller base, let $B$ be the length of the bigger base, let $h$ be the height, and let $A$ be the area, then $A = \frac{1}{2}h(b + B)$.
@@ -1913,6 +2024,9 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 
 (Construcción de un triángulo dados dos ángulos y su lado comprendido)
 **Triangle from two angles and their included side construction**: geometric construction to draw a triangle given two angles and their included side.
+
+(Construcción de un paralelogramo)
+**Parallelogram construction**: a geometric construction to draw a parallelogram.
 
 (Algoritmo para encontrar la distancia más corta entre un punto y una línea)
 **Algorithm to find the shortest distance between a point and a line**: there is an algorithm to find this distance based on algebra in the rectangular coordinate system.

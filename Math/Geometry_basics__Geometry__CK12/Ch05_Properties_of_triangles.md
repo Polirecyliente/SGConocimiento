@@ -34,7 +34,9 @@ Every triangle has three midsegments.
 
 > Proof of the midsegment of a triangle theorem
 >
-> The proof of this theorem requires the concept of similarity, which is explained in detail in another file (see Ch07_Similarity.md). Two figures are similar when they have the same shape but not necessarily the same size. By SAS, the triangle $\triangle ABC$ is similar to $\triangle DEC$. Given that $D$ is the midpoint of $\overline{AC}$, then $\overline{DC}$ has half the length of $\overline{AC}$, and so by similarity, the scale factor needed to obtain $\triangle DEC$ from $\triangle ABC$ is one half, therefore the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$. $\blacksquare$
+> The proof of this theorem requires the concept of similarity, which is explained in detail in another file (see Ch07_Similarity.md). Two figures are similar when they have the same shape but not necessarily the same size. By SAS, the triangle $\triangle ABC$ is similar to $\triangle DEC$. Given that $D$ is the midpoint of $\overline{AC}$, then $\overline{CD}$ has half the length of $\overline{AC}$, and so by similarity, the scale factor needed to obtain $\triangle DEC$ from $\triangle ABC$ is one half, therefore the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$. $\blacksquare$
+
+In a triangle $\triangle ABC$, if $\overline{DE}$ is a midsegment of $\triangle ABC$ that is parallel to $\overline{AB}$, then the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, or $DE = \frac{AB}{2}$.
 
 (Converso del teorema del segmento medio de un triángulo)
 **Converse of the midsegment of a triangle theorem**: in a triangle, if a segment connects two sides, is parallel to the non-connected side, and measures half the length of its parallel side, then the segment is a midsegment of the triangle.
@@ -42,6 +44,8 @@ Every triangle has three midsegments.
 > Proof of the converse of the midsegment of a triangle theorem
 >
 > Similarly to the proof of the midsegment of a triangle theorem, by similarity, the triangle $\triangle ABC$ is similar to $\triangle DEC$, because by the corresponding angles postulate, $\angle ABC \cong \angle CED$ and $\angle BAC \cong \angle CDE$. The scale factor needed to obtain $\triangle ABC$ from $\triangle DEC$ is two, because $\overline{AB}$ has double the length of $\overline{DE}$. Using this scale factor, $\overline{AC}$ has double the length of $\overline{CD}$, and $\overline{BC}$ has double the length of $\overline{CE}$, which means that $D$ is the midpoint of $\overline{AC}$, and $E$ is the midpoint of $\overline{BC}$, which makes $\overline{DE}$ a midsegment of $\triangle ABC$. $\blacksquare$
+
+In a triangle $\triangle ABC$, if the points $D$ and $E$ lie on different sides of the triangle, $\overline{DE} \parallel \overline{AB}$, and $DE = \frac{AB}{2}$, then $\overline{DE}$ is a midsegment of $\triangle ABC$.
 
 ## Perpendicular bisectors of a triangle (Mediatrices de un triángulo)
 [Ch05_S02](https://www.ck12.org/reader/reader-index.html#section/2932948/5.2/9549314)
@@ -59,10 +63,12 @@ Every triangle has three midsegments.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overleftrightarrow{CD} \perp \overline{AB}$, $\overline{AD} \cong \overline{DB}$, $\angle CDA$ and $\angle CDB$ are right angles | Given |
+> | $\overleftrightarrow{CD} \perp \overline{AB}$, $\overline{AD} \cong \overline{BD}$, $\angle CDA$ and $\angle CDB$ are right angles | Given |
 > | $\overline{CD} \cong \overline{CD}$ | Reflexive property of congruence |
 > | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
 > | $\overline{AC} \cong \overline{CB}$ | Corresponding parts of congruent triangles are congruent |
+
+If $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$, and $E$ is any point that lies on $\overline{CD}$, then $\overline{AE} \cong \overline{EB}$.
 
 (Converso del teorema de la mediatriz)
 **Converse of the perpendicular bisector theorem**: given a segment, any point equidistant to both endpoints, is in the perpendicular bisector of the segment.
@@ -74,12 +80,14 @@ Every triangle has three midsegments.
 > | $\overline{AC} \cong \overline{CB}$, $D$ is the midpoint of $\overline{AB}$ | Given, from the *Perpendicular bisector theorem* image |
 > | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
 > | $\angle A \cong \angle B$ | Base angles theorem |
-> | $\overline{AD} \cong \overline{DB}$ | Definition of midpoint |
+> | $\overline{AD} \cong \overline{BD}$ | Definition of midpoint |
 > | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
 > | $\angle CDA \cong \angle CDB$ | Corresponding parts of congruent triangles are congruent |
 > | $\angle CDA$ and $\angle CDB$ are supplementary | Linear pair postulate |
 > | $\angle CDA$ and $\angle CDB$ are right angles | Congruent linear pairs theorem |
 > | $\overleftrightarrow{CD}$ is a perpendicular bisector of $\overline{AB}$ | Definition of perpendicular bisector |
+
+If $\overline{AC} \cong \overline{CB}$, and $D$ is the midpoint of $\overline{AB}$, then $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$.
 
 (Punto de concurrencia)
 **Point of concurrency**: the intersection in a single point, of three or more lines, rays, or segments.
@@ -108,6 +116,8 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 > | $G$ is equidistant to $A$, $B$, $C$ | Perpendicular bisector theorem |
 > | $G$ is the circumcenter of $\triangle ABC$ | Definition of circumcenter |
 
+In a triangle $\triangle ABC$, there is a point $G$, such that $G$ is in the three perpendicular bisectors from the three sides of the triangle, $G$ is equidistant to $A$, $B$, $C$, and $G$ is the circumcenter of $\triangle ABC$.
+
 ## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)
 
@@ -127,6 +137,8 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 > | $\triangle EBD \cong \triangle FBD$ | AAS triangle congruence theorem |
 > | $\overline{DE} \cong \overline{DF}$ | Corresponding parts of congruent triangles are congruent |
 
+If $\overline{BD}$ is an angle bisector of $\angle ABC$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, then $\overline{DE} \cong \overline{DF}$.
+
 (Converso del teorema de la equidistancia en la bisectriz de un ángulo)
 **Converse of the equidistance in an angle bisector theorem**: in an angle, if a given point is equidistant to the sides of the angle, using the shortest distance between the point and the sides, then the point lies in the angle bisector.
 
@@ -139,6 +151,8 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 > | $\triangle EBD \cong \triangle FBD$ | Hypotenuse-leg congruence theorem |
 > | $\angle EBD \cong \angle FBD$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{BD}$ is an angle bisector of $\angle ABC$ | Definition of angle bisector |
+
+In angle $\angle ABC$, given a point $D$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, if $\overline{DE} \cong \overline{DF}$, then $\overline{BD}$ is an angle bisector of $\angle ABC$.
 
 (Incentro de un triángulo)
 **Incenter of a triangle**: in a triangle, the incenter is the point of concurrency formed at the intersection of the three angle bisectors, one from each vertex.
@@ -161,6 +175,8 @@ The incenter is in the three angle bisectors of a triangle, and due to the equid
 > | $\overline{GD} \cong \overline{GF}$ | Transitive property of congruence |
 > | $G$ lies in the three angle bisectors of $\triangle ABC$ | Converse of the equidistance in an angle bisector theorem |
 > | $G$ is the incenter of $\triangle ABC$ | Definition of incenter |
+
+In a triangle $\triangle ABC$, if a point $G$ lies in the three angle bisectors of $\triangle ABC$ then $G$ is the incenter of $\triangle ABC$.
 
 ## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
@@ -188,6 +204,8 @@ The segment $\overline{CD}$ is a median of the triangle $\triangle ABC$.
 > Proof of the concurrency of the medians of a triangle theorem
 >
 > The segment $\overline{DE}$ is a midsegment of $\triangle ABC$, which means that the measure of $\overline{DE}$ is one half the measure of $\overline{AB}$, because of the midsegment theorem. By the alternate interior angles theorem, $\angle AED \cong \angle BAE$ and $\angle BDE \cong \angle ABD$, which means that $\triangle GED$ is similar to $\triangle GAB$. The scale factor to obtain $\triangle GAB$ from $\triangle GED$ is $2$, because of the said proportion between $\overline{AB}$ and $\overline{DE}$. $\overline{AE}$ intersects $\overline{BD}$ at two thirds of its length from $B$, and by using this same logic $\overline{CF}$ intersects $\overline{BD}$ at two thirds of its length from $B$, which means that the three medians intersect at a single point, the centroid. $AG = 2 EG$, $BG = 2 DG$, and $CG = 2 FG$. $\blacksquare$
+
+In a triangle $\triangle ABC$, if a point $G$ lies in the three medians of $\triangle ABC$ then $G$ is the centroid of $\triangle ABC$. If $D$ is the midpoint of $\overline{AC}$, $E$ is the midpoint of $\overline{BC}$, and $F$ is the midpoint of $\overline{AB}$, then $AG = 2 EG$, $BG = 2 DG$, and $CG = 2 FG$.
 
 (Altura de un triángulo)
 **Altitude of a triangle**: in a triangle, an altitude is a segment that connects one vertex perpendicularly to the side opposite to the vertex.
@@ -228,6 +246,8 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 > | $m \angle CAB = m \angle B + 2 m \angle DAB$ | Substitution property of equality |
 > | $m \angle CAB > m \angle B$ | Definition of the greater than operator |
 
+In a triangle $\triangle ABC$, if $CB > AC$, then $m \angle A > m \angle B$.
+
 (Converso del teorema del lado mayor de un triángulo)
 **Converse of the triangle longer side theorem**: in a triangle, given two angles, if the measure of one angle is greater than the measure of the other angle, then the side opposite to the greater angle is longer than the side opposite to the other angle.
 
@@ -248,6 +268,8 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 > | $CB = AC + DB$ | Substitution property of equality |
 > | $CB > AC$ | Definition of the greater than operator |
 
+In a triangle $\triangle ABC$, if $m \angle A > m \angle B$, then $CB > AC$.
+
 (Teorema de la desigualdad del triángulo)
 **Triangle inequality theorem**: in a triangle, the sum of the lengths of any two sides, is greater than the length of the remaining side.
 [Triangle inequality theorem image code](Programs/Ch05/S05_02_Triangle_inequality_theorem_image.py)
@@ -259,7 +281,7 @@ The location of the orthocenter depends on the type of triangle. In an obtuse tr
 > Let $\triangle ABC$ have sides with lengths $a$, $b$, $c$. As shown in the image, a triangle can't be formed when $c \ge a + b$ or $c \le |a - b|$. A triangle can be formed when
 > $$|a - b| < c < a + b\ \ \blacksquare$$
 
-This result is equivalent to $c < a + b$, $b < a + c$, and $a < b + c$.
+In a triangle $\triangle ABC$ that has sides with lengths $a$, $b$, $c$, the following relation is true, $|a - b| < c < a + b$, which is equivalent to $c < a + b$, $b < a + c$, and $a < b + c$.
 
 (Teorema de la bisagra)
 **Hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle has a measure greater than the one from the second triangle, then the remaining side of the first triangle is longer than the one of the second triangle.
@@ -268,9 +290,13 @@ This result is equivalent to $c < a + b$, $b < a + c$, and $a < b + c$.
 >
 > Let $\triangle ABC$ and $\triangle DEF$ be two triangles, let $AB = DE$ and $BC = EF$, and let $m \angle B > m \angle E$, then $AC > DF$ because of the converse of the triangle longer side theorem. $\blacksquare$
 
+In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $m \angle B > m \angle E$, then $AC > DF$.
+
 (Converso del teorema de la bisagra)
 **Converse of the hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the remaining side of the first triangle is longer than the one of the second triangle, then the included angle from the first triangle has a measure greater than the one from the second triangle.
 
 > Proof of the converse of the hinge theorem
 >
 > Let $\triangle ABC$ and $\triangle DEF$ be two triangles, let $AB = DE$ and $BC = EF$, and let $AC > DF$, then $m \angle B > m \angle E$ because of the triangle longer side theorem. $\blacksquare$
+
+In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $AC > DF$, then $m \angle B > m \angle E$.

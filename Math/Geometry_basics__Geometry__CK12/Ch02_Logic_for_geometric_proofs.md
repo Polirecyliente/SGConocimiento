@@ -345,14 +345,14 @@ Truth tables can be used not only for binary operations but for more complex log
 (Demostraciones a dos columnas)
 **Two column proofs**: a way to write mathematical proofs in a structured manner. The proof is written in a table with two columns. The first column has the header of 'Statement', and its rows contain the steps of the proof. The second column has the header of 'Reason', and its rows state the reason why the step they accompany is correct.
 
-| Statement | Reason  |
-| :-------: | :-----: |
-| Step1     | Reason1 |
-| Step2     | Reason2 |
-| Step3     | Reason3 |
+| Statement | Reason           |
+| :-------: | :--------------: |
+| Step1     | Reason1          |
+| (1) Step2 | Reason2          |
+| Step3     | From (1) Reason3 |
 *Two column proof template*
 
-Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement.
+Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement. For clarity, a parentheses pair with a number can be added to a step, so that it's clear from which step a given reason stems. In the *Two column proof template* table, Reason3 stems from Step2, this is shown with the parentheses '(1)'.
 
 ## Proofs about angle pairs and segments (Demostraciones sobre pares de ángulos y segmentos)
 [Ch02_S05](https://www.ck12.org/reader/reader-index.html#section/2932929/2.5/9549314)
@@ -375,6 +375,8 @@ Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If Reas
 
 The segments may not be congruent but the right angles are.
 
+If $\angle A$ and $\angle B$ are right angles, then $\angle A \cong \angle B$.
+
 (Teorema de los suplementos congruentes)
 **Congruent supplements theorem**: two angles are congruent when they are supplementary to another angle, or when they are supplementary to two other congruent angles.
 
@@ -388,6 +390,8 @@ The segments may not be congruent but the right angles are.
 > | $m \angle A + m \angle B = m \angle C + m \angle B$ | Transitive property of equality |
 > | $m \angle A = m \angle C$ | Subtraction property of equality |
 > | $\angle A \cong \angle C$ | Definition of congruence |
+
+If $\angle A$ and $\angle C$ are supplements of $\angle B$, then $\angle A \cong \angle C$.
 
 (Converso del teorema de los suplementos congruentes)
 **Converse of the congruent supplements theorem**: if two angles are congruent, and one of them is supplementary to a third angle, then both angles are supplementary to the third angle.
@@ -403,6 +407,8 @@ The segments may not be congruent but the right angles are.
 > | $m \angle C + m \angle B = \pi$ | Substitution property of equality |
 > | $\angle B$ and $\angle C$ are supplementary | Definition of supplementary angles |
 
+If $\angle A \cong \angle C$, and $\angle A$ and $\angle B$ are supplementary, then $\angle B$ and $\angle C$ are supplementary.
+
 (Demostración textual)
 **Paragraph proof**: a proof that is written in paragraphs. To know where it ends, the symbol $\blacksquare$ is used.
 
@@ -412,3 +418,5 @@ The segments may not be congruent but the right angles are.
 > Proof of the congruent complements theorem
 >
 > Let $\angle A$, $\angle B$, $\angle C$ be angles, such that $\angle A$ and $\angle C$ are complements of $\angle B$. This means that $m \angle A + m \angle B = \pi/2$ and $m \angle C + m \angle B = \pi/2$, then by transitivity $m \angle A + m \angle B = m \angle C + m \angle B$ which can be simplified to $m \angle A = m \angle C$, and in turn $\angle A \cong \angle C$ by definition. $\blacksquare$
+
+If $\angle A$ and $\angle C$ are complements of $\angle B$, then $\angle A \cong \angle C$.

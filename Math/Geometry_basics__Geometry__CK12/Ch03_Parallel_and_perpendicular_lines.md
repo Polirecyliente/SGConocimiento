@@ -42,10 +42,10 @@ In the image, $k \parallel l$, which is denoted with one arrowhead inside the li
 The blue line and the crimson line are not parallel, and yet they never intersect, because they lie in different planes.
 
 (Postulado de las paralelas)
-**Parallel postulate**: given a line and a point not on the line, there is only one parallel to the line that passes through the point.
+**Parallel postulate**: given a line and a point not on the line, there is only one parallel to the line that passes through the point. Given a line $l$ and a point $A$ that does not lie on $l$, then only one line $m$ passes through $A$ and $l \parallel m$.
 
 (Postulado de las perpendiculares)
-**Perpendicular postulate**: given a line and a point not on the line, there is only one perpendicular line to the line that passes through the point.
+**Perpendicular postulate**: given a line and a point not on the line, there is only one perpendicular line to the line that passes through the point. Given a line $l$ and a point $A$ that does not lie on $l$, then only one line $m$ passes through $A$ and $l \perp m$.
 
 (Construcción de una línea perpendicular)
 **Perpendicular line construction**: a geometric construction to draw the unique perpendicular line to a given line that passes through a given point.
@@ -108,7 +108,7 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 **Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$.
 
 (Converso del postulado de los ángulos correspondientes)
-**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels.
+**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels. From the *Transversal to parallel lines* image, if $\angle 1 \cong \angle 5$, and/or $\angle 2 \cong \angle 6$, and/or $\angle 3 \cong \angle 7$, and/or $\angle 4 \cong \angle 8$, then $l \parallel m$, with transversal $t$.
 
 (Teorema de los ángulos alternos internos)
 **Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
@@ -124,6 +124,8 @@ The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angle
 
 The same proof applies for the other three pairs of alternate interior angles.
 
+From the *Transversal to parallel lines* image, $\angle 3 \cong \angle 6$ and $\angle 4 \cong \angle 5$.
+
 (Teorema de los ángulos alternos externos)
 **Alternate exterior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent.
 
@@ -137,6 +139,8 @@ The same proof applies for the other three pairs of alternate interior angles.
 > | $\angle 1 \cong \angle 8$ | Transitive property of congruence |
 
 The same proof applies for the other three pairs of alternate exterior angles.
+
+From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 8$ and $\angle 2 \cong \angle 7$.
 
 (Teorema de los ángulos conjugados internos)
 **Same side interior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side interior angles.
@@ -152,6 +156,8 @@ The same proof applies for the other three pairs of alternate exterior angles.
 
 The same proof applies for the other pair of same side interior angles.
 
+From the *Transversal to parallel lines* image, $\angle 3$ and $\angle 5$ are supplementary, and $\angle 4$ and $\angle 6$ are supplementary.
+
 (Teorema de los ángulos conjugados externos)
 **Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles.
 
@@ -165,6 +171,8 @@ The same proof applies for the other pair of same side interior angles.
 > | $\angle 1$ and $\angle 7$ are supplementary | Converse of the congruent supplements theorem |
 
 The same proof applies for the other pair of same side exterior angles.
+
+From the *Transversal to parallel lines* image, $\angle 1$ and $\angle 7$ are supplementary, and $\angle 2$ and $\angle 8$ are supplementary.
 
 ## Proving lines parallel (Demostrar el paralelismo entre líneas)
 [Ch03_S03](https://www.ck12.org/reader/reader-index.html#section/2932934/3.3/9549314)
@@ -181,6 +189,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $\angle 2 \cong \angle 6$ | Transitive property of congruence |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
 
+From the *Transversal to parallel lines* image, if $\angle 3 \cong \angle 6$ and/or $\angle 4 \cong \angle 5$, then $l \parallel m$, with transversal $t$.
+
 (Converso del teorema de los ángulos alternos externos)
 **Converse of the alternate exterior angles theorem**: given two lines intersected by a transversal, if their alternate exterior angles are congruent, then the two lines are parallel.
 
@@ -192,6 +202,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $\angle 5 \cong \angle 8$ | Vertical angles theorem |
 > | $\angle 1 \cong \angle 5$ | Transitive property of congruence |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+From the *Transversal to parallel lines* image, if $\angle 1 \cong \angle 8$ and/or $\angle 2 \cong \angle 7$, then $l \parallel m$, with transversal $t$.
 
 (Converso del teorema de los ángulos conjugados internos)
 **Converse of the same side interior angles theorem**: given two lines intersected by a transversal, if their same side interior angles are supplementary, then the two lines are parallel.
@@ -205,6 +217,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
 
+From the *Transversal to parallel lines* image, if $\angle 3$ and $\angle 5$ are supplementary, and $\angle 4$ and $\angle 6$ are supplementary, then $l \parallel m$, with transversal $t$.
+
 (Converso del teorema de los ángulos conjugados externos)
 **Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel.
 
@@ -216,6 +230,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
 > | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
+
+From the *Transversal to parallel lines* image, if $\angle 1$ and $\angle 7$ are supplementary, and/or $\angle 2$ and $\angle 8$ are supplementary, then $l \parallel m$, with transversal $t$.
 
 (Propiedad transitiva de las líneas paralelas)
 **Transitive property of parallel lines**: given two parallel lines, if the first one is parallel to a third line, then the second line is also parallel to the third.
@@ -234,6 +250,8 @@ The same proof applies for the other pair of same side exterior angles.
 >
 > Let $\angle A$ and $\angle B$ form a linear pair, and let $\angle A \cong \angle B$, then $m \angle A = m \angle B$, $m \angle A + m \angle B = \pi \Rightarrow 2 m \angle A = \pi \Rightarrow m \angle A = \pi/2 = m \angle B$. So $\angle A$ and $\angle B$ are right angles. $\blacksquare$
 
+If $\angle A$ and $\angle B$ form a linear pair, and $\angle A \cong \angle B$, then $\angle A$ and $\angle B$ are right angles.
+
 (Teorema de las transversales perpendiculares)
 **Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line.
 [Perpendicular transversal image code](Programs/Ch03/S04_01_Perpendicular_transversal_image.py)
@@ -249,6 +267,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, $\angle 4 \cong \angle 8$, so $\angle 4$, $\angle 5$, $\angle 6$, $\angle 7$, are right angles | Corresponding angles postulate |
 > | $m \perp t$ | Definition of perpendicular lines |
 
+If $l \parallel m$ and $l \perp t$, then $m \perp t$.
+
 (Converso del teorema de las transversales perpendiculares)
 **Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel.
 
@@ -261,6 +281,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $\angle 1 \cong \angle 5$ | Right angle theorem |
 > | $l \parallel m$ | Converse of the corresponding angles postulate |
 
+If $l \perp t$ and $m \perp t$, then $l \parallel m$.
+
 (Teorema de los ángulos complementarios adyacentes)
 **Adjacent complementary angles theorem**: if two angles are adjacent and complementary, then the two non-shared sides form a right angle.
 
@@ -272,6 +294,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | $m \angle A + m \angle B = \pi/2$ | Definition of complementary angles |
 > | The angle between the non-shared sides is a right angle | Definition of a right angle |
 
+If $\angle A$ and $\angle B$ are adjacent complementary angles, then $m \angle A + m \angle B = \pi/2$, so the angle between the non-shared sides is a right angle.
+
 (Converso del teorema de los ángulos complementarios adyacentes)
 **Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary.
 
@@ -282,6 +306,8 @@ The same proof applies for the other pair of same side exterior angles.
 > | Let $\angle A$ and $\angle B$ be adjacent angles, with the non-shared sides forming a right angle | Given |
 > | $m \angle A + m \angle B = \pi/2$ | Definition of right angle |
 > | $\angle A$ and $\angle B$ are complementary | Definition of complementary angles |
+
+If $\angle A$ and $\angle B$ are adjacent angles, with the non-shared sides forming a right angle, then $\angle A$ and $\angle B$ are complementary.
 
 ## Algebra of parallel and perpendicular lines (Álgebra de las líneas paralelas y perpendiculares)
 [Ch03_S05](https://www.ck12.org/reader/reader-index.html#section/2932936/3.5/9549314)

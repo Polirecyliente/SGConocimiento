@@ -43,6 +43,8 @@ The angle $\angle A$ is an interior angle of the polygon. Each vertex has an int
 > | $m \angle 1 + m \angle 3 + m \angle 2 = \pi$ | Substitution property of equality |
 > | $m \angle 1 + m \angle 2 + m \angle 3 = \pi$ | Commutative property of addition |
 
+In $\triangle ABC$, $m \angle A + m \angle B + m \angle C = \pi$
+
 (Ángulos exteriores de un polígono)
 **Exterior angles of a polygon**: each of the angles at any of the vertices of the polygon, that is outside the polygon, formed by a side of the vertex and the extension of the other side.
 [Exterior angles of a polygon image code](Programs/Ch04/S01_03_Exterior_angles_of_a_polygon_image.py)
@@ -70,6 +72,8 @@ In a given vertex of a polygon, the interior angle and one exterior angle (any o
 > | $3 \pi - \pi = m \angle 4 + m \angle 5 + m \angle 6$ | Subtraction property of equality (for $\pi$), addition property of equality (for the angles), and commutative property of addition (to add the $\pi$s) |
 > | $m \angle 4 + m \angle 5 + m \angle 6 = 2 \pi$ | Reflexive property of equality |
 
+In $\triangle ABC$, $m \angle A_{ext} + m \angle B_{ext} + m \angle C_{ext} = 2 \pi$. The $ext$ subindex indicates an exterior angle.
+
 (Ángulos interiores remotos)
 **Remote interior angles**: the interior angles that are not adjacent to a given exterior angle. In a triangle, given an exterior angle, the remote interior angles are the two interior angles that are not adjacent to said exterior angle.
 [Remote interior angles image code](Programs/Ch04/S01_05_Remote_interior_angles_image.py)
@@ -90,6 +94,8 @@ In the triangle $\triangle ABC$, the marked angle $\angle DAC$ is an exterior an
 > | $m \angle A + m \angle DAC = \pi$ | Linear pair postulate |
 > | $m \angle A + m \angle DAC = m \angle A + m \angle B + m \angle C$ | Transitive property of equality |
 > | $m \angle DAC = m \angle B + m \angle C$ | Subtraction property of equality |
+
+In $\triangle ABC$, $m \angle A_{ext} = m \angle B + m \angle C$.
 
 ## Congruent figures (Figuras congruentes)
 [Ch04_S02](https://www.ck12.org/reader/reader-index.html#section/2932941/4.2/9549314)
@@ -122,6 +128,8 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 > | $m \angle A + m \angle B + m \angle C = m \angle A + m \angle B + m \angle F$ | Substitution property of equality |
 > | $m \angle C = m \angle F$ | Subtraction property of equality |
 > | $\angle C \cong \angle F$ | Definition of congruence |
+
+In the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
 
 ## Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
 [Ch04_S03](https://www.ck12.org/reader/reader-index.html#section/6707215/4.3/9549314)
@@ -207,12 +215,16 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 > | $\overline{BC}$ is the included side of $\angle B$ and $\angle C$, and $\overline{EF}$ is the included side of $\angle E$ and $\angle F$ | Definition of included side between two angles |
 > | $\triangle ABC \cong \triangle DEF$ | ASA triangle congruence postulate |
 
+In the triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\overline{BC} \cong \overline{EF}$, then $\triangle ABC \cong \triangle DEF$.
+
 (Teorema de la congruencia de la hipotenusa-cateto)
 **Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent.
 
 > Proof of the hypotenuse-leg congruence theorem
 >
 > All right triangles have at least one congruent angle with each other, the right angle. If the hypotenuse of one of the legs is congruent in two triangles, then the two triangles are congruent because of the AAS triangle congruence theorem. $\blacksquare$
+
+In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong \overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
 
 The configurations AAA and SSA do not necessarily lead to congruent triangles.
 
@@ -240,6 +252,8 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |
 > | $\angle A \cong \angle C$ | Corresponding parts of congruent triangles are congruent |
 
+In an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{CB}$, then $\angle A \cong \angle C$.
+
 (Converso del teorema de los ángulos de la base)
 **Converse of the base angles theorem**: if two angles in a triangle are congruent, it is an isosceles triangle.
 
@@ -253,6 +267,8 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
 > | $\overline{AB} \cong \overline{CB}$ | Corresponding parts of congruent triangles are congruent |
 > | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
+
+In a triangle $\triangle ABC$, if $\angle A \cong \angle C$, then $\triangle ABC$ is isosceles.
 
 (Teorema del triángulo isósceles)
 **Isosceles triangle theorem**: in an isosceles triangle, the angle bisector of the vertex angle is a perpendicular bisector of the base.
@@ -269,8 +285,10 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $\angle ADB \cong \angle CDB$ | Corresponding parts of congruent triangles are congruent |
 > | $\angle ADB$ and $\angle CDB$ are right angles | Congruent linear pairs theorem |
 > | $\overline{BD} \perp \overline{AC}$ | Definition of perpendicular lines |
-> | $\overline{AD} \cong \overline{DC}$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AD} \cong \overline{CD}$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | Definition of perpendicular bisector |
+
+If $\triangle ABC$ is isosceles, such that $\overline{AB} \cong \overline{CB}$, $D$ is a point in $\overline{AC}$, and $\overline{BD}$ is the angle bisector of $\angle ABC$, then $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$.
 
 (Converso del teorema del triángulo isósceles)
 **Converse of the isosceles triangle theorem**: in an isosceles triangle, the perpendicular bisector of the base is an angle bisector of the vertex angle.
@@ -280,11 +298,13 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
 > | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | Given, from the *Base angles theorem* image |
-> | $\overline{AD} \cong \overline{DC}$, $\angle ADB \cong \angle CDB$ | Definition of perpendicular bisector |
+> | $\overline{AD} \cong \overline{CD}$, $\angle ADB \cong \angle CDB$ | Definition of perpendicular bisector |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |
 > | $\angle ABD \cong \angle CBD$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{BD}$ is an angle bisector of $\angle ABC$ | Definition of angle bisector |
+
+If $\triangle ABC$ is isosceles, $D$ is a point in $\overline{AC}$, and $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$, then $\overline{BD}$ is an angle bisector of $\angle ABC$.
 
 (Teorema de los triángulos equiláteros)
 **Equilateral triangles theorem**: an equilateral triangle is also equiangular.
@@ -298,6 +318,8 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $\angle B \cong \angle C$ | Base angles theorem |
 > | $\angle A \cong \angle C$ | Transitive property of congruence |
 
+If a triangle $\triangle ABC$ has sides with measures $a$, $b$, $c$, such that $a = b = c$, then $\angle A \cong \angle B \cong \angle C$.
+
 (Converso del teorema de los triángulos equiláteros)
 **Converse of the equilateral triangles theorem**: an equiangular triangle is also equilateral.
 
@@ -309,3 +331,5 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 > | $a = b$ | Converse of the base angles theorem |
 > | $b = c$ | Converse of the base angles theorem |
 > | $a = c$ | Transitive property of equality |
+
+If a triangle $\triangle ABC$ has $\angle A \cong \angle B \cong \angle C$, then its measures $a$, $b$, $c$ are equal, $a = b = c$.

@@ -30,6 +30,8 @@
 >
 > $n - 3$ diagonals lead to $n - 2$ triangles. Each triangle has an interior angle sum of $\pi$ because of the triangle interior angles sum theorem, so the total interior angles sum of the polygon is $\pi (n - 2)$. $\blacksquare$
 
+Let $Ang_{int}$ be the sum of the interior angles of a polygon, then $Ang_{int} = \pi(n - 2)$.
+
 (Polígono equiangular)
 **Equiangular polygon**: a convex polygon in which all the interior angles are congruent with each other.
 
@@ -67,6 +69,8 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 > | $\sum_{i = 1}^n{x_i} + \pi n - 2 \pi = \pi n$ | Distributive property of multiplication over addition |
 > | $\sum_{i = 1}^n{x_i} = 2 \pi$ | Addition and subtraction properties of equality |
 
+Let $Ang_{ext}$ be the sum of the exterior angles of a polygon, then $Ang_{ext} = 2 \pi$.
+
 ## Properties of parallelograms (Propiedades de los paralelogramos)
 [Ch06_S02](https://www.ck12.org/reader/reader-index.html#section/2932956/6.2/9549314)
 
@@ -95,11 +99,13 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $\overline{AC}$ is a diagonal of the parallelogram | Given |
+> | $\overline{AB} \parallel \overline{CD}$, $\overline{AD} \parallel \overline{BC}$, and $\overline{AC}$ is a diagonal of the parallelogram | Given |
 > | $\angle DCA \cong \angle BAC$, $\angle DAC \cong \angle BCA$ | Alternate interior angles theorem |
 > | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
 > | $\triangle ABC \cong \triangle CDA$ | ASA triangle congruence postulate |
-> | $\overline{AB} \cong \overline{DC}$, $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AB} \cong \overline{CD}$, $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
+
+In a parallelogram $ABCD$, $\overline{AB} \cong \overline{CD}$, and $\overline{AD} \cong \overline{BC}$.
 
 (Teorema de los ángulos opuestos de un paralelogramo)
 **Opposite angles of a parallelogram theorem**: in a parallelogram, the opposite angles are congruent.
@@ -108,12 +114,14 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $\overline{AC}$ is a diagonal of the parallelogram | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\overline{AB} \parallel \overline{CD}$, $\overline{AD} \parallel \overline{BC}$, and $\overline{AC}$ is a diagonal of the parallelogram | Given, from the *Opposite sides of a parallelogram theorem* image |
 > | $\angle DCA \cong \angle BAC$, $\angle DAC \cong \angle BCA$ | Alternate interior angles theorem |
 > | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
 > | $\triangle ABC \cong \triangle CDA$ | ASA triangle congruence postulate |
 > | $\angle ABC \cong \angle CDA$ | Corresponding parts of congruent triangles are congruent |
 > | $\angle DAB \cong \angle BCD$ | Repeating this proof but with $\overline{BD}$ as diagonal |
+
+In a parallelogram $ABCD$, $\angle A \cong \angle C$, and $\angle B \cong \angle D$.
 
 (Teorema de los ángulos consecutivos de un paralelogramo)
 **Consecutive angles of a parallelogram theorem**: in a parallelogram, the consecutive angles are supplementary.
@@ -125,12 +133,14 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $A$, $B$, and $E$ are collinear | Given |
+> | $\overline{AB} \parallel \overline{CD}$, $\overline{AD} \parallel \overline{BC}$, and $A$, $B$, and $E$ are collinear | Given |
 > | $\angle ABC$ and $\angle CBE$ are supplementary | Linear pair postulate |
 > | $\angle DAB \cong \angle CBE$ | Corresponding angles postulate |
-> | $\angle DAB$ and $\angle ABC$ are supplementary | Converse of the congruent supplements theorem | ASA triangle congruence postulate |
+> | $\angle DAB$ and $\angle ABC$ are supplementary | Converse of the congruent supplements theorem |
 
 The rest of consecutive angle pairs are supplementary by following this same proof, but placing $E$ as a point that extends each of the other three sides of the parallelogram.
+
+In a parallelogram $ABCD$, $\angle A$ and $\angle B$ are supplementary, $\angle B$ and $\angle C$ are supplementary, $\angle C$ and $\angle D$ are supplementary, and $\angle A$ and $\angle D$ are supplementary.
 
 (Teorema de las diagonales de un paralelogramo)
 **Diagonals of a parallelogram theorem**: in a parallelogram, the two diagonals bisect each other.
@@ -142,12 +152,14 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \parallel \overline{DC}$, $\overline{AD} \parallel \overline{BC}$, and $E$ lies at the intersection of $\overline{AC}$ and $\overline{BD}$ | Given |
-> | $\overline{AB} \cong \overline{DC}$, and also $\overline{AD} \cong \overline{BC}$ | Opposite sides of a parallelogram theorem |
+> | $\overline{AB} \parallel \overline{CD}$, $\overline{AD} \parallel \overline{BC}$, and $E$ lies at the intersection of $\overline{AC}$ and $\overline{BD}$ | Given |
+> | $\overline{AB} \cong \overline{CD}$, and also $\overline{AD} \cong \overline{BC}$ | Opposite sides of a parallelogram theorem |
 > | $\angle BAC \cong \angle DCA$, $\angle ABD \cong \angle CDB$, and also $\angle DAC \cong \angle BCA$, $\angle ADB \cong \angle CBD$ | Alternate interior angles theorem |
 > | $\triangle ABE \cong \triangle CDE$, and also $\triangle ADE \cong \triangle CBE$ | ASA triangle congruence postulate |
 > | $\overline{AE} \cong \overline{CE}$, and also $\overline{DE} \cong \overline{BE}$ | Corresponding parts of congruent triangles are congruent |
 > | $E$ is the midpoint of $\overline{AC}$, and also $E$ is the midpoint of $\overline{BD}$ | Definition of midpoint |
+
+In a parallelogram $ABCD$, $\overline{AC}$, and $\overline{BD}$ bisect each other.
 
 ## Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
 [Ch06_S03](https://www.ck12.org/reader/reader-index.html#section/2932957/6.3/9549314)
@@ -159,12 +171,14 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \cong \overline{DC}$ and $\overline{AD} \cong \overline{BC}$ | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\overline{AB} \cong \overline{CD}$ and $\overline{AD} \cong \overline{BC}$ | Given, from the *Opposite sides of a parallelogram theorem* image |
 > | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
 > | $\triangle ABC \cong \triangle CDA$ | SSS triangle congruence postulate |
 > | $\angle ACD \cong \angle CAB$, and $\angle DAC \cong \angle BCA$ | Corresponding parts of congruent triangles are congruent |
-> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the alternate interior angles theorem |
+> | $\overline{AB} \parallel \overline{CD}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the alternate interior angles theorem |
 > | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+In a quadrilateral $ABCD$, if $\overline{AB} \cong \overline{CD}$, and $\overline{AD} \cong \overline{BC}$, then $ABCD$ is a parallelogram.
 
 (Teorema de los lados opuestos paralelos y congruentes de un cuadrilátero)
 **Parallel and congruent opposite sides of a quadrilateral theorem**: in a quadrilateral, if a single pair of opposite sides is congruent and parallel, then the quadrilateral is a parallelogram.
@@ -173,12 +187,14 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \parallel \overline{DC}$ and $\overline{AB} \cong \overline{DC}$ | Given, from the *Opposite sides of a parallelogram theorem* image |
+> | $\overline{AB} \parallel \overline{CD}$ and $\overline{AB} \cong \overline{CD}$ | Given, from the *Opposite sides of a parallelogram theorem* image |
 > | $\angle DCA \cong \angle BAC$ | Alternate interior angles theorem |
 > | $\overline{AC} \cong \overline{AC}$ | Reflexive property of congruence |
 > | $\triangle ABC \cong \triangle CDA$ | SAS triangle congruence postulate |
 > | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
 > | The figure $ABCD$ is a parallelogram | Converse of the opposite sides of a parallelogram theorem |
+
+In a quadrilateral $ABCD$, if $\overline{AB} \parallel \overline{CD}$ and $\overline{AB} \cong \overline{CD}$, then $ABCD$ is a parallelogram.
 
 (Converso del teorema de los ángulos opuestos de un paralelogramo)
 **Converse of the opposite angles of a parallelogram theorem**: in a quadrilateral, if the opposite angles are congruent, then the quadrilateral is a parallelogram.
@@ -195,8 +211,10 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $m \angle ABC + m \angle DAB = \pi$ | Division property of equality |
 > | $m \angle ABC + m \angle BCD = \pi$ | Substitution property of equality |
 > | $\angle ABC$ and $\angle DAB$ are supplementary, and also $\angle ABC$ and $\angle BCD$ are supplementary | Definition of supplementary angles |
-> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Same side interior angles theorem |
+> | $\overline{AB} \parallel \overline{CD}$, and $\overline{AD} \parallel \overline{BC}$ | Same side interior angles theorem |
 > | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+In a quadrilateral $ABCD$, if $\angle A \cong \angle C$, and $\angle B \cong \angle D$, then $ABCD$ is a parallelogram.
 
 (Converso del teorema de los ángulos consecutivos de un paralelogramo)
 **Converse of the consecutive angles of a parallelogram theorem**: in a quadrilateral, if the consecutive angles are supplementary, then the quadrilateral is a parallelogram.
@@ -206,8 +224,10 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
 > | $\angle DAB$ and $\angle ABC$ are supplementary, $\angle ABC$ and $\angle BCD$ are supplementary, $\angle BCD$ and $\angle CDA$ are supplementary, $\angle CDA$ and $\angle DAB$ are supplementary | Given, from the *Opposite sides of a parallelogram theorem* image |
-> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the same side interior angles theorem |
+> | $\overline{AB} \parallel \overline{CD}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the same side interior angles theorem |
 > | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+In a quadrilateral $ABCD$, if $\angle A$ and $\angle B$ are supplementary, $\angle B$ and $\angle C$ are supplementary, $\angle C$ and $\angle D$ are supplementary, and $\angle A$ and $\angle D$ are supplementary, then $ABCD$ is a parallelogram.
 
 (Converso del teorema de las diagonales de un paralelogramo)
 **Converse of the diagonals of a parallelogram theorem**: in a quadrilateral, if the two diagonals bisect each other, then the quadrilateral is a parallelogram.
@@ -220,8 +240,10 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $\angle AEB \cong \angle CED$, and $\angle AED \cong \angle CEB$ | Vertical angles theorem |
 > | $\triangle ABE \cong \triangle CDE$, and $\triangle ADE \cong \triangle CBE$ | SAS triangle congruence postulate |
 > | $\angle BAE \cong \angle DCE$, and $\angle DAE \cong \angle BCE$ | Corresponding parts of congruent triangles are congruent |
-> | $\overline{AB} \parallel \overline{DC}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the alternate interior angles theorem |
+> | $\overline{AB} \parallel \overline{CD}$, and $\overline{AD} \parallel \overline{BC}$ | Converse of the alternate interior angles theorem |
 > | The figure $ABCD$ is a parallelogram | Definition of a parallelogram |
+
+In a quadrilateral $ABCD$, if $\overline{AC}$, and $\overline{BD}$ bisect each other, then $ABCD$ is a parallelogram.
 
 (Determinación algebraica de que un cuadrilátero es un paralelogramo)
 **Algebraic determination that a quadrilateral is a parallelogram**: There are algebraic ways to show that a quadrilateral is a parallelogram. Using the definition of parallelogram, calculating the slope of the four sides shows if a figure is a parallelogram or not, i.e. the slopes of the opposite sides must be equal.
@@ -231,7 +253,7 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 [Ch06_S04](https://www.ck12.org/reader/reader-index.html#section/2932958/6.4/9549314)
 
 (Paralelogramos especiales)
-**Special parallelograms**: a set of figures that are parallelograms with a few other characteristics in their definition.
+**Special parallelograms**: a set of figures that are parallelograms with a few other characteristics in their definition, specifically the rectangle,the rhombus, and the square.
 
 (Rectángulo)
 **Rectangle**: a parallelogram in which all its four angles are right angles.
@@ -246,7 +268,7 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 *Rhombus*
 
 (Cuadrado)
-**Square**: a parallelogram that is also a rectangle and a rhombus, i.e. a parallelogram in which all its four angles are right angles, and all its four sides are congruent.
+**Square**: a parallelogram that is also a rectangle and a rhombus, i.e. a parallelogram in which all of its four angles are right angles, and all of its four sides are congruent.
 [Square image code](Programs/Ch06/S04_03_Square_image.py)
 ![Square image](Images/Ch06/S04_03_Square.png)
 *Square*
@@ -268,6 +290,8 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | ${AC}^2 = {BD}^2$ | Transitive property of equality |
 > | $AC = BD$ | Take the square root at both sides of the equation |
 > | $\overline{AC} \cong \overline{BD}$ | Definition of congruence |
+
+In a rectangle $ABCD$, $\overline{AC} \cong \overline{BD}$.
 
 (Converso del teorema de las diagonales de un rectángulo)
 **Converse of the diagonals of a rectangle theorem**: in a parallelogram, if the diagonals are congruent, then the parallelogram is a rectangle.
@@ -296,6 +320,8 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $\angle DAB$, $\angle ABC$, $\angle BCD$, and $\angle ADC$ are right angles | Definition of right angle |
 > | The figure $ABCD$ is a rectangle | Definition of rectangle |
 
+In a parallelogram $ABCD$, if $\overline{AC} \cong \overline{BD}$, then $ABCD$ is a rectangle.
+
 (Teorema de las diagonales perpendiculares de un rombo)
 **Perpendicular diagonals of a rhombus theorem**: in a rhombus, the diagonals are perpendicular.
 [Perpendicular diagonals of a rhombus theorem image code](Programs/Ch06/S04_05_Perpendicular_diagonals_of_a_rhombus_theorem_image.py)
@@ -320,6 +346,8 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $\angle AEB$, $\angle CEB$, $\angle CED$, and $\angle AED$ are right angles | Definition of right angle |
 > | $\overline{AC} \perp \overline{BD}$ | Definition of perpendicular lines |
 
+In a rhombus $ABCD$, $\overline{AC} \perp \overline{BD}$.
+
 (Converso del teorema de las diagonales perpendiculares de un rombo)
 **Converse of the perpendicular diagonals of a rhombus theorem**: in a parallelogram, if the diagonals are perpendicular, then the parallelogram is a rhombus.
 
@@ -342,6 +370,8 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $\overline{AB} \cong \overline{BC} \cong \overline{CD} \cong \overline{AD}$ | Definition of congruence |
 > | The figure $ABCD$ is a rhombus | Definition of rhombus |
 
+In a parallelogram $ABCD$, if $\overline{AC} \perp \overline{BD}$, then $ABCD$ is a rhombus.
+
 (Teorema de los ángulos bisecados de un rombo)
 **Bisected angles of a rhombus theorem**: in a rhombus, the diagonals are angle bisectors of the interior angles of the rhombus.
 
@@ -355,6 +385,8 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $\triangle AEB \cong \triangle CEB \cong \triangle CED \cong \triangle AED$ | SSS triangle congruence postulate |
 > | $\angle DAE \cong \angle BAE \cong \angle BCE \cong \angle DCE$, and $\angle ABE \cong \angle CBE \cong \angle CDE \cong \angle ADE$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{AC}$ is an angle bisector of $\angle DAB$ and $\angle BCD$, and $\overline{BD}$ is an angle bisector of $\angle ABC$ and $\angle ADC$ | Definition of angle bisector |
+
+In a rhombus $ABCD$, $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$, and $\overline{BD}$ is an angle bisector of $\angle B$ and $\angle D$.
 
 (Converso del teorema de los ángulos bisecados de un rombo)
 **Converse of the bisected angles of a rhombus theorem**: in a parallelogram, if the diagonals bisect the interior angles, then the parallelogram is a rhombus.
@@ -371,11 +403,13 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 > | $\overline{AB} \cong \overline{BC} \cong \overline{CD} \cong \overline{AD}$ | Corresponding parts of congruent triangles are congruent |
 > | The figure $ABCD$ is a rhombus | Definition of rhombus |
 
+In a parallelogram $ABCD$, if $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$, and $\overline{BD}$ is an angle bisector of $\angle B$ and $\angle D$, then $ABCD$ is a rhombus.
+
 ## Trapezoids and kites (Trapezoides y deltoides)
 [Ch06_S05](https://www.ck12.org/reader/reader-index.html#section/2932959/6.5/9549314)
 
 (Trapecio)
-**Trapezoid**: a quadrilateral that consists of two opposite sides parallel, and the other two sides non-parallel.
+**Trapezoid**: a quadrilateral that consists of two opposite parallel sides, and two opposite non parallel sides. It has a long base (base larga) and a short base (base corta), the bases are the parallel sides.
 [Trapezoid image code](Programs/Ch06/S05_01_Trapezoid_image.py)
 ![Trapezoid image](Images/Ch06/S05_01_Trapezoid.png)
 *Trapezoid*
@@ -386,7 +420,7 @@ The rest of consecutive angle pairs are supplementary by following this same pro
 ![Isosceles trapezoid image](Images/Ch06/S05_02_Isosceles_trapezoid.png)
 *Isosceles trapezoid*
 
-The parts of an isosceles trapezoid are named the same as the parts of an isosceles triangle, except there is no vertex angle, and there is a long base (base larga) and a short base (base corta).
+The parts of an isosceles trapezoid are named the same as the parts of an isosceles triangle, except there is no vertex angle.
 
 (Teorema de los ángulos de las bases de un trapecio isósceles)
 **Bases angles of an isosceles trapezoid theorem**: in an isosceles trapezoid, the long base angles are congruent, and the short base angles are congruent.
@@ -407,6 +441,8 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $\angle ADC \cong \angle BCD$ | Congruent supplements theorem |
 > | $\angle A \cong \angle B$ | Base angles theorem |
 
+In an isosceles trapezoid $ABCD$, $\angle A \cong \angle B$ and $\angle C \cong \angle D$.
+
 (Converso del teorema de los ángulos de las bases de un trapecio isósceles)
 **Converse of the bases angles of an isosceles trapezoid theorem**: in a trapezoid, if the two angles in each of the parallel sides are congruent, then the trapezoid is an isosceles trapezoid.
 [Converse of the bases angles of an isosceles trapezoid theorem image code](Programs/Ch06/S05_04_Converse_of_the_bases_angles_of_an_isosceles_trapezoid_theorem_image.py)
@@ -424,6 +460,8 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
 > | The figure $ABCD$ is an isosceles trapezoid | Definition of isosceles trapezoid |
 
+In a trapezoid $ABCD$, if $\angle A \cong \angle B$ and $\angle C \cong \angle D$, then $ABCD$ is an isosceles trapezoid.
+
 (Teorema de las diagonales de un trapecio isósceles)
 **Diagonals of an isosceles trapezoid theorem**: in an isosceles trapezoid, the diagonals are congruent.
 [Diagonals of an isosceles trapezoid theorem image code](Programs/Ch06/S05_05_Diagonals_of_an_isosceles_trapezoid_theorem_image.py)
@@ -438,6 +476,8 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $\overline{AB} \cong \overline{AB}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle BAC$ | SAS triangle congruence postulate |
 > | $\overline{AC} \cong \overline{BD}$ | Corresponding parts of congruent triangles are congruent |
+
+In an isosceles trapezoid $ABCD$, $\overline{AC} \cong \overline{BD}$.
 
 (Converso del teorema de las diagonales de un trapecio isósceles)
 **Converse of the diagonals of an isosceles trapezoid theorem**: in a trapezoid, if the diagonals are congruent, then the trapezoid is an isosceles trapezoid.
@@ -461,8 +501,10 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $\overline{AD} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
 > | The figure $ABCD$ is an isosceles trapezoid | Definition of isosceles trapezoid |
 
+In a trapezoid $ABCD$, if $\overline{AC} \cong \overline{BD}$, then $ABCD$ is an isosceles trapezoid.
+
 (Segmento medio de un trapecio | mediana de un trapecio)
-**Midsegment of a trapezoid**: in a trapezoid, the midsegment is a segment that connects the two midpoints of the non-parallel sides.
+**Midsegment of a trapezoid**: in a trapezoid, the midsegment is a segment that connects the two midpoints of the non-parallel sides. In a trapezoid $ABCD$, in which $E$ is the midpoint of $\overline{AD}$ and $F$ is the midpoint of $\overline{BC}$, $\overline{EF}$ is the midsegment of $ABCD$.
 [Midsegment of a trapezoid image code](Programs/Ch06/S05_07_Midsegment_of_a_trapezoid_image.py)
 ![Midsegment of a trapezoid image](Images/Ch06/S05_07_Midsegment_of_a_trapezoid.png)
 *Midsegment of a trapezoid*
@@ -491,6 +533,8 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $BG = CD$ | Definition of congruence |
 > | $AG = AB + CD$ | Substitution property of equality |
 > | $EF = \frac{AB + CD}{2}$ | Substitution property of equality |
+
+In a trapezoid $ABCD$, in which $\overline{EF}$ is the midsegment of $ABCD$, then $EF = \frac{AB + CD}{2}$.
 
 (Deltoide | Cometa)
 **Kite**: a quadrilateral that consists of two pairs of congruent adjacent sides.
@@ -525,6 +569,8 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $\triangle ABC \cong \triangle ADC$ | SSS triangle congruence postulate |
 > | $\angle B \cong \angle D$ | Corresponding parts of congruent triangles are congruent |
 
+In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\angle B \cong \angle D$.
+
 (Teorema de los ángulos de los vértices de un deltoide)
 **Vertex angles of a kite theorem**: in a kite, the vertex angles are bisected by the diagonal that connects them.
 
@@ -538,6 +584,8 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $m \angle DAB = m \angle CAD + m \angle BAC$, and $m \angle BCD = m \angle ACB + m \angle ACD$ | Angle addition postulate |
 > | $\angle CAD \cong \angle BAC$, and $\angle ACB \cong \angle ACD$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{AC}$ is an angle bisector of $\angle DAB$ and $\angle BCD$ | Definition of angle bisector |
+
+In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$.
 
 (Teorema de las diagonales de un deltoide)
 **Diagonals of a kite theorem**: in a kite, the diagonals are perpendicular.
@@ -567,3 +615,5 @@ The parts of an isosceles trapezoid are named the same as the parts of an isosce
 > | $m \angle AEB = m \angle BEC = m \angle CED = m \angle AED = \frac{\pi}{2}$ | Transitive property of equality |
 > | $\angle AEB$, $\angle BEC$, $\angle CED$, and $\angle AED$ are right angles | Definition of right angle |
 > | $\overline{AC} \perp \overline{BD}$ | Definition of perpendicular lines |
+
+In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC} \perp \overline{BD}$.
