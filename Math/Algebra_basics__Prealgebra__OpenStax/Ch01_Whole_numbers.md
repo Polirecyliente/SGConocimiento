@@ -244,7 +244,7 @@ Division is the operation of dividing a first number by a second number. Divisio
 **Divisive identity**: The number 1.
 
 (Propiedad del cociente uno de la división)
-**Division property of quotient one**: any non zero number divided by itself gives a quotient of 1.
+**Division property of quotient one**: any nonzero number divided by itself gives a quotient of 1.
 
 > Division property of quotient one
 >

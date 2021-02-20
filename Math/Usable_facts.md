@@ -30,6 +30,7 @@
 #C# --- Propositional logic (Lógica proposicional)
 #C# --- Logic fallacies (Falacias lógicas)
 #C# Algebra definitions (Definiciones de álgebra)
+#C# --- Algebra theorems (Teoremas de álgebra)
 #C# --- Linear equations (Ecuaciones lineales)
 #C# --- Polynomials (Polinomios)
 #C# ---| Operations with polynomials (Operaciones con polinomios)
@@ -54,6 +55,9 @@
 
 (Teorema)
 **Theorem**: a statement that can be proved with postulates, axioms and/or with other theorems.
+
+(Corolario)
+**Corollary**: a theorem that is not proved, because it's too small and its true follows directly from another theorem or axiom, so it doesn't need to be proved.
 
 (Demostración textual)
 **Paragraph proof**: a proof that is written in paragraphs. To know where it ends, the symbol $\blacksquare$ is used, because the black square $\blacksquare$ means that the paragraph proof of the theorem is finished.
@@ -226,7 +230,7 @@ The term $ac$ in the numerator of $\frac{ac + b}{c}$, is a multiple of $c$, and 
 **Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. The value of each fraction itself is the same in equivalent fractions.
 
 (Propiedad de las fracciones equivalentes)
-**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a nonzero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
 
 (Fracciones complejas)
 **Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a d}{b c}$.
@@ -547,7 +551,7 @@ Division by a number is the same as multiplication by its reciprocal, $\frac{a}{
 **Divisive identity**: The number 1.
 
 (Propiedad del cociente uno de la división)
-**Division property of quotient one**: any non zero number divided by itself gives a quotient of 1, $\frac{a}{a} = 1$.
+**Division property of quotient one**: any nonzero number divided by itself gives a quotient of 1, $\frac{a}{a} = 1$.
 
 (Propiedades del cero en la división)
 **Division properties of zero**: zero divided by any nonzero number is zero, $\frac{0}{a} = 0$. Division by zero is undefined, $\frac{a}{0}\ is\ undef$.
@@ -877,6 +881,14 @@ These logical statements are wrong, because if $p \to q$ is true and $q$ is true
 
 (Reducción de términos semejantes)
 **Combining like terms | Combine like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
+
+### Algebra theorems (Teoremas de álgebra)
+
+(Teorema del producto cruzado)
+**Cross product theorem | Cross-multiplication theorem**: Let $a$, $b$, $c$, $d$, be real numbers, with $b$ and $d$ being nonzero. If $\frac{a}{b} = \frac{c}{d}$, then $ad = cb$.
+
+(Converso del teorema del producto cruzado)
+**Converse of the cross product theorem**: Let $a$, $b$, $c$, $d$, be real numbers, with $b$ and $d$ being nonzero. If $ad = cb$, then $\frac{a}{b} = \frac{c}{d}$.
 
 ### Linear equations (Ecuaciones lineales)
 
@@ -1800,7 +1812,9 @@ When handling improper fractions, the resulting percent is greater than $100\%$,
 (Ratio)
 **Ratio**: a fraction of any two numbers that are measured with the same unit or scale, therefore ratios have no units themselves. For example the ratio of height to width, both are measured in distance.
 
-The notation of ratios in particular, includes the use of the colon : symbol to replace the division symbol. So the ratio $\frac{a}{b}$ can be denoted as $a:b$. If $b = 1$ then the ratio is still presented as $\frac{a}{1}$, and if the ratio is an improper fraction, it is not converted to a mixed number.
+The notation of ratios in particular, includes the use of the colon : symbol to replace the division symbol. So the ratio $\frac{a}{b}$ can be denoted as $a:b$. If $b = 1$ then the ratio is still presented as $\frac{a}{1}$, and if the ratio is an improper fraction, it is not converted to a mixed number. The ratio $a:b$ is read as $a$ to $b$ ($a$ a $b$).
+
+In a ratio, the division operation is not actually made, for example the ratio $a:b$, in this ratio, if $a$ and $b$ are measured in type1 units, the ratio indicates that there are $a$ units of type1 per every $b$ units of type1. The division is not performed. This allows writing ratios with more than two numbers, for example the ratio $a:b:c$ with $c$ also measured in type1 units, indicates that there are $a$ units of type1 per every $b$ units, and also there are $a$ units per every $c$ units, and there are $b$ units per every $c$ units. When a ratio has more than two numbers, the fraction notation is not used, only the colon notation.
 
 (Tasa)
 **Rate**: a fraction of any two numbers that are measured in differente units or scales, so the unit of a rate is the fraction of the units. For example the rate of speed which is measured as a fraction of distance over time.

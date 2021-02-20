@@ -54,7 +54,7 @@ When adding together this numbers, $a + \frac{b}{c}$ the result is the improper 
 **Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. This can be also seen in the figure shown earlier.
 
 (Propiedad de las fracciones equivalentes)
-**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a non zero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a nonzero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
 
 ## Multiplication and division of fractions (Multiplicación y división de fracciones)
 [Ch04_S02](../../../Libros/Mathematics/Algebra_basics__Prealgebra__OpenStax.pdf#page=305)
