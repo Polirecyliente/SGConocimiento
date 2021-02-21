@@ -383,6 +383,12 @@ The division property of equality is used to solve equations when there is a fac
 (Producto cruzado)
 **Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $ad = bc$. This concept is used to test if a proportion is true without dividing.
 
+(Medios y extremos de una proporción)
+**Means and extremes of a proportion**: any proportion $\frac{a}{b} = \frac{c}{d}$ can be represented with ratios as $a:b = c:d$. Following this representation, the numbers $b$ and $c$ are called the means (they are in the center), and the numbers $a$ and $d$ are called the extremes (they are in the extremes). Using these definitions, it can be said that the cross product $ad = bc$ is the same as saying that the product of the extremes is equal to the product of the means of the proportion.
+
+(Proporción extendida)
+**Extended proportion**: a proportion with more than one equal sign, which means that an extended proportion makes several fractions equal, e.g. $\frac{a}{b} = \frac{c}{d} = \frac{e}{f}$.
+
 (Proporción con porcentajes)
 **Percent proportion**: a proportion in which one of the fractions is a percentage. Using terms from before, let $B$ be the base, $A$ the amount, then $\frac{A}{B} = \frac{p}{100}$, this means that the amount $A$ is to the base $B$ as $p$ is to $100$.
 
@@ -889,6 +895,13 @@ These logical statements are wrong, because if $p \to q$ is true and $q$ is true
 
 (Converso del teorema del producto cruzado)
 **Converse of the cross product theorem**: Let $a$, $b$, $c$, $d$, be real numbers, with $b$ and $d$ being nonzero. If $ad = bc$, then $\frac{a}{b} = \frac{c}{d}$.
+
+(Corolarios del teorema del producto cruzado y su converso)
+**Corollaries of the cross product theorem and its converse**: the cross product theorem and its converse have a few corollaries as follows. Let $a$, $b$, $c$, $d$ be nonzero real numbers, then:
+
+If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a}{c} = \frac{b}{d}$.
+If $\frac{a}{b} = \frac{c}{d}$, then $\frac{d}{b} = \frac{c}{a}$.
+If $\frac{a}{b} = \frac{c}{d}$, then $\frac{d}{c} = \frac{b}{a}$.
 
 ### Linear equations (Ecuaciones lineales)
 
