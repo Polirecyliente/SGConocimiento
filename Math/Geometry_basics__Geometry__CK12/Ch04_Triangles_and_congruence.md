@@ -247,12 +247,12 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AB} \cong \overline{CB}$, $\angle ABD \cong \angle CBD$ | Given |
+> | $\overline{AB} \cong \overline{BC}$, $\angle ABD \cong \angle CBD$ | Given |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | SAS triangle congruence postulate |
 > | $\angle A \cong \angle C$ | Corresponding parts of congruent triangles are congruent |
 
-In an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{CB}$, then $\angle A \cong \angle C$.
+In an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{BC}$, then $\angle A \cong \angle C$.
 
 (Converso del teorema de los ángulos de la base)
 **Converse of the base angles theorem**: if two angles in a triangle are congruent, it is an isosceles triangle.
@@ -265,7 +265,7 @@ In an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overli
 > | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
 > | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
-> | $\overline{AB} \cong \overline{CB}$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AB} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
 > | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
 
 In a triangle $\triangle ABC$, if $\angle A \cong \angle C$, then $\triangle ABC$ is isosceles.
@@ -277,7 +277,7 @@ In a triangle $\triangle ABC$, if $\angle A \cong \angle C$, then $\triangle ABC
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\triangle ABC$ is isosceles, $\overline{AB} \cong \overline{CB}$, and $\overline{BD}$ is the angle bisector | Given, from the *Base angles theorem* image |
+> | $\triangle ABC$ is isosceles, $\overline{AB} \cong \overline{BC}$, and $\overline{BD}$ is the angle bisector | Given, from the *Base angles theorem* image |
 > | $\angle A \cong \angle C$ | Base angles theorem |
 > | $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
 > | $\triangle ABD \cong \triangle CBD$ | AAS triangle congruence theorem |
@@ -288,7 +288,7 @@ In a triangle $\triangle ABC$, if $\angle A \cong \angle C$, then $\triangle ABC
 > | $\overline{AD} \cong \overline{CD}$ | Corresponding parts of congruent triangles are congruent |
 > | $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$ | Definition of perpendicular bisector |
 
-If $\triangle ABC$ is isosceles, such that $\overline{AB} \cong \overline{CB}$, $D$ is a point in $\overline{AC}$, and $\overline{BD}$ is the angle bisector of $\angle ABC$, then $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$.
+If $\triangle ABC$ is isosceles, such that $\overline{AB} \cong \overline{BC}$, $D$ is a point in $\overline{AC}$, and $\overline{BD}$ is the angle bisector of $\angle ABC$, then $\overline{BD}$ is a perpendicular bisector of $\overline{AC}$.
 
 (Converso del teorema del triángulo isósceles)
 **Converse of the isosceles triangle theorem**: in an isosceles triangle, the perpendicular bisector of the base is an angle bisector of the vertex angle.

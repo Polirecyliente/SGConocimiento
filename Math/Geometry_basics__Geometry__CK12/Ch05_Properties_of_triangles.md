@@ -66,7 +66,7 @@ In a triangle $\triangle ABC$, if the points $D$ and $E$ lie on different sides 
 > | $\overleftrightarrow{CD} \perp \overline{AB}$, $\overline{AD} \cong \overline{BD}$, $\angle CDA$ and $\angle CDB$ are right angles | Given |
 > | $\overline{CD} \cong \overline{CD}$ | Reflexive property of congruence |
 > | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
-> | $\overline{AC} \cong \overline{CB}$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AC} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
 
 If $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$, and $E$ is any point that lies on $\overline{CD}$, then $\overline{AE} \cong \overline{EB}$.
 
@@ -77,7 +77,7 @@ If $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$, and $E$ is an
 >
 > | Statement                                      | Reason                   |
 > | :--------------------------------------------: | :----------------------: |
-> | $\overline{AC} \cong \overline{CB}$, $D$ is the midpoint of $\overline{AB}$ | Given, from the *Perpendicular bisector theorem* image |
+> | $\overline{AC} \cong \overline{BC}$, $D$ is the midpoint of $\overline{AB}$ | Given, from the *Perpendicular bisector theorem* image |
 > | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
 > | $\angle A \cong \angle B$ | Base angles theorem |
 > | $\overline{AD} \cong \overline{BD}$ | Definition of midpoint |
@@ -87,7 +87,7 @@ If $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$, and $E$ is an
 > | $\angle CDA$ and $\angle CDB$ are right angles | Congruent linear pairs theorem |
 > | $\overleftrightarrow{CD}$ is a perpendicular bisector of $\overline{AB}$ | Definition of perpendicular bisector |
 
-If $\overline{AC} \cong \overline{CB}$, and $D$ is the midpoint of $\overline{AB}$, then $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$.
+If $\overline{AC} \cong \overline{BC}$, and $D$ is the midpoint of $\overline{AB}$, then $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$.
 
 (Punto de concurrencia)
 **Point of concurrency**: the intersection in a single point, of three or more lines, rays, or segments.
