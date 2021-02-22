@@ -1043,8 +1043,13 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 (Tamaño de una figura)
 **Size of a figure**: the amount of space occupied by the figure.
 
-(Figuras similares)
-**Similar figures**: figures that have the same shape but not the same size. Similarity is denoted with the $\sim$ symbol. Let $F_1$ and $F_2$ represent two figures that are similar, this is written as $F_1 \sim F_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
+(Figuras similares | Figuras semejantes)
+**Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
+
+(Factor de escala)
+**Scale factor**: in two similar figures, the scale factor is the constant that allows getting one figure from the other. Multiplying each length of the first figure by the scale factor, results in the lengths of the second figure. Dividing each length of the second figure by the scale factor, results in the lengths of the first figure.
+
+Let $Fig_1$ and $Fig_2$ be two similar figures, $Fig_1 \sim Fig_2$, let $A_1$ and $B_1$ be two points on $Fig_1$ that are correspondent to the points $A_2$ and $B_2$ on $Fig_2$, and let $k$ be the scale factor to obtain $Fig_2$ from $Fig_1$, then $A_2B_2 = k A_1B_1$.
 
 (Figuras congruentes)
 **Congruent figures**: figures that have the same shape and also the same size. Let $\overline{AB}$ be a segment, the congruence with itself is denoted as $\overline{AB} \cong \overline{BA}$. This symbol $\cong$ is used in general to indicate two congruent geometric figures.
@@ -1497,6 +1502,9 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 
 (Teorema de las diagonales de un deltoide)
 **Diagonals of a kite theorem**: in a kite, the diagonals are perpendicular. In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC} \perp \overline{BD}$.
+
+(Teorema del perímetro de figuras similares)
+**Perimeter of similar figures theorem**: given two similar figures, that have a scale factor that measures the ratio of each length from the second figure over the respective length in the first figure, then the ratio of the perimeter of the second figure over the perimeter of the first figure is equal to the scale factor. In two similar figures $Fig_1$ and $Fig_2$, $Fig_1 \sim Fig_2$, with perimeters $P_1$ and $P_2$ respectively, and with a scale factor $k$ to obtain $Fig_2$ from $Fig_1$, then $P_2 = k P_1$.
 
 ### Basic shapes and their formulas (Formas básicas y sus fórmulas)
 

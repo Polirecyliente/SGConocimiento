@@ -5,12 +5,12 @@
 #T# Table of contents
 
 #C# Ratios and proportions (Ratios y proporciones)
-#C# 
-#C# 
-#C# 
-#C# 
-#C# 
-#C# 
+#C# Similar polygons (Polígonos similares)
+#C# Similarity by AA (Similaridad por AA)
+#C# Similarity by SSS and SAS (Similaridad por LLL y LAL)
+#C# Proportionality relationships (Relaciones de proporcionalidad)
+#C# Similarity transformations (Transformaciones de similaridad)
+#C# Self-similarity (Autosimilaridad)
 
 #T# Beginning of content
 -->
@@ -65,15 +65,35 @@ In a ratio, the division operation is not actually made, for example the ratio $
 ## Similar polygons (Polígonos similares)
 [Ch07_S02](https://www.ck12.org/reader/reader-index.html#section/2932963/7.2/9549314)
 
-(Figuras similares)
-**Similar figures**: figures that have the same shape but not the same size. Similarity is denoted with the $\sim$ symbol. Let $F_1$ and $F_2$ represent two figures that are similar, this is written as $F_1 \sim F_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
+(Figuras similares | Figuras semejantes)
+**Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
 [Similar figures image code](Programs/Ch07/S01_01_Similar_figures_image.py)
 ![Similar figures image](Images/Ch07/S01_01_Similar_figures.png)
 *Similar figures*
 
 Following this definition, similar polygons are polygons with the same shape, but their size may differ.
 
-<!-- TODO corresponding angles and sides of similar polygons, scale factor -->
+(Factor de escala)
+**Scale factor**: in two similar figures, the scale factor is the constant that allows getting one figure from the other. Multiplying each length of the first figure by the scale factor, results in the lengths of the second figure. Dividing each length of the second figure by the scale factor, results in the lengths of the first figure.
+
+In the *Similar figures* the scale factor needed to get from the figure to the left, to the figure to the right, is $1/2$, which is a ratio of $1:2$, so the lengths of the figure to the right are half of those of the figure to the left.
+
+> Scale factor
+>
+> Let $Fig_1$ and $Fig_2$ be two similar figures, $Fig_1 \sim Fig_2$, let $A_1$ and $B_1$ be two points on $Fig_1$ that are correspondent to the points $A_2$ and $B_2$ on $Fig_2$, and let $k$ be the scale factor to obtain $Fig_2$ from $Fig_1$, then
+>
+> $$A_2B_2 = k A_1B_1$$
+
+This means that to obtain the length $A_2B_2$, the scale factor $k$ must be multiplied by the length $A_1B_1$.
+
+(Teorema del perímetro de figuras similares)
+**Perimeter of similar figures theorem**: given two similar figures, that have a scale factor that measures the ratio of each length from the second figure over the respective length in the first figure, then the ratio of the perimeter of the second figure over the perimeter of the first figure is equal to the scale factor.
+
+> Proof of the perimeter of similar figures theorem
+>
+> Let $Fig_1$ and $Fig_2$ be two similar figures, $Fig_1 \sim Fig_2$, and let $k$ be the scale factor to obtain $Fig_2$ from $Fig_1$. Let the most external sides of $Fig_1$ have lengths with measures $a_1$, $b_1$, $c_1$, ..., $z_1$, so the most external sides of $Fig_2$ have lengths with measures $a_2 = k a_1$, $b_2 = k b_1$, $c_2 = k c_1$, ..., $z_2 = k z_1$. Finally, let $P_1$ be the perimeter of $Fig_1$, and let $P_2$ be the perimeter of $Fig_2$. Because of the definition of perimeter, $P_1 = a_1 + b_1 + c_1 + ... + z_1$ and $P_2 = a_2 + b_2 + c_2 + ... + z_2$, and then by substitution and factoring the common factor $k$, $P_2 = k (a_1 + b_1 + c_1 + ... + z_1)$, so $P_2 = k P_1$. $\blacksquare$
+
+In two similar figures $Fig_1$ and $Fig_2$, $Fig_1 \sim Fig_2$, with perimeters $P_1$ and $P_2$ respectively, and with a scale factor $k$ to obtain $Fig_2$ from $Fig_1$, then $P_2 = k P_1$.
 
 ## Similarity by AA (Similaridad por AA)
 [Ch07_S03](https://www.ck12.org/reader/reader-index.html#section/2932964/7.3/9549314)
