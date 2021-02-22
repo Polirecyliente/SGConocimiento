@@ -11,11 +11,11 @@ for it1 in fig1.axes:
     it1.set_aspect('equal', adjustable = 'box')
 
 #T# hide the spines and ticks
-for it1 in ['top', 'bottom', 'left', 'right']:
-    for it2 in fig1.axes:
-        it2.spines[it1].set_visible(False)
-        it2.xaxis.set_visible(False)
-        it2.yaxis.set_visible(False)
+for it1 in fig1.axes:
+    for it2 in ['top', 'bottom', 'left', 'right']:
+        it1.spines[it2].set_visible(False)
+        it1.xaxis.set_visible(False)
+        it1.yaxis.set_visible(False)
 
 #T# create the variables that define the plot
 A1, B1, C1 = (0, 0), (4, 0), (-3, 4)

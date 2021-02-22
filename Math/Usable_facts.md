@@ -1044,7 +1044,7 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 **Size of a figure**: the amount of space occupied by the figure.
 
 (Figuras similares)
-**Similar figures**: figures that have the same shape but not the same size.
+**Similar figures**: figures that have the same shape but not the same size. Similarity is denoted with the $\sim$ symbol. Let $F_1$ and $F_2$ represent two figures that are similar, this is written as $F_1 \sim F_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
 
 (Figuras congruentes)
 **Congruent figures**: figures that have the same shape and also the same size. Let $\overline{AB}$ be a segment, the congruence with itself is denoted as $\overline{AB} \cong \overline{BA}$. This symbol $\cong$ is used in general to indicate two congruent geometric figures.

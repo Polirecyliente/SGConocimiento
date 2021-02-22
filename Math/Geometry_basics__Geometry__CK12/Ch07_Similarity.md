@@ -65,6 +65,16 @@ In a ratio, the division operation is not actually made, for example the ratio $
 ## Similar polygons (Polígonos similares)
 [Ch07_S02](https://www.ck12.org/reader/reader-index.html#section/2932963/7.2/9549314)
 
+(Figuras similares)
+**Similar figures**: figures that have the same shape but not the same size. Similarity is denoted with the $\sim$ symbol. Let $F_1$ and $F_2$ represent two figures that are similar, this is written as $F_1 \sim F_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
+[Similar figures image code](Programs/Ch07/S01_01_Similar_figures_image.py)
+![Similar figures image](Images/Ch07/S01_01_Similar_figures.png)
+*Similar figures*
+
+Following this definition, similar polygons are polygons with the same shape, but their size may differ.
+
+<!-- TODO corresponding angles and sides of similar polygons, scale factor -->
+
 ## Similarity by AA (Similaridad por AA)
 [Ch07_S03](https://www.ck12.org/reader/reader-index.html#section/2932964/7.3/9549314)
 
