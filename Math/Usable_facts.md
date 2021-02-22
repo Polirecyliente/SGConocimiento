@@ -1285,6 +1285,9 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Postulado ALA de congruencia de triángulos)
 **ASA triangle congruence postulate**: ASA stands for Angle-Side-Angle (Ángulo-Lado-Ángulo). This postulate says that if two angles and their included side are individually congruent to two angles and their included side in another triangle, then the two triangles are congruent. Let $\triangle ABC$ have two angles with measures $\alpha$, $\gamma$, and let their included side measure $b$. Let $\triangle DEF$ have two angles with measures $\delta$, $\zeta$, and let their included side measure $e$. If $\alpha = \delta$, $\gamma = \zeta$, and $b = e$, then $\triangle ABC = \triangle DEF$.
 
+(Postulado AA de semejanza de triángulos)
+**AA triangle similarity postulate**: given two triangles, if the first triangle has two angles that are congruent to the corresponding angles in the second triangle, then the triangles are similar. Given two triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, or if $\angle A \cong \angle D$ and $\angle C \cong \angle F$, or if $\angle B \cong \angle E$ and $\angle C \cong \angle F$, then $\triangle ABC \sim \triangle DEF$.
+
 (Propiedad reflexiva de la congruencia)
 **Reflexive property of congruence**: a figure is congruent with itself. Given $\overline{AB}$, and $\angle ABC$, then $\overline{AB} \cong \overline{AB}$ and $\angle ABC \cong \angle ABC$.
 
@@ -2060,6 +2063,9 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 (Construcción de un triángulo dados dos ángulos y su lado comprendido)
 **Triangle from two angles and their included side construction**: geometric construction to draw a triangle given two angles and their included side.
 
+(Construcción de dos triángulos similares dados dos ángulos)
+**Two similar triangles given two angles construction**: a geometric construction to draw two similar triangles given two angles.
+
 (Construcción de un paralelogramo)
 **Parallelogram construction**: a geometric construction to draw a parallelogram.
 
@@ -2068,3 +2074,6 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 
 (Algoritmo para encontrar la distancia más corta entre dos líneas paralelas)
 **Algorithm to find the shortest distance between two parallel lines**: there is an algorithm to find this distance based on algebra in the rectangular coordinate system.
+
+(Medición indirecta)
+**Indirect measurement**: a way to measure lengths that can't be accessed directly (lengths to places that are unreachable), using triangle similarity. For example, this can serve to measure lengths such as the width of a river, or the height of a tall building. It's an algorithm.

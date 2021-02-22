@@ -98,6 +98,37 @@ In two similar figures $Fig_1$ and $Fig_2$, $Fig_1 \sim Fig_2$, with perimeters 
 ## Similarity by AA (Similaridad por AA)
 [Ch07_S03](https://www.ck12.org/reader/reader-index.html#section/2932964/7.3/9549314)
 
+Similarity by AA means similarity by Angle-Angle (Similaridad (o semejanza) por Ángulo-Ángulo), so this similarity applies only to triangles.
+
+(Construcción de dos triángulos similares dados dos ángulos)
+**Two similar triangles given two angles construction**: a geometric construction to draw two similar triangles given two angles.
+
+> Two similar triangles given two angles construction
+>
+> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials).
+> 1. Apply the triangle from two angles and their included side construction, to draw the first triangle, using the two given angles as the two angles of the construction, and using any wanted length for the included side.
+> 2. Apply the triangle from two angles and their included side construction, to draw the second triangle, using the two given angles as the two angles of the construction, and using any other wanted length for the included side.
+
+(Postulado AA de semejanza de triángulos)
+**AA triangle similarity postulate**: given two triangles, if the first triangle has two angles that are congruent to the corresponding angles in the second triangle, then the triangles are similar. Given two triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, or if $\angle A \cong \angle D$ and $\angle C \cong \angle F$, or if $\angle B \cong \angle E$ and $\angle C \cong \angle F$, then $\triangle ABC \sim \triangle DEF$.
+
+(Medición indirecta)
+**Indirect measurement**: a way to measure lengths that can't be accessed directly (lengths to places that are unreachable), using triangle similarity. For example, this can serve to measure lengths such as the width of a river, or the height of a tall building. It's an algorithm.
+[Indirect measurement image code](Programs/Ch07/S03_01_Indirect_measurement_image.py)
+![Indirect measurement image](Images/Ch07/S03_01_Indirect_measurement.png)
+*Indirect measurement*
+
+As shown, $\triangle ABC \sim \triangle ADE$. In indirect measurement, the length $DE$ is the length that wants to be measured but is inaccessible. The points $A$, $B$, $C$, and $D$, should be walkable, so only the point $E$ can be unreachable.
+
+> Indirect measurement
+>
+> These steps follow the *Indirect measurement* image notation.
+> 1. Observe the terrain to place the points $A$, $B$, $C$, $D$, and $E$. The point $E$ can be out of reach.
+> 2. Make sure that $\angle ABC \cong \angle ADE$, that the points $A$, $C$, and $E$ are collinear, and that the points $A$, $B$, and $D$ are also collinear.
+> 3. Measure the lengths $AB$, $AD$, and $BC$.
+> 4. Calculate the scale factor $k$ to obtain $\triangle ADE$ from $\triangle ABC$, $k = \frac{AD}{AB}$.
+> 5. Calculate $DE$ which is the indirect measurement, as $DE = k BC$.
+
 ## Similarity by SSS and SAS (Similaridad por LLL y LAL)
 [Ch07_S04](https://www.ck12.org/reader/reader-index.html#section/2932965/7.4/9549314)
 
