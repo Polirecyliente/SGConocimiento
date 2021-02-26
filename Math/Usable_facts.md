@@ -1383,6 +1383,12 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Teorema de la congruencia de la hipotenusa-cateto)
 **Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent. In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong \overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
 
+(Teorema LLL de semejanza de triángulo)
+**SSS triangle similarity theorem**: given two triangles, if the sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, then the triangles are similar. Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC} = \frac{EF}{BC}$, then $\triangle ABC \sim \triangle DEF$.
+
+(Teorema LAL de semejanza de triángulos)
+**SAS triangle similarity theorem**: given two triangles, if two sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, and the included angles of the given sides are congruent in both triangles, then the triangles are similar. Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC}$, and $\angle A \cong \angle D$, then $\triangle ABC \sim \triangle DEF$.
+
 (Teorema de los ángulos de la base)
 **Base angles theorem**: in an isosceles triangle, the base angles are congruent. In an isosceles triangle $\triangle ABC$, such that $\overline{AB} \cong \overline{BC}$, then $\angle A \cong \angle C$.
 
@@ -1430,6 +1436,9 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 
 (Converso del teorema de la bisagra)
 **Converse of the hinge theorem**: given two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the remaining side of the first triangle is longer than the one of the second triangle, then the included angle from the first triangle has a measure greater than the one from the second triangle. In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $AC > DF$, then $m \angle B > m \angle E$.
+
+(Corolario del teorema de la bisagra)
+**Corollary of the hinge theorem**: in two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle is congruent to the one from the second triangle, then the remaining side of the first triangle is congruent to the one of the second triangle. In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $\angle B \cong \angle E$, then $AC = DF$.
 
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
@@ -2065,6 +2074,12 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 
 (Construcción de dos triángulos similares dados dos ángulos)
 **Two similar triangles given two angles construction**: a geometric construction to draw two similar triangles given two angles.
+
+(Construcción de dos triángulos similares dados tres lados)
+**Two similar triangles given three sides construction**: a geometric construction to draw two similar triangles given three sides.
+
+(Construcción de dos triángulos similares dados dos lados y su ángulo comprendido)
+**Two similar triangles given two sides and their included angle construction**: a geometric construction to draw two similar triangles given two sides and their included angle.
 
 (Construcción de un paralelogramo)
 **Parallelogram construction**: a geometric construction to draw a parallelogram.

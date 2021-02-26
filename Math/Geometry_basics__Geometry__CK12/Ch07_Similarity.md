@@ -109,12 +109,15 @@ Similarity by AA means similarity by Angle-Angle (Similaridad (o semejanza) por 
 
 > Two similar triangles given two angles construction
 >
-> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials).
 > 1. Apply the triangle from two angles and their included side construction, to draw the first triangle, using the two given angles as the two angles of the construction, and using any wanted length for the included side.
 > 2. Apply the triangle from two angles and their included side construction, to draw the second triangle, using the two given angles as the two angles of the construction, and using any other wanted length for the included side.
 
 (Postulado AA de semejanza de triángulos)
-**AA triangle similarity postulate**: given two triangles, if the first triangle has two angles that are congruent to the corresponding angles in the second triangle, then the triangles are similar. Given two triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, or if $\angle A \cong \angle D$ and $\angle C \cong \angle F$, or if $\angle B \cong \angle E$ and $\angle C \cong \angle F$, then $\triangle ABC \sim \triangle DEF$.
+**AA triangle similarity postulate**: given two triangles, if the first triangle has two angles that are congruent to the corresponding angles in the second triangle, then the triangles are similar.
+
+> AA triangle similarity postulate
+>
+> Given two triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, or if $\angle A \cong \angle D$ and $\angle C \cong \angle F$, or if $\angle B \cong \angle E$ and $\angle C \cong \angle F$, then $\triangle ABC \sim \triangle DEF$.
 
 (Medición indirecta)
 **Indirect measurement**: a way to measure lengths that can't be accessed directly (lengths to places that are unreachable), using triangle similarity. For example, this can serve to measure lengths such as the width of a river, or the height of a tall building. It's an algorithm.
@@ -135,6 +138,49 @@ As shown, $\triangle ABC \sim \triangle ADE$. In indirect measurement, the lengt
 
 ## Similarity by SSS and SAS (Similaridad por LLL y LAL)
 [Ch07_S04](https://www.ck12.org/reader/reader-index.html#section/2932965/7.4/9549314)
+
+Similarity by SSS and SAS apply only to triangles, because of the definitions of SSS and SAS.
+
+(Construcción de dos triángulos similares dados tres lados)
+**Two similar triangles given three sides construction**: a geometric construction to draw two similar triangles given three sides.
+
+> Two similar triangles given three sides construction
+>
+> 1. Apply the triangle from three sides construction, to draw the first triangle, using the three given sides as the three sides of the construction.
+> 2. Apply the triangle from three sides construction, to draw the second triangle, after multiplying the three sides lengths by any wanted scale factor, and then using the result as the three sides of the construction.
+
+(Teorema LLL de semejanza de triángulo)
+**SSS triangle similarity theorem**: given two triangles, if the sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, then the triangles are similar.
+
+> Proof of the SSS triangle similarity theorem
+>
+> Given two triangles $\triangle ABC$ and $\triangle DEF$, such that $\triangle ABC \sim \triangle DEF$ with a scale factor $k$ to get $\triangle DEF$ from $\triangle ABC$, then by definition of similarity $DE = k AB$, $DF = k AC$, and $EF = k BC$, which means that in similar triangles, the ratios of the corresponding sides are equal to the constant $k$, because by the division property of equality, $k = \frac{DE}{AB}$, $k = \frac{DF}{AC}$, and $k = \frac{EF}{BC}$, and so when these ratios are equal to the scale factor, it's because the triangles are similar. $\blacksquare$
+
+Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC} = \frac{EF}{BC}$, then $\triangle ABC \sim \triangle DEF$.
+
+(Construcción de dos triángulos similares dados dos lados y su ángulo comprendido)
+**Two similar triangles given two sides and their included angle construction**: a geometric construction to draw two similar triangles given two sides and their included angle.
+
+> Two similar triangles given two sides and their included angle construction
+>
+> 1. Apply the triangle from two sides and their included angle construction, to draw the first triangle, using the two given sides and their included angle as the two sides and their included angle of the construction.
+> 2. Apply the triangle from two sides and their included angle construction, to draw the second triangle, after multiplying the two sides lengths by any wanted scale factor, and then using the result as the two sides and their included angle of the construction.
+
+(Corolario del teorema de la bisagra)
+**Corollary of the hinge theorem**: in two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle is congruent to the one from the second triangle, then the remaining side of the first triangle is congruent to the one of the second triangle.
+
+> Corollary of the hinge theorem
+>
+> In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $\angle B \cong \angle E$, then $AC = DF$.
+
+(Teorema LAL de semejanza de triángulos)
+**SAS triangle similarity theorem**: given two triangles, if two sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, and the included angles of the given sides are congruent in both triangles, then the triangles are similar.
+
+> Proof of the SAS triangle similarity theorem
+>
+> Given two triangles $\triangle ABC$ and $\triangle DEF$, such that $\triangle ABC \sim \triangle DEF$ with a scale factor $k$ to get $\triangle DEF$ from $\triangle ABC$, then by definition of similarity $DE = k AB$, $DF = k AC$, and $\angle A \cong \angle D$. Because of the corollary of the hinge theorem, given that $\angle A \cong \angle D$, then $EF$ must have the same ratio $k$ to $BC$, meaning that $EF = k BC$. And so the three sides of $\triangle ABC$ are similar to the corresponding three sides of $\triangle DEF$ because of the SSS triangle similarity theorem. This means that when $DE = k AB$, $DF = k AC$, and $\angle A \cong \angle D$, it also happens that $EF = k BC$, so the triangles are similar. $\blacksquare$
+
+Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC}$, and $\angle A \cong \angle D$, then $\triangle ABC \sim \triangle DEF$.
 
 ## Proportionality relationships (Relaciones de proporcionalidad)
 [Ch07_S05](https://www.ck12.org/reader/reader-index.html#section/2932966/7.5/9549314)
