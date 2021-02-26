@@ -1,18 +1,22 @@
 
-#   Geometry basics (Bases de la geometría)
+#   Basics of geometry (Bases de la geometría)
 
 <!--
 #T# Table of contents
 
 #C# Points, lines, and planes (Puntos, líneas, y planos)
 #C# Segments and distance (Segmentos y distancia)
-#C# Angles (Ángulos)
-#C# Midpoint and bisector (Punto medio y bisectriz)
+#C# Angles and measurement (Ángulos y medición)
+#C# Midpoints and bisectors (Puntos medios y bisectrices)
 #C# Angle pairs (Pares de ángulos)
-#C# Polygon classification (Clasificación de polígonos)
+#C# Classifying polygons (Clasificación de polígonos)
 
 #T# Beginning of content
 -->
+
+Attribution and License
+![CK-12 Attribution](Images/CK-12_License.png)
+Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
 
 ## Points, lines, and planes (Puntos, líneas, y planos)
 [Ch01_S01](https://www.ck12.org/reader/reader-index.html#section/2932917/1.1/9549314)
@@ -150,7 +154,7 @@ This method can be used to draw a given length.
 (Plano coordenado)
 **Coordinate grid**: the two dimensional plane that uses tuples of two numbers, $x$ and $y$, to represent the location of points in the plane. The $x$ coordinate measures horizontal distance, and the $y$ coordinate measures vertical distance.
 
-## Angles (Ángulos)
+## Angles and measurement (Ángulos y medición)
 [Ch01_S03](https://www.ck12.org/reader/reader-index.html#section/2932919/1.3/9549314)
 
 Given two distinct rays that share their endpoint, the angle formed between the two rays is the measure of the rotation needed to get from one ray to the other.
@@ -268,7 +272,7 @@ In the *Segment markings* image, the two segments at the bottom have the same le
 ![Angle addition postulate image](Images/Ch01/S03_05_Angle_addition_postulate.png)
 *Angle addition postulate*
 
-## Midpoint and bisector (Punto medio y bisectriz)
+## Midpoints and bisectors (Puntos medios y bisectrices)
 [Ch01_S04](https://www.ck12.org/reader/reader-index.html#section/2932920/1.4/9549314)
 
 (Congruencia)
@@ -403,7 +407,7 @@ The black square $\blacksquare$ means that the proof of the theorem is finished.
 
 If $\angle A$ and $\angle B$ are vertical angles, then $\angle A \cong \angle B$.
 
-## Polygon classification (Clasificación de polígonos)
+## Classifying polygons (Clasificación de polígonos)
 [Ch01_S06](https://www.ck12.org/reader/reader-index.html#section/2932922/1.6/9549314)
 
 (Triángulo)

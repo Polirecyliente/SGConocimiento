@@ -23,6 +23,7 @@
 #C# --- File compression
 #C# --- find and xargs commands
 #C# Cryptographic keys
+#C# Disc image burning
 #C# Root privileges
 
 #T# Beginning of content
@@ -646,6 +647,13 @@ ssh-add ~/.ssh/id_rsa
 #T# list the current keys stored by the agent
 ssh-add -l #| short form
 ssh-add -L #| long form
+# |-------------------------------------------------------------
+
+#C# Disc image burning
+
+# |-------------------------------------------------------------
+#T# burn an ISO image file to a CD with the wodim command
+wodim -v -eject /path/to/iso_file1.iso
 # |-------------------------------------------------------------
 
 #C# Root privileges

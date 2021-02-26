@@ -4,16 +4,20 @@
 <!--
 #T# Table of contents
 
-#C# Triangle angles sum (Suma de los ángulos de un triángulo)
+#C# Triangle sums (Suma de los ángulos de un triángulo)
 #C# Congruent figures (Figuras congruentes)
-#C# Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
-#C# Triangle congruence criteria 2 (Criterios de congruencia de triángulos 2)
+#C# Triangle congruence using SSS and SAS (Congruencia de triángulos usando LLL y LAL)
+#C# Triangle congruence using ASA, AAS, and HL (Congruencia de triángulos usando ALA, AAL, e hipotenusa cateto)
 #C# Isosceles and equilateral triangles (Triángulos isósceles y equiláteros)
 
 #T# Beginning of content
 -->
 
-## Triangle angles sum (Suma de los ángulos de un triángulo)
+Attribution and License
+![CK-12 Attribution](Images/CK-12_License.png)
+Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
+
+## Triangle sums (Suma de los ángulos de un triángulo)
 [Ch04_S01](https://www.ck12.org/reader/reader-index.html#section/2932940/4.1/9549314)
 
 (Ángulos interiores de un polígono)
@@ -131,7 +135,7 @@ In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices f
 
 In the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, then $\angle C \cong \angle F$.
 
-## Triangle congruence criteria 1 (Criterios de congruencia de triángulos 1)
+## Triangle congruence using SSS and SAS (Congruencia de triángulos usando LLL y LAL)
 [Ch04_S03](https://www.ck12.org/reader/reader-index.html#section/6707215/4.3/9549314)
 
 (Construcción de un triángulo dados tres lados)
@@ -175,7 +179,7 @@ In the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D
 >
 > Let $\triangle ABC$ have two sides with measures $a$, $c$, and let their included angle measure $\beta$. Let $\triangle DEF$ have two sides with measures $d$, $f$, and let their included angle measure $\epsilon$. If $a = d$, $c = f$, and $\beta = \epsilon$, then $\triangle ABC \cong \triangle DEF$.
 
-## Triangle congruence criteria 2 (Criterios de congruencia de triángulos 2)
+## Triangle congruence using ASA, AAS, and HL (Congruencia de triángulos usando ALA, AAL, e hipotenusa cateto)
 [Ch04_S04](https://www.ck12.org/reader/reader-index.html#section/2932943/4.4/9549314)
 
 (Lado comprendido entre dos ángulos)

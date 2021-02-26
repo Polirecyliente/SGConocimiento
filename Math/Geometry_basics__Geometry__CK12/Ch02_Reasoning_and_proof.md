@@ -1,5 +1,5 @@
 
-#   Logic for geometric proofs (Lógica para pruebas geométricas)
+#   Reasoning and proof (Razonamiento y demostración)
 
 <!--
 #T# Table of contents
@@ -7,11 +7,15 @@
 #C# Inductive reasoning (Razonamiento inductivo)
 #C# Conditional statements (Proposiciones condicionales)
 #C# Deductive reasoning (Razonamiento deductivo)
-#C# Equality and congruence properties, operation properties, two column proofs (Propiedades de la igualdad y la congruencia, propiedades de las operaciones, demostraciones a dos columnas)
+#C# Algebraic and congruence properties (Propiedades de la igualdad y de la congruencia)
 #C# Proofs about angle pairs and segments (Demostraciones sobre pares de ángulos y segmentos)
 
 #T# Beginning of content
 -->
+
+Attribution and License
+![CK-12 Attribution](Images/CK-12_License.png)
+Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
 
 ## Inductive reasoning (Razonamiento inductivo)
 [Ch02_S01](https://www.ck12.org/reader/reader-index.html#section/2932925/2.1/9549314)
@@ -302,7 +306,7 @@ Truth tables can be used not only for binary operations but for more complex log
 **Indirect proof**: type of proof of a conditional in which the consequent is negated, and by deduction a contradiction is found, which means that the consequent is true.
 [Ch05_S06](https://www.ck12.org/reader/reader-index.html#section/2932952/5.6/9549314)
 
-## Equality and congruence properties, operation properties, two column proofs (Propiedades de la igualdad y la congruencia, propiedades de las operaciones, demostraciones a dos columnas)
+## Algebraic and congruence properties (Propiedades de la igualdad y de la congruencia)
 [Ch02_S04](https://www.ck12.org/reader/reader-index.html#section/2932928/2.4/9549314)
 
 (Propiedades de la igualdad)

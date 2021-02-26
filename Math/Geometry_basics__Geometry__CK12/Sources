@@ -8,4 +8,22 @@ https://www.ck12.org/c/geometry/
 
 When using Flexbook to read this book, the Chromium browser must be used. The anchors to sections in this book are given as links to the Flexbook version, and not to the PDF version, because this book is not offered as PDF by CK-12, but it is rather offered through Flexbook. Still, a PDF version can possibly be found on the Internet.
 
-The license of this document at the moment of reading it is: CC BY-NC 3.0 (see https://creativecommons.org/licenses/by-nc/3.0/)
+The license of the 'Geometry' book, by CK-12 at the moment of reading it is: CK-12 Curriculum Materials License (see https://www.ck12info.org/curriculum-materials-license/)
+
+I use the 'Geometry' book as a student, but given that I share the SGConocimiento project with whoever wants to use it, a few words must be said for clarity about the CK-12 Curriculum Materials License.
+
+The CK-12 Curriculum Materials License does not affect all of my work about the 'Geometry' book. The license only affects the content I directly took from the book, namely the chapter names with their order, and the section names with their order inside each chapter. Everything else was created by me, in particular the images (licensed under the CC-BY license), the code (licensed under the MIT licence), and the plain text (licensed under the CC-BY license).
+
+The chapter names with their order, and the section names with their order inside each chapter from the 'Geometry' book are copied without modification, so my work does not modify the original 'Geometry' book.
+
+The attribution to CK-12 is made with the Print Distribution format, because my work is not a website. This means that the plain text file for each chapter has an anchor to the CK-12 license image retrieved from https://www.ck12.org/pages/attribution-guidelines/.
+
+The only part of my work that could be said that it came from the 'Geometry' book, is the terminology itself, which is part of the plain text. My work is a work of documenting terminology, but I do not invent this terminology, because I use the standard international terminology wherever possible (and where I can't find an international term for a concept, I invent the term, trying to be consistent with the rest of the terminology).
+
+The terminology of a field like geometry can't be copyrighted because the terminology is composed of terms that are of common usage in the community of people dedicated to geometry. So I can freely use the same terminology of the 'Geometry' book, because it's the terminology of geometry as a field of study. This effectively means that the plain text containing terminology and its definitions are licensed under the CC-BY license, and NOT under the CK-12 Curriculum Materials License.
+
+The exception would be, of course, trademarked terms in the 'Geometry' book, but so far I haven't found a single one. If I find a trademarked term, I will not use it in my work.
+
+The definition of each term was created by myself, with my own words, after pondering and meditating on the contents of the 'Geometry' book. I have not quoted the definitions of the terms, and if the definition of a term seems like copied or quoted from the 'Geometry' book, this can be fixed. You can open an Issue or a Pull Request to let me know about one such situation, to change the definition so that it's different from the 'Geometry' book.
+
+Finally, my work is an original work, it is my writings to explain to myself the geometric concepts that I read in the 'Geometry' book by CK-12. Therefore, my work is not a derivative work from the 'Geometry' book, because I do not alter the 'Geometry' book, since I make my original writings. And also because the parts that I take from the 'Geometry' book, the chapter names with their order, and the section names with their order inside each chapter, I take those names and orders without changing them.

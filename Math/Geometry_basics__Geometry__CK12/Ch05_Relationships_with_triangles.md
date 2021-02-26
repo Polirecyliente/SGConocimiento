@@ -1,17 +1,21 @@
 
-#   Properties of triangles (Propiedades de los triángulos)
+#   Relationships with triangles (Propiedades de los triángulos)
 
 <!--
 #T# Table of contents
 
 #C# Midsegments of a triangle (Segmentos medios de un triángulo)
-#C# Perpendicular bisectors of a triangle (Mediatrices de un triángulo)
-#C# Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
-#C# Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
+#C# Perpendicular bisectors in triangles (Mediatrices de un triángulo)
+#C# Angle bisectors in triangles (Bisectrices de los ángulos de un triángulo)
+#C# Medians and altitudes in triangles (Medianas y alturas de un triángulo)
 #C# Inequalities in triangles (Desigualdades en los triángulos)
 
 #T# Beginning of content
 -->
+
+Attribution and License
+![CK-12 Attribution](Images/CK-12_License.png)
+Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
 
 ## Midsegments of a triangle (Segmentos medios de un triángulo)
 [Ch05_S01](https://www.ck12.org/reader/reader-index.html#section/2932947/5.1/9549314)
@@ -47,7 +51,7 @@ In a triangle $\triangle ABC$, if $\overline{DE}$ is a midsegment of $\triangle 
 
 In a triangle $\triangle ABC$, if the points $D$ and $E$ lie on different sides of the triangle, $\overline{DE} \parallel \overline{AB}$, and $DE = \frac{AB}{2}$, then $\overline{DE}$ is a midsegment of $\triangle ABC$.
 
-## Perpendicular bisectors of a triangle (Mediatrices de un triángulo)
+## Perpendicular bisectors in triangles (Mediatrices de un triángulo)
 [Ch05_S02](https://www.ck12.org/reader/reader-index.html#section/2932948/5.2/9549314)
 
 (Punto equidistante a otros puntos)
@@ -118,7 +122,7 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 
 In a triangle $\triangle ABC$, there is a point $G$, such that $G$ is in the three perpendicular bisectors from the three sides of the triangle, $G$ is equidistant to $A$, $B$, $C$, and $G$ is the circumcenter of $\triangle ABC$.
 
-## Angle bisectors of a triangle (Bisectrices de los ángulos de un triángulo)
+## Angle bisectors in triangles (Bisectrices de los ángulos de un triángulo)
 [Ch05_S03](https://www.ck12.org/reader/reader-index.html#section/2932949/5.3/9549314)
 
 (Teorema de la equidistancia en la bisectriz de un ángulo)
@@ -178,7 +182,7 @@ The incenter is in the three angle bisectors of a triangle, and due to the equid
 
 In a triangle $\triangle ABC$, if a point $G$ lies in the three angle bisectors of $\triangle ABC$ then $G$ is the incenter of $\triangle ABC$.
 
-## Medians and altitudes of a triangle (Medianas y alturas de un triángulo)
+## Medians and altitudes in triangles (Medianas y alturas de un triángulo)
 [Ch05_S04](https://www.ck12.org/reader/reader-index.html#section/9549312/5.4/9549314)
 
 (Mediana de un triángulo)

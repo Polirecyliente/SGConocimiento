@@ -6,12 +6,16 @@
 
 #C# Angles in polygons (Ángulos en polígonos)
 #C# Properties of parallelograms (Propiedades de los paralelogramos)
-#C# Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
-#C# Rectangles, rhombi, and squares (Rectángulos, rombos, y cuadrados)
+#C# Proving quadrilaterals are parallelograms (Demostraciones de que un cuadrilátero es un paralelogramo)
+#C# Rectangles, rhombuses and squares (Rectángulos, rombos y cuadrados)
 #C# Trapezoids and kites (Trapezoides y deltoides)
 
 #T# Beginning of content
 -->
+
+Attribution and License
+![CK-12 Attribution](Images/CK-12_License.png)
+Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
 
 ## Angles in polygons (Ángulos en polígonos)
 [Ch06_S01](https://www.ck12.org/reader/reader-index.html#section/2932955/6.1/9549314)
@@ -161,7 +165,7 @@ In a parallelogram $ABCD$, $\angle A$ and $\angle B$ are supplementary, $\angle 
 
 In a parallelogram $ABCD$, $\overline{AC}$, and $\overline{BD}$ bisect each other.
 
-## Proofs that a quadrilateral is a parallelogram (Demostraciones de que un cuadrilátero es un paralelogramo)
+## Proving quadrilaterals are parallelograms (Demostraciones de que un cuadrilátero es un paralelogramo)
 [Ch06_S03](https://www.ck12.org/reader/reader-index.html#section/2932957/6.3/9549314)
 
 (Converso del teorema de los lados opuestos de un paralelogramo)
@@ -249,7 +253,7 @@ In a quadrilateral $ABCD$, if $\overline{AC}$, and $\overline{BD}$ bisect each o
 **Algebraic determination that a quadrilateral is a parallelogram**: There are algebraic ways to show that a quadrilateral is a parallelogram. Using the definition of parallelogram, calculating the slope of the four sides shows if a figure is a parallelogram or not, i.e. the slopes of the opposite sides must be equal.
 [Algebraic determination that a quadrilateral is a parallelogram code](Programs/Ch06/S03_01_Algebraic_determination_that_a_quadrilateral_is_a_parallelogram.py)
 
-## Rectangles, rhombi, and squares (Rectángulos, rombos, y cuadrados)
+## Rectangles, rhombuses and squares (Rectángulos, rombos y cuadrados)
 [Ch06_S04](https://www.ck12.org/reader/reader-index.html#section/2932958/6.4/9549314)
 
 (Paralelogramos especiales)

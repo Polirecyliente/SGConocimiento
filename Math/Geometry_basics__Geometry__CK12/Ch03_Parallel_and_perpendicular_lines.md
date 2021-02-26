@@ -4,17 +4,21 @@
 <!--
 #T# Table of contents
 
-#C# Parallel lines, skew lines, perpendicular lines, transversals (Líneas paralelas, líneas alabeadas, líneas perpendiculares, transversales)
+#C# Lines and angles (Líneas y ángulos)
 #C# Properties of parallel lines (Propiedades de las líneas paralelas)
 #C# Proving lines parallel (Demostrar el paralelismo entre líneas)
 #C# Properties of perpendicular lines (Propiedades de las líneas perpendiculares)
-#C# Algebra of parallel and perpendicular lines (Álgebra de las líneas paralelas y perpendiculares)
-#C# Distance formula (Fórmula de distancia)
+#C# Parallel and perpendicular lines in the coordinate plane (Líneas paralelas y perpendiculares en el plano coordenado)
+#C# The distance formula (La fórmula de distancia)
 
 #T# Beginning of content
 -->
 
-## Parallel lines, skew lines, perpendicular lines, transversals (Líneas paralelas, líneas alabeadas, líneas perpendiculares, transversales)
+Attribution and License
+![CK-12 Attribution](Images/CK-12_License.png)
+Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
+
+## Lines and angles (Líneas y ángulos)
 [Ch03_S01](https://www.ck12.org/reader/reader-index.html#section/9509902/3.1/9549314)
 
 (Paralelismo en geometría)
@@ -309,7 +313,7 @@ If $\angle A$ and $\angle B$ are adjacent complementary angles, then $m \angle A
 
 If $\angle A$ and $\angle B$ are adjacent angles, with the non-shared sides forming a right angle, then $\angle A$ and $\angle B$ are complementary.
 
-## Algebra of parallel and perpendicular lines (Álgebra de las líneas paralelas y perpendiculares)
+## Parallel and perpendicular lines in the coordinate plane (Líneas paralelas y perpendiculares en el plano coordenado)
 [Ch03_S05](https://www.ck12.org/reader/reader-index.html#section/2932936/3.5/9549314)
 
 (Pendiente de una línea)
@@ -349,7 +353,7 @@ Using the slope-intercept form of a line, parallel lines have the same slope but
 
 The blue line is the first line, the lime green line has a slope that is the opposite of the slope of the blue line. The crimson line is perpendicular to the blue line, and has a slope that is the reciprocal of the slope of the lime green line.
 
-## Distance formula (Fórmula de distancia)
+## The distance formula (La fórmula de distancia)
 [Ch03_S06](https://www.ck12.org/reader/reader-index.html#section/2932937/3.6/9549314)
 
 The distance formula is the application of the Pythagorean theorem in the rectangular coordinate system.
