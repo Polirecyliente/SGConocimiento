@@ -37,7 +37,7 @@
 #C# Geometry definitions (Definiciones de geometría)
 #C# --- Geometry postulates (Postulados de geometría)
 #C# --- Geometry theorems (Teoremas de geometría)
-#C# --- Basic shapes and their formulas (Formas básicas y sus fórmulas)
+#C# --- Basic shapes with their parts and formulas (Formas básicas con sus partes y fórmulas)
 #C# Probability definitions (Definiciones de probabilidad)
 #C# --- Measures of central tendency (Medidas de tendencia central)
 #C# Simplifications (Simplificaciones)
@@ -101,7 +101,11 @@ The use of a letter of the alphabet as a variable or as a constant is determined
 **Evaluate an expression**: this means substitute symbols for specific values and calculate the result, e.g. in $x + 7$ substitute $x$ for $4$ and calculate, $4 + 7 = 11$. Expressions without symbols are ready to be evaluated.
 
 (Subíndice de un símbolo)
-**Subscript of a symbol**: a small number put at the bottom front of a symbol (a constant or a variable), to differentiate between related symbols. For example $(x_1, y_1)$ and $(x_2, y_2)$ represent two different points in the $x$-$y$ plane.
+**Subscript of a symbol | subindex of a symbol**: a small number put at the bottom front of a symbol (a constant or a variable), to differentiate between related symbols. For example $(x_1, y_1)$ and $(x_2, y_2)$ represent two different points in the $x$-$y$ plane.
+
+The subindex of a symbol can also be a variable itself, for example $x_j$ where the subindex $j$ may vary. When not specified, the variable $j$ is a counting number with a maximum value, meaning that the minimum value of $j$ is $1$, and the maximum value is a given constant $n$.
+
+In cases of symbols that have the same subindex but need to represent different values of the subindex, a number can be appended to the subindex, for example $x_{j1}$ and $x_{j2}$ represent the same symbol $x_j$, but with two distinct values of the subindex $j$.
 
 (Símbolo entonces)
 **Then symbol**: the symbol of a double right arrow $\Rightarrow$ is used in mathematics in general, to signify 'then'.
@@ -902,6 +906,11 @@ These logical statements are wrong, because if $p \to q$ is true and $q$ is true
 If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a}{c} = \frac{b}{d}$.
 If $\frac{a}{b} = \frac{c}{d}$, then $\frac{d}{b} = \frac{c}{a}$.
 If $\frac{a}{b} = \frac{c}{d}$, then $\frac{d}{c} = \frac{b}{a}$.
+If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a + b}{b} = \frac{c + d}{d}$.
+If $\frac{a}{b} = \frac{c}{d}$, then $\frac{b}{a} = \frac{d}{c}$, so $\frac{a + b}{a} = \frac{c + d}{c}$.
+If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a - b}{b} = \frac{c - d}{d}$.
+
+More corollaries can be deduced by adding or subtracting different numbers from both sides, and inverting the results.
 
 ### Linear equations (Ecuaciones lineales)
 
@@ -1044,7 +1053,7 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 **Size of a figure**: the amount of space occupied by the figure.
 
 (Figuras similares | Figuras semejantes)
-**Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
+**Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.  This can be said as "corresponding sides of similar figures are proportional", and "corresponding angles of similar figures are congruent".
 
 (Factor de escala)
 **Scale factor**: in two similar figures, the scale factor is the constant that allows getting one figure from the other. Multiplying each length of the first figure by the scale factor, results in the lengths of the second figure. Dividing each length of the second figure by the scale factor, results in the lengths of the first figure.
@@ -1150,6 +1159,9 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 - **Same side exterior angles** (Ángulos conjugados externos): two angles that lie on the exterior area, are distinct, and are on the same side of the transversal, e.g. $\angle 1$ and $\angle 7$ are same side exterior angles, like $\angle 2$ and $\angle 8$.
 
 - **Consecutive angles** (Ángulos consecutivos): same side angles are also known as consecutive angles.
+
+(Proporcionalidad entre transversales)
+**Transversal proportionality**: any set of parallel lines can be crossed by an infinite amount of transversals. The transversals are divided proportionally, so the segments formed by the intersections of each transversal with the parallels, are proportional to those of the other transversals. For example, given three parallels and two transversals, the first transversal with intersections $A$, $B$, and $C$, and the second transversal with intersections $D$, $E$, and $F$ respectively, then there are proportions between the corresponding segments created with the points $A$, $B$, $C$, and the points $D$, $E$, $F$, because of this, it can be said that the figure $ABC$ is similar to the figure $DEF$.
 
 (Ángulo llano)
 **Straight angle**: the angle of half a circle, i.e. $180 \text{\textdegree}$ or $\pi$ radians. Two rays that have this angle form a straight line.
@@ -1365,6 +1377,9 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Converso del teorema de las transversales perpendiculares)
 **Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel. If $l \perp t$ and $m \perp t$, then $l \parallel m$.
 
+(Teorema de la proporcionalidad entre transversales)
+**Transversal proportionality theorem**: given a set of parallel lines, and a set of transversals to the parallels, the transversals are divided proportionally by the parallels, so the segments formed by the intersections of each transversal with the parallels, are proportional to those of the other transversals. Given a set of $m$ parallel lines $l_1$, $l_2$, ..., $l_m$, and a set of $n$ transversals to the parallels $t_1$, $t_2$, ..., $t_n$, the intersections of each transversal with the parallels form $m - 1$ segments. Let $d_{i, j}$ indicate the length of the segment in the transversal $t_i$, between the parallels $l_j$ and $l_{j + 1}$ (so that $j$ can go up to $m - 1$), then $\frac{d_{i1, j1}}{d_{i1, j2}} = \frac{d_{i2, j1}}{d_{i2, j2}}$ for all the possible values of $i$ and $j$ ($i1$ and $i2$ indicate two different values of $i$, the same for $j1$ and $j2$ which are different values of $j$).
+
 (Teorema de la suma de los ángulos interiores de un triángulo)
 **Triangle interior angles sum theorem**: the sum of the interior angles of a triangle, is exactly $\pi$. In $\triangle ABC$, $m \angle A + m \angle B + m \angle C = \pi$
 
@@ -1439,6 +1454,12 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 
 (Corolario del teorema de la bisagra)
 **Corollary of the hinge theorem**: in two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle is congruent to the one from the second triangle, then the remaining side of the first triangle is congruent to the one of the second triangle. In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $\angle B \cong \angle E$, then $AC = DF$.
+
+(Teorema de la proporcionalidad entre triángulos)
+**Triangle proportionality theorem**: in a triangle, any parallel line to one of the sides of the triangle, that intersects the other two sides, divides these other two sides proportionally. In a triangle $\triangle ADE$, if a point $B$ lies in $\overline{AD}$, a point $C$ lies in $\overline{AE}$, and $\overline{BC} \parallel \overline{DE}$, then $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, meaning that a proportion is created, $\frac{BD}{AB} = \frac{CE}{AC}$. Many other proportions can be derived with the corollaries of the cross product theorem and its converse.
+
+(Converso del teorema de la proporcionalidad entre triángulos)
+**Converse of the triangle proportionality theorem**: in a triangle, if a given segment divides two sides proportionally, then the segment is parallel to the other side. In a triangle $\triangle ADE$, if a segment $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, then $\overline{BC} \parallel \overline{DE}$.
 
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
@@ -1518,7 +1539,7 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Teorema del perímetro de figuras similares)
 **Perimeter of similar figures theorem**: given two similar figures, that have a scale factor that measures the ratio of each length from the second figure over the respective length in the first figure, then the ratio of the perimeter of the second figure over the perimeter of the first figure is equal to the scale factor. In two similar figures $Fig_1$ and $Fig_2$, $Fig_1 \sim Fig_2$, with perimeters $P_1$ and $P_2$ respectively, and with a scale factor $k$ to obtain $Fig_2$ from $Fig_1$, then $P_2 = k P_1$.
 
-### Basic shapes and their formulas (Formas básicas y sus fórmulas)
+### Basic shapes with their parts and formulas (Formas básicas con sus partes y fórmulas)
 
 (Marcas de los ángulos)
 **Angle markings**: angles can be marked to differentiate between them. Angles are marked with arc marks (marcas del ángulo). Arc marks are commonly of two types: several repeated arcs, or arcs with small perpendicular lines crossing them.
@@ -1601,6 +1622,9 @@ The configurations AAA and SSA do not necessarily lead to congruent triangles.
 
 (Ortocentro de un triángulo)
 **Orthocenter of a triangle**: in a triangle, the orthocenter is the point of concurrency formed at the intersection of the three altitudes, one from each vertex. The location of the orthocenter depends on the type of triangle. In an obtuse triangle, the orthocenter is outside the triangle. In a right triangle, the orthocenter is the vertex opposite to the hypotenuse. In an acute triangle, the orthocenter is inside the triangle.
+
+(Proporcionalidad entre triángulos)
+**Triangle proportionality**: from any given triangle, an infinite amount of triangles can be created that are proportional and distinct from the given one. This is done by extending two sides indefinitely, and joining them with a segment parallel to the remaining side.
 
 (Perímetro de un triángulo)
 **Triangle perimeter**: let $a$, $b$, $c$, be the lengths of the sides of a triangle, then $P = a + b + c$.

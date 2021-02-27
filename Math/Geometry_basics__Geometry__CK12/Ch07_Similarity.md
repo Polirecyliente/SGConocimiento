@@ -65,12 +65,17 @@ In a ratio, the division operation is not actually made, for example the ratio $
 > If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a}{c} = \frac{b}{d}$.
 > If $\frac{a}{b} = \frac{c}{d}$, then $\frac{d}{b} = \frac{c}{a}$.
 > If $\frac{a}{b} = \frac{c}{d}$, then $\frac{d}{c} = \frac{b}{a}$.
+> If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a + b}{b} = \frac{c + d}{d}$.
+> If $\frac{a}{b} = \frac{c}{d}$, then $\frac{b}{a} = \frac{d}{c}$, so $\frac{a + b}{a} = \frac{c + d}{c}$.
+> If $\frac{a}{b} = \frac{c}{d}$, then $\frac{a - b}{b} = \frac{c - d}{d}$.
+
+More corollaries can be deduced by adding or subtracting different numbers from both sides, and inverting the results.
 
 ## Similar polygons (Polígonos similares)
 [Ch07_S02](https://www.ck12.org/reader/reader-index.html#section/2932963/7.2/9549314)
 
 (Figuras similares | Figuras semejantes)
-**Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.
+**Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional. This can be said as "corresponding sides of similar figures are proportional", and "corresponding angles of similar figures are congruent".
 [Similar figures image code](Programs/Ch07/S01_01_Similar_figures_image.py)
 ![Similar figures image](Images/Ch07/S01_01_Similar_figures.png)
 *Similar figures*
@@ -184,6 +189,78 @@ Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale facto
 
 ## Proportionality relationships (Relaciones de proporcionalidad)
 [Ch07_S05](https://www.ck12.org/reader/reader-index.html#section/2932966/7.5/9549314)
+
+(Proporcionalidad entre triángulos)
+**Triangle proportionality**: from any given triangle, an infinite amount of triangles can be created that are proportional and distinct from the given one. This is done by extending two sides indefinitely, and joining them with a segment parallel to the remaining side.
+[Triangle proportionality image code](Programs/Ch07/S05_01_Triangle_proportionality_image.py)
+![Triangle proportionality image](Images/Ch07/S05_01_Triangle_proportionality.png)
+*Triangle proportionality*
+
+(Teorema de la proporcionalidad entre triángulos)
+**Triangle proportionality theorem**: in a triangle, any parallel line to one of the sides of the triangle, that intersects the other two sides, divides these other two sides proportionally.
+
+> Proof of the triangle proportionality theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ADE$ exists, $\overline{BC} \parallel \overline{DE}$ | Given, from the *Triangle proportionality* image |
+> | $\angle ABC \cong \angle ADE$ and $\angle ACB \cong \angle AED$ | Corresponding angles postulate |
+> | $\triangle ADE \sim \triangle ABC$ | AA triangle similarity postulate |
+> | (1) $AD = AB + BD$ and $AE = AC + CE$ | Segment addition postulate |
+> | (2) $\frac{AD}{AB} = \frac{AE}{AC}$ | Corresponding sides of similar figures are proportional |
+> | $\frac{AB + BD}{AB} = \frac{AC + CE}{AC}$ | Substitution property of equality (substituting (1) into (2)) |
+> | $\frac{AB}{AB} + \frac{BD}{AB} = \frac{AC}{AC} + \frac{CE}{AC}$ | Separating the fraction into two terms |
+> | $1 + \frac{BD}{AB} = 1 + \frac{CE}{AC}$ | Division property of quotient one |
+> | $\frac{BD}{AB} = \frac{CE}{AC}$ | Subtraction property of equality |
+
+In a triangle $\triangle ADE$, if a point $B$ lies in $\overline{AD}$, a point $C$ lies in $\overline{AE}$, and $\overline{BC} \parallel \overline{DE}$, then $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, meaning that a proportion is created, $\frac{BD}{AB} = \frac{CE}{AC}$. Many other proportions can be derived with the corollaries of the cross product theorem and its converse.
+
+(Converso del teorema de la proporcionalidad entre triángulos)
+**Converse of the triangle proportionality theorem**: in a triangle, if a given segment divides two sides proportionally, then the segment is parallel to the other side.
+
+> Proof of the converse of the triangle proportionality theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ADE$ exists and $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally | Given, from the *Triangle proportionality* image |
+> | $\frac{BD}{AB} = \frac{CE}{AC}$ | Definition of proportionality |
+> | $1 + \frac{BD}{AB} = 1 + \frac{CE}{AC}$ | Addition property of equality |
+> | (1) $\frac{AB + BD}{AB} = \frac{AC + CE}{AC}$ | Adding the operands |
+> | (2) $AB + BD = AD$ and $AC + CE = AE$ | Segment addition postulate |
+> | $\frac{AD}{AB} = \frac{AE}{AC}$ | Substitution property of equality (substituting (2) into (1)) |
+> | $\triangle ADE \sim \triangle ABC$ | Corresponding sides of similar figures are proportional |
+> | $\angle ABC \cong \angle ADE$ and $\angle ACB \cong \angle AED$ | Corresponding angles of similar figures are congruent |
+> | $\overline{BC} \parallel \overline{DE}$ | Converse of the corresponding angles postulate |
+
+In a triangle $\triangle ADE$, if a segment $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, then $\overline{BC} \parallel \overline{DE}$.
+
+(Proporcionalidad entre transversales)
+**Transversal proportionality**: any set of parallel lines can be crossed by an infinite amount of transversals. The transversals are divided proportionally, so the segments formed by the intersections of each transversal with the parallels, are proportional to those of the other transversals.
+[Transversal proportionality image code](Programs/Ch07/S05_02_Transversal_proportionality_image.py)
+![Transversal proportionality image](Images/Ch07/S05_02_Transversal_proportionality.png)
+*Transversal proportionality*
+
+There are proportions between the corresponding segments created with the points $A$, $B$, $C$, and the points $D$, $E$, $F$, because of this, it can be said that the figure $ABC$ is similar to the figure $DEF$.
+
+(Teorema de la proporcionalidad entre transversales)
+**Transversal proportionality theorem**: given a set of parallel lines, and a set of transversals to the parallels, the transversals are divided proportionally by the parallels, so the segments formed by the intersections of each transversal with the parallels, are proportional to those of the other transversals.
+
+> Proof of the transversal proportionality theorem
+>
+> Let there be a set of $m$ parallel lines $l_1$, $l_2$, ..., $l_m$, and a set of $n$ transversals to the parallels $t_1$, $t_2$, ..., $t_n$. Let $t_i$ indicate the transversal $i$, and $l_j$ indicate the parallel $j$. Let $i1$ and $i2$ indicate any two distinct values of $i$, and $j1$ and $j2$ indicate any two distinct values of $j$. Let $d_{i, j}$ indicate the length of the segment in the transversal $t_i$, between the parallels $l_j$ and $l_{j + 1}$ (so that $j$ can go up to $m - 1$).
+>
+> There are only two possible scenarios for each transversal $t_i$ with regards to each of the other transversals. Each pair of transversals $t_{i1}$ and $t_{i2}$ either intersect each other at some point if they are not parallel, or they never intersect each other if they are parallel.
+>
+> If $t_{i1}$ and $t_{i2}$ are parallel, then the pairs of segments between any two parallel lines are congruent, because one parallel lines can replace the other and the lengths of the segments are the same, so $d_{i1, j1} = d_{i2, j1}$, $d_{i1, j2} = d_{i2, j2}$, and therefore, by the division property of equality, $\frac{d_{i1, j1}}{d_{i1, j2}} = \frac{d_{i2, j1}}{d_{i2, j2}}$, meaning that the segments are divided proportionally.
+>
+> If $t_{i1}$ and $t_{i2}$ are not parallel, then they intersect each other at a certain point, and they form a triangle with each parallel $l_j$. Because of the triangle proportionality theorem, the parallels divide the transversals proportionally, meaning that $\frac{d_{i1, j1}}{d_{i1, j2}} = \frac{d_{i2, j1}}{d_{i2, j2}}$.
+>
+> As can be seen, in all cases $\frac{d_{i1, j1}}{d_{i1, j2}} = \frac{d_{i2, j1}}{d_{i2, j2}}$ for all the possible values of $i$ and $j$. $\blacksquare$
+
+Given a set of $m$ parallel lines $l_1$, $l_2$, ..., $l_m$, and a set of $n$ transversals to the parallels $t_1$, $t_2$, ..., $t_n$, the intersections of each transversal with the parallels form $m - 1$ segments. Let $d_{i, j}$ indicate the length of the segment in the transversal $t_i$, between the parallels $l_j$ and $l_{j + 1}$ (so that $j$ can go up to $m - 1$), then $\frac{d_{i1, j1}}{d_{i1, j2}} = \frac{d_{i2, j1}}{d_{i2, j2}}$ for all the possible values of $i$ and $j$ ($i1$ and $i2$ indicate two different values of $i$, the same for $j1$ and $j2$ which are different values of $j$).
+
+(Teorema de la proporcionalidad en la bisectriz de un ángulo)
+**Proportionality in an angle bisector theorem**: 
 
 ## Similarity transformations (Transformaciones de similaridad)
 [Ch07_S06](https://www.ck12.org/reader/reader-index.html#section/2932967/7.6/9549314)

@@ -103,7 +103,11 @@ The slope of an horizontal line is $0$ and the slope of a vertical line is undef
 A negative slope means that whenever the value in the $x$-axis increases, the value in the $y$-axis decreases, and vice versa. A positive slope indicates that both values in $x$ and $y$ increase or decrease together.
 
 (Subíndice de un símbolo)
-**Subscript of a symbol**: a small number put at the bottom front of a symbol (a constant or a variable), to differentiate between related symbols. For example $(x_1, y_1)$ and $(x_2, y_2)$ represent two different points in the $x$-$y$ plane.
+**Subscript of a symbol | subindex of a symbol**: a small number put at the bottom front of a symbol (a constant or a variable), to differentiate between related symbols. For example $(x_1, y_1)$ and $(x_2, y_2)$ represent two different points in the $x$-$y$ plane.
+
+The subindex of a symbol can also be a variable itself, for example $x_j$ where the subindex $j$ may vary. When not specified, the variable $j$ is a counting number with a maximum value, meaning that the minimum value of $j$ is $1$, and the maximum value is a given constant $n$.
+
+In cases of symbols that have the same subindex but need to represent different values of the subindex, a number can be appended to the subindex, for example $x_{j1}$ and $x_{j2}$ represent the same symbol $x_j$, but with two distinct values of the subindex $j$.
 
 (Fórmula de la pendiente)
 **Slope formula**: the slope of a line that passes through two given points, is equal to the ratio of the difference of the $y$-axis values of the two points over the difference of the $x$-axis values of the two points.
