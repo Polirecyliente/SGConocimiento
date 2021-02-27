@@ -260,7 +260,30 @@ There are proportions between the corresponding segments created with the points
 Given a set of $m$ parallel lines $l_1$, $l_2$, ..., $l_m$, and a set of $n$ transversals to the parallels $t_1$, $t_2$, ..., $t_n$, the intersections of each transversal with the parallels form $m - 1$ segments. Let $d_{i, j}$ indicate the length of the segment in the transversal $t_i$, between the parallels $l_j$ and $l_{j + 1}$ (so that $j$ can go up to $m - 1$), then $\frac{d_{i1, j1}}{d_{i1, j2}} = \frac{d_{i2, j1}}{d_{i2, j2}}$ for all the possible values of $i$ and $j$ ($i1$ and $i2$ indicate two different values of $i$, the same for $j1$ and $j2$ which are different values of $j$).
 
 (Teorema de la proporcionalidad en la bisectriz de un ángulo)
-**Proportionality in an angle bisector theorem**: 
+**Proportionality in an angle bisector theorem**: in a triangle, the angle bisector of any one of its angles creates a proportion. The angle bisector in a triangle, cuts the opposite side to the angle into two segments. The proportion created is that the first segment cut is to the second segment cut as the first side of the angle is to the second side of the angle bisected.
+[Proportionality in an angle bisector theorem image code](Programs/Ch07/S05_03_Proportionality_in_an_angle_bisector_theorem_image.py)
+![Proportionality in an angle bisector theorem image](Images/Ch07/S05_03_Proportionality_in_an_angle_bisector_theorem.png)
+*Proportionality in an angle bisector theorem*
+
+In this definition, the first side can be any of the two sides of the angle, what matters is that the first segment cut is on the same side of the angle bisector as the first side of the angle, and the same for the second segment cut.
+
+> Proof of the proportionality in an angle bisector theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ABC$ exists, $\overline{BD}$ is an angle bisector of $\angle B$. The point $D$ is the point where $\overline{BD}$ intersects $\overline{AC}$. The auxiliary point $E$ is created such that $A$, $B$, and $E$ are collinear, and $\overline{BD} \parallel \overline{CE}$ | Given |
+> | (1) $\angle ABD \cong \angle AEC$ and $\angle ADB \cong \angle ACE$ | Corresponding angles postulate |
+> | (2) $\angle ABD \cong \angle CBD$ | Definition of angle bisector |
+> | (3) $\angle CBD \cong \angle BCE$ | Alternate interior angles theorem |
+> | $\angle AEC \cong \angle BCE$ | Transitive property of congruence from (1) into (2) into (3) |
+> | $\triangle BCE$ is isosceles | Converse of the base angles theorem |
+> | (4) $BC = BE$ | Definition of isosceles triangle |
+> | $\triangle ABD \sim \triangle AEC$ | AA triangle similarity postulate from (1) |
+> | $\frac{CD}{AD} = \frac{BE}{AB}$ | Triangle proportionality theorem |
+> | $\frac{CD}{AD} = \frac{BC}{AB}$ | Substitution property of equality from (4) |
+> | $\frac{AD}{CD} = \frac{AB}{BC}$ | Corollaries of the cross product theorem and its converse |
+
+In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the side $\overline{AC}$ at a point $D$. This creates the proportion $\frac{AD}{CD} = \frac{AB}{BC}$.
 
 ## Similarity transformations (Transformaciones de similaridad)
 [Ch07_S06](https://www.ck12.org/reader/reader-index.html#section/2932967/7.6/9549314)

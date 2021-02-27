@@ -69,7 +69,7 @@
 | :-------: | :--------------: |
 | Step1     | Reason1          |
 | (1) Step2 | Reason2          |
-| Step3     | From (1) Reason3 |
+| Step3     | Reason3 from (1) |
 *Two column proof template*
 
 Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement. For clarity, a parentheses pair with a number can be added to a step, so that it's clear from which step a given reason stems. In the *Two column proof template* table, Reason3 stems from Step2, this is shown with the parentheses '(1)'.
@@ -1460,6 +1460,11 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 
 (Converso del teorema de la proporcionalidad entre triángulos)
 **Converse of the triangle proportionality theorem**: in a triangle, if a given segment divides two sides proportionally, then the segment is parallel to the other side. In a triangle $\triangle ADE$, if a segment $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, then $\overline{BC} \parallel \overline{DE}$.
+
+(Teorema de la proporcionalidad en la bisectriz de un ángulo)
+**Proportionality in an angle bisector theorem**: in a triangle, the angle bisector of any one of its angles creates a proportion. The angle bisector in a triangle, cuts the opposite side to the angle into two segments. The proportion created is that the first segment cut is to the second segment cut as the first side of the angle is to the second side of the angle bisected. In this definition, the first side can be any of the two sides of the angle, what matters is that the first segment cut is on the same side of the angle bisector as the first side of the angle, and the same for the second segment cut.
+
+In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the side $\overline{AC}$ at a point $D$. This creates the proportion $\frac{AD}{CD} = \frac{AB}{BC}$.
 
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
