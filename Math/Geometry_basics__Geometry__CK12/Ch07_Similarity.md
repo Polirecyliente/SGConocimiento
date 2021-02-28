@@ -154,7 +154,7 @@ Similarity by SSS and SAS apply only to triangles, because of the definitions of
 > 1. Apply the triangle from three sides construction, to draw the first triangle, using the three given sides as the three sides of the construction.
 > 2. Apply the triangle from three sides construction, to draw the second triangle, after multiplying the three sides lengths by any wanted scale factor, and then using the result as the three sides of the construction.
 
-(Teorema LLL de semejanza de triángulo)
+(Teorema LLL de semejanza de triángulos)
 **SSS triangle similarity theorem**: given two triangles, if the sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, then the triangles are similar.
 
 > Proof of the SSS triangle similarity theorem
@@ -320,3 +320,10 @@ The point $D$ is the dilation center, the scale factor $k = 2.5$. As can be seen
 
 ## Self-similarity (Autosimilaridad)
 [Ch07_S07](https://www.ck12.org/reader/reader-index.html#section/2932968/7.7/9549314)
+
+Self-similarity is a property of the figures in which a part of the figure has the same shape as the whole figure, which means that the part is similar to the whole, the figure is similar to itself.
+
+(Fractales)
+**Fractals**: figures that have infinite self-similarity, meaning that in a fractal, each part is similar to the whole, and then each part has subparts similar to the part, and each subpart has subsubparts similar to the subpart, and so on infinitely. Because of this, fractals can be created in iterations. The initial shape before the first iteration is called stage 0 (etapa 0).
+
+<!-- TODO Sierpinski triangle, Koch snowflake, Cantor set -->

@@ -1055,6 +1055,12 @@ Geometry (Geometría) means the study of figures and their spatial properties. S
 (Figuras similares | Figuras semejantes)
 **Similar figures**: figures that have the same shape but not the same size. Similarity (semejanza) is denoted with the $\sim$ symbol. Let $Fig_1$ and $Fig_2$ represent two figures that are similar, this is written as $Fig_1 \sim Fig_2$. Similar figures have their corresponding angles congruent and their corresponding sides proportional.  This can be said as "corresponding sides of similar figures are proportional", and "corresponding angles of similar figures are congruent".
 
+(Autosimilaridad)
+**Self-similarity**: Self-similarity is a property of the figures in which a part of the figure has the same shape as the whole figure, which means that the part is similar to the whole, the figure is similar to itself.
+
+(Fractales)
+**Fractals**: figures that have infinite self-similarity, meaning that in a fractal, each part is similar to the whole, and then each part has subparts similar to the part, and each subpart has subsubparts similar to the subpart, and so on infinitely. Because of this, fractals can be created in iterations. The initial shape before the first iteration is called stage 0 (etapa 0).
+
 (Factor de escala)
 **Scale factor**: in two similar figures, the scale factor is the constant that allows getting one figure from the other. Multiplying each length of the first figure by the scale factor, results in the lengths of the second figure. Dividing each length of the second figure by the scale factor, results in the lengths of the first figure.
 
@@ -1418,7 +1424,7 @@ Dilations are defined with two parts, a center (centro) and an scale factor (fac
 (Teorema de la congruencia de la hipotenusa-cateto)
 **Hypotenuse-leg congruence theorem**: given two right triangles, if the hypotenuse and one leg in one triangle, are congruent to the hypotenuse and one leg in the other triangle, then the two triangles are congruent. In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong \overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
 
-(Teorema LLL de semejanza de triángulo)
+(Teorema LLL de semejanza de triángulos)
 **SSS triangle similarity theorem**: given two triangles, if the sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, then the triangles are similar. Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC} = \frac{EF}{BC}$, then $\triangle ABC \sim \triangle DEF$.
 
 (Teorema LAL de semejanza de triángulos)

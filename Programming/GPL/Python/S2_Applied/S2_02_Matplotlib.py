@@ -732,6 +732,17 @@ arrow1 = mpatches.FancyArrowPatch((.2, .2), (.6, .6), mutation_scale = 12, arrow
 #T# the theta1, theta2 kwargs are numbers used to indicate the starting angle and the ending angle respectively (measured in degrees)
 
 arc1 = mpatches.Arc((3, 2), 1, 1, theta1 = 15, theta2 = 60)
+
+#T# the Polygon patch is used to create polygons according to an array of 2D points
+
+# SYNTAX mpatches.Polygon(tuple1, kwargs1)
+#T# tuple1 is a tuple of 2D tuples, each 2D tuple is a vertex of the polygon, kwargs1 are the kwarg value pairs
+
+#T# the kwargs that can be used here are many of the same kwargs on other patches, such as alpha, facecolor, edgecolor, hatch, etcetera
+
+#T# the closed kwarg is a boolean used to indicate if the polygon is closed or not
+
+mpatches.Polygon(((0, 0), (1, .2), (.7, 1.1)), closed = False, facecolor = 'white', edgecolor = 'blue') #| creates a blue triangle without the third side
 # |--------------------------------------------------/
 
 # |-----
