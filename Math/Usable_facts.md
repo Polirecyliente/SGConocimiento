@@ -1208,6 +1208,26 @@ An angle can be measured in two ways, because there are two ways in which a ray 
 (Bisectriz de un ángulo)
 **Angle bisector**: a line, ray, or segment, that divides a given angle into two congruent angles, each with half the measure of the given angle. Given that the segment $\overline{AC}$ is the angle bisector of the angle $\angle DAB$, then $m \angle DAC = m \angle BAC$.
 
+(Transformaciones geométricas)
+**Geometric transformations**: procedures that take a figure and modify it in different ways. A transformed figure is commonly denoted by appending an apostrophe to its name, or the parts of its name. For example the figure $ABC$ can be transformed into the figure $A'B'C'$, read as figure $A$ prime $B$ prime $C$ prime (figura $A$ prima $B$ prima $C$ prima).
+
+(Transformaciones rígidas)
+**Rigid transformations**: geometric transformations over a figure, that do not change the size of the figure.
+
+(Mapeo de un punto a otro)
+**Mapping from a point to another**: mappings are a way to symbolize geometric transformations in the coordinate plane. Let the point $(x, y)$ be transformed into the point $(x', y')$, this can be denoted as $(x, y) \to (x', y')$, read as the point $(x, y)$ is mapped to $(x', y')$ (el punto $(x, y)$ es mapeado a $(x', y')$).
+
+(Transformación de dilatación)
+**Dilation transformation**: a non-rigid transformation that is used to increase or decrease the size of a figure, to 'dilate' it. The resulting figure of a dilation is similar to the original figure.
+
+Dilations are defined with two parts, a center (centro) and an scale factor (factor de escala). The scale factor is defined the same as the definition already given (it's always greater than zero). The center is the point around which the dilation is performed, the point around which the scale factor is applied. This means that the farther away that the center of dilation is from the figure, the farther away that the resulting dilation is from the original.
+
+(Dilatación de un punto)
+**Point dilation**: the most basic dilation transformation. All dilations can be seen as point dilations applied to each point in a figure, and then connecting the dilated points with corresponding segments. Given a figure consisting of a single point $B$, and a center of dilation $A$, the dilation is a point $C$, such that $AC = k AB$.
+
+(Dilataciones en el plano coordenado)
+**Dilations in the coordinate plane**: a given 2D figure $Fig_1$ is composed of a set of points $(x, y)$ in the coordinate plane. Let $Fig_1$ be dilated with dilation center $C$ located at $(x_C, y_C)$, and scale factor $k$, into the dilation $Fig_1'$. The figure $Fig_1'$ is composed of a set of points $(x', y')$ in the coordinate plane, this can be denoted with the mapping $(x, y) \to (x', y')$. The point $(x', y')$ can be obtained from $C$ and $k$, as $(x', y') = (x_C + k (x - x_C), y_C + k (y - y_C))$. In the case where $C$ is the origin $(0, 0)$, the mapping becomes $(x', y') = (kx, ky)$.
+
 (Medida lineal)
 **Linear measure**: measure for length, like distances, width, height, depth, etcetera, in linear units (unidades lineales).
 

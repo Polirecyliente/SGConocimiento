@@ -9,7 +9,7 @@
 #C# Similarity by AA (Similaridad por AA)
 #C# Similarity by SSS and SAS (Similaridad por LLL y LAL)
 #C# Proportionality relationships (Relaciones de proporcionalidad)
-#C# Similarity transformations (Transformaciones de similaridad)
+#C# Similarity transformations (Transformaciones geométricas de semejanza)
 #C# Self-similarity (Autosimilaridad)
 
 #T# Beginning of content
@@ -285,8 +285,38 @@ In this definition, the first side can be any of the two sides of the angle, wha
 
 In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the side $\overline{AC}$ at a point $D$. This creates the proportion $\frac{AD}{CD} = \frac{AB}{BC}$.
 
-## Similarity transformations (Transformaciones de similaridad)
+## Similarity transformations (Transformaciones geométricas de semejanza)
 [Ch07_S06](https://www.ck12.org/reader/reader-index.html#section/2932967/7.6/9549314)
+
+(Transformaciones geométricas)
+**Geometric transformations**: procedures that take a figure and modify it in different ways. A transformed figure is commonly denoted by appending an apostrophe to its name, or the parts of its name. For example the figure $ABC$ can be transformed into the figure $A'B'C'$, read as figure $A$ prime $B$ prime $C$ prime (figura $A$ prima $B$ prima $C$ prima).
+
+(Transformaciones rígidas)
+**Rigid transformations**: geometric transformations over a figure, that do not change the size of the figure.
+
+(Mapeo de un punto a otro)
+**Mapping from a point to another**: mappings are a way to symbolize geometric transformations in the coordinate plane. Let the point $(x, y)$ be transformed into the point $(x', y')$, this can be denoted as $(x, y) \to (x', y')$, read as the point $(x, y)$ is mapped to $(x', y')$ (el punto $(x, y)$ es mapeado a $(x', y')$).
+
+(Transformación de dilatación)
+**Dilation transformation**: a non-rigid transformation that is used to increase or decrease the size of a figure, to 'dilate' it. The resulting figure of a dilation is similar to the original figure.
+
+Dilations are defined with two parts, a center (centro) and an scale factor (factor de escala). The scale factor is defined the same as the definition already given (it's always greater than zero). The center is the point around which the dilation is performed, the point around which the scale factor is applied. This means that the farther away that the center of dilation is from the figure, the farther away that the resulting dilation is from the original.
+
+(Dilatación de un punto)
+**Point dilation**: the most basic dilation transformation. All dilations can be seen as point dilations applied to each point in a figure, and then connecting the dilated points with corresponding segments.
+[Point dilation image code](Programs/Ch07/S06_01_Point_dilation_image.py)
+![Point dilation image](Images/Ch07/S06_01_Point_dilation.png)
+*Point dilation*
+
+Given a figure consisting of a single point $B$, and a center of dilation $A$, the dilation is a point $C$, such that $AC = k AB$. In the image, $k = 3$.
+
+(Dilataciones en el plano coordenado)
+**Dilations in the coordinate plane**: a given 2D figure $Fig_1$ is composed of a set of points $(x, y)$ in the coordinate plane. Let $Fig_1$ be dilated with dilation center $C$ located at $(x_C, y_C)$, and scale factor $k$, into the dilation $Fig_1'$. The figure $Fig_1'$ is composed of a set of points $(x', y')$ in the coordinate plane, this can be denoted with the mapping $(x, y) \to (x', y')$. The point $(x', y')$ can be obtained from $C$ and $k$, as $(x', y') = (x_C + k (x - x_C), y_C + k (y - y_C))$. In the case where $C$ is the origin $(0, 0)$, the mapping becomes $(x', y') = (kx, ky)$.
+[Dilations in the coordinate plane image code](Programs/Ch07/S06_02_Dilations_in_the_coordinate_plane_image.py)
+![Dilations in the coordinate plane image](Images/Ch07/S06_02_Dilations_in_the_coordinate_plane.png)
+*Dilations in the coordinate plane*
+
+The point $D$ is the dilation center, the scale factor $k = 2.5$. As can be seen, the dilation is created by doing a point dilation to each original point individually.
 
 ## Self-similarity (Autosimilaridad)
 [Ch07_S07](https://www.ck12.org/reader/reader-index.html#section/2932968/7.7/9549314)
