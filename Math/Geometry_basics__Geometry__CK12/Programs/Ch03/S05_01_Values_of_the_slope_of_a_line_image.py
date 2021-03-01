@@ -10,7 +10,7 @@ import matplotlib.patches as mpatches
 import numpy as np
 
 #T# create the figure and axes
-fig1, axes1 = plt.subplots(2, 2)
+fig1, ax_list1 = plt.subplots(2, 2)
 
 #T# set the aspect of the axes
 for it1 in fig1.axes:
@@ -62,10 +62,10 @@ for it1 in fig1.axes:
     it1.plot(8.3, 0, '>k', clip_on = False)
 
 #T# title the axes
-fig1.axes[0].set_title('Positive slope', y = 1.1)
-fig1.axes[1].set_title('Negative slope', y = 1.1)
-fig1.axes[2].set_title('Zero slope', y = 1.1)
-fig1.axes[3].set_title('Undefined slope', y = 1.1)
+ax_list1[0][0].set_title('Positive slope', y = 1.1)
+ax_list1[0][1].set_title('Negative slope', y = 1.1)
+ax_list1[1][0].set_title('Zero slope', y = 1.1)
+ax_list1[1][1].set_title('Undefined slope', y = 1.1)
 
 #T# layout the subplots
 fig1.tight_layout()
@@ -88,10 +88,10 @@ line1 = mpatches.FancyArrowPatch(p1_1, p2_1, color = 'cornflowerblue', arrowstyl
 line2 = mpatches.FancyArrowPatch(p1_2, p2_2, color = 'cornflowerblue', arrowstyle = '<->', mutation_scale = 16)
 line3 = mpatches.FancyArrowPatch(p1_3, p2_3, color = 'cornflowerblue', arrowstyle = '<->', mutation_scale = 16)
 line4 = mpatches.FancyArrowPatch(p1_4, p2_4, color = 'cornflowerblue', arrowstyle = '<->', mutation_scale = 16)
-fig1.axes[0].add_patch(line1)
-fig1.axes[1].add_patch(line2)
-fig1.axes[2].add_patch(line3)
-fig1.axes[3].add_patch(line4)
+ax_list1[0][0].add_patch(line1)
+ax_list1[0][1].add_patch(line2)
+ax_list1[1][0].add_patch(line3)
+ax_list1[1][1].add_patch(line4)
 
 #T# show the results
 plt.show()

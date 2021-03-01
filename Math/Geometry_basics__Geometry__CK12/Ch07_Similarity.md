@@ -141,6 +141,10 @@ As shown, $\triangle ABC \sim \triangle ADE$. In indirect measurement, the lengt
 > 4. Calculate the scale factor $k$ to obtain $\triangle ADE$ from $\triangle ABC$, $k = \frac{AD}{AB}$.
 > 5. Calculate $DE$ which is the indirect measurement, as $DE = k BC$.
 
+(Medición indirecta usando un triángulo recto)
+**Indirect measurement using a right triangle**: there is a different way to do indirect measurement, that doesn't require a smaller similar triangle.
+In $\triangle ABC$, if $\angle B$ is a right angle, $C$ is the unreachable point, and $BC$ is the length to measure indirectly, then $BC = AB tan(\angle A)$, where $tan$ is the tangent function, so $\angle A$ and $AB$ must be measured.
+
 ## Similarity by SSS and SAS (Similaridad por LLL y LAL)
 [Ch07_S04](https://www.ck12.org/reader/reader-index.html#section/2932965/7.4/9549314)
 
@@ -324,6 +328,63 @@ The point $D$ is the dilation center, the scale factor $k = 2.5$. As can be seen
 Self-similarity is a property of the figures in which a part of the figure has the same shape as the whole figure, which means that the part is similar to the whole, the figure is similar to itself.
 
 (Fractales)
-**Fractals**: figures that have infinite self-similarity, meaning that in a fractal, each part is similar to the whole, and then each part has subparts similar to the part, and each subpart has subsubparts similar to the subpart, and so on infinitely. Because of this, fractals can be created in iterations. The initial shape before the first iteration is called stage 0 (etapa 0).
+**Fractals**: figures that have infinite self-similarity, meaning that in a fractal, each part is similar to the whole, and then each part has subparts similar to the part, and each subpart has subsubparts similar to the subpart, and so on infinitely. Because of this, fractals can be created in iterations. The initial shape before the first iteration is called stage 0 (etapa 0), and then the result of each iteration is the respective stage.
 
-<!-- TODO Sierpinski triangle, Koch snowflake, Cantor set -->
+(Triángulo de Sierpinski)
+**Sierpinski triangle**: a triangle fractal with infinite upside down triangles inside. The stage 0 shape is a triangle (commonly an equilateral triangle, but it doesn't have to be).
+
+Every triangle has a smaller similar triangle that is formed with its midsegments, with a scale factor of $1/2$ because of the midsegment of a triangle theorem. The smaller similar triangle is always upside down, relative to the initial triangle. The Sierpinski triangle is created by 'cutting out', or coloring the smaller similar upside down triangle formed with the midsegments. For this work, lets call the 'smaller similar upside down triangle formed with the midsegments' simply as the 'upside down triangle' because that's the most important visual feature for the Sierpinski triangle.
+
+To create this fractal, the first iteration colors the only one upside down triangle, in the result there are now three non-colored triangles, one in each side of the colored triangle. The second iteration colors the three upside down triangles inside the three non-colored triangles from iteration 1, this leaves now 9 non-colored triangles. The next iteration colors all the upside down triangles inside all the non-colored triangles from the former iteration, and so on.
+[Sierpinski triangle image code](Programs/Ch07/S07_01_Sierpinski_triangle_image.py)
+![Sierpinski triangle image](Images/Ch07/S07_01_Sierpinski_triangle.png)
+*Sierpinski triangle*
+
+(Cantidad de triángulos por etapa en un triángulo de Sierpinski)
+**Amount of triangles per stage in a Sierpinski triangle**: the amounts of non-colored triangles and of colored triangles in a Sierpinski triangle, follow certain patterns.
+
+> Amount of non-colored triangles in a Sierpinski triangle
+>
+> The amount of non-colored triangles $NCT_n$ of stage $n$ is $NCT_n = 3^n$ where $n = 0, 1, 2, ...$, because in stage 0 there is only $1 = 3^0$ non-colored triangle. In stage 1, the colored triangle divides the initial triangle into $3 = 3^1$ non-triangles. The logic here is that each colored triangle will divide its container non-colored triangle into three non-colored triangles. So in stage 2, the $3$ non-colored triangles are divided into $3 \cdot 3 = 9$ non-colored triangles. In stage 3, the $9$ non-colored triangles are divided into $9 \cdot 3 = 27$ non-colored triangles, and so on.
+
+> Amount of colored triangles in a Sierpinski triangle
+>
+> The amount of colored triangles $CT_n$ of stage $n$ is $CT_n = CT_{n - 1} + NCT_{n - 1}$, with $CT_0 = 0$, because in stage 0 there are $0$ colored triangles, in stage 1 there is $1$ colored triangle which comes from the $1$ non-colored triangle from stage 0. In stage 2 there are $4$ colored triangles, $1$ colored triangle from stage 1 and $3$ new ones from stage 1, and so on.
+
+(Copo de nieve de Koch)
+**Koch snowflake**: a triangle fractal with infinite similar triangles, one coming out of the center third of each side. The stage 0 shape is a triangle (commonly an equilateral triangle, but it doesn't have to be).
+
+To create this fractal, the first iteration divides each side of the initial triangle into three thirds, a triangle similar to the initial one is drawn in the center third, such that the sides of the new triangle are placed parallel to the initial triangle. The second iteration divides each side that resulted from iteration 1 into three thirds and the process is repeated (draw a similar triangle in the center third with its sides parallel to the initial one), and so on. This procedure causes that the new triangles from an iteration are upside down from the triangles in the former iteration, because of the need to maintain corresponding sides parallel.
+[Koch snowflake image code](Programs/Ch07/S07_02_Koch_snowflake_image.py)
+![Koch snowflake image](Images/Ch07/S07_02_Koch_snowflake.png)
+*Koch snowflake*
+
+(Lados y longitud por lado en un copo de nieve de Koch)
+**Sides and length per side in a Koch snowflake**: the amount of sides and the length per side in a Koch snowflake, both follow certain patterns.
+
+> Amount of sides in a Koch snowflake
+>
+> The amount of sides $s_n$ of stage $n$ is $s_n = 3 \cdot 4^n$, because in stage 0 there are only the $3 = 3 \cdot 4^0$ sides of the initial triangle. In stage 1, each one of the $3$ sides of the triangle gives origin to $4$ new sides, for a total of $12 = 3 \cdot 4^1$ sides in total for stage 1, because each side of stage 0 is divided in three parts but the center third is divided into two sides of the smaller new triangle, resulting in $4$ new sides, and so on for the rest of stages (each side creates $4$ new sides).
+
+> Length per side in a Koch snowflake
+>
+> The length per side is $1/3$ of the side that it stems from. If a Koch snowflake is created from an scalene triangle, then each there are three lengths, one for each side of the initial triangle. The length per side $l_{i, n}$ parallel to the side $i$ of the initial triangle in stage $n$, is $l_{i, n} = \frac{L_i}{3^n}$, where $L_i$ is the length of the side $i$ of the initial triangle. This is because stage $n$ divides each side in thirds (which explains the denominator $3^n$), and the length of the initial triangle from which each side is divided is $L_i$.
+
+(Conjunto de Cantor)
+**Cantor set**: a segment fractal with infinite smaller subsegments, each originated by dividing a previous segment into three thirds and removing the center third. The stage 0 shape is a segment.
+
+To create this fractal, the first iteration divides the initial segment into three thirds and removes the center third. The second iteration takes the two subsegments that resulted from the first iteration, and divides them into three thirds and removes the center third, and so on.
+[Cantor set image code](Programs/Ch07/S07_03_Cantor_set_image.py)
+![Cantor set image](Images/Ch07/S07_03_Cantor_set.png)
+*Cantor set*
+
+(Cantidad de subsegmentos y longitud por subsegmento en un conjunto de Cantor)
+**Amount of subsegments and length per subsegment in a Cantor set**: the amount of subsegments and the length per subsegment in a Cantor set, both follow certain patterns.
+
+> Amount of subsegments in a Cantor set
+>
+> The amount of subsegments $s_n$ of stage $n$ is $s_n = 2^n$, because dividing a segment into three thirds and then removing the center third leaves only two subsegments each time, and given that all subsegments undergo this process in each iteration, the result is that the amount of subsegments is double the amount of subsegments in the previous iteration.
+
+> Length per subsegment in a Cantor set
+>
+> The length per subsegment $l_n$ of stage $n$ is $l_n = \frac{L}{3^n}$, where $L$ is the length of the initial segment. This is because the initial segment is divided into thirds each iteration.
