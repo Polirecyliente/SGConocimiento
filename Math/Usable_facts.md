@@ -665,6 +665,9 @@ The order in which to execute the operations. In $5 + \frac{10}{2}$, the result 
 (Valor absoluto)
 **Absolute value**: the distance between 0 and a given number, it's always positive and it's the same for any number and its opposite. For a given number $a$, its absolute value is denoted as $\lvert a \rvert$, e.g. $\lvert 5 \rvert = \lvert -5 \rvert = 5$.
 
+(Ternas pitagóricas)
+**Pythagorean triples**: groups of three counting numbers that can make the lengths of the sides of a right triangle. For example $3$, $4$, and $5$ are counting numbers that can build a right triangle because $5^2 = 3^2 + 4^2 = 25 = 9 + 16$. Multiples of a pythagorean triple are also pythagorean triples, for example $9$, $12$, and $15$, because $15^2 = 9^2 + 12^2 = 225 = 81 + 144$.
+
 ### Multiples and factors of integers (Múltiplos y factores de los enteros)
 
 (Múltiplos de un número)
@@ -1492,6 +1495,12 @@ Dilations are defined with two parts, a center (centro) and an scale factor (fac
 
 In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the side $\overline{AC}$ at a point $D$. This creates the proportion $\frac{AD}{CD} = \frac{AB}{BC}$.
 
+(Teorema de Pitágoras)
+**Pythagorean theorem**: in a right triangle, the hypotenuse squared has the same value as the sum of each leg squared. Let $a$, $b$, $c$, be the sides of a right triangle, with $a$ and $b$ being the legs, and $c$ being the hypotenuse, then $c^2 = a^2 + b^2$.
+
+(Longitud del cateto en un triángulo rectángulo)
+**Length of the leg in a right triangle**: in a right triangle with hypotenuse of length $c$, and legs of lengths $a$ and $b$, $a = \sqrt{c^2 - b^2}$, $b = \sqrt{c^2 - a^2}$. This can be considered as a corollary of the pythagorean theorem.
+
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
 
@@ -1598,9 +1607,6 @@ In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the s
 
 (Suma de los ángulos de un triángulo)
 **Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180 \text{\textdegree}$ or $\pi$ radians. Let $A$, $B$, $C$, be three vertices that form a triangle, then $m \angle A + m \angle B + m \angle C = \pi$.
-
-(Teorema de Pitágoras)
-**Pythagorean theorem**: in a right triangle, the hypotenuse squared has the same value as the sum of each leg squared. Let $a$, $b$, $c$, be the sides of a right triangle, with $a$ and $b$ being the legs, and $c$ being the hypotenuse, then $c^2 = a^2 + b^2$.
 
 (Triángulo rectángulo)
 **Right triangle**: a triangle in which one of its angles measures $90 \text{\textdegree}$ or $\pi/2$ radians, i.e. a triangle with a right angle. The right angle is denoted in the triangle with a square.
@@ -2186,6 +2192,6 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 (Medición indirecta)
 **Indirect measurement**: a way to measure lengths that can't be accessed directly (lengths to places that are unreachable), using triangle similarity. For example, this can serve to measure lengths such as the width of a river, or the height of a tall building. It's an algorithm.
 
-(Medición indirecta usando un triángulo recto)
+(Medición indirecta usando un triángulo rectángulo)
 **Indirect measurement using a right triangle**: there is a different way to do indirect measurement, that doesn't require a smaller similar triangle.
 In $\triangle ABC$, if $\angle B$ is a right angle, $C$ is the unreachable point, and $BC$ is the length to measure indirectly, then $BC = AB tan(\angle A)$, where $tan$ is the tangent function, so $\angle A$ and $AB$ must be measured.

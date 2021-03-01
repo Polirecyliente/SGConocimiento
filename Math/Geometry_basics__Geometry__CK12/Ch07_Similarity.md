@@ -141,7 +141,7 @@ As shown, $\triangle ABC \sim \triangle ADE$. In indirect measurement, the lengt
 > 4. Calculate the scale factor $k$ to obtain $\triangle ADE$ from $\triangle ABC$, $k = \frac{AD}{AB}$.
 > 5. Calculate $DE$ which is the indirect measurement, as $DE = k BC$.
 
-(Medición indirecta usando un triángulo recto)
+(Medición indirecta usando un triángulo rectángulo)
 **Indirect measurement using a right triangle**: there is a different way to do indirect measurement, that doesn't require a smaller similar triangle.
 In $\triangle ABC$, if $\angle B$ is a right angle, $C$ is the unreachable point, and $BC$ is the length to measure indirectly, then $BC = AB tan(\angle A)$, where $tan$ is the tangent function, so $\angle A$ and $AB$ must be measured.
 
