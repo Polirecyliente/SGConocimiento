@@ -33,6 +33,47 @@ The pythagorean theorem and its proof have already been introduced (see Ch03_Par
 ## Converse of the pythagorean theorem (Converso del teorema de Pitágoras)
 [Ch08_S02](https://www.ck12.org/reader/reader-index.html#section/2932972/8.2/9549314)
 
+In a triangle, if the longest side squared is equal to the sum of the other two sides squared, then the triangle is a right triangle, with the right angle being the angle opposite to the longest side.
+
+> Proof of the converse of the pythagorean theorem
+>
+> Let $\triangle ABC$ have sides with lengths $a$, $b$, and $c$, and let $c^2 = a^2 + b^2$. $\triangle ABC$ is a right triangle with $\angle C$ being the right angle which is the angle opposite to $c$, because any right triangle $\triangle DEF$ with hypotenuse $c$ and legs $a$ and $b$ has $c^2 = a^2 + b^2$. $\blacksquare$
+
+In a triangle $\triangle ABC$ with sides with lengths $a$, $b$, and $c$, if $c^2 = a^2 + b^2$, then $\triangle ABC$ is a right triangle with $\angle C$ being the right angle opposite to the side $c$.
+
+(Teorema de identificación de triángulos agudos)
+**Identification of acute triangles theorem**: in a triangle, if the longest side squared is less than the sum of the other two sides squared, then the triangle is an acute triangle.
+
+> Proof of the identification of acute triangles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\triangle ABC$ have sides with lengths $a$, $b$, and $c$, let $c$ be the longest side, and $c^2 < a^2 + b^2$. Let $\triangle DEF$ be a right triangle with sides $a$, $b$, $f$, such that $f^2 = a^2 + b^2$. $c$ is opposite to $\angle C$ and $f$ is opposite to $\angle F$. $\angle F$ is a right angle | Given |
+> | $c^2 < f^2$ | Transitive property of equality |
+> | $c < f$ | Taking the square root of both sides preserves the inequality |
+> | $m \angle C < m \angle F$ | Converse of the hinge theorem |
+> | $m \angle C < \pi/2$ | Definition of right angle |
+> | $m \angle C > m \angle A$ and $m \angle C > m \angle B$ | Triangle longer side theorem |
+> | $\triangle ABC$ is an acute triangle | Definition of acute triangle |
+
+In a triangle $\triangle ABC$ with sides with lengths $a$, $b$, and $c$, and $c$ being the longest side, if $c^2 < a^2 + b^2$, then $\triangle ABC$ is an acute triangle.
+
+(Teorema de identificación de triángulos obtusos)
+**Identification of obtuse triangles theorem**: in a triangle, if the longest side squared is greater than the sum of the other two sides squared, then the triangle is an obtuse triangle.
+
+> Proof of the identification of obtuse triangles theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | Let $\triangle ABC$ have sides with lengths $a$, $b$, and $c$, let $c$ be the longest side, and $c^2 > a^2 + b^2$. Let $\triangle DEF$ be a right triangle with sides $a$, $b$, $f$, such that $f^2 = a^2 + b^2$. $c$ is opposite to $\angle C$ and $f$ is opposite to $\angle F$. $\angle F$ is a right angle | Given |
+> | $c^2 > f^2$ | Transitive property of equality |
+> | $c > f$ | Taking the square root of both sides preserves the inequality |
+> | $m \angle C > m \angle F$ | Converse of the hinge theorem |
+> | $m \angle C > \pi/2$ | Definition of right angle |
+> | $\triangle ABC$ is an obtuse triangle | Definition of obtuse triangle |
+
+In a triangle $\triangle ABC$ with sides with lengths $a$, $b$, and $c$, and $c$ being the longest side, if $c^2 > a^2 + b^2$, then $\triangle ABC$ is an obtuse triangle.
+
 ## Using similar right triangles (Usando triángulos rectángulos similares)
 [Ch08_S03](https://www.ck12.org/reader/reader-index.html#section/2932973/8.3/9549314)
 
