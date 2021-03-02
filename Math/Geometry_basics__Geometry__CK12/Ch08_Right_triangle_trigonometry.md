@@ -108,12 +108,52 @@ The geometric mean $GM(x)$ is the number whose repeated multiplication is the sa
 
 To understand this, consider the definition of geometric mean applied to only two numbers. Let $GM$ be the geometric mean of $x_1$ and $x_2$, so $GM = \sqrt{x_1 x_2}$. Representing this equation as a proportion, $GM^2 = x_1 x_2$, then $\frac{GM}{x_2} = \frac{x_1}{GM}$, and reordering $\frac{x_1}{GM} = \frac{GM}{x_2}$. This shows the numbers $x_1$ and $x_2$ as the extremes of the proportion, and $GM$ as the means of the proportion.
 
-Because of the inscribed similar right triangles theorem, in a right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$. The altitude of $\triangle ABC$ is $\overline{AD}$.
+Because of the inscribed similar right triangles theorem, in a right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$. The altitude of $\triangle ABC$ is $\overline{AD}$ (see the *Inscribed similar right triangles* image).
 
 From $\triangle DAC \sim \triangle DBA$, $\frac{BD}{AD} = \frac{AD}{CD}$, which shows that the altitude $\overline{AD}$ is the geometric mean of the segments divided by $D$ in $\overline{BC}$. From $\triangle ABC \sim \triangle DBA$, $\frac{BD}{AB} = \frac{AB}{BC}$, which shows that the leg $\overline{AB}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AB}$. From $\triangle ABC \sim \triangle DAC$, $\frac{CD}{AC} = \frac{AC}{BC}$, which shows that the leg $\overline{AC}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AC}$.
 
 ## Special right triangles (Triángulos rectángulos especiales)
 [Ch08_S04](https://www.ck12.org/reader/reader-index.html#section/2932974/8.4/9549314)
+
+(Triángulo rectángulo isósceles)
+**Isosceles right triangle**: a right triangle with congruent legs. Because of this definition, the three angles are always the same, $\pi/2$ for the right angle, and $\pi/4$ and $\pi/4$ for the base angles, so all isosceles right triangles are similar.
+[Isosceles right triangle image code](Programs/Ch08/S04_01_Isosceles_right_triangle_image.py)
+![Isosceles right triangle image](Images/Ch08/S04_01_Isosceles_right_triangle.png)
+*Isosceles right triangle*
+
+(Hipotenusa de un triángulo rectángulo isósceles)
+**Hypotenuse of an isosceles right triangle**: the length of the legs $l$ is the same for both legs. The length of the hypotenuse is $h = \sqrt{2} l$.
+
+> Hypotenuse of an isosceles right triangle
+>
+> Let an isosceles right triangle have an hypotenuse with length $h$ and legs with length $l$. By the pythagorean theorem $h^2 = l^2 + l^2 = 2 l^2$, so $h = \sqrt{2 l^2} = \sqrt{2} l$.
+
+(Triángulo 30 60 90)
+**30-60-90 triangle**: a right triangle with angles of 30, 60 and 90 degrees (or $\pi/6$, $\pi/3$ and $\pi/2$ in radians). Because of this definition, a 30-60-90 triangle can be seen as an equilateral triangle cut by an altitude in half.
+[30-60-90 triangle image code](Programs/Ch08/S04_02_30-60-90_triangle_image.py)
+![30-60-90 triangle image](Images/Ch08/S04_02_30-60-90_triangle.png)
+*30-60-90 triangle*
+
+(Lados de un triángulo 30 60 90)
+**Sides of a 30-60-90 triangle**: all the lengths of the sides in a 30-60-90 triangle can be known from the hypotenuse.
+
+> Sides of a 30-60-90 triangle
+>
+> In a 30-60-90 triangle, let $h$ be the length of the hypotenuse, which is the side opposite to the 90 degrees angle. Let $l_1$ be the length of the smaller leg, which is the side opposite to the 30 degrees angle, and let $l_2$ be the length of the longer leg, which is the side opposite to the 60 degrees angle. To find $l_1$, consider that it is half the side of the equilateral triangle that contains the 30-60-90 triangle, so
+> $$l_1 = \frac{h}{2}$$
+>
+> Now, by the pythagorean theorem
+>
+> $$\begin{gathered}
+h^2 = {l_1}^2 + {l_2}^2\\
+l_2 = \sqrt{h^2 - {l_1}^2}\\
+l_2 = \sqrt{h^2 - {\frac{h}{2}}^2}\\
+l_2 = \sqrt{h^2 - \frac{h^2}{4}}\\
+l_2 = \sqrt{\frac{3}{4} h^2}\\
+l_2 = \frac{\sqrt{3}}{2} h
+\end{gathered}$$
+
+In a 30-60-90 triangle, given $h$ as the length of the hypotenuse, $l_1$ as the length opposite to the 30 degrees angle, and $l_2$ as the length opposite to the 60 degress angle, then $l_1 = \frac{h}{2}$, and $l_2 = \frac{\sqrt{3}}{2} h$.
 
 ## Tangent, sine and cosine (Tangente, seno y coseno)
 [Ch08_S05](https://www.ck12.org/reader/reader-index.html#section/2932975/8.5/9549314)

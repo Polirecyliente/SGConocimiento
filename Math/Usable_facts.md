@@ -804,6 +804,7 @@ As a particular example, let $p$ be the event 'I am healthy today', and $q$ be t
 **Law of detachment**: given two facts as true, that there exists a conditional statement and that the hypothesis of said conditional statement happens, the conclusion of the conditional statement can be deduced as a third true fact with no need for any other information. Let $p$, $q$ be two events, let $p$ be true, and let the conditional $p \to q$ be also true, then $q$ is true by deduction. The law of detachment is also known as modus ponendo ponens, which is latin for the mode that by affirming affirms.
 
 The law of detachment is written as follows.
+
 $$\begin{gathered}
 p \to q\\
 p\\
@@ -816,6 +817,7 @@ The $\therefore$ symbol is the therefore symbol, read as therefore (por lo tanto
 **Law of contrapositive**: given two facts as true, that there exists a conditional statement and that the consecuent negated happens, then the negation of the antecedent can be deduced as a third true fact. Let $p$, $q$ be two events, let the conditional $p \to q$ be true and let $\neg q$ be also true, then $\neg p$ is true by deduction.
 
 The law of contrapositive is written as follows.
+
 $$\begin{gathered}
 p \to q\\
 \neg q\\
@@ -829,6 +831,7 @@ This law is true because the contrapositive of a conditional is logically equiva
 
 The law of syllogism is written as follows.
 Let $p$, $q$, $r$, $s$ events, then
+
 $$\begin{gathered}
 p \to q\\
 q \to r\\
@@ -870,6 +873,7 @@ The following is a truth table for the statement $p \land (\neg q \lor r)$.
 **Fallacy of the converse**: also known as affirming the consequent (afirmación del consecuente), this fallacy states that given two true facts, a conditional statement and the consequent of said conditional, then the antecedent is deduced as being true.
 
 Let $p$, $q$ be two events, then
+
 $$\begin{gathered}
 p \to q\\
 q\\
@@ -1628,6 +1632,15 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 (Triángulos rectángulos inscritos similares)
 **Inscribed similar right triangles**: right triangles inscribed inside other right triangles that are similar.
 
+(Media geométrica en triángulos rectángulos)
+**Geometric mean in right triangles**: there are at least three geometric means in a right triangle, the two legs and the altitude from the right angle are all geometric means of different segments.
+
+To understand this, consider the definition of geometric mean applied to only two numbers. Let $GM$ be the geometric mean of $x_1$ and $x_2$, so $GM = \sqrt{x_1 x_2}$. Representing this equation as a proportion, $GM^2 = x_1 x_2$, then $\frac{GM}{x_2} = \frac{x_1}{GM}$, and reordering $\frac{x_1}{GM} = \frac{GM}{x_2}$. This shows the numbers $x_1$ and $x_2$ as the extremes of the proportion, and $GM$ as the means of the proportion.
+
+Because of the inscribed similar right triangles theorem, in a right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$. The altitude of $\triangle ABC$ is $\overline{AD}$.
+
+From $\triangle DAC \sim \triangle DBA$, $\frac{BD}{AD} = \frac{AD}{CD}$, which shows that the altitude $\overline{AD}$ is the geometric mean of the segments divided by $D$ in $\overline{BC}$. From $\triangle ABC \sim \triangle DBA$, $\frac{BD}{AB} = \frac{AB}{BC}$, which shows that the leg $\overline{AB}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AB}$. From $\triangle ABC \sim \triangle DAC$, $\frac{CD}{AC} = \frac{AC}{BC}$, which shows that the leg $\overline{AC}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AC}$.
+
 (Triángulo obtuso)
 **Obtuse triangle**: a triangle that has one obtuse angle.
 
@@ -1653,6 +1666,18 @@ Right triangles have three sides, one hypotenuse (hipotenusa) which is the side 
 **Congruent triangles**: given two triangles, they are congruent if their corresponding sides are congruent and their corresponding angles are congruent. The congruence $\triangle ABC \cong \triangle DEF$, is true when $\overline{AB} \cong \overline{DE}$, $\overline{AC} \cong \overline{DF}$, $\overline{BC} \cong \overline{EF}$, $\angle A \cong \angle D$, $\angle B \cong \angle E$, and $\angle C \cong \angle F$. This can be expressed as "corresponding parts of congruent triangles are congruent". In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
 
 The configurations AAA and SSA do not necessarily lead to congruent triangles.
+
+(Triángulo rectángulo isósceles)
+**Isosceles right triangle**: a right triangle with congruent legs. Because of this definition, the three angles are always the same, $\pi/2$ for the right angle, and $\pi/4$ and $\pi/4$ for the base angles, so all isosceles right triangles are similar.
+
+(Hipotenusa de un triángulo rectángulo isósceles)
+**Hypotenuse of an isosceles right triangle**: the length of the legs $l$ is the same for both legs. The length of the hypotenuse is $h = \sqrt{2} l$, because by the pythagorean theorem $h^2 = l^2 + l^2 = 2 l^2$, so $h = \sqrt{2 l^2} = \sqrt{2} l$.
+
+(Triángulo 30 60 90)
+**30-60-90 triangle**: a right triangle with angles of 30, 60 and 90 degrees (or $\pi/6$, $\pi/3$ and $\pi/2$ in radians). Because of this definition, a 30-60-90 triangle can be seen as an equilateral triangle cut by an altitude in half.
+
+(Lados de un triángulo 30 60 90)
+**Sides of a 30-60-90 triangle**: all the lengths of the sides in a 30-60-90 triangle can be known from the hypotenuse. In a 30-60-90 triangle, given $h$ as the length of the hypotenuse, $l_1$ as the length opposite to the 30 degrees angle, and $l_2$ as the length opposite to the 60 degress angle, then $l_1 = \frac{h}{2}$, and $l_2 = \frac{\sqrt{3}}{2} h$.
 
 (Segmento medio de un triángulo)
 **Midsegment of a triangle**: in a triangle, the midsegment is a segment that connects the two midpoints of adjacent sides. In a triangle $\triangle ABC$, if $D$ is the midpoint of $\overline{AC}$, and $E$ is the midpoint of $\overline{BC}$, then the segment $\overline{DE}$ is a midsegment of the triangle $\triangle ABC$. Every triangle has three midsegments.
