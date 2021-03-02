@@ -16,7 +16,7 @@
 
 Attribution and License
 ![CK-12 Attribution](Images/CK-12_License.png)
-Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
+Only the chapter name and the sections names are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
 
 ## Lines and angles (Líneas y ángulos)
 [Ch03_S01](https://www.ck12.org/reader/reader-index.html#section/9509902/3.1/9549314)

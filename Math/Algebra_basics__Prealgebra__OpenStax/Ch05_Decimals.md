@@ -129,6 +129,8 @@ An equation with decimals can have a decimal solution, just like a regular solut
 > Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then
 > $$\bar{x} = \frac{x_1 + x_2 + ... + x_i + ... + x_N}{N} = \sum_i{\frac{x_i}{N}}$$
 
+The mean is the number $\bar{x}$ whose repeated addition with itself $N$ times results in the same value as the sum of the original values $\sum_i{x_i}$, so if the mean $\bar{x}$ replaced each number $x_i$, then the total sum would be the same.
+
 (Mediana)
 **Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
 

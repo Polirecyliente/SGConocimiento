@@ -17,7 +17,7 @@
 
 Attribution and License
 ![CK-12 Attribution](Images/CK-12_License.png)
-Only the chapter name and the sections names, in English, are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
+Only the chapter name and the sections names are licensed under the CK-12 Curriculum Materials License, because they are copied from the 'Geometry' book by CK-12. The images and the rest of the plain text are licensed under the CC-BY license, the code is licensed under the MIT license (See README.md).
 
 ## The pythagorean theorem (El teorema de Pitágoras)
 [Ch08_S01](https://www.ck12.org/reader/reader-index.html#section/2932971/8.1/9549314)
@@ -76,6 +76,41 @@ In a triangle $\triangle ABC$ with sides with lengths $a$, $b$, and $c$, and $c$
 
 ## Using similar right triangles (Usando triángulos rectángulos similares)
 [Ch08_S03](https://www.ck12.org/reader/reader-index.html#section/2932973/8.3/9549314)
+
+(Triángulos rectángulos inscritos similares)
+**Inscribed similar right triangles**: right triangles inscribed inside other right triangles that are similar.
+[Inscribed similar right triangles image code](Programs/Ch08/S03_01_Inscribed_similar_right_triangles_image.py)
+![Inscribed similar right triangles image](Images/Ch08/S03_01_Inscribed_similar_right_triangles.png)
+*Inscribed similar right triangles*
+
+(Teorema de los triángulos rectángulos inscritos similares)
+**Inscribed similar right triangles theorem**: Every right triangle has two inscribed similar triangles. To create them, draw the altitude from the right angle vertex, the resulting two triangles are similar to the original one.
+
+> Proof of the inscribed similar right triangles theorem
+>
+> From the *Inscribed similar right triangles* image, $\triangle ABC \sim \triangle DAC \sim \triangle DBA$ because of the AA triangle similarity postulate. For $\triangle ABC \sim \triangle DAC$, $\angle BAC \cong \angle ADC$ and $\angle C \cong \angle C$. For $\triangle ABC \sim \triangle DBA$, $\angle BAC \cong \angle BDA$ and $\angle B \cong \angle B$. $\blacksquare$
+
+In the right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$.
+
+(Media geométrica)
+**Geometric mean**: a measure of central tendency of $n$ numbers, that consists in taking the $n$-th root of the product of the $n$ numbers.
+[Geometric mean code](Programs/Ch08/S03_02_Geometric_mean.py)
+
+> Definition of the geometric mean
+>
+> Let there be $n$ numbers, where $x_i$ is the $i$-number. Let $GM(x)$ be the geometric mean of the $n$ numbers, then
+> $$GM(x) = \sqrt[n]{x_1 x_2 ... x_n}$$
+
+The geometric mean $GM(x)$ is the number whose repeated multiplication is the same as the product $x_1 x_2 ... x_n$, so if the geometric mean replaced each number $x_i$, then the total product would be the same.
+
+(Media geométrica en triángulos rectángulos)
+**Geometric mean in right triangles**: there are at least three geometric means in a right triangle, the two legs and the altitude from the right angle are all geometric means of different segments.
+
+To understand this, consider the definition of geometric mean applied to only two numbers. Let $GM$ be the geometric mean of $x_1$ and $x_2$, so $GM = \sqrt{x_1 x_2}$. Representing this equation as a proportion, $GM^2 = x_1 x_2$, then $\frac{GM}{x_2} = \frac{x_1}{GM}$, and reordering $\frac{x_1}{GM} = \frac{GM}{x_2}$. This shows the numbers $x_1$ and $x_2$ as the extremes of the proportion, and $GM$ as the means of the proportion.
+
+Because of the inscribed similar right triangles theorem, in a right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$. The altitude of $\triangle ABC$ is $\overline{AD}$.
+
+From $\triangle DAC \sim \triangle DBA$, $\frac{BD}{AD} = \frac{AD}{CD}$, which shows that the altitude $\overline{AD}$ is the geometric mean of the segments divided by $D$ in $\overline{BC}$. From $\triangle ABC \sim \triangle DBA$, $\frac{BD}{AB} = \frac{AB}{BC}$, which shows that the leg $\overline{AB}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AB}$. From $\triangle ABC \sim \triangle DAC$, $\frac{CD}{AC} = \frac{AC}{BC}$, which shows that the leg $\overline{AC}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AC}$.
 
 ## Special right triangles (Triángulos rectángulos especiales)
 [Ch08_S04](https://www.ck12.org/reader/reader-index.html#section/2932974/8.4/9549314)

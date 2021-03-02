@@ -1510,6 +1510,9 @@ Dilations are defined with two parts, a center (centro) and an scale factor (fac
 
 In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the side $\overline{AC}$ at a point $D$. This creates the proportion $\frac{AD}{CD} = \frac{AB}{BC}$.
 
+(Teorema de los triángulos rectángulos inscritos similares)
+**Inscribed similar right triangles theorem**: Every right triangle has two inscribed similar triangles. To create them, draw the altitude from the right angle vertex, the resulting two triangles are similar to the original one. In the right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$.
+
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
 
@@ -1621,6 +1624,9 @@ In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the s
 **Right triangle**: a triangle in which one of its angles measures $90 \text{\textdegree}$ or $\pi/2$ radians, i.e. a triangle with a right angle. The right angle is denoted in the triangle with a square.
 
 Right triangles have three sides, one hypotenuse (hipotenusa) which is the side opposite to the right angle, and two legs (catetos) which are the two sides that stem from the vertex with the right angle.
+
+(Triángulos rectángulos inscritos similares)
+**Inscribed similar right triangles**: right triangles inscribed inside other right triangles that are similar.
 
 (Triángulo obtuso)
 **Obtuse triangle**: a triangle that has one obtuse angle.
@@ -1904,13 +1910,16 @@ For example, in a set of $N$ numbers, the probability $P(x)$ to obtain a given n
 **Averages**: measures of the typical number in a set of numbers. A typical number is that which is most likely to appear from the set, or one that has a value in the middle of the values of the set. The measure of an average itself doesn't have to be part of the set of numbers, so a number that is not in the set, could be a representative value for said set.
 
 (La media)
-**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of the set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then $\bar{x} = \sum_i{\frac{x_i}{N}}$.
+**The mean**: also called the arithmetic average (la media aritmética), it's the sum of a set of numbers divided by the size of the set. Let $X$ be a set of $N$ numbers, $x_i$ be the $i$-th number in the set, $\bar{x}$ be the mean of the set, then $\bar{x} = \sum_i{\frac{x_i}{N}}$. The mean is the number $\bar{x}$ whose repeated addition with itself $N$ times results in the same value as the sum of the original values $\sum_i{x_i}$, so if the mean $\bar{x}$ replaced each number $x_i$, then the total sum would be the same.
 
 (Mediana)
 **Median**: the middle value in a set of numbers, such that half the numbers are greater than the median, and the other half is less than the median. After sorting the set, when the set contains an odd amount of numbers, the median is the value in the middle, and when the set has an even amount of numbers, the median is the mean of the two values in the middle.
 
 (Moda)
 **Mode**: the number with the highest frequency in a set. A set of numbers can have several modes if several numbers have the same highest frequency, or none if all the numbers have the same frequency.
+
+(Media geométrica)
+**Geometric mean**: a measure of central tendency of $n$ numbers, that consists in taking the $n$-th root of the product of the $n$ numbers. Let there be $n$ numbers, where $x_i$ is the $i$-number. Let $GM(x)$ be the geometric mean of the $n$ numbers, then $GM(x) = \sqrt[n]{x_1 x_2 ... x_n}$. The geometric mean $GM(x)$ is the number whose repeated multiplication is the same as the product $x_1 x_2 ... x_n$, so if the geometric mean replaced each number $x_i$, then the total product would be the same.
 
 ## Simplifications (Simplificaciones)
 

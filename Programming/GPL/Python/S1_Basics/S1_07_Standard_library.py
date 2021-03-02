@@ -8,6 +8,7 @@
 #C# --- Basic math
 #C# --- Trigonometry
 #C# --- Randon number generation
+#C# --- Statistics
 #C# String functions
 #C# --- Alignment
 #C# --- Encoding
@@ -227,6 +228,17 @@ random.seed(2) # None
 # SYNTAX random.uniform(iniN, endN)
 #T# the returned number is in the [iniN, endN) interval
 flo1 = random.uniform(3, 5) # 4.4719...
+# |-----
+
+#C# --- Statistics
+
+# |-----
+#T# the statistics module contains functions for statistics
+import statistics
+
+#T# calculate the geometric mean of a set of numbers with the geometric_mean function
+list1 = [1.1, 1.2, 1.3]
+num1 = statistics.geometric_mean(list1) # 1.197215767258376
 # |-----
 
 # |-------------------------------------------------------------
