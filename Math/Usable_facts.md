@@ -1241,6 +1241,24 @@ Dilations are defined with two parts, a center (centro) and an scale factor (fac
 (Dilataciones en el plano coordenado)
 **Dilations in the coordinate plane**: a given 2D figure $Fig_1$ is composed of a set of points $(x, y)$ in the coordinate plane. Let $Fig_1$ be dilated with dilation center $C$ located at $(x_C, y_C)$, and scale factor $k$, into the dilation $Fig_1'$. The figure $Fig_1'$ is composed of a set of points $(x', y')$ in the coordinate plane, this can be denoted with the mapping $(x, y) \to (x', y')$. The point $(x', y')$ can be obtained from $C$ and $k$, as $(x', y') = (x_C + k (x - x_C), y_C + k (y - y_C))$. In the case where $C$ is the origin $(0, 0)$, the mapping becomes $(x', y') = (kx, ky)$.
 
+(Ratios trigonométricos)
+**Trigonometric ratios**: ratios specifically created with the lengths of the sides of right triangles. These ratios change by varying the non-right angles in the right triangle. Given that a right triangle only has three sides, there are only three basic ratios possible between pairs of the three sides.
+
+(Lado adyacente y lado opuesto a un ángulo en un triángulo rectángulo)
+**Adjacent side and opposite side to an angle in a right triangle**: every right triangle has two non-right angles. Each of these two non-right angles has an adjacent side and an opposite side. The opposite side is the regular opposite side of an angle in a triangle. The adjacent side is the side of the angle that is not the hypotenuse.
+
+(Ratios trigonométricos de cualquier ángulo)
+**Trigonometric ratios of any angle**: in a right triangle, the non-right angles are always acute, but the trigonometric ratios can still be measured in non-acute angles. For this, the angle is put in the rectangular coordinate system. Because of the definition of an angle, any point in the angle side always falls in one of the four quadrants of the rectangular coordinate system. A right angle is built in that quadrant, using as hypotenuse the segment from the origin to a point in the angle, and using as legs the $x$ and $y$ projections of the point on the rectangular coordinate system, and the trigonometric ratios of the angle are determined using that right triangle (this also works for acute angles).
+
+(Seno de un ángulo)
+**Sine of an angle**: placing an angle in a right triangle, its sine is defined as the ratio the opposite side over the hypotenuse. In a right triangle $\triangle ABC$ with right angle $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the sine of the non-right angles $\angle B$ and $\angle C$, are $sin(\angle B) = \frac{b}{a}$, and $sin(\angle C) = \frac{c}{a}$. $sin$ is called the sine function.
+
+(Coseno de un ángulo)
+**Cosine of an angle**: placing an angle in a right triangle, its cosine is defined as the ratio of the adjacent side over the hypotenuse. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the cosine of the non-right angles $\angle B$ and $\angle C$, are $cos(\angle B) = \frac{c}{a}$, and $cos(\angle C) = \frac{b}{a}$. $cos$ is called the cosine function.
+
+(Tangente de un ángulo)
+**Tangent of an angle**: placing an angle in a right triangle, its tangent is defined as the ratio of the opposite side over the adjacent side. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the tangents of the non-right $\angle B$ and $\angle C$, are $tan(\angle B) = \frac{b}{c}$, and $tan(\angle C) = \frac{c}{b}$. $tan$ is called the tangent function.
+
 (Medida lineal)
 **Linear measure**: measure for length, like distances, width, height, depth, etcetera, in linear units (unidades lineales).
 
@@ -1641,6 +1659,11 @@ Because of the inscribed similar right triangles theorem, in a right triangle $\
 
 From $\triangle DAC \sim \triangle DBA$, $\frac{BD}{AD} = \frac{AD}{CD}$, which shows that the altitude $\overline{AD}$ is the geometric mean of the segments divided by $D$ in $\overline{BC}$. From $\triangle ABC \sim \triangle DBA$, $\frac{BD}{AB} = \frac{AB}{BC}$, which shows that the leg $\overline{AB}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AB}$. From $\triangle ABC \sim \triangle DAC$, $\frac{CD}{AC} = \frac{AC}{BC}$, which shows that the leg $\overline{AC}$ is the geometric mean of the hypotenuse and the side of the hypotenuse cut by $D$ that is in the same side as the leg $\overline{AC}$.
 
+(Lados de un triángulo rectángulo dado un ángulo y un lado)
+**Sides of a right triangle given an angle and a side**: In a right triangle, having only one of the non-right angles and the length of any one side, is enough to determine the lengths of the other two sides, via the trigonometric ratios. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the sides of the right triangle can be found in the following manners.
+
+Having $a$ and $m \angle B$, $b = a\ sin(\angle B)$ and $c = a\ cos(\angle B)$. Having $a$ and $m \angle C$, $b = a\ cos(\angle C)$ and $c = a\ sin(\angle C)$. Having $b$ and $m \angle B$, $a = \frac{b}{sin(\angle B)}$ and $c = \frac{b}{tan(\angle B)}$. Having $b$ and $m \angle C$, $a = \frac{b}{cos(\angle C)}$ and $c = b\ tan(\angle C)$. Having $c$ and $m \angle B$, $a = \frac{c}{cos(\angle B)}$ and $b = c\ tan(\angle B)$. Having $c$ and $m \angle C$, $a = \frac{c}{sin(\angle C)}$ and $b = \frac{c}{tan(\angle C)}$.
+
 (Triángulo obtuso)
 **Obtuse triangle**: a triangle that has one obtuse angle.
 
@@ -1961,6 +1984,9 @@ The same simplification can be done with variables, e.g. $\frac{2 x}{x}$ can be 
 (Eliminar los denominadores de una ecuación)
 **Clear an equation of fractions**: the process of clearing the fractions of an equation, by multiplying each term on both sides by the least common denominator.
 
+(Racionalizar el denominador)
+**Rationalize the denominator**: when a fraction has a radical in the denominator, it can be rationalized to remove the radical from the denominator without changing the value of the fraction. The process is $\frac{a}{\sqrt{b}} = \frac{a \sqrt{b}}{\sqrt{b} \sqrt{b}} = \frac{a \sqrt{b}}{b}$.
+
 (Conversión entre decimales y fracciones)
 **Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from finite decimal to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
 
@@ -2238,3 +2264,9 @@ Let $t$ be the fall time in time units, $h$ be the starting height in length uni
 (Medición indirecta usando un triángulo rectángulo)
 **Indirect measurement using a right triangle**: there is a different way to do indirect measurement, that doesn't require a smaller similar triangle.
 In $\triangle ABC$, if $\angle B$ is a right angle, $C$ is the unreachable point, and $BC$ is the length to measure indirectly, then $BC = AB tan(\angle A)$, where $tan$ is the tangent function, so $\angle A$ and $AB$ must be measured.
+
+(Ángulo de depresión)
+**Angle of depression**: an angle measured below a horizontal line.
+
+(Ángulo de elevación)
+**Angle of elevation**: an angle measured above a horizontal line.

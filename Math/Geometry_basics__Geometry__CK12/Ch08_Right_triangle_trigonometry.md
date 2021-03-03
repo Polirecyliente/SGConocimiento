@@ -158,6 +158,121 @@ In a 30-60-90 triangle, given $h$ as the length of the hypotenuse, $l_1$ as the 
 ## Tangent, sine and cosine (Tangente, seno y coseno)
 [Ch08_S05](https://www.ck12.org/reader/reader-index.html#section/2932975/8.5/9549314)
 
+(Ratios trigonométricos en un triángulo rectángulo)
+**Trigonometric ratios in a right triangle**: ratios specifically created with the lengths of the sides of right triangles. These ratios change by varying the non-right angles in the right triangle. Given that a right triangle only has three sides, there are only three basic ratios possible between pairs of the three sides.
+[Trigonometric ratios in a right triangle image code](Programs/Ch08/S05_01_Trigonometric_ratios_in_a_right_triangle_image.py)
+![Trigonometric ratios in a right triangle image](Images/Ch08/S05_01_Trigonometric_ratios_in_a_right_triangle.png)
+*Trigonometric ratios in a right triangle*
+
+(Lado adyacente y lado opuesto a un ángulo en un triángulo rectángulo)
+**Adjacent side and opposite side to an angle in a right triangle**: every right triangle has two non-right angles. Each of these two non-right angles has an adjacent side and an opposite side. The opposite side is the regular opposite side of an angle in a triangle. The adjacent side is the side of the angle that is not the hypotenuse.
+
+(Ratios trigonométricos de cualquier ángulo)
+**Trigonometric ratios of any angle**: in a right triangle, the non-right angles are always acute, but the trigonometric ratios can still be measured in non-acute angles. For this, the angle is put in the rectangular coordinate system. Because of the definition of an angle, any point in the angle side always falls in one of the four quadrants of the rectangular coordinate system. A right angle is built in that quadrant, using as hypotenuse the segment from the origin to a point in the angle, and using as legs the $x$ and $y$ projections of the point on the rectangular coordinate system, and the trigonometric ratios of the angle are determined using that right triangle (this also works for acute angles).
+[Trigonometric ratios of any angle image code](Programs/Ch08/S05_02_Trigonometric_ratios_of_any_angle_image.py)
+![Trigonometric ratios of any angle image](Images/Ch08/S05_02_Trigonometric_ratios_of_any_angle.png)
+*Trigonometric ratios of any angle*
+
+(Racionalizar el denominador)
+**Rationalize the denominator**: when a fraction has a radical in the denominator, it can be rationalized to remove the radical from the denominator without changing the value of the fraction. The process is $\frac{a}{\sqrt{b}} = \frac{a \sqrt{b}}{\sqrt{b} \sqrt{b}} = \frac{a \sqrt{b}}{b}$.
+
+(Seno de un ángulo)
+**Sine of an angle**: placing an angle in a right triangle, its sine is defined as the ratio of the opposite side over the hypotenuse.
+
+> Definition of the sine of an angle
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the sines of the non-right angles $\angle B$ and $\angle C$, are (see the *Trigonometric ratios in a right triangle* image)
+>
+> $$\begin{gathered}
+sin(\angle B) = \frac{b}{a}\\
+sin(\angle C) = \frac{c}{a}
+\end{gathered}$$
+
+$sin$ is called the sine function.
+
+(Coseno de un ángulo)
+**Cosine of an angle**: placing an angle in a right triangle, its cosine is defined as the ratio of the adjacent side over the hypotenuse.
+
+> Definition of the cosine of an angle
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the cosines of the non-right angles $\angle B$ and $\angle C$, are (see the *Trigonometric ratios in a right triangle* image)
+>
+> $$\begin{gathered}
+cos(\angle B) = \frac{c}{a}\\
+cos(\angle C) = \frac{b}{a}
+\end{gathered}$$
+
+$cos$ is called the cosine function.
+
+(Tangente de un ángulo)
+**Tangent of an angle**: placing an angle in a right triangle, its tangent is defined as the ratio of the opposite side over the adjacent side.
+
+> Definition of the tangent of an angle
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the tangents of the non-right $\angle B$ and $\angle C$, are (see the *Trigonometric ratios in a right triangle* image)
+>
+> $$\begin{gathered}
+tan(\angle B) = \frac{b}{c}\\
+tan(\angle C) = \frac{c}{b}
+\end{gathered}$$
+
+$tan$ is called the tangent function.
+
+(Lados de un triángulo rectángulo dado un ángulo y un lado)
+**Sides of a right triangle given an angle and a side**: In a right triangle, having only one of the non-right angles and the length of any one side, is enough to determine the lengths of the other two sides, via the trigonometric ratios.
+
+> Sides of a right triangle given an angle and a side
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the sides of the right triangle can be found in the following manners (see the *Trigonometric ratios in a right triangle* image)
+>
+> Having $a$ and $m \angle B$
+>
+> $$\begin{gathered}
+b = a\ sin(\angle B)\\
+c = a\ cos(\angle B)
+\end{gathered}$$
+>
+> Having $a$ and $m \angle C$
+>
+> $$\begin{gathered}
+b = a\ cos(\angle C)\\
+c = a\ sin(\angle C)
+\end{gathered}$$
+>
+> Having $b$ and $m \angle B$
+>
+> $$\begin{gathered}
+a = \frac{b}{sin(\angle B)}\\
+c = \frac{b}{tan(\angle B)}
+\end{gathered}$$
+>
+> Having $b$ and $m \angle C$
+>
+> $$\begin{gathered}
+a = \frac{b}{cos(\angle C)}\\
+c = b\ tan(\angle C)
+\end{gathered}$$
+>
+> Having $c$ and $m \angle B$
+>
+> $$\begin{gathered}
+a = \frac{c}{cos(\angle B)}\\
+b = c\ tan(\angle B)
+\end{gathered}$$
+>
+> Having $c$ and $m \angle C$
+>
+> $$\begin{gathered}
+a = \frac{c}{sin(\angle C)}\\
+b = \frac{c}{tan(\angle C)}
+\end{gathered}$$
+
+(Ángulo de depresión)
+**Angle of depression**: an angle measured below a horizontal line.
+
+(Ángulo de elevación)
+**Angle of elevation**: an angle measured above a horizontal line.
+
 ## Inverse trigonometric ratios (Ratios trigonométricos inversos)
 [Ch08_S06](https://www.ck12.org/reader/reader-index.html#section/2932976/8.6/9549314)
 

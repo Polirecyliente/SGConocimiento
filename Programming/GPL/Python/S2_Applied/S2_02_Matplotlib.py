@@ -481,6 +481,15 @@ ax1.set_xticks([-8, 0, 8, 16, 24])
 #T# when the numeric ticks are float numbers, but want to be represented as fractions, the set_xticklabels, set_yticklabels functions can be used
 ax1.set_xticks([0, 2/3, 4/3])
 ax1.set_xticklabels(['0', '2/3', '4/3']) #| without this, the tick at 2/3 appears as 0.6666
+
+#T# the position of the ticks relative to the spine can be set with the set_ticks_position function
+
+# SYNTAX ax1.xaxis.set_ticks_position(str1)
+# SYNTAX ax1.yaxis.set_ticks_position(str2)
+#T# str1 sets the position of the ticks in the xaxis, str1 can be 'top', 'bottom', or 'both', str2 sets the position of the ticks in the yaxis, str2 can be 'left', 'right', or 'both'
+
+ax1.xaxis.set_ticks_position('top')
+ax1.yaxis.set_ticks_position('right')
 # |-----
 
 #C# --- Markers
