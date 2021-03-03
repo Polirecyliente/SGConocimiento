@@ -164,13 +164,16 @@ In a 30-60-90 triangle, given $h$ as the length of the hypotenuse, $l_1$ as the 
 ![Trigonometric ratios in a right triangle image](Images/Ch08/S05_01_Trigonometric_ratios_in_a_right_triangle.png)
 *Trigonometric ratios in a right triangle*
 
+The trigonometric ratios can be calculated programatically.
+[Trigonometric ratios code](Programs/Ch08/S05_02_Trigonometric_ratios.py)
+
 (Lado adyacente y lado opuesto a un ángulo en un triángulo rectángulo)
 **Adjacent side and opposite side to an angle in a right triangle**: every right triangle has two non-right angles. Each of these two non-right angles has an adjacent side and an opposite side. The opposite side is the regular opposite side of an angle in a triangle. The adjacent side is the side of the angle that is not the hypotenuse.
 
 (Ratios trigonométricos de cualquier ángulo)
 **Trigonometric ratios of any angle**: in a right triangle, the non-right angles are always acute, but the trigonometric ratios can still be measured in non-acute angles. For this, the angle is put in the rectangular coordinate system. Because of the definition of an angle, any point in the angle side always falls in one of the four quadrants of the rectangular coordinate system. A right angle is built in that quadrant, using as hypotenuse the segment from the origin to a point in the angle, and using as legs the $x$ and $y$ projections of the point on the rectangular coordinate system, and the trigonometric ratios of the angle are determined using that right triangle (this also works for acute angles).
-[Trigonometric ratios of any angle image code](Programs/Ch08/S05_02_Trigonometric_ratios_of_any_angle_image.py)
-![Trigonometric ratios of any angle image](Images/Ch08/S05_02_Trigonometric_ratios_of_any_angle.png)
+[Trigonometric ratios of any angle image code](Programs/Ch08/S05_03_Trigonometric_ratios_of_any_angle_image.py)
+![Trigonometric ratios of any angle image](Images/Ch08/S05_03_Trigonometric_ratios_of_any_angle.png)
 *Trigonometric ratios of any angle*
 
 (Racionalizar el denominador)
@@ -275,6 +278,51 @@ b = \frac{c}{tan(\angle C)}
 
 ## Inverse trigonometric ratios (Ratios trigonométricos inversos)
 [Ch08_S06](https://www.ck12.org/reader/reader-index.html#section/2932976/8.6/9549314)
+
+Given a right triangle in which the lengths of two sides are known, the non-right angles can be calculated using the inverse of the trigonometric ratios. The inverse of the trigonometric ratio is a function that returns the angle needed to originate the ratio of the two sides of the right triangle. So, to calculate the inverse of a trigonometric ratio, the lengths of two sides of a right triangle are needed.
+[Inverse of the trigonometric ratios code](Programs/Ch08/S06_01_Inverse_of_the_trigonometric_ratios.py)
+
+(Seno inverso | arcoseno)
+**Inverse sine | arcsine**: a function that returns the angle that creates a given sine ratio, i.e. the angle that creates a given ratio of opposite side to the angle over the hypotenuse, in a right triangle.
+
+> Definition of the inverse sine of a ratio
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the arcsines that return the non-right angles $\angle B$ and $\angle C$, are (see the *Trigonometric ratios in a right triangle* image)
+>
+> $$\begin{gathered}
+m \angle B = sin^{-1}\left(\frac{b}{a}\right)\\
+m \angle C = sin^{-1}\left(\frac{c}{a}\right)
+\end{gathered}$$
+
+$sin^{-1}$ is the inverse sine, or arcsine function.
+
+(Coseno inverso | arcocoseno)
+**Inverse cosine | arccosine**: a function that returns the angle that creates a given cosine ratio, i.e. the angle that creates a given ratio of adjacent side to the angle over the hypotenuse, in a right triangle.
+
+> Definition of the inverse cosine of a ratio
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the arccosines that return the non-right angles $\angle B$ and $\angle C$, are (see the *Trigonometric ratios in a right triangle* image)
+>
+> $$\begin{gathered}
+m \angle B = cos^{-1}\left(\frac{c}{a}\right)\\
+m \angle C = cos^{-1}\left(\frac{b}{a}\right)
+\end{gathered}$$
+
+$cos^{-1}$ is the inverse cosine, or arccosine function.
+
+(Tangente inversa | arcotangente)
+**Inverse tangent | arctangent**: a function that returns the angle that creates a given tangent ratio, i.e. the angle that creates a given ratio of opposite side over adjacent side of the angle, in a right triangle.
+
+> Definition of the inverse tangent of a ratio
+>
+> In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the arctangents that return the non-right angles $\angle B$ and $\angle C$, are (see the *Trigonometric ratios in a right triangle* image)
+>
+> $$\begin{gathered}
+m \angle B = tan^{-1}\left(\frac{b}{c}\right)\\
+m \angle C = tan^{-1}\left(\frac{c}{b}\right)
+\end{gathered}$$
+
+$tan^{-1}$ is the inverse tangent, or arctangent function.
 
 ## Laws of sines and cosines (Leyes de senos y cosenos)
 [Ch08_S07](https://www.ck12.org/reader/reader-index.html#section/2932977/8.7/9549314)

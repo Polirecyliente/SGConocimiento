@@ -1259,6 +1259,18 @@ Dilations are defined with two parts, a center (centro) and an scale factor (fac
 (Tangente de un ángulo)
 **Tangent of an angle**: placing an angle in a right triangle, its tangent is defined as the ratio of the opposite side over the adjacent side. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the tangents of the non-right $\angle B$ and $\angle C$, are $tan(\angle B) = \frac{b}{c}$, and $tan(\angle C) = \frac{c}{b}$. $tan$ is called the tangent function.
 
+(Ratios trigonométricos inversos)
+**Inverse trigonometric ratios**: Given a right triangle in which the lengths of two sides are known, the non-right angles can be calculated using the inverse of the trigonometric ratios. The inverse of the trigonometric ratio is a function that returns the angle needed to originate the ratio of the two sides of the right triangle. So, to calculate the inverse of a trigonometric ratio, the lengths of two sides of a right triangle are needed.
+
+(Seno inverso | arcoseno)
+**Inverse sine | arcsine**: a function that returns the angle that creates a given sine ratio, i.e. the angle that creates a given ratio of opposite side to the angle over the hypotenuse, in a right triangle. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the arcsines that return the non-right angles $\angle B$ and $\angle C$, are $m \angle B = sin^{-1}\left(\frac{b}{a}\right)$, and $m \angle C = sin^{-1}\left(\frac{c}{a}\right)$. $sin^{-1}$ is the inverse sine, or arcsine function.
+
+(Coseno inverso | arcocoseno)
+**Inverse cosine | arccosine**: a function that returns the angle that creates a given cosine ratio, i.e. the angle that creates a given ratio of adjacent side to the angle over the hypotenuse, in a right triangle. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the arccosines that return the non-right angles $\angle B$ and $\angle C$, are $m \angle B = cos^{-1}\left(\frac{c}{a}\right)$, and $m \angle C = cos^{-1}\left(\frac{b}{a}\right)$. $cos^{-1}$ is the inverse cosine, or arccosine function.
+
+(Tangente inversa | arcotangente)
+**Inverse tangent | arctangent**: a function that returns the angle that creates a given tangent ratio, i.e. the angle that creates a given ratio of opposite side over adjacent side of the angle, in a right triangle. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the arctangents that return the non-right angles $\angle B$ and $\angle C$, are $m \angle B = tan^{-1}\left(\frac{b}{c}\right)$, and $m \angle C = tan^{-1}\left(\frac{c}{b}\right)$. $tan^{-1}$ is the inverse tangent, or arctangent function.
+
 (Medida lineal)
 **Linear measure**: measure for length, like distances, width, height, depth, etcetera, in linear units (unidades lineales).
 
@@ -1663,6 +1675,8 @@ From $\triangle DAC \sim \triangle DBA$, $\frac{BD}{AD} = \frac{AD}{CD}$, which 
 **Sides of a right triangle given an angle and a side**: In a right triangle, having only one of the non-right angles and the length of any one side, is enough to determine the lengths of the other two sides, via the trigonometric ratios. In a right triangle $\triangle ABC$ with the right angle being $\angle A$, making $a = BC$, $b = AC$, and $c = AB$, the sides of the right triangle can be found in the following manners.
 
 Having $a$ and $m \angle B$, $b = a\ sin(\angle B)$ and $c = a\ cos(\angle B)$. Having $a$ and $m \angle C$, $b = a\ cos(\angle C)$ and $c = a\ sin(\angle C)$. Having $b$ and $m \angle B$, $a = \frac{b}{sin(\angle B)}$ and $c = \frac{b}{tan(\angle B)}$. Having $b$ and $m \angle C$, $a = \frac{b}{cos(\angle C)}$ and $c = b\ tan(\angle C)$. Having $c$ and $m \angle B$, $a = \frac{c}{cos(\angle B)}$ and $b = c\ tan(\angle B)$. Having $c$ and $m \angle C$, $a = \frac{c}{sin(\angle C)}$ and $b = \frac{c}{tan(\angle C)}$.
+
+
 
 (Triángulo obtuso)
 **Obtuse triangle**: a triangle that has one obtuse angle.
