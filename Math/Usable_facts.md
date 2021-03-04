@@ -1547,6 +1547,12 @@ In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the s
 (Teorema de los triángulos rectángulos inscritos similares)
 **Inscribed similar right triangles theorem**: Every right triangle has two inscribed similar triangles. To create them, draw the altitude from the right angle vertex, the resulting two triangles are similar to the original one. In the right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$.
 
+(Ley de senos)
+**Law of sines**: In a triangle, the three ratios of the sine of each angle over the length of the opposite side to the angle, are equal. In a triangle $\triangle ABC$, making $a = BC$, $b = AC$, and $c = AB$, $\frac{sin(\angle A)}{a} = \frac{sin(\angle B)}{b} = \frac{sin(\angle C)}{c}$.
+
+(Ley de cosenos)
+**Law of cosines**: in a triangle, the squared length of a side, is equal to the sum of the other two sides, each squared, minus twice the product of the other two sides times the cosine of the opposite angle to the original side. In a triangle $\triangle ABC$, making $a = BC$, $b = AC$, and $c = AB$, the law of cosines is $a^2 = b^2 + c^2 - 2bc\ cos(\angle A)$, $b^2 = a^2 + c^2 - 2ac\ cos(\angle B)$, and $c^2 = a^2 + b^2 - 2ab\ cos(\angle C)$.
+
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
 
@@ -1676,7 +1682,8 @@ From $\triangle DAC \sim \triangle DBA$, $\frac{BD}{AD} = \frac{AD}{CD}$, which 
 
 Having $a$ and $m \angle B$, $b = a\ sin(\angle B)$ and $c = a\ cos(\angle B)$. Having $a$ and $m \angle C$, $b = a\ cos(\angle C)$ and $c = a\ sin(\angle C)$. Having $b$ and $m \angle B$, $a = \frac{b}{sin(\angle B)}$ and $c = \frac{b}{tan(\angle B)}$. Having $b$ and $m \angle C$, $a = \frac{b}{cos(\angle C)}$ and $c = b\ tan(\angle C)$. Having $c$ and $m \angle B$, $a = \frac{c}{cos(\angle B)}$ and $b = c\ tan(\angle B)$. Having $c$ and $m \angle C$, $a = \frac{c}{sin(\angle C)}$ and $b = \frac{c}{tan(\angle C)}$.
 
-
+(Ley de senos en triángulos obtusos)
+**Law of sines in obtuse triangles**: the law of sines can be used to calculate the measure of obtuse angles. Because of the definitions of the trigonometric ratios, the trigonometric ratios of an obtuse angle are calculated using its supplement instead, which is an acute angle that allows building a right triangle. So when using the law of sines to determine an obtuse angle, the result should be corrected by calculating the supplement of the result, this yields the measure of the obtuse angle. In a triangle $\triangle ABC$ where the obtuse angle is $\angle A$, calculating $m \angle A$ with the law of sines results in $m \angle A_{supp}$, this is corrected as $m \angle A = \pi - m \angle A_{supp}$.
 
 (Triángulo obtuso)
 **Obtuse triangle**: a triangle that has one obtuse angle.
@@ -2176,6 +2183,9 @@ Let $I$ be the set of unique units to be mixed, $i$ be a subindex of $I$, $v_i$ 
 
 (Interés financiero)
 **Financial interest**: money received in return for an investment, or paid for a loan.
+
+(Resolver un triángulo)
+**Solve a triangle**: determining the measures of the three sides and the three angles of a given triangle.
 
 ### Science and engineering formulas (Fórmulas de ciencia e ingeniería)
 

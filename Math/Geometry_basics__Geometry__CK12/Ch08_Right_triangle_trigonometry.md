@@ -326,3 +326,46 @@ $tan^{-1}$ is the inverse tangent, or arctangent function.
 
 ## Laws of sines and cosines (Leyes de senos y cosenos)
 [Ch08_S07](https://www.ck12.org/reader/reader-index.html#section/2932977/8.7/9549314)
+
+(Resolver un triángulo)
+**Solve a triangle**: determining the measures of the three sides and the three angles of a given triangle.
+
+(Ley de senos)
+**Law of sines**: In a triangle, the three ratios of the sine of each angle over the length of the opposite side to the angle, are equal.
+[Law of sines image code](Programs/Ch08/S07_01_Law_of_sines_image.py)
+![Law of sines image](Images/Ch08/S07_01_Law_of_sines.png)
+*Law of sines*
+
+> Proof of the law of sines
+>
+> Let there be a triangle $\triangle ABC$, such that $a = BC$, $b = AC$, and $c = AB$. Let $D_1$ be the point in the altitude from $C$ that lies in $\overline{AB}$, and let $D_2$ be the point in the altitude from $B$ that lies in $\overline{AC}$. Let $h_1 = CD_1$, and $h_2 = BD_2$.
+>
+> Because of the definition of the sine of an angle, $h_1 = b\ sin(\angle A)$ and $h_1 = a\ sin(\angle B)$, so $b\ sin(\angle A) = a\ sin(\angle B)$, therefore $\frac{sin(\angle A)}{a} = \frac{sin(\angle B)}{b}$. On the other hand, $h_2 = c\ sin(\angle A)$ and $h_2 = a\ sin(\angle C)$, so $c\ sin(\angle A) = a\ sin(\angle C)$, therefore $\frac{sin(\angle A)}{a} = \frac{sin(\angle C)}{c}$. By transitivity, $\frac{sin(\angle A)}{a} = \frac{sin(\angle B)}{b} = \frac{sin(\angle C)}{c}$. $\blacksquare$
+
+In a triangle $\triangle ABC$, making $a = BC$, $b = AC$, and $c = AB$, $\frac{sin(\angle A)}{a} = \frac{sin(\angle B)}{b} = \frac{sin(\angle C)}{c}$.
+
+(Ley de senos en triángulos obtusos)
+**Law of sines in obtuse triangles**: the law of sines can be used to calculate the measure of obtuse angles. Because of the definitions of the trigonometric ratios, the trigonometric ratios of an obtuse angle are calculated using its supplement instead, which is an acute angle that allows building a right triangle. So when using the law of sines to determine an obtuse angle, the result should be corrected by calculating the supplement of the result, this yields the measure of the obtuse angle.
+[Law of sines in obtuse triangles image code](Programs/Ch08/S07_02_Law_of_sines_in_obtuse_triangles_image.py)
+![Law of sines in obtuse triangles image](Images/Ch08/S07_02_Law_of_sines_in_obtuse_triangles.png)
+*Law of sines in obtuse triangles*
+
+> Law of sines in obtuse triangles
+>
+> To prove that the law of sines in obtuse triangles, when used to calculate the measure of the obtuse angle, results in the measure of the acute supplementary angle, let $\triangle ABC$ be an obtuse triangle, with $\angle A$ being the obtuse angle. The objective is to determine $m \angle A$. Notice that $\frac{sin(\angle A)}{a} = \frac{sin(\angle B)}{b}$. Extending $\overline{AB}$ leads to $A_{supp}$, which is the point where $A_{supp}C = b$. From this, it can be visualized that $\frac{sin(\angle A_{supp})}{a} = \frac{sin(\angle B)}{b}$, and by transitivity $\frac{sin(\angle A_{supp})}{a} = \frac{sin(\angle A)}{a}$, so $sin(\angle A_{supp}) = sin(\angle A)$. Also, $\angle A_{supp}$ and $\angle A$ are supplementary because of the base angles theorem. In the end, the law of sines has no way to distinguish between the measure of an obtuse angle and the measure of its acute supplement, so to find the measure of the obtuse angle, the acute angle result must be corrected as $m \angle A = \pi - m \angle A_{supp}$.
+
+In a triangle $\triangle ABC$ where the obtuse angle is $\angle A$, calculating $m \angle A$ with the law of sines results in $m \angle A_{supp}$, this is corrected as $m \angle A = \pi - m \angle A_{supp}$.
+
+(Ley de cosenos)
+**Law of cosines**: in a triangle, the squared length of a side, is equal to the sum of the other two sides, each squared, minus twice the product of the other two sides times the cosine of the opposite angle to the original side.
+[Law of cosines image code](Programs/Ch08/S07_03_Law_of_cosines_image.py)
+![Law of cosines image](Images/Ch08/S07_03_Law_of_cosines.png)
+*Law of cosines*
+
+> Proof of the law of cosines
+>
+> In a triangle $\triangle ABC$, let $a = BC$, $b = AC$, and $c = AB$, let $D$ be the point in the altitude from $C$ that lies on $\overline{AB}$, let $h = CD$.
+>
+> The idea is to isolate $a$, in function of $b$, $c$, and $\angle A$. For this, because of the pythagorean theorem, $a^2 = h^2 + BD^2$. $h = b\ sin(\angle A)$, $BD = c - AD$, $AD = b\ cos(\angle A)$, so $BD = c - b\ cos(\angle A)$, and so $a^2 = (b\ sin(\angle A))^2 + (c - b\ cos(\angle A))^2 = b^2\ sin^2(\angle A) + c^2 - 2bc\ cos(\angle A) + b^2\ cos^2(\angle A)$. Because $sin^2 x + cos^2 x = 1$ for any angle $x$, then $a^2 = b^2 (sin^2(\angle A) + cos^2(\angle A)) + c^2 - 2bc\ cos(\angle A) = b^2 + c^2 - 2bc\ cos(\angle A)$. The same proof can be applied to determine the other two sides. $\blacksquare$
+
+In a triangle $\triangle ABC$, making $a = BC$, $b = AC$, and $c = AB$, the law of cosines is $a^2 = b^2 + c^2 - 2bc\ cos(\angle A)$, $b^2 = a^2 + c^2 - 2ac\ cos(\angle B)$, and $c^2 = a^2 + b^2 - 2ab\ cos(\angle C)$.
