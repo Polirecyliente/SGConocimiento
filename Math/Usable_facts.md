@@ -1553,6 +1553,9 @@ In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the s
 (Ley de cosenos)
 **Law of cosines**: in a triangle, the squared length of a side, is equal to the sum of the other two sides, each squared, minus twice the product of the other two sides times the cosine of the opposite angle to the original side. In a triangle $\triangle ABC$, making $a = BC$, $b = AC$, and $c = AB$, the law of cosines is $a^2 = b^2 + c^2 - 2bc\ cos(\angle A)$, $b^2 = a^2 + c^2 - 2ac\ cos(\angle B)$, and $c^2 = a^2 + b^2 - 2ab\ cos(\angle C)$.
 
+(Teorema del perímetro de figuras similares)
+**Perimeter of similar figures theorem**: given two similar figures, that have a scale factor that measures the ratio of each length from the second figure over the respective length in the first figure, then the ratio of the perimeter of the second figure over the perimeter of the first figure is equal to the scale factor. In two similar figures $Fig_1$ and $Fig_2$, $Fig_1 \sim Fig_2$, with perimeters $P_1$ and $P_2$ respectively, and with a scale factor $k$ to obtain $Fig_2$ from $Fig_1$, then $P_2 = k P_1$.
+
 (Teorema de la suma de los ángulos interiores de un polígono)
 **Polygon interior angles sum theorem**: the sum of the interior angles of a polygon, is $\pi$ times the number of unique triangles in which the polygon can be divided, which is the same as $\pi$ times the number of vertices minus $2$. Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
 
@@ -1628,8 +1631,14 @@ In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the s
 (Teorema de las diagonales de un deltoide)
 **Diagonals of a kite theorem**: in a kite, the diagonals are perpendicular. In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC} \perp \overline{BD}$.
 
-(Teorema del perímetro de figuras similares)
-**Perimeter of similar figures theorem**: given two similar figures, that have a scale factor that measures the ratio of each length from the second figure over the respective length in the first figure, then the ratio of the perimeter of the second figure over the perimeter of the first figure is equal to the scale factor. In two similar figures $Fig_1$ and $Fig_2$, $Fig_1 \sim Fig_2$, with perimeters $P_1$ and $P_2$ respectively, and with a scale factor $k$ to obtain $Fig_2$ from $Fig_1$, then $P_2 = k P_1$.
+(Teorema de la tangente de un círculo)
+**Tangent to a circle theorem**: in a circle, the angle between a tangent and the radius at the point of tangency, is a right angle. In a circle $\bigodot A$, a tangent to the circle $\overline{BC}$ with the point of tangency being $B$, then the angle $\angle ABC$ is a right angle.
+
+(Converso del teorema de la tangente de un círculo)
+**Converse of the tangent to a circle theorem**: in a circle, if a radius is perpendicular to a line or segment passing through the non-center endpoint of the radius, then that line or segment is tangent to the circle. In a circle $\bigodot A$, with $B$ being a point on the circle, and given a segment $\overline{BC}$, if $\overline{AB} \perp \overline{BC}$, then $\overline{BC}$ is tangent to the circle $\bigodot A$.
+
+(Teorema de las dos tangentes)
+**Two tangents theorem**: given a circle and a point outside of the circle, then the two possible tangent segments from the point to the circle are congruent. In a circle $\bigodot A$, with a point $B$ outside of it, if the two possible tangents from $B$ to $\bigodot A$, are $\overline{BC}$ and $\overline{BD}$, then $\overline{BC} \cong \overline{BD}$.
 
 ### Shapes with their parts and formulas (Formas con sus partes y fórmulas)
 
@@ -1876,13 +1885,52 @@ The two parallel sides in a trapezoid have different sizes, and they are called 
 **Trapezoid area**: in a trapezoid, let $b$ be the length of the smaller base, let $B$ be the length of the bigger base, let $h$ be the height, and let $A$ be the area, then $A = \frac{1}{2}h(b + B)$.
 
 (Círculo)
-**Circle**: shape in which all of its points are at the same distance from its center.
+**Circle**: shape in which all of its points are at the same distance from its center. A circle centered around the point $A$ is denoted as $\bigodot A$.
 
 (Radio de un círculo)
 **Radius of a circle**: the distance from the center of a circle to any of its points.
 
 (Diámetro de un círculo)
 **Diameter of a circle**: the maximum possible distance between two points in a circle. This is the same as twice the radius.
+
+(Cuerda de un círculo)
+**Chord of a circle**: a segment that joins two points of a circle.
+
+(Secante de un círculo)
+**Secant of a circle**: a line that passes through two points of a circle.
+
+(Tangente de un círculo)
+**Tangent of a circle**: a line that passes through a single one point of a circle.
+
+(Punto de tangencia)
+**Point of tangency**: in a circle, a tangent passes through only one point of the circle, this is the point of tangency.
+
+(Relaciones entre círculos)
+**Relationships between circles**: two given circles can relate to each other. A few ways to relate them are, by their intersection, by their relative position, and by their radii.
+
+(Dos círculos con dos puntos de intersección)
+**Two circles with two points of intersection**: two circles can intersect each other at a maximum of two points.
+
+(Línea tangente)
+**Tangent line**: a line that passes through a single point of a curve. It can also be a ray or a segment.
+
+(Dos círculos tangentes)
+**Two tangent circles**: two circles can intersect each other in a single point, when they are tangent to each other.
+
+(Tangencia interna de dos círculos)
+**Internal tangency of two circles**: two tangent circles are internally tangent when one is inside the other. If two circles are internally tangent, with the tangent being the line $\overleftrightarrow{AB}$, then both circles are on the same side of the line $\overleftrightarrow{AB}$.
+
+(Tangencia externa de dos círculos)
+**External tangency of two circles**: two tangent circles are externally tangent when they are on different sides of their tangent line. If two circles are externally tangent, with the tangent line being $\overleftrightarrow{AB}$, then each circle is on a different side of the line $\overleftrightarrow{AB}$.
+
+(Tangente interior común)
+**Common internal tangent**: in two circles that are not tangent to each other, two tangent lines can be built that are common internal tangents. A common internal tangent, is a line that is tangent to each of the two circles, and it intersects the segment that joins the two centers of the circles. In two circles $\bigodot A$ and $\bigodot B$, if the two common internal tangents are $\overline{C_1D_1}$ and $\overline{C_2D_2}$, then those two segments intersect $\overline{AB}$.
+
+(Tangente exterior común)
+**Common external tangent**: in two circles that are not tangent to each other, two tangent lines can be built that are common external tangents. A common external tangents, is a line or segment that is tangent to each of the two circles, and does not intersect the segment that joins the two centers of the circles. In two circles $\bigodot A$ and $\bigodot B$, if the two common external tangents are $\overline{C_1D_1}$ and $\overline{C_2D_2}$, then those two segments do not intersect $\overline{AB}$.
+
+(Círculos congruentes)
+**Congruent circles**: in a given set of circles, they are congruent if their radii have the same length. In circles $\bigodot A$ and $\bigodot B$, where $r_A$ is the radius of $\bigodot A$ and $r_B$ is the radius of $\bigodot B$, if $r_A = r_B$, then $\bigodot A \cong \bigodot B$.
 
 (Sector circular)
 **Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.

@@ -405,9 +405,11 @@ ax1.autoscale() #| without autoscale, the arrow is shown incompletely
 
 #T# the markersize kwarg is a number that sets the size of the marker
 
+#T# the linewidth kwarg is a number that sets the width of the line
+
 #T# the zorder kwarg is a number that sets the order of plotting, a lower zorder value makes the plot be behind other plots, and a greater zorder value brings the plot in front of other plots, a value of 4 commonly guarantees that the plot will be in front of everything else
 
-plt.plot([3, 7], [-1, 5], 'w', marker = 'o', markersize = 6, color = '#A178B955', zorder = 4)
+plt.plot([3, 7], [-1, 5], 'w', marker = 'o', markersize = 6, color = '#A178B955', linewidth = 1.5, zorder = 4)
 
 #C# --- Titles
 

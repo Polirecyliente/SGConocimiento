@@ -436,6 +436,9 @@
 | Circled dash                         | $\circleddash$                  |
 | Circled minus                        | $\ominus$                       |
 | Circled slash                        | $\oslash$                       |
+| Circled dot                          | $\odot$ or $\bigodot$           |
+| Circled plus                         | $\oplus$ or $\bigoplus$         |
+| Circled X                            | $\otimes$ or $\bigotimes$       |
 | Three times left                     | $\leftthreetimes$               |
 | Three times right                    | $\rightthreetimes$              |
 | Plus with dot                        | $\dotplus$                      |
