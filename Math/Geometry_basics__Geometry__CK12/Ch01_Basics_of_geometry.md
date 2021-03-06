@@ -147,6 +147,7 @@ This method can be used to draw a given length.
 > Let $A$, $B$, and $C$, be three collinear points, with $B$ being between $A$ and $C$, then
 > $$AB + BC = AC$$
 
+The segment addition postulate can be visualized with the following image.
 [Segment addition postulate image code](Programs/Ch01/S02_01_Segment_addition_postulate_image.py)
 ![Segment addition postulate image](Images/Ch01/S02_01_Segment_addition_postulate.png)
 *Segment addition postulate*

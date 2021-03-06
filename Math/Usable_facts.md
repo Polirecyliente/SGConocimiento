@@ -1932,6 +1932,24 @@ The two parallel sides in a trapezoid have different sizes, and they are called 
 (Círculos congruentes)
 **Congruent circles**: in a given set of circles, they are congruent if their radii have the same length. In circles $\bigodot A$ and $\bigodot B$, where $r_A$ is the radius of $\bigodot A$ and $r_B$ is the radius of $\bigodot B$, if $r_A = r_B$, then $\bigodot A \cong \bigodot B$.
 
+(Arco en un círculo)
+**Arc in a circle**: in a circle, an arc is any continuous portion of points in the shape. Because of the way in that a circle exists, an arc can always be limited by two radii. In a circle $\bigodot A$, given the points $B$ and $C$ that lie on the shape of the circle (meaning that both $\overline{AB}$ and $\overline{AC}$ are radii), the arc between $B$ and $C$ is denoted as $\widehat{BC}$.
+
+(Ángulo central en un círculo)
+**Central angle in a circle**: in a circle, a central angle is an angle made with two radii of the circle. In a circle $\bigodot A$, given two radii $\overline{AB}$ and $\overline{AC}$, the angle $\angle BAC$ is a central angle.
+
+(Arco mayor y arco menor)
+**Major arc and minor arc**: in a circle, a central angle divides the circle into two arcs, one major arc which is the longer arc, and one minor arc which is the shorter arc (unless the central angle is $\pi$ in which case both arcs are congruent). In a circle $\bigodot A$, given two radii $\overline{AB}$ and $\overline{AC}$, that make an angle $\angle BAC$ with a measure less than $\pi$, then the arc $\widehat{BC}$ is a minor arc. For the corresponding major arc, an extra point is needed to differentiate it from the minor arc. Let a point $D$ lie on the major arc, this arc is then labeled as $\widehat{BDC}$. The central angle refers to the angle spanned by the minor arc.
+
+(Medida de un arco)
+**Arc measure**: the measure of an arc is in length units. In the arc $\widehat{BC}$, the measure of this arc is denoted as $m \widehat{BC}$. If not stated, the unit of measure of an arc is the same of that of the radius.
+
+(Arcos congruentes)
+**Congruent arcs**: two arcs ar congruent when they have the same length. Given two arcs $\widehat{BC}$ and $\widehat{DE}$, if $m \widehat{BC} = m \widehat{DE}$, then $\widehat{BC} \cong \widehat{DE}$.
+
+(Semicírculo)
+**Semicircle**: in a circle, a semicircle is an arc that occupies half the circle, i.e. an arc with a central angle of $\pi$, meaning that the major arc and the minor arc are both semicircles.
+
 (Sector circular)
 **Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
 

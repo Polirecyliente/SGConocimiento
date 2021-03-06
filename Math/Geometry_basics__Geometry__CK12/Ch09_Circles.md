@@ -143,6 +143,42 @@ In a circle $\bigodot A$, with a point $B$ outside of it, if the two possible ta
 ## Properties of arcs (Propiedades de los arcos)
 [Ch09_S02](https://www.ck12.org/reader/reader-index.html#section/2932981/9.2/9549314)
 
+(Arco en un círculo)
+**Arc in a circle**: in a circle, an arc is any continuous portion of points in the shape. Because of the way in that a circle exists, an arc can always be limited by two radii. In a circle $\bigodot A$, given the points $B$ and $C$ that lie on the shape of the circle (meaning that both $\overline{AB}$ and $\overline{AC}$ are radii), the arc between $B$ and $C$ is denoted as $\widehat{BC}$.
+
+(Ángulo central en un círculo)
+**Central angle in a circle**: in a circle, a central angle is an angle made with two radii of the circle. In a circle $\bigodot A$, given two radii $\overline{AB}$ and $\overline{AC}$, the angle $\angle BAC$ is a central angle.
+
+(Arco mayor y arco menor)
+**Major arc and minor arc**: in a circle, a central angle divides the circle into two arcs, one major arc which is the longer arc, and one minor arc which is the shorter arc (unless the central angle is $\pi$ in which case both arcs are congruent). In a circle $\bigodot A$, given two radii $\overline{AB}$ and $\overline{AC}$, that make an angle $\angle BAC$ with a measure less than $\pi$, then the arc $\widehat{BC}$ is a minor arc. For the corresponding major arc, an extra point is needed to differentiate it from the minor arc. Let a point $D$ lie on the major arc, this arc is then labeled as $\widehat{BDC}$. The central angle refers to the angle spanned by the minor arc.
+
+The central angle, major and minor arcs in a circle can be seen in the following image.
+[Arcs and central angle in a circle image code](Programs/Ch09/S02_01_Arcs_and_central_angle_in_a_circle_image.py)
+![Arcs and central angle in a circle image](Images/Ch09/S02_01_Arcs_and_central_angle_in_a_circle.png)
+*Arcs and central angle in a circle*
+
+(Semicírculo)
+**Semicircle**: in a circle, a semicircle is an arc that occupies half the circle, i.e. an arc with a central angle of $\pi$, meaning that the major arc and the minor arc are both semicircles.
+
+(Medida de un arco)
+**Arc measure**: the measure of an arc is in length units. In the arc $\widehat{BC}$, the measure of this arc is denoted as $m \widehat{BC}$. If not stated, the unit of measure of an arc is the same of that of the radius.
+
+(Arcos congruentes)
+**Congruent arcs**: two arcs ar congruent when they have the same length. Given two arcs $\widehat{BC}$ and $\widehat{DE}$, if $m \widehat{BC} = m \widehat{DE}$, then $\widehat{BC} \cong \widehat{DE}$.
+
+(Postulado de adición de arcos)
+**Arc addition postulate**: in a circle, given two consecutive arcs, the total arc length of both arcs is equal to the sum of the lengths of the two arcs.
+
+> Arc addition postulate
+>
+> Let $\widehat{BC}$ and $\widehat{CD}$ be two consecutive arcs, then
+> $$m \widehat{BD} = m \widehat{BC} + m \widehat{CD}$$
+
+The arc addition postulate can be visualized with the following image.
+[Arc addition postulate image code](Programs/Ch09/S02_02_Arc_addition_postulate_image.py)
+![Arc addition postulate image](Images/Ch09/S02_02_Arc_addition_postulate.png)
+*Arc addition postulate*
+
 ## Properties of chords (Propiedades de las cuerdas)
 [Ch09_S03](https://www.ck12.org/reader/reader-index.html#section/2932982/9.3/9549314)
 
