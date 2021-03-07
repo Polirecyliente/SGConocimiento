@@ -182,6 +182,84 @@ The arc addition postulate can be visualized with the following image.
 ## Properties of chords (Propiedades de las cuerdas)
 [Ch09_S03](https://www.ck12.org/reader/reader-index.html#section/2932982/9.3/9549314)
 
+(Cuerdas y arcos correspondientes)
+**Corresponding chords and arcs**: in an arc, the corresponding chord is the chord formed with the endpoints of the arc. In an arc $\widehat{BC}$, its corresponding chord is $\overline{BC}$. In a chord, the corresponding arc is the arc formed with the endpoints of the chord. In a chord $\overline{BC}$, its corresponding arc is $\widehat{BC}$.
+
+(Teorema de las cuerdas congruentes desde arcos congruentes)
+**Congruent chords from congruent arcs theorem**: in a circle (or in two congruent ones), given two arcs and their corresponding chords, if the two arcs are congruent then the two corresponding chords are congruent.
+[Congruent chords from congruent arcs theorem image code](Programs/Ch09/S03_01_Congruent_chords_from_congruent_arcs_theorem_image.py)
+![Congruent chords from congruent arcs theorem image](Images/Ch09/S03_01_Congruent_chords_from_congruent_arcs_theorem.png)
+*Congruent chords from congruent arcs theorem*
+
+> Proof of the congruent chords from congruent arcs theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The circle $\bigodot A$ exists, with $B$, $C$, $D$, and $E$ being points that lie on the circle, and $\widehat{BC} \cong \widehat{DE}$ | Given |
+> | $\angle BAC \cong \angle DAE$ | Definition of central angle |
+> | $\overline{AB} \cong \overline{AC}$ and $\overline{AD} \cong \overline{AE}$ | Definition of radius |
+> | $\triangle BAC \cong \triangle DAE$ | SAS triangle congruence postulate |
+> | $\overline{BC} \cong \overline{DE}$ | Corresponding parts of congruent triangles are congruent |
+
+In a circle $\bigodot A$ (or in two congruent ones), given two arcs $\widehat{BC}$ and $\widehat{DE}$, with their corresponding chords being $\overline{BC}$ and $\overline{DE}$, if $\widehat{BC} \cong \widehat{DE}$, then $\overline{BC} \cong \overline{DE}$.
+
+(Converso del teorema de las cuerdas congruentes desde arcos congruentes)
+**Converse of the congruent chords from congruent arcs theorem**: in a circle (or in two congruent ones), given two chords and their corresponding arcs, if the two chords are congruent then the two corresponding arcs are congruent.
+
+> Proof of the converse of the congruent chords from congruent arcs theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The circle $\bigodot A$ exists, with $B$, $C$, $D$, and $E$ being points that lie on the circle, and $\overline{BC} \cong \overline{DE}$ | Given, from the *Congruent chords from congruent arcs theorem* image |
+> | $\overline{AB} \cong \overline{AC}$ and $\overline{AD} \cong \overline{AE}$ | Definition of radius |
+> | $\triangle BAC \cong \triangle DAE$ | SSS triangle congruence postulate |
+> | $\angle BAC \cong \angle DAE$ | Corresponding parts of congruent triangles are congruent |
+> | $\widehat{BC} \cong \widehat{DE}$ | Definition of central angle |
+
+In a circle $\bigodot A$ (or in two congruent ones), given two chords $\overline{BC}$ and $\overline{DE}$, with their corresponding arcs being $\widehat{BC}$ and $\widehat{DE}$, if $\overline{BC} \cong \overline{DE}$, then $\widehat{BC} \cong \widehat{DE}$.
+
+(Teorema de la mediatriz de una cuerda)
+**Perpendicular bisector of a chord theorem**: in a circle, given a chord, then the perpendicular bisector of the chord passes through the center of the circle, meaning that the perpendicular bisector of the chord can make a diameter of the circle.
+[Perpendicular bisector of a chord theorem image code](Programs/Ch09/S03_02_Perpendicular_bisector_of_a_chord_theorem_image.py)
+![Perpendicular bisector of a chord theorem image](Images/Ch09/S03_02_Perpendicular_bisector_of_a_chord_theorem.png)
+*Perpendicular bisector of a chord theorem*
+
+> Proof of the perpendicular bisector of a chord theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The circle $\bigodot A$ exists, with a chord $\overline{BC}$ that has a perpendicular bisector $\overline{DE}$. The point $F$ is the point of intersection of $\overline{BC}$ and $\overline{DE}$ | Given |
+> | (1) $D$, $E$, and $F$ are collinear | Definition of a line |
+> | $\overline{AF} \cong \overline{AF}$ | Reflexive property of congruence |
+> | $\overline{AB} \cong \overline{AC}$ | Definition of radius |
+> | $\overline{BF} \cong \overline{CF}$ | Definition of perpendicular bisector |
+> | $\triangle ABF \cong \triangle ACF$ | SSS triangle congruence postulate |
+> | $\angle BAF \cong \angle CAF$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{AF}$ is an angle bisector of $\angle BAC$ | Definition of angle bisector |
+> | $\overline{DE}$ is an angle bisector of $\angle BAC$ | From (1) |
+> | $A$ lies on $\overline{DE}$ | The vertex of an angle lies on its angle bisector |
+> | $\overline{DE}$ is a diameter of $\bigodot A$ | Definition of diameter |
+
+In a circle $\bigodot A$, given a chord $\overline{BC}$, the chord's perpendicular bisector $\overline{DE}$ is a diameter of $\bigodot A$.
+
+(Converso del teorema de la mediatriz de una cuerda)
+**Converse of the perpendicular bisector of a chord theorem**: in a circle, given a chord and a diameter that intersects the chord perpendicularly, then the diameter bisects the chord.
+
+> Proof of the converse of the perpendicular bisector of a chord theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The circle $\bigodot A$ exists, with a chord $\overline{BC}$, and a diameter $\overline{DE}$ that intersects $\overline{BC}$ such that $\overline{BC} \perp \overline{DE}$ | Given, from the *Perpendicular bisector of a chord theorem* image |
+> | $\overline{AF} \cong \overline{AF}$ | Reflexive property of congruence |
+> | $\overline{AB} \cong \overline{AC}$ | Definition of radius |
+> | $\triangle ABF \cong \triangle ACF$ | Hypotenuse-leg congruence theorem |
+> | $\overline{BF} \cong \overline{CF}$ | Corresponding parts of congruent triangles are congruent |
+> | $\overline{DE}$ is a perpendicular bisector of $\overline{BC}$ | Definition of perpendicular bisector |
+
+In a circle $\bigodot A$, given a chord $\overline{BC}$ and a diameter $\overline{DE}$ that intersects $\overline{BC}$ perpendicularly, then $\overline{DE}$ is a perpendicular bisector of $\overline{BC}$.
+
+<!-- TODO lengths of chords, props of chords and arcs-->
+
 ## Inscribed angles (Ángulos inscritos)
 [Ch09_S04](https://www.ck12.org/reader/reader-index.html#section/2932983/9.4/9549314)
 
