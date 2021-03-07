@@ -1652,6 +1652,12 @@ In a triangle $\triangle ABC$, the angle bisector of $\angle B$ intersects the s
 (Converso del teorema de la mediatriz de una cuerda)
 **Converse of the perpendicular bisector of a chord theorem**: in a circle, given a chord and a diameter that intersects the chord perpendicularly, then the diameter bisects the chord. In a circle $\bigodot A$, given a chord $\overline{BC}$ and a diameter $\overline{DE}$ that intersects $\overline{BC}$ perpendicularly, then $\overline{DE}$ is a perpendicular bisector of $\overline{BC}$.
 
+(Teorema de las cuerdas equidistantes)
+**Equidistant chords theorem**: in a given circle, if two chords are equidistant from the center, then the two chords are congruent. In a circle $\bigodot A$ with a chord $\overline{BC}$ having its shortest distance to $A$ being $\overline{AD}$, and a chord $\overline{EF}$ having its shortest distance to $A$ being $\overline{AG}$, if $\overline{AD} \cong \overline{AG}$, then $\overline{BC} \cong \overline{EF}$.
+
+(Converso del teorema de las cuerdas equidistantes)
+**Converse of the equidistant chords theorem**: in a given circle, if two chords are congruent, then they are equidistant from the center. In a circle $\bigodot A$ with a chord $\overline{BC}$ having its shortest distance to $A$ being $\overline{AD}$, and a chord $\overline{EF}$ having its shortest distance to $A$ being $\overline{AG}$, if $\overline{BC} \cong \overline{EF}$, then $\overline{AD} \cong \overline{AG}$.
+
 ### Shapes with their parts and formulas (Formas con sus partes y fórmulas)
 
 (Marcas de los ángulos)

@@ -258,6 +258,41 @@ In a circle $\bigodot A$, given a chord $\overline{BC}$, the chord's perpendicul
 
 In a circle $\bigodot A$, given a chord $\overline{BC}$ and a diameter $\overline{DE}$ that intersects $\overline{BC}$ perpendicularly, then $\overline{DE}$ is a perpendicular bisector of $\overline{BC}$.
 
+(Teorema de las cuerdas equidistantes)
+**Equidistant chords theorem**: in a given circle, if two chords are equidistant from the center, then the two chords are congruent.
+[Equidistant chords theorem image code](Programs/Ch09/S03_03_Equidistant_chords_theorem_image.py)
+![Equidistant chords theorem image](Images/Ch09/S03_03_Equidistant_chords_theorem.png)
+*Equidistant chords theorem*
+
+> Proof of the equidistant chords theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The circle $\bigodot A$ exists, with a chord $\overline{BC}$ having its shortest distance to $A$ being $\overline{AD}$, and a chord $\overline{EF}$ having its shortest distance to $A$ being $\overline{AG}$, such that $\overline{AD} \cong \overline{AG}$ | Given |
+> | $\overline{AB} \cong \overline{AC} \cong \overline{AE} \cong \overline{AF}$ | Definition of radius |
+> | $\overline{AD} \cong \overline{AD}$ and $\overline{AG} \cong \overline{AG}$ | Reflexive property of congruence |
+> | $\triangle ABD \cong \triangle ACD \cong \triangle AEG \cong \triangle AFG$ | Hypotenuse-leg congruence theorem |
+> | $\overline{BD} \cong \overline{CD} \cong \overline{EG} \cong \overline{FG}$ | Corresponding parts of congruent triangles are congruent |
+> | $BD = CD = EG = FG$ | Definition of congruence |
+> | $BC = BD + CD = EF = EG + FG$ | Segment addition postulate |
+> | $\overline{BC} \cong \overline{EF}$ | Definition of congruence |
+
+In a circle $\bigodot A$ with a chord $\overline{BC}$ having its shortest distance to $A$ being $\overline{AD}$, and a chord $\overline{EF}$ having its shortest distance to $A$ being $\overline{AG}$, if $\overline{AD} \cong \overline{AG}$, then $\overline{BC} \cong \overline{EF}$.
+
+(Converso del teorema de las cuerdas equidistantes)
+**Converse of the equidistant chords theorem**: in a given circle, if two chords are congruent, then they are equidistant from the center.
+
+> Proof of the converse of the equidistant chords theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | The circle $\bigodot A$ exists, with a chord $\overline{BC}$ having its shortest distance to $A$ being $\overline{AD}$, and a chord $\overline{EF}$ having its shortest distance to $A$ being $\overline{AG}$, such that $\overline{BC} \cong \overline{EF}$ | Given, from the *Equidistant chords theorem* image |
+> | $\overline{AB} \cong \overline{AC} \cong \overline{AE} \cong \overline{AF}$ | Definition of radius |
+> | $\triangle ABC \cong \triangle AEF$ | SSS triangle congruence postulate |
+> | $\overline{AD} \cong \overline{AG}$ | Corresponding parts of congruent triangles are congruent |
+
+In a circle $\bigodot A$ with a chord $\overline{BC}$ having its shortest distance to $A$ being $\overline{AD}$, and a chord $\overline{EF}$ having its shortest distance to $A$ being $\overline{AG}$, if $\overline{BC} \cong \overline{EF}$, then $\overline{AD} \cong \overline{AG}$.
+
 <!-- TODO lengths of chords, props of chords and arcs-->
 
 ## Inscribed angles (Ángulos inscritos)
