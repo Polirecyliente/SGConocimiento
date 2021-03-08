@@ -1,0 +1,1 @@
+from S06_Functions import anon_func1
