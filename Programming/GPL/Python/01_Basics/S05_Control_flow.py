@@ -4,10 +4,10 @@
 #T# Table of contents
 
 #C# Decision making
-#C# --- Conditional statements
+#C# - Conditional statements
 #C# Loops
-#C# --- for loop
-#C# --- while loop
+#C# - for loop
+#C# - while loop
 #C# List comprehension
 
 #T# Beginning of content
@@ -23,7 +23,7 @@
 
 #T# a colon goes at the end of the line after an if, elif, or else keyword
 
-#C# --- Conditional statements
+#C# - Conditional statements
 
 # |-----
 #T# conditional statements are carried out with the following syntax
@@ -61,7 +61,7 @@ else:
 
 #T# a colon goes at the end of the line after a for, or while keyword
 
-#C# --- for loop
+#C# - for loop
 
 # |-----
 #T# the for loop is made with the following syntax
@@ -103,7 +103,7 @@ for i1 in range1:
         break
 # |-----
 
-#C# --- while loop
+#C# - while loop
 
 # |-----
 #T# the while loop is made with the following syntax

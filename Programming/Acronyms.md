@@ -4,7 +4,7 @@
 #T# Table of contents
 
 #C# Algorithms
-#C# --- Cryptography
+#C# - Cryptography
 
 #T# Beginning of content
 -->

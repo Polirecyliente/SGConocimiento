@@ -5,11 +5,11 @@
 
 #C# Basic system calls
 #C# File input output
-#C# --- Piping and redirection
+#C# - Piping and redirection
 #C# File manipulation
 #C# Signal handling
 #C# Multiprocessing
-#C# --- Job control
+#C# - Job control
 
 #T# Beginning of content
 
@@ -37,7 +37,7 @@ exit 0
 #T# the nl command reads the content of a file a numbers its lines
 nl file1 # outputs the contents of file1 with numbered lines
 
-#C# --- Piping and redirection
+#C# - Piping and redirection
 
 # |-----
 
@@ -218,7 +218,7 @@ trap signal_handler1 2
 
 # |-------------------------------------------------------------
 
-#C# --- Job control
+#C# - Job control
 
 # |-----
 #T# the jobs command prints the current jobs

@@ -5,7 +5,7 @@
 
 #C# Blocks of code
 #C# Variables, constants, literals
-#C# --- Type hints
+#C# - Type hints
 #C# Escape sequences
 #C# Expressions
 #C# Function calls
@@ -44,7 +44,7 @@ if True:
 str1 = 'str'
 int1 = 5
 
-#C# --- Type hints
+#C# - Type hints
 
 # |-----
 #T# type hints are used when there is no autocompletion for an object that should have, this is because the type of a dynamic type can't be known at compile time

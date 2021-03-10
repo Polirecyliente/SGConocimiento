@@ -8,16 +8,16 @@
 #C# String functions
 #C# Datetime functions
 #C# Regex matching
-#C# --- Characters
-#C# --- Quantifiers
-#C# --- Character classes
-#C# --- Groupings
-#C# --- Subroutines and conditionals
-#C# --- Anchors and boundaries
-#C# --- Lookarounds
-#C# --- Regex modifiers
+#C# - Characters
+#C# - Quantifiers
+#C# - Character classes
+#C# - Groupings
+#C# - Subroutines and conditionals
+#C# - Anchors and boundaries
+#C# - Lookarounds
+#C# - Regex modifiers
 #C# Builtin values
-#C# --- Special parameters
+#C# - Special parameters
 
 #T# Beginning of content
 
@@ -319,7 +319,7 @@ echo "in string1" | grep -n 'i' # 1:in string1 #| the "i" letter is highlighted
 
 #T# other regex operators and special characters from PCRE (Perl Compatible Regular Expressions) can be used with the -P flag of the grep command, these may not work in other programs, such as the sed program
 
-#C# --- Characters
+#C# - Characters
 
 # |-----
 #T# note that to match a dollar sign $ it must be escaped and inside single quotes (because it's an operator in both Bash and regex), such as '\$'
@@ -443,7 +443,7 @@ echo -e "str1\nstr2" | grep -zP 'str1\n\Kstr2' # str2 #| without \K both lines a
 echo -e "str1" | grep -P '(?# initial comment)str(?# a number comes next)1' # str1
 # |-----
 
-#C# --- Quantifiers
+#C# - Quantifiers
 
 # |-----
 #T# the question mark ? is used as a quantifier to match 0 or 1 of the preceding char
@@ -476,7 +476,7 @@ echo "12345" | grep -P '[0-9]*?' #  # no match
 echo "abcdeF" | grep -Po '\w{1,7}+F' # no match #| 'abcdeF' would be matched without the possessive quantifier
 # |-----
 
-#C# --- Character classes
+#C# - Character classes
 
 # |-----
 #T# the syntax [char1char2charN] is called a character class, and used to match any single one of the characters, char1, char2, up to charN
@@ -504,7 +504,7 @@ echo "strr1" | grep -E '[3-H]1' # r1
 echo "str1" | grep '[[:alnum:]]' # str1
 # |-----
 
-#C# --- Groupings
+#C# - Groupings
 
 # |-----
 #T# the parentheses () are used to capture a group of chars, and treat this group the same as treating a single char
@@ -540,7 +540,7 @@ echo "priorship" | grep -P '(?>prio|priorshi)p' # no match #| given that the fir
 echo "B12 12" | grep -P '(?|A(\d+)|B(\d+)) \1' # B12 12
 # |-----
 
-#C# --- Subroutines and conditionals
+#C# - Subroutines and conditionals
 
 # |-----
 #T# subroutines are a way to reuse regex patterns already created, instead of writing them again
@@ -567,7 +567,7 @@ echo "12345" | grep -P '(\d)(?(1)(2)|(b))'                    # 12
 echo "12345" | grep -P '(?<group1>\d{2})(?(group1)(34)|(cd))' # 1234
 # |-----
 
-#C# --- Anchors and boundaries
+#C# - Anchors and boundaries
 
 # |-----
 #T# the caret ^ (outside a character class) matches the following chars as an anchor at the start of the line
@@ -597,7 +597,7 @@ echo "ab cd" | grep -E '\Bcd' #  # no match
 #T# there is no support for the match anchor \G
 # |-----
 
-#C# --- Lookarounds
+#C# - Lookarounds
 
 # |-----
 #T# the syntax (?=pattern1) is used to create a positive lookahead with pattern1, so pattern1 must appear ahead when finding a match, because pattern1 is not matched
@@ -614,7 +614,7 @@ echo "str101" | grep -P 'r1(?!00)\d\d' # r101 #| doesn't match in str100
 echo "str1" | grep -P '(?<!st)r1' #  # no match
 # |-----
 
-#C# --- Regex modifiers
+#C# - Regex modifiers
 
 # |-----
 #T# grep only supports a few regular regex modifiers, to use inline modifiers the -P flag must be used
@@ -674,7 +674,7 @@ echo "str1 STR2" | grep -P '(?i:STR)1 (?-i:STR)2' # str1 STR2
 
 # |-------------------------------------------------------------
 
-#C# --- Special parameters
+#C# - Special parameters
 
 # |-----
 #T# the special parameters are variables whose name can't be manually assigned values, they are used to store special values

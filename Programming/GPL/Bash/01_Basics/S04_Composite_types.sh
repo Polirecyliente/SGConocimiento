@@ -5,7 +5,7 @@
 
 #C# Composite types in general
 #C# Strings
-#C# --- String formatting
+#C# - String formatting
 
 #T# Beginning of content
 
@@ -64,7 +64,7 @@ echo ${!associative1[@]} # key2 key1
 
 echo $'A\tB' # A	B
 
-#C# --- String formatting
+#C# - String formatting
 
 # |-----
 #T# the printf command is used to output or store formatted strings

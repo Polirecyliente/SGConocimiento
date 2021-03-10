@@ -8,7 +8,7 @@
 #C# Escape sequences
 #C# Expressions
 #C# Function calls
-#C# --- Command execution
+#C# - Command execution
 #C# Statements
 #C# Multiline statements
 #C# Multistatement lines
@@ -107,7 +107,7 @@ int1=$(( 5 + 3 - 1 )) # 7
 # |-------------------------------------------------------------
 #T# functions and commands use the same syntax, there are no parentheses, arguments are separated by space, arguments without quotation are taken to be strings
 
-#C# --- Command execution
+#C# - Command execution
 
 # |-----
 #T# basic output to stdout with the echo command

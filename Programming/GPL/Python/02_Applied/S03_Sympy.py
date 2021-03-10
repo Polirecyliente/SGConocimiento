@@ -5,14 +5,14 @@
 
 #C# Basic usage
 #C# Data types
-#C# --- Numeric constants
+#C# - Numeric constants
 #C# Functions
-#C# --- Iterator creation
-#C# --- Equation solving
-#C# --- Simplification
-#C# --- Arithmetic
-#C# --- Algebra
-#C# --- Logic
+#C# - Iterator creation
+#C# - Equation solving
+#C# - Simplification
+#C# - Arithmetic
+#C# - Algebra
+#C# - Logic
 
 #T# Beginning of content
 
@@ -178,7 +178,7 @@ var1 = sympy.Symbol('x', real = True)
 var1 = sympy.Symbol('x') # x
 P1 = sympy.Poly(3*var1**2 + 5*var1 + 8) # Poly(3*x**2 + 5*x + 8, x, domain='ZZ')
 
-#C# --- Numeric constants
+#C# - Numeric constants
 
 # |-----
 #T# The numbers 0, 1, 1/2 have a sympy constant
@@ -207,7 +207,7 @@ bool1 = sympy.S.false # False
 # |-------------------------------------------------------------
 import sympy
 
-#C# --- Iterator creation
+#C# - Iterator creation
 
 # |-----
 #T# the cartes function is an alias for the product function of the itertools module which is part of the Python standard library
@@ -215,7 +215,7 @@ product1 = sympy.cartes([1, 0], repeat = 2)
 list1 = list(product1) # [(1, 1), (1, 0), (0, 1), (0, 0)]
 # |-----
 
-#C# --- Equation solving
+#C# - Equation solving
 
 # |-----
 #T# the Eq constructor is used to create equations, the first argument is equal to the second
@@ -241,7 +241,7 @@ list2 = [var1, var2] # [x, y]
 nums1 = sympy.linsolve(list1, list2) # FiniteSet((4, 6)) #| 4 is the solution of var1, and 6 is the solution of var2
 # |-----
 
-#C# --- Simplification
+#C# - Simplification
 
 # |-----
 #T# the simplify function is a function for general simplification, it is avoided in favor of one of the more specific simplification functions
@@ -282,7 +282,7 @@ expr2 = 2*var1 - 7
 expr3 = sympy.div(expr1, expr2) # (3*x/2 + 11/4, 109/4)
 # |-----
 
-#C# --- Arithmetic
+#C# - Arithmetic
 
 # |-----
 #T# the sqrt function returns the square root of its argument
@@ -295,7 +295,7 @@ num1 = 2
 expr1 = sympy.Pow(var1, num1) # x**2
 # |-----
 
-#C# --- Algebra
+#C# - Algebra
 
 # |-----
 #T# the gcd function calculates the greatest common divisor, or greatest common factor, of two expressions
@@ -305,7 +305,7 @@ expr2 = 9*var1                  # 9*x
 expr3 = sympy.gcd(expr1, expr2) # 3*x
 # |-----
 
-#C# --- Logic
+#C# - Logic
 
 # |-----
 #T# the logic and operator is the ampersand &

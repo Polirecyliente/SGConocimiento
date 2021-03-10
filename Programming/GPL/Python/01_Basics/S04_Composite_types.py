@@ -4,18 +4,18 @@
 #T# Table of contents
 
 #C# Composite types in general
-#C# --- Basic operators
+#C# - Basic operators
 #C# Strings
-#C# --- String formatting
-#C# --- U strings
-#C# --- R strings
-#C# --- B strings
-#C# --- F strings
+#C# - String formatting
+#C# - U strings
+#C# - R strings
+#C# - B strings
+#C# - F strings
 #C# Lists
 #C# Tuples
 #C# Dictionaries
 #C# Sets
-#C# --- Comparisons between sets
+#C# - Comparisons between sets
 #C# Multidimensional composite types
 
 #T# Beginning of content
@@ -32,7 +32,7 @@ tuple1 = ('elem1', 2)
 list1 = [99, 99, 1, 99, 99, 2, 99, 99, 3, 99]
 int1 = len(list1) # 10
 
-#C# --- Basic operators
+#C# - Basic operators
 
 # |-----
 #T# the following operators can only be applied to strings, lists, and tuples
@@ -89,7 +89,7 @@ list2 = list1[-4:3] # ['elem1', 2, 'elem3']
 str1 = "first string"
 bool1 = "g" in str1 # True
 
-#C# --- String formatting
+#C# - String formatting
 
 # |-----
 #T# format a string à la printf
@@ -107,7 +107,7 @@ str1 = "string: %s, digit: %d" %("S1", 514) # 'string: S1, digit: 514'
 str1 = 'string: {}, digit: {}'.format("S1", 514) # 'string: S1, digit: 514'
 # |-----
 
-#C# --- U strings
+#C# - U strings
 
 # |-----
 #T# make an unicode string with the prefix "u" or "U", this is the default
@@ -115,14 +115,14 @@ str1 = u"gálè\u02A0ät" # 'gálèʠät'
 str1 =  "gálè\u02A0ät" # 'gálèʠät'
 # |-----
 
-#C# --- R strings
+#C# - R strings
 
 # |-----
 #T# include escape sequences in a string without their meaning with the raw string prefix "r" or "R"
 str1 = r"\nRaw\tString" # '\\nRaw\\tString'
 # |-----
 
-#C# --- B strings
+#C# - B strings
 
 # |-----
 #T# make a string of bytes with the prefix "b" or "B"
@@ -133,7 +133,7 @@ str1 = b"\101\271\xAC" # b'A\xb9\xac', \101 is 65 or 'A', \271 is 185 or \xb9
 #T# a byte as an octal number needs three numbers \NNN, the first N has the first bit ignored, so the first N shouldn't be greater than 3
 # |-----
 
-#C# --- F strings
+#C# - F strings
 
 # |-----
 #T# string interpolation can be made with the prefix "f" or "F", the string interpolation is done inside curly braces
@@ -317,7 +317,7 @@ set2 = set1.difference(froz1)           # {'elem'}
 set2 = set1 - froz1                     # {'elem'}
 set2 = set1.symmetric_difference(froz1) # {'elem', 'elem_froz', 88, 62}
 
-#C# --- Comparisons between sets
+#C# - Comparisons between sets
 
 # |-----
 #T# subsets <, <=

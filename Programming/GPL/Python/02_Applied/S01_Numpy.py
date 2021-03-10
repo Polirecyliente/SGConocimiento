@@ -4,13 +4,13 @@
 #T# Table of contents
 
 #C# Numpy arrays
-#C# --- Array data types
-#C# --- Array operations
+#C# - Array data types
+#C# - Array operations
 #C# Functions
-#C# --- Array creation
-#C# --- Random number generation
-#C# --- Arithmetic
-#C# --- Trigonometry
+#C# - Array creation
+#C# - Random number generation
+#C# - Arithmetic
+#C# - Trigonometry
 
 #T# Beginning of content
 
@@ -112,7 +112,7 @@ arr2 = arr1.reshape(12, 1) # array([[ 1], [ 2], [ 3], [ 4], [ 5], [ 6], [ 7], [ 
 arr2 = arr1.reshape(2, 3, -1) # array([[[ 1,  2], [ 3,  4], [ 5,  6]], [[ 7,  8], [ 9, 10], [11, 12]]])
 tuple1 = arr2.shape # (2, 3, 2)
 
-#C# --- Array data types
+#C# - Array data types
 
 # |-----
 #T# there are a few data types that numpy arrays support, indicated by a single char
@@ -142,7 +142,7 @@ arr1 = np.array([1.4, 2.4])
 arr2 = arr1.astype('i') # array([1, 2], dtype=int32) #| the argument 'i' changes the data type to integer, any of the other types can be used
 # |-----
 
-#C# --- Array operations
+#C# - Array operations
 
 # |-----
 #T# in numpy, the words dimension and axis are almost synonyms, axis is the same as dimension - 1, dimensions count from 1, axes count from 0
@@ -363,7 +363,7 @@ list1 = np.dsplit(arr1, 2)
 # |-------------------------------------------------------------
 import numpy as np
 
-#C# --- Array creation
+#C# - Array creation
 
 # |-----
 #T# the arange function creates an array given a numeric range
@@ -388,7 +388,7 @@ arr1 = np.linspace(1, 12, 3) # array([ 1. ,  6.5, 12. ])
 arr1 = np.ones((2, 1, 3)) # array([[[1., 1., 1.]], [[1., 1., 1.]]])
 # |-----
 
-#C# --- Random number generation
+#C# - Random number generation
 
 # |-----
 #T# the random module from the numpy package is used to do random number generation
@@ -414,7 +414,7 @@ num1 = np.random.randint(4, 7) # 6 #| or other
 int1 = np.random.choice(np.array([1, 2, 3, 4])) # 2 #| or other
 # |-----
 
-#C# --- Arithmetic
+#C# - Arithmetic
 
 # |-----
 #T# the add function adds two arrays element-wise, it supports array broadcasting
@@ -580,7 +580,7 @@ arr1 = np.array([12, 18, 36, 60])
 num1 = np.gcd.reduce(arr1) # 6
 # |-----
 
-#C# --- Trigonometry
+#C# - Trigonometry
 
 # |-----
 #T# the sin function returns the sine of its argument

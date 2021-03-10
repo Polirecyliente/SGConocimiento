@@ -12,16 +12,16 @@
 #C# Fonts
 #C# Encodings
 #C# Internet
-#C# --- Package manager
-#C# --- Firewall
-#C# --- Networking
+#C# - Package manager
+#C# - Firewall
+#C# - Networking
 #C# Languages
-#C# --- Latex
-#C# --- Python
+#C# - Latex
+#C# - Python
 #C# File system hierarchy management
-#C# --- File permissions
-#C# --- File compression
-#C# --- find and xargs commands
+#C# - File permissions
+#C# - File compression
+#C# - find and xargs commands
 #C# Cryptographic keys
 #C# Disc image burning
 #C# Root privileges
@@ -171,7 +171,7 @@ iconv -l
 #T# download a file from the internet with wget, the -c flag is to continue downloading a partially downloaded file
 wget -c http://developer.download.nvidia.com/compute/cuda/11.0.2/local_installers/cuda_11.0.2_450.51.05_linux.run
 
-#C# --- Package manager
+#C# - Package manager
 
 # |-----
 #T# get information about a package, like its name, size, description, version, maintainers, bug report, dependencies, homepage
@@ -266,7 +266,7 @@ dpkg --print-architecture # amd64
 dpkg --print-foreign-architectures # i386
 # |-----
 
-#C# --- Firewall
+#C# - Firewall
 
 # |-----
 #T# the ufw program serves to manage the firewall, UFW stands for Uncomplicated Firewall, it acts as a wrapper for iptables
@@ -340,7 +340,7 @@ ufw delete 2
 ufw reset
 # |-----
 
-#C# --- Networking
+#C# - Networking
 
 # |-----
 #T# the ifconfig command displays the network interfaces on the system along with information and metadata about those interfaces
@@ -365,7 +365,7 @@ sudo iwconfig wlp3s0 mode ad-hoc
 
 # |-------------------------------------------------------------
 
-#C# --- Latex
+#C# - Latex
 
 # |-----
 #T# see the paths where latex packages can be installed
@@ -376,7 +376,7 @@ kpsepath tex
 tlmgr install undertilde
 # |-----
 
-#C# --- Python
+#C# - Python
 
 # |-----
 #T# get help and documentation about a module with the pydoc program
@@ -442,6 +442,14 @@ mv "${var1}" "${var1::5}$((${var1:5:1} + 1))${var1:6}"
 #T# merge directories with the rsync command
 rsync -rv /path/to/dir1/ /path/to/dir2/ #| make sure to put an ending slash after the paths, otherwise dir1 is copied inside dir2 instead of merging the contents of dir1 inside dir2
 
+#T# operate over each line (symbolized as line1) of a file named file1 with the following construct
+# SYNTAX while read line1; do statements1; done 0<file1
+while read line1; do echo $line1; sleep .5; done 0<file1 #| prints each line in file1 and waits half a second before the next iteration
+
+#T# operate over each file (symbolized as file1) inside a given dir named dir1 with the following construct
+# SYNTAX for file1 in /path/to/dir1/*; do statements1; done
+for it1 in *; do echo $it1; done #| prints the name of each file in the current directory
+
 #T# print numbered from the start in file1 up to line up_to_l, but taking only the last N lines
 # head -up_to_l file1 | nl -b 'a' | tail -N
 head -80 file1 | nl -b 'a' | tail -10
@@ -450,7 +458,7 @@ head -80 file1 | nl -b 'a' | tail -10
 mkdir -p /tmp/parent_dir1/child_dir1
 #T# the p flag creates any parent directories needed, if they don't exist
 
-#C# --- File permissions
+#C# - File permissions
 
 # |-----
 #T# set the owner and group of a file or directory with the chown command
@@ -463,7 +471,7 @@ mkdir -p /tmp/parent_dir1/child_dir1
 sudo chown -R root.root ./dir1/file1
 # |-----
 
-#C# --- File compression
+#C# - File compression
 
 # |-----
 #T# tar, zip, and unzip commands
@@ -505,7 +513,7 @@ tar xjf file.tar.bz2
 xz -d compressed_file1.tar.xz
 # |-----
 
-#C# --- find and xargs commands
+#C# - find and xargs commands
 
 # |-----
 

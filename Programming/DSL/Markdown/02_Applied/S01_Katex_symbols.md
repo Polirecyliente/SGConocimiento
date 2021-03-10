@@ -7,18 +7,18 @@
 <!-- #C# Accents -->
 <!-- #C# Spacing -->
 <!-- #C# Delimiters -->
-<!-- #C# --- Delimiter sizing modifiers -->
+<!-- #C# - Delimiter sizing modifiers -->
 <!-- #C# Environments -->
 <!-- #C# Letters -->
 <!-- #C# Layout -->
-<!-- #C# --- Annotations -->
-<!-- #C# --- Vertical layout -->
+<!-- #C# - Annotations -->
+<!-- #C# - Vertical layout -->
 <!-- #C# Logic, set theory -->
 <!-- #C# Operators -->
-<!-- #C# --- Big operators -->
-<!-- #C# --- Binary operators -->
-<!-- #C# --- Functions -->
-<!-- #C# --- Relational operators -->
+<!-- #C# - Big operators -->
+<!-- #C# - Binary operators -->
+<!-- #C# - Functions -->
+<!-- #C# - Relational operators -->
 <!-- #C# Arrows -->
 <!-- #C# Style -->
 <!-- #C# Symbols, punctuation -->
@@ -127,7 +127,7 @@
 | Left upper half brace    | $\lmoustache$                                 |
 | Right upper half brace   | $\rmoustache$                                 |
 
-<!-- #C# --- Delimiter sizing modifiers -->
+<!-- #C# - Delimiter sizing modifiers -->
 
 <!-- # |----- -->
 | Delimiter modifier description       | Example                           |
@@ -280,7 +280,7 @@
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# layout serves to set the characters' position -->
 
-<!-- #C# --- Annotations -->
+<!-- #C# - Annotations -->
 
 <!-- # |----- -->
 | Annotation description | Example             |
@@ -293,7 +293,7 @@
 | Box around letters     | $\boxed{Letters}$   |
 <!-- # |----- -->
 
-<!-- #C# --- Vertical layout -->
+<!-- #C# - Vertical layout -->
 
 <!-- # |----- -->
 | Layout description        | Example                                     |
@@ -365,7 +365,7 @@
 <!-- #C# Operators -->
 
 <!-- # |------------------------------------------------------------- -->
-<!-- #C# --- Big operators -->
+<!-- #C# - Big operators -->
 
 <!-- # |----- -->
 | Operator description     | Example                           |
@@ -389,7 +389,7 @@
 | Arbitrary disjoint union | $\biguplus$ or $\bigsqcup$        |
 <!-- # |----- -->
 
-<!-- #C# --- Binary operators -->
+<!-- #C# - Binary operators -->
 
 <!-- # |----- -->
 | Operator description                 | Example                         |
@@ -444,7 +444,7 @@
 | Plus with dot                        | $\dotplus$                      |
 <!-- # |----- -->
 
-<!-- #C# --- Functions -->
+<!-- #C# - Functions -->
 
 <!-- # |----- -->
 | Function description     | Example                              |
@@ -487,7 +487,7 @@
 | Degree of polynomial     | $\deg{x}$                            |
 <!-- # |----- -->
 
-<!-- #C# --- Relational operators -->
+<!-- #C# - Relational operators -->
 
 <!-- # |----- -->
 | Operator description     | Example                                       |

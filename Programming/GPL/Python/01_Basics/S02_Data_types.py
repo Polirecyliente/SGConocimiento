@@ -6,13 +6,13 @@
 #C# Types in general
 #C# Numeric types
 #C# String types
-#C# --- Bytes type
+#C# - Bytes type
 #C# Boolean type
 #C# Composite types
-#C# --- Lists
-#C# --- Tuples
-#C# --- Dictionaries
-#C# --- Sets
+#C# - Lists
+#C# - Tuples
+#C# - Dictionaries
+#C# - Sets
 #C# Enum type
 #C# Null type
 #C# Type casting
@@ -104,7 +104,7 @@ str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
 #       Form
 # or ʠ𐍆l¹   feed lines
 
-#C# --- Bytes type
+#C# - Bytes type
 
 # |-----
 #T# the bytes type is numerical but used extensively in strings
@@ -133,7 +133,7 @@ bool1 = False
 
 #T# arrays are produced when all the elements in a composite type are from the same type
 
-#C# --- Lists
+#C# - Lists
 
 # |-----
 #T# lists are created within brackets with elements separated by comma
@@ -145,7 +145,7 @@ int1 = list1[1] # 2
 list1[1] = 5 # list1 == ['elem1', 5, 'elem3']
 # |-----
 
-#C# --- Tuples
+#C# - Tuples
 
 # |-----
 #T# tuples are read-only lists, and are created within parentheses with elements separated by comma
@@ -162,7 +162,7 @@ str1 = tuple1[2] # 'tuple_elem3'
 tuple2 = 1, 6, 5,
 # |-----
 
-#C# --- Dictionaries
+#C# - Dictionaries
 
 # |-----
 #T# dictionaries are Python's hash table with key value pairs, and are created within curly braces with pairs separated by comma, and key separated from value with a colon
@@ -178,7 +178,7 @@ dict1keys = dict1.keys()   # dict_keys(['Fis', 'Sec', 'Thd'])
 dict1vals = dict1.values() # dict_values([63.2, 12.1, 19.8])
 # |-----
 
-#C# --- Sets
+#C# - Sets
 
 # |-----
 #T# sets are unordered collections, similar to a list in that they can be changed after creation, and are created within curly braces with elements separated by comma

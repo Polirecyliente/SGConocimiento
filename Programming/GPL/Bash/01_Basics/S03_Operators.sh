@@ -4,14 +4,14 @@
 #T# Table of contents
 
 #C# Expansions
-#C# --- Brace expansion
-#C# --- Tilde expansion
-#C# --- Parameter (variable) expansion
-#C# --- Command substitution
-#C# --- Arithmetic expansion
-#C# --- Word splitting
-#C# --- Pathname expansion
-#C# --- Indirect expansion
+#C# - Brace expansion
+#C# - Tilde expansion
+#C# - Parameter (variable) expansion
+#C# - Command substitution
+#C# - Arithmetic expansion
+#C# - Word splitting
+#C# - Pathname expansion
+#C# - Indirect expansion
 #C# Arithmetic operators
 #C# Relational operators
 #C# Assignment operators
@@ -19,7 +19,7 @@
 #C# Logical operators
 #C# Grouping operators
 #C# Shell operators
-#C# --- History expansion
+#C# - History expansion
 
 #T# Beginning of content
 
@@ -30,7 +30,7 @@
 
 #T# there are several kinds of expansion, and so they are done in a given order, the following sections are written in this order, the tokens expand in this order
 
-#C# --- Brace expansion
+#C# - Brace expansion
 
 # |-----
 #T# brace expansion is used to create strings in a combinatorial manner, with N sets of strings, each enclosed in braces, and each of size n_i, the total amount of created strings is the product of all the n_i from all the N sets
@@ -43,7 +43,7 @@
 echo "s1"{"s2","s3"}"sm"{"s4","s5","s6"} # s1s2sms4 s1s2sms5 s1s2sms6 s1s3sms4 s1s3sms5 s1s3sms6
 # |-----
 
-#C# --- Tilde expansion
+#C# - Tilde expansion
 
 # |-----
 #T# tilde expansion expands a tilde by replacing it for a user's home directory
@@ -59,7 +59,7 @@ echo ~/dir1 # /home/user1/dir1 # if such user and directory exist
 echo ~other_user1/dir1 # /home/other_user1/dir1 # if such user and directory exist
 # |-----
 
-#C# --- Parameter (variable) expansion
+#C# - Parameter (variable) expansion
 
 # |-----
 #T# variables (called parameters here) can be expanded to get their value, or get their value with modification
@@ -260,7 +260,7 @@ echo ${var1/%pie/bye} # apple bye
 
 # |-----
 
-#C# --- Command substitution
+#C# - Command substitution
 
 # |-----
 #T# command substitution allows using the output of commands as arguments for other commands
@@ -273,7 +273,7 @@ echo "Bash exec file is in "$(which bash) # Bash exec file is in /bin/bash
 echo "Bash exec file is in "`which bash`  # Bash exec file is in /bin/bash
 # |-----
 
-#C# --- Arithmetic expansion
+#C# - Arithmetic expansion
 
 # |-----
 #T# arithmetic expansion is done to do arithmetic calculations
@@ -292,7 +292,7 @@ int2=$(( int1 + 5 ))  # 11 # int1 must not be expanded with dollar sign $
 let "var1 = 5 + 2" # var1 == 7
 # |-----
 
-#C# --- Word splitting
+#C# - Word splitting
 
 # |-----
 #T# word splitting is done to split words where an IFS (Internal Field Separator) character is found, this is done only outside double quotes ", so strings inside double quotes are not word splitted
@@ -308,7 +308,7 @@ let "var1 = 5 + 2" # var1 == 7
 cat file1 file2 "file name 3" # this outputs the contents of file1, file2, and "file name 3", if such files exist
 # |-----
 
-#C# --- Pathname expansion
+#C# - Pathname expansion
 
 # |-----
 #T# pathname expansion is done with globbing (also called filename expansion), the following syntaxes of this section can be used anywhere where globbing is accepted in Bash
@@ -377,7 +377,7 @@ echo @(F[A-Z])       # FB FC   # if such files exist
 echo !(F[A-Z])       # F1F2 F2 # if such files exist
 # |-----
 
-#C# --- Indirect expansion
+#C# - Indirect expansion
 
 # |-----
 #T# indirect expansion allows using the value of a variable, as a variable, and expand it, this is done with an exclamation mark ! at the start of a variable being expanded
@@ -715,7 +715,7 @@ echo $((num1)) # 36 #| ((7) * 5) + 1 == 35 + 1
 . S08_CLI_args.sh      # executes this script in the same shell
 source S08_CLI_args.sh # executes this script in the same shell
 
-#C# --- History expansion
+#C# - History expansion
 
 # |-----
 #T# the history can be checked with the history command

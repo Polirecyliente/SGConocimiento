@@ -5,24 +5,24 @@
 
 #C# Basic usage
 #C# Figures, axes
-#C# --- Figure basics
-#C# --- Figure management
-#C# --- Axes creation
-#C# --- Axes management
-#C# --- Axis
-#C# --- Grids
-#C# --- Figures and axes together
+#C# - Figure basics
+#C# - Figure management
+#C# - Axes creation
+#C# - Axes management
+#C# - Axis
+#C# - Grids
+#C# - Figures and axes together
 #C# Parts of a plot
-#C# --- Titles
-#C# --- Spines
-#C# --- Ticks
-#C# --- Markers
+#C# - Titles
+#C# - Spines
+#C# - Ticks
+#C# - Markers
 #C# Annotations
-#C# --- Latex symbols
+#C# - Latex symbols
 #C# Coordinate systems
 #C# Colors
 #C# Plot types
-#C# --- Patches
+#C# - Patches
 #C# Transforms
 #C# 3D plotting
 #C# Backends
@@ -64,7 +64,7 @@ plt.show()
 
 # |-------------------------------------------------------------
 
-#C# --- Figure basics
+#C# - Figure basics
 
 # |-----
 #T# fig_id1, is an identification for a figure, it can be a figure object, or a string with the name of the figure
@@ -85,7 +85,7 @@ fig2 = plt.figure("Second figure", figsize = (2, 1))
 list1 = plt.get_fignums() # [1, 2]
 # |-----
 
-#C# --- Figure management
+#C# - Figure management
 
 # |-----
 #T# get the current figure with the gcf function
@@ -112,7 +112,7 @@ plt.clf()
 plt.figure(fig1.number)
 # |-----
 
-#C# --- Axes creation
+#C# - Axes creation
 
 # |-----
 #T# create the axes with the axes constructor, it returns an axes object
@@ -134,7 +134,7 @@ ax2 = plt.axes(label = 'axes two')
 ax1 = fig1.add_axes([0, 0, 1, 1], label = 'new axes one')
 # |-----
 
-#C# --- Axes management
+#C# - Axes management
 
 # |-----
 #T# the axes attribute of a figure object has a list of the axes in the figure
@@ -222,7 +222,7 @@ ax1.set_ylim(-1, 4)
 ax1.set_ylim(bottom = -1, top = 4)
 # |-----
 
-#C# --- Axis
+#C# - Axis
 
 # |-----
 #T# set the axis borders (in data coordinates) with the axis function
@@ -259,7 +259,7 @@ ax1.axis([0, 4, 0, 6])
 ax2 = ax1.twiny()
 # |-----
 
-#C# --- Grids
+#C# - Grids
 
 # |-----
 #T# the grid can be drawn with the grid function
@@ -286,7 +286,7 @@ ax1.grid(which = "major", color= "#FFFF66")
 ax1.grid(axis = "x", linewidth = 4, dashes = [5, 10, 7, 7, 2, 1], linestyle = '--')
 # |-----
 
-#C# --- Figures and axes together
+#C# - Figures and axes together
 
 # |-----
 #T# create a figure, and a numpy n-dimensional array of axes, together in a tuple, with the subplots function
@@ -411,7 +411,7 @@ ax1.autoscale() #| without autoscale, the arrow is shown incompletely
 
 plt.plot([3, 7], [-1, 5], 'w', marker = 'o', markersize = 6, color = '#A178B955', linewidth = 1.5, zorder = 4)
 
-#C# --- Titles
+#C# - Titles
 
 # |-----
 #T# put the title of the figure, in the top side, with the suptitle function
@@ -429,7 +429,7 @@ ax1 = plt.axes() # type: plt.Axes
 ax1.set_title('Axes title string', y = 1.3)
 # |-----
 
-#C# --- Spines
+#C# - Spines
 
 # |-----
 #T# each of the four sides of the axes is called a spine, the spines attribute of an axes object is used to access each spine individually, using the spines attribute as a dictionary. The spine names are: 'left', 'bottom', 'right', 'top'
@@ -454,7 +454,7 @@ spine1.set_visible(False)
 spine1.set_position(('outward', 2)) # spine1 is places 2 points outwards
 # |-----
 
-#C# --- Ticks
+#C# - Ticks
 
 # |-----
 #T# the ticks can be modified with the tick_params function
@@ -494,7 +494,7 @@ ax1.xaxis.set_ticks_position('top')
 ax1.yaxis.set_ticks_position('right')
 # |-----
 
-#C# --- Markers
+#C# - Markers
 
 # |-----
 #T# to create markers, the MarkerStyle constructor is used
@@ -560,7 +560,7 @@ ax1.annotate('annotation in the image', (.4, .8), (.5, .7), arrowprops = {'arrow
 annotation1 = ax1.annotate('str1', (0, 0), (0, 0))
 annotation1.draggable()
 
-#C# --- Latex symbols
+#C# - Latex symbols
 
 # |-----
 #T# Latex symbols can be used in annotations, they must be written within a pair of dollar signs $, and the string must be declared to be a raw string
@@ -660,7 +660,7 @@ list1 = [0, 3.14/2]
 list2 = [1, 1]
 plt.polar(list1, list2) #| plots a line segment, in rectangular coordinates the segment goes from (1, 0) to (0, 1)
 
-#C# --- Patches
+#C# - Patches
 
 # |-----
 

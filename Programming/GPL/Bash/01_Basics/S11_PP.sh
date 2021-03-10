@@ -4,7 +4,7 @@
 #T# Table of contents
 
 #C# Procedures
-#C# --- Interaction between procedures
+#C# - Interaction between procedures
 
 #T# Beginning of content
 
@@ -21,7 +21,7 @@
 func1() { var1=57; echo "var1 is $var1"; }
 func1
 
-#C# --- Interaction between procedures
+#C# - Interaction between procedures
 
 # |-----
 #T# procedures can interact to change the general state of the program, they can be called from within each other, or interact through variables

@@ -4,7 +4,7 @@
 #T# Table of contents
 
 #C# Interpreter customization
-#C# --- Interpreter options
+#C# - Interpreter options
 
 #T# Beginning of content
 
@@ -12,7 +12,7 @@
 
 # |-------------------------------------------------------------
 
-#C# --- Interpreter options
+#C# - Interpreter options
 
 # |-----
 #T# the interpreter can have several options set at the start

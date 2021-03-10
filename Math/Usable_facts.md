@@ -4,128 +4,47 @@
 <!--
 #T# Table of contents
 
-#C# Math definitions (Definiciones de matemática)
-#C# --- Numeral systems (Sistemas de numeración)
-#C# --- Coordinate systems (Sistemas de coordenadas)
-#C# --- Subsets of the real numbers (Subconjuntos de los números reales)
-#C# ---| Counting numbers (Números naturales)
-#C# ---| Whole numbers (Números naturales y el cero)
-#C# ---| Integer numbers (Números enteros)
-#C# ---| Rational numbers (Números racionales)
-#C# ---| Irrational numbers (Números irracionales)
-#C# ---| Real numbers (Números reales)
-#C# ---| Transcendental numbers (Números trascendentes)
-#C# --- Number approximation (Aproximación de números)
-#C# --- Equations and inequalities (Ecuaciones y desigualdades)
-#C# --- Operations with real numbers (Operaciones con números reales)
-#C# ---| Addition of real numbers (Adición de números reales)
-#C# ---| Subtraction of real numbers (Sustracción de números reales)
-#C# ---| Multiplication of real numbers (Multiplicación de números reales)
-#C# ---| Division of real numbers (División de números reales)
-#C# ---| Exponentiation of real numbers (Exponenciación de números reales)
-#C# ---| Order of operations (Orden de las operaciones)
-#C# --- Properties of real numbers (Propiedades de los números reales)
-#C# --- Multiples and factors of integers (Múltiplos y factores de los enteros)
+#C# - Coordinate systems (Sistemas de coordenadas)
+#C# - Subsets of the real numbers (Subconjuntos de los números reales)
+#C# -| Counting numbers (Números naturales)
+#C# -| Whole numbers (Números naturales y el cero)
+#C# -| Integer numbers (Números enteros)
+#C# -| Rational numbers (Números racionales)
+#C# -| Irrational numbers (Números irracionales)
+#C# -| Real numbers (Números reales)
+#C# -| Transcendental numbers (Números trascendentes)
+#C# - Number approximation (Aproximación de números)
+#C# - Equations and inequalities (Ecuaciones y desigualdades)
+#C# - Operations with real numbers (Operaciones con números reales)
+#C# -| Addition of real numbers (Adición de números reales)
+#C# -| Subtraction of real numbers (Sustracción de números reales)
+#C# -| Multiplication of real numbers (Multiplicación de números reales)
+#C# -| Division of real numbers (División de números reales)
+#C# -| Exponentiation of real numbers (Exponenciación de números reales)
+#C# -| Order of operations (Orden de las operaciones)
+#C# - Properties of real numbers (Propiedades de los números reales)
+#C# - Multiples and factors of integers (Múltiplos y factores de los enteros)
 #C# Logic definitions (Definiciones de lógica)
-#C# --- Propositional logic (Lógica proposicional)
-#C# --- Logic fallacies (Falacias lógicas)
+#C# - Propositional logic (Lógica proposicional)
+#C# - Logic fallacies (Falacias lógicas)
 #C# Algebra definitions (Definiciones de álgebra)
-#C# --- Algebra theorems (Teoremas de álgebra)
-#C# --- Linear equations (Ecuaciones lineales)
-#C# --- Polynomials (Polinomios)
-#C# ---| Operations with polynomials (Operaciones con polinomios)
+#C# - Algebra theorems (Teoremas de álgebra)
+#C# - Linear equations (Ecuaciones lineales)
+#C# - Polynomials (Polinomios)
+#C# -| Operations with polynomials (Operaciones con polinomios)
 #C# Geometry definitions (Definiciones de geometría)
-#C# --- Geometry postulates (Postulados de geometría)
-#C# --- Geometry theorems (Teoremas de geometría)
-#C# --- Shapes with their parts and formulas (Formas con sus partes y fórmulas)
+#C# - Geometry postulates (Postulados de geometría)
+#C# - Geometry theorems (Teoremas de geometría)
+#C# - Shapes with their parts and formulas (Formas con sus partes y fórmulas)
 #C# Probability definitions (Definiciones de probabilidad)
-#C# --- Measures of central tendency (Medidas de tendencia central)
+#C# - Measures of central tendency (Medidas de tendencia central)
 #C# Simplifications (Simplificaciones)
 #C# Science and engineering definitions (Definiciones de ciencia e ingeniería)
-#C# --- Science and engineering formulas (Fórmulas de ciencia e ingeniería)
-#C# --- Science and engineering procedure definitions (Definiciones de procedimientos de ciencia e ingeniería)
+#C# - Science and engineering formulas (Fórmulas de ciencia e ingeniería)
+#C# - Science and engineering procedure definitions (Definiciones de procedimientos de ciencia e ingeniería)
 
 #T# Beginning of content
 -->
-
-## Math definitions (Definiciones de matemática)
-
-(Axioma)
-**Axiom**: facts of math that are accepted as true without proof.
-
-(Teorema)
-**Theorem**: a statement that can be proved with postulates, axioms and/or with other theorems.
-
-(Corolario)
-**Corollary**: a theorem that is not proved, because it's too small and its true follows directly from another theorem or axiom, so it doesn't need to be proved.
-
-(Demostración textual)
-**Paragraph proof**: a proof that is written in paragraphs. To know where it ends, the symbol $\blacksquare$ is used, because the black square $\blacksquare$ means that the paragraph proof of the theorem is finished.
-
-(Demostraciones a dos columnas)
-**Two column proofs**: a way to write mathematical proofs in a structured manner. The proof is written in a table with two columns. The first column has the header of 'Statement', and its rows contain the steps of the proof. The second column has the header of 'Reason', and its rows state the reason why the step they accompany is correct.
-
-| Statement | Reason           |
-| :-------: | :--------------: |
-| Step1     | Reason1          |
-| (1) Step2 | Reason2          |
-| Step3     | Reason3 from (1) |
-*Two column proof template*
-
-Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement. For clarity, a parentheses pair with a number can be added to a step, so that it's clear from which step a given reason stems. In the *Two column proof template* table, Reason3 stems from Step2, this is shown with the parentheses '(1)'.
-
-(Variables)
-**Variables**: the representation of quantities that can vary, written using letters of the alphabet, such as $a, b, c, x, y, z$.
-
-(Constantes)
-**Constants**: the representation of quantities that can not vary, that stay always with the same value, written using letters of the alphabet, such as $m, n$.
-
-The use of a letter of the alphabet as a variable or as a constant is determined from the context, so the context must state which letters are variables and which are constants.
-
-(Funciones)
-**Functions**: an operation or set of operations done over a number or numbers, that returns a result. Operators (Operadores) act as functions, e.g. $a + b$ can be written as $sum(a,b)$, where the function $sum$ returns the sum of $a$, $b$.
-
-(Símbolos algebraicos)
-**Algebraic symbols**: numbers, variables, constants, operators, functions.
-
-(Enunciado matemático)
-**Math statement**: any math writing that can be read as a statement, with symbols, signs, numbers, operators, etcetera, e.g. math expressions, equations, inequalities, and other.
-
-(Expresión matemática)
-**Math expression**: a math statement of numbers, symbols, and operations together, such as $a (b + c) - d$
-
-(Simplificación)
-**Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$. Symbols of rational numbers are left as is, for example $\sqrt{\pi}$ should not be simplified further.
-
-(Evaluar una expresión)
-**Evaluate an expression**: this means substitute symbols for specific values and calculate the result, e.g. in $x + 7$ substitute $x$ for $4$ and calculate, $4 + 7 = 11$. Expressions without symbols are ready to be evaluated.
-
-(Subíndice de un símbolo)
-**Subscript of a symbol | subindex of a symbol**: a small number put at the bottom front of a symbol (a constant or a variable), to differentiate between related symbols. For example $(x_1, y_1)$ and $(x_2, y_2)$ represent two different points in the $x$-$y$ plane.
-
-The subindex of a symbol can also be a variable itself, for example $x_j$ where the subindex $j$ may vary. When not specified, the variable $j$ is a counting number with a maximum value, meaning that the minimum value of $j$ is $1$, and the maximum value is a given constant $n$.
-
-In cases of symbols that have the same subindex but need to represent different values of the subindex, a number can be appended to the subindex, for example $x_{j1}$ and $x_{j2}$ represent the same symbol $x_j$, but with two distinct values of the subindex $j$.
-
-(Símbolo entonces)
-**Then symbol**: the symbol of a double right arrow $\Rightarrow$ is used in mathematics in general, to signify 'then'.
-
-### Numeral systems (Sistemas de numeración)
-
-(Dígitos | Cifras)
-**Digits**: each of the numeric values that makes up a number, e.g. the number $834$ has three digits, namely $8$, $3$, and $4$.
-
-(Sistema de numeración posicional)
-**Place value system**: system in which the value of a digit depends on its place in the number.
-
-(Sistema de numeración decimal)
-**Decimal place value system**: the most common place value system, each place is a power of 10, from right to left, starting at 0 in the first place, 1 in the second place and so on, e.g. $345$ is $3$ in the third position ($3$ of 10 to the power of 2), $4$ is in the second position ($4$ of 10 to the power of 1), and $5$ is in the first position ($5$ of 10 to the power of 0).
-
-(Forma expandida de los números)
-**Expanded form of the numbers**: numbers in a place value system can be shown in an expanded form, this expanded form is the sum of each of the digits in a given number multiplied by the base of the place value system to the power of its respective position, e.g. $345$ in expanded form is $3 \cdot 10^2 + 4 \cdot 10^1 + 5 \cdot 10^0$
-
-(Grupos en la numeración posicional)
-**Plave value periods**: these periods are the separation of digits in groups of three, each has a name, ones, thousands, millions, thousandths, millionths, etcetera.
 
 ### Coordinate systems (Sistemas de coordenadas)
 

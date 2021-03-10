@@ -6,10 +6,10 @@
 #C# Types in general
 #C# Numeric types
 #C# String types
-#C# --- Heredoc and here string
+#C# - Heredoc and here string
 #C# Composite types
-#C# --- Arrays
-#C# --- Associative arrays
+#C# - Arrays
+#C# - Associative arrays
 #C# Null type
 #C# The declare command
 
@@ -88,7 +88,7 @@ str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cU
 #       Form
 # or ʠ𐍆l$`  feed lines
 
-#C# --- Heredoc and here string
+#C# - Heredoc and here string
 
 # |-----
 
@@ -155,7 +155,7 @@ bc <<< "3 + $((1 + 1)) + $(echo 1) + $var1" # 8 # 3 + 2 + 1 + 2
 
 # |-------------------------------------------------------------
 
-#C# --- Arrays
+#C# - Arrays
 
 # |-----
 #T# arrays in bash can be said to be composite types since they can store any different types of data together
@@ -169,7 +169,7 @@ int1=${arr1[1]} # 2
 arr1[4]='new elem' # index 3 doesn't need to be assigned, it's null by default
 # |-----
 
-#C# --- Associative arrays
+#C# - Associative arrays
 
 # |-----
 #T# associative arrays are created using the -A flag of the declare command (see later in this file), the key value pairs go inside parentheses separated by space, each key goes inside brackets and is followed by an equal sign and its associated value

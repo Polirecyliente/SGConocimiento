@@ -4,13 +4,13 @@
 #T# Table of contents
 
 #C# Decision making
-#C# --- Conditional statements
-#C# --- Switch case statement
+#C# - Conditional statements
+#C# - Switch case statement
 #C# Loops
-#C# --- for loop
-#C# --- while loop
-#C# --- until loop
-#C# --- select loop
+#C# - for loop
+#C# - while loop
+#C# - until loop
+#C# - select loop
 
 #T# Beginning of content
 
@@ -25,7 +25,7 @@
 
 #T# in a switch case statement the value of a variable is checked and compared to a list of values, if there is a match then the statements associated with the matched value are executed
 
-#C# --- Conditional statements
+#C# - Conditional statements
 
 # |-----
 #T# conditional statements are carried out with the following syntax
@@ -57,7 +57,7 @@ str1=a
 if [[ ${str1} == 'a' ]]; then echo "in a one liner if"; elif [[ ${str1} == 'b' ]]; then echo "in str1 = b"; else echo "in else"; fi # in a one liner
 # |-----
 
-#C# --- Switch case statement
+#C# - Switch case statement
 
 # |-----
 #T# the switch case statement is carried out with the following syntax
@@ -109,7 +109,7 @@ esac
 
 #T# in an until loop, the loop is repeated as long as the until condition outputs 1
 
-#C# --- for loop
+#C# - for loop
 
 # |-----
 #T# the for loop is made with the following syntax
@@ -159,7 +159,7 @@ done
 # iter 5
 # |-----
 
-#C# --- while loop
+#C# - while loop
 
 # |-----
 #T# the while loop is made with the following syntax
@@ -182,7 +182,7 @@ done
 # int1 == 0
 # |-----
 
-#C# --- until loop
+#C# - until loop
 
 # |-----
 #T# the until loop is made with the following syntax
@@ -204,7 +204,7 @@ done
 # int1 == 9
 # |-----
 
-#C# --- select loop
+#C# - select loop
 
 # |-----
 #T# in true fashion, a select loop can be seen as a decision making statement, but given that it loops indefinitely until receiving a selection, the select loop is clasified under the loops section, and also because that reduces confusion due to its namesake

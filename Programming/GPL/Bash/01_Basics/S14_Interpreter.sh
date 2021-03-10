@@ -4,10 +4,10 @@
 #T# Table of contents
 
 #C# Interpreter customization
-#C# --- Interpreter options
-#C# --- Shell options
-#C# --- Command prompts
-#C# --- ANSI escape sequences
+#C# - Interpreter options
+#C# - Shell options
+#C# - Command prompts
+#C# - ANSI escape sequences
 #C# Shell session
 
 #T# Beginning of content
@@ -16,7 +16,7 @@
 
 # |-------------------------------------------------------------
 
-#C# --- Interpreter options
+#C# - Interpreter options
 
 # |-----
 #T# the interpreter can have several options changed during execution
@@ -66,7 +66,7 @@ set +x
 bash -c 'echo str1 "$0" "$1"' "name1" "name2" # str1 name1 name2
 # |-----
 
-#C# --- Shell options
+#C# - Shell options
 
 # |-----
 #T# shell options are modified with the shopt command
@@ -89,7 +89,7 @@ shopt -u extglob
 #T# prints option1 and its status, on (-s) or off (-u), option1 is optional and leaving it out prints all options and their status
 # |-----
 
-#C# --- Command prompts
+#C# - Command prompts
 
 # |-----
 #T# there are 4 default prompts in Bash, denoted by PS1, PS2, PS3, and PS4, PS stands for Prompt String, since each of them is a string that makes up the prompt
@@ -136,7 +136,7 @@ echo $PS4 # +
 #T#     $'\char1' use a normal escape sequence, \char1 is any of the normal escape sequences in Bash (see S02_Data_types.sh), this allows using \u to insert an Unicode char instead of the current user
 # |-----
 
-#C# --- ANSI escape sequences
+#C# - ANSI escape sequences
 
 # |-----
 #T# the terminal can be customized using ANSI escape sequences, these allow modifying the title of the terminal, the prompt string (e.g. its color), the cursor position, among other features

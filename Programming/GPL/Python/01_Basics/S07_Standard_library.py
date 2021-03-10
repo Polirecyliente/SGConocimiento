@@ -5,40 +5,40 @@
 
 #C# Basic functions
 #C# Math functions
-#C# --- Basic math
-#C# --- Trigonometry
-#C# --- Randon number generation
-#C# --- Statistics
+#C# - Basic math
+#C# - Trigonometry
+#C# - Randon number generation
+#C# - Statistics
 #C# String functions
-#C# --- Alignment
-#C# --- Encoding
-#C# --- Substring finding
-#C# --- Predicate logic
-#C# --- Case modification
-#C# --- String modification
+#C# - Alignment
+#C# - Encoding
+#C# - Substring finding
+#C# - Predicate logic
+#C# - Case modification
+#C# - String modification
 #C# List functions
 #C# Dictionary functions
 #C# Datetime functions
-#C# --- Datetime parts
-#C# --- Timezones
-#C# --- Datetime formatting
-#C# --- Calendar usage
-#C# --- Locales
+#C# - Datetime parts
+#C# - Timezones
+#C# - Datetime formatting
+#C# - Calendar usage
+#C# - Locales
 #C# Class functions
-#C# --- Predicate logic
+#C# - Predicate logic
 #C# Regex matching
-#C# --- Regex functions, methods, and attributes
-#C# --- Characters
-#C# --- Quantifiers
-#C# --- Character classes
-#C# --- Groupings
-#C# --- Subroutines and conditionals
-#C# --- Anchors and boundaries
-#C# --- Lookarounds
-#C# --- Regex modifiers
+#C# - Regex functions, methods, and attributes
+#C# - Characters
+#C# - Quantifiers
+#C# - Character classes
+#C# - Groupings
+#C# - Subroutines and conditionals
+#C# - Anchors and boundaries
+#C# - Lookarounds
+#C# - Regex modifiers
 #C# Iterator creation
 #C# Builtin values
-#C# --- Constants
+#C# - Constants
 
 #T# Beginning of content
 
@@ -97,7 +97,7 @@ def func1():
 #T# math functions are provided in the math module
 import math
 
-#C# --- Basic math
+#C# - Basic math
 
 # |-----
 #T# the abs function returns the absolute value of a number
@@ -169,7 +169,7 @@ x = -5.15
 flo1 = round(100*x, -1) # -520.0
 # |-----
 
-#C# --- Trigonometry
+#C# - Trigonometry
 
 # |-----
 #T# the sin function returns the sine of a number in radians
@@ -204,7 +204,7 @@ flo1 = math.degrees(math.pi/4) # 45.0
 flo1 = math.radians(45) # 0.7853 == math.pi/4
 # |-----
 
-#C# --- Randon number generation
+#C# - Randon number generation
 
 # |-----
 import random
@@ -230,7 +230,7 @@ random.seed(2) # None
 flo1 = random.uniform(3, 5) # 4.4719...
 # |-----
 
-#C# --- Statistics
+#C# - Statistics
 
 # |-----
 #T# the statistics module contains functions for statistics
@@ -248,7 +248,7 @@ num1 = statistics.geometric_mean(list1) # 1.197215767258376
 # |-------------------------------------------------------------
 #T# string functions have several categories to work with strings
 
-#C# --- Alignment
+#C# - Alignment
 
 # |-----
 #T# center a string with a given padding
@@ -286,7 +286,7 @@ str1 = "zfilled"
 str1 = str1.zfill(10) # '000zfilled'
 # |-----
 
-#C# --- Encoding
+#C# - Encoding
 
 # |-----
 #T# encode a string to bytes with the encode function, decode bytes to string with the decode function
@@ -314,7 +314,7 @@ str1 = "ü\u02A0" # 'üʠ'
 byte1 = str1.encode('unicode-escape') # b'\\xfc\\u02a0'
 # |-----
 
-#C# --- Substring finding
+#C# - Substring finding
 
 # |-----
 #T# count repetitions of substrings
@@ -347,7 +347,7 @@ int1 = str1.rfind("nd", 3, 45)  # 9
 int1 = str1.rindex("nd", 3, 37) # 9
 # |-----
 
-#C# --- Predicate logic
+#C# - Predicate logic
 
 # |-----
 #T# check if a string is only made of alphabetic chars, no whitespace or numbers allowed
@@ -381,7 +381,7 @@ str1 = 'New Te5T'
 bool1 = str1.isupper() # False
 # |-----
 
-#C# --- Case modification
+#C# - Case modification
 
 # |-----
 #T# capitalize the first letter of the string
@@ -405,7 +405,7 @@ str1 = 'Case Changer'
 str1 = str1.swapcase() # 'cASE cHANGER'
 # |-----
 
-#C# --- String modification
+#C# - String modification
 
 # |-----
 #T# change the tab size with the expandtabs function
@@ -534,7 +534,7 @@ dict1 = dict(zip(list1, list2)) # {1: 'a', 3: 'c', 5: 'e'} #| the return of the 
 import time
 import calendar
 
-#C# --- Datetime parts
+#C# - Datetime parts
 
 # |-----
 #T# the principal datetime parts are, date, and time, date is mainly the year, month, day, and time is mainly the hour, minute, second
@@ -550,7 +550,7 @@ struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, t
 tuple1 = tuple(struct_time1) # (2020, 8, 13, 1, 15, 16, 3, 226, 0)
 # |-----
 
-#C# --- Timezones
+#C# - Timezones
 
 # |-----
 #T# the gmtime function returns an struct_time object with the date and time in gmt
@@ -574,7 +574,7 @@ struct_time1 = time.localtime(flo1) # time.struct_time(tm_year=2020, tm_mon=8, t
 flo2 = calendar.timegm(struct_time1) # 1597281316   == 1597299316 - 18000
 # |-----
 
-#C# --- Datetime formatting
+#C# - Datetime formatting
 
 # |-----
 #T# the asctime function formats a struct_time object as a string
@@ -644,7 +644,7 @@ str1 = time.strftime("%A%B%C %d%t%u %G %h %Hor%I %j %m%M%n%p%S %V %W %w %y %z%%"
 struct_time2 = time.strptime("Nov 2021 8", "%b %Y %H") # time.struct_time(tm_year=2021, tm_mon=11, tm_mday=1, tm_hour=8, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=305, tm_isdst=-1)
 # |-----
 
-#C# --- Calendar usage
+#C# - Calendar usage
 
 # |-----
 #T# make the calendar for a given month with the calendar.month() function
@@ -695,7 +695,7 @@ tuple1 = calendar.monthrange(1999, 4) # (3, 30)
 int1 = calendar.weekday(1999, 4, 1) # 3
 # |-----
 
-#C# --- Locales
+#C# - Locales
 
 # |-----
 #T# locales are managed through the locale module
@@ -724,7 +724,7 @@ class Derived1 (Class1):
 
 obj1 = Class1()
 
-#C# --- Predicate logic
+#C# - Predicate logic
 
 # |-----
 #T# check if a class is a subclass of another
@@ -742,7 +742,7 @@ bool1 = isinstance(obj1, Class1) # True
 #T# import the regex module to use regular expressions, it supersedes the re module
 import regex
 
-#C# --- Regex functions, methods, and attributes
+#C# - Regex functions, methods, and attributes
 
 # |-----
 #T# compile a regex object with the compile function, this object has access to the rest of regex functions, methods, and attributes shown here, via dot notation
@@ -826,7 +826,7 @@ search1 = regex.search(r'(s)(tr)(1)', 'textstr1text') # <regex.Match object; spa
 str1 = search1.string # 'textstr1text'
 # |-----
 
-#C# --- Characters
+#C# - Characters
 
 # |-----
 #T# the dot . is used to match any char
@@ -954,7 +954,7 @@ search1 = regex.search(r'str1\n\Kstr2', 'str1\nstr2') # <regex.Match object; spa
 search1 = regex.search(r'(?# initial comment)str(?# a number comes next)1', 'str1') # <regex.Match object; span=(0, 4), match='str1'>
 # |-----
 
-#C# --- Quantifiers
+#C# - Quantifiers
 
 # |-----
 #T# the question mark ? is used as a quantifier to match 0 or 1 of the preceding char
@@ -984,7 +984,7 @@ search1 = regex.search(r'\w++b', 'aaaab') # None #| 'aaaab' would be matched wit
 search1 = regex.search(r'\w{1,7}+F', 'abcdeF') # None #| 'abcdeF' would be matched without the possessive quantifier
 # |-----
 
-#C# --- Character classes
+#C# - Character classes
 
 # |-----
 #T# the syntax [char1char2charN] is called a character class, and used to match any single one of the characters, char1, char2, up to charN
@@ -1018,7 +1018,7 @@ search1 = regex.search(r'[[0-7] && [d-h]]', 't5', flags = regex.V1) # None #| [0
 search1 = regex.search(r'[[a-p] ~~ [h-z]]', 'mb', flags = regex.V1) # <regex.Match object; span=(1, 2), match='b'> #| [a-p] symmetric difference with [h-z] set
 # |-----
 
-#C# --- Groupings
+#C# - Groupings
 
 # |-----
 #T# the parentheses () are used to capture a group of chars, and treat this group the same as treating a single char
@@ -1055,7 +1055,7 @@ search1 = regex.search(r'(?>prio|priorshi)p', 'priorship') # no match #| given t
 search1 = regex.search(r'(?|A(\d+)|B(\d+)) \1', 'B12 12') # <regex.Match object; span=(0, 6), match='B12 12'>
 # |-----
 
-#C# --- Subroutines and conditionals
+#C# - Subroutines and conditionals
 
 # |-----
 #T# subroutines are a way to reuse regex patterns already created, instead of writing them again
@@ -1080,7 +1080,7 @@ search1 = regex.search(r'(\d)(?(1)(2)|(b))', '12345') # <regex.Match object; spa
 search1 = regex.search(r'(?<group1>\d{2})(?(group1)(34)|(cd))', '12345') # <regex.Match object; span=(0, 4), match='1234'>
 # |-----
 
-#C# --- Anchors and boundaries
+#C# - Anchors and boundaries
 
 # |-----
 #T# the caret ^ (outside a character class) matches the following chars as an anchor at the start of the line
@@ -1111,7 +1111,7 @@ search1 = regex.search(r'\Bcd', 'ab cd') # None
 list1 = regex.findall(r'\G\w\d', 'a1b2c3 d4e5f6') # ['a1', 'b2', 'c3']
 # |-----
 
-#C# --- Lookarounds
+#C# - Lookarounds
 
 # |-----
 #T# the syntax (?=pattern1) is used to create a positive lookahead with pattern1, so pattern1 must appear ahead when finding a match, because pattern1 is not matched
@@ -1127,7 +1127,7 @@ search1 = regex.search(r'r1(?!00)\d\d', 'str101') # <regex.Match object; span=(2
 search1 = regex.search(r'(?<!st)r1', 'str1') # None
 # |-----
 
-#C# --- Regex modifiers
+#C# - Regex modifiers
 
 # |-----
 #T# regular regex modifiers are passed via the flags kwarg of the regex functions from the regex module, several modifiers can be passed together using the vertical bar operator |, e.g. regex.I | regex.U passes both modifiers
@@ -1212,7 +1212,7 @@ list1 = list(product1)
 
 # |-------------------------------------------------------------
 
-#C# --- Constants
+#C# - Constants
 
 # |-----
 #T# the ellipsis ... constant is used to allow for extra functionality in third party libraries, particularly in array notation

@@ -4,17 +4,17 @@
 #T# Table of contents
 
 #C# Class definition
-#C# --- Hidden variables
+#C# - Hidden variables
 #C# Instantiation
 #C# Parts of a class
-#C# --- Attributes
-#C# --- Methods
-#C# --- Class variables
-#C# --- Hidden variables
-#C# --- General parts
+#C# - Attributes
+#C# - Methods
+#C# - Class variables
+#C# - Hidden variables
+#C# - General parts
 #C# Inheritance
-#C# --- Multiple inheritance
-#C# --- Method Resolution Order (MRO)
+#C# - Multiple inheritance
+#C# - Method Resolution Order (MRO)
 
 #T# Beginning of content
 
@@ -63,7 +63,7 @@ class Class_name1:
     def set_attr1(self, new_attr1):
         self.attr1 = new_attr1
 
-#C# --- Hidden variables
+#C# - Hidden variables
 
 # |-----
 #T# creating hidden variables
@@ -100,28 +100,28 @@ func1()
 
 # |-------------------------------------------------------------
 
-#C# --- Attributes
+#C# - Attributes
 
 # |-----
 #T# access attributes directly through the object with dot notation
 str1 = obj1.attr2 # str1
 # |-----
 
-#C# --- Methods
+#C# - Methods
 
 # |-----
 #T# call methods from the class through the object with dot notation
 int1 = obj1.get_attr1() # 5
 # |-----
 
-#C# --- Class variables
+#C# - Class variables
 
 # |-----
 #T# access a class variable through the class with dot notation
 int1 = 2 * Class_name1.class_attr1 # 6
 # |-----
 
-#C# --- Hidden variables
+#C# - Hidden variables
 
 # |-----
 #T# access hidden variables from outside the class
@@ -132,7 +132,7 @@ int1 = 2 * Class_name1.class_attr1 # 6
 int1 = obj1._Class_name1__hidden1 # 9
 # |-----
 
-#C# --- General parts
+#C# - General parts
 
 # |-----
 #T# import the inspect module to get the parts of a class
@@ -221,7 +221,7 @@ str1 = str(obj1)        # <__main__.Class_name1 object at 0x7feebbae2a30>
 str1 = repr(child_obj1) # Representation of the object
 str1 = str(child_obj1)  # String of the object
 
-#C# --- Multiple inheritance
+#C# - Multiple inheritance
 
 # |-----
 #T# for multiple inheritance, at least two parent classes are required
@@ -243,7 +243,7 @@ multi_parent_obj1 = Multiple_parents_class1(5, "multi_parent", "s")
 int1 = multi_parent_obj1.attr1 # 15
 # |-----
 
-#C# --- Method Resolution Order (MRO)
+#C# - Method Resolution Order (MRO)
 
 # |-----
 #T# the MRO is used to decide which of the parents methods to use when several parents have the same method, the MRO allows to select which of the methods to inherit
