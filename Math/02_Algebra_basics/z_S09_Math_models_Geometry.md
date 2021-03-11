@@ -19,9 +19,6 @@
 
 Problems with numbers stated as words, for example, there is a number whose product with $3$ is $24$, finding that number gives $8$.
 
-(Números enteros consecutivos)
-**Consecutive integers**: integers that follow each other by adding $1$ repeatedly, e.g. $-4$, $-3$, $-2$, or $19$, $20$, $21$, etcetera.
-
 ## Combine mixed units (Combinar unidades mixtas)
 
 Mixed units of measure can be combined together into a single unit. For example, time measured in minutes and seconds can be combined into minutes alone, by adding the seconds divided by $60$ to the minutes.

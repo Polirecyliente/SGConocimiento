@@ -26,7 +26,13 @@ A ratio is a division of two numbers measured in the same scale or unit of measu
 In a ratio, the division operation is not actually made, for example the ratio $a:b$, in this ratio, if $a$ and $b$ are measured in type1 units, the ratio indicates that there are $a$ units of type1 per every $b$ units of type1. The division is not performed. This allows writing ratios with more than two numbers, for example the ratio $a:b:c$ with $c$ also measured in type1 units, indicates that there are $a$ units of type1 per every $b$ units, and also there are $a$ units per every $c$ units, and there are $b$ units per every $c$ units. When a ratio has more than two numbers, the fraction notation is not used, only the colon notation.
 
 (Proporción)
-**Proportion**: an equation in which two fractions (ratios or rates) are equated. Let $a$, $b$, $c$, $d$, be numbers, with $b$ and $d$ being nonzero, then $\frac{a}{b} = \frac{c}{d}$ is a proportion, it's read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
+**Proportion**: an equation in which two fractions (ratios or rates) are equated.
+
+> Proportion
+>
+> Let $a$, $b$, $c$, $d$, be real numbers, with $b$ and $d$ being nonzero, then
+> $$\frac{a}{b} = \frac{c}{d}$$
+> This is a proportion, it's read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
 
 (Producto cruzado)
 **Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $ad = bc$. This concept is used to test if a proportion is true without dividing.
@@ -36,6 +42,9 @@ In a ratio, the division operation is not actually made, for example the ratio $
 
 (Proporción extendida)
 **Extended proportion**: a proportion with more than one equal sign, which means that an extended proportion makes several fractions equal, e.g. $\frac{a}{b} = \frac{c}{d} = \frac{e}{f}$.
+
+(Proporción con porcentajes)
+**Percent proportion**: a proportion in which one of the fractions is a percentage. Using terms from before, let $B$ be the base, $A$ the amount, then $\frac{A}{B} = \frac{p}{100}$, this means that the amount $A$ is to the base $B$ as $p$ is to $100$.
 
 (Teorema del producto cruzado)
 **Cross product theorem | Cross-multiplication theorem**: Let $a$, $b$, $c$, $d$, be real numbers, with $b$ and $d$ being nonzero. If $\frac{a}{b} = \frac{c}{d}$, then $ad = bc$.

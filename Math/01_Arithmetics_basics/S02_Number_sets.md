@@ -1,8 +1,28 @@
 
-#   Real numbers (Números reales)
+#   Number sets (Conjuntos numéricos)
 
 <!--
 #T# Table of contents
+
+#C# Introduction (Introducción)
+#C# Addition (Adición)
+#C# Subtraction (Sustracción)
+#C# Multiplication (Multiplicación)
+#C# Division (División)
+
+#C# Introduction to integers (Introducción a los enteros)
+#C# Addition of integers (Adición de enteros)
+#C# Subtraction of integers (Sustracción de enteros)
+#C# Multiplication and division of integers (Multiplicación y división de enteros)
+#C# Solution of an equation with integers, multiplication and division properties of equality (Soluciones de una ecuación con enteros, propiedades multiplicativa y divisiva de la igualdad)
+
+#C# Visualizing fractions (Visualizando fracciones)
+#C# Multiplication and division of fractions (Multiplicación y división de fracciones)
+#C# Multiplication and division of mixed numbers and complex fractions (Multiplicación y división de números mixtos y fracciones complejas)
+#C# Addition and subtraction of fractions with common denominators (Adición y sustracción de fracciones con denominador común)
+#C# Addition and subtraction of fractions with different denominators (Adición y sustracción de fracciones con denominador diferente)
+#C# Addition and subtraction of mixed numbers (Adición y sustracción de números mixtos)
+#C# Solution of an equation with fractions (Solución de una ecuación con fracciones)
 
 #C# Definitions of decimals (Definiciones de decimales)
 #C# Decimal operations (Operaciones con decimales)
@@ -27,6 +47,149 @@
 #T# Beginning of content
 -->
 
+#   Whole numbers (Números naturales y el cero)
+
+## Introduction (Introducción)
+
+(Números naturales)
+**Counting numbers**: these are, 1, 2, 3, 4, ..., up to infinity
+
+(Números naturales y el cero)
+**Whole numbers**: these are, 0, 1, 2, 3, 4, ..., so the set of whole numbers is the same as the set of counting numbers and zero.
+
+#   Integers (Números enteros)
+
+## Introduction to integers (Introducción a los enteros)
+
+(Números enteros)
+**Integers**: the set of integers is the set of the whole numbers and the negative numbers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two integer numbers.
+
+(Números positivos y negativos)
+**Positive and negative numbers**: positive numbers are greater than 0 and negative numbers are less than 0, so 0 is neither. Negative numbers are represented with a minus in front, e.g. $-5$ is negative $5$. Positive numbers are greater than negative numbers.
+
+(Números opuestos)
+**Opposite numbers**: pairs of numbers only differentiated by their sign, one is positive and the other one is negative, but their value is the same. Opposite numbers are obtained with the minus sign.
+[Opposite numbers code](Programs/S03/Opposite_numbers.py)
+
+> Opposite numbers
+>
+> Let $a$ be a number, and $-a$ be its opposite, then
+> $$-(-a) = a$$
+> which means that the opposite of $-a$ is $a$, and
+> $$-(a) = -a$$
+> which means that the opposite of $a$ is $-a$.
+
+(Valor absoluto)
+**Absolute value**: the distance between 0 and a given number, it's always positive and it's the same for any number and its opposite.
+[Absolute value code](Programs/S03/Absolute_value.py)
+
+> Absolute value notation
+>
+> Let $a$ be a number, then its absolute value is
+> $$\lvert a \rvert$$
+
+For example, the absolute value of $-5$ is $5$, and the absolute value of $5$ is $5$, so $\lvert 5 \rvert = \lvert -5 \rvert = 5$.
+
+## Solution of an equation with integers, multiplication and division properties of equality (Soluciones de una ecuación con enteros, propiedades multiplicativa y divisiva de la igualdad)
+
+The solution of an equation with integers is no different from a regular solution of an equation. A variable can be negative to satisfy an equation.
+
+#   Rational numbers (Números racionales)
+
+(Números racionales)
+**Rational numbers**: the set of numbers that can be represented via fractions. This is an ordered set in which the relational operators can be used to compare the values of two rational numbers.
+
+Rational numbers when represented as decimals, have their decimal part with a finite amount of digits, or if the amount is infinite then it repeats itself, which means that a decimal number that is rational can always be represented as a fraction.
+
+## Visualizing fractions (Visualizando fracciones)
+
+(Fracciones)
+**Fractions**: numbers that represent a part of a whole number or an integer, so there are many fractions between any two integers. This set of numbers also forms an ordered set in which the relational operators can be used to compare the values of two fractions.
+
+(Notación de las fracciones)
+**Fraction notation**: given that fractions are numbers that can be between two integers, they are represented with a division, a fraction that is not integer has a remainder different from 0 when represented as a division. The fraction $\frac{a}{b}$ is calculated as $a$ divided by $b$, with $b$ being nonzero.
+[Fraction notation code](Programs/S04/Fraction_notation.py)
+
+For example, $\frac{2}{3}$ means $2$ divided by $3$, and using the definition of division, this calculates the amount of times that the number $3$ is subtracted from $2$ until 0 is reached, but subtracting $3$ from $2$ gives $-1$ because $2 - 3 = -1$, so to reach 0, a proportion, fraction, or part of $3$ must be subtracted from $2$, and not the full unity of the number $3$.
+
+By the definition of division, $\frac{2}{3}$ is the amount of times that $3$ is subtracted from $2$ to reach 0. This amount, $\frac{2}{3}$ is between $0$ and $1$ and it occupies the same proportional distance to $1$, as the number $2$ occupies to $3$, as shown in the figure.
+[Fraction diagram image code](Programs/S04/Fraction_diagram_image.py)
+![Fraction diagram image](Images/S04/Fraction_diagram.png)
+*Fraction diagram*
+
+(Numerador y denominador)
+**Numerator and denominator**: the numbers in a fraction, the numerator is the number on top (called dividend in the division operation), and the denominator is the number at the bottom (called divisor in the division operation). In $\frac{a}{b}$ $a$ is the numerator and $b$ is the denominator.
+
+(Fracciones propias)
+**Proper fractions**: a fraction $\frac{a}{b}$ in which $a < b$. A proper fraction is always between 0 and 1.
+
+(Fracciones impropias)
+**Improper fractions**: a fraction $\frac{a}{b}$ in which $a \ge b$. An improper fraction can be an integer (when $a$ is a multiple of $b$), and it is always greater than or equal to 1, which means that an improper fraction has an integer part and a proper fraction part, when said parts are added the result is the improper fraction.
+[Improper fractions code](Programs/S04/Improper_fractions.py)
+
+(Números mixtos)
+**Mixed numbers**: the representation of an improper fraction as an integer part and a proper fraction part.
+
+> Mixed numbers notation
+>
+> Let $a$ be an integer, and $\frac{b}{c}$ be a proper fraction, the mixed number they form together is denoted as
+> $$a\frac{b}{c}$$
+
+When adding together this numbers, $a + \frac{b}{c}$ the result is the improper fraction $\frac{ac + b}{c}$ with the same value.
+
+The term $ac$ in the numerator of $\frac{ac + b}{c}$, is a multiple of $c$, so when dividing $ac$ by $c$ the result is an integer $a$. In the mixed number $a\frac{b}{c}$, $a$ is the integer part, and $\frac{b}{c}$ is the proper fraction part.
+
+(Fracciones equivalentes)
+**Equivalent fractions**: fractions that have the same value, even when written with different numbers. Fractions written with different numbers can have the same value because those different numbers can show the same fraction. For example, the fraction $\frac{2}{3}$ is the same as the fraction $\frac{4}{6}$, because the proportional distance that the number $2$ occupies in $3$ is the same as the proportional distance that the number $4$ occupies in $6$. The value of each fraction itself is the same in equivalent fractions.
+
+(Propiedad de las fracciones equivalentes)
+**Equivalent fractions property**: in a given fraction $\frac{a}{b}$, multiplying (or dividing) both the numerator and the denominator by a nonzero number $c$, doesn't change the value of the fraction, so $\frac{a}{b} = \frac{a c}{b c}$.
+
+## Multiplication and division of fractions (Multiplicación y división de fracciones)
+
+(Reducir fracciones)
+**Reduce fractions**: form of simplification in which a fraction is expressed as an equivalent fraction that has no common factors between the numerator and the denominator. If there is a common factor, both the numerator and the denominator are divided by it, this simplifies the fraction.
+
+For example $\frac{6}{9} = \frac{4}{6}$, but their reduced form is $\frac{2}{3}$. In $\frac{6}{9}$ a common factor is $3$ and dividing the numerator and denominator by $3$ results in $\frac{2}{3}$. In $\frac{4}{6}$ a common factor is $2$ and dividing the numerator and denominator by $2$ results in $\frac{2}{3}$.
+
+The same simplification can be done with variables, e.g. $\frac{2 x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
+
+(Fracción irreducible)
+**Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
+
+## Multiplication and division of mixed numbers and complex fractions (Multiplicación y división de números mixtos y fracciones complejas)
+
+(Multiplicación y división de números mixtos)
+**Multiplication and division of mixed numbers**: this operations are done the same as multiplication and division of proper fractions. The mixed numbers should be converted to improper fractions first, as shown earlier.
+
+(Fracciones complejas)
+**Complex fractions**: the division of two fractions, $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \div \frac{c}{d} = \frac{a d}{b c}$.
+
+(Simplificación de fracciones complejas)
+**Simplification of complex fractions**: complex fractions are simplified like regular fractions.
+[Simplification of complex fractions](Programs/S04/Simplification_of_complex_fractions.py)
+
+(Simplificación de expresiones con fracciones)
+**Simplification of expressions with fractions**: expressions with fractions are simplified like regular expressions
+[Simplification of expressions with fractions](Programs/S04/Simplification_of_expressions_with_fractions.py)
+
+(Fracciones negativas)
+**Negative fractions**: when either the numerator is negative, or the denominator is negative, the fraction itself is negative, $\frac{-a}{b} = -\frac{a}{b}$, and $\frac{a}{-b} = -\frac{a}{b}$.
+
+## Addition and subtraction of fractions with different denominators (Adición y sustracción de fracciones con denominador diferente)
+
+(Mínimo común denominador)
+**Least common denominator**: the least common multiple of the denominators from a set of at least two fractions.
+
+(Evaluación de expresiones con fracciones)
+**Evaluation of expressions with fractions**: like regular evaluation.
+
+## Solution of an equation with fractions (Solución de una ecuación con fracciones)
+
+An equation with fractions can have a fraction solution, just like a regular solution.
+
+#   Real numbers (Números reales)
+
 #   Decimals (Decimales)
 
 ## Definitions of decimals (Definiciones de decimales)
@@ -45,17 +208,6 @@ About their place value, the first place to the right of the dot has its value m
 
 (Redondeo de decimales)
 **Decimal rounding**: like regular rounding.
-
-## Decimal operations (Operaciones con decimales)
-
-(Adición y sustracción de decimales)
-**Addition and subtraction of decimals**: like regular addition and subtraction. When using decimals, the decimal places are added or subtracted correspondingly.
-
-(Multiplicación y división de decimales)
-**Multiplication and division of decimals**: like regular multiplication and division. When doing division, an infinite amount of decimal digits can appear. When doing multiplication, the amount of decimal digits is up to the sum of the decimal digits in the factors.
-
-(Multiplicación y división por 10)
-**Multiplication and division by 10**: given that 10 is the base of the decimal place value system, multiplying a number by 10 moves the number one digit to the left, while dividing a number by 10 moves the number one digit to the right. For example, $2 \cdot 10 = 20$, and $2 \div 10 = 0.2$.
 
 ## Decimals and fractions (Decimales y fracciones)
 
@@ -325,31 +477,9 @@ The simple interest is a way to calculate the amount of interest to be received 
 > Let $P$ be the principal of the investment or loan in monetary units, $I$ be the amount of interest in monetary units, $t$ be the time elapsed since the moment of the investment or loan in time units, and $r$ be the interest rate (tasa de interés) paid per period as a ratio, then
 > $$I = Prt$$
 
-## Proportions (Proporciones)
-
-(Proporción)
-**Proportion**: an equation in which two fractions (ratios or rates) are equated.
-
-> Proportion
->
-> Let $a$, $b$, $c$, $d$, be numbers, with $b$ and $d$ being nonzero, then
-> $$\frac{a}{b} = \frac{c}{d}$$
-> This is a proportion, it's read as $a$ is to $b$ as $c$ is to $d$ ($a$ es a $b$ como $c$ es a $d$).
-
-(Producto cruzado)
-**Cross product**: a proportion where the denominators have been multiplied in both sides, i.e. in the proportion $\frac{a}{b} = \frac{c}{d}$, the cross product is $ad = bc$. This concept is used to test if a proportion is true without dividing.
-
-(Proporción con porcentajes)
-**Percent proportion**: a proportion in which one of the fractions is a percentage. Using terms from before, let $B$ be the base, $A$ the amount, then $\frac{A}{B} = \frac{p}{100}$, this means that the amount $A$ is to the base $B$ as $p$ is to $100$.
-
 #   Real numbers (Números reales)
 
 ## Rational and irrational numbers (Números racionales e irracionales)
-
-(Números racionales)
-**Rational numbers**: the set of numbers that can be represented via fractions. This is an ordered set in which the relational operators can be used to compare the values of two rational numbers.
-
-Rational numbers when represented as decimals, have their decimal part with a finite amount of digits, or if the amount is infinite then it repeats itself, which means that a decimal number that is rational can always be represented as a fraction.
 
 (Números irracionales)
 **Irrational numbers**: the set of numbers such as $\pi$, in which the decimal part of the number is infinite and never repeats itself. The square root of numbers that are not perfect squares is also irrational.
@@ -358,74 +488,6 @@ The fact that they are called irrational, doesn't necessarily mean that they can
 
 (Números reales)
 **Real numbers**: the union of the sets of rational and irrational numbers.
-
-## Associative properties (Propiedades asociativas)
-
-(Propiedad asociativa de la adición)
-**Associative property of addition**: using grouping symbols to group addition operations does not change the sum.
-
-> Associative property of addition
->
-> Let $a$, $b$, $c$ be numbers, then
-> $$a + b + c = (a + b) + c = a + (b + c)$$
-
-(Propiedad asociativa de la multiplicación)
-**Associative property of multiplication**: using grouping symbols to group multiplication operations does not change the product.
-
-> Associative property of multiplication
->
-> Let $a$, $b$, $c$ be numbers, then
-> $$a b c = (a b) c = a (b c)$$
-
-## Distributive property (Propiedad distributiva)
-
-(Propiedad distributiva de la multiplicación respecto a la suma)
-**Distributive property of multiplication over addition**: when a group of addends (grouped using a grouping symbol) is multiplied by a number, it's the same as the sum of the products of said number by each addend.
-
-> Distributive property
->
-> Let $a$, $b$, $c$ be numbers, then
-> $$a (b + c) = a b + a c$$
-
-This property shows itself when multiplying $a$ by the sum $b + c$, the resulting product can be seen as the sum of $a b$ and $a c$. This property actually includes subtraction as a case of the sum, given that the addends can be negative numbers.
-
-## Inverse properties, zero properties (Propiedades inversas, propiedades del cero)
-
-(Inverso aditivo)
-**Additive inverse**: the opposite of a number, is its additive inverse. The additive inverse of a number $a$ is $-a$.
-
-(Propiedad inversa aditiva)
-**Inverse property of addition**: the sum of a number and its additive inverse is zero.
-
-> Inverse property of addition
->
-> Let $a$ be a number, then
-> $$a + (-a) = a - a = 0$$
-
-$0$ is the additive identity.
-
-(Inverso multiplicativo)
-**Multiplicative inverse**: the reciprocal of a number, is its multiplicative inverse. The multiplicative inverse of a number $a$ is $\frac{1}{a}$.
-
-(Propiedad inversa de la multiplicación)
-**Inverse property of multiplication**: the product of a number and its multiplicative inverse is one.
-
-> Inverse property of multiplication
->
-> Let $a$ be a number, then
-> $$a \frac{1}{a} = 1$$
-
-$1$ is the multiplicative identity.
-
-(Multiplicación por 0)
-**Multiplication by 0**: the product of any number and 0 is 0.
-
-> Multiply a number by 0
->
-> Let $a$ be a number, then
-> $$a \cdot 0 = 0$$
-
-This is because $a$ is added $0$ times with itself.
 
 ## Systems of measurement (Sistemas de medida)
 
@@ -536,3 +598,12 @@ When handling mixed units of measurement, each separate unit is added or subtrac
 >
 > Let $C$ be the temperature in Celsius, $F$ be the temperature in Fahrenheit, then
 > $$F = \frac{9}{5}C + 32$$
+
+## Transcendental numbers (Números trascendentes)
+
+The transcendental numbers are numbers that can't be obtained as a solution of a polynomial with rational coefficients.
+
+For example $\sqrt{2}$ is not transcendental because it is the solution of $x^2 = 2$, which is a polynomial with rational coefficients.
+
+(La constante pi)
+**The pi constant**: the fraction of the circumference over the diameter. It's represented with the greek letter pi, which is $\pi$. The value of pi is roughly $\pi = 3.14159...$, this is a non repeating decimal. $\pi$ is a transcendental number because there is no polynomial with rational coefficients whose solution is $\pi$.

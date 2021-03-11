@@ -442,11 +442,11 @@ mv "${var1}" "${var1::5}$((${var1:5:1} + 1))${var1:6}"
 #T# merge directories with the rsync command
 rsync -rv /path/to/dir1/ /path/to/dir2/ #| make sure to put an ending slash after the paths, otherwise dir1 is copied inside dir2 instead of merging the contents of dir1 inside dir2
 
-#T# operate over each line (symbolized as line1) of a file named file1 with the following construct
+#T# operate over, or list each line (symbolized as line1) of a file named file1 with the following construct
 # SYNTAX while read line1; do statements1; done 0<file1
 while read line1; do echo $line1; sleep .5; done 0<file1 #| prints each line in file1 and waits half a second before the next iteration
 
-#T# operate over each file (symbolized as file1) inside a given dir named dir1 with the following construct
+#T# operate over, or list each file (symbolized as file1) inside a given dir named dir1 with the following construct
 # SYNTAX for file1 in /path/to/dir1/*; do statements1; done
 for it1 in *; do echo $it1; done #| prints the name of each file in the current directory
 

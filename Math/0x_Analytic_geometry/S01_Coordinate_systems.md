@@ -12,13 +12,25 @@
 #T# Beginning of content
 -->
 
-## Rectangular coordinate system (Sistema de coordenadas rectangulares)
+(Recta real)
+**Number line**: the numbers depicted in a line. This is the most basic one dimensional (1D) coordinate system.
+[Number line image code](Programs/S01/Number_line_image.py)
+![Number line image](Images/S01/Number_line.png)
+*Number line*
+
+(Origen)
+**Origin**: this is the point at 0 in all dimensions, e.g. in three dimensions, the origin is $(0, 0, 0)$.
+
+(Coordenada de un punto)
+**Coordinate of a point**: an ordered tuple of numbers indicating the location of the point. In the three dimensional tuple $(a, b, c)$, $a$ indicates the location of the point along the first dimension, $b$ indicates the location of the point along the second dimension, and $c$ indicates the location of the point along the third dimension. This pattern continues if the tuple has more numbers.
+
+## Rectangular coordinate system | Coordinate grid (Sistema de coordenadas rectangulares | Plano coordenado)
 
 The rectangular coordinate system is the 2D version of the number line, it is made with a horizontal number line and a vertical number line that cross each other at zero. The positive numbers in the horizontal number line are at the right of zero, and the positive numbers in the vertical number are above zero.
 
 The horizontal number line is called the $x$-axis (el eje $x$) or abscissa axis (eje de abscisas). The vertical number line is called the $y$-axis (el eje $y$) or ordinate axis (eje de ordenadas).
 
-The rectangular coordinate system is also called the $x$-$y$ plane (el plano $x$-$y$), the coordinate plane (el plano coordenado), or the Cartesian coordinate system (el plano cartesiano)
+The rectangular coordinate system is also called the $x$-$y$ plane (el plano $x$-$y$), the coordinate plane (el plano coordenado), or the Cartesian coordinate system (el plano cartesiano).
 
 The rectangular coordinate system forms a grid in which there is a vertical line that passes through each number in the $x$-axis, and there is an horizontal line that passes through each number in the $y$-axis.
 [Rectangular coordinate system image code](Programs/S01/Rectangular_coordinate_system_image.py)
@@ -45,9 +57,6 @@ $a$ is the $x$-axis value, and $b$ is the $y$-axis value.
 
 (Gráfica)
 **Graph**: the use of the $x$-$y$ plain to show points. These points can come from a mathematical function or equation, points scattered, etcetera. If the graph comes from an equation, it is read as the graph of the equation (la gráfica de la ecuación). The graph itself is the set of points that result from plotting the equation.
-
-(Ecuación en dos variables)
-**Equation in two variables**: an equation that has two variables. Setting the value of one of the variables allows finding the value of the other.
 
 (Ecuación lineal en dos variables)
 **Linear equation in two variables**: linear equation with two variables, such that a change in one of the variables produces a proportional change in the other variable.

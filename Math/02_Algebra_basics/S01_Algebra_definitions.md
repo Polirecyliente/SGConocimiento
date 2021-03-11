@@ -48,12 +48,21 @@ In cases of symbols that have the same subindex but need to represent different 
 > Example of a mathematical expression
 > $$a (b + c) - d$$
 
+(Signo de igualdad)
+**Equality sign**: this sign is $=$, the equal sign.
+
 (Operadores relacionales)
 **Relational operators**: operators that compare the values of two numbers. These operators serve to make the set of numbers an ordered set, ordered according to the values of the numbers.
 [Relational operators code](Programs/S01/Relational_operators.py)
 
 (Igualdad)
 **Equality**: when the values of two quantities are equal, $a = b$ means the value of $a$ is equal to the value of $b$.
+
+(Ecuación)
+**Equation**: the math statement of two expressions that are equal
+
+> Example of an equation
+> $$a + b = c + d$$
 
 (Desigualdad)
 **Inequality**: when the values of two quantities are strictly not equal, or may not be equal.
@@ -98,26 +107,23 @@ In cases of symbols that have the same subindex but need to represent different 
 > Two expressions connected with an equal sign form an equation
 > $$a + b = \frac{c}{d}$$
 
+(Definición matemática)
+**Math definition**: an equation in which a symbol is defined.
+
+> Definition notation
+>
+> Let $a$, $b$ be symbols, then
+> $$a := b$$
+> This is read as $a$ is defined as $b$ ($a$ es definido como $b$).
+
+The sign $:=$ is used to make definitions, to differentiate it from the equal sign.
+
+(Fórmula matemática)
+**Math formula**: an equation whose purpose is to find the value of a quantity or variable, i.e. formulas are equations expressly intended to find the value of a quantity, they are the "formula" to find said value, e.g. in $x = vt$ the distance $x$ is calculated as the product of velocity $v$ and time $t$.
+
 (Simplificación)
 **Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$. Symbols of rational numbers are left as is, for example $\sqrt{\pi}$ should not be simplified further.
 [Simplification code](Programs/S01/Simplification.py)
-
-(Notación exponencial)
-**Exponential notation**: used in expressions where a number is multiplied by itself several times, for example, $2 \cdot 2 \cdot 2 \cdot 2$ is written as $2^4$
-
-> General exponential notation
->
-> Let $a$ be a number, $n$ be a whole number, then
-> $$a a a \ldots a = a^n$$
-> The value $n$ is the amount of times that $a$ is multiplied by itself.
-
-Using the shown symbols, the exponential notation is read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
-
-The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
-
-(Potenciación)
-**Exponentiation**: the operation of raising a number to a given power, e.g. $a^n$.
-[Exponentiation code](Programs/S01/Exponentiation.py)
 
 (Base y exponente)
 **Base and exponent**: in the operation $a^n$, $a$ is called the base and $n$ is called the exponent.
@@ -158,12 +164,38 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 **Solution of an equation**: an equation that contains a variable can be solved by determining the value of the variable that makes the equation true, e.g. in $x + 7 = 11$, $x$ must be $4$ so that the equation is true, and $4$ is the solution of the equation.
 [Solution of an equation code](Programs/S01/Solution_of_an_equation.py)
 
+An equation with several variables has solution tuples, e.g. an equation with three variables, $x$, $y$, and $z$, has solution tuples of size three, such as $(4, 3, 8)$.
+
+(Propiedad reflexiva de la igualdad)
+**Reflexive property of equality**: a real number is equal to itself, Let $a$ be a real number, then $a = a$.
+
+(Propiedad simétrica de la igualdad)
+**Symmetric property of equality**: if a first real number is equal to a second, then the second number is equal to the first. Let $a$, $b$ be real numbers, then $a = b \leftrightarrow b = a$.
+
+(Propiedad transitiva de la igualdad)
+**Transitive property of equality**: if a first real number is equal to a second, and the second number is equal to a third, then the third number is equal to the first. Let $a$, $b$, $c$ be real numbers, if $a = b$ and $b = c$ then $a = c$.
+
+(Propiedad de sustitución de la igualdad)
+**Substitution property of equality**: if two real numbers are equal, one can be substituted by the other. Let $a$, $b$ be real numbers, if $a = b$ then $b$ can substitute $a$ and vice versa.
+
+(Propiedad aditiva de la igualdad)
+**Addition property of equality**: adding a real number to both sides of an equality, preserves the equality.
+
+> Addition property of equality
+>
+> Let $a$, $b$, $c$ be real numbers
+>
+> $$\begin{gathered}
+> if\ a = b\\
+> then\ a + c = b + c
+> \end{gathered}$$
+
 (Propiedad sustractiva de la igualdad)
-**Subtraction property of equality**: subtracting a number from both sides of an equality preserves the equality.
+**Subtraction property of equality**: subtracting a real number from both sides of an equality, preserves the equality.
 
 > Subtraction property of equality
 >
-> Let $a$, $b$, $c$ be numbers
+> Let $a$, $b$, $c$ be real numbers
 >
 > $$\begin{gathered}
 > if\ a = b\\
@@ -172,16 +204,28 @@ The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $
 
 Note, in spanish this property may be bundled as part of the addition property of equality, since changing the sign of $c$ shows both properties.
 
-(Propiedad aditiva de la igualdad)
-**Addition property of equality**: adding a number to both sides of an equality preserves the equality.
+(Propiedad multiplicativa de la igualdad)
+**Multiplication property of equality**: multiplying a real number to both sides of an equality, preserves the equality.
 
-> Addition property of equality
+> Multiplication property of equality
 >
-> Let $a$, $b$, $c$ be numbers
+> Let $a$, $b$, $c$ be real numbers
 >
 > $$\begin{gathered}
 > if\ a = b\\
-> then\ a + c = b + c
+> then\ ac = bc
+> \end{gathered}$$
+
+(Propiedad divisiva de la igualdad)
+**Division property of equality**: dividing both sides of an equality by a nonzero real number, preserves the equality.
+
+> Division property of equality
+>
+> Let $a$, $b$, $c$ be real numbers, with $c$ being nonzero
+>
+> $$\begin{gathered}
+> if\ a = b\\
+> then\ \frac{a}{c} = \frac{b}{c}
 > \end{gathered}$$
 
 (Despejar una variable)
@@ -194,7 +238,26 @@ Note, in spanish this property may be bundled as part of the addition property o
 > Isolate $a$ using the subtraction property of equality, by subtracting $b$ from each side.
 > $$a = c + d - b$$
 
+For example, $4 + y/2 = x + 1 \Rightarrow y = 2x - 6$, here the variable $y$ is isolated.
+
 Isolating a variable in an equation can be synonymous with solving said equation for the variable isolated.
+
+(Solucionar ecuaciones)
+**Solve equations**: Solving an equation commonly means isolating a variable to find its value.
+
+The addition property of equality is used to solve equations when there is a negative term which subtracts from the variable, then said term is added to both sides of the equality, helping in isolating the variable.
+
+The subtraction property of equality is used to solve equations when there is a positive term added to the variable, then said term is subtracted from both sides of the equality, helping in isolating the variable.
+
+The multiplication property of equality is used to solve equations when there is a number dividing the variable, then said number is multiplied to both sided of the equality, helping in isolating the variable.
+
+The division property of equality is used to solve equations when there is a factor multiplying the variable, then both sides of the equality are divided by said factor, helping in isolating the variable.
+
+(Ecuación en dos variables)
+**Equation in two variables**: an equation that has two variables. Setting the value of one of the variables allows finding the value of the other.
+
+(Símbolo de sumatoria)
+**Summation symbol**: the symbol $\sum_i$ represents the sum of the elements of the set to which $i$ belongs, e.g. $\sum_{i = 1}^{n}{x_i} = x_1 + x_2 + ... + x_n$, where $1, 2, ..., n$ is the set of values of $i$ over which the summation is done.
 
 ## Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
 

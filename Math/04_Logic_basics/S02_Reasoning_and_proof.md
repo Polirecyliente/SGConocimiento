@@ -65,7 +65,7 @@ The hypothesis is also known as the antecedent (antecedente), and the conclusion
 > Let $p$, $q$ be two events or logical statements, then those symbols, $p$ and $q$, represent said events or logical statements.
 
 Logical operations can be made over $p$ and $q$.
-[Logical statements code](Programs/S02/01_Logical_statements.py)
+[Logical statements code](Programs/S02/Logical_statements.py)
 
 (Valor de verdad de una proposición o evento)
 **Truth value of a statement or event**: value that results from a statement, or that is assigned to an event. The value $1$ means true, and the value $0$ means false. An event can be assigned a truth value, $1$ if the event happens, and $0$ if the event does not happen. A statement results in a truth value, $1$ if the statement is true, and $0$ if the statement is false.
@@ -78,7 +78,7 @@ Truth values are also called logical values (valores lógicos).
 
 (Partes de una proposición condicional)
 **Parts of a conditional statement**: a conditional statement has three parts, the hypothesis, the conclusion, and the connector between them.
-[Conditional statement code](Programs/S02/02_Conditional_statement.py)
+[Conditional statement code](Programs/S02/Conditional_statement.py)
 
 > Conditional statement notation
 >
@@ -94,7 +94,7 @@ The symbol of a double right arrow $\Rightarrow$ is used outside of logic, in ma
 
 (Negación lógica)
 **Logical negation**: an operator used to negate an event. A negated event means that its negation happens.
-[Logical negation code](Programs/S02/03_Logical_negation.py)
+[Logical negation code](Programs/S02/Logical_negation.py)
 
 > Notation of the logical negation
 >
@@ -136,7 +136,7 @@ The symbol of a double right arrow $\Rightarrow$ is used outside of logic, in ma
 
 (Proposiciones lógicas equivalentes)
 **Logically equivalent statements**: two distinct statements with the same events that lead to the same truth values.
-[Logically equivalent statements](Programs/S02/04_Logically_equivalent_statements.py)
+[Logically equivalent statements](Programs/S02/Logically_equivalent_statements.py)
 
 > Example of logically equivalent statements
 >
@@ -150,7 +150,7 @@ The symbol of a double right arrow $\Rightarrow$ is used outside of logic, in ma
 
 (Proposición bicondicional)
 **Biconditional statement**: a logical statement with a hypothesis that conditionates a conclusion, in which the conclusion conditionates the hypothesis. In a biconditional statement, the conclusion can be used as the hypothesis, and the hypothesis can be used as the conclusion.
-[Biconditional statement code](Programs/S02/05_Biconditional_statement.py)
+[Biconditional statement code](Programs/S02/Biconditional_statement.py)
 
 > Biconditional statement notation
 >
@@ -174,7 +174,7 @@ Deductive reasoning means reasoning on the basis of given facts.
 
 (Ley de separación)
 **Law of detachment**: given two facts as true, that there exists a conditional statement and that the hypothesis of said conditional statement happens, the conclusion of the conditional statement can be deduced as a third true fact with no need for any other information.
-[Law of detachment code](Programs/S02/06_Law_of_detachment.py)
+[Law of detachment code](Programs/S02/Law_of_detachment.py)
 
 > Law of detachment
 >
@@ -212,7 +212,7 @@ The fallacy of the converse is also known as the converse error (error converso)
 
 (Ley contrarrecíproca)
 **Law of contrapositive**: given two facts as true, that there exists a conditional statement and that the consecuent negated happens, then the negation of the antecedent can be deduced as a third true fact.
-[Law of contrapositive code](Programs/S02/07_Law_of_contrapositive.py)
+[Law of contrapositive code](Programs/S02/Law_of_contrapositive.py)
 
 > Law of contrapositive
 >
@@ -230,7 +230,7 @@ This law is true because the contrapositive of a conditional is logically equiva
 
 (Ley del silogismo)
 **Law of syllogism**: a chain of conditionals can be made, so that the consequent of one conditional is the antecedent of the next conditional. Given a chain of conditionals, one extra conditional can be deduced, namely if the first antecedent in the chain is true, then the last consequent in the chain is true.
-[Law of syllogism code](Programs/S02/08_Law_of_syllogism.py)
+[Law of syllogism code](Programs/S02/Law_of_syllogism.py)
 
 > Law of syllogism
 >
@@ -247,7 +247,7 @@ For that matter, several other conditionals could be deduced if needed, such as 
 
 (Conjunción lógica)
 **Logical conjunction**: the operation over two logical statements that returns a logical value of true if both logical statements are true. This is also known as the AND operation, because the first logical statement and the second must be true for the conjunction of them to be true.
-[Logical conjunction code](Programs/S02/09_Logical_conjunction.py)
+[Logical conjunction code](Programs/S02/Logical_conjunction.py)
 
 > Logical conjunction notation
 >
@@ -258,7 +258,7 @@ The symbol $\land$ is the AND operator, $p \land q$ is read as $p$ and $q$ ($p$ 
 
 (Disyunción lógica)
 **Logical disjunction**: the operation over two logical statements that returns a logical value of true if either one or both logical statements are true. This is also known as the OR operation, because the first or the second logical statement or both can be true for the disjunction of them to be true.
-[Logical disjunction code](Programs/S02/10_Logical_disjunction.py)
+[Logical disjunction code](Programs/S02/Logical_disjunction.py)
 
 > Logical disjunction notation
 >
@@ -269,7 +269,7 @@ The symbol $\lor$ is the OR operator, $p \lor q$ is read as $p$ or $q$ ($p$ o $q
 
 (Tablas de verdad)
 **Truth tables**: tables made to organize the logical values of logical statements. They serve to compare side by side the logical values that result after applying different logical operators to logical statements and events.
-[Truth tables code](Programs/S02/11_Truth_tables.py)
+[Truth tables code](Programs/S02/Truth_tables.py)
 
 To indicate true and false, truth tables commonly use $1$ for true and $0$ for false, or also $T$ for true and $F$ for false. Truth tables consider all the possible combinations of logical values.
 
@@ -304,25 +304,6 @@ Truth tables can be used not only for binary operations but for more complex log
 
 ## Algebraic and congruence properties (Propiedades de la igualdad y de la congruencia)
 
-(Propiedades de la igualdad)
-**Properties of equality**: the following are some of the several properties that equality has.
-
-- **Reflexive property of equality** (Propiedad reflexiva de la igualdad): a real number is equal to itself. Let $a$ be a real number, then $a = a$.
-
-- **Symmetric property of equality** (Propiedad simétrica de la igualdad): if a first real number is equal to a second, then the second number is equal to the first. Let $a$, $b$ be real numbers, then $a = b \leftrightarrow b = a$.
-
-- **Transitive property of equality** (Propiedad transitiva de la igualdad): if a first real number is equal to a second, and the second number is equal to a third, then the third number is equal to the first. Let $a$, $b$, $c$ be real numbers, if $a = b$ and $b = c$ then $a = c$.
-
-- **Substitution property of equality** (Propiedad de sustitución de la igualdad): if two real numbers are equal, one can be substituted by the other. Let $a$, $b$ be real numbers, if $a = b$ then $b$ can substitute $a$ and vice versa.
-
-- **Addition property of equality** (Propiedad aditiva de la igualdad): adding a real number to both sides of an equality, preserves the equality. Let $a$, $b$, $c$ be real numbers, if $a = b$ then $a + c = b + c$.
-
-- **Subtraction property of equality** (Propiedad sustractiva de la igualdad): subtracting a real number from both sides of an equality, preserves the equality. Let $a$, $b$, $c$ be real numbers, if $a = b$ then $a - c = b - c$.
-
-- **Multiplication property of equality** (Propiedad multiplicativa de la igualdad): multiplying a real number to both sides of an equality, preserves the equality. Let $a$, $b$, $c$ be real numbers, if $a = b$ then $ac = bc$.
-
-- **Division property of equality** (Propiedad divisiva de la igualdad): dividing both sides of an equality by a real number different from zero, preserves the equality. Let $a$, $b$, $c$ be real numbers with $c \ne 0$, if $a = b$ then $\frac{a}{c} = \frac{b}{c}$.
-
 (Propiedades de la congruencia)
 **Properties of congruence**: the following are some of the several properties that congruence has.
 
@@ -331,15 +312,6 @@ Truth tables can be used not only for binary operations but for more complex log
 - **Symmetric property of congruence** (Propiedad simétrica de la congruencia): if a first figure is congruent to a second, then the second figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$ be segments, if $\overline{AB} \cong \overline{CD}$ then $\overline{CD} \cong \overline{AB}$.
 
 - **Transitive property of congruence** (Propiedad transitiva de la congruencia): if a first figure is congruent to a second, and the second figure is congruent to a third, then the third figure is congruent to the first. Let $\overline{AB}$, $\overline{CD}$, $\overline{EF}$ be segments, if $\overline{AB} \cong \overline{CD}$ and $\overline{CD} \cong \overline{EF}$ then $\overline{AB} \cong \overline{EF}$.
-
-(Propiedades de las operaciones)
-**Operation properties**: the following properties apply to operations such as addition and multiplication.
-
-- **Commutative property of addition and multiplication** (Propiedad conmutativa de la adición y la multiplicación): changing the order of the operands doesn't change the result. Let $a$, $b$ be real numbers, then $a + b = b + a$, $ab = ba$.
-
-- **Associative property of addition and multiplication** (Propiedad asociativa de la adición y la multiplicación): the operands can be arbitrarily associated with parentheses and that doesn't change the result. Let $a$, $b$, $c$, be real numbers, then $(a + b) + c = a + (b + c)$, $(ab)c = a(bc)$.
-
-- **Distributive property of multiplication over addition** (Propiedad distributiva de la multiplicación respecto a la suma): a real number multiplying the sum of other real numbers, is equal to the sum of the products of the real number by each of the other real numbers. Let $a$, $b$, $c$ be real numbers, then $a(b + c) = ab + ac$.
 
 ## Proofs about angle pairs and segments (Demostraciones sobre pares de ángulos y segmentos)
 
@@ -355,8 +327,8 @@ Truth tables can be used not only for binary operations but for more complex log
 > | $m \angle A = m \angle B$ | Transitive property of equality |
 > | $\angle A \cong \angle B$ | Definition of congruence |
 
-[Right angle theorem image code](Programs/S02/12_Right_angle_theorem_image.py)
-![Right angle theorem image](Images/S02/12_Right_angle_theorem.png)
+[Right angle theorem image code](Programs/S02/Right_angle_theorem_image.py)
+![Right angle theorem image](Images/S02/Right_angle_theorem.png)
 *Right angle theorem*
 
 The segments may not be congruent but the right angles are.
