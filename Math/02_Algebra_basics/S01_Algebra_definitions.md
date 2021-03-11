@@ -48,59 +48,6 @@ In cases of symbols that have the same subindex but need to represent different 
 > Example of a mathematical expression
 > $$a (b + c) - d$$
 
-(Signo de igualdad)
-**Equality sign**: this sign is $=$, the equal sign.
-
-(Operadores relacionales)
-**Relational operators**: operators that compare the values of two numbers. These operators serve to make the set of numbers an ordered set, ordered according to the values of the numbers.
-[Relational operators code](Programs/S01/Relational_operators.py)
-
-(Igualdad)
-**Equality**: when the values of two quantities are equal, $a = b$ means the value of $a$ is equal to the value of $b$.
-
-(Ecuación)
-**Equation**: the math statement of two expressions that are equal
-
-> Example of an equation
-> $$a + b = c + d$$
-
-(Desigualdad)
-**Inequality**: when the values of two quantities are strictly not equal, or may not be equal.
-
-(Mayor que)
-**Greater than**: the comparison of two numbers where the first is greater than the second. The operator is $>$, the greater than sign. $a > b$, read as $a$ greater than $b$ ($a$ mayor que $b$), means that the value of $a$ is greater than the value of $b$.
-
-(Menor que)
-**Less than**: the comparison of two numbers where the first is less than the second. The operator is $<$, the less than sign. $a < b$, read as $a$ less than $b$ ($a$ menor que $b$), means that the value of $a$ is less than the value of $b$.
-
-(Mayor o igual que)
-**Greater than or equal to**: the comparison of two numbers where the first is greater than or equal to the second. The operator is $\ge$, the greater than or equal to sign. $a \ge b$, read as $a$ greater than or equal to $b$ ($a$ mayor o igual que $b$), means that the value of $a$ is greater than or equal to the value of $b$.
-
-(Menor o igual que)
-**Less than or equal to**: the comparison of two numbers where the first is less than or equal to the second. The operator is $\le$, the less than or equal to sign. $a \le b$, read as $a$ less than or equal to $b$ ($a$ menor o igual que $b$), means that the value of $a$ is less than or equal to the value of $b$.
-
-(Diferente a)
-**not equal to**: the comparison of two numbers where they have different values. The operator is $\ne$, the not equal to sign. $a \ne b$, read as $a$ not equal to $b$ ($a$ diferente a $b$), means that the value of $a$ is not equal to the value of $b$.
-
-(Orden de las operaciones)
-**Order of operations**: The order in which to execute the operations. In $5 + \frac{10}{2}$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first. This can be modified with grouping symbols.
-[Order of operations code](Programs/S01/Order_of_operations.py)
-
-(Signos de agrupación)
-**Grouping symbols**: symbols that act as operators by grouping algebraic symbols. The grouped symbols are operated together. The grouping symbols serve to make explicit the order of operations.
-
-(Paréntesis)
-**Parentheses**: this operator is $()$, the parentheses signs. $8(14 - 8)$ returns $48$.
-
-(Corchetes)
-**Brackets**: this operator is $[]$, the brackets signs. $21 - 3[2 + 4(9 - 8)]$ returns $3$.
-
-(Llaves)
-**Braces**: this operator is $\{\}$, the braces signs. $24 \div \{13 - 2[(6 - 5) + 4]\}$ returns $8$.
-
-(PEMDAS)
-**PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general. Multiplication and division have the same relevance, so they can be switched in order, same with addition and subtraction.
-
 (Expresiones y ecuaciones)
 **Expressions and equations**: two expressions can form an equation by connecting them with an equal sign.
 
@@ -124,18 +71,6 @@ The sign $:=$ is used to make definitions, to differentiate it from the equal si
 (Simplificación)
 **Simplification**: do all possible operations in an expression. $4 \cdot 2 + 1$ can be simplified to $9$. Symbols of rational numbers are left as is, for example $\sqrt{\pi}$ should not be simplified further.
 [Simplification code](Programs/S01/Simplification.py)
-
-(Base y exponente)
-**Base and exponent**: in the operation $a^n$, $a$ is called the base and $n$ is called the exponent.
-
-(Expresión exponencial en forma expandida)
-**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a a a \ldots a$ where $a$ is multiplied by itself $n$ times.
-
-(Números al cuadrado)
-**Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. $3$ to the power of $2$ is $9$, or $3$ squared is $9$ ($3$ al cuadrado es $9$).
-
-(Números al cubo)
-**Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. $5$ to the power of $3$ is $125$, or $5$ cubed is $125$ ($5$ al cubo es $125$).
 
 ## Evaluation and simplification of expressions (Evaluación y simplificación de expresiones)
 
@@ -258,76 +193,3 @@ The division property of equality is used to solve equations when there is a fac
 
 (Símbolo de sumatoria)
 **Summation symbol**: the symbol $\sum_i$ represents the sum of the elements of the set to which $i$ belongs, e.g. $\sum_{i = 1}^{n}{x_i} = x_1 + x_2 + ... + x_n$, where $1, 2, ..., n$ is the set of values of $i$ over which the summation is done.
-
-## Multiples, divisibility, factors, prime numbers (Múltiplos, divisibilidad, factores, número primos)
-
-(Múltiplos de un número)
-**Multiples of a number**: the result of multiplying a number by any of the counting numbers, so a number has infinite multiples. The smallest multiple is the number itself.
-
-(Divisibilidad)
-**Divisibility**: if a given number $b$ is multiple of another number $a$, then $b$ is divisible by $a$, because $\frac{b}{a}$ is a whole number. All the multiples of $a$ are divisible by $a$.
-[Divisibility code](Programs/S01/Divisibility.py)
-
-(Números pares)
-**Even numbers**: 0 and the multiples of 2.
-
-(Números impares)
-**Odd numbers**: the whole numbers that are not even numbers.
-
-(Pruebas de divisibilidad)
-**Divisibility tests**: a quick test made to check if a number is divisible by another. The following are the divisibility tests of the first numbers.
-
-A given number is divisible by 2 if its last digit is an even number.
-A given number is divisible by 3 if the sum of its digits is divisible by 3.
-A given number is divisible by 4 if its last two digits are divisible by 4.
-A given number is divisible by 5 if its last digit is 0 or 5.
-A given number is divisible by 6 if it's divisible by 2 and 3.
-A given number is divisible by 7 if its last digit is doubled and then subtracted from the rest of the number, and the result of that is divisible by 7.
-A given number is divisible by 8 if its last three digits are divisible by 8.
-A given number is divisible by 9 if the sum of its digits is divisible by 9.
-A given number is divisible by 10 if its last digit is 0.
-A given number is divisible by 11 if the alternating sum of its digits (i.e. the first digit, minus the second, plus the third, minus the fourth, etc.) is divisible by 11.
-
-(Factores de un número)
-**Factors of a number**: in a given number, its factors are the numbers that multiplied together produce the given number. A number can have several different sets of factors, e.g. $12$ has different sets of factors like $3$, $4$, also $2$, $6$, or $2$, $3$, $2$, or others.
-[Find factors code](Programs/S01/Find_factors.py)
-
-(Pares de factores)
-**factor pairs**: factors can always be presented in pairs, because at least two numbers are required to be multiplied together in order to produce a given number. In the example of $12 = 2 \cdot 3 \cdot 2$, with factor pairs the equation would be $12 = 2 \cdot 6$ or $12 = 3 \cdot 4$.
-
-(Números primos)
-**Prime numbers**: each of the numbers with only 2 different factors, the number 1 and the number itself.
-
-(Números compuestos)
-**Composite numbers**: the numbers that are not prime, i.e. the numbers that have more than one factor pair.
-
-## Prime factorization, least common multiple (Descomposición en factores primos, mínimo común múltiplo)
-
-(Factores primos)
-**prime factors**: the set of prime numbers that multiplied together produce a given number. Numbers can be represented as the product of prime factors.
-
-(Descomposición en factores primos)
-**Prime factorization**: the process of finding the prime factors of a number.
-[Prime factorization code](Programs/S01/Prime_factorization.py)
-
-(Multiplicidad de un factor primo)
-**Multiplicity of a prime factor**: the amount of times that a prime factor of a given number is repeated, e.g. in the number $60$ the prime factors are $2$, $2$, $3$, $5$, the number $2$ has a multiplicity of $2$, the number $3$ has a multiplicity of $1$, and the number $5$ has a multiplicity of $1$.
-
-(Múltiplos comunes)
-**Common multiples**: given a set of at least two numbers, the common multiples are the numbers that are multiples of all the numbers in the set.
-
-(Mínimo común múltiplo)
-**Least common multiple**: the smallest common multiple of a given set of at least two numbers.
-[Least common multiple code](Programs/S01/Least_common_multiple.py)
-
-The least common multiple of two numbers can be calculated using their prime factors. The least common multiple of two numbers is the product of all their unique prime factors, each raised to the power of their maximum multiplicity.
-
-For example, to find the least common multiple of $12$ and $18$, the prime factors of $12$ are $2$, $2$, $3$, and the prime factors of $18$ are $2$, $3$, $3$. The least common multiple is $2 \cdot 2 \cdot 3 \cdot 3 = 36$, the number $2$ has a maximum multiplicity of $2$ (in $12$), and $3$ has a maximum multiplicity of $2$ (in $18$).
-
-(Máximo común divisor)
-**Greatest common divisor**: the biggest common divisor of a given set of at least two numbers.
-[Greatest common divisor code](Programs/S01/Greatest_common_divisor.py)
-
-The greatest common divisor of two numbers can be calculated using their prime factors. The greatest common divisor of two numbers is the product of their common prime factors, each raised to the power of their minimum multiplicity.
-
-In this use of the term "divisor", it is also a factor of the set of numbers. That's why sometimes this is also called greatest common factor (Máximo factor común).

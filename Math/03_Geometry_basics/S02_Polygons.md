@@ -1039,9 +1039,6 @@ In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, a
 (Longitud del cateto en un triángulo rectángulo)
 **Length of the leg in a right triangle**: in a right triangle with hypotenuse of length $c$, and legs of lengths $a$ and $b$, $a = \sqrt{c^2 - b^2}$, $b = \sqrt{c^2 - a^2}$. This can be considered as a corollary of the pythagorean theorem.
 
-(Ternas pitagóricas)
-**Pythagorean triples**: groups of three counting numbers that can make the lengths of the sides of a right triangle. For example $3$, $4$, and $5$ are counting numbers that can build a right triangle because $5^2 = 3^2 + 4^2 = 25 = 9 + 16$. Multiples of a pythagorean triple are also pythagorean triples, for example $9$, $12$, and $15$, because $15^2 = 9^2 + 12^2 = 225 = 81 + 144$.
-
 ## Converse of the pythagorean theorem (Converso del teorema de Pitágoras)
 
 In a triangle, if the longest side squared is equal to the sum of the other two sides squared, then the triangle is a right triangle, with the right angle being the angle opposite to the longest side.

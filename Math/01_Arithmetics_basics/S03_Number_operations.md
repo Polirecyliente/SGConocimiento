@@ -1,6 +1,37 @@
 
 #   Number operations (Operaciones numéricas)
 
+(Operadores relacionales)
+**Relational operators**: operators that compare the values of two numbers. These operators serve to make the set of numbers an ordered set, ordered according to the values of the numbers.
+[Relational operators code](Programs/S03/Relational_operators.py)
+
+(Igualdad)
+**Equality**: when the values of two quantities are equal, $a = b$ means the value of $a$ is equal to the value of $b$. The equal sign is the $=$ sign.
+
+(Ecuación)
+**Equation**: the math statement of two expressions that are equal
+
+> Example of an equation
+> $$a + b = c + d$$
+
+(Desigualdad)
+**Inequality**: when the values of two quantities are strictly not equal, or may not be equal.
+
+(Mayor que)
+**Greater than**: the comparison of two numbers where the first is greater than the second. The operator is $>$, the greater than sign. $a > b$, read as $a$ greater than $b$ ($a$ mayor que $b$), means that the value of $a$ is greater than the value of $b$.
+
+(Menor que)
+**Less than**: the comparison of two numbers where the first is less than the second. The operator is $<$, the less than sign. $a < b$, read as $a$ less than $b$ ($a$ menor que $b$), means that the value of $a$ is less than the value of $b$.
+
+(Mayor o igual que)
+**Greater than or equal to**: the comparison of two numbers where the first is greater than or equal to the second. The operator is $\ge$, the greater than or equal to sign. $a \ge b$, read as $a$ greater than or equal to $b$ ($a$ mayor o igual que $b$), means that the value of $a$ is greater than or equal to the value of $b$.
+
+(Menor o igual que)
+**Less than or equal to**: the comparison of two numbers where the first is less than or equal to the second. The operator is $\le$, the less than or equal to sign. $a \le b$, read as $a$ less than or equal to $b$ ($a$ menor o igual que $b$), means that the value of $a$ is less than or equal to the value of $b$.
+
+(Diferente a)
+**not equal to**: the comparison of two numbers where they have different values. The operator is $\ne$, the not equal to sign. $a \ne b$, read as $a$ not equal to $b$ ($a$ diferente a $b$), means that the value of $a$ is not equal to the value of $b$.
+
 (Adición de números reales)
 **Addition of real numbers**: Addition is the operation of adding numbers together. Addition means starting at the end of the first number, and then moving the amount being added by the second number.
 [Addition code](Programs/S03/Addition.py)
@@ -328,6 +359,110 @@ Division by a number is the same as multiplication by its reciprocal, $\frac{a}{
 Using the shown symbols, the exponential notation is read as $a$ to the $n$-th power ($a$ a la $n$-ésima potencia), also read as $a$ to the power of $n$ ($a$ a la $n$).
 
 The operation itself is read as raise $a$ to the $n$-th power (elevar $a$ a la $n$-ésima potencia), also read as raise $a$ to the power of $n$ (elevar $a$ a la $n$).
+
+(Base y exponente)
+**Base and exponent**: in the operation $a^n$, $a$ is called the base and $n$ is called the exponent.
+
+(Expresión exponencial en forma expandida)
+**Exponential expression in expanded form**: $a^n$ can be represented in expanded form as $a a a \ldots a$ where $a$ is multiplied by itself $n$ times.
+
+(Números al cuadrado)
+**Squared numbers**: when a number is raised to the power of 2, it is said that the result is a squared number, e.g. $3$ to the power of $2$ is $9$, or $3$ squared is $9$ ($3$ al cuadrado es $9$).
+
+(Cuadrado perfecto)
+**Perfect square**: any whole number that is the square of an integer. For example $9$ is the perfect square of $3$, because $3^2 = 9$ and $\sqrt{9} = 3$.
+
+(Números al cubo)
+**Cubed numbers**: when a number is raised to the power of 3, it is said that the result is a cubed number, e.g. $5$ to the power of $3$ is $125$, or $5$ cubed is $125$ ($5$ al cubo es $125$).
+
+(Radicación de números)
+**Taking a root of a number**: the exponentiation operation using as exponent the reciprocal of an integer, e.g. $a^{1/7}$ in which the exponent is the reciprocal of $7$, this is read as taking the seventh root of $a$ (sacar la raíz séptima de $a$).
+
+(Signo de radical)
+**Radical sign**: The symbol around $n$ in $\sqrt{n}$ is the radical sign, it acts as a grouping symbol for the expression inside it. $\sqrt{n} = n^{1/2}$, and $\sqrt[7]{n} = n^{1/7}$, in general $\sqrt[k]{n} = n^{1/k}$.
+
+(Raíz cuadrada)
+**Square root**: given two numbers $m$, $n$, such that $m = n^2$, then $n$ is the square root of $m$, $n = \sqrt{m}$. Squared numbers can be seen as squares in a 2D grid. Let $m$ be the area of a given square, then $n$ is the measure of its side's length.
+
+(Raíz cuadrada principal)
+**Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.
+
+(Producto de potencias de igual base)
+**Product property of exponents**: the product of two equal bases, each with their exponent, is equal to the base raised to the sum of the exponents.
+
+> Product property of exponents
+>
+> Let $a$, $m$, $n$ be numbers, then
+> $$a^m a^n = a^{m + n}$$
+
+(Potencia de una potencia)
+**Power property of exponents**: the result of raising a base to an exponent and then raising that power to another exponent, is equal to the base raised to the power of the product of the exponents.
+
+> Power property of exponents
+>
+> Let $a$, $m$, $n$ be numbers, then
+> $${(a^m)}^n = a^{m n}$$
+
+(Producto de potencias con el mismo exponente)
+**Product to a power property of exponents**: the product of two bases with the same exponent, is equal to the product of the bases raised to the power of the exponent.
+
+> Product to a power property of exponents
+>
+> Let $a$, $b$, $n$ be numbers, then
+> $$a^n b^n = {(a b)}^n$$
+
+(Cociente de potencias de la misma base)
+**Quotient property of exponents**: the quotient of two exponents that have the same base, is equal to the base raised to the power of the exponent in the numerator minus the exponent in the denominator.
+
+> Quotient property of exponents
+>
+> Let $a$, $m$, $n$, be numbers, then
+> $$\frac{a^m}{a^n} = a^{m - n}$$
+
+(Exponente negativo)
+**Negative exponent**: the reciprocal of the base raised to the power of the exponent.
+
+> Negative exponent
+>
+> Let $a$ and $n$ be numbers, then
+> $$a^{-n} = \frac{1}{a^n}$$
+
+(Exponente cero)
+**Zero exponent**: a nonzero base raised to the power of zero is equal to one.
+
+> Zero exponent
+>
+> Let $a$ be a nonzero number, so $a \ne 0$, then
+> $$a^0 = 1$$
+
+This is because, with any number $n$, $\frac{a^n}{a^n} = a^0 = 1$.
+
+(Potencia de un cociente)
+**Quotient to a power property of exponents**: the quotient of two bases with the same exponent, is equal to the quotient of the bases raised to the power of the exponent.
+
+> Quotient to a power property of exponents
+>
+> Let $a$, $b$, $n$ be numbers, with $b$ being nonzero, then
+> $$\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$$
+
+(Orden de las operaciones)
+**Order of operations**: The order in which to execute the operations. In $5 + \frac{10}{2}$, the result is $10$ if division is done first, but the result is $7.5$ if addition is done first. This can be modified with grouping symbols.
+[Order of operations code](Programs/S03/Order_of_operations.py)
+
+(Signos de agrupación)
+**Grouping symbols**: symbols that act as operators by grouping algebraic symbols. The grouped symbols are operated together. The grouping symbols serve to make explicit the order of operations.
+
+(Paréntesis)
+**Parentheses**: this operator is $()$, the parentheses signs. $8(14 - 8)$ returns $48$.
+
+(Corchetes)
+**Brackets**: this operator is $[]$, the brackets signs. $21 - 3[2 + 4(9 - 8)]$ returns $3$.
+
+(Llaves)
+**Braces**: this operator is $\{\}$, the braces signs. $24 \div \{13 - 2[(6 - 5) + 4]\}$ returns $8$.
+
+(PEMDAS)
+**PEMDAS**: acronym of Parentheses, Exponentiation, Multiplication, Division, Addition, and Subtraction. This dictates the standard order of operations when there are no parentheses, or grouping symbols in general. Multiplication and division have the same relevance, so they can be switched in order, same with addition and subtraction.
 
 (Redondeo)
 **Rounding**: approximating a number with another of less significant digits.

@@ -110,30 +110,6 @@ Addition and subtraction of polynomials can be done programatically.
 
 ## Multiplication properties of exponents (Propiedades de los exponentes)
 
-(Producto de potencias de igual base)
-**Product property of exponents**: the product of two equal bases, each with their exponent, is equal to the base raised to the sum of the exponents.
-
-> Product property of exponents
->
-> Let $a$, $m$, $n$ be numbers, then
-> $$a^m a^n = a^{m + n}$$
-
-(Potencia de una potencia)
-**Power property of exponents**: the result of raising a base to an exponent and then raising that power to another exponent, is equal to the base raised to the power of the product of the exponents.
-
-> Power property of exponents
->
-> Let $a$, $m$, $n$ be numbers, then
-> $${(a^m)}^n = a^{m n}$$
-
-(Producto de potencias con el mismo exponente)
-**Product to a power property of exponents**: the product of two bases with the same exponent, is equal to the product of the bases raised to the power of the exponent.
-
-> Product to a power property of exponents
->
-> Let $a$, $b$, $n$ be numbers, then
-> $$a^n b^n = {(a b)}^n$$
-
 (Multiplicación de monomios)
 **Monomial multiplication**: let $a$, $b$, $k$, $l$, $m$, $n$, be numbers and $x$, $y$ be variables, then the product of the monomials $ax^ky^l$ and $bx^my^n$ is $abx^{k + m}y^{l + n}$.
 
@@ -153,40 +129,6 @@ The multiplication of polynomials is based on the distributive property of multi
 > \end{gathered}$$
 
 ## Division of polynomials (División de polinomios)
-
-(Cociente de potencias de la misma base)
-**Quotient property of exponents**: the quotient of two exponents that have the same base, is equal to the base raised to the power of the exponent in the numerator minus the exponent in the denominator.
-
-> Quotient property of exponents
->
-> Let $a$, $m$, $n$, be numbers, then
-> $$\frac{a^m}{a^n} = a^{m - n}$$
-
-(Exponente negativo)
-**Negative exponent**: the reciprocal of the base raised to the power of the exponent.
-
-> Negative exponent
->
-> Let $a$ and $n$ be numbers, then
-> $$a^{-n} = \frac{1}{a^n}$$
-
-(Exponente cero)
-**Zero exponent**: a nonzero base raised to the power of zero is equal to one.
-
-> Zero exponent
->
-> Let $a$ be a nonzero number, so $a \ne 0$, then
-> $$a^0 = 1$$
-
-This is because, with any number $n$, $\frac{a^n}{a^n} = a^0 = 1$.
-
-(Potencia de un cociente)
-**Quotient to a power property of exponents**: the quotient of two bases with the same exponent, is equal to the quotient of the bases raised to the power of the exponent.
-
-> Quotient to a power property of exponents
->
-> Let $a$, $b$, $n$ be numbers, with $b$ being nonzero, then
-> $$\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$$
 
 (División de monomios)
 **Monomial division**: let $a$, $b$, $k$, $l$, $m$, $n$, be numbers and $x$, $y$ be variables, then the division of the monomial $ax^ky^l$ over $bx^my^n$ is $\frac{a}{b}x^{k - m}y^{l - n}$.

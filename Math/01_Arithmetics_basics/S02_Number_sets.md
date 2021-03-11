@@ -90,9 +90,63 @@
 
 For example, the absolute value of $-5$ is $5$, and the absolute value of $5$ is $5$, so $\lvert 5 \rvert = \lvert -5 \rvert = 5$.
 
-## Solution of an equation with integers, multiplication and division properties of equality (Soluciones de una ecuación con enteros, propiedades multiplicativa y divisiva de la igualdad)
+(Múltiplos de un número)
+**Multiples of a number**: given an integer, its multiples are the result of multiplying it by any of the counting numbers, so an integer has infinite multiples. The smallest multiple (in absolute value) is the integer itself.
 
-The solution of an equation with integers is no different from a regular solution of an equation. A variable can be negative to satisfy an equation.
+(Divisibilidad)
+**Divisibility**: if a given integer $b$ is multiple of another $a$, then $b$ is divisible by $a$, because $\frac{b}{a}$ is an integer. All the multiples of $a$ are divisible by $a$.
+[Divisibility code](Programs/S02/Divisibility.py)
+
+(Números pares)
+**Even numbers**: 0 and the multiples of 2.
+
+(Números impares)
+**Odd numbers**: the integers that are not even numbers.
+
+(Factores de un entero)
+**Factors of an integer**: in a given integer, its factors are the integers that multiplied together produce it. An integer can have several different sets of factors, e.g. $12$ has different sets of factors like $3$, $4$, also $2$, $6$, or $2$, $3$, $2$, or others.
+[Find factors code](Programs/S02/Find_factors.py)
+
+(Pares de factores)
+**Factor pairs**: factors can always be presented in pairs, because at least two integers are required to be multiplied together in order to produce a given integer. In the example of $12 = 2 \cdot 3 \cdot 2$, with factor pairs the equation would be $12 = 2 \cdot 6$ or $12 = 3 \cdot 4$.
+
+(Números primos)
+**Prime numbers**: each of the integers with only 2 different factors, the number 1 and the integer itself.
+
+(Números compuestos)
+**Composite numbers**: the integers that are not prime, i.e. the integers that have more than one factor pair.
+
+(Factores primos)
+**prime factors**: the set of prime numbers that multiplied together produce a given integer. Integers can be represented as the product of prime factors.
+
+(Descomposición en factores primos)
+**Prime factorization**: the process of finding the prime factors of an integer.
+[Prime factorization code](Programs/S02/Prime_factorization.py)
+
+(Multiplicidad de un factor primo)
+**Multiplicity of a prime factor**: the amount of times that a prime factor of a given integer is repeated, e.g. in the number $60$ the prime factors are $2$, $2$, $3$, $5$, the number $2$ has a multiplicity of $2$, the number $3$ has a multiplicity of $1$, and the number $5$ has a multiplicity of $1$.
+
+(Múltiplos comunes)
+**Common multiples**: given a set of at least two integers, the common multiples are the numbers that are multiples of all the integers in the set.
+
+(Mínimo común múltiplo)
+**Least common multiple**: the smallest common multiple of a given set of at least two integers.
+[Least common multiple code](Programs/S02/Least_common_multiple.py)
+
+The least common multiple of two integers can be calculated using their prime factors. The least common multiple of two integers is the product of all their unique prime factors, each raised to the power of their maximum multiplicity.
+
+For example, to find the least common multiple of $12$ and $18$, the prime factors of $12$ are $2$, $2$, $3$, and the prime factors of $18$ are $2$, $3$, $3$. The least common multiple is $2 \cdot 2 \cdot 3 \cdot 3 = 36$, the number $2$ has a maximum multiplicity of $2$ (in $12$), and $3$ has a maximum multiplicity of $2$ (in $18$).
+
+(Mínimo común denominador)
+**Least common denominator**: the least common multiple of the denominators from a set of at least two fractions.
+
+(Máximo común divisor)
+**Greatest common divisor**: the biggest common divisor of a given set of at least two integers.
+[Greatest common divisor code](Programs/S02/Greatest_common_divisor.py)
+
+The greatest common divisor of two integers can be calculated using their prime factors. The greatest common divisor of two integers is the product of their common prime factors, each raised to the power of their minimum multiplicity.
+
+In this use of the term "divisor", it is also a factor of the set of numbers. That's why sometimes this is also called greatest common factor (Máximo factor común).
 
 #   Rational numbers (Números racionales)
 
@@ -177,9 +231,6 @@ The same simplification can be done with variables, e.g. $\frac{2 x}{x}$ can be 
 **Negative fractions**: when either the numerator is negative, or the denominator is negative, the fraction itself is negative, $\frac{-a}{b} = -\frac{a}{b}$, and $\frac{a}{-b} = -\frac{a}{b}$.
 
 ## Addition and subtraction of fractions with different denominators (Adición y sustracción de fracciones con denominador diferente)
-
-(Mínimo común denominador)
-**Least common denominator**: the least common multiple of the denominators from a set of at least two fractions.
 
 (Evaluación de expresiones con fracciones)
 **Evaluation of expressions with fractions**: like regular evaluation.
@@ -329,18 +380,6 @@ Ratios can be considered rates when the particular units in the numerator and de
 
 Simplification of square roots is done like regular simplification.
 [Simplification of radicals code](Programs/S05/Simplification_of_radicals.py)
-
-(Signo de radical)
-**Radical sign**: The symbol around $n$ in $\sqrt{n}$ is the radical sign, it acts as a grouping symbol for the expression inside it. $\sqrt{n} = n^{1/2}$, and $\sqrt[7]{n} = n^{1/7}$, in general $\sqrt[k]{n} = n^{1/k}$.
-
-(Cuadrado perfecto)
-**Perfect square**: any whole number that is the square of an integer. For example $9$ is the perfect square of $3$, because $3^2 = 9$ and $\sqrt{9} = 3$.
-
-(Raíz cuadrada)
-**Square root**: given two numbers $m$, $n$, such that $m = n^2$, then $n$ is the square root of $m$, $n = \sqrt{m}$. Squared numbers can be seen as squares in a 2D grid. Let $m$ be the area of a given square, then $n$ is the measure of its side's length.
-
-(Raíz cuadrada principal)
-**Principal square root**: since any square root can be negative or positive, because $n^2 = (-n)^2 = m$, so both $n$ and $-n$ are roots of $m$, only one is chosen as the square root of $m$, this is the positive value $n$, named the principal square root of $m$, $\sqrt{m}$ stands for $n$.
 
 (Fórmula de tiempo en caída libre)
 **Free fall time formula**: formula to find the fall time in a free fall scenario. The fall starts at a given height, and the time calculated by this formula is the time from the moment the fall starts, to the moment of reaching the ground.
