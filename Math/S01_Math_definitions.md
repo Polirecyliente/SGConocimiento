@@ -25,5 +25,11 @@
 
 Step1 is supported by Reason1, Step2 is supported by Reason2, and so on. If ReasonN is a conditional statement, then StepN must be the conclusion or consequent of that conditional statement. For clarity, a parentheses pair with a number can be added to a step, so that it's clear from which step a given reason stems. In the *Two column proof template* table, Reason3 stems from Step2, this is shown with the parentheses '(1)'.
 
+(Demostración por contradicción)
+**Indirect proof**: type of proof of a conditional in which the consequent is negated, and by deduction a contradiction is found, which means that the consequent is true.
+
 (Símbolo entonces)
 **Then symbol**: the symbol of a double right arrow $\Rightarrow$ is used in mathematics in general, to signify 'then'.
+
+(Mapeo de un punto a otro)
+**Mapping from a point to another**: mappings are a way to symbolize geometric transformations in the coordinate plane. Let the point $(x, y)$ be transformed into the point $(x', y')$, this can be denoted as $(x, y) \to (x', y')$, read as the point $(x, y)$ is mapped to $(x', y')$ (el punto $(x, y)$ es mapeado a $(x', y')$).

@@ -93,6 +93,18 @@ The sign $:=$ is used to make definitions, to differentiate it from the equal si
 (Reducción de términos semejantes)
 **Combining like terms | Combine like terms**: simplification in which like terms are combined, i.e. they are added together according to their sign, e.g. $3x + 4x$ can be combined as $7x$, $3x - 4x$ can be combined as $-x$.
 
+(Lado para variables de una ecuación)
+**Variable side of an equation**: A side of an equation that can be arbitrarily chosen to hold variables, or a single variable, in order to isolate it and find its value.
+
+(Lado para constantes de una ecuación)
+**Constant side of an equation**: The other side of an equation that is produced when choosing a variable side.
+
+(Combinar términos variables)
+**Collect variable terms**: the process of combining the like terms of a variable in one side, this creates the variable side of the equation.
+
+(Combinar términos constantes)
+**Collect constant terms**: the process of combining like terms without variables, this creates the constant side of the equation.
+
 ## Solution of an equation, subtraction and addition properties of equality (Soluciones de una ecuación, propiedades de sustracción y adición de la igualdad)
 
 (Solución de una ecuación)

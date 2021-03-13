@@ -476,3 +476,44 @@ This is because, with any number $n$, $\frac{a^n}{a^n} = a^0 = 1$.
 
 (Truncamiento)
 **Truncation**: rounding a number by removing all digits after the decimal point, e.g. $2.5$ truncated is $2$, and $-2.5$ truncated is $-2$.
+
+(Reducir fracciones)
+**Reduce fractions**: form of simplification in which a fraction is expressed as an equivalent fraction that has no common factors between the numerator and the denominator. If there is a common factor, both the numerator and the denominator are divided by it, this simplifies the fraction.
+
+For example $\frac{6}{9} = \frac{4}{6}$, but their reduced form is $\frac{2}{3}$. In $\frac{6}{9}$ a common factor is $3$ and dividing the numerator and denominator by $3$ results in $\frac{2}{3}$. In $\frac{4}{6}$ a common factor is $2$ and dividing the numerator and denominator by $2$ results in $\frac{2}{3}$.
+
+The same simplification can be done with variables, e.g. $\frac{2 x}{x}$ can be simplified to $\frac{2}{1}$ or $2$.
+
+(Fracción irreducible)
+**Simplified fraction**: a fraction in which the numerator and the denominator have no common factors.
+
+(Eliminar los denominadores de una ecuación)
+**Clear an equation of fractions**: the process of clearing the fractions of an equation, by multiplying each term on both sides by the least common denominator.
+
+(Racionalizar el denominador)
+**Rationalize the denominator**: when a fraction has a radical in the denominator, it can be rationalized to remove the radical from the denominator without changing the value of the fraction. The process is $\frac{a}{\sqrt{b}} = \frac{a \sqrt{b}}{\sqrt{b} \sqrt{b}} = \frac{a \sqrt{b}}{b}$.
+
+(Conversión entre decimales y fracciones)
+**Conversion between decimals and fractions**: decimals can be presented in fraction form, and vice versa. The conversion from fraction to decimal is done by performing the division of the numerator over the denominator of the fraction. The conversion from finite decimal (see finite decimals in this file) to fraction is done by multiplying the decimal by 10 to the positive power of the place of the rightmost digit, and dividing the result over the same power of 10.
+[Conversion decimal fraction code](Programs/S05/Conversion_decimal_fraction.py)
+
+(Conversión de decimal periódico a fracción)
+**Conversion from repeating decimal to fraction**: The conversion from repeating decimal to fraction is done by creating two numbers, each of which is the product of the decimal by a different power of 10, and then subtracting both numbers and dividing that difference by the subtraction of said powers of 10 (See Programs/Ch05/S03_01_Repeating_decimals.py).
+
+Repeating decimals have a few parts, for example, in the number $894.57448132653448132653448132653448132653448132653$, the unique part (parte única) is $894.57$, and the repeating part (parte periódica) is $448132653$. In itself, the unique part has two parts (as any decimal number), the decimal part and the integer part.
+
+For the unique part $894.57$, the original number is multiplied by 10 to the positive power of the place of the rightmost digit of the unique part, in this case $10^2$. For the repeating part, the original number is multiplied by 10 to the power of the sum of the amount of repeating digits and the power of 10 used for the unique part (in this case $2$). The amount of digits in $448132653$ is $9$, so for the repeating part, the original number is multiplied by $10^{9 + 2} = 10^{11}$.
+
+Now to subtract these two products, let $a = 894.57448132653448132653448132653448132653448132653$, so $a 10^2 = 89457.448132653448132653448132653448132653448132653$, and $a 10^{11} = 89457448132653.448132653448132653448132653448132653448132653$, therefore $a 10^{11} - a 10^2 = 89457448043196$, as can be seen, this subtraction results in an integer. Continuing, $a 10^{11} - a 10^2 = a (10^{11} - 10^2)$, so $a = \frac{89457448043196}{(10^{11} - 10^2)} = \frac{89457448043196}{99999999900}$.
+
+(Conversión entre porcentajes y decimales, y entre porcentajes y fracciones)
+**Conversion between percents and decimals, and between percents and fractions**: the conversion from percent to fraction and decimal uses the definition of percent. Given that a percent is a ratio with denominator 100, the fraction is the percent number over 100, and the decimal is the result of the division of said fraction. For example, $54\%$ as a fraction is $\frac{54}{100}$, and as a decimal is $0.54$.
+
+The conversion from decimal or fraction to percent is based on equivalent fractions. The decimal is converted to a fraction, and the fraction is converted to an equivalent fraction with a denominator of 100. For example the decimal $0.6$ as a fraction is $\frac{6}{10} = \frac{3}{5}$, and then as an equivalent fraction $\frac{3}{5} = \frac{3 \cdot 20}{5 \cdot 20} = \frac{60}{100} = 60\%$.
+
+A decimal can be converted directly to a percent, by multiplying it for $100$, e.g. $0.6 = 0.6 \cdot 100 \% = 60\%$. The opposite consists in dividing a percent by $100$ to obtain its decimal form.
+
+When handling improper fractions, the resulting percent is greater than $100\%$, for example $\frac{5}{4} = 1.25 = 1.25 \cdot 100\% = 125\%$.
+
+Simplification of square roots is done like regular simplification.
+[Simplification of radicals code](Programs/S05/Simplification_of_radicals.py)

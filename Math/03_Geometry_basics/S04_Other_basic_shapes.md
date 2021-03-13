@@ -177,6 +177,9 @@ The arc addition postulate can be visualized with the following image.
 ![Arc addition postulate image](Images/S09/Arc_addition_postulate.png)
 *Arc addition postulate*
 
+(Sector circular)
+**Circular sector**: a portion of a circle. A sector is originated from the intersection of two distinct radii segments and the circumference.
+
 ## Properties of chords (Propiedades de las cuerdas)
 
 (Cuerdas y arcos correspondientes)
@@ -299,3 +302,80 @@ In a circle $\bigodot A$ with a chord $\overline{BC}$ having its shortest distan
 ## Segments of chords, secants, and tangents (Segmentos de cuerdas, secantes, y tangentes)
 
 ## Writing and graphing the equations of circles (Escribir y graficar las ecuaciones de los círculos)
+
+(Circunferencia de un círculo)
+**Circumference of a circle**: the measure of the distance around a circle, i.e. the distance covered by its points. This is the same as the perimeter of the circle.
+
+Let $d$ be the diameter in length units, $r$ be the radius in length units, $C$ be the circumference in length units, then $C = \pi d$ or also $C = 2 \pi r$.
+
+(Área de un círculo)
+**Circle area**: let $A$ be the area of a circle in squared length units, $r$ be the radius in length units, then $A = \pi r^2$.
+
+(Esfera)
+**Sphere**: three dimensional shape in which all of its points are at the same distance from its center, this distance is called the radius.
+
+> Sphere properties
+>
+> In a sphere, let $r$ be its radius, $V$ be its volume, and $S$ be its surface area, then
+>
+> $$\begin{gathered}
+> V = \frac{4}{3} \pi r^3\\
+> S = 4 \pi r^2
+> \end{gathered}$$
+
+The formula for the surface area of a sphere can be understood from the surface area of a cylinder (see later in this file). Let there be a cylinder of radius $r$ and height $2r$, then its surface area without the two circles is $4 \pi r^2$, which is the same as for the sphere. This is because when cutting a transversal thin strip of area from the cylinder, its area is equal to that of the same cut in the sphere. Even though the radius of the cut can be smaller in the sphere, the height of said cut increases proportionally, this makes both areas equal.
+
+The formula for the volume of a sphere can be understood from the surface area of the same sphere. If the volume of a sphere is filled with several very thin cones (see later in this file), such that the apex of each cone is at the center of the sphere, and the base of each cone is on the surface of the sphere, then the volume of each cone is the area of its base times $\frac{1}{3}r$. The volume of the sphere is the sum of the volumes of the cones. The total base area of the cones is $4 \pi r^2$, so the total volume of the cones is $4 \pi r^2 \frac{1}{3}r = \frac{4}{3} \pi r^3$, which is the volume of the sphere.
+
+(Área superficial de una esfera)
+**Sphere surface area**: in a sphere, let $r$ be its radius, and $S$ be its surface area, then $S = 4 \pi r^2$.
+
+(Volumen de una esfera)
+**Sphere volume**: in a sphere, let $r$ be its radius, and $V$ be its volume, then $V = \frac{4}{3} \pi r^3$.
+
+(Cilindro)
+**Cylinder**: a solid made with two parallel circles separated along an axis.
+
+> Cylinder properties
+>
+> In a cylinder, let $r$ be the radius of its circles, $h$ be its height, $V$ be its volume, and $S$ be its surface area, then
+>
+> $$\begin{gathered}
+> V = \pi r^2 h \\
+> S = 2 \pi r^2 + 2 \pi r h
+> \end{gathered}$$
+
+The volume of the cylinder is the product of the area of its base and its height. The surface area of a cylinder is the sum of the areas of the two circles and the area of its side, which is the surface between the two circles.
+
+(Área superficial de un cilindro)
+**Cylinder surface area**: in a cylinder, let $r$ be the radius of its circles, $h$ be its height, and $S$ be its surface area, then $S = 2 \pi r^2 + 2 \pi r h$.
+
+(Volumen de un cilindro)
+**Cylinder volume**: in a cylinder, let $r$ be the radius of its circles, $h$ be its height, and $V$ be its volume, then $V = \pi r^2 h$.
+
+(Cono)
+**Cone**: a solid made with a circle called the base (base) and a point called the apex (ápice) above the center of the base, in such a way that the circumference of the base converges to the apex.
+
+> Cone properties
+>
+> In a cone, let $r$ be the radius of its base, $h$ be the distance from the apex to its base, $l$ be the distance from the apex to its circumference, $V$ be its volume, and $S$ be its surface area, then
+>
+> $$\begin{gathered}
+> V = \frac{1}{3} \pi r^2 h\\[5 pt]
+> S = \pi r^2 + \pi r l
+> \end{gathered}$$
+
+The volume of a cone is one third of the volume of a cylinder with the same base and same height. This is a general rule for shapes that end in an apex, as can be seen in the following image, one cube can hold exactly three pyramids with a square base.
+![One third volume image](Images/S09/One_third_volume.png)
+*One third volume*
+
+The surface area of a cone is the sum of the area of the base, plus the area of the surface that connects the circumference to the apex, which when unrolled can be seen as a sector of a circle, with an arc the size of $2 \pi r$ and a radius of $l$. So as shown in the formula of the area of a cirle, the area of this sector is $\frac{2 \pi r l}{2} = \pi r l$.
+
+(Área superficial de un cono)
+**Cone surface area**: in a cone, let $r$ be the radius of its base, $l$ be the distance from the apex to its circumference, and $S$ be its surface area, then $S = \pi r^2 + \pi r l$.
+
+(Volumen de un cono)
+**Cone volume**: in a cone, let $r$ be the radius of its base, $h$ be the distance from the apex to its base, and $V$ be its volume, then $V = \frac{1}{3} \pi r^2 h$.
+
+(Área de una figura irregular)
+**Area of an irregular figure**: there is no single formula for the area of an irregular figure, but rather, said area is divided into smaller areas with basic shapes, such as triangles and quadrilaterals, and then the area of the irregular figure is calculated as the sum of the areas of the smaller shapes.

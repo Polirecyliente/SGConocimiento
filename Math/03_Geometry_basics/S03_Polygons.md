@@ -35,303 +35,12 @@
 #C# Properties of parallelograms (Propiedades de los paralelogramos)
 #C# Proving quadrilaterals are parallelograms (Demostraciones de que un cuadrilátero es un paralelogramo)
 #C# Rectangles, rhombuses and squares (Rectángulos, rombos y cuadrados)
-#C# Trapezoids and kites (Trapezoides y deltoides)
+#C# Trapezoids and kites (Trapecios y deltoides)
 
 #T# Beginning of content
 -->
 
 #   Lines (Líneas)
-
-## Lines and angles (Líneas y ángulos)
-
-(Paralelismo en geometría)
-**Geometric parallelism**: the relationship that is produced when two distinct figures extend indefinitely and never intersect each other.
-
-Two parallel lines that belong to the same plane, extend indefinitely and never intersect each other. Two parallel planes in space, extend indefinitely and never intersect each other. The distance between parallel lines or planes is constant.
-
-> Parallel relation notation
->
-> The symbol $\parallel$ indicates a parallel relation. Let $\overleftrightarrow{AB}$, $\overleftrightarrow{CD}$ be two lines, such that they are parallel to each other, this can be denoted as $\overleftrightarrow{AB} \parallel \overleftrightarrow{CD}$, read as the line $AB$ is parallel to the line $CD$ (la línea $AB$ es paralela a la línea $CD$).
-
-In diagrams, parallel lines are indicated by placing arrowheads inside the lines. Each set of parallel lines has its own amount of arrowheads.
-[Parallel lines image code](Programs/S03/Parallel_lines_image.py)
-![Parallel lines image](Images/S03/Parallel_lines.png)
-*Parallel lines*
-
-In the image, $k \parallel l$, which is denoted with one arrowhead inside the lines. Also $m \parallel n$, which is denoted with two arrowheads inside the lines.
-
-(Líneas alabeadas)
-**skew lines**: a relationship between two lines, such that they are not parallel but also do not intersect. This is possible in lines that belong to different planes.
-[Skew lines image code](Programs/S03/Skew_lines_image.py)
-![Skew lines image](Images/S03/Skew_lines.png)
-*Skew lines*
-
-The blue line and the crimson line are not parallel, and yet they never intersect, because they lie in different planes.
-
-(Postulado de las paralelas)
-**Parallel postulate**: given a line and a point not on the line, there is only one parallel to the line that passes through the point. Given a line $l$ and a point $A$ that does not lie on $l$, then only one line $m$ passes through $A$ and $l \parallel m$.
-
-(Postulado de las perpendiculares)
-**Perpendicular postulate**: given a line and a point not on the line, there is only one perpendicular line to the line that passes through the point. Given a line $l$ and a point $A$ that does not lie on $l$, then only one line $m$ passes through $A$ and $l \perp m$.
-
-(Construcción de una línea perpendicular)
-**Perpendicular line construction**: a geometric construction to draw the unique perpendicular line to a given line that passes through a given point.
-
-> Perpendicular line construction
->
-> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials).
-> 1. Draw a segment and a point outside of it, with space around it.
-> 2. Center the compass on the point outside the segment, with a radius that goes beyond the segment. Draw an arc such that it intersects the segment two times.
-> 3. Apply the perpendicular bisector construction, taking as endpoints the two arc intersections with the segment. The resulting line is perpendicular to the segment and passes through the point outside of it.
->
-> This construction can also be used to draw a perpendicular through a point on the line. In that case, the arc from step 2 is drawn so that it intersects the segment at both sides of the point.
-
-(Construcción de dos líneas paralelas)
-**Two parallel lines construction**: a geometric construction to draw two lines such that they are parallel to each other.
-
-> Two parallel lines construction
->
-> This construction requires paper, pencil, straightedge, and compass (or equivalent tools and materials).
-> 1. Draw the first line and a point where the second line will pass through.
-> 2. Apply the perpendicular line construction, taking the line and the point from step 1, as the segment and the point needed for that construction.
-> 3. Apply the perpendicular line construction again, taking the segment created in step 2, and the point from step 1, as the segment and the point needed for that construction. The result is the two parallel lines connected with a perpendicular line that can be erased if needed.
-
-(Línea transversal)
-**Transversal line**: a line that intersects two other distinct lines.
-[Transversal line image code](Programs/S03/Transversal_line_image.py)
-![Transversal line image](Images/S03/Transversal_line.png)
-*Transversal line*
-
-The lime green line is the transversal, although all the lines intersect the other two, which means that effectively all three lines are transversal. The case in which this does not happen, is when the other two lines are parallel.
-[Transversal to parallel lines image code](Programs/S03/Transversal_to_parallel_lines_image.py)
-![Transversal to parallel lines image](Images/S03/Transversal_to_parallel_lines.png)
-*Transversal to parallel lines*
-
-The line $t$ is transversal to the lines $l$ and $m$, and $l \parallel m$. Angles can be denoted with numbers, in the image appear the angles $\angle 1$ through $\angle 8$.
-
-(Partes de una transversal)
-**Parts of a transversal**: the following parts will be defined using the *Transversal to parallel lines* image, but these concepts apply to transversals in general.
-
-- **Interior area** (Área interna): the area between the two lines crossed by the transversal, e.g. the area between $l$ and $m$.
-
-- **Exterior area** (Área externa): the area outside of the two lines crossed by the transversal, e.g. the area outside of $l$ and $m$.
-
-- **Corresponding angles** (Ángulos correspondientes): two angles that are in the same position relative to the transversal, but each on a different line, e.g. $\angle 1$ and $\angle 5$ are corresponding angles, like $\angle 2$ and $\angle 6$, also $\angle 3$ and $\angle 7$, and lastly $\angle 4$ and $\angle 8$ form corresponding angle pairs.
-
-- **Alternate interior angles** (Ángulos alternos internos): two angles that lie on the interior area, do not form a linear pair, and are on opposite sides of the transversal, e.g. $\angle 3$ and $\angle 6$ are alternate interior angles, like $\angle 4$ and $\angle 5$.
-
-- **Alternate exterior angles** (Ángulos alternos externos): two angles that lie on the exterior area, do not form a linear pair, and are on opposite sides of the transversal, e.g. $\angle 1$ and $\angle 8$ are alternate exterior angles, like $\angle 2$ and $\angle 7$.
-
-- **Same side interior angles** (Ángulos conjugados internos): two angles that lie on the interior area, are distinct, and are on the same side of the transversal, e.g. $\angle 3$ and $\angle 5$ are same side interior angles, like $\angle 4$ and $\angle 6$.
-
-- **Same side exterior angles** (Ángulos conjugados externos): two angles that lie on the exterior area, are distinct, and are on the same side of the transversal, e.g. $\angle 1$ and $\angle 7$ are same side exterior angles, like $\angle 2$ and $\angle 8$.
-
-- **Consecutive angles** (Ángulos consecutivos): same side angles are also known as consecutive angles.
-
-## Properties of parallel lines (Propiedades de las líneas paralelas)
-
-(Postulado de los ángulos correspondientes)
-**Corresponding angles postulate**: in a transversal of two parallels, the corresponding angles are congruent. From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, and $\angle 4 \cong \angle 8$.
-
-(Converso del postulado de los ángulos correspondientes)
-**Converse of the corresponding angles postulate**: if the corresponding angles of a transversal are congruent, then the transversal is a transversal of two parallels. From the *Transversal to parallel lines* image, if $\angle 1 \cong \angle 5$, and/or $\angle 2 \cong \angle 6$, and/or $\angle 3 \cong \angle 7$, and/or $\angle 4 \cong \angle 8$, then $l \parallel m$, with transversal $t$.
-
-(Teorema de los ángulos alternos internos)
-**Alternate interior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate interior angles congruent.
-
-> Proof of the alternate interior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
-> | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
-> | $\angle 1 \cong \angle 4$ | Vertical angles theorem |
-> | $\angle 4 \cong \angle 5$ | Transitive property of congruence |
-
-The same proof applies for the other three pairs of alternate interior angles.
-
-From the *Transversal to parallel lines* image, $\angle 3 \cong \angle 6$ and $\angle 4 \cong \angle 5$.
-
-(Teorema de los ángulos alternos externos)
-**Alternate exterior angles theorem**: two parallel lines that are intersected by a transversal, have their alternate exterior angles congruent.
-
-> Proof of the alternate exterior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
-> | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
-> | $\angle 5 \cong \angle 8$ | Vertical angles theorem |
-> | $\angle 1 \cong \angle 8$ | Transitive property of congruence |
-
-The same proof applies for the other three pairs of alternate exterior angles.
-
-From the *Transversal to parallel lines* image, $\angle 1 \cong \angle 8$ and $\angle 2 \cong \angle 7$.
-
-(Teorema de los ángulos conjugados internos)
-**Same side interior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side interior angles.
-
-> Proof of the same side interior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
-> | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
-> | $\angle 1$ and $\angle 3$ are supplementary | Linear pair postulate |
-> | $\angle 3$ and $\angle 5$ are supplementary | Converse of the congruent supplements theorem |
-
-The same proof applies for the other pair of same side interior angles.
-
-From the *Transversal to parallel lines* image, $\angle 3$ and $\angle 5$ are supplementary, and $\angle 4$ and $\angle 6$ are supplementary.
-
-(Teorema de los ángulos conjugados externos)
-**Same side exterior angles theorem**: two parallel lines that are intersected by a transversal, have supplementary same side exterior angles.
-
-> Proof of the same side exterior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$, with transversal $t$ | Given, from the *Transversal to parallel lines* image |
-> | $\angle 1 \cong \angle 5$ | Corresponding angles postulate |
-> | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
-> | $\angle 1$ and $\angle 7$ are supplementary | Converse of the congruent supplements theorem |
-
-The same proof applies for the other pair of same side exterior angles.
-
-From the *Transversal to parallel lines* image, $\angle 1$ and $\angle 7$ are supplementary, and $\angle 2$ and $\angle 8$ are supplementary.
-
-## Proving lines parallel (Demostrar el paralelismo entre líneas)
-
-(Converso del teorema de los ángulos alternos internos)
-**Converse of the alternate interior angles theorem**: given two lines intersected by a transversal, if their alternate interior angles are congruent, then the two lines are parallel.
-
-> Proof of the converse of the alternate interior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3 \cong \angle 6$ | Given, from the *Transversal to parallel lines* image |
-> | $\angle 3 \cong \angle 2$ | Vertical angles theorem |
-> | $\angle 2 \cong \angle 6$ | Transitive property of congruence |
-> | $l \parallel m$ | Converse of the corresponding angles postulate |
-
-From the *Transversal to parallel lines* image, if $\angle 3 \cong \angle 6$ and/or $\angle 4 \cong \angle 5$, then $l \parallel m$, with transversal $t$.
-
-(Converso del teorema de los ángulos alternos externos)
-**Converse of the alternate exterior angles theorem**: given two lines intersected by a transversal, if their alternate exterior angles are congruent, then the two lines are parallel.
-
-> Proof of the converse of the alternate exterior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1 \cong \angle 8$ | Given, from the *Transversal to parallel lines* image |
-> | $\angle 5 \cong \angle 8$ | Vertical angles theorem |
-> | $\angle 1 \cong \angle 5$ | Transitive property of congruence |
-> | $l \parallel m$ | Converse of the corresponding angles postulate |
-
-From the *Transversal to parallel lines* image, if $\angle 1 \cong \angle 8$ and/or $\angle 2 \cong \angle 7$, then $l \parallel m$, with transversal $t$.
-
-(Converso del teorema de los ángulos conjugados internos)
-**Converse of the same side interior angles theorem**: given two lines intersected by a transversal, if their same side interior angles are supplementary, then the two lines are parallel.
-
-> Proof of the converse of the same side interior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 3$ and $\angle 5$ are supplementary | Given, from the *Transversal to parallel lines* image |
-> | $\angle 1$ and $\angle 3$ are supplementary | Linear pair postulate |
-> | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
-> | $l \parallel m$ | Converse of the corresponding angles postulate |
-
-From the *Transversal to parallel lines* image, if $\angle 3$ and $\angle 5$ are supplementary, and $\angle 4$ and $\angle 6$ are supplementary, then $l \parallel m$, with transversal $t$.
-
-(Converso del teorema de los ángulos conjugados externos)
-**Converse of the same side exterior angles theorem**: given two lines intersected by a transversal, if their same side exterior angles are supplementary, then the two lines are parallel.
-
-> Proof of the converse of the same side exterior angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | Lines $l$ and $m$ have the transversal $t$, and $\angle 1$ and $\angle 7$ are supplementary | Given, rom the *Transversal to parallel lines* image |
-> | $\angle 5$ and $\angle 7$ are supplementary | Linear pair postulate |
-> | $\angle 1 \cong \angle 5$ | Congruent supplements theorem |
-> | $l \parallel m$ | Converse of the corresponding angles postulate |
-
-From the *Transversal to parallel lines* image, if $\angle 1$ and $\angle 7$ are supplementary, and/or $\angle 2$ and $\angle 8$ are supplementary, then $l \parallel m$, with transversal $t$.
-
-(Propiedad transitiva de las líneas paralelas)
-**Transitive property of parallel lines**: given two parallel lines, if the first one is parallel to a third line, then the second line is also parallel to the third.
-
-> Transitive property of parallel lines
->
-> Let $k$, $l$, $m$, be lines, if $k \parallel l$ and $l \parallel m$, then $k \parallel m$.
-
-## Properties of perpendicular lines (Propiedades de las líneas perpendiculares)
-
-(Teorema de los pares lineales congruentes)
-**Congruent linear pairs theorem**: in a linear pair, if the two angles are congruent, then they have a measure of $\pi/2$, meaning that if both angles of a linear pair are congruent then they are right angles.
-
-> Proof of the congruent linear pairs theorem
->
-> Let $\angle A$ and $\angle B$ form a linear pair, and let $\angle A \cong \angle B$, then $m \angle A = m \angle B$, $m \angle A + m \angle B = \pi \Rightarrow 2 m \angle A = \pi \Rightarrow m \angle A = \pi/2 = m \angle B$. So $\angle A$ and $\angle B$ are right angles. $\blacksquare$
-
-If $\angle A$ and $\angle B$ form a linear pair, and $\angle A \cong \angle B$, then $\angle A$ and $\angle B$ are right angles.
-
-(Teorema de las transversales perpendiculares)
-**Perpendicular transversals theorem**: given three lines, if the first and second lines are parallel, and the first line is perpendicular to the third line, then the second line is also perpendicular to the third line.
-[Perpendicular transversal image code](Programs/S03/Perpendicular_transversal_image.py)
-![Perpendicular transversal image](Images/S03/Perpendicular_transversal.png)
-*Perpendicular transversal*
-
-> Proof of the perpendicular transversals theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $l \parallel m$ and $l \perp t$ | Given |
-> | $\angle 1$, $\angle 2$, $\angle 3$, $\angle 4$, are right angles | Definition of perpendicular lines |
-> | $\angle 1 \cong \angle 5$, $\angle 2 \cong \angle 6$, $\angle 3 \cong \angle 7$, $\angle 4 \cong \angle 8$, so $\angle 4$, $\angle 5$, $\angle 6$, $\angle 7$, are right angles | Corresponding angles postulate |
-> | $m \perp t$ | Definition of perpendicular lines |
-
-If $l \parallel m$ and $l \perp t$, then $m \perp t$.
-
-(Converso del teorema de las transversales perpendiculares)
-**Converse of the perpendicular transversals theorem**: if a first line and a second line are perpendicular to a third line, then the first and second lines are parallel.
-
-> Proof of the converse of the perpendicular transversals theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $l \perp t$ and $m \perp t$ | Given, from the *Perpendicular transversal* image |
-> | All the angles, from $\angle 1$ to $\angle 8$ are right angles | Definition of perpendicular lines |
-> | $\angle 1 \cong \angle 5$ | Right angle theorem |
-> | $l \parallel m$ | Converse of the corresponding angles postulate |
-
-If $l \perp t$ and $m \perp t$, then $l \parallel m$.
-
-(Teorema de los ángulos complementarios adyacentes)
-**Adjacent complementary angles theorem**: if two angles are adjacent and complementary, then the two non-shared sides form a right angle.
-
-> Proof of the adjacent complementary angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | Let $\angle A$ and $\angle B$ be two adjacent complementary angles | Given |
-> | $m \angle A + m \angle B = \pi/2$ | Definition of complementary angles |
-> | The angle between the non-shared sides is a right angle | Definition of a right angle |
-
-If $\angle A$ and $\angle B$ are adjacent complementary angles, then $m \angle A + m \angle B = \pi/2$, so the angle between the non-shared sides is a right angle.
-
-(Converso del teorema de los ángulos complementarios adyacentes)
-**Converse of the adjacent complementary angles theorem**: if the non-shared sides of two adjacent angles form a right angle, then the angles are complementary.
-
-> Proof of the converse of the adjacent complementary angles theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | Let $\angle A$ and $\angle B$ be adjacent angles, with the non-shared sides forming a right angle | Given |
-> | $m \angle A + m \angle B = \pi/2$ | Definition of right angle |
-> | $\angle A$ and $\angle B$ are complementary | Definition of complementary angles |
-
-If $\angle A$ and $\angle B$ are adjacent angles, with the non-shared sides forming a right angle, then $\angle A$ and $\angle B$ are complementary.
 
 ## Parallel and perpendicular lines in the coordinate plane (Líneas paralelas y perpendiculares en el plano coordenado)
 
@@ -352,29 +61,7 @@ According to this definition of the slope of a line, a positive slope means a li
 
 The rise (elevación) of a slope is the amount changed in the $y$ axis, namely $y_2 - y_1$. The run (avance) of a slope is the amount changed in the $x$ axis, namely $x_2 - x_1$. So the algebraic definition of the slope can also be interpreted as rise over run.
 
-(Forma pendiente intercepto de una línea)
-**Slope-intercept form of a line**: an equation that expresses the $y$ coordinate of each point of a line, as the the slope multiplied by the $x$ coordinate of that point, plus the $y$-intercept.
-
-> Slope-intercept form of a line
->
-> Let $y$ be the $y$ coordinate of a given point, let $x$ be the $x$ coordinate of the same point, let $m$ be the slope, $b$ be the $y$-intercept, then
-> $$y = mx + b$$
-
-(Pendiente de líneas paralelas)
-**Slope of parallel lines**: the slope of a set of parallel lines is the same for all the lines, i.e. all parallel lines have the same slope. This is because for lines to be parallel, they must have the same rise and run.
-
-Using the slope-intercept form of a line, parallel lines have the same slope but different $y$-intercept values.
-
-(Pendiente de líneas perpendiculares)
-**Slope of perpendicular lines**: given the slope $m$ of a line, the slope of a perpendicular line to it, is $-1/m$. This is because given the slope of a line, the slope of a line perpendicular to it, is the opposite reciprocal of the slope of the given line.
-[Slope of perpendicular lines image code](Programs/S03/Slope_of_perpendicular_lines_image.py)
-![Slope of perpendicular lines image](Images/S03/Slope_of_perpendicular_lines.png)
-
-The blue line is the first line, the lime green line has a slope that is the opposite of the slope of the blue line. The crimson line is perpendicular to the blue line, and has a slope that is the reciprocal of the slope of the lime green line.
-
 ## The distance formula (La fórmula de distancia)
-
-The distance formula is the application of the Pythagorean theorem in the rectangular coordinate system.
 
 (Teorema de Pitágoras)
 **Pythagorean theorem**: in a right triangle the length of the largest side squared is equal to the sum of the other two lengths individually squared. The largest side is named the hypotenuse (hipotenusa), and the other sides are called legs (catetos).
@@ -385,53 +72,22 @@ The distance formula is the application of the Pythagorean theorem in the rectan
 > $$c^2 = a^2 + b^2$$
 
 This theorem can be proved with the following image.
-![Pythagorean theorem image](../01_Algebra_basics/Images/S09/Pythagorean_theorem.png)
+[Pythagorean theorem image code](Programs/S09/Pythagorean_theorem_image.py)
+![Pythagorean theorem image](Images/S09/Pythagorean_theorem.png)
 *Pythagorean theorem*
 
 > Proof of the pythagorean theorem
 >
 > From the image, $(a + b)^2 = c^2 + 2 a b$, then $a^2 + 2 a b + b^2 = c^2 + 2 a b$, and then $a^2 + b^2 = c^2$. $\blacksquare$
 
-The distance formula takes the distance between two points as the hypotenuse of a right triangle, and the legs as the rise and run in the $x$-$y$ plane.
-[Rise and run between two points image code](Programs/S03/Rise_and_run_between_two_points_image.py)
-![Rise and run between two points image](Images/S03/Rise_and_run_between_two_points.png)
-
-Using the Pythagorean theorem, the distance squared between two points, is the sum of the squared rise plus the squared run.
-[Distance formula code](Programs/S03/Distance_formula.py)
-
-> Distance formula
->
-> Let $(x_1, y_1)$, $(x_2, y_2)$, be two points in the $x$-$y$ plane, and let $d$ be the distance between them, then
-> $$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
-
-(Distancia más corta entre un punto y una recta)
-**Shortest distance between a point and a line**: given a point and a line, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line to the given line that passes through the given point, is used to measure this shortest distance, as the distance between the given point and the intersection of the perpendicular line and the given line.
-[Shortest distance between a point and a line image code](Programs/S03/Shortest_distance_between_a_point_and_a_line_image.py)
-![Shortest distance between a point and a line image](Images/S03/Shortest_distance_between_a_point_and_a_line.png)
-*Shortest distance between a point and a line*
-
-The shortest distance between the point $A$ and the line $l$ is the distance $AB$.
-
-> Algorithm to find the shortest distance between a point and a line
->
-> 1. Use the *Shortest distance between a point and a line* image, let $A$ be the point and $l$ be the line, such that the line $l$ is defined by the equation $y = m_1x + b_1$, and let $B$ be the point of intersection of the line $l$ and a perpendicular line to it that passes through $A$. The shortest distance being measured is the distance $AB$.
-> 2. Calculate the slope of the perpendicular line as $m_2 = -\frac{1}{m_1}$.
-> 3. Calculate the $y$-intercept of the perpendicular line as $b_2 = y_A - m_2x_A$, where $x_A$ and $y_A$ are the $x$ and $y$ coordinates of the point $A$ respectively.
-> 4. Find the coordinates of the point of intersection $B$, namely $x_B$, $y_B$, by equating the equation of the line $l$ and the equation of the perpendicular line, $m_1x_B + b_1 = m_2x_B + b_2$. From this equation, isolate $x_B$ as $x_B = \frac{b_2 - b_1}{m_1 - m_2}$.
-> 5. Find $y_B$ as $y_B = m_1x_B + b_1$.
-> 6. Calculate the distance between $A$ and $B$ with the distance formula, $AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$.
-
-(Distancia más corta entre dos líneas paralelas)
-**Shortest distance between two parallel lines**: given two parallel lines, the shortest distance possible between them, is the perpendicular distance between them, i.e. a perpendicular line that passes through both parallel lines, is used to measure this shortest distance, as the distance between the two intersections of the perpendicular line with the two parallel lines.
-
-> Algorithm to find the shortest distance between two parallel lines
->
-> 1. Pick a point in one of the two parallel lines, name it $A$.
-> 2. Apply the Process to find the shortest distance between a point and a line, using $A$ as a point, and the line is the other parallel line that does not contain $A$. The result is the shortest distance between the two parallel lines.
-
-By definition of parallel lines, the shortest distance between them is a constant.
-
 ## Triangle sums (Suma de los ángulos de un triángulo)
+
+(Postulado LLL de congruencia de triángulos)
+**SSS triangle congruence postulate**: SSS stands for Side-Side-Side (Lado-Lado-Lado). This postulate says that two triangles with side-side-side of the same lengths, are congruent, i.e. if the three sides of a triangle are individually congruent to the three sides of another triangle, then the two triangles are congruent.
+
+> SSS triangle congruence postulate
+>
+> Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
 
 (Ángulos interiores de un polígono)
 **Interior angles of a polygon**: each of the angles at any of the vertices of the polygon, that is inside the polygon.
@@ -530,6 +186,8 @@ The triangle $\triangle ABC$ is congruent to the triangle $\triangle DEF$, becau
 
 In the statement $\triangle ABC \cong \triangle DEF$ the order of the vertices follows the congruence.
 
+The configurations AAA and SSA do not necessarily lead to congruent triangles.
+
 (Teorema del tercer ángulo)
 **Third angle theorem**: given two triangles, if two pairs of angles are congruent, then the third pair of angles is congruent.
 
@@ -549,40 +207,6 @@ In the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D
 
 ## Triangle congruence using SSS and SAS (Congruencia de triángulos usando LLL y LAL)
 
-(Construcción de un triángulo dados tres lados)
-**Triangle from three sides construction**: a geometric construction to draw a triangle, given the lengths of its three sides.
-
-> Triangle from three sides construction
->
-> This construction requires paper, pencil, ruler, and compass (or equivalent tools and materials).
-> 1. Set the measures of the three sides from the triangle to draw. Let $a$, $b$, $c$ be the measures of the three sides respectively.
-> 2. Draw the length $a$ as a segment.
-> 3. Open the compass to the length of $b$. Center the compass in one of the endpoints of the segment from step 2 and draw a wide arc.
-> 4. Open the compass to the length of $c$. Center the compass in the other endpoint of the segment from step 2 and draw a wide arc, such that it intersects with the arc from step 3.
-> 5. Draw two segments, one from each endpoint of the segment from step 2 to the intersection of the arcs. The result is the triangle given the three measures of its sides.
-
-(Postulado LLL de congruencia de triángulos)
-**SSS triangle congruence postulate**: SSS stands for Side-Side-Side (Lado-Lado-Lado). This postulate says that two triangles with side-side-side of the same lengths, are congruent, i.e. if the three sides of a triangle are individually congruent to the three sides of another triangle, then the two triangles are congruent.
-
-> SSS triangle congruence postulate
->
-> Let $\triangle ABC$ have sides with measures $a$, $b$, $c$, and $\triangle DEF$ have sides with measures $d$, $e$, $f$. If $a = d$, $b = e$, and $c = f$, then $\triangle ABC \cong \triangle DEF$.
-
-(Ángulo comprendido entre dos lados)
-**Included angle between two sides**: the angle between two given sides, is the included angle, so the sides must share a vertex, which is the vertex of the angle.
-
-(Construcción de un triángulo dados dos lados y su ángulo comprendido)
-**Triangle from two sides and their included angle construction**: a geometric construction to draw a triangle given two sides and their included angle.
-
-> Triangle from two sides and their included angle construction
->
-> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials).
-> 1. Set the two measures of the sides, and the measure of their included angle from the triangle to draw. Let $a$, $c$ be the measures of the two sides, and $\beta$ be the measure of the included angle.
-> 2. Draw the length $a$ as a segment.
-> 3. Measure the angle $\beta$ using the segment from step 2 as the first side of the angle. Mark the angle.
-> 4. Draw the length $c$ as a segment in the direction of the angle mark from step 3.
-> 5. Join the remaining two points to close the triangle. The result is the triangle.
-
 (Postulado LAL de congruencia de triángulos)
 **SAS triangle congruence postulate**: SAS stands for Side-Angle-Side (Lado-Ángulo-Lado). This postulate says that if two sides and their included angle are individually congruent to two sides and their included angle of another triangle, then the two triangles are congruent.
 
@@ -595,24 +219,19 @@ In the triangles $\triangle ABC$ and $\triangle DEF$ if $\angle A \cong \angle D
 (Lado comprendido entre dos ángulos)
 **Included side between two angles**: a side that is common to two differnt angles. The angles surround the side by placing themselves at each endpoint of the side.
 
-(Construcción de un triángulo dados dos ángulos y su lado comprendido)
-**Triangle from two angles and their included side construction**: geometric construction to draw a triangle given two angles and their included side.
-
-> Triangle from two angles and their included side construction
->
-> This construction requires paper, pencil, ruler, and protractor (or equivalent tools and materials).
-> 1. Set the two measures of the angles, and the measure of their included side from the triangle to draw. Let $\alpha$, $\gamma$ be the measures of the two angles, and $b$ be the measure of the included side.
-> 2. Draw the length $b$ as a segment.
-> 3. Measure the angle $\alpha$ using the segment from step 2 as the first side of the angle. Mark the angle.
-> 4. Repeat step 3 but with the angle $\gamma$, with vertex on the remaining endpoint of the segment from step 2.
-> 5. Extend the lines in each of the marked angles from step 3 and step 4 so that they cross each other. The result is the triangle.
-
 (Postulado ALA de congruencia de triángulos)
 **ASA triangle congruence postulate**: ASA stands for Angle-Side-Angle (Ángulo-Lado-Ángulo). This postulate says that if two angles and their included side are individually congruent to two angles and their included side in another triangle, then the two triangles are congruent.
 
 > ASA triangle congruence postulate
 >
 > Let $\triangle ABC$ have two angles with measures $\alpha$, $\gamma$, and let their included side measure $b$. Let $\triangle DEF$ have two angles with measures $\delta$, $\zeta$, and let their included side measure $e$. If $\alpha = \delta$, $\gamma = \zeta$, and $b = e$, then $\triangle ABC = \triangle DEF$.
+
+(Postulado AA de semejanza de triángulos)
+**AA triangle similarity postulate**: given two triangles, if the first triangle has two angles that are congruent to the corresponding angles in the second triangle, then the triangles are similar.
+
+> AA triangle similarity postulate
+>
+> Given two triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle D$ and $\angle B \cong \angle E$, or if $\angle A \cong \angle D$ and $\angle C \cong \angle F$, or if $\angle B \cong \angle E$ and $\angle C \cong \angle F$, then $\triangle ABC \sim \triangle DEF$.
 
 (Teorema AAL de congruencia de triángulos)
 **AAS triangle congruence theorem**: AAS stands for Angle-Angle-Side (Ángulo-Ángulo-Lado). This theorem says that if two angles and one of their non included sides are individually congruent to two angles and one of their non included sides in another triangle, then the two triangles are congruent. This result is equivalent for an SAA configuration.
@@ -641,6 +260,24 @@ In the triangles $\triangle ABC$ and $\triangle DEF$, if $\angle A \cong \angle 
 In right triangles $\triangle ABC$ and $\triangle DEF$, if the hypotenuses are congruent $\overline{AC} \cong \overline{DF}$ and two corresponding legs are congruent $\overline{AB} \cong \overline{DE}$, then $\triangle ABC \cong \triangle DEF$.
 
 The configurations AAA and SSA do not necessarily lead to congruent triangles.
+
+(Teorema LLL de semejanza de triángulos)
+**SSS triangle similarity theorem**: given two triangles, if the sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, then the triangles are similar.
+
+> Proof of the SSS triangle similarity theorem
+>
+> Given two triangles $\triangle ABC$ and $\triangle DEF$, such that $\triangle ABC \sim \triangle DEF$ with a scale factor $k$ to get $\triangle DEF$ from $\triangle ABC$, then by definition of similarity $DE = k AB$, $DF = k AC$, and $EF = k BC$, which means that in similar triangles, the ratios of the corresponding sides are equal to the constant $k$, because by the division property of equality, $k = \frac{DE}{AB}$, $k = \frac{DF}{AC}$, and $k = \frac{EF}{BC}$, and so when these ratios are equal to the scale factor, it's because the triangles are similar. $\blacksquare$
+
+Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC} = \frac{EF}{BC}$, then $\triangle ABC \sim \triangle DEF$.
+
+(Teorema LAL de semejanza de triángulos)
+**SAS triangle similarity theorem**: given two triangles, if two sides of the first triangle have each the same ratio to the corresponding sides of the second triangle, and the included angles of the given sides are congruent in both triangles, then the triangles are similar.
+
+> Proof of the SAS triangle similarity theorem
+>
+> Given two triangles $\triangle ABC$ and $\triangle DEF$, such that $\triangle ABC \sim \triangle DEF$ with a scale factor $k$ to get $\triangle DEF$ from $\triangle ABC$, then by definition of similarity $DE = k AB$, $DF = k AC$, and $\angle A \cong \angle D$. Because of the corollary of the hinge theorem, given that $\angle A \cong \angle D$, then $EF$ must have the same ratio $k$ to $BC$, meaning that $EF = k BC$. And so the three sides of $\triangle ABC$ are similar to the corresponding three sides of $\triangle DEF$ because of the SSS triangle similarity theorem. This means that when $DE = k AB$, $DF = k AC$, and $\angle A \cong \angle D$, it also happens that $EF = k BC$, so the triangles are similar. $\blacksquare$
+
+Given two triangles $\triangle ABC$ and $\triangle DEF$, and given a scale factor $k$, if $k = \frac{DE}{AB} = \frac{DF}{AC}$, and $\angle A \cong \angle D$, then $\triangle ABC \sim \triangle DEF$.
 
 ## Isosceles and equilateral triangles (Triángulos isósceles y equiláteros)
 
@@ -784,53 +421,6 @@ In a triangle $\triangle ABC$, if the points $D$ and $E$ lie on different sides 
 
 ## Perpendicular bisectors in triangles (Mediatrices de un triángulo)
 
-(Punto equidistante a otros puntos)
-**Equidistant point to other points**: a given point is equidistant to other points when its distance to all the other points is the same.
-
-(Teorema de la mediatriz)
-**Perpendicular bisector theorem**: given a segment and its perpendicular bisector, any point in the perpendicular bisector is equidistant to both endpoints of the segment.
-[Perpendicular bisector theorem image code](Programs/S05/Perpendicular_bisector_theorem_image.py)
-![Perpendicular bisector theorem image](Images/S05/Perpendicular_bisector_theorem.png)
-*Perpendicular bisector theorem*
-
-> Proof of the perpendicular bisector theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $\overleftrightarrow{CD} \perp \overline{AB}$, $\overline{AD} \cong \overline{BD}$, $\angle CDA$ and $\angle CDB$ are right angles | Given |
-> | $\overline{CD} \cong \overline{CD}$ | Reflexive property of congruence |
-> | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
-> | $\overline{AC} \cong \overline{BC}$ | Corresponding parts of congruent triangles are congruent |
-
-If $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$, and $E$ is any point that lies on $\overline{CD}$, then $\overline{AE} \cong \overline{EB}$.
-
-(Converso del teorema de la mediatriz)
-**Converse of the perpendicular bisector theorem**: given a segment, any point equidistant to both endpoints, is in the perpendicular bisector of the segment.
-
-> Proof of the converse of the perpendicular bisector theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $\overline{AC} \cong \overline{BC}$, $D$ is the midpoint of $\overline{AB}$ | Given, from the *Perpendicular bisector theorem* image |
-> | $\triangle ABC$ is isosceles | Definition of isosceles triangle |
-> | $\angle A \cong \angle B$ | Base angles theorem |
-> | $\overline{AD} \cong \overline{BD}$ | Definition of midpoint |
-> | $\triangle ADC \cong \triangle BDC$ | SAS triangle congruence postulate |
-> | $\angle CDA \cong \angle CDB$ | Corresponding parts of congruent triangles are congruent |
-> | $\angle CDA$ and $\angle CDB$ are supplementary | Linear pair postulate |
-> | $\angle CDA$ and $\angle CDB$ are right angles | Congruent linear pairs theorem |
-> | $\overleftrightarrow{CD}$ is a perpendicular bisector of $\overline{AB}$ | Definition of perpendicular bisector |
-
-If $\overline{AC} \cong \overline{BC}$, and $D$ is the midpoint of $\overline{AB}$, then $\overline{CD}$ is a perpendicular bisector of $\overline{AB}$.
-
-(Punto de concurrencia)
-**Point of concurrency**: the intersection in a single point, of three or more lines, rays, or segments.
-[Point of concurrency image code](Programs/S05/Point_of_concurrency_image.py)
-![Point of concurrency image](Images/S05/Point_of_concurrency.png)
-*Point of concurrency*
-
-The point $A$ is a point of concurrency.
-
 (Circuncentro de un triángulo)
 **Circumcenter of a triangle**: in a triangle, the circumcenter is the point of concurrency formed at the intersection of the three perpendicular bisectors, one from each side.
 [Circumcenter of a triangle image code](Programs/S05/Circumcenter_of_a_triangle_image.py)
@@ -853,39 +443,6 @@ The circumcenter is in the three perpendicular bisectors of a triangle, and due 
 In a triangle $\triangle ABC$, there is a point $G$, such that $G$ is in the three perpendicular bisectors from the three sides of the triangle, $G$ is equidistant to $A$, $B$, $C$, and $G$ is the circumcenter of $\triangle ABC$.
 
 ## Angle bisectors in triangles (Bisectrices de los ángulos de un triángulo)
-
-(Teorema de la equidistancia en la bisectriz de un ángulo)
-**Equidistance in an angle bisector theorem**: given an angle, any point in its angle bisector is equidistant to the sides of the angle, using the shortest distance between the point and the sides.
-[Equidistance in an angle bisector theorem image code](Programs/S05/Equidistance_in_an_angle_bisector_theorem_image.py)
-![Equidistance in an angle bisector theorem image](Images/S05/Equidistance_in_an_angle_bisector_theorem.png)
-*Equidistance in an angle bisector theorem*
-
-> Proof of the equidistance in an angle bisector theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $\overline{BD}$ is an angle bisector of $\angle ABC$, $\angle DEB$ and $\angle DFB$ are right angles | Given |
-> | $\angle EBD \cong \angle FBD$ | Definition of angle bisector |
-> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
-> | $\triangle EBD \cong \triangle FBD$ | AAS triangle congruence theorem |
-> | $\overline{DE} \cong \overline{DF}$ | Corresponding parts of congruent triangles are congruent |
-
-If $\overline{BD}$ is an angle bisector of $\angle ABC$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, then $\overline{DE} \cong \overline{DF}$.
-
-(Converso del teorema de la equidistancia en la bisectriz de un ángulo)
-**Converse of the equidistance in an angle bisector theorem**: in an angle, if a given point is equidistant to the sides of the angle, using the shortest distance between the point and the sides, then the point lies in the angle bisector.
-
-> Proof of the converse of the equidistance in an angle bisector theorem
->
-> | Statement                                      | Reason                   |
-> | :--------------------------------------------: | :----------------------: |
-> | $\overline{DE} \cong \overline{DF}$, $\angle DEB$ and $\angle DFB$ are right angles | Given, from the *Equidistance in an angle bisector theorem* image |
-> | $\overline{BD} \cong \overline{BD}$ | Reflexive property of congruence |
-> | $\triangle EBD \cong \triangle FBD$ | Hypotenuse-leg congruence theorem |
-> | $\angle EBD \cong \angle FBD$ | Corresponding parts of congruent triangles are congruent |
-> | $\overline{BD}$ is an angle bisector of $\angle ABC$ | Definition of angle bisector |
-
-In angle $\angle ABC$, given a point $D$, the distance from $D$ to $\overline{AB}$ creates the segment $\overline{DE}$, and the distance from $D$ to $\overline{BC}$ creates the segment $\overline{DF}$, if $\overline{DE} \cong \overline{DF}$, then $\overline{BD}$ is an angle bisector of $\angle ABC$.
 
 (Incentro de un triángulo)
 **Incenter of a triangle**: in a triangle, the incenter is the point of concurrency formed at the intersection of the three angle bisectors, one from each vertex.
@@ -1032,6 +589,51 @@ In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, a
 
 In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $AC > DF$, then $m \angle B > m \angle E$.
 
+(Corolario del teorema de la bisagra)
+**Corollary of the hinge theorem**: in two triangles, if two sides of a triangle are congruent to two sides from the other triangle, and the included angle from the first triangle is congruent to the one from the second triangle, then the remaining side of the first triangle is congruent to the one of the second triangle.
+
+> Corollary of the hinge theorem
+>
+> In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, and $\angle B \cong \angle E$, then $AC = DF$.
+
+(Teorema de la proporcionalidad entre triángulos)
+**Triangle proportionality theorem**: in a triangle, any parallel line to one of the sides of the triangle, that intersects the other two sides, divides these other two sides proportionally.
+
+> Proof of the triangle proportionality theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ADE$ exists, $\overline{BC} \parallel \overline{DE}$ | Given, from the *Triangle proportionality* image |
+> | $\angle ABC \cong \angle ADE$ and $\angle ACB \cong \angle AED$ | Corresponding angles postulate |
+> | $\triangle ADE \sim \triangle ABC$ | AA triangle similarity postulate |
+> | (1) $AD = AB + BD$ and $AE = AC + CE$ | Segment addition postulate |
+> | (2) $\frac{AD}{AB} = \frac{AE}{AC}$ | Corresponding sides of similar figures are proportional |
+> | $\frac{AB + BD}{AB} = \frac{AC + CE}{AC}$ | Substitution property of equality (substituting (1) into (2)) |
+> | $\frac{AB}{AB} + \frac{BD}{AB} = \frac{AC}{AC} + \frac{CE}{AC}$ | Separating the fraction into two terms |
+> | $1 + \frac{BD}{AB} = 1 + \frac{CE}{AC}$ | Division property of quotient one |
+> | $\frac{BD}{AB} = \frac{CE}{AC}$ | Subtraction property of equality |
+
+In a triangle $\triangle ADE$, if a point $B$ lies in $\overline{AD}$, a point $C$ lies in $\overline{AE}$, and $\overline{BC} \parallel \overline{DE}$, then $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, meaning that a proportion is created, $\frac{BD}{AB} = \frac{CE}{AC}$. Many other proportions can be derived with the corollaries of the cross product theorem and its converse.
+
+(Converso del teorema de la proporcionalidad entre triángulos)
+**Converse of the triangle proportionality theorem**: in a triangle, if a given segment divides two sides proportionally, then the segment is parallel to the other side.
+
+> Proof of the converse of the triangle proportionality theorem
+>
+> | Statement                                      | Reason                   |
+> | :--------------------------------------------: | :----------------------: |
+> | $\triangle ADE$ exists and $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally | Given, from the *Triangle proportionality* image |
+> | $\frac{BD}{AB} = \frac{CE}{AC}$ | Definition of proportionality |
+> | $1 + \frac{BD}{AB} = 1 + \frac{CE}{AC}$ | Addition property of equality |
+> | (1) $\frac{AB + BD}{AB} = \frac{AC + CE}{AC}$ | Adding the operands |
+> | (2) $AB + BD = AD$ and $AC + CE = AE$ | Segment addition postulate |
+> | $\frac{AD}{AB} = \frac{AE}{AC}$ | Substitution property of equality (substituting (2) into (1)) |
+> | $\triangle ADE \sim \triangle ABC$ | Corresponding sides of similar figures are proportional |
+> | $\angle ABC \cong \angle ADE$ and $\angle ACB \cong \angle AED$ | Corresponding angles of similar figures are congruent |
+> | $\overline{BC} \parallel \overline{DE}$ | Converse of the corresponding angles postulate |
+
+In a triangle $\triangle ADE$, if a segment $\overline{BC}$ divides $\overline{AD}$ and $\overline{AE}$ proportionally, then $\overline{BC} \parallel \overline{DE}$.
+
 #   Right triangle trigonometry (Trigonometría del triángulo rectángulo)
 
 ## The pythagorean theorem (El teorema de Pitágoras)
@@ -1041,7 +643,8 @@ In the triangles $\triangle ABC$ and $\triangle DEF$, if $AB = DE$, $BC = EF$, a
 
 ## Converse of the pythagorean theorem (Converso del teorema de Pitágoras)
 
-In a triangle, if the longest side squared is equal to the sum of the other two sides squared, then the triangle is a right triangle, with the right angle being the angle opposite to the longest side.
+(Converso del teorema de Pitágoras)
+**Converse of the pythagorean theorem**: In a triangle, if the longest side squared is equal to the sum of the other two sides squared, then the triangle is a right triangle, with the right angle being the angle opposite to the longest side.
 
 > Proof of the converse of the pythagorean theorem
 >
@@ -1098,17 +701,6 @@ In a triangle $\triangle ABC$ with sides with lengths $a$, $b$, and $c$, and $c$
 > From the *Inscribed similar right triangles* image, $\triangle ABC \sim \triangle DAC \sim \triangle DBA$ because of the AA triangle similarity postulate. For $\triangle ABC \sim \triangle DAC$, $\angle BAC \cong \angle ADC$ and $\angle C \cong \angle C$. For $\triangle ABC \sim \triangle DBA$, $\angle BAC \cong \angle BDA$ and $\angle B \cong \angle B$. $\blacksquare$
 
 In the right triangle $\triangle ABC$ with the right angle being $\angle A$, if the point $D$ is the point of the altitude from $\angle A$ that lies on $\overline{BC}$, then $\triangle ABC \sim \triangle DAC \sim \triangle DBA$.
-
-(Media geométrica)
-**Geometric mean**: a measure of central tendency of $n$ numbers, that consists in taking the $n$-th root of the product of the $n$ numbers.
-[Geometric mean code](Programs/S08/Geometric_mean.py)
-
-> Definition of the geometric mean
->
-> Let there be $n$ numbers, where $x_i$ is the $i$-number. Let $GM(x)$ be the geometric mean of the $n$ numbers, then
-> $$GM(x) = \sqrt[n]{x_1 x_2 ... x_n}$$
-
-The geometric mean $GM(x)$ is the number whose repeated multiplication is the same as the product $x_1 x_2 ... x_n$, so if the geometric mean replaced each number $x_i$, then the total product would be the same.
 
 (Media geométrica en triángulos rectángulos)
 **Geometric mean in right triangles**: there are at least three geometric means in a right triangle, the two legs and the altitude from the right angle are all geometric means of different segments.
@@ -1181,9 +773,6 @@ The trigonometric ratios can be calculated programatically.
 ![Trigonometric ratios of any angle image](Images/S08/Trigonometric_ratios_of_any_angle.png)
 *Trigonometric ratios of any angle*
 
-(Racionalizar el denominador)
-**Rationalize the denominator**: when a fraction has a radical in the denominator, it can be rationalized to remove the radical from the denominator without changing the value of the fraction. The process is $\frac{a}{\sqrt{b}} = \frac{a \sqrt{b}}{\sqrt{b} \sqrt{b}} = \frac{a \sqrt{b}}{b}$.
-
 (Seno de un ángulo)
 **Sine of an angle**: placing an angle in a right triangle, its sine is defined as the ratio of the opposite side over the hypotenuse.
 
@@ -1226,7 +815,7 @@ tan(\angle C) = \frac{c}{b}
 
 $tan$ is called the tangent function.
 
-(Lados de un triángulo rectángulo dado un ángulo y un lado)
+(Lados de un triángulo rectángulo dados un ángulo y un lado)
 **Sides of a right triangle given an angle and a side**: In a right triangle, having only one of the non-right angles and the length of any one side, is enough to determine the lengths of the other two sides, via the trigonometric ratios.
 
 > Sides of a right triangle given an angle and a side
@@ -1275,15 +864,10 @@ a = \frac{c}{sin(\angle C)}\\
 b = \frac{c}{tan(\angle C)}
 \end{gathered}$$
 
-(Ángulo de depresión)
-**Angle of depression**: an angle measured below a horizontal line.
-
-(Ángulo de elevación)
-**Angle of elevation**: an angle measured above a horizontal line.
-
 ## Inverse trigonometric ratios (Ratios trigonométricos inversos)
 
-Given a right triangle in which the lengths of two sides are known, the non-right angles can be calculated using the inverse of the trigonometric ratios. The inverse of the trigonometric ratio is a function that returns the angle needed to originate the ratio of the two sides of the right triangle. So, to calculate the inverse of a trigonometric ratio, the lengths of two sides of a right triangle are needed.
+(Ratios trigonométricos inversos)
+**Inverse trigonometric ratios**: given a right triangle in which the lengths of two sides are known, the non-right angles can be calculated using the inverse of the trigonometric ratios. The inverse of the trigonometric ratio is a function that returns the angle needed to originate the ratio of the two sides of the right triangle. So, to calculate the inverse of a trigonometric ratio, the lengths of two sides of a right triangle are needed.
 [Inverse of the trigonometric ratios code](Programs/S08/Inverse_of_the_trigonometric_ratios.py)
 
 (Seno inverso | arcoseno)
@@ -1391,7 +975,7 @@ In a triangle $\triangle ABC$, making $a = BC$, $b = AC$, and $c = AB$, the law 
 >
 > $n - 3$ diagonals lead to $n - 2$ triangles. Each triangle has an interior angle sum of $\pi$ because of the triangle interior angles sum theorem, so the total interior angles sum of the polygon is $\pi (n - 2)$. $\blacksquare$
 
-Let $Ang_{int}$ be the sum of the interior angles of a polygon, then $Ang_{int} = \pi(n - 2)$.
+Let $Ang_{int}$ be the sum of the interior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{int} = \pi(n - 2)$.
 
 (Polígono equiangular)
 **Equiangular polygon**: a convex polygon in which all the interior angles are congruent with each other.
@@ -1430,7 +1014,7 @@ In a regular polygon, each side has a length of $d$, and each interior angle has
 > | $\sum_{i = 1}^n{x_i} + \pi n - 2 \pi = \pi n$ | Distributive property of multiplication over addition |
 > | $\sum_{i = 1}^n{x_i} = 2 \pi$ | Addition and subtraction properties of equality |
 
-Let $Ang_{ext}$ be the sum of the exterior angles of a polygon, then $Ang_{ext} = 2 \pi$.
+Let $Ang_{ext}$ be the sum of the exterior angles of a polygon, and let $n$ be the number of vertices in the polygon, then $Ang_{ext} = 2 \pi$.
 
 ## Properties of parallelograms (Propiedades de los paralelogramos)
 
@@ -1439,15 +1023,6 @@ Let $Ang_{ext}$ be the sum of the exterior angles of a polygon, then $Ang_{ext} 
 [Parallelogram image code](Programs/S06/Parallelogram_image.py)
 ![Parallelogram image](Images/S06/Parallelogram.png)
 *Parallelogram*
-
-(Construcción de un paralelogramo)
-**Parallelogram construction**: a geometric construction to draw a parallelogram.
-
-> Parallelogram construction
->
-> This construction requires paper, pencil, and straightedge (or equivalent tools and materials).
-> 1. Draw two non-parallel lines that intersect each other.
-> 2. Apply the two parallel lines construction, once per line from step 1, so that the resulting lines close the parallelogram.
 
 (Teorema de los lados opuestos de un paralelogramo)
 **Opposite sides of a parallelogram theorem**: in a parallelogram, the opposite sides are congruent.
@@ -1614,10 +1189,25 @@ In a quadrilateral $ABCD$, if $\overline{AC}$, and $\overline{BD}$ bisect each o
 **Special parallelograms**: a set of figures that are parallelograms with a few other characteristics in their definition, specifically the rectangle,the rhombus, and the square.
 
 (Rectángulo)
-**Rectangle**: a parallelogram in which all its four angles are right angles.
+**Rectangle**: a parallelogram with four right angles. This configuration produces a shape in which the opposite sides are of equal length. Its perimeter is equal to the sum of its four sides, and its area is equal to the product of any two adjacent sides.
 [Rectangle image code](Programs/S06/Rectangle_image.py)
 ![Rectangle image](Images/S06/Rectangle.png)
 *Rectangle*
+
+> Rectangle properties
+>
+> Let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, and $A$ be the area of the rectangle, then
+>
+> $$\begin{gathered}
+> P = 2(L + W)\\
+> A = L W
+> \end{gathered}$$
+
+(Perímetro de un rectángulo)
+**Rectangle perimeter**: let $L$ and $W$ be the lengths of the sides of a rectangle, let $P$ be the perimeter of the rectangle, then $P = 2(L + W)$.
+
+(Área de un rectángulo)
+**Rectangle area**: let $L$ and $W$ be the lengths of the sides of a rectangle, let $A$ be the area of the rectangle, then $A = LW$.
 
 (Rombo)
 **Rhombus**: a parallelogram in which all its four sides are congruent.
@@ -1763,13 +1353,27 @@ In a rhombus $ABCD$, $\overline{AC}$ is an angle bisector of $\angle A$ and $\an
 
 In a parallelogram $ABCD$, if $\overline{AC}$ is an angle bisector of $\angle A$ and $\angle C$, and $\overline{BD}$ is an angle bisector of $\angle B$ and $\angle D$, then $ABCD$ is a rhombus.
 
-## Trapezoids and kites (Trapezoides y deltoides)
+## Trapezoids and kites (Trapecios y deltoides)
 
 (Trapecio)
-**Trapezoid**: a quadrilateral that consists of two opposite parallel sides, and two opposite non parallel sides. It has a long base (base larga) and a short base (base corta), the bases are the parallel sides.
+**Trapezoid**: a quadrilateral with two opposite parallel sides and two opposite non parallel sides. This configuration creates a shape where the two parallel sides are opposite, and the non parallel sides are also opposite.
+
+The two parallel sides in a trapezoid have different sizes, and they are called the bases (las bases), there is a short base (base corta) and a long base (base larga). The height of a trapezoid is the distance between its bases.
 [Trapezoid image code](Programs/S06/Trapezoid_image.py)
 ![Trapezoid image](Images/S06/Trapezoid.png)
 *Trapezoid*
+
+> Trapezoid properties
+>
+> Let $b$ be the length of the smaller base in a trapezoid, let $B$ be the length of the bigger base in a trapezoid, let $h$ be the height of a trapezoid, let $A$ be the area of a trapezoid, then
+> $$A = \frac{1}{2}h(b + B)$$
+
+The area of a trapezoid can be understood with the following image.
+[Trapezoid area image code](Programs/S09/Trapezoid_area_image.py)
+![Trapezoid area image](Images/S09/Trapezoid_area.png)
+*Trapezoid area*
+
+As shown in the image, the area of the trapezoid $A$ is equal to the sum of the areas $A_1$ and $A_2$. In turn, each of these areas is the area of a triangle, $A_1 = \frac{b h}{2}$ and $A_2 = \frac{B h}{2}$, then $A = A_1 + A_2 = \frac{b h + B h}{2} = \frac{1}{2}h(b + B)$.
 
 (Trapecio isósceles)
 **Isosceles trapezoid**: a trapezoid with its two non-parallel sides congruent.
@@ -1974,3 +1578,243 @@ In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{B
 > | $\overline{AC} \perp \overline{BD}$ | Definition of perpendicular lines |
 
 In a kite $ABCD$, in which $\overline{AB} \cong \overline{AD}$, and $\overline{BC} \cong \overline{CD}$, then $\overline{AC} \perp \overline{BD}$.
+
+(Definición de un triángulo)
+**Definition of a triangle**: a shape with three straight sides and therefore three angles. The three straight sides are three segments, in which each segment is connected to the other two with their endpoints. Triangles can be named using the three vertices that form at the intersections of their sides. Each vertex has an opposite side, i.e. the side that does not stem from the vertex.
+[Triangle image code](Programs/S01/Triangle_image.py)
+![Triangle image](Images/S01/Triangle.png)
+*Triangle*
+
+> Triangle notation
+>
+> Let $A$, $B$, $C$ be three vertices that form a triangle, then the triangle is denoted as $\triangle ABC$ read as triangle ABC (triángulo ABC). Other form to denote the same triangle is $\triangle BCA$, other forms are made using a different order of the points of the triangle. The length of the opposite side (lado opuesto) to each vertex is denoted with a lowercase letter, in this case $a$, $b$, and $c$. The sides can also be noted with the two vertices that form the side, in this case $BC$, $AC$, and $AB$ respectively.
+
+(Lado opuesto a un vértice en un triángulo)
+**Opposite side of a vertex in a triangle**: in a triangle $\triangle ABC$, each vertex has an opposite side, the opposite side to $A$ is the side $\overline{BC}$, the opposite side to $B$ is $\overline{AC}$, and the opposite side to $C$ is $\overline{AB}$.
+
+(Lado opuesto a un ángulo en un triángulo)
+**Opposite side of an angle in a triangle**: in a triangle $\triangle ABC$, each angle has an opposite side, the opposite side to $\angle A$ is the side $\overline{BC}$, the opposite side to $\angle B$ is $\overline{AC}$, and the opposite side to $\angle C$ is $\overline{AB}$.
+
+(Suma de los ángulos de un triángulo)
+**Sum of the measures of the angles of a triangle**: the three measures of the angles of any triangle add up to $180 \text{\textdegree}$ or $\pi$ radians.
+
+> Sum of the measures of the angles of a triangle
+>
+> Let $A$, $B$, $C$, be three vertices that form a triangle, then
+>
+> $$\begin{gathered}
+> m \angle A + m \angle B + m \angle C = 180 \text{\textdegree}\\
+> m \angle A + m \angle B + m \angle C = \pi
+> \end{gathered}$$
+
+This is shown in the following figure.
+[Triangle angles sum image code](Programs/S09/Triangle_angles_sum_image.py)
+![Triangle angles sum image](Images/S09/Triangle_angles_sum.png)
+*Triangle angles sum*
+
+As the figure shows, the straight line that passes through $C$ and is parallel to the side between $A$ and $B$, is composed of the angles $\angle A$, $\angle B$, and $\angle C$, which means that the sum of the three angles in a triangle forms a straight line whose angle is $180 \text{\textdegree}$ or $\pi$ radians.
+
+(Definición de un triángulo rectángulo)
+**Definition of a right triangle**: a triangle in which one of its angles measures $90 \text{\textdegree}$ or $\pi/2$ radians, i.e. a triangle with a right angle. The right angle is denoted in the triangle with a square.
+
+Right triangles have three sides, one hypotenuse (hipotenusa) which is the side opposite to the right angle, and two legs (catetos) which are the two sides that stem from the vertex with the right angle.
+
+(Triángulo obtuso)
+**Obtuse triangle**: a triangle that has one obtuse angle.
+[Obtuse triangle image code](Programs/S01/Obtuse_triangle_image.py)
+![Obtuse triangle image](Images/S01/Obtuse_triangle.png)
+*Obtuse triangle*
+
+(Triángulo agudo)
+**Acute triangle**: a triangle whose three angles are acute.
+[Acute triangle image code](Programs/S01/Acute_triangle_image.py)
+![Acute triangle image](Images/S01/Acute_triangle.png)
+*Acute triangle*
+
+(Triángulo equiángulo)
+**Equiangular triangle**: a triangle whose three angles are congruent.
+[Equiangular triangle image code](Programs/S01/Equiangular_triangle_image.py)
+![Equiangular triangle image](Images/S01/Equiangular_triangle.png)
+*Equiangular triangle*
+
+(Triángulo escaleno)
+**Scalene triangle**: a triangle whose three sides have different lengths from each other.
+[Scalene triangle image code](Programs/S01/Scalene_triangle_image.py)
+![Scalene triangle image](Images/S01/Scalene_triangle.png)
+*Scalene triangle*
+
+(Triángulo isósceles)
+**Isosceles triangle**: a triangle in which two of its sides have the same length.
+[Isosceles triangle image code](Programs/S01/Isosceles_triangle_image.py)
+![Isosceles triangle image](Images/S01/Isosceles_triangle.png)
+*Isosceles triangle*
+
+(Triángulo equilátero)
+**Equilateral triangle**: a triangle in which all the sides have the same length. All equilateral triangles are similar. An equilateral triangle is also isosceles.
+[Equilateral triangle image code](Programs/S01/Equilateral_triangle_image.py)
+![Equilateral triangle image](Images/S01/Equilateral_triangle.png)
+*Equilateral triangle*
+
+(Proporcionalidad entre triángulos)
+**Triangle proportionality**: from any given triangle, an infinite amount of triangles can be created that are proportional and distinct from the given one. This is done by extending two sides indefinitely, and joining them with a segment parallel to the remaining side.
+[Triangle proportionality image code](Programs/S07/Triangle_proportionality_image.py)
+![Triangle proportionality image](Images/S07/Triangle_proportionality.png)
+*Triangle proportionality*
+
+(Perímetro de un triángulo)
+**Triangle perimeter**: let $a$, $b$, $c$, be the lengths of the sides of a triangle, then $P = a + b + c$.
+
+(Área de un triángulo)
+**Triangle area**: let $h$ be the height of the triangle as measured when $b$ is the floor, then $A = \frac{b h}{2}$.
+
+(Polígono)
+**Polygon**: any geometric figure made with segments joined by their endpoints. Each of the endpoints of the segments in a polygon must be intersecting the endpoint of another segment.
+
+(Lados de un polígono)
+**Sides of a polygon**: the segments of the polygon.
+
+(Vértices de un polígono)
+**Vertices of a polygon**: the points of a polygon where the segments intersect.
+
+(Diagonales de un polígono)
+**Polygon diagonals**: the segments that are formed by connecting all the vertices of the polygon with each other, but that are not the sides of the polygon.
+[Polygon diagonals image code](Programs/S01/Polygon_diagonals_image.py)
+![Polygon diagonals image](Images/S01/Polygon_diagonals.png)
+*Polygon diagonals*
+
+The blue lines in the image are the diagonals of the polygon.
+
+(Clasificación de polígonos según el número de lados)
+**Classification of polygons based on the number of sides**:
+
+- **Triangle** (Triángulo): a polygon with three sides.
+- **Quadrilateral** (Cuadrilátero): a polygon with four sides.
+- **Pentagon** (Pentágono): a polygon with five sides.
+- **Hexagon** (Hexágono): a polygon with six sides.
+- **Heptagon** (Heptágono): a polygon with seven sides.
+- **Octagon** (Octágono): a polygon with eight sides.
+- **Nonagon** (Nonágono): a polygon with nine sides.
+- **Decagon** (Decágono): a polygon with ten sides.
+- **Undecagon** (Undecágono): a polygon with eleven sides.
+- **Dodecagon** (Dodecágono): a polygon with twelve sides.
+
+(Polígono convexo)
+**Convex polygon**: a polygon such that in each of its vertices, the angle measured inside the polygon is less than the angle measured outside the polygon.
+[Convex polygon image code](Programs/S01/Convex_polygon_image.py)
+![Convex polygon image](Images/S01/Convex_polygon.png)
+*Convex polygon*
+
+(Polígono cóncavo)
+**Concave polygon**: a polygon such that in at least one of its vertices, the angle measured inside the polygon is greater than the angle measured outside the polygon.
+[Concave polygon image code](Programs/S01/Concave_polygon_image.py)
+![Concave polygon image](Images/S01/Concave_polygon.png)
+*Concave polygon*
+
+In the image, the marked angle has a measure greater than the measure of the angle from that same vertex but outside the polygon, this makes the polygon to be concave.
+
+(Definición de un cuadrilátero)
+**Definition of a quadrilateral**: a shape with four straight sides.
+
+(Lados opuestos en un cuadrilátero)
+**Opposite sides in a quadrilateral**: in a quadrilateral, each side has an opposite side. Given a side of a quadrilateral, its opposite side is the one without any common vertex. In a quadrilateral $ABCD$ the opposite side to $\overline{AB}$ is $\overline{CD}$, and the opposite side to $\overline{AD}$ is $\overline{BC}$.
+
+(Sólido rectangular)
+**Rectangular solid**: solid with six faces and with right angles between its faces.
+
+A rectangular solid can be defined with only three measures, length (largo), widht (ancho), and height (alto). When looking at the front of one of the faces from a rectangular solid, the length is defined as the horizontal left to right distance, the width is defined as the horizontal front to back distance, and the height is defined as the vertical distance.
+
+> Rectangular solid properties
+>
+> In a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
+>
+> $$\begin{gathered}
+> V = L W H\\
+> S = 2 (L W + L H + W H)
+> \end{gathered}$$
+
+(Área superficial de un sólido rectangular)
+**Rectangular solid surface area**: in a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, and $S$ be its surface area, then $S = 2 (L W + L H + W H)$.
+
+(Volumen de un sólido rectangular)
+**Rectangular solid volume**: in a rectangular solid, let $L$ be its length, $W$ be its width, $H$ be its height, and $V$ be its volume, then $V = L W H$.
+
+(Cubo)
+**Cube**: rectangular solid with all its sides equal in length. This configuration creates a shape in which all of its faces have equal areas.
+
+> Cube properties
+>
+> In a cube, let $s$ be the the length of any of its sides, $L$ be its length, $W$ be its widht, $H$ be its height, $V$ be its volume, and $S$ be its surface area, then
+>
+> $$\begin{gathered}
+> s = L = W = H\\
+> V = s^3\\
+> S = 6s^2
+> \end{gathered}$$
+
+(Área superficial de un cubo)
+**Cube surface area**: in a cube, let $s$ be the the length of any of its sides, and $S$ be its surface area, then $S = 6s^2$.
+
+(Volumen de un cubo)
+**Cube volume**: in a cube, let $s$ be the the length of any of its sides, and $V$ be its volume, then $V = s^3$.
+
+(Área de un trapecio)
+**Trapezoid area**: in a trapezoid, let $b$ be the length of the smaller base, let $B$ be the length of the bigger base, let $h$ be the height, and let $A$ be the area, then $A = \frac{1}{2}h(b + B)$.
+
+(Triángulo de Sierpinski)
+**Sierpinski triangle**: a triangle fractal with infinite upside down triangles inside. The stage 0 shape is a triangle (commonly an equilateral triangle, but it doesn't have to be).
+
+Every triangle has a smaller similar triangle that is formed with its midsegments, with a scale factor of $1/2$ because of the midsegment of a triangle theorem. The smaller similar triangle is always upside down, relative to the original triangle. The Sierpinski triangle is created by 'cutting out', or coloring the smaller similar upside down triangle formed with the midsegments. For this work, lets call the 'smaller similar upside down triangle formed with the midsegments' simply as the 'upside down triangle' because that's the most important visual feature for the Sierpinski triangle.
+
+To create this fractal, the first iteration colors the only one upside down triangle, in the result there are now three non-colored triangles, one in each side of the colored triangle. The second iteration colors the three upside down triangles inside the three non-colored triangles from iteration 1, this leaves now 9 non-colored triangles. The next iteration colors all the upside down triangles inside all the non-colored triangles from the former iteration, and so on.
+[Sierpinski triangle image code](Programs/S07/Sierpinski_triangle_image.py)
+![Sierpinski triangle image](Images/S07/Sierpinski_triangle.png)
+*Sierpinski triangle*
+
+(Cantidad de triángulos por etapa en un triángulo de Sierpinski)
+**Amount of triangles per stage in a Sierpinski triangle**: the amounts of non-colored triangles and of colored triangles in a Sierpinski triangle, follow certain patterns.
+
+> Amount of non-colored triangles in a Sierpinski triangle
+>
+> The amount of non-colored triangles of stage $n$ is $NCT_n = 3^n$ where $n = 0, 1, 2, ...$, because in stage 0 there is only $1 = 3^0$ non-colored triangle. In stage 1, the colored triangle divides the initial triangle into $3 = 3^1$ non-triangles. The logic here is that each colored triangle will divide its container non-colored triangle into three non-colored triangles. So in stage 2, the $3$ non-colored triangles are divided into $3 \cdot 3 = 9$ non-colored triangles. In stage 3, the $9$ non-colored triangles are divided into $9 \cdot 3 = 27$ non-colored triangles, and so on.
+
+> Amount of colored triangles in a Sierpinski triangle
+>
+> The amount of colored triangles of stage $n$ is $CT_n = CT_{n - 1} + NCT_{n - 1}$, with $CT_0 = 0$, because in stage 0 there are $0$ colored triangles, in stage 1 there is $1$ colored triangle which comes from the $1$ non-colored triangle from stage 0. In stage 2 there are $4$ colored triangles, $1$ colored triangle from stage 1 and $3$ new ones from stage 1, and so on.
+
+(Copo de nieve de Koch)
+**Koch snowflake**: a triangle fractal with infinite similar triangles, one coming out of the center third of each side. The stage 0 shape is a triangle (commonly an equilateral triangle, but it doesn't have to be).
+
+To create this fractal, the first iteration divides each side of the initial triangle into three thirds, a triangle similar to the initial one is drawn in the center third, such that the sides of the new triangle are placed parallel to the initial triangle. The second iteration divides each side that resulted from iteration 1 into three thirds and the process is repeated (draw a similar triangle in the center third with its sides parallel to the initial one), and so on. This procedure causes that the new triangles from an iteration are upside down from the triangles in the former iteration, because of the need to maintain corresponding sides parallel.
+[Koch snowflake image code](Programs/S07/Koch_snowflake_image.py)
+![Koch snowflake image](Images/S07/Koch_snowflake.png)
+*Koch snowflake*
+
+(Lados y longitud por lado en un copo de nieve de Koch)
+**Sides and length per side in a Koch snowflake**: the amount of sides and the length per side in a Koch snowflake, both follow certain patterns.
+
+> Amount of sides in a Koch snowflake
+>
+> The amount of sides $s_n$ of stage $n$ is $s_n = 3 \cdot 4^n$, because in stage 0 there are only the $3 = 3 \cdot 4^0$ sides of the initial triangle. In stage 1, each one of the $3$ sides of the triangle gives origin to $4$ new sides, for a total of $12 = 3 \cdot 4^1$ sides in total for stage 1, because each side of stage 0 is divided in three parts but the center third is divided into two sides of the smaller new triangle, resulting in $4$ new sides, and so on for the rest of stages (each side creates $4$ new sides).
+
+> Length per side in a Koch snowflake
+>
+> The length per side is $1/3$ of the side that it stems from. If a Koch snowflake is created from an scalene triangle, then each there are three lengths, one for each side of the initial triangle. The length per side $l_{i, n}$ parallel to the side $i$ of the initial triangle in stage $n$, is $l_{i, n} = \frac{L_i}{3^n}$, where $L_i$ is the length of the side $i$ of the initial triangle. This is because stage $n$ divides each side in thirds (which explains the denominator $3^n$), and the length of the initial triangle from which each side is divided is $L_i$.
+
+(Conjunto de Cantor)
+**Cantor set**: a segment fractal with infinite smaller subsegments, each originated by dividing a previous segment into three thirds and removing the center third. The stage 0 shape is a segment.
+
+To create this fractal, the first iteration divides the initial segment into three thirds and removes the center third. The second iteration takes the two subsegments that resulted from the first iteration, and divides them into three thirds and removes the center third, and so on.
+[Cantor set image code](Programs/S07/Cantor_set_image.py)
+![Cantor set image](Images/S07/Cantor_set.png)
+*Cantor set*
+
+(Cantidad de subsegmentos y longitud por subsegmento en un conjunto de Cantor)
+**Amount of subsegments and length per subsegment in a Cantor set**: the amount of subsegments and the length per subsegment in a Cantor set, both follow certain patterns.
+
+> Amount of subsegments in a Cantor set
+>
+> The amount of subsegments $s_n$ of stage $n$ is $s_n = 2^n$, because dividing a segment into three thirds and then removing the center third leaves only two subsegments each time, and given that all subsegments undergo this process in each iteration, the result is that the amount of subsegments is double the amount of subsegments in the previous iteration.
+
+> Length per subsegment in a Cantor set
+>
+> The length per subsegment $l_n$ of stage $n$ is $l_n = \frac{L}{3^n}$, where $L$ is the length of the initial segment. This is because the initial segment is divided into thirds each iteration.

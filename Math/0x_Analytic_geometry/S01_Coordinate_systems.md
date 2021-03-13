@@ -56,18 +56,7 @@ $a$ is the $x$-axis value, and $b$ is the $y$-axis value.
 **The origin**: the point in which both axes cross each other, i.e. the point $(0, 0)$.
 
 (Gráfica)
-**Graph**: the use of the $x$-$y$ plain to show points. These points can come from a mathematical function or equation, points scattered, etcetera. If the graph comes from an equation, it is read as the graph of the equation (la gráfica de la ecuación). The graph itself is the set of points that result from plotting the equation.
-
-(Ecuación lineal en dos variables)
-**Linear equation in two variables**: linear equation with two variables, such that a change in one of the variables produces a proportional change in the other variable.
-
-> Standard form of a linear equation in two variables
->
-> Let $A$, $B$, $C$, be constants, $x$, $y$, be variables, then
-> $$Ax + By = C$$
-> This is a linear equation, its solutions form a line when shown in a graph of the $x$-$y$ plain.
-
-The amount of solutions of a linear equation is infinite, the line formed by the equation can be extended indefinitely.
+**Graph**: the use of the $x$-$y$ plane to show points. These points can come from a mathematical function or equation, points scattered, etcetera. If the graph comes from an equation, it is read as the graph of the equation (la gráfica de la ecuación). The graph itself is the set of points that result from plotting the equation.
 
 ## Graphs of linear equations (Gráficas de ecuaciones lineales)
 
@@ -99,18 +88,17 @@ In a graph, the intercepts are the points in which the graph crosses an axis, i.
 
 A linear equation can be graphed using the intercepts as the points through which the line passes.
 
-## Slope of a linear equation (Pendiente de una ecuación lineal)
+(Fórmula de distancia)
+**Distance formula**: the distance formula is the application of the Pythagorean theorem in the rectangular coordinate system.
 
-The slope of a line is a ratio that shows how many units in the $y$-axis change when a single unit in the $x$-axis changes. In a given line, the slope is measured as the value changed in the $y$-axis divided by the equivalent change in the $x$-axis.
+The distance formula takes the distance between two points as the hypotenuse of a right triangle, and the legs as the rise and run in the $x$-$y$ plane.
+[Rise and run between two points image code](Programs/S01/Rise_and_run_between_two_points_image.py)
+![Rise and run between two points image](Images/S01/Rise_and_run_between_two_points.png)
 
-The slope of an horizontal line is $0$ and the slope of a vertical line is undefined.
+Using the Pythagorean theorem, the distance squared between two points, is the sum of the squared rise plus the squared run.
+[Distance formula code](Programs/S01/Distance_formula.py)
 
-A negative slope means that whenever the value in the $x$-axis increases, the value in the $y$-axis decreases, and vice versa. A positive slope indicates that both values in $x$ and $y$ increase or decrease together.
-
-(Fórmula de la pendiente)
-**Slope formula**: the slope of a line that passes through two given points, is equal to the ratio of the difference of the $y$-axis values of the two points over the difference of the $x$-axis values of the two points.
-
-> Slope formula
+> Distance formula
 >
-> Let $(x_1, y_1)$ and $(x_2, y_2)$ be two points in the $x$-$y$ plane, and let $m$ be the slope that they form, then
-> $$m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{y_1 - y_2}{x_1 - x_2}$$
+> Let $(x_1, y_1)$, $(x_2, y_2)$, be two points in the $x$-$y$ plane, and let $d$ be the distance between them, then
+> $$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
