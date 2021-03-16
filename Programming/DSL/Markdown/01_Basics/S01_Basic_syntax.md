@@ -4,6 +4,7 @@
 
 <!-- #T# Table of contents -->
 
+<!-- #C# Metadata -->
 <!-- #C# Normal text -->
 <!-- #C# Headings -->
 <!-- #C# Text formatting -->
@@ -27,6 +28,22 @@
 <!-- # pandoc --katex input_file1.md -o output_file1.pdf -->
 
 <!-- #T# render a Markdown file as an HTML file (no CLI) using the Markdown Preview Enhanced extension, right click the .md preview file and click "Open in Browser", this can be printed as PDF in Chromium -->
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Metadata -->
+
+<!-- # |------------------------------------------------------------- -->
+<!-- #T# metadata key value pairs are enclosed inside a three hyphens pair, a key is separated from its value with a colon -->
+
+---
+key1: value1
+metadata: value of the metadata
+title: Basic syntax
+author: Unknown
+date: 10 Feb 2020
+lang: en
+---
+
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Normal text -->
@@ -160,9 +177,10 @@ $$\alpha A\pm\sqrt{x} \over y^{2}$$ (1)
 <!-- #C# Decor -->
 
 <!-- # |------------------------------------------------------------- -->
-<!-- #T# draw an horizontal line with three hyphens preceded by a newline -->
+<!-- #T# draw an horizontal line with four hyphens preceded by a newline and followed by a newline -->
 text before horizontal line
 
----
+----
+
 text after horizontal line
 <!-- # |------------------------------------------------------------- -->

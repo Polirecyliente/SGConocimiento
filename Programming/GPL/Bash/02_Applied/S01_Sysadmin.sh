@@ -458,6 +458,9 @@ head -80 file1 | nl -b 'a' | tail -10
 mkdir -p /tmp/parent_dir1/child_dir1
 #T# the p flag creates any parent directories needed, if they don't exist
 
+#T# paths are separated with a : colon, so : is the path separator
+echo $PATH # /home/kuy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
 #C# - File permissions
 
 # |-----

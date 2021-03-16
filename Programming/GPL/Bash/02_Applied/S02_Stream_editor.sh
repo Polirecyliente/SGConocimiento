@@ -23,6 +23,7 @@
 # |-------------------------------------------------------------
 
 #C# Basic usage
+
 # |-------------------------------------------------------------
 #T# sed is used as a command in the shell of the operating system
 
@@ -150,7 +151,6 @@ echo "str1" | sed 'l'
 #T# the former prints
 # str1$
 # str1
-
 # |-------------------------------------------------------------
 
 #C# Substituting a match
