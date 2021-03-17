@@ -30,7 +30,7 @@
 #T#     -b, +b, print a message when a job is killed
 #T#     -e, +e, exit the interpreter on error
 #T#     -f, +f, disable globbing
-#T#     -h, +h, executed commands are placed in a hash table for quicker access, for an explanation on this hash table see S06_Functions.sh
+#T#     -h, +h, executed commands are placed in a hash table for quicker access, for an explanation on this hash table see the file titled Functions
 #T#     -k, +k, arguments that contain variables use the same variables of the calling environment, var1=$var1 uses $var1 from the calling environment
 #T#     -m, +m, enable job control, to manage background and foreground processes
 #T#     -n, +n, read commands but do not execute them, used executing 'bash -n script1.sh' prints the syntax errors in script1.sh
@@ -39,12 +39,12 @@
 #T#     -u, +u, print error when calling an unset variable
 #T#     -v, +v, print each line read
 #T#     -x, +x, print debug information
-#T#     -B, +B, perform brace expansion (see S03_Operators.sh)
+#T#     -B, +B, perform brace expansion (see the file titled Operators)
 #T#     -C, +C, impede bash from overwriting files
-#T#     -E, +E, the ERR trap can be activated by shell functions (see S09_Exception_handling.sh)
-#T#     -H, +H, enable history expansion (see S03_Operators.sh)
+#T#     -E, +E, the ERR trap can be activated by shell functions (see the file titled Exception handling)
+#T#     -H, +H, enable history expansion (see the file titled Operators)
 #T#     -P, +P, follow symbolic links, e.g. if dir1 has a symlink link1, and -P is on, then executing 'cd link1' makes the pwd be dir1 and not link1
-#T#     -T, +T, the DEBUG and RETURN traps can be activated by shell functions (see S09_Exception_handling.sh)
+#T#     -T, +T, the DEBUG and RETURN traps can be activated by shell functions (see the file titled Exception handling)
 
 #T# the -i flag means the shell is interactive, the -s flag makes bash read commands from stdin
 
@@ -78,8 +78,8 @@ bash -c 'echo str1 "$0" "$1"' "name1" "name2" # str1 name1 name2
 #T# the shell option option1 is turned off
 
 #T# the following list is the list of shell options
-#T#     extglob, allows the use of an extended set of operators for globbing (see S03_Operators.sh)
-#T#     lastpipe, the last command in a pipeline executes in the current shell (see S12_System_calls.sh), job control must be turned off with 'set +m'
+#T#     extglob, allows the use of an extended set of operators for globbing (see the file titled Operators)
+#T#     lastpipe, the last command in a pipeline executes in the current shell (see the file titled System calls), job control must be turned off with 'set +m'
 #T#     nullglob, if the filename expansion * returns no files, then do not return a literal asterisk *, e.g. doing 'ls *' in an empty dir tries to list a file named '*', unless nullglob is set in which case nothing is listed
 
 shopt -s extglob
@@ -96,7 +96,7 @@ shopt -u extglob
 
 #T# PS1 is commonly 'user@host:/path/to/current/dir$ ', and appears as the default prompt in Bash
 #T# PS2 is simply '>', and appears when a partial command is entered, e.g. when typing 'echo "str' PS2 appears to complete the echo command
-#T# PS3 is '', and appears as the prompt for the select loop (see S05_Control_flow.sh)
+#T# PS3 is '', and appears as the prompt for the select loop (see the file titled Control flow)
 #T# PS4 is '+', and appears as a debugging prompt
 
 #T# each of these prompt strings can be modified via the values of the variables $PS1, $PS2, $PS3, and $PS4
@@ -107,7 +107,7 @@ echo $PS4 # +
 
 #T# several escape sequences can be put into the prompt strings to be intepreted as special values
 #T#     \a, alert bell system sound
-#T#     \d, current date as 'weekday_name_abbreviated month_name_abbreviated day_of_the_month' (the same as '%a %b %d', using format codes (see S07_Standard_library.sh))
+#T#     \d, current date as 'weekday_name_abbreviated month_name_abbreviated day_of_the_month' (the same as '%a %b %d', using format codes (see the file titled Standard library))
 #T#     \D{format1}, current date using format1 as a string with format codes, e.g. PS1="\D{%Y}" gives '1998' as the prompt if 1998 is the year
 #T#     \e, escape char, the same as typing \033 or \x1B
 #T#     \h, current host machine, up to the first dot .
@@ -133,7 +133,7 @@ echo $PS4 # +
 #T#     \\, one backslash
 #T#     \[, begins a control sequence (e.g. an ANSI escape sequence)
 #T#     \], ends a control sequence (e.g. an ANSI escape sequence)
-#T#     $'\char1' use a normal escape sequence, \char1 is any of the normal escape sequences in Bash (see S02_Data_types.sh), this allows using \u to insert an Unicode char instead of the current user
+#T#     $'\char1' use a normal escape sequence, \char1 is any of the normal escape sequences in Bash (see the file titled Data types), this allows using \u to insert an Unicode char instead of the current user
 # |-----
 
 #C# - ANSI escape sequences

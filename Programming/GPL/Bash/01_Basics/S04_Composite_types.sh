@@ -57,12 +57,25 @@ echo ${!associative1[@]} # key2 key1
 #C# Strings
 
 # |-------------------------------------------------------------
-#T# a string can be made so that only its escaped chars (see S02_Data_types.sh) are interpreted (no parameter expansion)
+#T# a string can be made so that only its escaped chars (see the file titled Data types) are interpreted (no parameter expansion)
 
 # SYNTAX $'str1\char1str2'
 #T# str1 and str2 are substrings, char1 is a single character that is escaped, char1 is interpreted with this syntax
 
 echo $'A\tB' # A	B
+
+#T# double quotes are used for string interpolation (single quotes create raw, literal strings), using this syntax
+
+# SYNTAX "word1 ${var1} word2"
+#T# var1 is the variable to be substituted inside a string, this is also called parameter expansion and uses the braces operator as explained in S03_Operators.sh
+
+int1=5
+str2="string ${int1} interpolation" # string 5 interpolation
+
+#T# to preserve whitespaces in a variable that contains a string, double quotes are used when placing the variable
+var1='string     one'
+echo $var1   # string one
+echo "$var1" # string     one
 
 #C# - String formatting
 
@@ -72,7 +85,7 @@ echo $'A\tB' # A	B
 # SYNTAX printf -v var1 "format_string1" "arg1" "arg2"
 #T# -v var1 is a kwarg pair that is optional and serves to store the formatted string in var1, format_string1 is the main string that contains both the content of the string and the formatting to apply to arg1, arg2, up to argN
 
-#T# inside format_string1, escaped characters that begin with a backslash \ are interpreted (see S02_Data_types.sh), and also are format specifiers that begin with a percent sign %, these format specifiers dictate the format that arg1, arg2, argN will have
+#T# inside format_string1, escaped characters that begin with a backslash \ are interpreted (see the file titled Data types), and also are format specifiers that begin with a percent sign %, these format specifiers dictate the format that arg1, arg2, argN will have
 
 #T# the resulting formatted string is format_string1 but putting arg1, arg2, argN in the places of the format specifiers, if the number N in argN is greater than the number of format specifiers then format_string1 is repeated until all argN strings have been placed in format specifiers, if there are remaining format specifiers they are replaced with 0 for numbers or the empty string "" for strings
 

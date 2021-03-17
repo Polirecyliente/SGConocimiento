@@ -48,7 +48,7 @@ function func1
 )
 func1 # func1 executed in subshell # $? == 0
 
-#T# there is a third syntax to declare a function, it's without braces or parentheses, because the body of a function can consist of control flow statements (see S05_Control_flow.sh)
+#T# there is a third syntax to declare a function, it's without braces or parentheses, because the body of a function can consist of control flow statements (see the file titled Control flow)
 
 # SYNTAX function definition with control flow statement
 # func1() control_flow1
@@ -87,7 +87,7 @@ $var1 arg1 # with arg1, , and
 #     local -o1 var1
 #     statements1
 # }
-#T# var1 can be used inside func1 in statements1, and the value of var1 won't become part of the executing shell, -o1 is a flag passed to the local command, the flags accepted by the local command are the same as those of the declare command (see S02_Data_types.sh)
+#T# var1 can be used inside func1 in statements1, and the value of var1 won't become part of the executing shell, -o1 is a flag passed to the local command, the flags accepted by the local command are the same as those of the declare command (see the file titled Data types)
 
 var1=5
 function func1

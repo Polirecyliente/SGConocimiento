@@ -17,7 +17,7 @@
 #C# Special parameters
 
 # |-------------------------------------------------------------
-#T# the positional parameters have already been explored in the section about functions (see S06_Functions.sh), those apply here as well in the exact same way, $0 for the name of the script or program in execution, $1 for the first argument passed to the CLI, $2 for the second argument passed to the CLI, and so on
+#T# the positional parameters have already been explored in the section about functions (see the file titled Functions), those apply here as well in the exact same way, $0 for the name of the script or program in execution, $1 for the first argument passed to the CLI, $2 for the second argument passed to the CLI, and so on
 echo "arg1 $1, arg2 $2, script name $0" # arg1 str2, arg2 5.4, script name S08_CLI_arguments.sh
 
 #T# the following special parameters (variables) are used in parsing CLI arguments, but they can be used the same for function arguments

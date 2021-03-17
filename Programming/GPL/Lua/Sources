@@ -1,0 +1,5 @@
+Lua Tutorial
+
+Lua is a lightweight (with relatively few builtin libraries and dependencies), and therefore an embeddable language. Lua is specially embeddable into programs written in C.
+
+Main tutorial: https://www.tutorialspoint.com/lua/index.htm

@@ -15,7 +15,7 @@
 
 #T# in the operating system shell, the py_compile script can be run to compile a .py file into .pyc
 # SYNTAX python3 -m py_compile script1.py
-#T# the script1.py is compiled, python3 is the Python executable, -m is a Python option to run py_compile (see S14_Interpreter.py)
+#T# the script1.py is compiled, python3 is the Python executable, -m is a Python option to run py_compile (see the file titled Interpreter)
 
 #T# the output file is stored in a directory named __pycache__/ under the directory of script1.py, named something like __pycache__/script1.cpython-38.pyc, the cpython-38 part of the name stands for the Python version, in this case version 3.8
 

@@ -51,13 +51,13 @@ nl file1 # outputs the contents of file1 with numbered lines
 
 echo "value1" | cat # value1
 echo "value2" | read var1
-echo $var1 # value2 # this only works with the lastpipe shell option (see S14_Interpreter.sh), otherwise var1 is read in a subshell
+echo $var1 # value2 # this only works with the lastpipe shell option (see the file titled Interpreter), otherwise var1 is read in a subshell
 
 # SYNTAX command1 |& command2
 #T# this sends both the output and the errors from command1 as input for command2, up to commandN
 
 ls no_file1 |& read var1
-echo $var1 # ls: cannot access 'no_file1': No such file or directory # this only works with the lastpipe shell option (see S14_Interpreter.sh)
+echo $var1 # ls: cannot access 'no_file1': No such file or directory # this only works with the lastpipe shell option (see the file titled Interpreter)
 # |--------------------------------------------------/
 
 # |--------------------------------------------------\
@@ -102,7 +102,7 @@ ls no_file1 1>file1 2>&1
 cat file1 # ls: cannot access 'no_file1': No such file or directory
 
 # SYNTAX command1 fd1>|file1
-#T# this redirects the output of fd1 of command1 to file1, even if overwriting is prohibited (see S14_Interpreter.sh)
+#T# this redirects the output of fd1 of command1 to file1, even if overwriting is prohibited (see the file titled Interpreter)
 
 set -C
 echo "can't overwrite" 1>|file1
@@ -197,7 +197,7 @@ pwd
 #C# Signal handling
 
 # |-------------------------------------------------------------
-#T# there are several operating system signals that can be handled with traps (see S09_Exception_handling)
+#T# there are several operating system signals that can be handled with traps (see the file titled Exception handling)
 
 #T# the -l flag of the trap command lists the operating system signals
 trap -l # the system signals are the output

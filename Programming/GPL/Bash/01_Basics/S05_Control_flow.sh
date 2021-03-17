@@ -223,7 +223,7 @@ done
 #T# after inputting the number, statements1 execute, and the prompt reappears for another input, until a break statement is found (for break, int1, see the for loop subsection)
 
 PS3="Select one option using numbers: "
-#T# PS3 stands for Prompt String 3, this is the prompt for the selection (see S08_CLI_arguments.sh)
+#T# PS3 stands for Prompt String 3, this is the prompt for the selection (see the file titled CLI arguments)
 while [[ : ]]; do
     select var1 in "opt1" "opt2" "opt3"; do
         break 2

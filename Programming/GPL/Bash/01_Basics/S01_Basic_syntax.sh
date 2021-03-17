@@ -5,7 +5,7 @@
 
 #C# Blocks of code
 #C# Variables, constants, literals
-#C# Escape sequences
+#C# Escape sequences and escaped chars
 #C# Expressions
 #C# Function calls
 #C# - Command execution
@@ -16,7 +16,7 @@
 #T# Beginning of content
 
 # |-------------------------------------------------------------
-#T# run any Bash file /path/to/file1.sh in a terminal with
+#T# run a Bash file /path/to/file1.sh in a terminal with
 # SYNTAX bash /path/to/file1.sh
 
 #T# output variables to stdout with the echo command
@@ -50,9 +50,6 @@
     echo "command one"
     echo "command two"
 )
-
-#T# semicolon separates commands in one line
-echo 'First line'; echo 'Second line'
 # |-------------------------------------------------------------
 
 #C# Variables, constants, literals
@@ -61,32 +58,29 @@ echo 'First line'; echo 'Second line'
 #T# variables are dynamically typed. Literals are characters, numbers
 
 #T# define variables with the equal sign, no spaces are allowed before or after the equal sign (because spaces separate arguments)
+str1='str'
 int1=5
 
-#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character, quotation symbols preserve the whitespace of the string
+#T# variable identifiers can only contain letters, numbers, and the underscore
+var_aux1=0
+
+#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character
 str1='Hello       world!"'
 str2="second str'ing"
-
-#T# double quotes are used for interpolated strings (single quotes create raw, literal strings), variable substitution is made with
-
-# SYNTAX ${var1}
-#T# var1 is the variable to be substituted inside a string, this is also called parameter expansion and uses the braces operator as explained in S03_Operators.sh
-
-int1=5
-str2="string ${int1} interpolation" # string 5 interpolation
 # |-------------------------------------------------------------
 
-#C# Escape sequences
+#C# Escape sequences and escaped chars
 
 # |-------------------------------------------------------------
-#T# an special kind of combination of literals are escape sequences or escaped chars, they can mean something particular, e.g. the \n means newline, or they can make operators become literals, e.g. the \$ makes the dollar sign to be taken literally
+#T# an special kind of combination of literals are escape sequences and escaped chars, escape sequences mean something particular, e.g. the \n means newline, escaped chars make operators to become literals, e.g. the \$ makes the dollar sign to be taken literally
 
-#T# the -e flag of echo is to enable the use of escaped characters inside a double quoted string
+# SYNTAX \char1
+#T# an escape starts with a backslash \ and is followed by char1 which is other character or characters, most commonly char1 is a single character
 
-echo -e "Line1\nLine2"
+echo -e "Line1\n\$Line2" #| the -e flag is to enable the use of escaped characters inside a double quoted string
 #T# the former prints
 # Line1
-# Line2
+# $Line2
 # |-------------------------------------------------------------
 
 #C# Expressions
@@ -97,7 +91,7 @@ echo -e "Line1\nLine2"
 #T# math expressions are written with this syntax
 
 # SYNTAX num1=$(( expr1 ))
-#T# expr1 is the math expression, its result is assigned to num1, for the $(()) operator see S03_Operators.sh, specifically arithmetic expansion
+#T# expr1 is the math expression, its result is assigned to num1, for the $(()) operator see the file titled Operators, specifically arithmetic expansion
 
 int1=$(( 5 + 3 - 1 )) # 7
 # |-------------------------------------------------------------
@@ -105,15 +99,17 @@ int1=$(( 5 + 3 - 1 )) # 7
 #C# Function calls
 
 # |-------------------------------------------------------------
-#T# functions and commands use the same syntax, there are no parentheses, arguments are separated by space, arguments without quotation are taken to be strings
+#T# a function call is made with the function name followed by a space, and then the arguments separated by space
+
+#T# functions and commands use the same syntax, arguments without quotation are taken to be strings
 
 #C# - Command execution
 
 # |-----
-#T# basic output to stdout with the echo command
+#T# basic output to stdout is done with the echo command
 echo "Hello, Bash!" "Second arg" # Hello, Bash! Second arg
 
-#T# basic input from stdin with the read command
+#T# basic input from stdin is done with the read command
 echo "Please enter var1 as input"
 read var1
 
@@ -166,8 +162,8 @@ echo "str1" \
 
 # |-------------------------------------------------------------
 #T# multiple statements in the same line are separated with a semicolon
-int1=9; int2=7; int3=0
+echo 'First line'; echo 'Second line'; int1=9; int2=7; int3=0
 
-#T# these assignment statements can also be separated with space
+#T# assignment statements can also be separated with space
 var1=value1 var2=value2
 # |-------------------------------------------------------------

@@ -354,7 +354,7 @@ arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8, 9, 10], [11]]]
 int1 = arr1[1][0:2][1][1:3][1] # 9
 #| this takes index 1 of arr1 which is [[5, 6], [7, 8, 9, 10], [11]], then slice 0:2 of that is [[5, 6], [7, 8, 9, 10]], then index 1 of that is [7, 8, 9, 10], then slice 1:3 of that is [8, 9], and finally index 1 of that is 9
 
-#T# multidimensional arrays are iterated with a nested loop for each dimension (see S05_Control_flow.py)
+#T# multidimensional arrays are iterated with a nested loop for each dimension (see the file titled Control flow)
 
 arr1 = [[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]]
 for dim1 in arr1:

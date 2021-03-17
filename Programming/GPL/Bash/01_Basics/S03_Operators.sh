@@ -358,7 +358,7 @@ echo [[:xdigit:]]* # A     # if such file exists
 
 echo */*/*/File1 # dir1/subdir1/subsubdir1/File1 # if such file exists under the working directory
 
-#T# for the following syntax, an extended set of operators for globbing is required, this feature is turned on with the extglob option of the shopt command (see S14_Interpreter.sh)
+#T# for the following syntax, an extended set of operators for globbing is required, this feature is turned on with the extglob option of the shopt command (see the file titled Interpreter)
 
 # SYNTAX operator1(pattern1|pattern2|pattern3)
 #T# there can be more than 3 patterns separated by vertical bar |, operator1 can be any of '?', '*', '+', '@', or '!', all patterns, pattern1, pattern2, pattern3, up to patternN, are matching patterns, this syntax matches any of the patterns inside parentheses according to operator1
@@ -397,7 +397,7 @@ echo ${!var1} # indirect_value1
 var1=12; var2=5; var3=77
 echo ${!va*} # var1 var2 var3
 
-#T# get the indices of an array (see S04_Composite_types.sh)
+#T# get the indices of an array (see the file titled Composite types)
 arr1=( elem1 elem2 elem3 )
 echo ${!arr1[@]} # 0 1 2
 # |--------------------------------------------------/

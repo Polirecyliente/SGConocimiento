@@ -6,7 +6,7 @@
 #C# Blocks of code
 #C# Variables, constants, literals
 #C# - Type hints
-#C# Escape sequences
+#C# Escape sequences and escaped chars
 #C# Expressions
 #C# Function calls
 #C# Statements
@@ -16,7 +16,7 @@
 #T# Beginning of content
 
 # |-------------------------------------------------------------
-#T# run any Python file /path/to/file1.py in the operating system shell with
+#T# run a Python file /path/to/file1.py in the operating system shell with
 # SYNTAX python3 /path/to/file1.py
 
 #T# output variables to stdout with the print function
@@ -44,6 +44,15 @@ if True:
 str1 = 'str'
 int1 = 5
 
+#T# variable identifiers can only contain letters, numbers, and the underscore
+var_aux1 = 0
+
+#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character
+str1 = 'sen1word1 sen1""""word2 sen1word3 sen1word4'
+str1 = "sen2word1 sen2''''word2 sen2word3 sen2word4"
+str1 = """sen3word1 sen3"'"'word2
+               sen3word3 sen3word4"""
+
 #C# - Type hints
 
 # |-----
@@ -56,44 +65,45 @@ var1 = 8 # type: str
 # var1. autocompletes as a string
 # |-----
 
-#T# strings are created within quotation symbols, each quotation symbol type can be used inside the others as a normal character
-str1 = 'sen1word1 sen1""""word2 sen1word3 sen1word4'
-str1 = "sen2word1 sen2''''word2 sen2word3 sen2word4"
-str1 = """sen3word1 sen3"'"'word2
-               sen3word3 sen3word4"""
 # |-------------------------------------------------------------
 
-#C# Escape sequences
+#C# Escape sequences and escaped chars
 
 # |-------------------------------------------------------------
-#T# an special kind of combination of literals are escape sequences or escaped chars, they can mean something particular, e.g. the \n means newline, or they can make operators become literals, e.g. the \* makes the asterisk to be taken literally
+#T# an special kind of combination of literals are escape sequences and escaped chars, escape sequences mean something particular, e.g. the \n means newline, escaped chars make operators to become literals, e.g. the {{ makes a single curly brace to be taken literally
 
 # SYNTAX \char1
-#T# an escape sequence starts with a backslash \ and is followed by char1 which is other character or characters, most commonly char1 is a single character
+#T# an escape starts with a backslash \ and is followed by char1 which is other character or characters, most commonly char1 is a single character
 
-str1 = "Line1\nLine2"
+# SYNTAX {{
+# SYNTAX }}
+#T# in interpolated strings, duplicating the curly braces escapes them
+
+str1 = f"Line1\n{{Line2}}"
 #T# printing str1 gives the following
 # Line1
-# Line2
+# {Line2}
 # |-------------------------------------------------------------
 
 #C# Expressions
 
 # |-------------------------------------------------------------
 #T# expressions are evaluated and return a value
-int1 = 5 + 3 - 7
+int1 = 5 + 3 - 7 # 1
 # |-------------------------------------------------------------
 
 #C# Function calls
 
 # |-------------------------------------------------------------
+#T# a function call is made with the function name followed by a pair of parentheses that contain the arguments separated by comma
+
 #T# the function name can be separated by whitespace (but not a newline) from the arguments in parentheses
 
-#T# basic output to stdout with the print function
+#T# basic output to stdout is done with the print function
 print("Hello, Python!")
 
-#T# basic input from stdin with the input function
-input                   ("\nGive an input to continue the script\n")
+#T# basic input from stdin is done with the input function
+var1 = input                   ("\nPlease enter var1 as input\n")
 
 #T# the arguments to a function contain positional arguments and kwarg pairs
 
@@ -133,7 +143,7 @@ pass
 #C# Multiline statements
 
 # |-------------------------------------------------------------
-#T# an expression statement is continued with a backslash at the end, a list can be continued without a comma at the end of the line
+#T# a multiline statement is created with a backslash at the end of each line, a list can be continued without a comma at the end of the line
 int1 = 5 + 6 + \
        3 + 7     # 21
 list1 = ['Mon', 'Wed'

@@ -18,7 +18,7 @@
 #C# Types in general
 
 # |-------------------------------------------------------------
-#T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see S03_Operators.sh and S05_Control_flow.sh for the treatment of boolean variables in general and in conditionals
+#T# types are not fully supported, the only considered types are strings and numbers, for example there is no boolean type in Bash, see the file titled Operators and S05_Control_flow.sh for the treatment of boolean variables in general and in conditionals
 
 #T# the only caveat, is the declare command, which can be used to set attributes on variables, and these attributes act as the type of the variable
 # |-------------------------------------------------------------
@@ -48,9 +48,11 @@ flo1=$( bc <<< "12.415" ) # 12.415 # here string is explained later in this file
 str1='string one'
 str2="string two"
 
-#T# reading elements (characters) from strings is done via substring parameter expansion (see S03_Operators.sh)
+#T# reading elements (characters) from strings is done via substring parameter expansion (see the file titled Operators)
+str1='string one'
+char1=${str1:3:1} # i
 
-#T# string concatenation can be done indirectly with parameter expansion (see S03_Operators.sh) by expanding two or more string variables separated by space
+#T# string concatenation is done indirectly with parameter expansion (see the file titled Operators) by expanding two or more string variables separated by space
 str1='string one'
 str2="string two"
 str3=$str1" "$str2 # string one string two
@@ -81,12 +83,12 @@ str3=$str1" "$str2 # string one string two
 #T#     "\xNN",       hex value
 #T#     "\0NNN",      octal value
 
-str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\` \n\cUnreachable"
+str1="Line\\1\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\$\`\0\0171 \n\cUnreachable"
 #T# printing str1 gives the following
 # Line\1
 # Line"2
 #       Form
-# or ʠ𐍆l$`  feed lines
+# or ʠ𐍆l$`y  feed lines
 
 #C# - Heredoc and here string
 
@@ -154,6 +156,7 @@ bc <<< "3 + $((1 + 1)) + $(echo 1) + $var1" # 8 # 3 + 2 + 1 + 2
 #C# Composite types
 
 # |-------------------------------------------------------------
+#T# composite types store several values together, each value in an element of the composite type
 
 #C# - Arrays
 
@@ -224,12 +227,12 @@ declare -x int2=25
 #T#     -f, must be used with a function, it shows the function's body
 #T#     -F, must be used with a function, it shows the function name and debug information
 
-f1() { : ; } # see S06_Functions.sh
+f1() { : ; } # see the file titled Functions
 declare -f f1
 #T# the former prints
 # f1 () 
 # { 
 #     :
 # }
-declare -F f1 # f1 int1 /path/to/file_of_f1 # int1 and /path/to/file_of_f1 appear when printing debug information (see S14_Interpreter.sh), int1 means the number line where f1 is defined inside file_of_f1
+declare -F f1 # f1 int1 /path/to/file_of_f1 # int1 and /path/to/file_of_f1 appear when printing debug information (see the file titled Interpreter), int1 means the number line where f1 is defined inside file_of_f1
 # |-------------------------------------------------------------

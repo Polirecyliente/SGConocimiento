@@ -39,8 +39,8 @@ type1 = type(int1) # <class 'int'>
 #T#     binary, with prefix 0b
 #T#     octal, with prefix 0o
 #T#     hexa, with prefix 0x or 0X
-#T#     float, with suffix EN1 where N1 is an integer, e.g. E-2, E3
-#T#     complex N1 + N2j where N1, N2 are numbers, j indicates N2 as the imaginary part 
+#T#     float, with suffix EN1 where N1 is an integer, e.g. E-2, E3, or with lowercase 'e'
+#T#     complex N1 + N2j where N1, N2 are numbers, j indicates N2 as the imaginary part
 
 #T# the following are particular examples
 int1 = 5
@@ -60,20 +60,20 @@ str1 = 'string one'
 str2 = "string two"
 str3 = """string three"""
 
-#T# reading elements from strings
+#T# reading elements (characters) from strings
 str1 = 'string one'
-str4 = str1[4] # 'n'
+char1 = str1[3] # 'i'
 
-#T# a character or char is a string of size 1, but a char can also be obtained from an integer with the chr function
+#T# string concatenation is done with the plus operator
 str1 = 'string one'
-char1 = str1[0] # 's'
-char1 = chr(65) # 'A'
+str2 = "string two"
+str3 = str1 + " " + str2 # 'string one string two'
 
 #T# strings created with different quotation symbols can be operated together like normal
 str1 = 'string one'
 str2 = "string two"
 str3 = """string three"""
-str4 = str1 + str2 + str3 # 'string onestring twostring three' # the plus sign concatenates the strings
+str4 = str1 + str2 + str3 # 'string onestring twostring three'
 
 #T# escape sequences serve to do in-band signaling
 
@@ -88,21 +88,27 @@ str4 = str1 + str2 + str3 # 'string onestring twostring three' # the plus sign c
 #T#     '\n', newline, the same as \f\r
 #T#     '\t', horizontal tab
 #T#     '\v', vertical tab
+#T#     "\0", null char
 
 #T#     '\\',         literal backslash
-#T#     "\'",         single quote
-#T#     '\"',         double quote
+#T#     '\'',         single quote
+#T#     "\"",         double quote
 #T#     '\uNNNN',     unicode character  where NNNN is a 16 bit hex number
 #T#     '\UNNNNNNNN', unicode 32 bit hex number
 #T#     '\xNN',       hex value
 #T#     '\NNN',       octal value
 
-str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\271"
+str1 = "Line\\1\'\nLine\"2\a\fForm\vfeed\t\blines\ror \u02A0\U00010346\x6c\0\171"
 #T# printing str1 gives the following
 # Line\1'
 # Line"2
 #       Form
-# or ʠ𐍆l¹   feed lines
+# or ʠ𐍆ly   feed lines
+
+#T# a character or char is a string of size 1, but a char can also be obtained from an integer with the chr function
+str1 = 'string one'
+char1 = str1[0] # 's'
+char1 = chr(65) # 'A'
 
 #C# - Bytes type
 
@@ -130,8 +136,6 @@ bool1 = False
 
 # |-------------------------------------------------------------
 #T# composite types store several values together, each value in an element of the composite type
-
-#T# arrays are produced when all the elements in a composite type are from the same type
 
 #C# - Lists
 
@@ -225,8 +229,8 @@ str1 = enum1.elem2.value # two
 #C# Null type
 
 # |-------------------------------------------------------------
-#T# the null type has the None keyword
-str1 = None
+#T# the None keyword has the null value
+var1 = None
 # |-------------------------------------------------------------
 
 #C# Type casting

@@ -74,7 +74,7 @@ exec -c -a 'new_shell' rbash 1>file1 #| opens restricted bash, in an empty envir
 # |--------------------------------------------------\
 #T# the expr command outputs the result of an expression, this expression can be a boolean expression, or an integer arithmetic expression (but no exponentiation), a regex expression, or a string expression
 
-#T# the syntax is very similar to the rest of Bash, and uses most of the operators in the same way as Bash (see S03_Operators.sh), boolean expressions return 0 for false and 1 for true
+#T# the syntax is very similar to the rest of Bash, and uses most of the operators in the same way as Bash (see the file titled Operators), boolean expressions return 0 for false and 1 for true
 
 # SYNTAX expr "token1" "token2" "token3"
 #T# token1, token2, token3, etc., are evaluated as an expression, it's important to quote the tokens so that the shell operators don't act as shell operators but as operators that are part of the expression
@@ -287,7 +287,7 @@ date -u -d "1998-10-21 20:42" +"%x and %X" # 21/10/98 and 20:42:00
 # SYNTAX grep -o1 -o2 val2 'pattern1' file1 file2
 #T# about the options, -o1 represents a flag, -o2 val2 represent a kwarg pair, this matches pattern1 in the contents of file1, file2, up to fileN, pattern1 is in single quotes to avoid expansion
 
-#T# grep can also receive input directly via redirection and piping (see S12_System_calls.sh)
+#T# grep can also receive input directly via redirection and piping (see the file titled System calls)
 
 #T# -o1 and -o2 val2 can be one of the following
 #T#     -A int1, print int1 lines after each match
@@ -695,14 +695,14 @@ echo $_ # third # if the last command was 'echo first second third'
 #T# the $- parameter stores the interpreter options
 echo $- # himBHs
 
-#T# the $int1 parameter stores the value of argument int1 passed to the CLI, to a function, or to a script, see S08_CLI_args.sh
+#T# the $int1 parameter stores the value of argument int1 passed to the CLI, to a function, or to a script, see the file titled CLI args
 echo $1 # str1 #| if 'str1' is the first argument passed to the CLI
 echo $2 # str2
 
-#T# the $# parameter stores the number of arguments passed to the CLI, to a function, or to a script, see S08_CLI_args.sh
+#T# the $# parameter stores the number of arguments passed to the CLI, to a function, or to a script, see the file titled CLI args
 echo $# # 5 #| if there are 5 arguments
 
-#T# the $*, $@ parameters store the passed arguments in an array, for their difference see S08_CLI_args.sh
+#T# the $*, $@ parameters store the passed arguments in an array, for their difference see the file titled CLI args
 echo $* # str1 str2
 echo $@ # str1 str2
 # |-----

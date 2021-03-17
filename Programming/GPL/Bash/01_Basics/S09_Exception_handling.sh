@@ -11,7 +11,7 @@
 #C# Basic exception handling
 
 # |-------------------------------------------------------------
-#T# basic exception handling can be done with boolean logic (see S03_Operators.sh)
+#T# basic exception handling can be done with boolean logic (see the file titled Operators)
 
 # SYNTAX ( command1 && command2 ) || exception_handler1
 #T# command1, command2, up to commandN are the commands that should execute without error, if an error happens then exception_handler1 is called, so it is a command or function
@@ -31,7 +31,7 @@
 # SYNTAX trap "command1" signal1 signal2
 #T# this assigns command1 as a callback function for when any of signal1, signal2, up to signalN, is sent to the script or program in execution, so it can be said that command1 traps these signals, quoting command1 allows it to have several words
 
-#T# there are several signals that don't originate from Bash but rather from the operating system (see S12_System_calls.sh), the signals that come from Bash are, ERR, DEBUG, EXIT, and RETURN
+#T# there are several signals that don't originate from Bash but rather from the operating system (see the file titled System calls), the signals that come from Bash are, ERR, DEBUG, EXIT, and RETURN
 
 #T# the ERR signal is sent when an error occurs, for example when attempting to open a nonexistent file
 

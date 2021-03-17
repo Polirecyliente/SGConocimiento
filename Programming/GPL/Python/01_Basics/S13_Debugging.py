@@ -14,7 +14,7 @@
 
 #T# pdb can be executed with an script argument to debug said script, the following syntax is done in the operating system shell
 # SYNTAX python3 -m pdb script1.py
-#T# python3 is the Python executable, -m pdb script1.py runs pdb to debug script1.py (see S14_Interpreter.py), this automatically enters post-mortem if script1 crashes
+#T# python3 is the Python executable, -m pdb script1.py runs pdb to debug script1.py (see the file titled Interpreter), this automatically enters post-mortem if script1 crashes
 
 #T# the pdb module is imported to use the pdb debugger as part of a script
 import pdb
