@@ -19,7 +19,7 @@
 
 #T# in an if conditional statement a condition is checked and if it returns True then the if block is executed, this also happens in an elif conditional statement
 
-#T# in an else conditional statement no condition is checked, but the else requires an if above it, the elif also requires an if above
+#T# in an else conditional statement no condition is checked, but the else requires an if above it, the elif also requires an if above, the else block executes when the if and elif blocks do not
 
 #T# a colon goes at the end of the line after an if, elif, or else keyword
 
@@ -53,7 +53,7 @@ else:
 #C# Loops
 
 # |-------------------------------------------------------------
-#T# loops are made with the for, and while keywords
+#T# loops are made with the for, and while constructs
 
 #T# in a for loop, the loop is repeated for each element of an iterable, so an iterable has to be given
 
@@ -114,7 +114,7 @@ for i1 in range1:
 #     [continue|break]
 # else:
 #     statements2
-#T# the statements1 are executed while condition1 is True, the statements2 are executed at the end of the loop, if there is no break, (for continue, break, int1, see the for loop subsection)
+#T# the statements1 are executed while condition1 returns True, the statements2 are executed at the end of the loop, if there is no break, (for the continue, break keywords, see the for loop subsection)
 
 int1 = 0
 while (int1 < 80):

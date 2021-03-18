@@ -3,6 +3,12 @@
 
 #T# Table of contents
 
+#C# Arithmetic operators
+#C# Relational operators
+#C# Assignment operators
+#C# Bitwise operators
+#C# Logical operators
+#C# Grouping operators
 #C# Expansions
 #C# - Brace expansion
 #C# - Tilde expansion
@@ -12,16 +18,308 @@
 #C# - Word splitting
 #C# - Pathname expansion
 #C# - Indirect expansion
-#C# Arithmetic operators
-#C# Relational operators
-#C# Assignment operators
-#C# Bitwise operators
-#C# Logical operators
-#C# Grouping operators
 #C# Shell operators
 #C# - History expansion
 
 #T# Beginning of content
+
+#C# Arithmetic operators
+
+# |-------------------------------------------------------------
+#T# these operators can be used in an arithmetic expansion, and so they can be used in expressions with the let command, when used inside an arithmetic expansion, the dollar sign $ can be omitted to avoid expanding the result if it's not going to be used as argument or output
+
+# SYNTAX (( var3 = var1 + var2 ))
+# SYNTAX let "var3 = var1 + var2"
+#T# this adds var1 and var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1 + var2 )) # var3 == 8
+let "var3 = var1 + var2" # var3 == 8
+
+# SYNTAX (( var3 = var1 - var2 ))
+# SYNTAX let "var3 = var1 - var2"
+#T# this subtracts var2 from var1, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1 - var2 )) # var3 == 2
+let "var3 = var1 - var2" # var3 == 2
+
+# SYNTAX (( var2 = -var1 ))
+# SYNTAX let "var2 = -var1"
+#T# this changes the sign of var1 and stores the result in var2
+
+var1=5
+(( var2 = -var1 )) # -5
+let "var2 = -var1" # -5
+
+# SYNTAX (( var3 = var1*var2 ))
+# SYNTAX let "var3 = var1*var2"
+#T# this multiplies var1 by var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1*var2 )) # var3 == 15
+let "var3 = var1*var2" # var3 == 15
+
+# SYNTAX (( var3 = var1/var2 ))
+# SYNTAX let "var3 = var1/var2"
+#T# this divides var1 by var2, and stores the result in var3, since Bash doesn't support floating point arithmetics, the result is the nearest integer to zero
+
+var1=5; var2=3
+(( var3 = var1/var2 )) # var3 == 1
+let "var3 = var1/var2" # var3 == 1
+
+# SYNTAX (( var3 = var1 % var2 ))
+# SYNTAX let "var3 = var1 % var2"
+#T# this does the modulo operation, which calculates the remainder of var1 divided by var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1 % var2 )) # var3 == 2
+let "var3 = var1 % var2" # var3 == 2
+
+# SYNTAX (( var3 = var1**var2 ))
+# SYNTAX let "var3 = var1**var2"
+#T# this elevates var1 to the power of var2, and stores the result in var3
+
+var1=5; var2=3
+(( var3 = var1**var2 )) # var3 == 125
+let "var3 = var1**var2" # var3 == 125
+
+# SYNTAX (( expression1, expression2 ))
+# SYNTAX let "expression1, expression2"
+#T# several expressions, expression1, expression2, etc, can be calculated one after the other, separated by comma, the last expression is sent as output
+
+(( var1 = 4 + 1, var2 = 5 - 2 )) # var1 == 5, var2 == 3
+let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
+# |-------------------------------------------------------------
+
+#C# Relational operators
+
+# |-------------------------------------------------------------
+#T# boolean results are interpreted as follows, when a command is successful its exit status is 0, when a command fails its exit status is 1 or any other number, because of this a value of 0 means true and a value of 1 means false, to see the exit status of a boolean operation the $? variable (parameter) is used, e.g. 'echo $?' shows said exit status
+
+#T# in Bash exists a syntax that permits the use of boolean variables with their traditional values, 0 for false, 1 for true, and assign this values to variables, effectively allowing the use of boolean variables, this syntax uses arithmetic expansion (()) which is shown later
+
+#T# comparisons between floating point numbers can be done with the bc command
+
+#T# comparisons in general are made in two ways (both give the same result), the test command, and the double brackets [[]]
+
+# SYNTAX test "$var1" "-o1" "$var2"
+# SYNTAX [[ "$var1" -o2 "$var2" ]]
+#T# each of -o1 and -o2 can be a kwarg option or an operator, var1 and var2 are variables being tested, there can be more (or less) variables and operators
+
+int1=5
+test "-v" "int1" # $? == 0 # true
+[[ -v "int1" ]]  # $? == 0 # true #| the -v var1 kwarg makes the test return true if var1 is defined (var1 is set in the interpreter)
+
+#T# the following are the relational operators shown using both the test command and the double brackest [[]]
+
+#T# equality operator between numbers
+int1=12; int2=5
+test "$int1" "-eq" "$int2" # $? == 1 # false
+[[ "$int1" -eq "$int2" ]]  # $? == 1 # false
+
+#T# equality operator between strings
+str1="stringA"; str2="stringA"
+test "$str1" "==" "$str2" # $? == 0 # true
+[[ "$str1" == "$str2" ]]  # $? == 0 # true
+
+#T# not equal operator between numbers
+int1=12; int2=5
+test "$int1" "-ne" "$int2" # $? == 0 # true
+[[ "$int1" -ne "$int2" ]]  # $? == 0 # true
+
+#T# not equal operator between strings
+str1="stringA"; str2="stringA"
+test "$str1" "!=" "$str2" # $? == 1 # false
+[[ "$str1" != "$str2" ]]  # $? == 1 # false
+
+#T# greater than operator between numbers
+int1=12; int2=5
+test "$int1" "-gt" "$int2" # $? == 0 # true
+[[ "$int1" -gt "$int2" ]]  # $? == 0 # true
+
+#T# greater than operator between strings
+str1="AgnirtS"; str2="StringA"
+test "$str1" ">" "$str2" # $? == 1 # false
+[[ "$str1" > "$str2" ]]  # $? == 1 # false
+
+#T# less than operator between numbers
+int1=12; int2=5
+test "$int1" "-lt" "$int2" # $? == 1 # false
+[[ "$int1" -lt "$int2" ]]  # $? == 1 # false
+
+#T# less than operator between strings
+str1="AgnirtS"; str2="StringA"
+test "$str1" "<" "$str2" # $? == 0 # true
+[[ "$str1" < "$str2" ]]  # $? == 0 # true
+
+#T# greater than or equal to operator between numbers
+int1=12; int2=5
+test "$int1" "-ge" "$int2" # $? == 0 # true
+[[ "$int1" -ge "$int2" ]]  # $? == 0 # true
+
+#T# less than or equal to operator between numbers
+int1=12; int2=5
+test "$int1" "-le" "$int2" # $? == 1 # false
+[[ "$int1" -le "$int2" ]]  # $? == 1 # false
+
+#T# this syntax is used to get boolean values with their traditional meanings, 0 for false, 1 for true, this can be applied with all the relational operators
+
+# SYNTAX (( bool1 = boolean_expression1 ))
+#T# boolean_expression1 is any valid boolean expression between numbers, bool1 is the variable where the result of the boolean expression is stored
+
+#T# it must be noted that boolean_expression1 must operate over numbers and not strings or characters, but the operators are those used for strings (which are traditionally used with numbers), e.g., to compare 5 greater than 4, the boolean expression would be 5 > 4, and so on
+
+(( bool1 = 4 == 5 )) # 0 # false
+(( bool1 = 4 != 5 )) # 1 # true
+(( bool1 = 7 > 4 ))  # 1 # true
+(( bool1 = 7 < 4 ))  # 0 # false
+(( bool1 = 7 >= 4 )) # 1 # true
+(( bool1 = 7 <= 4 )) # 0 # false
+
+# |-------------------------------------------------------------
+
+#C# Assignment operators
+
+# |-------------------------------------------------------------
+#T# assignments are done with arithmetic expansion and with the let command
+
+#T# equals operator
+(( int1 = 5 )) # 5
+let "int1 = 5" # 5
+
+#T# plus equals operator
+(( int1 = 5 ))
+(( int1 += 5 )) # 10
+let "int1 += 5" # 10
+
+#T# minus equals operator
+(( int1 = 10 ))
+(( int1 -= 5 )) # 5
+let "int1 -= 5" # 5
+
+#T# times equals operator
+(( int1 = 5 ))
+(( int1 *= 5 )) # 25
+let "int1 *= 5" # 25
+
+#T# divided by equals operator (the resulting integer is the nearest to zero)
+(( int1 = 25 ))
+(( int1 /= 5 )) # 5
+let "int1 /= 5" # 5
+
+#T# modulo equals operator
+(( int1 = 5 ))
+(( int1 %= 3 )) # 2
+let "int1 %= 3" # 2
+
+#T# pre increment operator
+(( int1 = 5 ))
+(( ++int1 )) # 6
+let "++int1" # 6
+
+#T# post increment operator
+(( int1 = 5 ))
+(( int1++ )) # 6
+let "int1++" # 6
+
+#T# pre decrement operator
+(( int1 = 5 ))
+(( --int1 )) # 4
+let "--int1" # 4
+
+#T# post decrement operator
+(( int1 = 5 ))
+(( int1-- )) # 4
+let "int1--" # 4
+# |-------------------------------------------------------------
+
+#C# Bitwise operators
+
+# |-------------------------------------------------------------
+#T# several bitwise operators can be used as assignment operators by appending an equal sign = at the end of the bitwise operator
+
+#T# and operator
+(( int1 = 0xA & 0x3 )) # 0x2
+let "int1 = 0xA & 0x3" # 0x2
+
+#T# and equals operator
+(( int1 = 0xA ))
+(( int1 &= 0x3 )) # 0x2
+let "int1 &= 0x3" # 0x2
+
+#T# or operator
+(( int1 = 0xA | 0x3 )) # 0xB
+let "int1 = 0xA | 0x3" # 0xB
+
+#T# or equals operator
+(( int1 = 0xA ))
+(( int1 |= 0x3 )) # 0xB
+let "int1 |= 0x3" # 0xB
+
+#T# xor operator
+(( int1 = 0xA ^ 0x3 )) # 0x9
+let "int1 = 0xA ^ 0x3" # 0x9
+
+#T# xor equals operator
+(( int1 = 0xA ))
+(( int1 ^= 0x3 )) # 0x9
+let "int1 ^= 0x3" # 0x9
+
+#T# not operator
+(( int1 = ~ 0xA )) # 0x5 #| the output is -0xB which is 0x5 in bits
+let "int1 = ~ 0xA" # 0x5 #| the output is -0xB which is 0x5 in bits
+
+#T# left shift operator
+(( int1 = 0x3 << 1 )) # 0x6
+let "int1 = 0x3 << 1" # 0x6
+
+#T# left shift equals operator
+(( int1 = 0x3 ))
+(( int1 <<= 1 )) # 0x6
+let "int1 <<= 1" # 0x6
+
+#T# right shift operator
+(( int1 = 0xE >> 1 )) # 0x7
+let "int1 = 0xE >> 1" # 0x7
+
+#T# right shift equals operator
+(( int1 = 0xE ))
+(( int1 >>= 1 )) # 0x7
+let "int1 >>= 1" # 0x7
+# |-------------------------------------------------------------
+
+#C# Logical operators
+
+# |-------------------------------------------------------------
+#T# for a primer on boolean logic see the relational operators
+
+#T# logical and operator
+var1="value1"; var2=5
+test "$var1" -a "$var2"  # $? == 0 # true
+[[ "$var1" && "$var2" ]] # $? == 0 # true
+(( bool1 = 7 && 0 )) # 0 # false
+
+#T# logical or operator
+var1=""; var2=""
+test "$var1" -o "$var2"  # $? == 1 # false
+[[ "$var1" || "$var2" ]] # $? == 1 # false
+(( bool1 = 7 || 0 )) # 1 # true
+
+#T# logical not operator
+var1=""
+test "!" "$var1" # $? == 0 # true
+[[ ! "$var1" ]]  # $? == 0 # true
+(( bool1 = ! 0 )) # 1 # true
+# |-------------------------------------------------------------
+
+#C# Grouping operators
+
+# |-------------------------------------------------------------
+#T# the basic grouping operator is the parenthesis pair ()
+num1='((3 + 4) * 5) + 1'
+echo $((num1)) # 36 #| ((7) * 5) + 1 == 35 + 1
+# |-------------------------------------------------------------
 
 #C# Expansions
 
@@ -406,303 +704,6 @@ echo ${!arr1[@]} # 0 1 2
 
 # |-------------------------------------------------------------
 
-#C# Arithmetic operators
-
-# |-------------------------------------------------------------
-#T# these operators can be used in an arithmetic expansion, and so they can be used in expressions with the let command, when used inside an arithmetic expansion, the dollar sign $ can be omitted to avoid expanding the result if it's not going to be used as argument or output
-
-# SYNTAX (( var3 = var1 + var2 ))
-# SYNTAX let "var3 = var1 + var2"
-#T# this adds var1 and var2, and stores the result in var3
-
-var1=5; var2=3
-(( var3 = var1 + var2 )) # var3 == 8
-let "var3 = var1 + var2" # var3 == 8
-
-# SYNTAX (( var3 = var1 - var2 ))
-# SYNTAX let "var3 = var1 - var2"
-#T# this subtracts var2 from var1, and stores the result in var3
-
-var1=5; var2=3
-(( var3 = var1 - var2 )) # var3 == 2
-let "var3 = var1 - var2" # var3 == 2
-
-# SYNTAX (( var2 = -var1 ))
-# SYNTAX let "var2 = -var1"
-#T# this changes the sign of var1 and stores the result in var2
-
-var1=5
-(( var2 = -var1 )) # -5
-let "var2 = -var1" # -5
-
-# SYNTAX (( var3 = var1*var2 ))
-# SYNTAX let "var3 = var1*var2"
-#T# this multiplies var1 by var2, and stores the result in var3
-
-var1=5; var2=3
-(( var3 = var1*var2 )) # var3 == 15
-let "var3 = var1*var2" # var3 == 15
-
-# SYNTAX (( var3 = var1/var2 ))
-# SYNTAX let "var3 = var1/var2"
-#T# this divides var1 by var2, and stores the result in var3, since Bash doesn't support floating point arithmetics, the result is the nearest integer to zero
-
-var1=5; var2=3
-(( var3 = var1/var2 )) # var3 == 1
-let "var3 = var1/var2" # var3 == 1
-
-# SYNTAX (( var3 = var1 % var2 ))
-# SYNTAX let "var3 = var1 % var2"
-#T# this does the modulo operation, which calculates the remainder of var1 divided by var2, and stores the result in var3
-
-var1=5; var2=3
-(( var3 = var1 % var2 )) # var3 == 2
-let "var3 = var1 % var2" # var3 == 2
-
-# SYNTAX (( var3 = var1**var2 ))
-# SYNTAX let "var3 = var1**var2"
-#T# this elevates var1 to the power of var2, and stores the result in var3
-
-var1=5; var2=3
-(( var3 = var1**var2 )) # var3 == 125
-let "var3 = var1**var2" # var3 == 125
-
-# SYNTAX (( expression1, expression2 ))
-# SYNTAX let "expression1, expression2"
-#T# several expressions, expression1, expression2, etc, can be calculated one after the other, separated by comma, the last expression is sent as output
-
-(( var1 = 4 + 1, var2 = 5 - 2 )) # var1 == 5, var2 == 3
-let "var1 = 3 + 2, var2 = 4 - 1" # var1 == 5, var2 == 3
-# |-------------------------------------------------------------
-
-#C# Relational operators
-
-# |-------------------------------------------------------------
-#T# boolean results are interpreted as follows, when a command is successful its exit status is 0, when a command fails its exit status is 1 or any other number, because of this a value of 0 means true and a value of 1 means false, to see the exit status of a boolean operation the $? variable (parameter) is used, e.g. 'echo $?' shows said exit status
-
-#T# in Bash exists a syntax that permits the use of boolean variables with their traditional values, 0 for false, 1 for true, and assign this values to variables, effectively allowing the use of boolean variables, this syntax uses arithmetic expansion (()) which is shown later
-
-#T# comparisons between floating point numbers can be done with the bc command
-
-#T# comparisons in general are made in two ways (both give the same result), the test command, and the double brackets [[]]
-
-# SYNTAX test "$var1" "-o1" "$var2"
-# SYNTAX [[ "$var1" -o2 "$var2" ]]
-#T# each of -o1 and -o2 can be a kwarg option or an operator, var1 and var2 are variables being tested, there can be more (or less) variables and operators
-
-int1=5
-test "-v" "int1" # $? == 0 # true
-[[ -v "int1" ]]  # $? == 0 # true #| the -v var1 kwarg makes the test return true if var1 is defined (var1 is set in the interpreter)
-
-#T# the following are the relational operators shown using both the test command and the double brackest [[]]
-
-#T# equality operator between numbers
-int1=12; int2=5
-test "$int1" "-eq" "$int2" # $? == 1 # false
-[[ "$int1" -eq "$int2" ]]  # $? == 1 # false
-
-#T# equality operator between strings
-str1="stringA"; str2="stringA"
-test "$str1" "==" "$str2" # $? == 0 # true
-[[ "$str1" == "$str2" ]]  # $? == 0 # true
-
-#T# not equal operator between numbers
-int1=12; int2=5
-test "$int1" "-ne" "$int2" # $? == 0 # true
-[[ "$int1" -ne "$int2" ]]  # $? == 0 # true
-
-#T# not equal operator between strings
-str1="stringA"; str2="stringA"
-test "$str1" "!=" "$str2" # $? == 1 # false
-[[ "$str1" != "$str2" ]]  # $? == 1 # false
-
-#T# greater than operator between numbers
-int1=12; int2=5
-test "$int1" "-gt" "$int2" # $? == 0 # true
-[[ "$int1" -gt "$int2" ]]  # $? == 0 # true
-
-#T# greater than operator between strings
-str1="AgnirtS"; str2="StringA"
-test "$str1" ">" "$str2" # $? == 1 # false
-[[ "$str1" > "$str2" ]]  # $? == 1 # false
-
-#T# less than operator between numbers
-int1=12; int2=5
-test "$int1" "-lt" "$int2" # $? == 1 # false
-[[ "$int1" -lt "$int2" ]]  # $? == 1 # false
-
-#T# less than operator between strings
-str1="AgnirtS"; str2="StringA"
-test "$str1" "<" "$str2" # $? == 0 # true
-[[ "$str1" < "$str2" ]]  # $? == 0 # true
-
-#T# greater than or equal to operator between numbers
-int1=12; int2=5
-test "$int1" "-ge" "$int2" # $? == 0 # true
-[[ "$int1" -ge "$int2" ]]  # $? == 0 # true
-
-#T# less than or equal to operator between numbers
-int1=12; int2=5
-test "$int1" "-le" "$int2" # $? == 1 # false
-[[ "$int1" -le "$int2" ]]  # $? == 1 # false
-
-#T# this syntax is used to get boolean values with their traditional meanings, 0 for false, 1 for true, this can be applied with all the relational operators
-
-# SYNTAX (( bool1 = boolean_expression1 ))
-#T# boolean_expression1 is any valid boolean expression between numbers, bool1 is the variable where the result of the boolean expression is stored
-
-#T# it must be noted that boolean_expression1 must operate over numbers and not strings or characters, but the operators are those used for strings (which are traditionally used with numbers), e.g., to compare 5 greater than 4, the boolean expression would be 5 > 4, and so on
-
-(( bool1 = 4 == 5 )) # 0 # false
-(( bool1 = 4 != 5 )) # 1 # true
-(( bool1 = 7 > 4 ))  # 1 # true
-(( bool1 = 7 < 4 ))  # 0 # false
-(( bool1 = 7 >= 4 )) # 1 # true
-(( bool1 = 7 <= 4 )) # 0 # false
-
-# |-------------------------------------------------------------
-
-#C# Assignment operators
-
-# |-------------------------------------------------------------
-#T# assignments are done with arithmetic expansion and with the let command
-
-#T# equals operator
-(( int1 = 5 )) # 5
-let "int1 = 5" # 5
-
-#T# plus equals operator
-(( int1 = 5 ))
-(( int1 += 5 )) # 10
-let "int1 += 5" # 10
-
-#T# minus equals operator
-(( int1 = 10 ))
-(( int1 -= 5 )) # 5
-let "int1 -= 5" # 5
-
-#T# times equals operator
-(( int1 = 5 ))
-(( int1 *= 5 )) # 25
-let "int1 *= 5" # 25
-
-#T# divided by equals operator (the resulting integer is the nearest to zero)
-(( int1 = 25 ))
-(( int1 /= 5 )) # 5
-let "int1 /= 5" # 5
-
-#T# modulo equals operator
-(( int1 = 5 ))
-(( int1 %= 3 )) # 2
-let "int1 %= 3" # 2
-
-#T# pre increment operator
-(( int1 = 5 ))
-(( ++int1 )) # 6
-let "++int1" # 6
-
-#T# post increment operator
-(( int1 = 5 ))
-(( int1++ )) # 6
-let "int1++" # 6
-
-#T# pre decrement operator
-(( int1 = 5 ))
-(( --int1 )) # 4
-let "--int1" # 4
-
-#T# post decrement operator
-(( int1 = 5 ))
-(( int1-- )) # 4
-let "int1--" # 4
-# |-------------------------------------------------------------
-
-#C# Bitwise operators
-# |-------------------------------------------------------------
-#T# several bitwise operators can be used as assignment operators by appending an equal sign = at the end of the bitwise operator
-
-#T# and operator
-(( int1 = 0xA & 0x3 )) # 0x2
-let "int1 = 0xA & 0x3" # 0x2
-
-#T# and equals operator
-(( int1 = 0xA ))
-(( int1 &= 0x3 )) # 0x2
-let "int1 &= 0x3" # 0x2
-
-#T# or operator
-(( int1 = 0xA | 0x3 )) # 0xB
-let "int1 = 0xA | 0x3" # 0xB
-
-#T# or equals operator
-(( int1 = 0xA ))
-(( int1 |= 0x3 )) # 0xB
-let "int1 |= 0x3" # 0xB
-
-#T# xor operator
-(( int1 = 0xA ^ 0x3 )) # 0x9
-let "int1 = 0xA ^ 0x3" # 0x9
-
-#T# xor equals operator
-(( int1 = 0xA ))
-(( int1 ^= 0x3 )) # 0x9
-let "int1 ^= 0x3" # 0x9
-
-#T# not operator
-(( int1 = ~ 0xA )) # 0x5 # truncating up to the first four bits
-let "int1 = ~ 0xA" # 0x5 # truncating up to the first four bits
-
-#T# left shift operator
-(( int1 = 0x3 << 1 )) # 0x6
-let "int1 = 0x3 << 1" # 0x6
-
-#T# left shift equals operator
-(( int1 = 0x3 ))
-(( int1 <<= 1 )) # 0x6
-let "int1 <<= 1" # 0x6
-
-#T# right shift operator
-(( int1 = 0xE >> 1 )) # 0x7
-let "int1 = 0xE >> 1" # 0x7
-
-#T# right shift equals operator
-(( int1 = 0xE ))
-(( int1 >>= 1 )) # 0x7
-let "int1 >>= 1" # 0x7
-# |-------------------------------------------------------------
-
-#C# Logical operators
-
-# |-------------------------------------------------------------
-#T# for a primer on boolean logic see the relational operators
-
-#T# logical and operator
-var1="value1"; var2=5
-test "$var1" -a "$var2"  # $? == 0 # true
-[[ "$var1" && "$var2" ]] # $? == 0 # true
-(( bool1 = 7 && 0 )) # 0 # false
-
-#T# logical or operator
-var1=""; var2=""
-test "$var1" -o "$var2"  # $? == 1 # false
-[[ "$var1" || "$var2" ]] # $? == 1 # false
-(( bool1 = 7 || 0 )) # 1 # true
-
-#T# logical not operator
-var1=""
-test "!" "$var1" # $? == 0 # true
-[[ ! "$var1" ]]  # $? == 0 # true
-(( bool1 = ! 0 )) # 1 # true
-# |-------------------------------------------------------------
-
-#C# Grouping operators
-
-# |-------------------------------------------------------------
-#T# the basic grouping operator is the parenthesis pair ()
-num1='((3 + 4) * 5) + 1'
-echo $((num1)) # 36 #| ((7) * 5) + 1 == 35 + 1
-# |-------------------------------------------------------------
-
 #C# Shell operators
 
 # |-------------------------------------------------------------
@@ -817,7 +818,7 @@ echo !gi:2
 
 # |-----
 
-#T# --- Test checks and comparisons
+#C# - Test checks and comparisons
 
 # |-----
 #T# the test command, and the double brackets [[]], are used to do more checks and comparisons than the already shown

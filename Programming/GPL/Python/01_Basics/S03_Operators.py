@@ -29,7 +29,7 @@ num1 = a - b  # 2
 
 #T# change sign operator (the same as the subtraction operator)
 a = 5
-num1 = -a # -5
+num1 = -a     # -5
 
 #T# multiplication operation
 a = 5; b = 3
@@ -120,38 +120,23 @@ num1 //= a # 6.0
 #C# Bitwise operators
 
 # |-------------------------------------------------------------
-#T# and operator ampersand &
-a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
-b =  0b00000000001101100010000001010111 # is 0x00362057 or 03547223
-#    0b00000000000000000000000000010001
-num1 = a & b
+#T# and operator
+num1 = 0xA & 0x3 # 0x2
 
-#T# or operator vertical bar |
-a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
-b =  0b00000000001101100010000001010111 # is 0x00362057 or 03547223
-#    0b00000000111111111010000001010111
-num1 = a | b
+#T# or operator
+num1 = 0xA | 0x3 # 0xB
 
-#T# xor operator caret ^
-a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
-b =  0b00000000001101100010000001010111 # is 0x00362057 or 03547223
-#    0b00000000111111111010000001000110
-num1 = a ^ b
+#T# xor operator
+num1 = 0xA ^ 0x3 # 0x9
 
-#T# not operator tilde ~
-a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
-#   -0b00000000110010011000000000010010
-num1 = ~a
+#T# not operator
+num1 = ~0xA # 0x5 #| the output is -0xB which is 0x5 in bits
 
-#T# left shift operator double less than signs <<
-a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
-#    0b00001100100110000000000100010000
-num1 = a << 4
+#T# left shift operator
+num1 = 0x3 << 1 # 0x6
 
-#T# right shift operator double greater than signs >>
-a =  0b00000000110010011000000000010001 # is 0x00C98011 or 13205521
-#    0b00000000000011001001100000000001
-num1 = a >> 4
+#T# right shift operator
+num1 = 0xE >> 1 # 0x7
 # |-------------------------------------------------------------
 
 #C# Ternary operator
@@ -176,11 +161,11 @@ bool1 = (a and b) # False
 
 #T# logical or operator
 a = True; b = False
-bool1 = (a or b)  # True
+bool1 = (a or b) # True
 
 #T# logical not operator
-b = False
-bool1 = (not b)   # True
+a = False
+bool1 = (not a) # True
 # |-------------------------------------------------------------
 
 #C# Grouping operators

@@ -14,7 +14,7 @@
 
 # |-------------------------------------------------------------
 #T# the import keyword imports a package or module to use its code in this file
-import S10_02_Packages_Module_example
+import S07_02_Packages_Module_example
 
 # |--------------------------------------------------\
 #T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch
@@ -42,14 +42,14 @@ from S06_Functions import func1 as f1
 
 #T# execute a module again with the reload function
 import importlib
-importlib.reload(S10_02_Packages_Module_example)
+importlib.reload(S07_02_Packages_Module_example)
 # |-------------------------------------------------------------
 
 #C# Using modules
 
 # |-------------------------------------------------------------
 #T# call module's function
-int1 = S10_02_Packages_Module_example.func1() # 56 # func1() returns 56
+int1 = S07_02_Packages_Module_example.func1() # 56 # func1() returns 56
 
 int1 = f1(7) # 53 # f1(arg1) returns 53
 # |-------------------------------------------------------------

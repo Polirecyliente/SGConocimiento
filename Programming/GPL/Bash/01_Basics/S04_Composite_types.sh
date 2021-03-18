@@ -12,7 +12,7 @@
 #C# Composite types in general
 
 # |-------------------------------------------------------------
-#T# the only supported composite types are the one dimensional array, and the one dimensional associative array, their elements can be of any type except for other arrays or associative arrays
+#T# the only composite types are the one dimensional array, and the one dimensional associative array, their elements can be of any type except for other arrays or associative arrays
 arr1=( "elem1" "elem2" "elem3" )
 declare -A associative1=( [key1]="value1" [key2]="value2" )
 

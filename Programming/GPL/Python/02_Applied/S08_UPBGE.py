@@ -5,25 +5,25 @@
 
 #T# Table of contents
 
-#T# The bge package
-#T# Sensors
-#T# --- Always sensor
-#T# --- Actuator sensor
-#T# --- Collision sensor
-#T# --- Delay sensor
-#T# --- Joystick sensor
-#T# --- Keyboard sensor
-#T# --- Message sensor
-#T# --- Mouse sensor
-#T# --- Near sensor
-#T# --- Property sensor
-#T# --- Radar sensor
-#T# --- Random sensor
-#T# --- Ray sensor
+#C# The bge package
+#C# Sensors
+#C# - Always sensor
+#C# - Actuator sensor
+#C# - Collision sensor
+#C# - Delay sensor
+#C# - Joystick sensor
+#C# - Keyboard sensor
+#C# - Message sensor
+#C# - Mouse sensor
+#C# - Near sensor
+#C# - Property sensor
+#C# - Radar sensor
+#C# - Random sensor
+#C# - Ray sensor
 
 #T# Beginning of content
 
-#T# The bge package
+#C# The bge package
 
 # |-------------------------------------------------------------
 #T# BGE stands for Blender Game Engine
@@ -92,7 +92,7 @@ def Player():
     Update()
 # |-------------------------------------------------------------
 
-#T# Sensors
+#C# Sensors
 
 # |-------------------------------------------------------------
 #T# import the SCA classes and others. SCA stands for Sensor Controller Actuator
@@ -102,7 +102,7 @@ from bge import types
 
 #T# all the attributes in the always sensor can be used with any other type of sensor as well
 
-#T# --- Always sensor
+#C# - Always sensor
 
 # |-----
 #T# create the always sensor, it sends a continuous positive signal
@@ -130,7 +130,7 @@ positive_flag_sensor_always1 = sensor_always1.positive
 status_sensor_always1 = sensor_always1.status
 # |-----
 
-#T# --- Actuator sensor
+#C# - Actuator sensor
 
 # |-----
 #T# create the actuator sensor, it senses when a given actuator is active
@@ -140,7 +140,7 @@ sensor_actuator1 = types.SCA_ActuatorSensor
 sensor_actuator1.actuator = 'actuator_name1'
 # |-----
 
-#T# --- Collision sensor
+#C# - Collision sensor
 
 # |-----
 #T# create the collision sensor, it senses when an object collides or touches the sensor. The object must be a rigid body, or if the object is static then it must be an actor, and the sensor must be type sensor and have collision bounds enabled
@@ -162,7 +162,7 @@ hitObject1 = sensor_collision1.hitObject
 hitObjectList1 = sensor_collision1.hitObjectList
 # |-----
 
-#T# --- Delay sensor
+#C# - Delay sensor
 
 # |-----
 #T# create the delay sensor, it waits for a number of logic ticks to then send a positive signal, and after a duration it turns off the signal
@@ -178,7 +178,7 @@ sensor_delay1.duration = 20
 sensor_delay1.repeat = True
 # |-----
 
-#T# --- Joystick sensor
+#C# - Joystick sensor
 
 # |-----
 #T# create the joystick sensor, it senses input from a joystick
@@ -197,7 +197,7 @@ axisValues1 = sensor_joystick1.axisValues
 numButtons1 = sensor_joystick1.numButtons
 # |-----
 
-#T# --- Keyboard sensor
+#C# - Keyboard sensor
 
 # |-----
 #T# create the keyboard sensor, it senses input from the keyboard
@@ -228,7 +228,7 @@ events1 = sensor_keyboard1.events
 keyStatus1 = sensor_keyboard1.getKeyStatus(events.F10KEY)
 # |-----
 
-#T# --- Message sensor
+#C# - Message sensor
 
 # |-----
 #T# create the message sensor, it senses for the arrival of a message that was sent from a message actuator
@@ -247,7 +247,7 @@ bodies1 = sensor_message1.bodies
 frameMessageCount1 = sensor_message1.frameMessageCount
 # |-----
 
-#T# --- Mouse sensor
+#C# - Mouse sensor
 
 # |-----
 #T# create the mouse sensor, it senses for a few mouse events, such as pressing the mouse buttons, moving the wheel
@@ -280,7 +280,7 @@ hitPosition1 = sensor_mouse1.hitPosition
 hitUV1 = sensor_mouse1.hitUV
 # |-----
 
-#T# --- Near sensor
+#C# - Near sensor
 
 # |-----
 #T# create the near sensor, it senses for objects near the sensor
@@ -302,7 +302,7 @@ hitObject1 = sensor_near1.hitObject
 hitObjectList1 = sensor_near1.hitObjectList
 # |-----
 
-#T# --- Property sensor
+#C# - Property sensor
 
 # |-----
 #T# create the property sensor, it takes the value of a given property and compares it to another value (can be itself), sending a signal according to the result of the comparison
@@ -322,7 +322,7 @@ sensor_property1.min = 3
 sensor_property1.max = 7
 # |-----
 
-#T# --- Radar sensor
+#C# - Radar sensor
 
 # |-----
 #T# create the radar sensor, it senses for objects near the sensor in a conic shape
@@ -353,7 +353,7 @@ coneOrigin1 = sensor_radar1.coneOrigin
 coneTarget1 = sensor_radar1.coneTarget
 # |-----
 
-#T# --- Random sensor
+#C# - Random sensor
 
 # |-----
 #T# create the random sensor, it randomly sends a signal, on average half of the logic ticks the sensor sends a signal, and the other half it doesn't
@@ -366,7 +366,7 @@ sensor_random1.seed = 220
 lastDraw1 = sensor_random1.lastDraw
 # |-----
 
-#T# --- Ray sensor
+#C# - Ray sensor
 
 # |-----
 #T# create the ray sensor, it senses if a ray intersects the face of an object

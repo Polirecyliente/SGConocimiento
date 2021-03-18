@@ -21,7 +21,7 @@
 
 #T# in an if conditional statement a condition is checked and if it returns 0 then the if block is executed, this also happens in an elif conditional statement
 
-#T# in an else conditional statement no condition is checked, but the else requires an if above it, the elif also requires an if above it, and at the end of all this there must be the fi keyword
+#T# in an else conditional statement no condition is checked, but the else requires an if above it, the elif also requires an if above it, the else block executes when the if and elif blocks do not, and at the end of all this there must be the fi keyword
 
 #T# in a switch case statement the value of a variable is checked and compared to a list of values, if there is a match then the statements associated with the matched value are executed
 
@@ -54,7 +54,7 @@ fi
 
 #T# conditional statements can be made into a one liner
 str1=a
-if [[ ${str1} == 'a' ]]; then echo "in a one liner if"; elif [[ ${str1} == 'b' ]]; then echo "in str1 = b"; else echo "in else"; fi # in a one liner
+if [[ ${str1} == 'a' ]]; then echo "in a one liner"; elif [[ ${str1} == 'b' ]]; then echo "in str1 = b"; else echo "in else"; fi # in a one liner
 # |-----
 
 #C# - Switch case statement
@@ -169,7 +169,7 @@ done
 #     statements1
 #     [continue int1|break int1]
 # done
-#T# the statements1 are executed while condition1 outputs 0, (for continue, break, int1, see the for loop subsection)
+#T# the statements1 are executed while condition1 outputs 0, (for the continue, break keywords, and for int1, see the for loop subsection)
 
 int1=4
 while [[ ${int1} -gt 0 ]]; do
@@ -192,7 +192,7 @@ done
 #     statements1
 #     [continue int1|break int1]
 # done
-#T# the statements1 are executed as long as condition1 outputs 1, until condition1 outputs 0, (for continue, break, int1, see the for loop subsection)
+#T# the statements1 are executed as long as condition1 outputs 1, until condition1 outputs 0, (for the continue, break keywords, and for int1, see the for loop subsection)
 
 int1=4
 until [[ ${int1} -ge 12 ]]; do
