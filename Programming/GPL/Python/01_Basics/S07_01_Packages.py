@@ -3,18 +3,21 @@
 
 #T# Table of contents
 
-#C# Importing modules
-#C# Using modules
 #C# Importing packages
+#C# Using modules
 #C# Info about modules and packages
 
 #T# Beginning of content
 
-#C# Importing modules
+#C# Importing packages
 
 # |-------------------------------------------------------------
-#T# the import keyword imports a package or module to use its code in this file
+#T# a package is imported with the import keyword, which imports a package or module to use its code in this file
 import S07_02_Packages_Module_example
+
+#T# import a package, which is a directory with an __init__.py file, when the package is imported the __init__.py file is executed
+import package
+int1 = package.anon_func1(8, -5) # 50
 
 # |--------------------------------------------------\
 #T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch
@@ -52,14 +55,6 @@ importlib.reload(S07_02_Packages_Module_example)
 int1 = S07_02_Packages_Module_example.func1() # 56 # func1() returns 56
 
 int1 = f1(7) # 53 # f1(arg1) returns 53
-# |-------------------------------------------------------------
-
-#C# Importing packages
-
-# |-------------------------------------------------------------
-#T# import a package, which is a directory with an __init__.py file, when the package is imported the __init__.py file is executed
-import package
-int1 = package.anon_func1(8, -5) # 50
 # |-------------------------------------------------------------
 
 #C# Info about modules and packages

@@ -3,9 +3,17 @@
 
 #T# Table of contents
 
+#C# Importing packages
 #C# Package creation
 
 #T# Beginning of content
+
+#C# Importing packages
+
+# |-------------------------------------------------------------
+#T# a package is imported with the source command applied to each sh file in the package
+# SYNTAX source /path/to/package1/file1.sh
+# |-------------------------------------------------------------
 
 #C# Package creation
 

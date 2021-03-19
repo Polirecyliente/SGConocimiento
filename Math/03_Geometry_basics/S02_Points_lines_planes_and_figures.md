@@ -57,7 +57,7 @@ There are proportions between the corresponding segments created with the points
 **Plane intersection postulate**: if two distinct planes intersect, then their intersection is a line. If the planes $\mathcal{M}$ and $\mathcal{N}$ intersect, then they intersect at a single line $l$.
 
 (Postulado de la regla)
-**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler. The distance between two points $A$ and $B$ is $B_value - A_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the ruler.
+**Ruler postulate**: when placing a ruler to measure the distance between two given points, said distance is the absolute value of the difference of the numbers of each point in the ruler. The distance between two points $A$ and $B$ is $B_{value} - A_{value}$, the subindex $value$ indicates that it's a measure, in this case a measure of the ruler.
 
 (Postulado de adición de segmentos)
 **Segment addition postulate**: given three collinear points with one point being between the other two (the endpoints), the measure of the distance between the endpoints, is equal to the sum of the distances of each endpoint to the point between them.
@@ -73,7 +73,7 @@ The segment addition postulate can be visualized with the following image.
 *Segment addition postulate*
 
 (Postulado del transportador)
-**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor. The measure of the angle $\angle ABC$ is $BC_value - AB_value$, the subindex $value$ indicates that it's a measure, in this case a measure of the protractor at the segments $\overline{AB}$ and $\overline{BC}$.
+**Protractor postulate**: when placing a protractor to measure the angle between two rays, said angle is the absolute value of the difference of the numbers of each ray in the protractor. The measure of the angle $\angle ABC$ is $BC_{value} - AB_{value}$, the subindex $value$ indicates that it's a measure, in this case a measure of the protractor at the segments $\overline{AB}$ and $\overline{BC}$.
 
 (Postulado de adición de ángulos)
 **Angle addition postulate**: given two angles that share a common ray and they cover distinct space, the measure of the angle between the two non common rays, is equal to the sum of the two angles given.

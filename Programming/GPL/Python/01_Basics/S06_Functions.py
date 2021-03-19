@@ -5,28 +5,27 @@
 
 #C# Function definition
 #C# Function call
-#C# Anonymous functions
-#C# Functions as first class citizens
-#C# Function decorators
-#C# Function annotations
 #C# Scope
 #C# Recursion
+#C# Anonymous functions
+#C# Functions as first class citizens
+#C# - Closures
+#C# Function decorators
+#C# Function annotations
 
 #T# Beginning of content
 
 #C# Function definition
 
 # |-------------------------------------------------------------
-#T# functions are defined with parameters, and a return value, they are called with arguments to calculate the return value
-
-#T# the function definition starts with the def keyword
+#T# functions are defined with parameters, and a return value, they are called with arguments to calculate the return value if any
 
 # SYNTAX function definition, parameters, docstring, return
-# def func1 (param1, param2 = default_value2, *varargs_tuple1): 
+# def func1(param1, param2 = default_value2, *varargs_tuple1):
 #     "docstring1"
 #     statements1
 #     return val1
-#T# func1 is the function name, param1 is an obligatory parameter, param2 has a default value default_value2, *varargs_tuple1 is a tuple with a variable amount of parameters, param1 has to come before the other kinds of parameters
+#T# the def keyword starts the function definition, func1 is the function name, param1 is an obligatory parameter, param2 has a default value default_value2, *varargs_tuple1 is a tuple with a variable amount of parameters, param1 has to come before the other kinds of parameters
 
 #T# "docstring1" is the help string, statements1 are executed when func1 is called, and then val1 is returned from the function, it can be an array
 
@@ -46,10 +45,47 @@ def func1 (param1, param2 = 5, *varargs_tuple1):
 #T# make a function call
 
 # SYNTAX return_value1 = func1(param1 = arg1, arg2, arg3, arg4)
-#T# as in the definition, arg1 is obligatory and is a keyword argument (kwarg), arg2 is optional and overrides the default value, arg3, and arg4 are varargs
+#T# as in the definition, arg1 is obligatory and is a keyword argument (kwarg), arg2 is optional and overrides the default value, arg3, and arg4 are varargs, return_value1 is a variable that stores the return value from func1
 
 arg1 = 6
 ret1 = func1(arg1, 5, 3) # 20.0
+# |-------------------------------------------------------------
+
+#C# Scope
+
+# |-------------------------------------------------------------
+#T# the global keyword puts a variable in global scope, this way a variable can be modified inside a function and retain the new value outside
+int1 = 5
+def func3():
+    global int1
+    int1 = 78
+
+    return 255
+
+func3()
+# int1 == 78
+# |-------------------------------------------------------------
+
+#C# Recursion
+
+# |-------------------------------------------------------------
+#T# recursion allows calling a function from inside itself
+
+# SYNTAX function recursion
+# def func1(params1):
+#     statements1
+#     func1(args1)
+#     return val1
+#T# same as before, but func1 is called inside func1 with arguments args1, statements1 must ensure that there is a way to stop calling func1, so that recursion stops
+
+var1 = 0
+def recursion_func1(int1):
+    if (int1 >= 0):
+        global var1
+        var1 = var1 + 1
+        recursion_func1(int1 - 1)
+recursion_func1(3)
+var1 # 4
 # |-------------------------------------------------------------
 
 #C# Anonymous functions
@@ -58,7 +94,7 @@ ret1 = func1(arg1, 5, 3) # 20.0
 #T# create anonymous functions with the lambda keyword
 
 # SYNTAX anon_func1 = lambda arg1, arg2, arg3: (arg1 + arg2)/arg3
-#T# the expresion after the colon can be any other, the function name is anon_func1, arg1, arg2, and arg3 are the arguments
+#T# the expresion after the colon can be any other (it's the return value), the function name is anon_func1, arg1, arg2, and arg3 are the arguments
 
 anon_func1 = lambda arg1, arg2: 7 * arg1 + (arg2 - 1)
 ret1 = anon_func1(3, 6) # 26
@@ -68,6 +104,10 @@ ret1 = anon_func1(3, 6) # 26
 
 # |-------------------------------------------------------------
 #T# as first class citizens, functions can be assigned to vars, passed as args, and returned from functions
+
+def func1 (param1, param2):
+    val1 = param1 * (5 + param2)
+    return val1
 
 #T# assign a function to a variable
 var1 = func1
@@ -82,6 +122,43 @@ def func2(f1, arg1):
 
 var1 = func2(func1, 17) # this returns func1(17, -3) as a function
 ret1 = var1() # 34, no need to use arguments
+
+#C# - Closures
+
+# |-----
+#T# closures are functions returned by a function that contains it, that use variables from the function that contains it
+
+#T# for a closure to be able to change a variable from the function that contains it, the nonlocal keyword is used
+
+# SYNTAX closure
+# def func1():
+#     var1 = 'val1'
+#     def closure1():
+#         nonlocal var1
+#         statements1
+#     return closure1
+#T# statements1 can modify var1, and each new call to closure1 will use its modified value of var1
+
+def func1():
+    var1 = 0
+    def closure1(arg1):
+        nonlocal var1
+        var1 += arg1
+        return var1
+    return closure1
+
+clo1 = func1()
+clo2 = func1()
+
+clo1(1)   #    1
+clo1(4)   #    5
+clo1(9)   #   14
+
+clo2(-2)  #   -2
+clo2(-8)  #  -10
+clo2(-90) # -100
+# |-----
+
 # |-------------------------------------------------------------
 
 #C# Function decorators
@@ -128,41 +205,4 @@ def func1(param1: "param1_annotation") -> "return_value_annotation":
 
 #T# get a dictionary with the annotations from a function with the __annotations__ attribute
 dict1 = func1.__annotations__
-# |-------------------------------------------------------------
-
-#C# Scope
-
-# |-------------------------------------------------------------
-int1 = 5
-#T# the global keyword puts a variable in global scope, this way a variable can be modified inside a function and retain the new value outside
-def func3():
-    global int1
-    int1 = 78
-
-    return 255
-
-func3()
-# int1 == 78
-# |-------------------------------------------------------------
-
-#C# Recursion
-
-# |-------------------------------------------------------------
-#T# recursion allows calling a function from inside itself
-
-# SYNTAX function recursion
-# def func1(params1):
-#     statements1
-#     func1(args1)
-#     return val1
-#T# same as before, but func1 is called inside func1 with arguments args1, statements1 must ensure that there is a way to stop calling func1, so that recursion stops
-
-var1 = 0
-def recursion_func1(int1):
-    if (int1 >= 0):
-        global var1
-        var1 = var1 + 1
-        recursion_func1(int1 - 1)
-recursion_func1(3)
-var1 # 4
 # |-------------------------------------------------------------

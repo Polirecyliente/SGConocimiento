@@ -1,0 +1,182 @@
+<!--
+    Basic syntax
+-->
+
+<!-- #T# Table of contents -->
+
+<!-- #C# Tags and attributes -->
+<!-- #C# Metadata of an HTML file -->
+<!-- #C# Paragraph and font style tags -->
+<!-- #C# Heading tags -->
+<!-- #C# List tags -->
+<!-- #C# Anchor tag -->
+
+<!-- #T# Beginning of content -->
+
+<!-- #C# Tags and attributes -->
+
+<!-- # |------------------------------------------------------------- -->
+<!-- #T# tags are containers of content, so they have a start or opening tag, and an end or closing tag, an opening tag is written as <tag1>, and its corresponding closing tag is written as </tag1>, any content in between the tags is labeled as content of type tag1 -->
+
+<!-- #T# there are tags that require no content between its opening and closing, these tags give enough information by themselves, such as a newline, which can be written as <br> or <br/> -->
+
+<!-- #T# the <!DOCTYPE> tag is used to signal the type of document, it's written at the start of an HTML file -->
+<!DOCTYPE html>
+
+<!-- #T# the <html> tag is the root tag of an HTML file, meaning that most other tags are contained inside of it (except the <!DOCTYPE> tag) -->
+<html>
+
+<!-- #T# the <body> tag is used for the content that will be displayed in a browser, as opposed to the metadata of the file -->
+    <body>
+
+<!-- #T# the <br> tag is used to signal a newline, it stands for break line-->
+        Hello World!<br/>
+
+<!-- #T# attributes are information about the tag itself, attributes are written inside the opening tag, after the name of the tag, for example <tag1 attribute1=value1> means that tag1 has an attribute1 with a value1 -->
+
+<!-- #T# the <a> tag is used to create links, it stands for anchor, it's used with the href attribute, the href attribute stores the reference of the link -->
+        <a href="https://duckduckgo.com">Link1</a>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Metadata of an HTML file -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+
+<!-- #T# The metadata of an HTML file is placed mostly inside the <head> tag, which must be placed before the <body> tag -->
+    <head>
+
+<!-- #T# the <title> tag stores the metadata title of the HTML file, this is commonly used by browsers as the name of the tab displaying this HTML file -->
+        <title>
+            Title of the HTML file
+        </title>
+    </head>
+    <body>
+        Content
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Paragraph and font style tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the basic paragraph tag is the <p> tag -->
+        <p>Line1</p>
+
+<!-- #T# the <em> tag is for emphasis of its contents, commonly displayed with an italic font style -->
+        <p>Word1<em> emphasized word1 </em>word2</p>
+
+<!-- #T# the <i> tag is used for an italic font style -->
+        <p>Word1<i> italics1 </i>word2</p>
+
+<!-- #T# the <strong> tag is another form of emphasis, commonly displayed with a bold font style -->
+        <p>Word1<strong> strong word1 </strong>word2</p>
+
+<!-- #T# the <b> tag is used for a bold font style -->
+        <p>Word1<b> bold1 </b>word2</p>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Heading tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# there are six leves of headings, created with the tags <h1>, <h2>, <h3>, <h4>, <h5>, <h6> -->
+        <h1>Heading 1</h1>
+            <p>Paragraph under h1</p>
+        <h2>Heading 2</h2>
+            <p>Paragraph under h2</p>
+        <h3>Heading 3</h3>
+            <p>Paragraph under h3</p>
+        <h4>Heading 4</h4>
+            <p>Paragraph under h4</p>
+        <h5>Heading 5</h5>
+            <p>Paragraph under h5</p>
+        <h6>Heading 6</h6>
+            <p>Paragraph under h6</p>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# List tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <ol> tag stands for ordered list, it's used to create ordered lists, such as a numbered list -->
+        <ol>
+
+<!-- #T# the <li> tag stands for list item, it creates an item inside a list -->
+            <li>
+                First item
+            </li>
+            <li>
+                Second item
+            </li>
+        </ol>
+
+<!-- #T# the <ul> tag stands for unordered list, it's used to create unordered lists, such as a bulleted list -->
+        <ul>
+
+<!-- #T# the <li> tag also creates list items here -->
+            <li>
+                Item
+            </li>
+            <li>
+                Other item
+            </li>
+        </ul>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Anchor tag -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <a> tag is the anchor tag, it's used to link to another location -->
+
+<!-- #T# the href attribute of the <a> tag stores the location being linked to -->
+
+<!-- #T# a given <tag1> can be linked to with an anchor, for this, the <tag1> is identified with the id attribute, if <tag1 id="id1">, then an anchor <a> links to <tag1> with <a href="#id1"> -->
+        <p><a href="#id1">Go to the identified paragraph</a></p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p id="id1">Identified paragraph</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->

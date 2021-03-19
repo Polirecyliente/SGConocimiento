@@ -83,7 +83,8 @@ $var1 arg1 # with arg1, , and
 #T# local scope can be achieved regardless of the use of braces or parentheses with the local command
 
 # SYNTAX local scope variables inside functions
-# func1() {
+# func1()
+# {
 #     local -o1 var1
 #     statements1
 # }

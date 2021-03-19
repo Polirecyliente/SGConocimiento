@@ -6,7 +6,7 @@
 #C# Basic usage
 #C# General flags and kwargs
 #C# Inserting images
-#C# Pandoc filters
+#C# Pandoc Lua filters
 
 #T# Beginning of content
 
@@ -71,9 +71,14 @@ pandoc -s file1
 pandoc --resource-path Math/:Science/dir1/ input_file1.md -o output_file1.pdf
 # |-------------------------------------------------------------
 
-#C# Pandoc filters
+#C# Pandoc Lua filters
 
 # |-------------------------------------------------------------
-#T# 
+#T# Lua filters for Pandoc, are applied with the --lua-filter kwarg
+pandoc --lua-filter file1.lua input_file1.md -o output_file1.pdf
 
+#T# several filters can be applied, from left to right one after the other
+pandoc --lua-filter file1.lua --lua-filter file2.lua input_file1.md -o output_file1.pdf
+
+#T# for information about how to create Lua filters, see /SGConocimiento/Programming/GPL/Lua/02_Applied/S01_Pandoc_filters.lua
 # |-------------------------------------------------------------

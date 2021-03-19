@@ -19,21 +19,21 @@
 <!-- #T# Beginning of content -->
 
 <!-- # |------------------------------------------------------------- -->
-<!-- #T# using the CLI, render a Markdown file as an HTML file with the pandoc command -->
+<!-- #T# render a Markdown file as an HTML file with the pandoc command -->
 
 <!-- # pandoc --katex input_file1.md -o output_file1.html -->
 
-<!-- #T# using the CLI, render a Markdown file as a PDF file with the pandoc command -->
+<!-- #T# render a Markdown file as a PDF file with the pandoc command -->
 
 <!-- # pandoc --katex input_file1.md -o output_file1.pdf -->
 
-<!-- #T# render a Markdown file as an HTML file (no CLI) using the Markdown Preview Enhanced extension, right click the .md preview file and click "Open in Browser", this can be printed as PDF in Chromium -->
+<!-- #T# Mathjax and/or Katex must be installed locally to render math equations from Markdown to HTML using Pandoc -->
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Metadata -->
 
 <!-- # |------------------------------------------------------------- -->
-<!-- #T# metadata key value pairs are enclosed inside a three hyphens pair, a key is separated from its value with a colon -->
+<!-- #T# metadata and configuration are enclosed inside a triple hyphens pair, using YAML syntax, at the start of a file -->
 
 ---
 key1: value1

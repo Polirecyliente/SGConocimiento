@@ -1,0 +1,63 @@
+
+#   Basic syntax
+
+#T# Table of contents
+
+#C# Placing configuration in a file
+#C# Syntax to represent data
+
+#T# Beginning of content
+
+#C# Placing configuration in a file
+
+# |-------------------------------------------------------------
+#T# YAML can be used to place configuration in a file, for a program that will read that file, for example, a source code file of a given language can begin with YAML to configure how to compile the source code file, the configuration is interpreted by the compiler which understands YAML syntax
+
+#T# in most cases, YAML is placed in a file within triple hyphens, to separate the YAML syntax from the regular syntax of the file
+---
+key1: value1
+key2: value2
+---
+# |-------------------------------------------------------------
+
+#C# Syntax to represent data
+
+# |-------------------------------------------------------------
+#T# to represent hierarchical data, indentation is used, a line that is more indented than the previous line, means that it has data subordinated to the data of the previous line
+
+#T# key value pairs are created with the following syntax
+# SYNTAX key1: value1
+root1:
+  key1: value1
+  key2: value2
+
+#T# a key can have a list of values, a list is created with the following syntaxes
+
+# SYNTAX key1:
+#         - list_value1
+#         - list_value2
+#         - list_value3
+
+# SYNTAX key1: ["list_value1", "list_value2", "list_value3"]
+
+root1:
+  key1:
+   - list_value1
+   - list_value2
+   - list_value3
+
+root1:
+  key1: ["list_value1", "list_value2", "list_value3"]
+
+#T# the data types are the regular numeric and string, but there is also the null value, boolean values can be True/False
+root1:
+  key1: null
+  num1: 5
+  num2: 3.14
+  bool1: True
+  bool2: False
+  bool3: Yes
+  bool4: No
+  bool5: On
+  bool6: Off
+# |-------------------------------------------------------------

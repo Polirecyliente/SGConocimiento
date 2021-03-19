@@ -84,4 +84,15 @@ for index1, val1 in ipairs(table1) do print(index1, val1) end
 -- # 1    value1
 -- # 2    2
 -- # 3    3
+
+-- #T# unpack an array table with the table.unpack function
+table1 = {'value1', 2, 3}
+var1, var2, var3 = table.unpack(table1)
+var1 -- # value1
+var2 -- # 2
+var3 -- # 3
+
+-- #T# create and access a nested associative array table
+table1 = {key1 = 'val1', key2 = {sub_key1 = 'sub_val1'}}
+str1 = table1.key2.sub_key1 -- # sub_val1
 -- # |-------------------------------------------------------------
