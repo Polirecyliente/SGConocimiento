@@ -5,11 +5,17 @@
 <!-- #T# Table of contents -->
 
 <!-- #C# Tags and attributes -->
-<!-- #C# Metadata of an HTML file -->
+<!-- #C# Metadata tags -->
 <!-- #C# Paragraph and font style tags -->
-<!-- #C# Heading tags -->
+<!-- #C# Sectioning tags -->
 <!-- #C# List tags -->
+<!-- #C# - Description lists -->
 <!-- #C# Anchor tag -->
+<!-- #C# Image tag -->
+<!-- #C# Table tags -->
+<!-- #C# Division and span tags -->
+<!-- #C# Information tags -->
+<!-- #C# Tags for blocks of text -->
 
 <!-- #T# Beginning of content -->
 
@@ -23,36 +29,45 @@
 <!-- #T# the <!DOCTYPE> tag is used to signal the type of document, it's written at the start of an HTML file -->
 <!DOCTYPE html>
 
-<!-- #T# the <html> tag is the root tag of an HTML file, meaning that most other tags are contained inside of it (except the <!DOCTYPE> tag) -->
+<!-- #T# the <html> tag is the root tag of an HTML file, it's used to contain, inside of it, all or most of the other tags -->
 <html>
 
-<!-- #T# the <body> tag is used for the content that will be displayed in a browser, as opposed to the metadata of the file -->
+<!-- #T# the <body> tag is used to place the content that will be displayed in a browser, as opposed to the metadata of the file -->
     <body>
 
-<!-- #T# the <br> tag is used to signal a newline, it stands for break line-->
+<!-- #T# the <br> tag stands for break line, it's used to signal a newline-->
         Hello World!<br/>
 
 <!-- #T# attributes are information about the tag itself, attributes are written inside the opening tag, after the name of the tag, for example <tag1 attribute1=value1> means that tag1 has an attribute1 with a value1 -->
 
-<!-- #T# the <a> tag is used to create links, it stands for anchor, it's used with the href attribute, the href attribute stores the reference of the link -->
+<!-- #T# the <a> tag stands for anchor, it's used to create links with the href attribute, the href attribute stores the reference of the link -->
         <a href="https://duckduckgo.com">Link1</a>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #C# Metadata of an HTML file -->
+<!-- #C# Metadata tags -->
 
 <!-- # |------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html>
 
-<!-- #T# The metadata of an HTML file is placed mostly inside the <head> tag, which must be placed before the <body> tag -->
+<!-- #T# the <head> tag is used to place most of the metadata of an HTML file, the <head> tag must be placed before the <body> tag -->
     <head>
 
-<!-- #T# the <title> tag stores the metadata title of the HTML file, this is commonly used by browsers as the name of the tab displaying this HTML file -->
+<!-- #T# the <title> tag is used to store the metadata title of the HTML file, this is commonly used by browsers as the name of the tab displaying this HTML file -->
         <title>
             Title of the HTML file
         </title>
+
+<!-- #T# the <meta> tag is used to place metadata about the HTML file -->
+<!-- #T#     the charset attribute is a string with the character encoding for the HTML file, the most common currently is "utf8" -->
+<!-- #T#     the name attribute and the content attribute are used together, the name attribute is a string that sets the name of the metadata, the content attribute is a string that sets the value of the metadata -->
+        <meta charset="utf8">
+        <meta name="author" content="Polirecyliente1">
+        <meta name="description" content="Metadata of this HTML file">
+        <meta name="keywords" content="html, metadata">
+        <meta http-equiv="refresh" content="60"> <!-- #| this refreshes the page every 60 seconds automatically -->
     </head>
     <body>
         Content
@@ -67,32 +82,39 @@
 <html>
     <body>
 
-<!-- #T# the basic paragraph tag is the <p> tag -->
+<!-- #T# the <p> tag stands for paragraph, it's used to write separate paragraphs -->
         <p>Line1</p>
 
-<!-- #T# the <em> tag is for emphasis of its contents, commonly displayed with an italic font style -->
+<!-- #T# the <em> tag stands for emphasis, it's used for emphasis of its contents, commonly displayed with an italic font style -->
         <p>Word1<em> emphasized word1 </em>word2</p>
 
-<!-- #T# the <i> tag is used for an italic font style -->
+<!-- #T# the <i> tag stands for italic, it's used for an italic font style -->
         <p>Word1<i> italics1 </i>word2</p>
 
-<!-- #T# the <strong> tag is another form of emphasis, commonly displayed with a bold font style -->
+<!-- #T# the <strong> tag is used as another form of emphasis, commonly displayed with a bold font style -->
         <p>Word1<strong> strong word1 </strong>word2</p>
 
-<!-- #T# the <b> tag is used for a bold font style -->
+<!-- #T# the <b> tag stands for bold, it's used for a bold font style -->
         <p>Word1<b> bold1 </b>word2</p>
+
+<!-- #T# the <pre> tag stands for preformatted text, it's used to display the text using the indentations and spacing of this file -->
+        <p>
+            <pre>
+                Text indented with four tabs.
+            </pre>
+        </p>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #C# Heading tags -->
+<!-- #C# Sectioning tags -->
 
 <!-- # |------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html>
     <body>
 
-<!-- #T# there are six leves of headings, created with the tags <h1>, <h2>, <h3>, <h4>, <h5>, <h6> -->
+<!-- #T# there are six leves of headings, created with the tags <h1>, <h2>, <h3>, <h4>, <h5>, and <h6> -->
         <h1>Heading 1</h1>
             <p>Paragraph under h1</p>
         <h2>Heading 2</h2>
@@ -105,6 +127,45 @@
             <p>Paragraph under h5</p>
         <h6>Heading 6</h6>
             <p>Paragraph under h6</p>
+        
+<!-- #T# the <article> tag is used to create articles, i.e. independent pieces of content -->
+        <article>
+
+<!-- #T#  -->
+            
+<!-- #T# article tags: <header>, <section id>, <aside>, <footer> -->
+            <header>
+                <p>Word1header</p>
+            </header>
+            <section id="sect1ID">
+                <h1>Section heading1</h1>
+                <p>Word1sect1</p>
+            </section>
+            <section id="sect2ID">
+                <p>Word1sect2</p>
+                <aside>
+                    <p>Word1aside</p>
+                </aside>
+            </section>
+            <footer>
+                <p>Word1footer</p>
+            </footer>
+        </article>
+
+<!-- #T# figure tags: <figure>, <figcaption> -->
+        <figure>
+            <img src="../../Octave/Section1/image1_3Aux.svg">
+            <figcaption>figureCaption</figcaption>
+        </figure>
+
+<!-- #T# navigation tag: <nav id> -->
+        <nav id="navID">
+            <ul>
+                <li>nav1</li>
+                <li>nav2</li>
+                <li>nav3</li>
+            </ul>
+        </nav>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
@@ -119,7 +180,7 @@
 <!-- #T# the <ol> tag stands for ordered list, it's used to create ordered lists, such as a numbered list -->
         <ol>
 
-<!-- #T# the <li> tag stands for list item, it creates an item inside a list -->
+<!-- #T# the <li> tag stands for list item, it's used to create an item inside a list -->
             <li>
                 First item
             </li>
@@ -141,6 +202,31 @@
         </ul>
     </body>
 </html>
+
+<!-- #C# - Description lists -->
+
+<!-- # |----- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <dl> tag stands for description list, it's used to create a list of terms or concepts, each with one or more descriptions -->
+        <dl>
+
+<!-- #T# the <dt> tag stands for description list term, it's used to create a term in a description list -->
+            <dt>term1</dt>
+
+<!-- #T# the <dd> tag stands for description list description, it's used to create a description for a term in a description list -->
+            <dd>description1</dd>
+            <dd>description2</dd>
+            <dt>term2</dt>
+            <dt>term3</dt>
+            <dd>description1</dd> <!-- #| this description1 can be applied to both term2 and term3 -->
+        </dl>
+    </body>
+</html>
+<!-- # |----- -->
+
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Anchor tag -->
@@ -177,6 +263,184 @@
         <p>ipsum</p>
         <p>ipsum</p>
         <p>ipsum</p>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Image tag -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <img> tag stands for image, it's used to insert images -->
+<!-- #T#     the src attribute links to the image itself -->
+<!-- #T#     the width attribute is a number that sets the width of the image in pixels -->
+<!-- #T#     the height attribute is a number that sets the height of the image in pixels -->
+<!-- #T#     the alt attribute is a string with an alternative description for the image -->
+        <img src="../../../../Math/05_Analytic_geometry/Images/S01/Rise_and_run_between_two_points.png" width="500" height="450" alt="Graphic_Coordinates"/>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Table tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <table> tag is used to create tables -->
+        <table>
+
+<!-- #T# the <caption> tag is used to set the caption of the table, it's commonly placed on top of the table, as a title -->
+            <caption>Table caption1</caption>
+
+<!-- #T# the <colgroup> tag stands for column group, it's used to place the columns of the table into groups -->
+            <colgroup>
+
+<!-- #T# the <col> tag stands for column, it's used to create groups of columns inside a <colgroup> tag, the group as a unity can be customized -->
+<!-- #T#     the span attribute is a string number that sets how many contiguous columns are placed in the group, towards the right of the table -->
+                <col span="2">
+            </colgroup>
+
+<!-- #T# the <thead> tag stands for table head, it's used to create rows at the head of the table -->
+            <thead>
+
+<!-- #T# the <tr> tag stands for table row, it's used to create additional table rows -->
+                <tr>
+
+<!-- #T# the <th> tag stands for table header, it's used to create the table headers, which can be placed in rows or in columns -->
+                    <th>Header1</th>
+                    <th>Header2</th>
+                </tr>
+                </tr>
+
+<!-- #T# the <td> tag stands for table data, it's used to place data in the table, which is placed in the columns of the table -->
+<!-- #T#     the rowspan attribute is a string number that sets how many rows will be spanned, towards the right, by the table data -->
+<!-- #T#     the colspan attribute is a string number that sets how many columns will be spanned, towards the bottom, by the table data -->
+                    <td>Head cell(1, 1)</td>
+                    <td>Head cell(1, 2)</td>
+                </tr>
+                <tr>
+                    <td>Head cell(2, 1)</td>
+                    <td rowspan="2">Head cell(2, 2) and head cell(3, 2)</td>
+                </tr>
+                <tr>
+                    <td>Head cell(3, 1)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Head cell(4, 1) and head cell(4, 2)</td>
+                </tr>
+            </thead>
+
+<!-- #T# the <tbody> tag stands for table body, it's used to create rows in the body of the table, after the head -->
+            <tbody>
+                <tr>
+                    <td>Cell(5, 1)</td>
+                    <td>Cell(5, 2)</td>
+                </tr>
+            </tbody>
+
+<!-- #T# the <tfoot> tag stands for table footer, it's used to create rows in the footer of the table, after the body -->
+            <tfoot>
+                <tr>
+                    <td>Footer cell(6, 1)</td>
+                    <td>Footer cell(6, 2)</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Division and span tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <div> tag stands for division, it's used to divide content -->
+<!-- #T#     the id attribute is a string that sets an identification for the division -->
+        <div id="id1">
+
+<!-- #T# the <span> tag is used to span parts inside a tag -->
+<!-- #T#     the class attribute is a string that sets an identification for the span -->
+            <p>Normal text, <span class="class1"> words in span, </span>normal text</p>
+        </div>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Information tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <abbr> tag stands for abbreviation, it's used to contain abbreviated words or concepts -->
+<!-- #T#     the title attribute is a string that sets the full words or concepts abbreviated, this string is shown in browsers when hovering the mouse over the abbreviation -->
+        <p>Normal text, <abbr title="HyperText Markup Language">HTML abbreviation</abbr>, normal text</p>
+
+<!-- #T# the <address> tag is used to put an address -->
+        <address>address1, email_address1</address>
+
+<!-- #T# the <dfn> tag stands for definition, it's used to place concepts or terms -->
+<!-- #T#     the title attribute is a string that sets the definition of the concept, this string is shown in browsers when hovering the mouse over the concept -->
+        <p>Normal text, <dfn title="Definition of the concept1">concept1</dfn>, normal text</p>
+
+<!-- #T# the <bdo> stands for bidirectional, it's used to write bidirectional text -->
+<!-- #T#     the dir attribute is a string that sets the direction of the text, "rtl" stands for right to left, "ltr" stands for left to right -->
+        <bdo dir="rtl">right to left text1</bdo>
+
+<!-- #T# the <ins> tag stands for insert, it's used to show inserted text -->
+<!-- #T#     the datetime attribute is a datetime string with the date and time in which the text was inserted -->
+<!-- #T#     the cite attribute is a string that links or shows the origin source for the inserted text -->
+        <ins datetime="2020-05-23" cite="Section2_3.html">Inserted text1</ins>
+
+<!-- #T# the <del> tag stands for delete, it's used to show deleted text -->
+<!-- #T# attributes of the <del> tag can be seen in the <ins> tag -->
+        <del datetime="2010-05-22" cite="Section2_1.html">Deleted text1</del>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Tags for blocks of text -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <q> tag stands for quote, it's used to quote external sources inline -->
+        <p>Normal text, <q>inline quote1</q>, normal text</p>
+
+<!-- #T# the <blockquote> tag is used to create a quote in a block of text -->
+<!-- #T#     the cite attribute is a string that links or shows the source of the quote -->
+        <blockquote cite="https://htmldog.com/guides/html/">
+            <p>Text in a blockquote</p>
+        </blockquote>
+
+<!-- #T# the <cite> tag is used to write the name of a citation source -->
+        <p>Normal text, <cite>quote source1</cite>, normal text</p>
+
+<!-- #T# the <code> tag is used to place source code -->
+        <p>Normal text, 
+            <code>source code1
+
+<!-- #T# the <var> tag stands for variable, it's used to represent source code variables-->
+                <var>var1</var> = 1
+
+<!-- #T# the <kbd> tag stands for keyboard, it's used to represent keyboard input or other input in source code -->
+                <kbd>input1</kbd>
+
+<!-- #T# the <samp> tag stands for sample, it's used to represent sample output from a program in source code -->
+                <samp>output1</samp>
+            </code>
+        </p>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
