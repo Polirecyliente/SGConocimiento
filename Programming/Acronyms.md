@@ -6,6 +6,7 @@
 #C# Algorithms
 #C# - Cryptography
 #C# Languages
+#C# Networking
 
 #T# Beginning of content
 -->
@@ -26,4 +27,10 @@ RSA: Rivest, Shamir, Adleman, an asymmetric cryptography (public key) algorithm.
 
 AST: Abstract Syntax Tree, a tree diagram to show the syntactic elements in a given source code.
 
-DOM: Document Object Model, in a markup language, the DOM is the set of tags and their hierarchical structure 
+DOM: Document Object Model, in a markup language, the DOM is the set of tags and their hierarchical structure.
+
+# Networking
+
+MIME: Multipurpose Internet Mail Extensions, a way to express file extensions.
+
+HTTP: Hypertext Transfer Protocol, a networking protocol to exchange hypertext files.

@@ -11,11 +11,14 @@
 <!-- #C# List tags -->
 <!-- #C# - Description lists -->
 <!-- #C# Anchor tag -->
-<!-- #C# Image tag -->
+<!-- #C# Image tags -->
 <!-- #C# Table tags -->
 <!-- #C# Division and span tags -->
 <!-- #C# Information tags -->
 <!-- #C# Tags for blocks of text -->
+<!-- #C# Tags that generate shapes -->
+<!-- #C# Embedded content -->
+<!-- #C# Form and input tags -->
 
 <!-- #T# Beginning of content -->
 
@@ -97,6 +100,24 @@
 <!-- #T# the <b> tag stands for bold, it's used for a bold font style -->
         <p>Word1<b> bold1 </b>word2</p>
 
+<!-- #T# the <mark> tag is used to highlight text -->
+        <mark>marked text1</mark>
+
+<!-- #T# the <small> tag is used for small print text -->
+        <small>small text1</small>
+
+<!-- #T# the <s> tag is used for strikethrough text -->
+        <s>strikethrough text1</s>
+
+<!-- #T# the <u> tag is used for underlined text -->
+        <u>unarticulatedText</u>
+
+<!-- #T# the <sub> tag is used for subscript text -->
+        <sub>subscript text1</sub>
+    
+<!-- #T# the <sup> tag is used for superscript text -->
+        <sup>superscript text1</sup>
+
 <!-- #T# the <pre> tag stands for preformatted text, it's used to display the text using the indentations and spacing of this file -->
         <p>
             <pre>
@@ -131,39 +152,35 @@
 <!-- #T# the <article> tag is used to create articles, i.e. independent pieces of content -->
         <article>
 
-<!-- #T#  -->
-            
-<!-- #T# article tags: <header>, <section id>, <aside>, <footer> -->
+<!-- #T# the <header> tag is used to place a header for an <article> tag -->
             <header>
-                <p>Word1header</p>
+                <p>article header1</p>
             </header>
-            <section id="sect1ID">
-                <h1>Section heading1</h1>
-                <p>Word1sect1</p>
-            </section>
-            <section id="sect2ID">
-                <p>Word1sect2</p>
+
+<!-- #T# the <section> tag is used to create a section -->
+<!-- #T#     the id attribute is a string that identifies the section, so it can be anchored -->
+            <section id="id1">
+                <p>section words1</p>
+
+<!-- #T# the <aside> tag is used to write an aside, inside a <section> tag -->
                 <aside>
-                    <p>Word1aside</p>
+                    <p>aside words1</p>
                 </aside>
             </section>
+
+<!-- #T# the <footer> tag is used to write the footer part of an <article> tag -->
             <footer>
-                <p>Word1footer</p>
+                <p>footer words1</p>
             </footer>
         </article>
 
-<!-- #T# figure tags: <figure>, <figcaption> -->
-        <figure>
-            <img src="../../Octave/Section1/image1_3Aux.svg">
-            <figcaption>figureCaption</figcaption>
-        </figure>
-
-<!-- #T# navigation tag: <nav id> -->
-        <nav id="navID">
+<!-- #T# the <nav> tag stands for navigation, it's used to create a navigation table, from which to link to different parts in the HTML file or other locations -->
+<!-- #T#     the id attribute is a string that identifies the navigation block, so it can be anchored -->
+        <nav id="id1">
             <ul>
-                <li>nav1</li>
-                <li>nav2</li>
-                <li>nav3</li>
+                <li>navigation item1</li>
+                <li>navigation item2</li>
+                <li>navigation item3</li>
             </ul>
         </nav>
     </body>
@@ -267,19 +284,26 @@
 </html>
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #C# Image tag -->
+<!-- #C# Image tags -->
 
 <!-- # |------------------------------------------------------------- -->
 <!DOCTYPE html>
 <html>
     <body>
 
+<!-- #T# the <figure> tag is used to insert a figure, commonly to contain an image -->
+        <figure>
+
 <!-- #T# the <img> tag stands for image, it's used to insert images -->
 <!-- #T#     the src attribute links to the image itself -->
 <!-- #T#     the width attribute is a number that sets the width of the image in pixels -->
 <!-- #T#     the height attribute is a number that sets the height of the image in pixels -->
 <!-- #T#     the alt attribute is a string with an alternative description for the image -->
-        <img src="../../../../Math/05_Analytic_geometry/Images/S01/Rise_and_run_between_two_points.png" width="500" height="450" alt="Graphic_Coordinates"/>
+            <img src="../../../../Math/05_Analytic_geometry/Images/S01/Rise_and_run_between_two_points.png" width="500" height="450" alt="Graphic_Coordinates"/>
+
+<!-- #T# the <figcaption> tag is used to place a caption for a <figure> tag -->
+            <figcaption>figure caption1</figcaption>
+        </figure>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
@@ -381,6 +405,10 @@
 <html>
     <body>
 
+<!-- #T# the <time> tag is used to place content with a timestamp -->
+<!-- #T#     the datetime attribute is a datetime string, with format YYYY-MM-DDThh:mm:ss.sssTZD, or YYYY-MM-DD hh:mm:ss.sssTZD, where YYYY is the year number, MM is the month number, DD is the day number, hh is the hour number, mm is the minute number, ss.sss is the seconds float number (up to milliseconds), TZD is for the Time Zone Designator, parts of this format are optional -->
+        <time datetime="2019-08-15 09:58">text time1</time>
+
 <!-- #T# the <abbr> tag stands for abbreviation, it's used to contain abbreviated words or concepts -->
 <!-- #T#     the title attribute is a string that sets the full words or concepts abbreviated, this string is shown in browsers when hovering the mouse over the abbreviation -->
         <p>Normal text, <abbr title="HyperText Markup Language">HTML abbreviation</abbr>, normal text</p>
@@ -397,7 +425,7 @@
         <bdo dir="rtl">right to left text1</bdo>
 
 <!-- #T# the <ins> tag stands for insert, it's used to show inserted text -->
-<!-- #T#     the datetime attribute is a datetime string with the date and time in which the text was inserted -->
+<!-- #T#     the datetime attribute is the same as in the <time> tag -->
 <!-- #T#     the cite attribute is a string that links or shows the origin source for the inserted text -->
         <ins datetime="2020-05-23" cite="Section2_3.html">Inserted text1</ins>
 
@@ -441,6 +469,128 @@
                 <samp>output1</samp>
             </code>
         </p>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Tags that generate shapes -->
+
+<!-- # |------------------------------------------------------------- -->
+<!-- #T# the <hr> tag stands for horizontal rule, it's used to create a horizontal rule that divides the content -->
+<!DOCTYPE html>
+<html>
+    <body>
+        Before horizontal rule
+        <hr/>
+        After horizontal rule
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Embedded content -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <video> tag is used to insert a video file -->
+<!-- #T#     the width attribute is a number that sets the widht of the video in pixels -->
+<!-- #T#     the poster attribute is a string that links to an image to be shown until the video reproduces -->
+<!-- #T#     the controls attribute is a boolean, its presence turns on the availability of widget controls for the video -->
+        <video width="500" poster="/path/to/image1.png" controls>
+
+<!-- #T# the <source> tag is used to set the multimedia source, for example the actual video to be displayed in a <video> tag -->
+<!-- #T#     the src attribute is a string with the location of the multimedia source file -->
+<!-- #T#     the type attribute is a string with the MIME of the multimedia source file -->
+            <source src="/path/to/video1.mov" type="video/mp4">
+        </video>
+
+<!-- #T# the <audio> tag is used to insert an audio file -->
+<!-- #T#     the src attribute is a string with the location of the audio file -->
+<!-- #T#     the controls attribute is a boolean, its presence turns on the availability of widget controls for the audio -->
+        <audio src="S3_02_Aux02.mp3" controls>
+            Audio could not be loaded. <!-- #| this may show if the audio is not found or can't be loaded -->
+        </audio>
+
+<!-- #T# the <canvas> tag is used to create a canvas, which draws graphics via JavaScript -->
+        <canvas>
+            Canvas could not be loaded. <!-- #| this may show if the audio is not found or can't be loaded -->
+        </canvas>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Form and input tags -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <form> tag is used to create forms -->
+<!-- #T#     the action attribute is a string that sets the location of a script or program meant to process the form results -->
+<!-- #T#     the method attribute is a string that sets the method used to send the form results to the server that hosts this file, the "GET" method sends the results in the URL, after a '?', as key value pairs, each pair separated from the next with an '&', and the key separated from the value with an '=', the "POST" method sends the form results as part of an HTTP request -->
+        <form action="" method="GET">
+            
+<!-- #T# the <input> tag is used to receive input from a user -->
+<!-- #T#     the type attribute is a string that sets the type of input, "" -->
+<!--  <input type name value [checked]> -->
+            <p>Start:</p>
+            <p><input type="text" name="startVal" value="defaultText"/></p>
+            <p>Password:</p>
+            <p><input type="password" name="passwdVal"/></p>
+            <p>Checkbox:</p>
+            <p><input type="checkbox" name="checkVal1" value="ON1"/>
+            check 1</p>
+            <p><input type="checkbox" name="checkVal2" value="ON2" checked/>
+            check 2</p>
+            <p>Radio button:</p>
+            <p><input type="radio" name="radioVal_a" value="radio1a"/>
+            val option 1a</p>
+            <p><input type="radio" name="radioVal_a" value="radio2a"/>
+            val option 2a</p>
+            <p><input type="radio" name="radioVal_b" value="radio1b"/>
+            val option 1b</p>
+            <p><input type="radio" name="radioVal_b" value="radio2b"/>
+            val option 2b</p>
+            <p><input type="radio" name="radioVal_b" value="radio3b"
+            checked/>val option 3b</p>
+
+<!-- #T# text area tag: <textarea name rows cols> -->
+            <p><textarea name="textAVal" rows="5" 
+            cols="20">Enter text here</textarea></p>
+
+<!-- #T# select and option tags: <select name> <option value [selected]> -->
+            <p>Drop down list:</p>
+            <p><select name="selVal">
+                <option value="opt1">Option 1</option>
+                <option value="opt2" selected>Option 2</option>
+                <option value="opt3">Option 3</option>
+            </select></p>
+
+            <p>Sumbmit:</p>
+            <p><input type="submit" value="Finish"/></p>
+
+<!-- #T# attributes: <input placeholder autofocus list> -->
+            <input type="email" name="emlVal" placeholder="valid@eml.dom">
+            <input name="tVal" autofocus list="datalistID">
+
+<!-- #T# other input type(s): "search", "tel", "url", "email". "number", -->
+            <input type="search" name="searchVal">
+            <input type="tel" name="telVal">
+            <input type="url" name="urlVal">
+            <input type="email" name="emailVal">
+            <input type="number" name="nVal" step="7" min="-14" max="2000">
+
+<!-- #T# "range", "date", "time", "datetime", "color" -->
+            <input type="range" name="rangeVal" value="15" step="5" min="5"
+                max="50">
+            <input type="date" name="dateVal">
+            <input type="time" name="timeVal">
+            <input type="datetime" name="dtVal">
+            <input type="color" name="colorVal">
+        </form>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
