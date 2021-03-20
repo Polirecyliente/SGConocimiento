@@ -254,11 +254,14 @@
     <body>
 
 <!-- #T# the <a> tag is the anchor tag, it's used to link to another location -->
-
-<!-- #T# the href attribute of the <a> tag stores the location being linked to -->
+<!-- #T#     the href attribute of the <a> tag stores the location being linked to -->
+<!-- #T#     the tabindex attribute is a string number that sets the order in which the tab key focused the link -->
+<!-- #T#     the title attribute is a string that is shown in browsers when hovering the mouse over this tag  -->
+<!-- #T#     the accesskey is a string that sets a given key 'key1', so that when pressing Alt+'key1' or Alt+Shift+'key1' the link is accessed -->
 
 <!-- #T# a given <tag1> can be linked to with an anchor, for this, the <tag1> is identified with the id attribute, if <tag1 id="id1">, then an anchor <a> links to <tag1> with <a href="#id1"> -->
-        <p><a href="#id1">Go to the identified paragraph</a></p>
+        <p><a href="#id1" tabindex="1">Go to the identified paragraph1</a></p>
+        <p><a href="#id2" tabindex="2" title="link title1" accesskey="b">Go to the identified paragraph2</a></p>
         <p>ipsum</p>
         <p>ipsum</p>
         <p>ipsum</p>
@@ -410,14 +413,14 @@
         <time datetime="2019-08-15 09:58">text time1</time>
 
 <!-- #T# the <abbr> tag stands for abbreviation, it's used to contain abbreviated words or concepts -->
-<!-- #T#     the title attribute is a string that sets the full words or concepts abbreviated, this string is shown in browsers when hovering the mouse over the abbreviation -->
+<!-- #T#     the title attribute is the same as in the <a> tag -->
         <p>Normal text, <abbr title="HyperText Markup Language">HTML abbreviation</abbr>, normal text</p>
 
 <!-- #T# the <address> tag is used to put an address -->
         <address>address1, email_address1</address>
 
 <!-- #T# the <dfn> tag stands for definition, it's used to place concepts or terms -->
-<!-- #T#     the title attribute is a string that sets the definition of the concept, this string is shown in browsers when hovering the mouse over the concept -->
+<!-- #T#     the title attribute is the same as in the <a> tag -->
         <p>Normal text, <dfn title="Definition of the concept1">concept1</dfn>, normal text</p>
 
 <!-- #T# the <bdo> stands for bidirectional, it's used to write bidirectional text -->
@@ -532,64 +535,80 @@
 <!-- #T#     the action attribute is a string that sets the location of a script or program meant to process the form results -->
 <!-- #T#     the method attribute is a string that sets the method used to send the form results to the server that hosts this file, the "GET" method sends the results in the URL, after a '?', as key value pairs, each pair separated from the next with an '&', and the key separated from the value with an '=', the "POST" method sends the form results as part of an HTTP request -->
         <form action="" method="GET">
-            
-<!-- #T# the <input> tag is used to receive input from a user -->
-<!-- #T#     the type attribute is a string that sets the type of input, "" -->
-<!--  <input type name value [checked]> -->
-            <p>Start:</p>
-            <p><input type="text" name="startVal" value="defaultText"/></p>
-            <p>Password:</p>
-            <p><input type="password" name="passwdVal"/></p>
-            <p>Checkbox:</p>
-            <p><input type="checkbox" name="checkVal1" value="ON1"/>
-            check 1</p>
-            <p><input type="checkbox" name="checkVal2" value="ON2" checked/>
-            check 2</p>
-            <p>Radio button:</p>
-            <p><input type="radio" name="radioVal_a" value="radio1a"/>
-            val option 1a</p>
-            <p><input type="radio" name="radioVal_a" value="radio2a"/>
-            val option 2a</p>
-            <p><input type="radio" name="radioVal_b" value="radio1b"/>
-            val option 1b</p>
-            <p><input type="radio" name="radioVal_b" value="radio2b"/>
-            val option 2b</p>
-            <p><input type="radio" name="radioVal_b" value="radio3b"
-            checked/>val option 3b</p>
 
-<!-- #T# text area tag: <textarea name rows cols> -->
-            <p><textarea name="textAVal" rows="5" 
-            cols="20">Enter text here</textarea></p>
+<!-- #T# the <input> tag is used to receive input from a user, each input is stored as a key value pair, where the value is the actual input -->
+<!-- #T#     the type attribute is a string that sets the type of input, "text" creates a text bar, "password" creates a password text bar, "checkbox" creates a checkbox, "radio" creates a radio button, "search" creates a search bar, "tel" creates a telephone text bar, "url" creates an URL text bar, "email" creates an email text bar, "number" creates a spinner, "range" creates a slider, "date" creates a datepicker, "time" creates a timepicker, "datetime" creates a datetime text bar, "color" creates a colorpicker, "submit" creates a submit button which sends the form results to the server or locally if there is no server -->
+<!-- #T#     the name attribute is a string that sets the key in the key value pair of the input -->
+<!-- #T#     the value attribute is a string that sets the default value in the key value pair of the input -->
+<!-- #T#     the autofocus attribute is a boolean, its presence makes the input to be focused (i.e. have the cursor in it) when first loading the HTML file -->
+<!-- #T#     the checked attribute is a boolean, used in the "checkbox" input type, its presence turns on the checkbox by default -->
+<!-- #T#     the list attribute is a string, used in an input that can be typeless, that identifies a <datalist> tag from which the list of options of the input is retrieved -->
+            <p>Text bar: <input type="text" name="text_key1" value="text_value1"/></p>
+            <p>Password: <input type="password" name="password_key1" autofocus/></p>
+            <p>Checkbox: <input type="checkbox" name="checkbox_key1" value="checkbox_value1" checked/>
+            checkbox1</p>
+            <p>Radio buttons: <input type="radio" name="radio_key1" value="radio_value1"/>radio button1</p>
+            <p><input type="radio" name="radio_key1" value="radio_value2"/>radio button2</p>
+            <p>Search bar: <input type="search" name="search_key1"></p>
+            <p>Telephone: <input type="tel" name="telVal"></p>
+            <p>URL: <input type="url" name="urlVal"></p>
+            <p>Email: <input type="email" name="emailVal"></p>
+            <p>Number: <input type="number" name="nVal" step="7"></p>
+            <p>Numeric range: <input type="range" name="rangeVal" value="15" min="5" max="50"></p>
+            <p>Date: <input type="date" name="dateVal"></p>
+            <p>Time: <input type="time" name="timeVal"></p>
+            <p>Datetime: <input type="datetime" name="dtVal"></p>
+            <p>Colorpicker: <input type="color" name="colorVal"></p>
 
-<!-- #T# select and option tags: <select name> <option value [selected]> -->
-            <p>Drop down list:</p>
-            <p><select name="selVal">
-                <option value="opt1">Option 1</option>
-                <option value="opt2" selected>Option 2</option>
-                <option value="opt3">Option 3</option>
+<!-- #T# the <textarea> tag is used to create a textarea -->
+<!-- #T#     the name attribute is the same as in the <input> tag -->
+<!-- #T#     the rows attribute is a number that sets the amount of rows, measured in characters, in the textarea -->
+<!-- #T#     the cols attribute is a number that sets the amount of columns, measured in characters, in the textarea -->
+<!-- #T#     the placeholder attribute is a string that sets a placeholder text for the input -->
+            <p>Textarea: <textarea name="textarea_key1" rows="5" cols="20" placeholder="Enter text here"></textarea></p>
+
+<!-- #T# the <select> tag is used to create dropdown lists -->
+<!-- #T#     the name attribute is the same as in the <input> tag -->
+            <p>Dropdown list: <select name="dropdown_key1">
+
+<!-- #T#  -->
+                <optgroup label='label1'>
+
+<!-- #T# the <option> tag is used to create an option inside a <select> tag or a <datalist> tag -->
+<!-- #T#     the value attribute is the same as in the <input> tag, so the key value pair of the input has the key in the <select> tag, and the value in the <option> tag -->
+<!-- #T#     the selected attribute is a boolean, its presence turns on the dropdown option by default -->
+                    <option value="dropdown_value1">Option 1</option>
+                    <option value="dropdown_value2" selected>Option 2</option>
+                    <option value="dropdown_value3">Option 3</option>
+                </optgroup>
             </select></p>
 
-            <p>Sumbmit:</p>
-            <p><input type="submit" value="Finish"/></p>
+<!-- #T# the <datalist> tag is used to create a list of options, as a dropdown list that accepts text input and shows the options that match the text input -->
+            <p>Datalist: <datalist id="datalist_id1">
+                <option value="datalist_value1">Datalist option1</option>
+                <option value="datalist_value2">Datalist option2</option>
+            </datalist>
+            <input name="datalist_key1" list="datalist_id1"></p>
 
-<!-- #T# attributes: <input placeholder autofocus list> -->
-            <input type="email" name="emlVal" placeholder="valid@eml.dom">
-            <input name="tVal" autofocus list="datalistID">
+<!-- #T# the <fieldset> tag is used to separate a set of tags that belong inside a form -->
+            <fieldset>
 
-<!-- #T# other input type(s): "search", "tel", "url", "email". "number", -->
-            <input type="search" name="searchVal">
-            <input type="tel" name="telVal">
-            <input type="url" name="urlVal">
-            <input type="email" name="emailVal">
-            <input type="number" name="nVal" step="7" min="-14" max="2000">
+<!-- #T# the <legend> tag is used set the legend or name of the <fieldset> tag -->
+                <legend>
+                    Legend of the fieldset1
+                </legend>
+                <input type="text">
+                <input type="text">
+            </fieldset>
 
-<!-- #T# "range", "date", "time", "datetime", "color" -->
-            <input type="range" name="rangeVal" value="15" step="5" min="5"
-                max="50">
-            <input type="date" name="dateVal">
-            <input type="time" name="timeVal">
-            <input type="datetime" name="dtVal">
-            <input type="color" name="colorVal">
+<!-- #T# the <label> tag is used to label a form component -->
+<!-- #T#     the for attribute is a string that sets the id of the input being labeled, when clicking on the label, the labeled input is focused -->
+            <label for="input_id1">
+                input label1
+            </label>
+            <input type="text" name="input_key1" id="input_id1">
+
+            <p>Submit: <input type="submit" value="Finish1"/></p>
         </form>
     </body>
 </html>
