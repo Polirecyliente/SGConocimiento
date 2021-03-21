@@ -1,5 +1,5 @@
 --[[
-    Composite types
+#   Composite types
 --]]
 
 -- #T# Table of contents

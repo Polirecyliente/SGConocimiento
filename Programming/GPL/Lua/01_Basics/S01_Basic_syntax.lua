@@ -1,5 +1,5 @@
 --[[
-    Basic syntax
+#   Basic syntax
 --]]
 
 -- #T# Table of contents

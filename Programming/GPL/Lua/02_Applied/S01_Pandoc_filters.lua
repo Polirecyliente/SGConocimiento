@@ -1,5 +1,5 @@
 --[[
-    Pandoc filters
+#   Pandoc filters
 --]]
 
 -- #T# Table of contents

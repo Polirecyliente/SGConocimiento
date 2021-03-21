@@ -1,0 +1,143 @@
+/*
+#   Basic syntax
+*/
+
+/* #T# Table of contents */
+
+/* #C# Syntax to apply style to HTML tags */
+/* #C# General values */
+/* #C# Color properties */
+/* #C# Font properties */
+
+/* #T# Beginning of content */
+
+/* # |------------------------------------------------------------- */
+/* #T# apply a CSS file to an HTML file, using the <link> tag inside the HTML file, with the rel attribute having the value "stylesheet", and the href attribute linking to the CSS file */
+/* # SYNTAX <link rel="stylesheet" href="/path/to/file1.css"> */
+/* # |------------------------------------------------------------- */
+
+/* #C# Syntax to apply style to HTML tags */
+
+/* # |------------------------------------------------------------- */
+/* #T# style is applied to HTML tags by via the properties of the HTML tags, each property can have several values, setting these values sets the style of the HTML tag */
+
+/* # SYNTAX application of style to the HTML tag <tag1> that has the properties, property1 and property2, each with values, value1 and value2 */
+/* # tag1                   */
+/* # {                      */
+/* #     property1: value1; */
+/* #     property2: value2; */
+/* # }                      */
+/* #T# tags are called selectors in this context, so tag1 is the selector, properties and values act as key value pairs of each selector (of each tag) */
+
+p
+{
+    color:red;
+}
+a
+{
+    color:green;
+}
+/* #T# the <p> tag and the <a> tag are being colored with the color property */
+/* # |------------------------------------------------------------- */
+
+/* #C# General values */
+
+/* # |------------------------------------------------------------- */
+/* #T# there are a few values that are general, and so can be applied to most properties */
+
+/* #T# the inherit value means that the property inherits the value from the parent tag */
+p {color: inherit;}
+
+/* #T# the initial value means that the property gets its value from the browser default */
+p {color: initial;}
+
+/* #T# the unset value means that if the parent tag has a value, then the value is 'inherit', but else if the parent has no value, then the value is 'initial' */
+p {color: unset;}
+/* # |------------------------------------------------------------- */
+
+/* #C# Color properties */
+
+/* # |------------------------------------------------------------- */
+/* #T# the color property is a string that sets the color of the text contents of its tag */
+/* #T#     its predefined values are: aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black, blanchedalmond, blue, blueviolet, brown, burlywood, cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan, darkcyan, darkgoldenrod, darkgray, darkgreen, darkgrey, darkkhaki, darkmagenta, darkolivegreen, darkorange, darkorchid, darkred, darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey, darkturquoise, darkviolet, deeppink, deepskyblue, dimgray, dimgrey, dodgerblue, firebrick, floralwhite, forestgreen, fuchsia, gainsboro, ghostwhite, gold, goldenrod, gray, green, greenyellow, grey, honeydew, hotpink, indianred, indigo, ivory, khaki, lavender, lavenderblush, lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow, lightgray, lightgreen, lightgrey, lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray, lightslategrey, lightsteelblue, lightyellow, lime, limegreen, linen, magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen, mediumslateblue, mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin, navajowhite, navy, oldlace, olive, olivedrab, orange, orangered, orchid, palegoldenrod, palegreen, paleturquoise, palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple, rebeccapurple, red, rosybrown, royalblue, saddlebrown, salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey, snow, springgreen, steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen */
+/* #T#     the rgb function is used to set the color value as red, green, blue, with this syntax, rgb(red_num1, green_num1, blue_num1, alpha_num1), where red_num1, green_num1, and blue_num1 are numbers between 0 and 255, and alpha_num1 is a number between 0 and 1 with the alpha value */
+/* #T#     the hsl function is used to set the color value as hue, saturation, lightness, with this syntax, hsl(hue_num1, saturation_num1%, lightness_num1%, alpha_num1%) */
+/* #T#     the color value can be set as a hexadecimal value starting with a hash #, with 4 channels, red, green, blue, alpha, 2 hexadecimal numbers per channel, so a color value has 8 hexadecimal numbers, or 6 without alpha channel, for example #fc2ae5ff and #AB32CD */
+p {color: beige;}
+p {color: rgb(255, 144.58, 70, .7);}
+p {color: hsl(140.86, 62%, 50%, 0%);} /* #| this color is transparent */
+p {color: #AB32CD}
+
+/* #T# the background-color property is a string that sets background color of its tag, the background is the place behing the text */
+/* #T#     its values are the same as in the color property */
+p {background-color: rgb(255, 144.58, 70, .7);}
+/* # |------------------------------------------------------------- */
+
+/* #C# Font properties */
+
+/* # |------------------------------------------------------------- */
+/* #T# the font-size property is a string that sets the font size of the text contents of its tag */
+/* #T#     its predefined values are, by size from small to large: xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large */
+/* #T#     the font-size property can also be set using units of measure, see below */
+p {font-size: medium;}
+
+/* #T# for the units of measure, there are absolute units of measure, which always have the same size, and there are relative units of measure, which vary in size depending on another value */
+
+/* #T# using num1 as a numeric amount, the absolute units of measure are: */
+/* #T#     num1mm, mm stands for millimeters */
+/* #T#     num1cm, cm stands for centimeters */
+/* #T#     num1in, in stands for inches */
+/* #T#     num1px, px stands for pixels, the size of a pixel is determined by a ppi (pixels per inch) setting, commonly 96 ppi, so 1 pixel is 1/96 inches */
+/* #T#     num1pt, pt stands for points, there are 72 points per inch, so 1 point is 1/72 inches */
+/* #T#     num1pc, pc stands for picas, 1 pica is 12 points, or 12/72 = 1/6 inches */
+p {font-size: 2pc;}
+
+/* #T# using num1 as a numeric amount, the relative units of measure are: */
+/* #T#     num1em, em is a unit of measure with the same size as the font, so a font of 12pt has 1em of 12pt, for example 2em duplicates the font size */
+/* #T#     num1ex, ex is a unit of measure with about half the size of the font, so a font of 12pt has 1ex of 6pt, which comes from the height of the 'x' character, so in some fonts it may not be about half the size of the font */
+/* #T#     num1ch, ch is a unit of measure with about half the size of the font, so a font of 12pt has 1ch of 6pt, which comes from the width of the '0' character, so in some fonts it may not be about half the size of the font */
+/* #T#     num1rem, rem is a unit of measure like em, but relative to the font size of the parent tag */
+/* #T#     num1vw, vw stands for viewport width, it's a unit of measure that is a percent of the size of the viewport width, so 100vw means a font size that covers the whole viewport width */
+/* #T#     num1vh, vh stands for viewport height, it's a unit of measure that is a percent of the size of the viewport height, so 100vh means a font size that covers the whole viewport height */
+/* #T#     num1vmin, vmin stands for viewport minimum length, the minimum between width and height, so if the viewport width is less than the viewport height, then vmin acts like vw, in the contrary case vmin acts like vh */
+/* #T#     num1vmax, vmax stands for viewport maximum length, the maximum between width and height, so if the viewport width is greater than the viewport height, then vmax acts like vw, in the contrary case vmax acts like vh */
+/* #T#     num1%, it's a percentage of the parent's font size */
+p {font-size: 12pt;}
+a {font-size: 1ex;} /* making an <a> tag a child of a <p> tag, text written inside the <a> tag is half the size of the text written inside the <p> tag */
+
+/* #T# the font-family property is a string, or a list of strings separated by comma, that sets the font family of the text contents of its tag, a font family is a set of fonts that together cover different styles, such as normal, bold, italic, light, etcetera, each style has a font in the family */
+
+/* the list of strings is called the font stack, the first font family in the font stack is used, unless it's not installed or available, in that case the second font in the font stack is used, and so on */
+/* #T#     the values of the font-family property depend on the installed fonts, but common values are: serif, sans-serif, monospace, cursive, fantasy, Arial, "Courier New", Garamond, Georgia, Helvetica, Tahoma, "Times New Roman", "Trebuchet MS", Verdana */
+p {font-family: "Courier New", Courier, monospace;} /* #| quotes are required around "Courier New", because the font family name has a space */
+/* # |------------------------------------------------------------- */
+
+
+
+
+/* #T# text properties: bold -> font-weight, line-height */
+p
+{
+    font-weight: 600;
+    line-height: 2cm;
+}
+/* #T# text-transform, letter-spacing, text-align */
+h1
+{
+    text-transform: uppercase;
+    letter-spacing: 3pt;
+    text-align: center;
+}
+/* #T# italic -> font-style, font-variant, text-decoration */
+a
+{
+    font-style: oblique;
+    font-variant: small-caps;
+    text-decoration: overline;
+}
+/* #T# word-spacing, text-indent */
+h2
+{
+    word-spacing: 1cm;
+    text-indent: 1.5cm;
+}

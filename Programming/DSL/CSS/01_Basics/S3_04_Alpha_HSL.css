@@ -1,0 +1,13 @@
+/*
+    Alpha, HSL
+*/
+
+p
+{
+/* #T# alpha transparency */
+    color: rgba(127, 120, 100, 0.2);
+
+/* #T# HSL stands for Hue Saturation Lightness */
+/* #T# hsl() */
+    background-color: hsla(10,10%,45%,0.1);
+}

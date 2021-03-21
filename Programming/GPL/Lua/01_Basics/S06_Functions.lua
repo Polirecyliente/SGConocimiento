@@ -1,5 +1,5 @@
 --[[
-    Functions
+#   Functions
 --]]
 
 -- #T# Table of contents

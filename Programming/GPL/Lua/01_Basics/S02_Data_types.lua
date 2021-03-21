@@ -1,5 +1,5 @@
 --[[
-    Data types
+#   Data types
 --]]
 
 -- #T# Table of contents

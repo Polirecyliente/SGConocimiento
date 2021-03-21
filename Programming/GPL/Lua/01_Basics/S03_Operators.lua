@@ -1,5 +1,5 @@
 --[[
-    Operators
+#   Operators
 --]]
 
 -- #T# Table of contents

@@ -1,5 +1,5 @@
 <!--
-    Katex symbols
+#   Katex symbols
 -->
 
 <!-- #T# Table of contents -->

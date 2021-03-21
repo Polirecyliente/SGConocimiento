@@ -1,0 +1,16 @@
+/*
+    Grouping, nesting
+*/
+
+/* #T# grouping selectors */
+h1, .class1, p
+{
+    background-color:darkgreen;
+    padding: 0.5cm;
+}
+
+/* #T# nesting selectors */
+article p
+{
+    color: violet;
+}

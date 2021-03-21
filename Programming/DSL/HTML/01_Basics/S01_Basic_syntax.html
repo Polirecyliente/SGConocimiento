@@ -1,16 +1,16 @@
 <!--
-    Basic syntax
+#   Basic syntax
 -->
 
 <!-- #T# Table of contents -->
 
 <!-- #C# Tags and attributes -->
+<!-- #C# Anchor tag -->
 <!-- #C# Metadata tags -->
 <!-- #C# Paragraph and font style tags -->
 <!-- #C# Sectioning tags -->
 <!-- #C# List tags -->
 <!-- #C# - Description lists -->
-<!-- #C# Anchor tag -->
 <!-- #C# Image tags -->
 <!-- #C# Table tags -->
 <!-- #C# Division and span tags -->
@@ -21,6 +21,11 @@
 <!-- #C# Form and input tags -->
 
 <!-- #T# Beginning of content -->
+
+<!-- # |------------------------------------------------------------- -->
+<!-- #T# render an HTML file using a browser, such as Firefox or Chromium, the file:// protocol is used to open local files in a browser, use the following syntax in the address bar of the browser -->
+<!-- # SYNTAX file:///path/to/file1.html -->
+<!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Tags and attributes -->
 
@@ -43,8 +48,52 @@
 
 <!-- #T# attributes are information about the tag itself, attributes are written inside the opening tag, after the name of the tag, for example <tag1 attribute1=value1> means that tag1 has an attribute1 with a value1 -->
 
-<!-- #T# the <a> tag stands for anchor, it's used to create links with the href attribute, the href attribute stores the reference of the link -->
+<!-- #T# when writing several attributes with their values, they are separated by space, for example <tag1 attribute1=value1 attribute2=value2 attribute3> in this example, attribute3 is a boolean attribute, and its presence means that the attribute is turned on and/or it's true -->
+
+<!-- #T# the <a> tag stands for anchor, it's used to create links with the href attribute, the href attribute stores the reference of the link, see the Anchor tag section for more information -->
         <a href="https://duckduckgo.com">Link1</a>
+    </body>
+</html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# Anchor tag -->
+
+<!-- # |------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+<!-- #T# the <a> tag is the anchor tag, it's used to link to another location -->
+<!-- #T#     the href attribute of the <a> tag stores the location being linked to, when linking to local files, an absolute path (like /path/to/file1), or a relative path (like ../../dir1/file1), can be given, the relative path is resolved from the directory of this HTML file  -->
+<!-- #T#     the tabindex attribute is a string number that sets the order in which the tab key focused the link -->
+<!-- #T#     the title attribute is a string that is shown in browsers when hovering the mouse over this tag  -->
+<!-- #T#     the accesskey is a string that sets a given key 'key1', so that when pressing Alt+'key1' or Alt+Shift+'key1' the link is accessed -->
+        <a href="../Sources">Link1</a>
+
+<!-- #T# a given <tag1> can be linked to with an anchor, for this, the <tag1> is identified with the id attribute, if <tag1 id="id1">, then an anchor <a> links to <tag1> with <a href="#id1"> -->
+        <p><a href="#id1" tabindex="1">Go to the identified paragraph1</a></p>
+        <p><a href="#id2" tabindex="2" title="link title1" accesskey="b">Go to the identified paragraph2</a></p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p id="id1">Identified paragraph</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
+        <p>ipsum</p>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
@@ -71,6 +120,11 @@
         <meta name="description" content="Metadata of this HTML file">
         <meta name="keywords" content="html, metadata">
         <meta http-equiv="refresh" content="60"> <!-- #| this refreshes the page every 60 seconds automatically -->
+
+<!-- #T# the <link> tag is used to link this HTML file to external resources it needs, like for example a CSS file with the style to be applied to this HTML file -->
+<!-- #T#     the href attribute is the same as in the <a> tag -->
+<!-- #T#     the rel attribute is a string that sets the relationship between this HTML file and the external resource being linked -->
+        <link rel="stylesheet" href="/path/to/file1.css">
     </head>
     <body>
         Content
@@ -119,11 +173,9 @@
         <sup>superscript text1</sup>
 
 <!-- #T# the <pre> tag stands for preformatted text, it's used to display the text using the indentations and spacing of this file -->
-        <p>
-            <pre>
+        <p><pre>
                 Text indented with four tabs.
-            </pre>
-        </p>
+        </pre></p>
     </body>
 </html>
 <!-- # |------------------------------------------------------------- -->
@@ -244,47 +296,6 @@
 </html>
 <!-- # |----- -->
 
-<!-- # |------------------------------------------------------------- -->
-
-<!-- #C# Anchor tag -->
-
-<!-- # |------------------------------------------------------------- -->
-<!DOCTYPE html>
-<html>
-    <body>
-
-<!-- #T# the <a> tag is the anchor tag, it's used to link to another location -->
-<!-- #T#     the href attribute of the <a> tag stores the location being linked to -->
-<!-- #T#     the tabindex attribute is a string number that sets the order in which the tab key focused the link -->
-<!-- #T#     the title attribute is a string that is shown in browsers when hovering the mouse over this tag  -->
-<!-- #T#     the accesskey is a string that sets a given key 'key1', so that when pressing Alt+'key1' or Alt+Shift+'key1' the link is accessed -->
-
-<!-- #T# a given <tag1> can be linked to with an anchor, for this, the <tag1> is identified with the id attribute, if <tag1 id="id1">, then an anchor <a> links to <tag1> with <a href="#id1"> -->
-        <p><a href="#id1" tabindex="1">Go to the identified paragraph1</a></p>
-        <p><a href="#id2" tabindex="2" title="link title1" accesskey="b">Go to the identified paragraph2</a></p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p id="id1">Identified paragraph</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-        <p>ipsum</p>
-    </body>
-</html>
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Image tags -->
@@ -545,8 +556,7 @@
 <!-- #T#     the list attribute is a string, used in an input that can be typeless, that identifies a <datalist> tag from which the list of options of the input is retrieved -->
             <p>Text bar: <input type="text" name="text_key1" value="text_value1"/></p>
             <p>Password: <input type="password" name="password_key1" autofocus/></p>
-            <p>Checkbox: <input type="checkbox" name="checkbox_key1" value="checkbox_value1" checked/>
-            checkbox1</p>
+            <p>Checkbox: <input type="checkbox" name="checkbox_key1" value="checkbox_value1" checked/>checkbox1</p>
             <p>Radio buttons: <input type="radio" name="radio_key1" value="radio_value1"/>radio button1</p>
             <p><input type="radio" name="radio_key1" value="radio_value2"/>radio button2</p>
             <p>Search bar: <input type="search" name="search_key1"></p>

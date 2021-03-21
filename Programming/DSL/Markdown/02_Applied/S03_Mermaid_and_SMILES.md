@@ -1,5 +1,5 @@
 <!--
-    Mermaid and SMILES
+#   Mermaid and SMILES
 -->
 
 <!-- #T# Table of contents -->
