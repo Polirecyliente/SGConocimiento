@@ -59,17 +59,17 @@ p {color: unset;}
 
 /* # |------------------------------------------------------------- */
 /* #T# the color property is a string that sets the color of the text contents of its tag */
-/* #T#     its predefined values are: aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black, blanchedalmond, blue, blueviolet, brown, burlywood, cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan, darkcyan, darkgoldenrod, darkgray, darkgreen, darkgrey, darkkhaki, darkmagenta, darkolivegreen, darkorange, darkorchid, darkred, darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey, darkturquoise, darkviolet, deeppink, deepskyblue, dimgray, dimgrey, dodgerblue, firebrick, floralwhite, forestgreen, fuchsia, gainsboro, ghostwhite, gold, goldenrod, gray, green, greenyellow, grey, honeydew, hotpink, indianred, indigo, ivory, khaki, lavender, lavenderblush, lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow, lightgray, lightgreen, lightgrey, lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray, lightslategrey, lightsteelblue, lightyellow, lime, limegreen, linen, magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen, mediumslateblue, mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin, navajowhite, navy, oldlace, olive, olivedrab, orange, orangered, orchid, palegoldenrod, palegreen, paleturquoise, palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple, rebeccapurple, red, rosybrown, royalblue, saddlebrown, salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey, snow, springgreen, steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen */
-/* #T#     the rgb function is used to set the color value as red, green, blue, with this syntax, rgb(red_num1, green_num1, blue_num1, alpha_num1), where red_num1, green_num1, and blue_num1 are numbers between 0 and 255, and alpha_num1 is a number between 0 and 1 with the alpha value */
-/* #T#     the hsl function is used to set the color value as hue, saturation, lightness, with this syntax, hsl(hue_num1, saturation_num1%, lightness_num1%, alpha_num1%) */
-/* #T#     the color value can be set as a hexadecimal value starting with a hash #, with 4 channels, red, green, blue, alpha, 2 hexadecimal numbers per channel, so a color value has 8 hexadecimal numbers, or 6 without alpha channel, for example #fc2ae5ff and #AB32CD */
+/* #T#     the predefined values of the color property are: aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black, blanchedalmond, blue, blueviolet, brown, burlywood, cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan, darkcyan, darkgoldenrod, darkgray, darkgreen, darkgrey, darkkhaki, darkmagenta, darkolivegreen, darkorange, darkorchid, darkred, darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey, darkturquoise, darkviolet, deeppink, deepskyblue, dimgray, dimgrey, dodgerblue, firebrick, floralwhite, forestgreen, fuchsia, gainsboro, ghostwhite, gold, goldenrod, gray, green, greenyellow, grey, honeydew, hotpink, indianred, indigo, ivory, khaki, lavender, lavenderblush, lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow, lightgray, lightgreen, lightgrey, lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray, lightslategrey, lightsteelblue, lightyellow, lime, limegreen, linen, magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen, mediumslateblue, mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin, navajowhite, navy, oldlace, olive, olivedrab, orange, orangered, orchid, palegoldenrod, palegreen, paleturquoise, palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple, rebeccapurple, red, rosybrown, royalblue, saddlebrown, salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey, snow, springgreen, steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen */
+/* #T#     the value of the color property can be set with the rgb function, as red, green, blue, alpha, with this syntax, rgb(red_num1, green_num1, blue_num1, alpha_num1), where red_num1, green_num1, and blue_num1 are numbers between 0 and 255, and alpha_num1 is a number between 0 and 1 with the alpha value */
+/* #T#     the value of the color property can be set with the hsl function, as hue, saturation, lightness, alpha, with this syntax, hsl(hue_num1, saturation_num1%, lightness_num1%, alpha_num1%) */
+/* #T#     the value of the color property can be set as a hexadecimal value starting with a hash #, with 4 channels, red, green, blue, alpha, 2 hexadecimal numbers per channel, so a value of the color property has 8 hexadecimal numbers, or 6 without alpha channel, for example #fc2ae5ff and #AB32CD */
 p {color: beige;}
 p {color: rgb(255, 144.58, 70, .7);}
 p {color: hsl(140.86, 62%, 50%, 0%);} /* #| this color is transparent */
 p {color: #AB32CD}
 
 /* #T# the background-color property is a string that sets background color of its tag, the background is the place behing the text */
-/* #T#     its values are the same as in the color property */
+/* #T#     the value of the background-color property can be set the same as in the color property */
 p {background-color: rgb(255, 144.58, 70, .7);}
 /* # |------------------------------------------------------------- */
 
@@ -77,8 +77,8 @@ p {background-color: rgb(255, 144.58, 70, .7);}
 
 /* # |------------------------------------------------------------- */
 /* #T# the font-size property is a string that sets the font size of the text contents of its tag */
-/* #T#     its predefined values are, by size from small to large: xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large */
-/* #T#     the font-size property can also be set using units of measure, see below */
+/* #T#     the predefined values of the font-size property are, by size from small to large: xx-small, x-small, smaller, small, medium, large, larger, x-large, xx-large */
+/* #T#     the value of the font-size property can be set using units of measure, see below */
 p {font-size: medium;}
 
 /* #T# for the units of measure, there are absolute units of measure, which always have the same size, and there are relative units of measure, which vary in size depending on another value */
@@ -108,36 +108,63 @@ a {font-size: 1ex;} /* making an <a> tag a child of a <p> tag, text written insi
 /* #T# the font-family property is a string, or a list of strings separated by comma, that sets the font family of the text contents of its tag, a font family is a set of fonts that together cover different styles, such as normal, bold, italic, light, etcetera, each style has a font in the family */
 
 /* the list of strings is called the font stack, the first font family in the font stack is used, unless it's not installed or available, in that case the second font in the font stack is used, and so on */
-/* #T#     the values of the font-family property depend on the installed fonts, but common values are: serif, sans-serif, monospace, cursive, fantasy, Arial, "Courier New", Garamond, Georgia, Helvetica, Tahoma, "Times New Roman", "Trebuchet MS", Verdana */
+/* #T#     the predefined values of the font-family property are: serif, sans-serif, monospace, cursive, fantasy */
+/* #T#     the value of the font-family property can be set using the names of installed fonts (common values are: Arial, "Courier New", Garamond, Georgia, Helvetica, Tahoma, "Times New Roman", "Trebuchet MS", Verdana), the installed font families can be found, in a Linux system, with the fc-list command, the output of the fc-list command has the format per line '/path/to/font1: font_family_name1: other_info1', the font_family_name1 string is a valid value for the font-family property */
 p {font-family: "Courier New", Courier, monospace;} /* #| quotes are required around "Courier New", because the font family name has a space */
+
+/* #T# the font-weight property is a string that sets the font weight of the text contents of its tag */
+/* #T#     the predefined values of the font-weight property are: normal, bold (absolute value), lighter, bolder (value relative to the parent tag) */
+/* #T#     the value of the font-weight property can be set numerically, with a number between 1 and 900 */
+p {font-weight: 850;}
+
+/* #T# the line-height property is a string that sets the height of the content of its tag */
+/* #T#     the predefined value of the line-height property is: normal */
+/* #T#     the value of the line-height property can be set using units of measure, the same as in the font-size property */
+p {line-height: 5px;}
+
+/* #T# the text-transform property is a string that sets the case of the text contents of its tag */
+/* #T#     the predefined values of the text-transform property are: capitalize, lowercase, uppercase, none (none doesn't change the text) */
+p {text-transform: capitalize;}
+
+/* #T# the letter-spacing property is a string that sets the spacing between consecutive letters of the text contents of its tag */
+/* #T#     the predefined value of the letter-spacing property is: normal */
+/* #T#     the value of the letter-spacing property can be set using units of measure, the same as in the font-size property */
+p {letter-spacing: .3cm;}
+
+/* #T# the text-align property is a string that sets the horizontal alignment of the text contents of its tag */
+/* #T#     the predefined values of the text-align property are: left, center, right, justify, start, end (start and end act like left and right with the 'ltr' value of the dir attribute (in a <p> tag, for example), and they act like right and left with the 'rtl' value of the dir attribute (in a <p> tag, for example) */
+p {text-align: justify;}
+
+/* #T# the font-style property is a string that sets the slant of the text contents of its tag */
+/* #T#     the predefined values of the font-style property are: normal, italic, oblique */
+p {font-style: italic;}
+
+/* #T# the font-variant property is a string that sets whether or not to use small capitalization with the text contents of its tag */
+/* #T#     the predefined values of the font-variant property are: normal, small-caps */
+p {font-variant: small-caps;}
+
+/* #T# the text-decoration property is a set of three strings, one for the text-decoration-line property, one for the text-decoration-color property, and one for the text-decoration-style property, see below */
+p {text-decoration: underline green wavy;}
+
+/* #T# the text-decoration-line property is a string that sets the placement of a horizontal line in the text contents of its tag */
+/* #T#     the predefined values of the text-decoration-line property are: none, overline, line-through, underline */
+p {text-decoration-line: overline;}
+
+/* #T# the text-decoration-color property is a string that sets the color of the line created by the text-decoration-line property */
+/* #T#     the value of the text-decoration-color property can be set the same as in the color property */
+p {text-decoration-color: blueviolet;}
+
+/* #T# the text-decoration-style property is a string that sets the style of the line created by the text-decoration-line property */
+/* #T#     the predefined values of the text-decoration-style property are: none, solid, double, dashed, dotted, wavy */
+p {text-decoration-style: double;}
+
+/* #T# the word-spacing property is a string that sets the spacing between words in the text contents of its tag */
+/* #T#     the predefined value of the word-spacing property is: normal */
+/* #T#     the value of the word-spacing property can be set using units of measure, the same as in the font-size property */
+p {word-spacing: 15mm;}
+
+/* #T# the text-indent property is a string that sets the indentation of the first line of the text contents of its tag */
+/* #T#     the value of the text-indent property can be set using units of measure, the same as in the font-size property */
+/* #T#     the value of the text-indent property can be negative, if so, the indentation is made towards the opposite side */
+p {text-indent: -0.5in;}
 /* # |------------------------------------------------------------- */
-
-
-
-
-/* #T# text properties: bold -> font-weight, line-height */
-p
-{
-    font-weight: 600;
-    line-height: 2cm;
-}
-/* #T# text-transform, letter-spacing, text-align */
-h1
-{
-    text-transform: uppercase;
-    letter-spacing: 3pt;
-    text-align: center;
-}
-/* #T# italic -> font-style, font-variant, text-decoration */
-a
-{
-    font-style: oblique;
-    font-variant: small-caps;
-    text-decoration: overline;
-}
-/* #T# word-spacing, text-indent */
-h2
-{
-    word-spacing: 1cm;
-    text-indent: 1.5cm;
-}

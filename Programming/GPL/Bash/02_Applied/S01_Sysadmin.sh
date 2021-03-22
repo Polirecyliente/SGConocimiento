@@ -154,8 +154,9 @@ echo $TERM # xterm-256color
 #C# Fonts
 
 # |-------------------------------------------------------------
-#T# fonts are stored in /usr/share/fonts/
+#T# fonts are stored in /usr/share/fonts/:/usr/share/texmf/fonts/
 cd /usr/share/fonts/
+cd /usr/share/texmf/fonts/
 
 #T# cache the installed fonts
 sudo fc-cache -fv
