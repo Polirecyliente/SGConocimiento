@@ -9,7 +9,8 @@
 /* #C# Color properties */
 /* #C# Font properties */
 /* #C# Box properties */
-/* #C# Link pseudo-classes */ 
+/* #C# Image properties */
+/* #C# Link pseudo-classes */
 
 /* #T# Beginning of content */
 
@@ -384,6 +385,26 @@ p {padding-bottom: .1in;}
 /* #T# the padding-left property is a string that sets the left padding */
 /* #T#     the value of the padding-left property can be set using units of measure, the same as in the font-size property */
 p {padding-left: .1in;}
+/* # |------------------------------------------------------------- */
+
+/* #C# Image properties */
+
+/* # |------------------------------------------------------------- */
+/* #T# the background-image property is a function that returns an image file, that will be set as the background of the contents of its tag */
+/* #T#     the value of the background-image property can be set using the url function, it receives a string with the location of a file, for local files the location is given directly, as url(/path/to/file1) with an absolute path, or url(../../path/to/file1) with a relative path, for files accessed with the HTTP protocol the URL is given, as url(http://url1) */
+p {background-image: url(local_image1.png);}
+
+/* #T# the background-size property is a string that sets the size of the background image */
+/* #T#     the value of the background-size property can be set using units of measure, the same as in the font-size property */
+p {background-size: 70px;}
+
+/* #T# the background-repeat property is a set of up to two strings, the first to set the horizontal repeating pattern, and the second to set the vertical repeating pattern, if given only one string then it applies to both dimensions */
+/* #T#     the predefined values of the background-repeat property are: no-repeat, repeat, repeat-x, repeat-y, round (repeats without cropping the image, by changing the aspect ratio), space (repeats without cropping the image, by spacing the repeated images) */
+p {background-repeat: repeat no-repeat;} /* #| equivalent to only having repeat-x */
+
+/* #T# the background-position property is a set of up to two strings, one to set the horizontal position of the image before repeating it, and one to set to vertical position of the image before repeating it, if given only one string, the other is assumed to be 'center' */
+/* #T#     the predefined values of the background-position property are, for the horizontal position, left, center, right, and for the vertical position, top, center, bottom */
+p {background-position: bottom right;}
 /* # |------------------------------------------------------------- */
 
 /* #C# Link pseudo-classes */
