@@ -9,7 +9,9 @@
 /* #C# Color properties */
 /* #C# Font properties */
 /* #C# Box properties */
+/* #C# - Positioning properties */
 /* #C# Image properties */
+/* #C# Text properties */
 /* #C# Link pseudo-classes */
 
 /* #T# Beginning of content */
@@ -108,6 +110,39 @@ p:first-child, p:nth-child(5), p:last-child, p:nth-last-child(4)
     background-color: cadetblue;
 }
 
+/* #T# tags can have pseudo-elements, which are predefined parts of each tag */
+
+/* # SYNTAX applying style to a pseudo-element */
+/* # tag1::pseudo_element1 */
+/* # {                     */
+/* #     style1            */
+/* # }                     */
+/* #T# pseudo_element1 must be a pseudo-element of tag1 */
+
+/* #T# there is a set of pseudo-elements that are general to all or most tags, the general pseudo-elements are */
+/* #T#     the first-letter pseudo-element acts as a selector over the first letter of the contents of tag1 */
+/* #T#     the first-line pseudo-element acts as a selector over the first line (up to the first newline) of the contents of tag1 */
+/* #T#     the before pseudo-element is used along with the content property, it places the value of the content property before tag1 */
+/* #T#     the after pseudo-element is used along with the content property, it places the value of the content property after tag1 */
+
+p::first-letter
+{
+    font-size: 20px;
+}
+p::first-line
+{
+    color: green;
+}
+p::before
+{
+    content: "Before";
+}
+p::after
+{
+    content: "After";
+    background-color: brown;
+}
+
 /* #T# a given style can be applied to several different selectors, this list of selectors is called a grouping selector */
 
 /* # SYNTAX applying style to several different selectors */
@@ -115,13 +150,52 @@ p:first-child, p:nth-child(5), p:last-child, p:nth-last-child(4)
 /* # {                               */
 /* #     style1                      */
 /* # }                               */
-/* #T# selector1 through selectorN can each be a tag1, a class selector, an id selector, a nesting selector, a pseudo-class */
+/* #T# selector1 through selectorN can each be a tag1, a class selector, an id selector, a nesting selector, a pseudo-class, a pseudo-element */
 
 h1, article p a, .class1, #id1
 {
     background-color:darkgreen;
     padding: 0.5cm;
 }
+
+/* #T# the precedence with which properties overwrite each other is called specificity in this context */
+
+/* #T# the basic precedence is that the last time a property receives style, is the one that applies */
+p
+{
+    color: red;
+}
+p
+{
+    color: blue;
+}
+/* #| the <p> tag will be colored blue */
+
+/* #T# nesting selectors take precedence over non-nested tags */
+div p
+{
+    color: green;
+}
+p
+{
+    color: blue;
+}
+/* #| the <p> tags inside the <div> tags will be colored green */
+
+/* #T# an id selector, takes precedence over a class selector, which takes precedence over a tag selector */
+p
+{
+    color: blue;
+}
+p.c1
+{
+    color: darkgreen
+}
+#i1
+{
+    color: magenta
+}
+/* #| the <p id="i1"> tag will be colored magenta, the <p class="c1"> tag will be colored darkgreen, and any other <p> tag will be colored blue */
 /* # |------------------------------------------------------------- */
 
 /* #C# General values */
@@ -161,7 +235,7 @@ p {background-color: rgb(255, 144.58, 70, .7);}
 
 /* # |------------------------------------------------------------- */
 /* #T# the font property is a set of up to five strings, one for the font-style property, one for the font-weight property, one for the font-size property, one for the line-height property, and one for the font-family property, see below */
-/* #T#     it must be noted that the font-size property and the line-height property are written together with this syntax, font-size_value1/line-height_value1 */
+/* #T#     the font-size property and the line-height property are written separated by a slash like this, font-size_value1/line-height_value1 */
 p {font: italic bold 14pt/2 courier;}
 
 /* #T# the font-size property is a string that sets the font size of the text contents of its element */
@@ -367,6 +441,26 @@ p {border-left-width: 22px;}
 /* #T#     the value of the border-left-color property can be set the same as in the color property */
 p {border-left-color: olivedrab;}
 
+/* #T# the border-radius property is a set of up to two strings separated by a slash, that set a border radius for the box of its element, in num1/num2, num1 sets the horizontal border radius, and num2 sets the vertical border radius */
+/* #T#     the value of the border-radius property can be set using units of measure, the same as in the font-size property */
+p {border-radius: 100px/20px;}
+
+/* #T# the border-top-right-radius property is a string that sets the radius of the top right corner of the border */
+/* #T#     the value of the border-top-right-radius property can be set using units of measure, the same as in the font-size property */
+p {border-top-right-radius: 10px;}
+
+/* #T# the border-top-left-radius property is a string that sets the radius of the top left corner of the border */
+/* #T#     the value of the border-top-left-radius property can be set using units of measure, the same as in the font-size property */
+p {border-top-left-radius: 25px;}
+
+/* #T# the border-bottom-right-radius property is a string that sets the radius of the bottom right corner of the border */
+/* #T#     the value of the border-bottom-right-radius property can be set using units of measure, the same as in the font-size property */
+p {border-bottom-right-radius: 15px;}
+
+/* #T# the border-bottom-left-radius property is a string that sets the radius of the bottom left corner of the border */
+/* #T#     the value of the border-bottom-left-radius property can be set using units of measure, the same as in the font-size property */
+p {border-bottom-left-radius: 20px;}
+
 /* #T# the padding property is a set of up to four strings that sets the padding of the box of its element, the four strings are defined the same as in the border-width property */
 p {padding: .4cm;}
 
@@ -385,6 +479,41 @@ p {padding-bottom: .1in;}
 /* #T# the padding-left property is a string that sets the left padding */
 /* #T#     the value of the padding-left property can be set using units of measure, the same as in the font-size property */
 p {padding-left: .1in;}
+
+/* #T# the box-shadow property is a set of three to four strings that set a shadow for the box */
+/* #T#     the value of the box-shadow property has the syntax, num1 num2 color1 [inset], where num1 is the horizontal offset of the shadow, num2 is the vertical offset of the shadow, color1 is the color of the shadow */
+/* #T#     the values num1 and num2 can be set using units of measure, the same as in the font-size property, and the value color1 can be set the same as in the color property */
+p {box-shadow: 100px 10px blue;}
+
+/* #T# the text-shadow property is a set of three strings that set a shadow for the text of its element */
+/* #T#     the value of the text-shadow property can be set the same as in the box-shadow property, except that the inset value is not allowed */
+p {text-shadow: 3px -3px rgb(10,60,10);}
+
+/* #C# - Positioning properties */
+
+/* # |----- */
+/* #T# the display property is a string that sets the display type of its element, elements have a default display type, most commonly block or inline */
+/* #T#     the predefined values of the display property are, none (the element is not drawn), block, inline */
+p {display: none;}
+
+/* #T# the float property is a string that sets where to float its element with respect to the next element, to float an element means to move it around relative to the next element */
+/* #T#     the predefined values of the float property are, none, left, right, inline-start, inline-end (the inline-start and inline-end values, are equivalent to the start and end values of the text-align property */
+p {float: inline-end}
+
+/* #T# the clear property is a string that disables the places where the previous element can be floated to, so that the previous element is moved to that place but the element with this property is placed after */
+/* #T#     the predefined values of the clear property are, none, left, right, both */
+p {clear: both;}
+
+/* #T# the position property is a string that sets the position of its element into the normal flow */
+/* #T#     the predefined values of the position property are */
+/* #T#         static, the element stays in place, and the top, right, bottom, and left properties are ignored, these are the positioning properties */
+/* #T#         relative, the element stays in place but with an offset according to the positioning properties */
+/* #T#         absolute, the element is taken out of the normal flow, so it can overlap other elements */
+/* #T#         fixed, the element is taken out of the normal flow and fixed in position relative to the viewport */
+/* #T#         sticky, the element stays in place but with an offset according to the positioning properties, and when scrolling, the element is fixed in position relative to the viewport */
+p {position: static}
+/* # |----- */
+
 /* # |------------------------------------------------------------- */
 
 /* #C# Image properties */
@@ -405,6 +534,14 @@ p {background-repeat: repeat no-repeat;} /* #| equivalent to only having repeat-
 /* #T# the background-position property is a set of up to two strings, one to set the horizontal position of the image before repeating it, and one to set to vertical position of the image before repeating it, if given only one string, the other is assumed to be 'center' */
 /* #T#     the predefined values of the background-position property are, for the horizontal position, left, center, right, and for the vertical position, top, center, bottom */
 p {background-position: bottom right;}
+/* # |------------------------------------------------------------- */
+
+/* #C# Text properties */
+
+/* # |------------------------------------------------------------- */
+/* #T# the content property is a string that is used along the before and after pseudo-elements */
+/* #T#     the value of the content property is any arbitrary string */
+p {content: "string1"}
 /* # |------------------------------------------------------------- */
 
 /* #C# Link pseudo-classes */

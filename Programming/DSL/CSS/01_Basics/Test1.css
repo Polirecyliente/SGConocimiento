@@ -1,13 +1,6 @@
-p {
-    font-size: 28pt;
-    line-height: 5cm;
-    margin: 30px;
-    border: solid 24px green;
-    padding: 20px;
-
-    background-image: url(S3_08_Aux01.jpg);
-    background-size: 54px;
-    background-position: bottom right;
-    background-repeat: round;
-
-    }
+p
+{
+/* #T# text-shadow */
+    /* box-shadow: 200px 10px blue; */
+    text-shadow: inset 3px -3px rgb(10,60,10);
+}
