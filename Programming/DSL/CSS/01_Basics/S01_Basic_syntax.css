@@ -13,6 +13,8 @@
 /* #C# Image properties */
 /* #C# Text properties */
 /* #C# Link pseudo-classes */
+/* #C# Transformation properties */
+/* #C# At rules */
 
 /* #T# Beginning of content */
 
@@ -104,10 +106,18 @@ article p a /* #| this style only applies to the <a> tag elements, that are insi
 /* #T#     the nth-child(int1) pseudo-class acts as a selector over all the elements of tag1, that are in the int1-th position of the list of children of its parent */
 /* #T#     the last-child pseudo-class acts as a selector over all the elements of tag1, that are in the last position of the list of children of its parent */
 /* #T#     the nth-last-child(int1) pseudo-class acts as a selector over all the elements of tag1, that are in the int1-th last to first position of the list of children of its parent */
+/* #T#     the first-of-type pseudo-class acts as a selector over the first element that is of the same type as tag1, inside every parent element */
+/* #T#     the nth-of-type(int1) pseudo-class acts as selector over the int1-th element that is of the same type as tag1, inside every parent element */
+/* #T#     the last-of-type pseudo-class acts as a selector over the last element that is of the same type as tag1, inside every parent element */
+/* #T#     the nth-last-of-type(int1) pseudo-class acts as a selector over the int1-th last to first element that is of the same type as tag1, inside every parent element */
 
 p:first-child, p:nth-child(5), p:last-child, p:nth-last-child(4)
 {
     background-color: cadetblue;
+}
+p:first-of-type, p:nth-of-type(3), p:last-of-type, p:nth-last-of-type(2)
+{
+    color: goldenrod;
 }
 
 /* #T# tags can have pseudo-elements, which are predefined parts of each tag */
@@ -143,6 +153,115 @@ p::after
     background-color: brown;
 }
 
+/* #T# the universal selector is the asterisk *, it selects all the possible elements */
+
+/* # SYNTAX applying style with the universal selector */
+/* # tag1 *     */
+/* # {          */
+/* #     style1 */
+/* # }          */
+/* #T# tag1 is optional, style1 is applied to all children and grandchildren of tag1 */
+
+p *
+{
+    color: peru;
+}
+
+
+/* the child selector is the greater than sign >, it selects the children, but not the grandchildren */
+
+/* # SYNTAX applying style with the child selector */
+/* # tag1 > tag2 */
+/* # {           */
+/* #     style1  */
+/* # }           */
+/* #T# style1 is applied to the children of tag1 that are of type tag2, but not to the grandchildren */
+
+p > a
+{
+    color: tomato;
+}
+
+/* # SYNTAX applying style only to the children but not the grandchildren */
+/* # tag1 > *                */
+/* # {                       */
+/* #     property1: value1;  */
+/* # }                       */
+/* # tag1 > * > *            */
+/* # {                       */
+/* #     property1: initial; */
+/* # }                       */
+
+p > *
+{
+    color: tomato;
+}
+p > * > *
+{
+    color: initial;
+} /* #| this syntax is necessary because styles cascade to children and grandchildren */
+
+/* #T# the adjacent selector is the plus sign +, it selects an element only if it's the next sibling */
+
+/* # SYNTAX applying style with the adjacent selector */
+/* # tag1 + tag2 */
+/* # {           */
+/* #     style1  */
+/* # }           */
+/* #T# style1 is applied in all cases where tag2 is the next sibling after tag1 */
+
+p + a
+{
+    color: blue;
+}
+
+/* the following siblings selector is the tilde ~, it selects all the following siblings */
+
+/* # SYNTAX applying style with the following siblings selector */
+/* # tag1 ~ tag2 */
+/* # {           */
+/* #     style1  */
+/* # }           */
+/* #T# style1 is applied to all the elements of tag2 that are following siblings of tag1 */
+
+p ~ a
+{
+    color: brown;
+}
+
+/* #T# the attribute selector is made with pairs of brackets [], it selects elements that have specific attributes, the following are the ways to use the attribute selector */
+/* #T#     tag1[attribute1], selects elements defined as <tag1 attribute1="valueN"> */
+/* #T#     tag1[attribute1="value1"], selects elements defined as <tag1 attribute1="value1"> */
+/* #T#     tag1[attribute1="value1"][attribute2="value2"], selects elements defined as <tag1 attribute1="value1" attribute2="value2"> */
+/* #T#     tag1[attribute1^="pattern_string1"], selects elements defined as <tag1 attribute1="value1">, such that value1 begins with pattern_string1 */
+/* #T#     tag1[attribute1$="pattern_string1"], selects elements defined as <tag1 attribute1="value1">, such that value1 ends with pattern_string1 */
+/* #T#     tag1[attribute1*="pattern_string1"], selects elements defined as <tag1 attribute1="value1">, such that value1 contains pattern_string1 */
+
+p[dir]
+{
+    color: cornflowerblue;
+}
+p[dir="rtl"]
+{
+    color: brown;
+}
+p[dir="rtl"][title="title1"]
+{
+    color: aquamarine;
+}
+p[dir^="r"]
+{
+    color: yellow;
+}
+p[dir$="l"]
+{
+    color: red;
+}
+p[dir*="t"]
+{
+    color: orange;
+}
+
 /* #T# a given style can be applied to several different selectors, this list of selectors is called a grouping selector */
 
 /* # SYNTAX applying style to several different selectors */
@@ -150,7 +269,7 @@ p::after
 /* # {                               */
 /* #     style1                      */
 /* # }                               */
-/* #T# selector1 through selectorN can each be a tag1, a class selector, an id selector, a nesting selector, a pseudo-class, a pseudo-element */
+/* #T# selector1 through selectorN can each be a tag1, a class selector, an id selector, a nesting selector, a pseudo-class, a pseudo-element, etcetera */
 
 h1, article p a, .class1, #id1
 {
@@ -218,17 +337,17 @@ p {color: unset;}
 /* # |------------------------------------------------------------- */
 /* #T# the color property is a string that sets the color of the text contents of its element */
 /* #T#     the predefined values of the color property are: aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black, blanchedalmond, blue, blueviolet, brown, burlywood, cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan, darkcyan, darkgoldenrod, darkgray, darkgreen, darkgrey, darkkhaki, darkmagenta, darkolivegreen, darkorange, darkorchid, darkred, darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey, darkturquoise, darkviolet, deeppink, deepskyblue, dimgray, dimgrey, dodgerblue, firebrick, floralwhite, forestgreen, fuchsia, gainsboro, ghostwhite, gold, goldenrod, gray, green, greenyellow, grey, honeydew, hotpink, indianred, indigo, ivory, khaki, lavender, lavenderblush, lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow, lightgray, lightgreen, lightgrey, lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray, lightslategrey, lightsteelblue, lightyellow, lime, limegreen, linen, magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen, mediumslateblue, mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin, navajowhite, navy, oldlace, olive, olivedrab, orange, orangered, orchid, palegoldenrod, palegreen, paleturquoise, palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple, rebeccapurple, red, rosybrown, royalblue, saddlebrown, salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey, snow, springgreen, steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen */
-/* #T#     the value of the color property can be set with the rgb function, as red, green, blue, alpha, with this syntax, rgb(red_num1, green_num1, blue_num1, alpha_num1), where red_num1, green_num1, and blue_num1 are numbers between 0 and 255, and alpha_num1 is a number between 0 and 1 with the alpha value */
-/* #T#     the value of the color property can be set with the hsl function, as hue, saturation, lightness, alpha, with this syntax, hsl(hue_num1, saturation_num1%, lightness_num1%, alpha_num1%) */
+/* #T#     the value of the color property can be set with the rgb function, as red, green, blue, with this syntax, rgb(red_num1, green_num1, blue_num1), where red_num1, green_num1, and blue_num1 are numbers between 0 and 255, or also with the rgba function that accepts an alpha argument, rgba(red_num1, green_num1, blue_num1, alpha_num1), where alpha_num1 is a number between 0 and 1 with the alpha value */
+/* #T#     the value of the color property can be set with the hsl function, as hue, saturation, lightness, with this syntax, hsl(hue_num1, saturation_num1%, lightness_num1%), or also with the hsla function that accepts an alpha argument, hsla(hue_num1, saturation_num1%, lightness_num1%, alpha_num1%) */
 /* #T#     the value of the color property can be set as a hexadecimal value starting with a hash #, with 4 channels, red, green, blue, alpha, 2 hexadecimal numbers per channel, so a value of the color property has 8 hexadecimal numbers, or 6 without alpha channel, for example #fc2ae5ff and #AB32CD */
 p {color: beige;}
-p {color: rgb(255, 144.58, 70, .7);}
-p {color: hsl(140.86, 62%, 50%, 0%);} /* #| this color is transparent */
+p {color: rgba(255, 144.58, 70, .7);}
+p {color: hsla(140.86, 62%, 50%, 0%);} /* #| this color is transparent */
 p {color: #AB32CD}
 
 /* #T# the background-color property is a string that sets background color of its element, the background is the place behing the text */
 /* #T#     the value of the background-color property can be set the same as in the color property */
-p {background-color: rgb(255, 144.58, 70, .7);}
+p {background-color: rgb(255, 144.58, 70);}
 /* # |------------------------------------------------------------- */
 
 /* #C# Font properties */
@@ -480,6 +599,14 @@ p {padding-bottom: .1in;}
 /* #T#     the value of the padding-left property can be set using units of measure, the same as in the font-size property */
 p {padding-left: .1in;}
 
+/* #T# the height property is a string that sets the height of the content box */
+/* #T#     the value of the height property can be set using units of measure, the same as in the font-size property */
+p {height: 10cm;}
+
+/* #T# the width property is a string that sets the width of the content box */
+/* #T#     the value of the width property can be set using units of measure, the same as in the font-size property */
+p {width: 12cm;}
+
 /* #T# the box-shadow property is a set of three to four strings that set a shadow for the box */
 /* #T#     the value of the box-shadow property has the syntax, num1 num2 color1 [inset], where num1 is the horizontal offset of the shadow, num2 is the vertical offset of the shadow, color1 is the color of the shadow */
 /* #T#     the values num1 and num2 can be set using units of measure, the same as in the font-size property, and the value color1 can be set the same as in the color property */
@@ -519,11 +646,15 @@ p {position: static}
 /* #C# Image properties */
 
 /* # |------------------------------------------------------------- */
+/* #T# the background property is a shorthand property, that is a set of several strings, one for the background-image property, up to two for the background-position property, one for the background-repeat property */
+p {background: url("../path/to/file1.png") bottom right space;}
+
 /* #T# the background-image property is a function that returns an image file, that will be set as the background of the contents of its tag */
 /* #T#     the value of the background-image property can be set using the url function, it receives a string with the location of a file, for local files the location is given directly, as url(/path/to/file1) with an absolute path, or url(../../path/to/file1) with a relative path, for files accessed with the HTTP protocol the URL is given, as url(http://url1) */
 p {background-image: url(local_image1.png);}
 
 /* #T# the background-size property is a string that sets the size of the background image */
+/* #T#     the predefined values of the background-size property are, auto, contain (the whole background image fits), cover (the height or the width of the background image fits) */
 /* #T#     the value of the background-size property can be set using units of measure, the same as in the font-size property */
 p {background-size: 70px;}
 
@@ -534,6 +665,38 @@ p {background-repeat: repeat no-repeat;} /* #| equivalent to only having repeat-
 /* #T# the background-position property is a set of up to two strings, one to set the horizontal position of the image before repeating it, and one to set to vertical position of the image before repeating it, if given only one string, the other is assumed to be 'center' */
 /* #T#     the predefined values of the background-position property are, for the horizontal position, left, center, right, and for the vertical position, top, center, bottom */
 p {background-position: bottom right;}
+
+/* #T# gradients can be used as images */
+
+
+
+
+
+
+p
+{
+/* #T# linear-gradient(to direction, colors...) */
+    background: linear-gradient(to right, yellow, rgb(255, 51, 0));
+}
+p
+{
+/* #T# linear-gradient(deg, color stop...) */
+    background: linear-gradient(45deg, red 10%, green 20%, blue 90%);
+}
+p
+{
+/* #T# radial-gradient() */
+    background: radial-gradient(circle closest-side, yellow, black);
+}
+p
+{
+    background: radial-gradient(circle at top left, darkorchid, blue);
+}
+/* #T# repeating-linear-gradient() */
+p
+{
+    background: repeating-linear-gradient(black 5px, azure 10px);
+}
 /* # |------------------------------------------------------------- */
 
 /* #C# Text properties */
@@ -570,5 +733,102 @@ a:hover
 a:active
 {
     color: blueviolet;
+}
+/* # |------------------------------------------------------------- */
+
+/* #C# Transformation properties */
+
+/* # |------------------------------------------------------------- */
+/* #T# when an element receives an event, such as the mouse hovering over it, or it being clicked on, it's possible to animate the change in the properties that change as a response to the received event, so that the change is not instantaneous */
+
+/* #T# this is mostly used with tags that work as links, but any tag that can receive events can have its changing properties animated */
+
+/* #T# the transition property is a shorthand property, that is a set of up to four strings, one for the transition-property property, one for the transition-duration property, one for the transition-timing-function property, and one for the transition-delay property */
+p {transition: all 3s;}
+p:hover {color: darkolivegreen;} /* #| the color from a <p> element will be animated to change from black to darkolivegreen, in 3 seconds since the moment the mouse hovers and stays over the <p> element */
+
+/* #T# the transition-property property is a string that sets the property, or properties separated by comma, that will be animated */
+p {transition-property: color, font-size}
+
+/* #T# the transition-duration property is a string that sets the time duration of the animation, in seconds (suffix 's') or milliseconds (suffix 'ms') */
+p {transition-duration: 5s;}
+
+/* #T# the transition-timing-function property is a string that sets the interpolation curve for the animation */
+/* #T#     the predefined values of the transition-timing-function property are, ease, ease-in, ease-in-out, ease-out, linear, step-start, step-end */
+/* #T#     the value of the transition-timing-function property can be set using the cubic-bezier function, it's signature is cubic-bezier(x1, y1, x2, y2), it creates a bezier curve with four points, the first point is at (0, 0) and it represents the starting value of the property being animated, the last point is at (1, 1) and it represents the ending value of the property being animated, (x1, y1) and (x2, y2) are middle points in the bezier curve */
+p {transition-timing-function: cubic-bezier(.2, .9, .8, -.9)} /* #| this creates an interpolation curve that looks like a sinusoidal curve */
+
+/* #T# the transition-delay property is a string that sets a time delay before the animation can start, it's value can be set the same as in the transition-duration property */
+p {transition-delay: 1s;}
+
+/* #T# the transform property is a set of strings that make a geometric transformation of its element */
+/* #T#     the values of the transform property must be separated by space, each value can be set with the translate, translate3d, rotate, rotate3d, scale, scale3d, skew, and perspective functions */
+/* #T#       the translate function has the signature translate(num1, num2), where num1 is the horizontal translation rightwards, num2 is the vertical translation downwards, the arguments use units of measure, the same as in the font-size property */
+/* #T#       the translate3d function has the signature translate3d(num1, num2, num3), where num1 and num2 are the same as in the translate function, and num3 is the depth translation inwards (towards the user), the arguments use units of measure, the same as in the font-size property */
+/* #T#       the rotate function has the signature rotate(num1suffix1), where num1 is the clockwise rotation, suffix1 indicates the units of measure, 'deg' for degrees, 'rad' for radians, 'turn' for turns) */
+/* #T#       the rotate3d function has the signature rotate3d(num1, num2, num3, num4suffix4), where the triple (num1, num2, num3) represents a vector that is the axis of rotation, num1 points to the right, num2 points down, num3 points towards the user, num4suffix4 is an amount of rotation that can be set the same as in the rotate function */
+/* #T#       the scale function has the signature scale(num1, num2), where num1 is the horizontal scale, num2 is the vertical scale */
+/* #T#       the scale3d function has the signature scale3d(num1, num2, num3), where num1 and num2 are the same as in the scale function, num3 is the depth scale */
+/* #T#       the skew function has the signature skew(num1suffix1, num2suffix2), where num1suffix1 is the amount of horizontal skew, num2suffix2 is the amount of vertical skew, both can be set the same as in the rotate function */
+p {transform: translate(3cm, 2cm);}
+p {transform: perspective(10cm) translate3d(2cm, 1cm, 8cm);}
+p {transform: rotate(40deg);}
+p {transform: perspective(10cm) rotate3d(0, 1, 0, .4turn);}
+p {transform: scale(2, 1.4);}
+p {transform: perspective(10cm) rotate3d(0, 1, 0, 30deg) scale3d(2, 1.4, 5);}
+p {transform: skew(20deg, 10deg);}
+
+/* #T# the transform-origin property is a set of up to two strings that sets the origin for a geometric transformation */
+/* #T#     the predefined values of the transform-origin property are */
+/* #T#       for the horizontal location of the origin, left, center, right */
+/* #T#       for the vertical location of the origin, top, center, bottom */
+/* #T#     the value of the transform-origin property can be set using units of measure, the same as in the font-size property, and two values can be used, the first for the horizontal location of the origin, and the second for the vertical location of the origin */
+p {transform-origin: left top;}
+/* # |------------------------------------------------------------- */
+
+/* #C# At rules */
+
+/* # |------------------------------------------------------------- */
+/* #T# at rules are directives that change the interpretation of this CSS file */
+
+/* #T# the @charset rule sets the character encoding of this file */
+/* @charset "UTF-8"; */
+
+/* #T# the @import rule imports an external CSS file, it puts the contents of the external file into this file, this rule must be placed at the start of the file, but after the @charset rule */
+@import url("../path/to/file1.css");
+
+/* #T# the @font-face rule is used to create a customized font family */
+
+/* # SYNTAX creating and applying a font family with the @font-face rule    */
+/* # @font-face                                                             */
+/* # {                                                                      */
+/* #     font-family: "new_font_family1";                                   */
+/* #     src: local(font1), url("../path/to/font_file1") format("format1"); */
+/* #     font_properties1;                                                  */
+/* # }                                                                      */
+/* #                                                                        */
+/* # tag1                                                                   */
+/* # {                                                                      */
+/* #     font-family: "new_font_family1";                                   */
+/* #     font_properties1;                                                  */
+/* # }                                                                      */
+/* #T# the font-family property inside the @font-face rule, determines the name of the created font family, "new_font_family1", which can be used as value for the font-family property inside tag1 */
+
+/* #T# the local function does not take a local path as argument, but the name font1 of a given font that may be installed locally */
+
+/* #T# the format function sets the format of the font file "../path/to/font_file1", the values of "format1" are, "opentype", "truetype", "woff", "woff2", "svg" */
+
+/* #T# font_properties1 is the set of font properties (such as font-style, font-weight, etcetera) that causes the "new_font_family1" to be applied to tag1, so if font_properties1 are not set inside tag1, then "new_font_family1" is applied but with possibly different properties, for example a bold font could be applied to non bold text */
+
+@font-face
+{
+    font-family: "font_family1";
+    src: local(Arial), url("../path/to/file1.otf");
+    font-weight: normal;
+}
+p
+{
+    font-family: "font_family1";
+    font-weight: normal;
 }
 /* # |------------------------------------------------------------- */

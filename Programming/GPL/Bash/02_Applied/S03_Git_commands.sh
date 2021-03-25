@@ -79,7 +79,10 @@ git push origin master
 #T# unstage all staged files
 git reset
 
-#T# uncommit the most recent commit
+#T# uncommit the most recent commit, preserving the changes made in the most recent commit
+git reset HEAD^
+
+#T# uncommit the most recent commit, deleting any changes made in the most recent commit
 git reset --hard HEAD^
 
 #T# reattach HEAD to the most recent commit of a given branch

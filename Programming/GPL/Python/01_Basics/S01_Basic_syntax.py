@@ -117,6 +117,9 @@ var1 = input                   ("\nPlease enter var1 as input\n")
 
 str1 = 'string to print'
 print(str1, end = '\n') #| str1 is a positional argument, and the end kwarg is used to set the character at the end of the string
+
+#T# a function signature is a short way to write how to use a function, commonly it contains the return value, the function name, and the arguments, which is the minimum needed
+# SYNTAX value1 = func1(arg1, arg2, arg3)
 # |-------------------------------------------------------------
 
 #C# Statements
