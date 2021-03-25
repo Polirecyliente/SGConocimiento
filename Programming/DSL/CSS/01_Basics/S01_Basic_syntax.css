@@ -666,37 +666,15 @@ p {background-repeat: repeat no-repeat;} /* #| equivalent to only having repeat-
 /* #T#     the predefined values of the background-position property are, for the horizontal position, left, center, right, and for the vertical position, top, center, bottom */
 p {background-position: bottom right;}
 
-/* #T# gradients can be used as images */
-
-
-
-
-
-
-p
-{
-/* #T# linear-gradient(to direction, colors...) */
-    background: linear-gradient(to right, yellow, rgb(255, 51, 0));
-}
-p
-{
-/* #T# linear-gradient(deg, color stop...) */
-    background: linear-gradient(45deg, red 10%, green 20%, blue 90%);
-}
-p
-{
-/* #T# radial-gradient() */
-    background: radial-gradient(circle closest-side, yellow, black);
-}
-p
-{
-    background: radial-gradient(circle at top left, darkorchid, blue);
-}
-/* #T# repeating-linear-gradient() */
-p
-{
-    background: repeating-linear-gradient(black 5px, azure 10px);
-}
+/* #T# gradients can be used as images, for example in the background-image property */
+/* #T#     the linear-gradient function creates a linear gradient, it has the signature linear-gradient(angle1, color1 percent1, color2 percent2, colorN percentN), where angle1 is the angle of the gradient, measured clockwise with zero being north or up, it can be set the same as in the rotate function, color1 up to colorN are colors that can be set the same as in the color property, the percentages set the location of each color inside the gradient as a percent (they are optional, if omitted, then the colors are distributed uniformly) */
+/* #T#     the repeating-linear-gradient function works the same as the linear-gradient function, but repeating the gradient, to see the repetitions, percentN must be less that 100% */
+/* #T#     the radial-gradient function creates a radial gradient, it has the signature radial-gradient(color1 percent1, color2 percent2, colorN percentN), the pairs colorN percentN can be set the same as in the linear-gradient function */
+/* #T#     the repeating-radial-gradient function works the same as the radial-gradient function, but repeating the pattern, to see the repetitions, percentN must be less than 100% */
+p {background-image: linear-gradient(115deg, green, red 24%, blue);}
+p {background-image: repeating-linear-gradient(115deg, green, red 24%, blue 32%);}
+p {background-image: radial-gradient(green, red 24%, blue 52%);}
+p {background-image: repeating-radial-gradient(green, red 24%, blue 52%);}
 /* # |------------------------------------------------------------- */
 
 /* #C# Text properties */
