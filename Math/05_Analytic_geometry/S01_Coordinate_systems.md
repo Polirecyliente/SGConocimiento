@@ -15,13 +15,13 @@
 
 ## Parts of a coordinate system (Partes de un sistema de coordenadas)
 
-(Recta real)
-**Number line**: the numbers depicted in a line. This is the most basic one dimensional (1D) coordinate system.
-[Number line image code](Programs/S01/Number_line_image.py)
-![Number line image](Images/S01/Number_line.png)
-*Number line*
+**Number line** (Recta real): the numbers depicted in a line. This is the most basic one dimensional (1D) coordinate system.
 
-(Origen)
+[Number line image code](Programs/S01/Number_line_image.py)
+
+![Number line image](Images/S01/Number_line.png)
+
+(Origen)\
 **Origin**: this is the point at 0 in all dimensions, e.g. in three dimensions, the origin is $(0, 0, 0)$.
 
 (Dimensiones de un sistema de coordenadas)

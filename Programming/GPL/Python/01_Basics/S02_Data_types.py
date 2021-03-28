@@ -50,6 +50,9 @@ int1 = 0x17    # 23
 flo1 = 64.51E2 # 6451.0
 flo1 = 12.415
 complex1 = 5.1 + 3.28j
+
+#T# numbers can have their digits separated with underscore
+int1 = 10_000 + 2_000 + 50 # 12050 #| the underscores can be placed anywhere in the number, e.g. 1_0_00.3_4_5 is the same as 1000.345
 # |-------------------------------------------------------------
 
 #C# String types

@@ -11,6 +11,7 @@
 -- #C# Anonymous functions
 -- #C# Functions as first class citizens
 -- #C# - Closures
+-- #C# Methods
 
 -- #T# Beginning of content
 
@@ -183,4 +184,20 @@ clo2(-8)  -- #  -10
 clo2(-90) -- # -100
 -- # |-----
 
+-- # |-------------------------------------------------------------
+
+-- #C# Methods
+
+-- # |-------------------------------------------------------------
+-- #T# Lua is not a full object oriented programming language, as of the moment this was written, but there is a syntax that allows treating tables as objects, and tables can store attributes and methods, which is the most basic object oriented functionality
+
+-- # SYNTAX call a method from an object
+-- # function method1(self, param1, param2) statements1 end
+-- # object1 = {key1 = value1, key2 = method1}
+-- # return_value1 = object1:key2(arg1, arg2)
+-- #T# in the syntax 'object1:key2(arg1, arg2)', the colon ':' makes it equivalent to the syntax 'object1.key2(self, arg1, arg2)', so the colon is used to access methods from objects
+
+function method1(self, a1, a2) return a1 + 2*a2 end
+object1 = {attribute1 = 'value1', m1 = method1}
+int1 = object1:m1(1, 2) -- # 5
 -- # |-------------------------------------------------------------

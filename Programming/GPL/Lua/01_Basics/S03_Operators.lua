@@ -126,5 +126,5 @@ str1 = 'chars6'
 int1 = #str1 -- # 6
 
 table1 = {'val1', 'val2', 'val3'}
-int1 = #table1 -- # 3
+int1 = #table1 -- # 3 #| this is the length of the array table
 -- # |-------------------------------------------------------------

@@ -413,8 +413,10 @@ p {text-transform: capitalize;}
 p {letter-spacing: .3cm;}
 
 /* #T# the text-align property is a string that sets the horizontal alignment of the text contents of its element */
-/* #T#     the predefined values of the text-align property are: left, center, right, justify, start, end (start and end act like left and right with the 'ltr' value of the dir attribute (in a <p> tag, for example), and they act like right and left with the 'rtl' value of the dir attribute (in a <p> tag, for example) */
+/* #T#     the predefined values of the text-align property are: left, center, right, justify (for text justification), start, end (start and end act like left and right with the 'ltr' value of the dir attribute (in a <p> tag, for example), and they act like right and left with the 'rtl' value of the dir attribute (in a <p> tag, for example) */
+/* #T#     the text-align property can also be used to set the horizontal alignment of images, inside a figure element */
 p {text-align: justify;}
+figure {text-align: center;}
 
 /* #T# the font-style property is a string that sets the slant of the text contents of its element */
 /* #T#     the predefined values of the font-style property are: normal, italic, oblique */

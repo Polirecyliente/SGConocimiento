@@ -61,6 +61,9 @@ pandoc -s file1
 # <p>word1</p>
 # </body>
 # </html>
+
+#T# the --version flag outputs information like the user data directory, which is where Pandoc searches for files, like templates, by default
+pandoc --version
 # |-------------------------------------------------------------
 
 #C# Inserting resources
@@ -80,5 +83,5 @@ pandoc --lua-filter file1.lua input_file1.md -o output_file1.pdf
 #T# several filters can be applied, from left to right one after the other
 pandoc --lua-filter file1.lua --lua-filter file2.lua input_file1.md -o output_file1.pdf
 
-#T# for information about how to create Lua filters, see /SGConocimiento/Programming/GPL/Lua/02_Applied/S01_Pandoc_filters.lua
+#T# for information about how to create Lua filters, see /path/to/SGConocimiento/Programming/GPL/Lua/02_Applied/S01_Pandoc_filters.lua
 # |-------------------------------------------------------------
