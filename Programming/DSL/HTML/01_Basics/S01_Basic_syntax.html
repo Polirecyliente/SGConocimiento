@@ -34,6 +34,8 @@
 
 <!-- #T# there are tags that require no content between its opening and closing, these tags give enough information by themselves, such as a newline, which can be written as <br> or <br/> -->
 
+<!-- #T# tags are commonly classified as either block tags, or inline tags, block tags contain blocks of content, inline tags contain lines of content inside a block -->
+
 <!-- #T# the <!DOCTYPE> tag is used to signal the type of document, it's written at the start of an HTML file -->
 <!DOCTYPE html>
 
@@ -148,6 +150,9 @@
 <!-- #T#     the dir attribute stands for direction, it's a string that sets the horizontal location where the text is placed in the box of the <p> tag, "rtl" stands for right to left (the text is placed to the right), "ltr" stands for left to right (the text is placed to the left) -->
         <p dir="rtl">Line1</p>
 
+<!-- #T#     the contiguous whitespace inside a <p> tag is collapsed into a single whitespace, this is called whitespace collapse -->
+        <p>word1        word2</p> <!-- # word1 word2 -->
+
 <!-- #T# the <em> tag stands for emphasis, it's used for emphasis of its contents, commonly displayed with an italic font style -->
         <p>Word1<em> emphasized word1 </em>word2</p>
 
@@ -178,7 +183,7 @@
 <!-- #T# the <sup> tag is used for superscript text -->
         <sup>superscript text1</sup>
 
-<!-- #T# the <pre> tag stands for preformatted text, it's used to display the text using the indentations and spacing of this file -->
+<!-- #T# the <pre> tag stands for preformatted text, which means that the text is formatted here in this file, and not by the browser (although the formatting given to the text here is that the whitespace is not collapsed), it's used to display the text using the indentations and spacing of this file -->
         <p><pre>
                 Text indented with four tabs.
         </pre></p>
