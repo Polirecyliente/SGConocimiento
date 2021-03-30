@@ -58,7 +58,7 @@ end
 -- #C# Pandoc types
 
 -- # |-------------------------------------------------------------
--- #T# the pandoc types are the set of possible elements with which filters can work
+-- #T# the pandoc types make the set of possible elements with which filters can work
 
 
 -- # |-------------------------------------------------------------

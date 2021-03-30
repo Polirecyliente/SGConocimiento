@@ -19,6 +19,7 @@
 <!-- #C# Tags that generate shapes -->
 <!-- #C# Embedded content -->
 <!-- #C# Form and input tags -->
+<!-- #C# HTML entities -->
 
 <!-- #T# Beginning of content -->
 
@@ -51,6 +52,8 @@
 <!-- #T# attributes are information about the tag itself, attributes are written inside the opening tag, after the name of the tag, for example <tag1 attribute1=value1> means that tag1 has an attribute1 with a value1 -->
 
 <!-- #T# when writing several attributes with their values, they are separated by space, for example <tag1 attribute1=value1 attribute2=value2 attribute3> in this example, attribute3 is a boolean attribute, and its presence means that the attribute is turned on and/or it's true -->
+
+<!-- #T# when defining attributes in this file, they are defined for a given tag, but their meaning is commonly the same when used in other tags -->
 
 <!-- #T# the <a> tag stands for anchor, it's used to create links with the href attribute, the href attribute stores the reference of the link, see the Anchor tag section for more information -->
         <a href="https://duckduckgo.com">Link1</a>
@@ -416,8 +419,8 @@
         <div id="id1">
 
 <!-- #T# the <span> tag is used to span parts inside a tag -->
-<!-- #T#     the class attribute is a string that sets an identification for the span -->
-            <p>Normal text, <span class="class1"> words in span, </span>normal text</p>
+<!-- #T#     the class attribute is a string that sets an identification for the span, several classes can be assigned by separating them with space -->
+            <p>Normal text, <span class="class1 class2 class3"> words in span, </span>normal text</p>
         </div>
     </body>
 </html>
@@ -633,4 +636,16 @@
         </form>
     </body>
 </html>
+<!-- # |------------------------------------------------------------- -->
+
+<!-- #C# HTML entities -->
+
+<!-- # |------------------------------------------------------------- -->
+<!-- #T# HTML entities allow placing any character, for example Unicode characters, HTML entities are written between an ampersand and a semicolon -->
+<!-- # SYNTAX &entity_name1; -->
+<p>&amp;</p>
+
+<!-- #T# for unicode characters knowing the hexadecimal code point of the character, the syntax is a bit different -->
+<!-- # SYNTAX &#xHex_num1; -->
+<p>&#x02A0;</p>
 <!-- # |------------------------------------------------------------- -->

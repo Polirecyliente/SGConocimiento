@@ -64,6 +64,15 @@ pandoc -s file1
 
 #T# the --version flag outputs information like the user data directory, which is where Pandoc searches for files, like templates, by default
 pandoc --version
+
+#T# the --list-highlight-languages is used to output the list of programming languages with syntax highlighting available
+pandoc --list-highlight-languages
+
+#T# the --number-sections flag is used to make numbered sections, the default numbering pattern for sections and subsections is 1, 1.1, 1.1.1, 1.1.1.1, etcetera, in HTML, the number of a section is placed inside a <span class="header-section-number"> tag -->
+pandoc file1.md -s --number-sections -o file1.html
+
+#T# the --toc flag is used to include a table of contents in the output file
+pandoc file1.md -s --toc -o file1.html
 # |-------------------------------------------------------------
 
 #C# Inserting resources

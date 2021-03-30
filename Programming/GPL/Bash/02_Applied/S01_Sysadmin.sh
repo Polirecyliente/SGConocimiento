@@ -648,8 +648,9 @@ find . -name 'file*' | xargs -I str1 mv str1 str1_new #| finds any files and dir
 
 #T# -o1 and -o2 val2 can be one of the following
 #T#     -t str1, create an ssh key of the type str1, so str1 can be 'dsa', 'ecdsa', 'ed25519', 'rsa'
+#T#     -f file1, the output private key will be named file1, and the public key will be named file1.pub
 
-ssh-keygen -t rsa
+ssh-keygen -t rsa -f key_rsa
 
 #T# start the ssh agent that stores the private keys, using the output of the ssh-agent command
 eval $(ssh-agent -s)
@@ -661,9 +662,13 @@ eval $(ssh-agent -s)
 
 ssh-add ~/.ssh/id_rsa
 
-#T# list the current keys stored by the agent
+#T# list the current keys stored by the ssh agent
 ssh-add -l #| short form
 ssh-add -L #| long form
+
+#T# delete a given key stored by the ssh agent
+# SYNTAX ssh-add -d /path/to/private_key1
+ssh-add -d ~/.ssh/id_rsa
 # |-------------------------------------------------------------
 
 #C# Disc image burning
