@@ -60,4 +60,16 @@ root1:
   bool4: No
   bool5: On
   bool6: Off
+
+#T# to create a string that preserves newlines, a vertical bar | is used
+root1:
+  key1: |
+    value that
+    preserves newlines
+
+#T# to create a string that does not preserve newlines, a greater than sign > is used
+root1:
+  key1: >
+    value that does not preserve newlines
+    so newlines are converted into spaces
 # |-------------------------------------------------------------
