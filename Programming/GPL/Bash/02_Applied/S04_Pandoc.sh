@@ -5,7 +5,10 @@
 
 #C# Basic usage
 #C# General flags and kwargs
-#C# Inserting images
+#C# Inserting resources
+#C# General sections
+#C# - Table of contents
+#C# - Bibliography and references
 #C# Pandoc Lua filters
 
 #T# Beginning of content
@@ -23,6 +26,9 @@
 # |-------------------------------------------------------------
 #T# the following command turns input_file1.md into output_file1.pdf
 # SYNTAX pandoc input_file1.md -o output_file1.pdf
+
+#T# the following command turns input_file1.md into an HTML file and then stores the HTML file as a PDF file
+# SYNTAX pandoc input_file1.md -t html -o output_file1.pdf
 # |-------------------------------------------------------------
 
 #C# General flags and kwargs
@@ -68,11 +74,21 @@ pandoc --version
 #T# the --list-highlight-languages is used to output the list of programming languages with syntax highlighting available
 pandoc --list-highlight-languages
 
-#T# the --number-sections flag is used to make numbered sections, the default numbering pattern for sections and subsections is 1, 1.1, 1.1.1, 1.1.1.1, etcetera, in HTML, the number of a section is placed inside a <span class="header-section-number"> tag -->
-pandoc file1.md -s --number-sections -o file1.html
+#T# the -f kwarg option is used to set the input format from which the conversion is made
+pandoc file1.md -f markdown -o file1.html
 
-#T# the --toc flag is used to include a table of contents in the output file
-pandoc file1.md -s --toc -o file1.html
+#T# the --list-input-formats flag is used to print the list of formats that are valid as values for the -f kwarg option
+pandoc --list-input-formats
+
+#T# the -t kwarg option is used to set the output format to which the conversion is made
+pandoc file.md -t html -o file1.html
+
+#T# the --list-output-formats flag is used to print the list of formats that are valid as values for the -t kwarg option
+pandoc --list-output-formats
+
+#T# the -c kwarg option is used to style the HTML output with a given CSS file
+pandoc file1.md -s -c file1.css -o file1.html
+pandoc file1.md -s -c file1.css -t html -o file1.pdf
 # |-------------------------------------------------------------
 
 #C# Inserting resources
@@ -81,6 +97,40 @@ pandoc file1.md -s --toc -o file1.html
 #T# when the input file contains resources such as images, referenced with relative paths, the --resource-path kwarg is used to specify the path or paths (path1, path2, etcetera) where the resources will be searched for
 # SYNTAX pandoc --resource-path path1:path2 input_file1.md -o output_file1.pdf
 pandoc --resource-path Math/:Science/dir1/ input_file1.md -o output_file1.pdf
+# |-------------------------------------------------------------
+
+#C# General sections
+
+# |-------------------------------------------------------------
+#T# the --number-sections flag is used to make numbered sections, the default numbering pattern for sections and subsections is 1, 1.1, 1.1.1, 1.1.1.1, etcetera, in HTML, the number of a section is placed inside a <span class="header-section-number"> tag -->
+pandoc file1.md -s --number-sections -o file1.html
+
+#C# - Table of contents
+
+# |-----
+#T# the --toc flag is used to include a table of contents in the output file
+pandoc file1.md -s --toc -o file1.html
+
+#T# to auto generate the table of contents in a Markdown file named file1.md, do
+pandoc file1.md -s --toc -o file1.md
+# |-----
+
+#C# - Bibliography and references
+
+# |-----
+#T# the bibliography and the references are created in the same way, because both list citations, the references list the citations used in the text, and the bibliography lists the citations that are not used in the text
+
+#T# the --citeproc flag and the --bibliography kwarg option are used together to list the citations in the file, be it in the bibliography or in the references
+pandoc file1.md -s --citeproc --bibliography file1.bib -o file1.html
+
+#T# the --bibliography kwarg option receives a bibliography file as argument, it can be a .yaml file, or a .bib file
+
+#T# the pandoc command can be used to convert a bibliography file into other formats, using regular file format conversion
+pandoc file1.bib -s -f biblatex -t markdown -o file1.yaml
+
+#T# converting a bibliography file into the markdown format, outputs a valid yaml file, in the pandoc invocation `-t markdown -o file1.yaml`
+# |-----
+
 # |-------------------------------------------------------------
 
 #C# Pandoc Lua filters

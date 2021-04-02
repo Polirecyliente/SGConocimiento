@@ -123,7 +123,7 @@ read var1
 
 #T# -f is a flag, it can also have a long name such as --flag1, a flag is a binary variable, it can be turned on by its presence after the command, or turned off by its absence after the command
 
-#T# --option1 value1 is a key value pair, it can also be called a kwarg pair, --option1 can have a short name such as -o, value1 can be separated by space, by an equal sign =, or not separated from -o
+#T# --option1 value1 is a key value pair, it can also be called a kwarg pair or a kwarg option, --option1 can have a short name such as -o, value1 can be separated by space, by an equal sign =, or not separated from -o
 
 #T# positional1 is a positional parameter, the double dash -- is used to separate flags and options from positional parameters, to avoid ambiguity when there are positional parameters that start with a hyphen, e.g. '-pos1'
 

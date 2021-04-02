@@ -22,6 +22,8 @@ table1 = {1, 99, 2, 99, 99, 3}
 -- # |-------------------------------------------------------------
 -- #T# tables can be made like arrays (with numbers as indexes), or like associative arrays (with key value pairs)
 
+-- #T# arrays, represented as array tables, start the count of their elements at 1
+
 -- #T# create an array table
 table1 = {'value1', 2, 3}
 

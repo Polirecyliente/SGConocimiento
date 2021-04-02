@@ -9,7 +9,7 @@
 <!-- #C# Normal text -->
 <!-- #C# Headings -->
 <!-- #C# Text formatting -->
-<!-- #C# Links, images, footnotes -->
+<!-- #C# Links, images, footnotes, citations -->
 <!-- #C# Blocks of content -->
 <!-- #C# - Tables -->
 <!-- #C# - Lists of items -->
@@ -171,7 +171,7 @@ Text ~subscript\ text~
 Text [Text in small caps]{.smallcaps} text
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #C# Links, images, footnotes -->
+<!-- #C# Links, images, footnotes, citations -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# create links with the following syntax -->
@@ -235,6 +235,17 @@ Text [^footnote_string] text. <!-- #| this is rendered as Text ^2^ text. -->
 <!-- #T# an inline footnote is created with the following syntax -->
 <!-- # SYNTAX ^[footnote_text1] -->
 text text^[text in the footnote]
+
+<!-- #T# a citation is created with this syntax -->
+
+<!-- # SYNTAX [@citation_label1] -->
+<!-- #T# citation_label1 must be a citation label written in a bibliography file such as a .bib file or a .yaml file. To render the bibliography, see Pandoc.md -->
+
+text [@book1] text <!-- Markdown output #| text (Author1 Year1) text -->
+
+<!-- #T# an inline citation is created with this syntax -->
+<!-- # SYNTAX @citation_label1 -->
+text @book1 text <!-- Markdown output #| text Author1 (Year1) text -->
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Blocks of content -->
