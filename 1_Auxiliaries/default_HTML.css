@@ -1,0 +1,60 @@
+body
+{
+    margin: 1cm 1.5cm;
+}
+
+h1 
+{
+    font-family: "Latin Modern Roman";
+    font-size: 22pt;
+    text-align: center;
+}
+
+h2
+{
+    font-family: "Latin Modern Roman";
+    font-size: 20pt;
+}
+
+p
+{
+    font-family: "Latin Modern Roman";
+    font-size:14pt;
+    text-align: justify;
+}
+
+figure
+{
+    text-align: center;
+}
+
+figcaption
+{
+    font-family: "Latin Modern Roman";
+    font-style: italic;
+}
+
+h3
+{
+    font-family: "Latin Modern Roman";
+    font-size: 18pt;
+    font-style: italic;
+}
+
+h4
+{
+    font-family: "Latin Modern Roman";
+    font-size: 17pt
+}
+
+h5
+{
+    font-family: "Latin Modern Roman";
+    font-size: 16pt
+}
+
+h6
+{
+    font-family: "Latin Modern Roman";
+    font-size: 15pt
+}

@@ -9,7 +9,7 @@
 <!-- #C# Normal text -->
 <!-- #C# Headings -->
 <!-- #C# Text formatting -->
-<!-- #C# Links, images, footnotes, citations -->
+<!-- #C# Links, images and videos, footnotes, citations -->
 <!-- #C# Blocks of content -->
 <!-- #C# - Tables -->
 <!-- #C# - Lists of items -->
@@ -171,7 +171,7 @@ Text ~subscript\ text~
 Text [Text in small caps]{.smallcaps} text
 <!-- # |------------------------------------------------------------- -->
 
-<!-- #C# Links, images, footnotes, citations -->
+<!-- #C# Links, images and videos, footnotes, citations -->
 
 <!-- # |------------------------------------------------------------- -->
 <!-- #T# create links with the following syntax -->
@@ -207,6 +207,9 @@ text [link to something] text [link to something] text
 <!-- #T# a link can point to another link, which points to a given location, this effectively is a way to create a link with a new name -->
 <!-- # SYNTAX [new_link_name1][link_name1] -->
 [new link name][link to something] <!-- #| this points to target/of/link1 -->
+
+<!-- #T# a link to a video is made with the same syntax as a link to an image -->
+![link to a video](/path/to/video1.mp4)
 
 <!-- #T# headings can be linked to, by placing their content as the link name -->
 # Heading one
@@ -530,7 +533,7 @@ paragraph that references (@example_item2)
         print("str1");
     }
 ```
-<!-- #T# available syntax highlighting options are, 'C' (as shown), 'json', 'python' -->
+<!-- #T# available syntax highlighting options are, 'C' (as shown), 'json', 'python', and others, to see the list, execute in a Bash shell `pandoc --list-highlight-languages` -->
 
 <!-- #T# extra options are, 'mermaid' (creates diagrams from plain text), 'smiles' (creates a 2D molecular diagram of a given molecule) -->
 

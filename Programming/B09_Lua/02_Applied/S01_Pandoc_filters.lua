@@ -6,10 +6,11 @@
 
 -- #C# Basic usage
 -- #C# Terminology and synonyms
+-- #C# Pandoc AST
 -- #C# Elements
 -- #C# - Parts of an element
 -- #C# - Types of elements
--- #C# - Other functions
+-- #C# - Other functions and methods
 
 -- #T# Beginning of content
 
@@ -56,6 +57,27 @@ end
 -- #T# Lua's array tables are refered here as lists
 
 -- #T# a function that is named the same as a Pandoc's AST element, is called a filter
+-- # |-------------------------------------------------------------
+
+-- #C# Pandoc AST
+
+-- # |-------------------------------------------------------------
+-- #T# AST stands for Abstract Syntax Tree
+
+-- #T# filters modify the Pandoc AST, so the Pandoc AST must be studied to know how to create a filter that achieves a desired result
+
+-- #T# to see the Pandoc AST of a document, execute `pandoc file1.md -t native`
+
+-- #T# the native format is for Pandoc AST native representation
+
+-- #T# the content of an element in the AST is enclosed in square brackets after the type of the element
+-- #T# having as input a Markdown file named file1.md with `word1 word2 word3`, executing `pandoc file1.md -t native` the AST output is `[Para [Str "word1",Space,Str "word2",Space,Str "word3"]]`
+
+-- #T# the whole document is enclosed in square brackets. The contents of the Para element are enclosed in square brackets: `[Str "word1",Space,Str "word2",Space,Str "word3"]`, each word becomes an element of type Str, and each space is an element of type Space
+
+-- #T# there are elements that have more information apart from its content, elements that have metadata have it stored apart from the content. Elements with a link target have the link information stored apart from the content
+
+-- #T# a Markdown file named file1.md with `[in span1]{#id1 .c1 .c2 k1='v1' k2='v2'}`, executing `pandoc file1.md -t native` the AST output is `[Para [Span ("id1",["c1","c2"],[("k1","v1"),("k2","v2")]) [Str "in",Space,Str "span1"]]]`, the metadata of the Span element is enclosed in parentheses before the content
 -- # |-------------------------------------------------------------
 
 -- #C# Elements
@@ -148,9 +170,27 @@ function Pandoc(document1)
 end
 
 -- #T# the reason for which there is no output for `print(document1.meta)`, is that `document.meta` is a table with no elements, because there is no metadata for this example
+
+-- #T# the Span type represents a <span> tag, so it can have metadata
+
+-- #| the Mardown file for the following filter contains `[in span1]{#id1 .c1 .c2 k1='v1' k2='v2'}`
+
+-- #T# the Span filter takes a Span type as argument, this argument is the Span element being filtered
+function Span(element1)
+    print(element1.identifier)    -- # id1
+    print(element1.classes[1])    -- # c1
+    print(element1.classes[2])    -- # c2
+    print(element1.attributes.k1) -- # v1
+    print(element1.attributes.k2) -- # v2
+    return element1
+end
+
+-- #T# the identifier attribute is a string with the identifier in the metadata of the Span element
+-- #T# the classes attribute is a list with the classes in the metadata of the Span element
+-- #T# the attributes attribute is a table with the attribute value pairs in the metadata of the Span element
 -- # |-----
 
--- #C# - Other functions
+-- #C# - Other functions and methods
 
 -- # |-----
 -- #T# the walk_block function is used to apply a given filter to a particular block
@@ -165,7 +205,7 @@ end
 
 -- #| this filter takes Para elements and replaces their Str elements for the string "replacement". In this example, from walk_block(block_element1, filter1), filter1 is defined as an anonymous function, because otherwise the Str filter would apply to all Str elements in the document.
 
--- #T# the walk_inline function is used to apply a given filter to a particular inline
+-- #T# the pandoc.walk_inline function is used to apply a given filter to a particular inline
 
 -- # SYNTAX pandoc.walk_inline(inline_element1, filter1)
 
@@ -176,6 +216,41 @@ function Emph(element1)
 end
 
 -- #| this filter takes Emph elements and places their Str elements into Strong elements. In this example, from walk_inline(inline_element, filter1), filter1 is defined as an anonymous function, because otherwise the Str filter would apply to all Str elements in the document.
+
+-- #T# the pandoc.read function is used to read a string as a document from a given language
+
+-- # SYNTAX pandoc.read(document_string1, language_string1)
+-- #T# the pandoc.read function returns a Pandoc document created from reading document_string1 written in language_string1
+
+-- #| the following filter can be used on any Markdown file
+function Pandoc(document1)
+    return pandoc.read("**only this**", "markdown")
+end
+-- #| this filter converts any Markdown file into `**only this**`
+
+-- #T# the pandoc.pipe function is used to pipe into an external command and pipe back into the filter
+
+-- # SYNTAX pandoc.pipe(command_string1, {arg_string1, arg_string2, arg_stringN}, input_string1)
+-- #T# command_string1 is executed in the operating system, using the list of arguments as arguments for the command, and receiving input_string1 as if it was input from stdin
+
+-- #| the Markdown file for this example contains `text1 text2`
+function Str(content1)
+    return pandoc.Str(pandoc.pipe("sed", {"-e", "s/text/Text/"}, content1.text))
+end
+-- #| the Markdown output is `Text1 Text2`
+
+-- #T# the clone method can be used on Pandoc objects to create copies of them
+
+-- # syntax pandoc_element1:clone()
+-- #T# pandoc_element1 is any Pandoc object that is non read-only
+
+-- #| the Markdown file for this example contains `text **TEXT** text`
+function Strong(element1)
+    emph1 = pandoc.Emph(element1.content)
+    emph2 = emph1:clone()
+    return {emph1, emph2}
+end
+-- #| the Markdown output is `text *TEXTTEXT* text`, the emph1 object is cloned in emph2, and then both objects are returned in a list
 -- # |-----
 
 -- # |-------------------------------------------------------------

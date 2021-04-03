@@ -6,6 +6,7 @@
 #C# Algorithms
 #C# - Cryptography
 #C# Languages
+#C# Applications
 #C# Networking
 
 #T# Beginning of content
@@ -28,6 +29,18 @@ RSA: Rivest, Shamir, Adleman, an asymmetric cryptography (public key) algorithm.
 AST: Abstract Syntax Tree, a tree diagram to show the syntactic elements in a given source code.
 
 DOM: Document Object Model, in a markup language, the DOM is the set of tags and their hierarchical structure.
+
+GPL: General Purpose Language, a programming language capable of creating programs of any kind.
+
+DSL: Domain Specific Language, a language used with a particular purpose, that doesn't work for creating programs of any kind.
+
+SQL: Structured Query Language, a DSL used to query and manage databases.
+
+# Applications
+
+LSP: Language Server Protocol, a protocol to provide autocompletion for a given language, for example to autocomplete libraries so that available libraries can be listed.
+
+IDE: Integrated Development Environment, an application used to write code, so it commonly has syntax highlight, an LSP for autocompletion,
 
 # Networking
 

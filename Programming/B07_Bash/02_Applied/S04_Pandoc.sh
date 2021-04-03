@@ -89,6 +89,8 @@ pandoc --list-output-formats
 #T# the -c kwarg option is used to style the HTML output with a given CSS file
 pandoc file1.md -s -c file1.css -o file1.html
 pandoc file1.md -s -c file1.css -t html -o file1.pdf
+
+#T# the --self-contained flag is used to output an HTML file with its images embedded in the HTML file itself, so the HTML file does not need the external images to display these images when rendering the HTML file
 # |-------------------------------------------------------------
 
 #C# Inserting resources
