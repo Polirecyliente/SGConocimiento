@@ -72,11 +72,11 @@
 <!-- #T# metadata and configuration are enclosed inside a triple hyphens pair, using YAML syntax, at the start of the file -->
 ---
 key1: value1
-metadata: value of the metadata
 title: Basic syntax
 author: Unknown
 date: 10 Feb 2020
 lang: en
+toc-title: Title for the table of contents
 ---
 <!-- # |------------------------------------------------------------- -->
 
@@ -216,6 +216,10 @@ text [link to something] text [link to something] text
 [Heading one]
 [text to link to the heading][Heading one] 
 <!-- # <p><a href="#heading-one">text to link to the heading</a></p> -->
+
+<!-- #T# a link to a heading can be created this way as well -->
+# Heading two
+[link to heading](#heading-two)
 
 <!-- #T# footnote references are created with the following syntaxes -->
 

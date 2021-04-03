@@ -16,8 +16,8 @@
 import S07_02_Packages_Module_example
 
 #T# import a package, which is a directory with an __init__.py file, when the package is imported the __init__.py file is executed
-import package
-int1 = package.anon_func1(8, -5) # 50
+import package_aux
+int1 = package_aux.anon_func1(8, -5) # 50
 
 # |--------------------------------------------------\
 #T# an import statement is executed from the level of the file in execution, so a file down in the hierarchy can import a file in another branch

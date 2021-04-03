@@ -90,7 +90,7 @@ pandoc --list-output-formats
 pandoc file1.md -s -c file1.css -o file1.html
 pandoc file1.md -s -c file1.css -t html -o file1.pdf
 
-#T# the --self-contained flag is used to output an HTML file with its images embedded in the HTML file itself, so the HTML file does not need the external images to display these images when rendering the HTML file
+#T# the --self-contained flag is used to output an HTML file with its content embedded in the HTML file itself, such as images, stylesheets, scripts, etc, so the resulting HTML file does not need references to external files
 # |-------------------------------------------------------------
 
 #C# Inserting resources

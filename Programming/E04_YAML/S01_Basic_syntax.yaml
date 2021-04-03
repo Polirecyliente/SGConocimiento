@@ -49,6 +49,18 @@ root1:
 root1:
   key1: ["list_value1", "list_value2", "list_value3"]
 
+#T# a single list item can be a key value pair itself
+root1:
+  key1:
+    - sub_key1: sub_value1
+
+#T# a single list item can contain several key value pairs
+root1:
+  key1:
+    - sub_key1A: sub_value1A
+      sub_key2A: sub_value2A
+    - sub_key1B: sub_value1B
+
 #T# the data types are the regular numeric and string, but there is also the null value, boolean values can be True/False
 root1:
   key1: null

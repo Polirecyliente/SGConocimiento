@@ -18,6 +18,14 @@ p
     text-align: justify;
 }
 
+a
+{
+    font-family: "Latin Modern Roman";
+    font-size: 14pt;
+    color: teal;
+    text-decoration: none;
+}
+
 figure
 {
     text-align: center;

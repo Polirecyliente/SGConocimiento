@@ -1,6 +1,6 @@
 body
 {
-    margin: 1cm 1.5cm;
+    margin: 3cm 6cm;
 }
 
 h1 
@@ -21,6 +21,14 @@ p
     font-family: "Latin Modern Roman";
     font-size:14pt;
     text-align: justify;
+}
+
+a
+{
+    font-family: "Latin Modern Roman";
+    font-size: 14pt;
+    color: teal;
+    text-decoration: none;
 }
 
 figure

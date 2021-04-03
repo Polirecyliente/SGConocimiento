@@ -3,17 +3,18 @@ title: Coordinate systems (Sistemas de coordenadas)
 toc-title: Table of contents
 ---
 
-<!--
-#T# Table of contents
+Table of contents
 
-#C# Parts of a coordinate system (Partes de un sistema de coordenadas)
-#C# Rectangular coordinate system (Sistema de coordenadas rectangulares)
-#C# - Graphs of equations (Gráficas de ecuaciones)
-#C# -| Graphs of linear equations (Gráficas de ecuaciones lineales)
-#C# -| Graphs of polynomials (Gráficas de polinomios)
-
-#T# Beginning of content
--->
+-   [Parts of a coordinate system (Partes de un sistema de
+    coordenadas)](#parts-of-a-coordinate-system-partes-de-un-sistema-de-coordenadas)
+-   [Rectangular coordinate system (Sistema de coordenadas
+    rectangulares)](#rectangular-coordinate-system-sistema-de-coordenadas-rectangulares)
+    -   [Graphs of equations (Gráficas de
+        ecuaciones)](#graphs-of-equations-gráficas-de-ecuaciones)
+        -   [Graphs of linear equations (Gráficas de ecuaciones
+            lineales)](#graphs-of-linear-equations-gráficas-de-ecuaciones-lineales)
+        -   [Graphs of polynomials (Gráficas de
+            polinomios)](#graphs-of-polynomials-gráficas-de-polinomios)
 
 # Parts of a coordinate system (Partes de un sistema de coordenadas)
 
