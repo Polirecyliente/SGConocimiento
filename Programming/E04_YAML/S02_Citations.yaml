@@ -1,1 +1,53 @@
-# TODO: Citation fields
+---
+references:
+
+#T# template entry for a book
+- id: book_id1
+  type: book
+  author:
+  - family: Author1
+    given: Book
+  - family: Author2
+  - family: Author3
+  collection-title: series1
+  edition: edition1
+  isbn: ISBN_string1
+  issued: 2020
+  publisher: Book Publisher
+  publisher-place: city1, country1
+  title: Title of the book
+  volume: vol1
+
+#T# template entry for an article
+- id: article_id1
+  type: article-journal
+  author:
+  - family: Name2
+    given: Name1
+  container-title: Journal_name1
+  doi: DOI_string1
+  issue: article_number1
+  issued: year1
+  page: page1, page2
+  title: Title1
+  volume: vol1
+
+#T# template entry for a conference proceedings
+- id: proceedings_id1
+  type: paper-conference
+  author:
+  - family: Name2
+    given: Name1
+  issued: year1
+  title: Title1
+
+#T# template entry for a website page
+- id: website_page_id1
+  author:
+  - family: Name3
+    given: Name1 Name2
+  issued: year1
+  note: "Accessed: date1"
+  publisher: "<url1>"
+  title: Page_title1
+---

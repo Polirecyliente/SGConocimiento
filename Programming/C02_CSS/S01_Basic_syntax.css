@@ -120,6 +120,12 @@ p:first-of-type, p:nth-of-type(3), p:last-of-type, p:nth-last-of-type(2)
     color: goldenrod;
 }
 
+/* #T# the :root pseudo-class can be used without a tag, it represents the <html> root element of the document */
+:root
+{
+    color: aquamarine;
+}
+
 /* #T# tags can have pseudo-elements, which are predefined parts of each tag */
 
 /* # SYNTAX applying style to a pseudo-element */
@@ -315,6 +321,29 @@ p.c1
     color: magenta
 }
 /* #| the <p id="i1"> tag will be colored magenta, the <p class="c1"> tag will be colored darkgreen, and any other <p> tag will be colored blue */
+
+/* #T# variables can be created using this syntax */
+
+/* # SYNTAX --var1: value1; */
+
+/* #T# variables are used with the var function */
+
+/* # SYNTAX property1: var(--var1); */
+p
+{
+    --color1: gold;
+    color: var(--color1)
+}
+
+/* #T# to make a variable global, it must be declared in the :root pseudo-class */
+:root
+{
+    --color1: red;
+}
+p
+{
+    color: var(--color1)
+}
 /* # |------------------------------------------------------------- */
 
 /* #C# General values */

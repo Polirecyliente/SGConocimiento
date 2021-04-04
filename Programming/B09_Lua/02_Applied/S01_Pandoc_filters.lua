@@ -146,6 +146,12 @@ function Str(content1)
     return pandoc.Str(content1.text.."Suffix text")
 end
 
+-- #T# the LineBreak type represents a newline
+function LineBreak()
+    return {pandoc.LineBreak(), pandoc.LineBreak()}
+end
+-- #| this filter replaces every LineBreak element with two LineBreak elements
+
 -- #T# the Para type is the basic block type, it represents a paragraph
 
 -- #T# the Para filter takes a Para type as argument, this argument is the Para element being filtered

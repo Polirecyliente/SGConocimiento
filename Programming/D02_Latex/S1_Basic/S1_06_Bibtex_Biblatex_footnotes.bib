@@ -1,38 +1,75 @@
-@BOOK{bookLabel1,
-AUTHOR="Book Author1 and Author2 and Author3",
-TITLE="Book Title",
-PUBLISHER="Book Publisher",
-YEAR="2020",
+@comment{ a Bibtex entry is the data of a given source (like a book, article, website page, conference proceedings, etcetera), a Bibtex entry is created with the following syntax
+
+@source1{id1,
+key1 = "value1",
+key2 = {value2},
 }
 
-@book{bookParts,
-author={},
-title={},
-publisher={},
-year=,
-volume=,
-series=,
-address={},
-edition=,
-month=,
-isbn={}
+values can be enclosed in quotation marks or in curly braces
 }
 
-@article{articleParts,
-author="",
-title="",
-journal="",
-year=,
-number=,
-pages={,},
-month=,
-volume=,
-doi={}
+@comment{ a string variable can be created with the @string directive
+
+@string{
+var1 = "value1"
 }
 
-@inproceedings{fuzzyNum,
-author={},
-title={},
-year=,
-month={}
+@comment{ strings enclosed in quotation marks can be concatenated with the concatenation operator #
+key1 = "val1" # "val2" # var1
+}
+
+@comment{ to preserve the case of words, (when the case is changed), they must be enclosed in curly braces
+
+@source1{id1,
+key1 = "string1 {preserved_case} string2"
+}
+
+@comment{ an URL can be inserted with the \url command
+key1 = "\url{https://duckduckgo.com}",
+}
+
+@string{ var1 = "of the book"}
+
+@comment{ template entry for a book }
+@book{book_id1,
+author    = "Book Author1 and Author2 and Author3",
+title     = "Title " # var1,
+publisher = "Book Publisher",
+year      = "2020",
+volume    = "vol1",
+series    = "series1",
+address   = "city1, country1",
+edition   = "edition1",
+month     = "month1",
+isbn      = "ISBN_string1",
+}
+
+@comment{ template entry for an article }
+@article{article_id1,
+author  = "Name1 Name2",
+title   = "Title1",
+journal = "Journal_name1",
+year    = "year1",
+number  = "article_number1",
+pages   = {page1, page2},
+month   = "month1",
+volume  = "vol1",
+doi     = "DOI_string1",
+}
+
+@comment{ template entry for a conference proceedings }
+@inproceedings{proceedings_id1,
+author = "Name1 Name2",
+title  = "Title1",
+year   = "year1",
+month  = "month1",
+}
+
+@comment{ template entry for a website page }
+@misc{website_id1,
+title        = "Page_title1",
+author       = "Name1 {Name2} Name3",
+howpublished = "\url{url1}",
+year         = "year1",
+note         = "Accessed: date1",
 }

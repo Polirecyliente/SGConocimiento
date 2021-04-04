@@ -72,11 +72,18 @@
 <!-- #T# metadata and configuration are enclosed inside a triple hyphens pair, using YAML syntax, at the start of the file -->
 ---
 key1: value1
-title: Basic syntax
+key2: value2
+---
+
+<!-- #T# the following metadata shows key value pairs understood by Pandoc -->
+---
+title: Title for this document
 author: Unknown
 date: 10 Feb 2020
 lang: en
 toc-title: Title for the table of contents
+nocite: |
+  @source_id1, @source_id2
 ---
 <!-- # |------------------------------------------------------------- -->
 
@@ -103,6 +110,7 @@ Text in paragraph1
 | line1
 |  line2
 |   line3
+|             lineE
 <!-- # |------------------------------------------------------------- -->
 
 <!-- #C# Headings -->
@@ -167,7 +175,7 @@ Text ^superscript\ text^
 <!-- #T# subscript text is written inside tildes, with space escaped -->
 Text ~subscript\ text~
 
-<!-- #T# small capitalization style is applied to the text of a link with the .smallcaps class, doing this converts the link into normal text -->
+<!-- #T# small capitalization style is applied to the text of a <span> element with the .smallcaps class -->
 Text [Text in small caps]{.smallcaps} text
 <!-- # |------------------------------------------------------------- -->
 
@@ -393,9 +401,9 @@ second_cell_string1 |
 
 <!-- #T# make unordered lists with asterisks *, plus + or minus -, the indentation is neccessary to distinguish sublevels -->
 * item
-    + subitem
-        - subsubitem
-            * subsubsubitem
+  + subitem
+    - subsubitem
+      * subsubsubitem
 + item
 
 <!-- #T# the text in a list item must be separated by at least one space from the list marker (num1. for ordered lists, and *, +, - for unordered lists) -->

@@ -1,3 +1,7 @@
 ---
-
+references:
+- id: C_main_tutorial
+  title: C Programming Tutorial
+  author: Tutorialspoint
+  publisher: "<https://www.tutorialspoint.com/cprogramming/>"
 ---

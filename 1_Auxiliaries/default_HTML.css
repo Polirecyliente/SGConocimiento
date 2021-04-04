@@ -5,30 +5,37 @@ body
 
 h1 
 {
-    font-family: "Latin Modern Roman";
-    font-size: 22pt;
+    font-family: "Georgia";
+    font-size: 32pt;
     text-align: center;
 }
 
 h2
 {
-    font-family: "Latin Modern Roman";
-    font-size: 20pt;
+    font-family: "Georgia";
+    font-size: 26pt;
 }
 
 p
 {
     font-family: "Latin Modern Roman";
-    font-size:14pt;
+    font-size: 18pt;
     text-align: justify;
 }
 
 a
 {
     font-family: "Latin Modern Roman";
-    font-size: 14pt;
-    color: teal;
+    font-size: 18pt;
+    color: teal ;
     text-decoration: none;
+}
+
+dl
+{
+    font-family: "Latin Modern Roman";
+    font-size: 18pt;
+    text-align: justify;
 }
 
 figure
@@ -39,30 +46,37 @@ figure
 figcaption
 {
     font-family: "Latin Modern Roman";
+    font-size: 18pt;
     font-style: italic;
+}
+
+.csl-entry
+{
+    font-family: "Latin Modern Roman";
+    font-size: 18pt;
 }
 
 h3
 {
-    font-family: "Latin Modern Roman";
-    font-size: 18pt;
+    font-family: "Georgia";
+    font-size: 24pt;
     font-style: italic;
 }
 
 h4
 {
-    font-family: "Latin Modern Roman";
-    font-size: 17pt
+    font-family: "Georgia";
+    font-size: 21pt
 }
 
 h5
 {
-    font-family: "Latin Modern Roman";
-    font-size: 16pt
+    font-family: "Georgia";
+    font-size: 20pt
 }
 
 h6
 {
-    font-family: "Latin Modern Roman";
-    font-size: 15pt
+    font-family: "Georgia";
+    font-size: 19pt
 }

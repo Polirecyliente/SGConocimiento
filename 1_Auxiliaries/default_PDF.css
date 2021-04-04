@@ -37,6 +37,12 @@ figcaption
     font-style: italic;
 }
 
+.csl-entry
+{
+    font-family: "Latin Modern Roman";
+    font-size: 14pt;
+}
+
 h3
 {
     font-family: "Latin Modern Roman";
