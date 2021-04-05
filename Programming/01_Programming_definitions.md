@@ -30,10 +30,15 @@ This document contains the definitions needed to understand computer programming
   \
   For this cycle of interactions to take place, the computer must have peripherics that receive the input from the user. The computer interprets this input to know which computations must be carried out. The computer must also have peripherics that send the output to the user. After the computations are carried out, the computer sends the output using these peripherics.
 
-
-
 **Input peripherics**
-  : The most common 
+  : Devices connected to a computer, used by the user to send input to the computer. Input peripherics can be made into parts of the computer itself.
+  \
+  The most common input peripherics are: the mouse and the keyboard. The mouse is used as a pointing device, the input consists of pointing to different points in space. The keyboard is used to send character input to the computer, to be able to write, and to send in band signaling (which means sending instructions via a sequence of characters, instead of sending the characters themselves).
+
+**Output peripherics**
+  : Devices connected to a computer, used by the computer to send output to the user. Output peripherics can be made into parts of the computer itself.
+  \
+  The most common output peripherics are: the monitor and the printer. The monitor is used to display output from computations in real time. The printer is used to print documents.
 
 # Programming languages
 
@@ -46,6 +51,12 @@ GPL: General Purpose Language, a programming language capable of creating progra
 DSL: Domain Specific Language, a language used with a particular purpose, that doesn't work for creating programs of any kind.
 
 SQL: Structured Query Language, a DSL used to query and manage databases.
+
+SGML: Standard Generalized Markup Language, a standard to define markup languages. For example, HTML and XML comply with this standard.
+
+HTML: HyperText Markup Language, a markup language commonly used to create webpages, because browsers understand HTML, browsers draw a webpage from a given HTML file.
+
+XML: eXtended Markup Language, a multipurpose markup language, commonly used as a format for applications to write their output.
 
 # Algorithms
 

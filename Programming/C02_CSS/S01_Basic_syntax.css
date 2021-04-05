@@ -16,6 +16,7 @@
 /* #C# Transformation properties */
 /* #C# At rules */
 
+
 /* #T# Beginning of content */
 
 /* # |------------------------------------------------------------- */
@@ -102,14 +103,14 @@ article p a /* #| this style only applies to the <a> tag elements, that are insi
 /* #T# pseudo_class1 must be a pseudo-class of tag1 */
 
 /* #T# there is a set of pseudo-classes that are general to all or most tags, the general pseudo-classes are */
-/* #T#     the first-child pseudo-class acts as a selector over all the elements of tag1, that are in the first position of the list of children of its parent */
-/* #T#     the nth-child(int1) pseudo-class acts as a selector over all the elements of tag1, that are in the int1-th position of the list of children of its parent */
-/* #T#     the last-child pseudo-class acts as a selector over all the elements of tag1, that are in the last position of the list of children of its parent */
-/* #T#     the nth-last-child(int1) pseudo-class acts as a selector over all the elements of tag1, that are in the int1-th last to first position of the list of children of its parent */
-/* #T#     the first-of-type pseudo-class acts as a selector over the first element that is of the same type as tag1, inside every parent element */
-/* #T#     the nth-of-type(int1) pseudo-class acts as selector over the int1-th element that is of the same type as tag1, inside every parent element */
-/* #T#     the last-of-type pseudo-class acts as a selector over the last element that is of the same type as tag1, inside every parent element */
-/* #T#     the nth-last-of-type(int1) pseudo-class acts as a selector over the int1-th last to first element that is of the same type as tag1, inside every parent element */
+/* #T#     the :first-child pseudo-class acts as a selector over all the elements of tag1, that are in the first position of the list of children of its parent */
+/* #T#     the :nth-child(int1) pseudo-class acts as a selector over all the elements of tag1, that are in the int1-th position of the list of children of its parent */
+/* #T#     the :last-child pseudo-class acts as a selector over all the elements of tag1, that are in the last position of the list of children of its parent */
+/* #T#     the :nth-last-child(int1) pseudo-class acts as a selector over all the elements of tag1, that are in the int1-th last to first position of the list of children of its parent */
+/* #T#     the :first-of-type pseudo-class acts as a selector over the first element that is of the same type as tag1, inside every parent element */
+/* #T#     the :nth-of-type(int1) pseudo-class acts as selector over the int1-th element that is of the same type as tag1, inside every parent element */
+/* #T#     the :last-of-type pseudo-class acts as a selector over the last element that is of the same type as tag1, inside every parent element */
+/* #T#     the :nth-last-of-type(int1) pseudo-class acts as a selector over the int1-th last to first element that is of the same type as tag1, inside every parent element */
 
 p:first-child, p:nth-child(5), p:last-child, p:nth-last-child(4)
 {
@@ -136,10 +137,10 @@ p:first-of-type, p:nth-of-type(3), p:last-of-type, p:nth-last-of-type(2)
 /* #T# pseudo_element1 must be a pseudo-element of tag1 */
 
 /* #T# there is a set of pseudo-elements that are general to all or most tags, the general pseudo-elements are */
-/* #T#     the first-letter pseudo-element acts as a selector over the first letter of the contents of tag1 */
-/* #T#     the first-line pseudo-element acts as a selector over the first line (up to the first newline) of the contents of tag1 */
-/* #T#     the before pseudo-element is used along with the content property, it places the value of the content property before tag1 */
-/* #T#     the after pseudo-element is used along with the content property, it places the value of the content property after tag1 */
+/* #T#     the ::first-letter pseudo-element acts as a selector over the first letter of the contents of tag1 */
+/* #T#     the ::first-line pseudo-element acts as a selector over the first line (up to the first newline) of the contents of tag1 */
+/* #T#     the ::before pseudo-element is used along with the content property, it places the value of the content property before tag1 */
+/* #T#     the ::after pseudo-element is used along with the content property, it places the value of the content property after tag1 */
 
 p::first-letter
 {
@@ -172,7 +173,6 @@ p *
 {
     color: peru;
 }
-
 
 /* the child selector is the greater than sign >, it selects the children, but not the grandchildren */
 
@@ -343,6 +343,17 @@ p
 p
 {
     color: var(--color1)
+}
+
+/* #T# escape sequences are used inside strings, they are introduced with a backslash */
+/* #T#     \\, means a literal backslash */
+/* #T#     \A, means a newline */
+/* #T#     \", means a literal double quote (used inside double quotes) */
+/* #T#     \', means a literal single quote (used inside single quotes) */
+/* #T#     \num1, means an unicode character, with code point num1, where num1 is a hexadecimal number of up to six digits
+p::before
+{
+    content: "\A"
 }
 /* # |------------------------------------------------------------- */
 
@@ -706,6 +717,22 @@ p {background-image: linear-gradient(115deg, green, red 24%, blue);}
 p {background-image: repeating-linear-gradient(115deg, green, red 24%, blue 32%);}
 p {background-image: radial-gradient(green, red 24%, blue 52%);}
 p {background-image: repeating-radial-gradient(green, red 24%, blue 52%);}
+
+/* #T# the background-clip property is a string that sets the area that contains the background. The background is clipped after this area */
+/* #T#     the predefined values of the background-clip property are: content-box (the background extends to the edges of the content box), padding-box (the background extends to the edges of the padding box), border-box (the background extends to the edges of the border box) */
+p {background-clip: content-box;}
+
+/* #T# the border-image property is a shorthand property for five properties, the border-image-outset property, the border-image-repeat property, the border-image-slice property, the border-image-source property, and the border-image-width property */
+p
+{
+    border: solid;
+    border-image: url(dir1/image1.png) 400 fill stretch;
+}
+
+/* #T# the border-image-slice property determines how to slice the image being used as border */
+/* #T# the value of the border-image-slice property is made with up to four numbers (in pixels for raster images, in coordinates for vector images) or percentages */
+p {border-image-slice: 400 300 200 100;}
+/* #T# if the numbers used measure more than half the size of the image, then the border will only be drawn in the corners */
 /* # |------------------------------------------------------------- */
 
 /* #C# Text properties */
@@ -714,6 +741,10 @@ p {background-image: repeating-radial-gradient(green, red 24%, blue 52%);}
 /* #T# the content property is a string that is used along the before and after pseudo-elements */
 /* #T#     the value of the content property is any arbitrary string */
 p {content: "string1"}
+
+/* #T# the white-space property is a string that sets how to treat the white space from the strings of the element */
+/* #T#     the predefined values of the white-space property are: normal (white space is collapsed in the HTML output), nowrap (white space is collapsed, but text is not wrapped at the end of the screen), pre (white space is preserved, but the text is not wrapped), pre-wrap (white space is preserved and the text is wrapped) */
+p {white-space: pre-wrap;}
 /* # |------------------------------------------------------------- */
 
 /* #C# Link pseudo-classes */
