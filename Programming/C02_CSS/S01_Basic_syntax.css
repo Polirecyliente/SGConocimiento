@@ -389,6 +389,9 @@ p {color: #AB32CD}
 /* #T# the background-color property is a string that sets background color of its element, the background is the place behing the text */
 /* #T#     the value of the background-color property can be set the same as in the color property */
 p {background-color: rgb(255, 144.58, 70);}
+
+/* #T# the opacity property is a float number between 0 and 1 that determines the opacity of the element, with 0 being transparent, and 1 being opaque */
+p {opacity: .3;}
 /* # |------------------------------------------------------------- */
 
 /* #C# Font properties */
@@ -694,6 +697,35 @@ p {clear: both;}
 /* #T#         fixed, the element is taken out of the normal flow and fixed in position relative to the viewport */
 /* #T#         sticky, the element stays in place but with an offset according to the positioning properties, and when scrolling, the element is fixed in position relative to the viewport */
 p {position: static}
+
+/* #T# a positioned element means an element with the position property having a value different from `static` */
+
+/* #T# the top, right, bottom, and left properties are used along with the position property, to set the final position of an element (except when the position property has the value `static` */
+/* #T# the top property is a measure that sets the top offset of the element, so a positive value measure1 means that the element is placed downwards measure1 units */
+/* #T# the right property is a measure that sets the right offset of the element, so a positive value measure1 means that the element is placed leftwards measure1 units */
+/* #T# the bottom property is a measure that sets the bottom offset of the element, so a positive value measure1 means that the element is placed upwards measure1 units */
+/* #T# the left property is a measure that sets the left offset of the element, so a positive value measure1 means that the element is placed rightwards measure1 units */
+p
+{
+    position: relative;
+    top: 10px; left: 15px;
+}
+
+/* #T# the z-index property is an integer that sets the layer of a positioned element, a greater z-index puts the element on top of others */
+
+/* #T# by default, elements that come later in the normal flow are placed on top of those that are before, this is overridden with the z-index property */
+#id1
+{
+  position: relative;
+  border: solid green;
+  z-index: 3;
+}
+#id2
+{
+  position: relative;
+  border: solid blue;
+  bottom: 100px;
+} /* #| without `z-index = 3`, the element identified by `id2` is placed on top of the element identified by `id1`, when they are less than 100px away from each other */
 /* # |----- */
 
 /* # |------------------------------------------------------------- */
@@ -843,9 +875,9 @@ p {transform-origin: left top;}
 /* #C# At rules */
 
 /* # |------------------------------------------------------------- */
-/* #T# at rules are directives that change the interpretation of this CSS file */
+/* #T# at rules are directives that change the interpretation of the CSS file that contains those directives */
 
-/* #T# the @charset rule sets the character encoding of this file */
+/* #T# the @charset rule sets the character encoding of the file itself */
 /* @charset "UTF-8"; */
 
 /* #T# the @import rule imports an external CSS file, it puts the contents of the external file into this file, this rule must be placed at the start of the file, but after the @charset rule */
@@ -884,5 +916,30 @@ p
 {
     font-family: "font_family1";
     font-weight: normal;
+}
+
+/* #T# the @media rule is used to set rules for given media outputs, such as printed output, screen output, and text to speech output (from screenreaders) */
+
+/* # SYNTAX @media modifier1 type1 conditions1 { rule1; } */
+/* #T# type1 is a string that sets the type of media to which rule1 applies, its value can be `all`, `print`, `screen`, and `speech` */
+
+/* #T# modifier1 is optional, it's the `not` keyword, which makes rule1 apply to all media except for type1 */
+
+/* #T# rule1 is the rule that applies to the type1 media */
+
+/* #T# conditions1 contain a set of conditions in parentheses, with the use of the `and` and `not` logic keywords, with the syntax `(media_feature1 logic_keyword1 media_feature2)` this makes rule1 to be applied when the condition in parentheses is true, meaning when `media_feature1 logic_keyword1 media_feature2` is true, the media features are features of each media, for example the screen media has the width feature with the measure of its width */
+
+@media print
+{
+    p {color: greenyellow}
+} /* the <p> tag will be colored greenyellow only when printing */
+
+/* #T# the @page rule is used to set the style for each page, therefore this rule is most commonly used inside a `@media print` rule */
+@media print
+{
+    @page
+    {
+        margin: 1.3in 1.3in;
+    }
 }
 /* # |------------------------------------------------------------- */
