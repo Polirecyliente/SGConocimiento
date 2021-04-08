@@ -16,7 +16,6 @@
 /* #C# Transformation properties */
 /* #C# At rules */
 
-
 /* #T# Beginning of content */
 
 /* # |------------------------------------------------------------- */
@@ -370,6 +369,8 @@ p {color: initial;}
 
 /* #T# the unset value means that if the parent tag has a value, then the value is 'inherit', but else if the parent has no value, then the value is 'initial' */
 p {color: unset;}
+
+/* #T# values can be prefixed to work with a given browser. The `-moz-` vendor prefix is used for values with the Firefox browser, the `-webkit-` vendor prefix is used with the Chrome browser, the `-ms-` vendor prefix is used with the Edge browser */
 /* # |------------------------------------------------------------- */
 
 /* #C# Color properties */
@@ -496,6 +497,17 @@ p {text-indent: -0.5in;}
 
 /* # |------------------------------------------------------------- */
 /* #T# each element with content is inside a box, this box has four layers, from outer to inner, these layers are: margin, border, padding, and content */
+
+/* #T# the box-sizing property is a string that sets how to calculate the content box dimensions, from the width and height */
+/* #T#     the predefined values of the box-sizing property are, content-box (the content box dimensions are calculated as if the width and height measure the content box itself), border-box (the content box dimensions are calculated as if the width and height measure up to the border box, which includes the content box, the padding box, and the border box itself) */
+p
+{
+    box-sizing: border-box;
+    margin: 77px;
+    border: solid 20px;
+    padding: 30px;
+    width: 500px;
+} /* #| the content box has a width of 400px, which is 500px from the width, minus 2*(20 + 30) from the two sides of the border and the padding. The margin value is irrelevant to calculate the content box measures */
 
 /* #T# the margin property is a set of up to four strings */
 
@@ -646,6 +658,7 @@ p {padding-left: .1in;}
 p {height: 10cm;}
 
 /* #T# the width property is a string that sets the width of the content box */
+/* #T#     the predefined values of the width property are, fit-content (the content box fits its contents, Firefox requires its prefix -moz-fit-content) */
 /* #T#     the value of the width property can be set using units of measure, the same as in the font-size property */
 p {width: 12cm;}
 
@@ -699,6 +712,7 @@ p {background-image: url(local_image1.png);}
 /* #T#     the predefined values of the background-size property are, auto, contain (the whole background image fits), cover (the height or the width of the background image fits) */
 /* #T#     the value of the background-size property can be set using units of measure, the same as in the font-size property */
 p {background-size: 70px;}
+p {background-size: 100% 100%;} /* #| this stretches the background image to cover the element, without preserving the aspect ratio of the original background image */
 
 /* #T# the background-repeat property is a set of up to two strings, the first to set the horizontal repeating pattern, and the second to set the vertical repeating pattern, if given only one string then it applies to both dimensions */
 /* #T#     the predefined values of the background-repeat property are: no-repeat, repeat, repeat-x, repeat-y, round (repeats without cropping the image, by changing the aspect ratio), space (repeats without cropping the image, by spacing the repeated images) */

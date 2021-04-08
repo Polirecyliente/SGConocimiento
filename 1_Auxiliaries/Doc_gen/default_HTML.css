@@ -38,15 +38,39 @@ dl
     text-align: justify;
 }
 
+dt::before
+{
+    display: block;
+    background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-40-u.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    font-size: 11px;
+    white-space: pre;
+    content: " ";
+}
 dt
 {
     margin-top: 1cm;
     margin-bottom: 0.3cm;
-    background-color: rgba(255, 221, 149, 0.25);
-    padding: 2px 10px;
-    border-radius: 7px;
-    border-style: solid;
-    border-image: linear-gradient(160deg, rgba(255, 218, 9, 40%), rgba(0, 0, 0, 0%) 15%, rgba(0, 0, 0, 0%) 80%, rgba(255, 25, 190, 0.35)) 1% stretch;
+    padding: 2px 12px;
+    background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-40-m.png);
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: 100% 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+dt::after
+{
+  display: block;
+  background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-40-l.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  font-size: 11px;
+  white-space: pre;
+  content: " ";
 }
 
 dd
