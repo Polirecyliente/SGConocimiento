@@ -451,7 +451,7 @@ p {line-height: 5px;}
 /* #T#     the predefined values of the text-transform property are: capitalize, lowercase, uppercase, none (none doesn't change the text) */
 p {text-transform: capitalize;}
 
-/* #T# the letter-spacing property is a string that sets the spacing between consecutive letters of the text contents of its element */
+/* #T# the letter-spacing property is a string that sets the spacing between consecutive letters of the text contents of its element, which is a way to set the basic kerning */
 /* #T#     the predefined value of the letter-spacing property is: normal */
 /* #T#     the value of the letter-spacing property can be set using units of measure, the same as in the font-size property */
 p {letter-spacing: .3cm;}

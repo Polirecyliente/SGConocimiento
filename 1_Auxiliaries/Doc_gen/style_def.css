@@ -4,129 +4,307 @@
     {
         margin: 1.3in 1.3in;
     }
+
+    :root
+    {
+        --p_font-size: 14pt;
+        --p_font-family: "Latin Modern Roman";
+        --h_font-family: "Georgia";
+        --a_color: teal;
+
+        --h1_font-size: 20pt;
+        --h2_font-size: 19pt;
+        --h3_font-size: 18pt;
+        --h4_font-size: 17pt;
+        --h5_font-size: 16pt;
+        --h6_font-size: 15pt;
+
+        --bg_opacity: .4;
+    }
+
+    h1 
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h1_font-size);
+        text-align: center;
+    }
+
+    h2
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h2_font-size);
+    }
+
+    p
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        text-align: justify;
+    }
+
+    a
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        color: var(--a_color);
+        text-decoration: none;
+    }
+
+    dl
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        text-align: justify;
+    }
+
+    dt::before
+    {
+        display: block;
+        background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-u.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 6px;
+        content: " ";
+        opacity: var(--bg_opacity);
+    }
+    dt
+    {
+        margin-top: 1cm;
+        margin-bottom: 0.3cm;
+        padding: 2px 12px;
+        background-color: rgba(250, 250, 80, .1);
+        width: -moz-fit-content;
+        width: fit-content;
+        font-size: var(--p_font-size);
+    }
+    dt::after
+    {
+        display: block;
+        background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-l.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 6px;
+        content: " ";
+        opacity: var(--bg_opacity);
+    }
+
+    dd
+    {
+        background-color: rgb(255, 193, 202, .2);
+        background-clip: border-box;
+        padding: 2px 14px 12px;
+        border-radius: 7px;
+        border-style: solid;
+        border-image: linear-gradient(135deg, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%) 15%, rgba(0, 0, 0, 0%) 55%, rgba(242, 13, 250, 0.65)) 1% stretch;
+    }
+
+    figure
+    {
+        text-align: center;
+    }
+
+    figcaption
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        font-style: italic;
+    }
+
+    .csl-entry
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+    }
+
+    h3
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h3_font-size);
+        font-style: italic;
+    }
+
+    h4
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h4_font-size);
+    }
+
+    h5
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h5_font-size);
+    }
+
+    h6
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h6_font-size);
+    }
 }
+
 @media screen
 {
     body
     {
         margin: 3cm 6cm;
     }
-}
 
-h1 
-{
-    font-family: "Georgia";
-    font-size: 28pt;
-    text-align: center;
-}
+    :root
+    {
+        --p_font-size: 18pt;
+        --p_font-family: "Latin Modern Roman";
+        --h_font-family: "Playfair Display";
+        --a_color: teal;
+        --title_font-size: 30pt;
 
-h2
-{
-    font-family: "Georgia";
-    font-size: 24pt;
-}
+        --h1_font-size: 28pt;
+        --h2_font-size: 24pt;
+        --h3_font-size: 22pt;
+        --h4_font-size: 21pt;
+        --h5_font-size: 20pt;
+        --h6_font-size: 19pt;
 
-p
-{
-    font-family: "Latin Modern Roman";
-    font-size: 14pt;
-    text-align: justify;
-}
+        --bg_opacity: .5;
+    }
 
-a
-{
-    font-family: "Latin Modern Roman";
-    font-size: 14pt;
-    color: teal ;
-    text-decoration: none;
-}
+    h1 
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h1_font-size);
+        text-align: center;
+    }
 
-dl
-{
-    font-family: "Latin Modern Roman";
-    font-size: 14pt;
-    text-align: justify;
-}
+    h2
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h2_font-size);
+    }
 
-dt::before
-{
-    display: block;
-    background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-u.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 6px;
-    content: " ";
-    opacity: .4;
-}
-dt
-{
-    margin-top: 1cm;
-    margin-bottom: 0.3cm;
-    padding: 2px 12px;
-    background-color: rgba(250, 250, 80, .1);
-    width: -moz-fit-content;
-    width: fit-content;
-}
-dt::after
-{
-    display: block;
-    background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-l.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 6px;
-    content: " ";
-    opacity: .4;
-}
+    p
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        text-align: justify;
+    }
 
-dd
-{
-    background-color: rgb(255, 193, 202, .3);
-    background-clip: border-box;
-    padding: 2px 14px 12px;
-    border-radius: 7px;
-    border-style: solid;
-    border-image: linear-gradient(135deg, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%) 15%, rgba(0, 0, 0, 0%) 55%, rgba(242, 13, 250, 0.65)) 1% stretch;
-}
+    a
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        color: var(--a_color);
+        text-decoration: none;
+    }
 
-figure
-{
-    text-align: center;
-}
+    .title
+    {
+        font-size: var(--title_font-size);
+/*        background-image: linear-gradient(140deg, rgba(0, 0, 0, 0), blue);*/
+        padding: 20px;
+    }
 
-figcaption
-{
-    font-family: "Latin Modern Roman";
-    font-size: 14pt;
-    font-style: italic;
-}
+    dl
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        text-align: justify;
+    }
 
-.csl-entry
-{
-    font-family: "Latin Modern Roman";
-    font-size: 14pt;
-}
+    dt::before
+    {
+        display: block;
+        background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-u.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        width: 100%;
+        height: 5px;
+        content: " ";
+        opacity: var(--bg_opacity);
 
-h3
-{
-    font-family: "Georgia";
-    font-size: 20pt;
-    font-style: italic;
-}
+        position: relative;
+        left: -1ex;
+        padding-right: 1ex;
+        padding-left: 1ex;
+    }
+    dt
+    {
+        margin-top: 1cm;
+        margin-bottom: 0.3cm;
+        padding: 2px 12px;
+        background-color: rgba(255, 193, 202, .25);
+        width: -moz-fit-content;
+        width: fit-content;
+        font-size: var(--p_font-size);
+    }
+    dt::after
+    {
+        display: block;
+        background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/dt-o-l.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 5px;
+        content: " ";
+        opacity: var(--bg_opacity);
 
-h4
-{
-    font-family: "Georgia";
-    font-size: 17pt
-}
+        position: relative;
+        left: -1ex;
+        padding-right: 1ex;
+        padding-left: 1ex;
+    }
 
-h5
-{
-    font-family: "Georgia";
-    font-size: 16pt
-}
+    dd
+    {
+        background-color: rgba(255, 193, 202, .25);
+        background-clip: border-box;
+        padding: 20px 30px;
+        border-radius: 7px;
+        border-style: solid;
+        border-image: linear-gradient(135deg, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%) 15%, rgba(0, 0, 0, 0%) 55%, rgba(242, 13, 250, 0.65)) 1% stretch;
 
-h6
-{
-    font-family: "Georgia";
-    font-size: 15pt
+        margin-left: 30px;
+    }
+
+    figure
+    {
+        text-align: center;
+    }
+
+    figcaption
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        font-style: italic;
+    }
+
+    .csl-entry
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+    }
+
+    h3
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h3_font-size);
+        font-style: italic;
+    }
+
+    h4
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h4_font-size);
+    }
+
+    h5
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h5_font-size);
+    }
+
+    h6
+    {
+        font-family: var(--h_font-family);
+        font-size: var(--h6_font-size);
+    }
 }
