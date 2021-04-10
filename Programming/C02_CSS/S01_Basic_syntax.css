@@ -430,6 +430,17 @@ p {font-size: 2pc;}
 p {font-size: 12pt;}
 a {font-size: 1ex;} /* making an <a> tag a child of a <p> tag, text written inside the <a> tag is half the size of the text written inside the <p> tag */
 
+/* #T# the calc function is used to calculate a measure from different units of measure */
+
+/* # SYNTAX calc(num1unit1 operation1 num2unit2) */
+/* operation1 can be, addition with '+', subtraction with '-'. unit1 and unit2 can be the same unit */
+
+/* # SYNTAX calc(num1unit1 operation1 num2) */
+/* operation1 can be division with '/', and multiplication with '*' */
+
+p {font-size: calc(12pt + 2ex);}
+p {font-size: calc(3pt * 5);}
+
 /* #T# the font-family property is a string, or a list of strings separated by comma, that sets the font family of the text contents of its element, a font family is a set of fonts that together cover different styles, such as normal, bold, italic, light, etcetera, each style has a font in the family */
 
 /* the list of strings is called the font stack, the first font family in the font stack is used, unless it's not installed or available, in that case the second font in the font stack is used, and so on */
@@ -674,6 +685,10 @@ p {box-shadow: 100px 10px blue;}
 /* #T#     the value of the text-shadow property can be set the same as in the box-shadow property, except that the inset value is not allowed */
 p {text-shadow: 3px -3px rgb(10,60,10);}
 
+/* #T# the overflow property is a string that sets what to do when the contents of an element overflow the element (which is when the contents of an element extend beyond the limits of the element) */
+/* #T#     the predefined values of the overflow property are, visible, hidden, scroll (puts scrollbars on the element to scroll its contents), auto (puts scrollbars only when necessary) */
+p {overflow: scroll;}
+
 /* #C# - Positioning properties */
 
 /* # |----- */
@@ -741,10 +756,11 @@ p {background: url("../path/to/file1.png") bottom right space;}
 p {background-image: url(local_image1.png);}
 
 /* #T# the background-size property is a string that sets the size of the background image */
-/* #T#     the predefined values of the background-size property are, auto, contain (the whole background image fits), cover (the height or the width of the background image fits) */
+/* #T#     the predefined values of the background-size property are, auto (calculates the size of the background image so as to preseve its aspect ratio), contain (the whole background image fits), cover (the height or the width of the background image fits) */
 /* #T#     the value of the background-size property can be set using units of measure, the same as in the font-size property */
 p {background-size: 70px;}
 p {background-size: 100% 100%;} /* #| this stretches the background image to cover the element, without preserving the aspect ratio of the original background image */
+p {background-size: auto 100%;} /* #| this fills 100% of the height while preserving the aspect ratio of the background image */
 
 /* #T# the background-repeat property is a set of up to two strings, the first to set the horizontal repeating pattern, and the second to set the vertical repeating pattern, if given only one string then it applies to both dimensions */
 /* #T#     the predefined values of the background-repeat property are: no-repeat, repeat, repeat-x, repeat-y, round (repeats without cropping the image, by changing the aspect ratio), space (repeats without cropping the image, by spacing the repeated images) */
@@ -779,6 +795,9 @@ p
 /* #T# the value of the border-image-slice property is made with up to four numbers (in pixels for raster images, in coordinates for vector images) or percentages */
 p {border-image-slice: 400 300 200 100;}
 /* #T# if the numbers used measure more than half the size of the image, then the border will only be drawn in the corners */
+
+/* #T# the border-image-width property is used to set the width of the border image. The width of each side can be set separately, following the order top, right, bottom, left */
+p {border-image-width: 0px 5px 0px 0px} /* #| the border image is only placed on the right side */
 /* # |------------------------------------------------------------- */
 
 /* #C# Text properties */
