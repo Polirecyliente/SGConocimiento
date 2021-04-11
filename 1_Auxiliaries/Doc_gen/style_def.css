@@ -11,14 +11,14 @@
         --p_font-family: "Latin Modern Roman";
         --h_font-family: "Playfair Display";
         --a_color: teal;
-        --title_font-size: 22pt;
+        --title_font-size: calc(var(--h1_font-size) + 2pt);
 
-        --h1_font-size: 20pt;
-        --h2_font-size: 19pt;
-        --h3_font-size: 18pt;
-        --h4_font-size: 17pt;
-        --h5_font-size: 16pt;
-        --h6_font-size: 15pt;
+        --h1_font-size: calc(var(--h2_font-size) + 1pt);
+        --h2_font-size: calc(var(--h3_font-size) + 1pt);
+        --h3_font-size: calc(var(--h4_font-size) + 1pt);
+        --h4_font-size: calc(var(--h5_font-size) + 1pt);
+        --h5_font-size: calc(var(--h6_font-size) + 1pt);
+        --h6_font-size: calc(var(--p_font-size) + 1pt);
 
         --bg_opacity: .4;
     }
@@ -28,6 +28,7 @@
         font-family: var(--h_font-family);
         font-size: var(--h1_font-size);
         text-align: center;
+        text-transform: uppercase;
     }
 
     h2
@@ -64,6 +65,8 @@
         background-size: 100% auto;
         background-position: bottom;
         background-repeat: no-repeat;
+
+        text-transform: uppercase;
     }
 
     dl
@@ -126,6 +129,9 @@
         border-radius: 7px;
         border-style: solid;
         border-image: linear-gradient(135deg, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%) 15%, rgba(0, 0, 0, 0%) 55%, rgba(242, 13, 250, 0.65)) 1% stretch;
+
+        margin: 25px 10px 60px;
+        margin-left: 30px;
     }
 
     figure
@@ -185,14 +191,14 @@
         --p_font-family: "Latin Modern Roman";
         --h_font-family: "Playfair Display";
         --a_color: teal;
-        --title_font-size: 30pt;
+        --title_font-size: calc(var(--h1_font-size) + 2pt);
 
-        --h1_font-size: 28pt;
-        --h2_font-size: 24pt;
-        --h3_font-size: 22pt;
-        --h4_font-size: 21pt;
-        --h5_font-size: 20pt;
-        --h6_font-size: 19pt;
+        --h1_font-size: calc(var(--h2_font-size) + 1pt);
+        --h2_font-size: calc(var(--h3_font-size) + 1pt);
+        --h3_font-size: calc(var(--h4_font-size) + 1pt);
+        --h4_font-size: calc(var(--h5_font-size) + 1pt);
+        --h5_font-size: calc(var(--h6_font-size) + 1pt);
+        --h6_font-size: calc(var(--p_font-size) + 1pt);
 
         --bg_opacity: .5;
     }
@@ -202,6 +208,7 @@
         font-family: var(--h_font-family);
         font-size: var(--h1_font-size);
         text-align: center;
+        text-transform: uppercase;
     }
 
     h2
@@ -238,6 +245,8 @@
         background-size: 100% auto;
         background-position: bottom;
         background-repeat: no-repeat;
+
+        text-transform: uppercase;
     }
 
     dl
@@ -295,11 +304,12 @@
     {
         background-color: rgba(255, 193, 202, .25);
         background-clip: border-box;
-        padding: 20px 30px;
+        padding: 18px 30px;
         border-radius: 7px;
         border-style: solid;
         border-image: linear-gradient(135deg, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%) 15%, rgba(0, 0, 0, 0%) 55%, rgba(242, 13, 250, 0.65)) 1% stretch;
 
+        margin: 25px 10px 60px;
         margin-left: 30px;
     }
 
