@@ -54,8 +54,16 @@
     .title
     {
         font-size: var(--title_font-size);
-        padding: 20px;
+        padding: 30px;
+        margin: auto;
         margin-bottom: 2cm;
+        padding-bottom: 40px;
+        width: -moz-fit-content;
+        width: fit-content;
+        background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/title-o.png);
+        background-size: 100% auto;
+        background-position: bottom;
+        background-repeat: no-repeat;
     }
 
     dl
@@ -220,8 +228,16 @@
     .title
     {
         font-size: var(--title_font-size);
-        padding: 20px;
+        padding: 30px;
+        margin: auto;
         margin-bottom: 2cm;
+        padding-bottom: 40px;
+        width: -moz-fit-content;
+        width: fit-content;
+        background-image: url(/home/kuy/SGConocimiento/1_Auxiliaries/Doc_gen/res/title-o.png);
+        background-size: 100% auto;
+        background-position: bottom;
+        background-repeat: no-repeat;
     }
 
     dl
