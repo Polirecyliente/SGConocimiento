@@ -1,21 +1,17 @@
 ---
 title: Programming definitions
-toc-title: Table of contents
+toc-title: Table of Contents
 ---
 
-<!--
-#   Acronyms
+## Table of Contents {#toc-title}
 
-#T# Table of contents
-
-#C# Algorithms
-#C# - Cryptography
-#C# Languages
-#C# Applications
-#C# Networking
-
-#T# Beginning of content
--->
+-   [Introduction](#introduction)
+-   [Basic concepts](#basic-concepts)
+-   [Programming languages](#programming-languages)
+-   [Algorithms](#algorithms)
+    -   [Cryptography](#cryptography)
+-   [Applications](#applications)
+-   [Networking](#networking)
 
 # Introduction
 

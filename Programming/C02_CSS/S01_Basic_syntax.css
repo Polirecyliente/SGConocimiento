@@ -5,6 +5,7 @@
 /* #T# Table of contents */
 
 /* #C# Syntax to apply style to HTML tags */
+/* #C# String operations */
 /* #C# General values */
 /* #C# Color properties */
 /* #C# Font properties */
@@ -157,6 +158,41 @@ p::after
 {
     content: "After";
     background-color: brown;
+}
+
+/* #T# the <li> elements have the ::marker pseudo-element, it serves to give style to the marker, whether the marker is from an unordered list or from an ordered list */
+li::marker
+{
+    content: "ab" /* #| the content property is a string that sets the contents of the marker */
+}
+
+/* #T# the counter function is used to get a counter as a string, for use in ordered lists */
+
+/* # SYNTAX counter(counter1, counter_style1) */
+
+/* #T# counter1 is a variable name (it doesn't need to be defined before) */
+
+/* #T# counter_style1 is optional, it's a string that sets the style of the counter, it's value can be 'decimal' (this is the default, for decimal numbers), 'upper-roman' (for uppercase roman numerals), 'lower-roman' (for lowercase roman numerals), 'upper-latin' (for uppercase latin alphabet letters), 'lower-latin' (for lowercase latin alphabet letters), 'lower-greek' (for lowercase greek alphabet letters) */
+
+ol li::marker
+{
+    content: "str1 " counter(counter1) " str2 " counter(counter1, lower-greek) " str3";
+    white-space: pre;
+}
+
+/* #T# the counter-reset property and the counter-increment property are used to manage counters */
+/* #T# the counter-reset property is used to reset a given counter to a given value */
+/* # SYNTAX counter-reset: counter1 reset_value1 */
+ol
+{
+    counter-reset: counter1 -3;
+}
+
+/* #T# the counter-increment property is used to increment a given counter by a given step */
+/* # SYNTAX counter-increment counter1 step1 */
+ol li
+{
+    counter-increment: counter1 2;
 }
 
 /* #T# the universal selector is the asterisk *, it selects all the possible elements */
@@ -349,10 +385,20 @@ p
 /* #T#     \A, means a newline */
 /* #T#     \", means a literal double quote (used inside double quotes) */
 /* #T#     \', means a literal single quote (used inside single quotes) */
-/* #T#     \num1, means an unicode character, with code point num1, where num1 is a hexadecimal number of up to six digits
+/* #T#     \num1, means an unicode character, with code point num1, where num1 is a hexadecimal number of up to six digits */
 p::before
 {
     content: "\A"
+}
+/* # |------------------------------------------------------------- */
+
+/* #C# String operations */
+
+/* # |------------------------------------------------------------- */
+/* #T# strings can be concatenated by placing them one after the other. They can be separated by space */
+p::before
+{
+    content: "str1" "str2" /* # str1 str2 */
 }
 /* # |------------------------------------------------------------- */
 

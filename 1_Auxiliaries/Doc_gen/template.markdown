@@ -11,7 +11,7 @@ $include-before$
 
 $endfor$
 $if(toc-title)$
-$toc-title$
+## $toc-title$ {#toc-title}
 $endif$
 
 $if(toc)$

@@ -10,6 +10,7 @@
 #C# - Table of contents
 #C# - Bibliography and references
 #C# Pandoc Lua filters
+#C# Templates
 
 #T# Beginning of content
 
@@ -145,4 +146,18 @@ pandoc --lua-filter file1.lua input_file1.md -o output_file1.pdf
 pandoc --lua-filter file1.lua --lua-filter file2.lua input_file1.md -o output_file1.pdf
 
 #T# for information about how to create Lua filters, see /path/to/SGConocimiento/Programming/GPL/Lua/02_Applied/S01_Pandoc_filters.lua
+# |-------------------------------------------------------------
+
+#C# Templates
+
+# |-------------------------------------------------------------
+#T# A template serves to create a file according to a given structure.
+
+#T# the default template for a given type of output can be checked by doing
+# SYNTAX pandoc -D output_type1
+pandoc -D html
+
+#T# to use a custom template do
+# SYNTAX pandoc input_file1.md -o output_file1.output_type1 --template template.output_type1
+pandoc file1.md -o file1.html --template template.html #| the file template.html contains a custom template, it's used to create file1.html
 # |-------------------------------------------------------------
