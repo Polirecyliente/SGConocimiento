@@ -116,6 +116,9 @@ pandoc file1.md -s --toc -o file1.html
 
 #T# to auto generate the table of contents in a Markdown file named file1.md, do
 pandoc file1.md -s --toc -o file1.md
+
+#T# to generate the table of contents with the sections numbered, do
+pandoc file1.md -s --toc --number-sections -o file1.html
 # |-----
 
 #C# - Bibliography and references

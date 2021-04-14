@@ -538,6 +538,10 @@ paragraph that references (@example_item2)
 ``a ` b`` <!-- # <p><code>a ` b</code></p> -->
 ` a `` b ` <!-- # <p><code>a `` b</code></p> -->
 
+<!-- #T# inline code can have metadata, specifically an identifier, HTML classes, and key value pairs (treated as HTML attribute value pairs) -->
+<!-- # SYNTAX `text1`{#id1 .class1 .class2 key1='value1' key2='value2'} -->
+`code`{#id1 .class1 .class2 key1='value1' key2='value2'}
+
 <!-- #T# fence multiple lines of code within a pair of three or more backticks, an info string can be placed after the first backticks line, the info string indicates the language inside the fenced code block, the info string must not have spaces -->
 ```C
     if(line_of_code == 1)

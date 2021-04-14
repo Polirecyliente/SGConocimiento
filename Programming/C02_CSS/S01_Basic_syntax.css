@@ -739,7 +739,7 @@ p {overflow: scroll;}
 
 /* # |----- */
 /* #T# the display property is a string that sets the display type of its element, elements have a default display type, most commonly block or inline */
-/* #T#     the predefined values of the display property are, none (the element is not drawn), block, inline */
+/* #T#     the predefined values of the display property are, none (the element is not drawn), block, inline, table (the element is displayed as if it was a <table> element), table-row (the element is displayed as if it was a <tr> element), table-cell (the element is displayed as if it was a <td> element) */
 p {display: none;}
 
 /* #T# the float property is a string that sets where to float its element with respect to the next element, to float an element means to move it around relative to the next element */

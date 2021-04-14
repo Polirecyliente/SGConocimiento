@@ -11,11 +11,13 @@ $include-before$
 
 $endfor$
 $if(toc-title)$
+::: {#toc-id}
 ## $toc-title$ {#toc-title}
 $endif$
 
 $if(toc)$
 $table-of-contents$
+:::
 
 $endif$
 $body$

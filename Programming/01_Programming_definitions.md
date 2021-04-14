@@ -1,23 +1,25 @@
 ---
-title: Programming definitions
+title: PROGRAMMING DEFINITIONS
 toc-title: Table of Contents
 ---
 
+::: {#toc-id}
 ## Table of Contents {#toc-title}
 
--   [Introduction](#introduction)
--   [Basic concepts](#basic-concepts)
--   [Programming languages](#programming-languages)
--   [Algorithms](#algorithms)
-    -   [Cryptography](#cryptography)
--   [Applications](#applications)
--   [Networking](#networking)
+-   [[1]{.toc-section-number} INTRODUCTION](#introduction)
+-   [[2]{.toc-section-number} BASIC CONCEPTS](#basic-concepts)
+-   [[3]{.toc-section-number} PROGRAMMING LANGUAGES](#programming-languages)
+-   [[4]{.toc-section-number} ALGORITHMS](#algorithms)
+    -   [[4.1]{.toc-section-number} Cryptography](#cryptography)
+-   [[5]{.toc-section-number} APPLICATIONS](#applications)
+-   [[6]{.toc-section-number} NETWORKING](#networking)
+:::
 
-# Introduction
+# INTRODUCTION
 
 This document contains the definitions needed to understand computer programming.
 
-# Basic concepts
+# BASIC CONCEPTS
 
 **Computer**
   : A device that can do computations.
@@ -36,7 +38,7 @@ This document contains the definitions needed to understand computer programming
   \
   The most common output peripherics are: the monitor and the printer. The monitor is used to display output from computations in real time. The printer is used to print documents.
 
-# Programming languages
+# PROGRAMMING LANGUAGES
 
 AST: Abstract Syntax Tree, a tree diagram to show the syntactic elements in a given source code.
 
@@ -54,7 +56,7 @@ HTML: HyperText Markup Language, a markup language commonly used to create webpa
 
 XML: eXtended Markup Language, a multipurpose markup language, commonly used as a format for applications to write their output.
 
-# Algorithms
+# ALGORITHMS
 
 ## Cryptography
 
@@ -66,13 +68,13 @@ EdDSA: Edwards-curve Digital Signature Algorithm, an asymmetric cryptography (pu
 
 RSA: Rivest, Shamir, Adleman, an asymmetric cryptography (public key) algorithm.
 
-# Applications
+# APPLICATIONS
 
 LSP: Language Server Protocol, a protocol to provide autocompletion for a given language, for example to autocomplete libraries so that available libraries can be listed.
 
 IDE: Integrated Development Environment, an application used to write code, so it commonly has syntax highlight, an LSP for autocompletion,
 
-# Networking
+# NETWORKING
 
 MIME: Multipurpose Internet Mail Extensions, a way to express file extensions.
 
