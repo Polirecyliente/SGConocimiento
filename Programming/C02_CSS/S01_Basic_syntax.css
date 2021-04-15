@@ -13,6 +13,7 @@
 /* #C# - Positioning properties */
 /* #C# Image properties */
 /* #C# Text properties */
+/* #C# - Print properties */
 /* #C# Link pseudo-classes */
 /* #C# Transformation properties */
 /* #C# At rules */
@@ -856,6 +857,23 @@ p {content: "string1"}
 /* #T# the white-space property is a string that sets how to treat the white space from the strings of the element */
 /* #T#     the predefined values of the white-space property are: normal (white space is collapsed in the HTML output), nowrap (white space is collapsed, but text is not wrapped at the end of the screen), pre (white space is preserved, but the text is not wrapped), pre-wrap (white space is preserved and the text is wrapped) */
 p {white-space: pre-wrap;}
+
+/* #C# - Print properties */
+
+/* # |----- */
+/* #T# the break-before property is a string that sets how to insert a page break before an element */
+/* #T#     the predefined values of the break-before property are: always (always insert a page break before the element), avoid (avoid inserting a page break before the element) */
+h1 {break-before: avoid;}
+
+/* #T# the break-inside property is a string that sets how to insert a page break inside an element */
+/* #T#     the predefined values of the break-inside property are: avoid (avoid inserting a page break inside the element) */
+.class1 {break-inside: avoid;} /* #| this avoids placing a page break inside the class1 class, so that all its elements remain in a single page */
+
+/* #T# the break-after property is a string that sets how to insert a page break after an element */
+/* #T#     the predefined values of the break-after property are: always (always insert a page break after the element), avoid (avoid inserting a page break after the element, this helps to manage orphan and widow elements) */
+h1 {break-after: avoid;} /* #| this avoids placing a page break after a heading 1 */
+/* # |----- */
+
 /* # |------------------------------------------------------------- */
 
 /* #C# Link pseudo-classes */
