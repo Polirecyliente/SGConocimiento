@@ -9,7 +9,8 @@
 #C# General sections
 #C# - Table of contents
 #C# - Bibliography and references
-#C# Pandoc Lua filters
+#C# Filters
+#C# - Pandoc Lua filters
 #C# Templates
 
 #T# Beginning of content
@@ -139,9 +140,22 @@ pandoc file1.bib -s -f biblatex -t markdown -o file1.yaml
 
 # |-------------------------------------------------------------
 
-#C# Pandoc Lua filters
+#C# Filters
 
 # |-------------------------------------------------------------
+#T# Filters are programs that modify the Pandoc AST
+
+#T# To use a filter do
+
+# SYNTAX pandoc input_file1.md -o output_file1.pdf --filter program1
+#T# program1 is a filter
+
+#T# To embed images created with Mermaid (written inside a Markdown file), the `mermaid-filter` filter can be used
+pandoc input_file1.md -o output_file1.pdf --filter mermaid-filter
+
+#C# Pandoc Lua filters
+
+# |-----
 #T# Lua filters for Pandoc, are applied with the --lua-filter kwarg
 pandoc --lua-filter file1.lua input_file1.md -o output_file1.pdf
 
@@ -149,6 +163,8 @@ pandoc --lua-filter file1.lua input_file1.md -o output_file1.pdf
 pandoc --lua-filter file1.lua --lua-filter file2.lua input_file1.md -o output_file1.pdf
 
 #T# for information about how to create Lua filters, see /path/to/SGConocimiento/Programming/GPL/Lua/02_Applied/S01_Pandoc_filters.lua
+# |-----
+
 # |-------------------------------------------------------------
 
 #C# Templates

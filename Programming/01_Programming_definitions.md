@@ -58,5 +58,31 @@ The directory that contains this file is called 'Programming', in this context t
 
 ::: term
 **Source code**
-  : A way to write **computer programs**. Source code uses human readable symbols, such as words and statements. Source code must be **compiled** or **interpreted** into binary code, so that the computer can execute the program.
+  : A way to write **computer programs**. Source code uses human readable symbols, such as words and statements, written in a given **programming language**. Source code must be **compiled** or **interpreted** into binary code, so that the computer can execute the program.
 :::
+
+::: term
+**Compiler**
+  : A computer program that compiles source code written in a given **programming language**, into binary code, effectively converting source code into binary code. When a source code file is compiled, the result is a binary code file, so the whole source code file is compiled as a unit.
+:::
+
+::: term
+**Interpreter**
+  : A computer program that interprets source code written in a given **programming language**, into binary code, effectively converting source code into binary code. When a source code file is interpreted, each line of the file is interpreted as a unit. This allows for more interactivity than a compiler, because even a single line can be interpreted and the resulting binary code executed.
+:::
+
+::: term
+**Programming language**
+  : A language in which to write source code. The compiler or interpreter effectively determines the possible statements that can be created with a programming language. For example, if a compiled language is defined with certain feature, but the current compiler does not support that feature, then any source code file that uses that feature will throw error when compiled with said compiler.
+:::
+
+# PARTS OF A COMPUTER
+
+For a computer to be able to carry out computations, it needs a number of parts. 
+The verb 'carry out' here means 'process', so the computer needs a **processor** to process computations. Each computation comes from an instruction, these instructions need to be placed somewhere, so the computer needs a **memory** in which to place instructions. Instructions are part of programs, so the computer needs **storage** in which to place programs and any file needed by those programs. To coordinate the interactions between these parts, and between the computer and the **peripherics**, the computer needs an **operating system**.
+
+``` {.mermaid caption="HomieYosh"}
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+```

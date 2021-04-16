@@ -7,16 +7,13 @@ toc-title: Table of contents
 
 This document is about the C programming language and its features.
 
-The C language is a compiled language, which means that a compiler is needed
+The C language is a compiled language, which means that a compiler is needed to convert C source code into binary code.
 
 # Basic syntax
 
+Source code files of the C language have the file extension `.c`
 
 <!--
-
-
-//T// Contents
-//T// Basic syntax
 //T// Variables, constants, literals
 
 //T// compile any C file /path/to/file1.c in a terminal with

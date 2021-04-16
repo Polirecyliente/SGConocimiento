@@ -13,9 +13,12 @@ pandoc $m -o $m -s --toc --number-sections --template $t
 pandoc $m -o file1.html -s -c $c --lua-filter $f --citeproc --bibliography $b --katex=$k
 
 # Generate PDF from HTML
-google-chrome --headless --print-to-pdf-no-header --print-to-pdf="file1.pdf" file1.html --user-data-dir=~/.config/google-chrome/ --disable-gpu
+chromium --headless --print-to-pdf-no-header --print-to-pdf="file1.pdf" file1.html --user-data-dir=~/.config/google-chrome/ --disable-gpu
 
-# About using Chrome to generate PDF from HTML
+# Get dependencies
+npm install --global mermaid-filter
+
+# About using Chromium to generate PDF from HTML
 # I was trying to use Weasyprint as the PDF engine in Pandoc, but I get these warnings, which make Katex to be rendered badly
 # INFO: Step 2 - Fetching and parsing CSS - file:///usr/lib/nodejs/katex/dist/katex.min.css
 # WARNING: Ignored `text-rendering:auto` at 1:4793, unknown property.
@@ -38,4 +41,4 @@ google-chrome --headless --print-to-pdf-no-header --print-to-pdf="file1.pdf" fil
 # WARNING: Ignored `right:calc(50% + .3em)` at 1:22549, invalid value.
 # WARNING: Ignored `left:calc(50% + .3em)` at 1:22650, invalid value.
 
-# Because Weasyprint does not support those CSS properties, I will keep using Chrome to convert HTML into PDF
+# Because Weasyprint does not support those CSS properties, I will keep using Chromium to convert HTML into PDF
