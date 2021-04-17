@@ -81,8 +81,18 @@ The directory that contains this file is called 'Programming', in this context t
 For a computer to be able to carry out computations, it needs a number of parts. 
 The verb 'carry out' here means 'process', so the computer needs a **processor** to process computations. Each computation comes from an instruction, these instructions need to be placed somewhere, so the computer needs a **memory** in which to place instructions. Instructions are part of programs, so the computer needs **storage** in which to place programs and any file needed by those programs. To coordinate the interactions between these parts, and between the computer and the **peripherics**, the computer needs an **operating system**.
 
-``` {.mermaid caption="HomieYosh"}
-sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
+``` {.mermaid caption="Computer-User interaction loop" format="svg"}
+flowchart TB
+  Input
+  subgraph s1 [" "]
+    Input --> Computer
+    subgraph s2 [" "]
+      subgraph Computer
+        Processor --- Memory & Storage
+        Memory --- Storage
+      end
+    end
+    Computer --> Output
+  end
+  Output --> Input
 ```

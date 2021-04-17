@@ -133,7 +133,7 @@ style A fill : magenta, stroke-dasharray : 10 5
 <!-- # SYNTAX classDef class1 property1 : value1, propertyN : valueN -->
 
 <!-- #T# a class is assigned to a set of nodes with the following syntaxes -->
-<!-- # SYNTAX class node_id1, node_id2 class1 -->
+<!-- # SYNTAX class node_id1,node_id2 class1 -->
 <!-- # SYNTAX node_id1:::class1 connector1 node2 -->
 
 <!-- #T# the second syntax allows the assignment of class1 to node1 as part of the graph definition -->
@@ -142,6 +142,43 @@ graph TB
   A:::class1 --> B
 
 classDef class1 fill : green
+
+<!-- #T# using 'flowchart' instead of 'graph' for the type of diagram has the same features and a few more -->
+
+<!-- #T# bidirectional arrows can be created -->
+flowchart TB
+  A <--> B
+  C <-.-> D
+  E <==> F
+
+<!-- #T# different flowcharts con be connected to each other, by creating each flowchart as a subgraph and then connecting the subgraphs as regular nodes -->
+
+<!-- # SYNTAX creating a subgraph -->
+<!-- # subgraph subgraph_id1 ["subgraph string1"] -->
+<!-- #   node1 connector1 node2 -->
+<!-- # end -->
+
+<!-- #T# "subgraph string1" appears as the name of the subgraph, it is optional, if omitted then subgraph_id1 is shown as the name of the subgraph -->
+
+flowchart LR
+  subgraph First
+    A --> B
+  end
+  subgraph Second
+    C --> D
+  end
+  First --> Second
+
+<!-- #T# to ensure that a given order of the nodes is followed, each subsequent node must be placed in a subgroup, this maintains the layout -->
+flowchart LR
+  node1
+  subgraph sub1
+    node1 --> node2
+    subgraph sub2
+      node2 --> node3
+    end
+  end
+  node3 --> node1
 <!-- # |----- -->
 
 <!-- # |------------------------------------------------------------- -->

@@ -10,7 +10,7 @@ k=/usr/lib/nodejs/katex/dist/
 pandoc $m -o $m -s --toc --number-sections --template $t
 
 # Generate HTML from Markdown
-pandoc $m -o file1.html -s -c $c --lua-filter $f --citeproc --bibliography $b --katex=$k
+pandoc $m -o file1.html -s -c $c --lua-filter $f --filter mermaid-filter --citeproc --bibliography $b --katex=$k
 
 # Generate PDF from HTML
 chromium --headless --print-to-pdf-no-header --print-to-pdf="file1.pdf" file1.html --user-data-dir=~/.config/google-chrome/ --disable-gpu
