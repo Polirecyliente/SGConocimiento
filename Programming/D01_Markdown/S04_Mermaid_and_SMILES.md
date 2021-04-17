@@ -6,6 +6,7 @@
 
 <!-- #C# Mermaid -->
 <!-- #C# - Styling -->
+<!-- #C# -| Themes -->
 <!-- #C# SMILES -->
 
 <!-- #T# Beginning of content -->
@@ -104,45 +105,6 @@ graph TB
       end
     end
 
-<!-- #C# - Styling -->
-
-<!-- # |----- -->
-<!-- #T# connectors and nodes can be styled, using SVG property value pairs -->
-
-<!-- #T# to style connectors, their number of creation is used, which is the sequential number in which they appear in the graph definition -->
-
-<!-- #T# the following syntax is used to style connectors -->
-<!-- # SYNTAX linkStyle int1 property1 : value1, propertyN : valueN -->
-<!-- #T# int1 is the number of creation of the link being styled, counting from 0, property1 and value1 are an SVG property value pair -->
-
-graph TB
-  A -- link 0 --> B -- link 1 --> C
-  B -- link 2 --> D
-
-linkStyle 2 stroke : green,  stroke-width : 6px
-
-<!-- #T# to style nodes, their id is used, with the following syntax -->
-<!-- # SYNTAX style id1 property1 : value1, propertyN : valueN -->
-
-graph TB
-  A[text] --> B[text]
-
-style A fill : magenta, stroke-dasharray : 10 5
-
-<!-- #T# classes can be created to apply style to all nodes of that class, with the following syntax -->
-<!-- # SYNTAX classDef class1 property1 : value1, propertyN : valueN -->
-
-<!-- #T# a class is assigned to a set of nodes with the following syntaxes -->
-<!-- # SYNTAX class node_id1,node_id2 class1 -->
-<!-- # SYNTAX node_id1:::class1 connector1 node2 -->
-
-<!-- #T# the second syntax allows the assignment of class1 to node1 as part of the graph definition -->
-
-graph TB
-  A:::class1 --> B
-
-classDef class1 fill : green
-
 <!-- #T# using 'flowchart' instead of 'graph' for the type of diagram has the same features and a few more -->
 
 <!-- #T# bidirectional arrows can be created -->
@@ -169,7 +131,7 @@ flowchart LR
   end
   First --> Second
 
-<!-- #T# to ensure that a given order of the nodes is followed, each subsequent node must be placed in a subgroup, this maintains the layout -->
+<!-- #T# to ensure that a given order of the nodes is followed, each subsequent node must be placed in a subgraph, this maintains the layout -->
 flowchart LR
   node1
   subgraph sub1
@@ -179,6 +141,90 @@ flowchart LR
     end
   end
   node3 --> node1
+
+<!-- #C# - Styling -->
+
+<!-- # |----- -->
+<!-- #T# connectors and nodes can be styled, using SVG property value pairs -->
+
+<!-- #T# to style connectors, their number of creation is used, which is the sequential number in which they appear in the graph definition -->
+
+<!-- #T# the following syntax is used to style connectors -->
+<!-- # SYNTAX linkStyle int1 property1 : value1, propertyN : valueN -->
+<!-- #T# int1 is the number of creation of the link being styled, counting from 0, property1 and value1 are an SVG property value pair -->
+
+graph TB
+  A -- link 0 --> B -- link 1 --> C
+  B -- link 2 --> D
+
+linkStyle 2 stroke : green,  stroke-width : 6px
+
+<!-- #T# to style nodes, their id is used, with the following syntax -->
+<!-- # SYNTAX style id1 property1 : value1, propertyN : valueN -->
+
+graph TB
+  A[text] --> B[text]
+
+style A fill : magenta, stroke-dasharray : 10 5
+
+<!-- #T# a default style can be applied by writing 'default' as the link or node being styled -->
+<!-- # SYNTAX linkStyle default property1 : value1, propertyN : valueN -->
+<!-- # SYNTAX style default property1 : value1, propertyN : valueN -->
+
+<!-- #T# classes can be created to apply style to all nodes of that class, with the following syntax -->
+<!-- # SYNTAX classDef class1 property1 : value1, propertyN : valueN -->
+
+<!-- #T# a class is assigned to a set of nodes with the following syntaxes -->
+<!-- # SYNTAX class node_id1,node_id2 class1 -->
+<!-- # SYNTAX node_id1:::class1 connector1 node2 -->
+
+<!-- #T# the second syntax allows the assignment of class1 to node1 as part of the graph definition -->
+
+graph TB
+  A:::class1 --> B
+
+classDef class1 fill : green
+
+<!-- #C# -| Themes -->
+
+<!-- # |- -->
+<!-- #T# Themes define the style of each part of a diagram. Themes can be modified -->
+
+<!-- #T# When using the `mermaid-filter` filter to generate Mermaid diagrams in Pandoc, themes can be modified by using a JSON file called `.mermaid-config.json` located in the same directory where the `pandoc` command is executed -->
+
+<!-- #T# In this JSON file, the theme is defined with this syntax -->
+<!-- # SYNTAX { "theme": theme1, "themeVariables": { key_vals1 } } -->
+<!-- #T# theme1 is the theme being modified, it can be "base" (it's the default theme) -->
+<!-- #T# key_vals1 is a set of JSON key value pairs with Mermaid theme variables -->
+
+<!-- #T# The Mermaid theme variables are -->
+<!-- #T#     primaryColor, is a CSS color value that sets the background color of the nodes in the diagram, it sets the background color of primary nodes -->
+<!-- #T#     secondaryColor, is a CSS color value that sets the background color of secondary nodes -->
+<!-- #T#     tertiaryColor, is a CSS color value that sets the background color of subgraphs, it sets the background color of tertiary nodes -->
+<!-- #T#     fontFamily, is a string with the name of an installed or available font family -->
+<!-- #T#     fontSize, is a measure of the font size, accepted units of measure are 'px' for pixel, 'pt' for points -->
+<!-- #T#     primaryBorderColor, is a CSS color value that sets the border color of the nodes in the diagram. It sets the border color of primary nodes -->
+<!-- #T#     primaryTextColor, is a CSS color value that sets the text color of the nodes in the diagram. It sets the text color of primary nodes -->
+<!-- #T#     secondaryBorderColor, is a CSS color value that sets the border color of secondary nodes -->
+<!-- #T#     secondaryTextColor, is a CSS color value that sets the text color of secondary nodes -->
+<!-- #T#     tertiaryBorderColor, is a CSS color value that sets the border color of subgraphs. It sets the border color of tertiary nodes -->
+<!-- #T#     tertiaryTextColor, is a CSS color value that sets the text color of subgraphs. It sets the text color of tertiary nodes -->
+<!-- #T#     lineColor, is a CSS color value that sets the color of connectors -->
+
+<!-- #T# there is a number of theme variables specific for flowcharts -->
+<!-- #T#     nodeBorder, same as primaryBorderColor -->
+<!-- #T#     nodeTextColor, same as primaryTextColor -->
+<!-- #T#     clusterBkg, same as tertiaryColor -->
+<!-- #T#     clusterBorder, same as tertiaryBorderColor -->
+<!-- #T#     defaultLinkColor, same as lineColor -->
+<!-- #T#     titleColor, same as tertiaryTextColor -->
+
+``` json
+{ "theme": "base", "themeVariables": { "primaryColor": "#F00", "tertiaryColor": "#0F0", "fontFamily": "Arial", "fontSize": "16pt" } }
+```
+
+<!-- # |- -->
+
 <!-- # |----- -->
 
 <!-- # |------------------------------------------------------------- -->

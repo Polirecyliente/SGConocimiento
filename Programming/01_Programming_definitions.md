@@ -84,10 +84,10 @@ The verb 'carry out' here means 'process', so the computer needs a **processor**
 ``` {.mermaid caption="Computer-User interaction loop" format="svg"}
 flowchart TB
   Input
-  subgraph s1 [" "]
+  subgraph s1 ["Computer"]
     Input --> Computer
     subgraph s2 [" "]
-      subgraph Computer
+      subgraph Computer [" "]
         Processor --- Memory & Storage
         Memory --- Storage
       end
@@ -95,4 +95,7 @@ flowchart TB
     Computer --> Output
   end
   Output --> Input
+
+  linkStyle default interpolate linear
+  style Computer stroke: black
 ```

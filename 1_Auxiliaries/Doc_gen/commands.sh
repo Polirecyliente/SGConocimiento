@@ -6,6 +6,9 @@ f=SGConocimiento/1_Auxiliaries/Doc_gen/filter.lua
 t=SGConocimiento/1_Auxiliaries/Doc_gen/template.markdown
 k=/usr/lib/nodejs/katex/dist/
 
+# Ready the Mermaid style
+cp SGConocimiento/1_Auxiliaries/Doc_gen/.mermaid-config.json .
+
 # Generate Markdown
 pandoc $m -o $m -s --toc --number-sections --template $t
 
