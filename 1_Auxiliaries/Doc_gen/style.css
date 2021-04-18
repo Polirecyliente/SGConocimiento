@@ -287,6 +287,15 @@
         font-size: var(--h6_font-size);
         font-weight: normal;
     }
+
+    code
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        background-color: rgba(50, 50, 50, .20);
+        border: solid 2px rgba(50, 50, 50 , .10);
+        border-radius: 2px;
+    }
 }
 
 @media screen
@@ -559,5 +568,14 @@
         font-family: var(--h_font-family);
         font-size: var(--h6_font-size);
         font-weight: normal;
+    }
+
+    code
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        background-color: rgba(50, 50, 50, .20);
+        border: solid 2px rgba(50, 50, 50 , .10);
+        border-radius: 2px;
     }
 }

@@ -9,16 +9,24 @@ This document is about the C programming language and its features.
 
 The C language is a compiled language, which means that a compiler is needed to convert C source code into binary code.
 
+# Basic usage
+
+Source code files of the C language have the file extension `.c` and they are written in a plain text format.
+
+This project uses the `gcc` compiler to compile C source code files into binary code files. GCC stands for GNU Compiler Collection. GNU stands for GNU is Not Unix, GNU is a free and open source software project.
+
+
+
 # Basic syntax
 
-Source code files of the C language have the file extension `.c`
+
 
 <!--
 //T// Variables, constants, literals
 
 //T// compile any C file /path/to/file1.c in a terminal with
 // gcc /path/to/file1.c -o /path/to/exec1
-//T// run the compiled executable in a terminal with
+//T// run the compiled executable in a shell with
 // /path/to/exec1
 
 //T// include directive

@@ -8,6 +8,7 @@ toc-title: Table of Contents
 
 -   [[1]{.toc-section-number} INTRODUCTION](#introduction)
 -   [[2]{.toc-section-number} BASIC CONCEPTS](#basic-concepts)
+-   [[3]{.toc-section-number} PARTS OF A COMPUTER](#parts-of-a-computer)
 :::
 
 # INTRODUCTION
@@ -77,8 +78,20 @@ The directory that contains this file is called 'Programming', in this context t
 :::
 
 ::: term
+**Intermediate code**
+  : Code that is produced as an intermediate step between source code and binary code.
+  \
+  A common intermediate code is **maching code** also called **assembly**.
+:::
+
+::: term
 **Programming language**
   : A language in which to write source code. The compiler or interpreter effectively determines the possible statements that can be created with a programming language. For example, if a compiled language is defined with certain feature, but the current compiler does not support that feature, then any source code file that uses that feature will throw error when compiled with said compiler.
+:::
+
+::: term
+**Machine code**
+  : Code written in assembly language. Assembly is a type of programming language in which the instructions are written directly, using words and numbers instead of only binary numbers.
 :::
 
 # PARTS OF A COMPUTER
@@ -116,6 +129,8 @@ As shown in the diagram, the interaction between computer and user forms a loop.
   : The part of a computer dedicated to process instructions, by fetching each instruction from a given program, decoding the instruction into a computation, and executing the computation. This is called **Fetch-Decode-Execute cycle**.
   \
   For a computer to execute a program, each instruction of the program is fetched, decoded, and executed in the order they appear in the program.
+  \
+  The processor is commonly called CPU, it stands for Central Processing Unit.
 :::
 
 ::: term
@@ -178,4 +193,79 @@ In a computer, programs access files and directories in the file system hierarch
   : A file that is not a directory can have a file extension. The extension is written at the end of the file name, it serves to give information about the format of the file, which in turn gives information about the programs that may be able to read, use, and modify the file.
   \
   The file extension is written at the end of the file name after a dot, for example `file1.fmt` is a file with extension `fmt`. It can also be said that `fmt` is the format of the file.
+:::
+
+::: term
+**Plain text format**
+  : A file format that consists of only text. In a file with a plain text format, the data is stored as text.
+  \
+  Programs that read plain text files can render them in different ways. For example the SVG format stands for Scalable Vector Graphics. SVG is a plain text format for images, so a program could render SVG as text, and another program could render SVG as an image.
+:::
+
+::: term
+**Software**
+  : Programs, including their source code, their binary code, and any intermediate code.
+:::
+
+::: term
+**Hardware**
+  : The physical parts of a computer, like the monitor, the CPU, etcetera.
+:::
+
+## Parts of an operating system
+
+An operating system can be divided into a few main parts: the **kernel**, the **shell**, the **GUI**, and the **system programs**.
+
+::: term
+**Kernel**
+  : A program that acts as the coordinator between the parts of the computer, so the kernel fulfills the main purpose of the operating system.
+:::
+
+::: term
+**Shell**
+  : An interpreter that can receive input from the keyboard, to receive instructions from the user. Instructions in a shell are called **commands**. The shell sends the commands to the **kernel**, to have them executed by the computer.
+  \
+  The shell can also be called 'terminal', because shells are commonly designed to look like terminal screens.
+:::
+
+::: term
+**GUI**
+  : GUI stands for Graphical User Interface. The GUI of an operating system is a set of programs that provide a graphical interface for the user, so that the user can see and interact with the contents of the monitor.
+  \
+  Through the GUI, the user can see the programs installed on the computer and start them. GUIs commonly come with a file explorer that displays the file system hierarchy to the user, with the posibility to create, move, copy, and delete files and directories.
+:::
+
+::: term
+**System programs**
+  : A set of auxiliary programs that are used by the **shell**, the **kernel** and the **GUI**. For example, when the user writes a command in the shell to copy a file, there must be a system program to copy files. The shell sends the command to the kernel, so that the system program copies the file, if allowed by the kernel.
+:::
+
+``` {.mermaid caption="Operating system and hardware" format="svg"}
+flowchart TB
+  subgraph OS[Operating system]
+    subgraph s1[" "]
+      Shell & GUI & Sp[System programs]
+    end
+    Shell & GUI & Sp[System programs] --- Kernel
+  end
+
+  subgraph Hardware
+  subgraph s2[" "]
+    CPU & Memory & Storage & Peripherics
+  end
+  end
+
+  Kernel --- CPU & Memory & Storage & Peripherics
+
+  style OS stroke: blue
+  style Hardware stroke: blue
+```
+
+This diagram shows the interactions between the operating system parts and the hardware. The diagram does not imply location, only relationship, because for example the kernel is stored in storage, and is loaded in memory when the computer is turned on.
+
+# SOFTWARE CONCEPTS
+
+::: term
+**Open source software**
+  : Software whose source code is open to be obtained by any person at no monetary charge.
 :::
