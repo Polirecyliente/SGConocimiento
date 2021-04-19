@@ -7,6 +7,9 @@
 char str1[] = "StringFromHeader";
 
 //T// declare functions in the header file
-int func1(int *param1, int param2);
+int func1(int param1, int param2)
+{
+    return 2*param1 + param2;
+}
 
 #endif

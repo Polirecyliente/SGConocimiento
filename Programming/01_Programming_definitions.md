@@ -53,6 +53,11 @@ The directory that contains this file is called 'Programming', in this context t
 :::
 
 ::: term
+**Metadata**
+  : Data about a given data. For example, the date of creation of the data, or the date of last modification of the data, or the size of the data, or the format of the data, are examples of metadata.
+:::
+
+::: term
 **Computer program**
   : A set of instructions to be carried out by a computer. These instructions are written in **binary code** (as seen in most computers in the moment this was documented).
 :::
@@ -75,6 +80,11 @@ The directory that contains this file is called 'Programming', in this context t
 ::: term
 **Interpreter**
   : A computer program that interprets source code written in a given **programming language**, into binary code, effectively converting source code into binary code. When a source code file is interpreted, each line of the file is interpreted as a unit. This allows for more interactivity than a compiler, because even a single line can be interpreted and the resulting binary code executed.
+:::
+
+::: term
+**Script**
+  : A source code file written in an interpreted language. Scripts are executed by an interpreter, line by line.
 :::
 
 ::: term
@@ -268,4 +278,119 @@ This diagram shows the interactions between the operating system parts and the h
 ::: term
 **Open source software**
   : Software whose source code is open to be obtained by any person at no monetary charge.
+:::
+
+## Features of a programming language
+
+Programming languages have several features, like:
+  
+  - **Syntax**, the way to write all of the following points.
+  - **Data types** to hold data in memory and do calculations with it.
+  - **Operators** to operate over data types.
+  - **Control flow structures** to skip or repeat code.
+  - **Functions** and **subroutines** to reuse pieces of code.
+  - **Packages** to give hierarchy to the code and organize it.
+  - **Error and exception handling** to handle errors that may occur during execution.
+  - And other features that are particular to each language.
+
+::: term
+**Syntax**
+  : In a programming language, syntax is what the compiler or interpreter understands. The plain text that the compiler or interpreter can convert into binary code must have valid syntax. In each programming language, data types have their syntax, functions have their syntax, etcetera.
+:::
+
+::: term
+**Data types**
+  : In computers, data in memory is hold as binary numbers. Programming languages can represent those binary numbers in different forms, they can represent words, numbers, logical values (true or false), or composite data (data that contains other data).
+:::
+
+::: term
+**Variable**
+  : A form of naming data. In most programming languages data is hold in memory, and variables are made to point to that data in memory. Calculations can be done with variables, the results can be hold in variables.
+:::
+
+::: term
+**String data type**
+  : A data type to hold characters. In many programming languages, strings are created by writing characters inside double quotes or inside single quotes, for example "first string" and 'second string'.
+:::
+
+::: term
+**Integer data type**
+  : A data type to hold integer numbers. In many programming languages, integers are created by writing the number directly, for example 5.
+:::
+
+::: term
+**Float data type**
+  : A data type to hold floating point numbers, which are decimal numbers. In many programming languages, floats are created by writing the number directly, for example 14.8. Some programming languages also have a 'double' data type, which is a float data type that allocates double the memory for the float number.
+:::
+
+::: term
+**Composite data type**
+  : A data type that can hold other data types, including other composite data types. The two main composite data types are: arrays and associative arrays.
+  \
+  Arrays hold data in increasing numeric positions, starting at position 0 in most programming languages. For example, an array could be written as ['pos0', 'pos1', 'pos2'], which is an array of strings. Data is accessed knowing the position of the data, this position is also called index.
+  \
+  Associative arrays hold data using strings to name positions (instead of using numbers as do arrays). The string that names a position is called 'key', and the data being hold in that position is called 'value', so an associative array is created as a set of key value pairs. For example, an associative array could be written as {'first key': 'first value', 'second key': 25}, in it, the first key holds a string, and the second holds an integer.
+  \
+  Data in general, even outside the realm of programming, is commonly placed in composite data types.
+:::
+
+::: term
+**Operator**
+  : Character used to operate over variables and over data types.
+  \
+  In most programming languages, the addition operator is `+`, and the assignment operator is `=`, so two variables could be added as `var1 = var2 + var3`.
+:::
+
+::: term
+**Statement**
+  : The minimum amount of code that is a complete instruction. Statements in the source code are converted into instructions in the binary code.
+:::
+
+::: term
+**Control flow structures**
+  : Code that allows controlling the flow of execution of code. The normal flow of execution is execute line by line in order, from the first line of code to the last line of code.
+  \
+  Most programming languages have two control flow structures, one to skip over lines of code if a condition is not met, commonly created with the `if` keyword. The other control flow structure is used to repeat a set of lines of code, they are called 'loops'.
+:::
+
+::: term
+**Function**
+  : Code enveloped in a variable. In some programming languages, functions are treated as variables (functions that are variables are called 'first class citizen' functions).
+  \
+  Functions are like variables that point to code, instead of pointing to data. To reuse the code being pointed by a function, the function is called. When a function is called, the code that the function points to gets executed.
+  \
+  Functions can receive arguments and return a return value. Arguments are varibles or data types that the function can use inside the code it envelops. The return value is a variable or data type that the function can return to the place where it was called, meaning that the return value can be hold in a variable, and used as a variable without calling the function again.
+  \
+  A function `func1` has a **function signature**. The signature of the function is `type1 func1(arg1, arg2)`, which is the data type of the return value, the name of the function, and its arguments. Most programming languages enclose the arguments in parentheses.
+:::
+
+::: term
+**Subroutine**
+  : A function that takes no arguments and returns no return value, so a subroutine is a function that only envelops code without taking input in its arguments nor giving output in its return value.
+  \
+  This is useful to abbreviate lines of code that are repeated multiple times. Placing the repeating lines of code in a subroutine makes the code easier to read and maintain.
+:::
+
+::: term
+**Package**
+  : The organization of code in a hierarchy. In most programming languages, the hierarchy created by packages is equivalent to the **file system hierarchy**.
+  \
+  Packages allow storing and accessing code in directories and subdirectories. In some programming languages, this is done using dot notation. For example a path to a given source code file in the file system hierarchy could be `path/to/source_code1.fmt`, the same path in a package would be written as `path.to.source_code1`, using dots instead of slashes, and commonly without the file extension at the end.
+:::
+
+::: term
+**Error and exception handling**
+  : Syntax used to handle errors in case they occur during execution.
+:::
+
+::: term
+**Directive**
+  : Some programming languages support directives. Directives are used to change the way that code is parsed. They serve as a metadata of sorts inside the source code itself, but given that they can modify how the source code is parsed, they are not really metadata.
+  \
+  Directives are also called 'pragmas'.
+:::
+
+::: term
+**Declaration and definition**
+  : Some programming languages allow to differentiate between declaring a variable or function, and defining a variable or function. Declaring a variable or function means stating that it exists (without giving it a value). Defining a variable or function means stating that it exists and giving it a value.
 :::

@@ -17,6 +17,17 @@
 //T// compile up to object code (.o) with the -c flag,
 // gcc -c sourceFile.c -o objFile.o
 
+// #T# show the paths of the included headers with the -H flag
+// gcc -H sourceFile.c -o execFile
+
+// #T# list the paths where headers are searched for with the `cpp` command, cpp stands for C preprocessor.
+// cpp -v
+// #T# this is example output of paths where headers are searched for
+// /usr/lib/gcc/x86_64-linux-gnu/9/include
+// /usr/local/include
+// /usr/include/x86_64-linux-gnu
+// /usr/include
+
 //T// shared libraries
 
 //T// compile the object files for a shared library with the -fPIC flag, -fPIC stands for Position Independent Code
