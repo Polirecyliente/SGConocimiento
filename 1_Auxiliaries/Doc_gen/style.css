@@ -65,6 +65,7 @@
 
         width: -moz-fit-content;
         width: fit-content;
+        margin: auto;
         margin-bottom: 2cm;
         padding: 30px;
         padding-bottom: 40px;
@@ -174,13 +175,13 @@
     dt::before
     {
         display: block;
+        content: " ";
         background-image: url(res/dt-o-u.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
         width: 100%;
         height: 5px;
-        content: " ";
         opacity: calc(var(--bg_opacity) - .1);
 
         position: relative;
@@ -290,27 +291,67 @@
 
     code
     {
-        font-family: var(--p_font-family);
-        font-size: var(--p_font-size);
-        background-color: rgba(50, 50, 50, .20);
-        border: solid 2px rgba(50, 50, 50 , .10);
+        font-family: "CMU Typewriter Text";
+        font-size: calc(var(--p_font-size) - 1pt);
+        background-color: rgba(100, 100, 100, .1);
+        border: solid 2px rgba(100, 100, 100, .1);
         border-radius: 2px;
+        padding: 0px 2px;
     }
 
     .sourceCode
     {
-        font-family: "Monospace";
-        font-size: calc(var(--p_font-size) - 2pt);
+        font-family: "CMU Typewriter Text";
+        font-size: calc(var(--p_font-size) - 1pt);
         background: rgba(0, 0, 0, 0);
         border: rgba(0, 0, 0, 0);
     }
 
+    code span.pp /* styles preprocessor directives in C */
+    {
+        color: rgb(177, 30, 120);
+    }
+
     .syntax
     {
-        border: solid 2px rgba(100, 100, 100 , .8);
-        background: rgba(50, 50, 50, .20);
-        border-left: solid 12px lime;
+        border: solid 2px rgba(100, 100, 100 , .1);
+        background: rgba(100, 100, 100, .1);
+        border-left: solid 12px rgba(0, 255, 0, .8);
         padding: 8px 18px;
+    }
+
+    .syntax code
+    {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+
+    .block
+    {
+        position:relative;
+    }
+
+    .block::before
+    {
+        content: "";
+        background-image: url(res/blockquote-o.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.3;
+        position: absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        width:auto;
+        height:auto;
+        z-index: -3;
+    }
+
+    blockquote
+    {
+        margin: 16px 0;
+        padding: 30px 50px;
     }
 }
 
@@ -380,6 +421,8 @@
     {
         font-size: var(--title_font-size);
 
+        width: -moz-fit-content;
+        width: fit-content;
         margin: auto;
         margin-bottom: 2cm;
         padding: 30px;
@@ -389,9 +432,6 @@
         background-size: 100% auto;
         background-position: bottom;
         background-repeat: no-repeat;
-
-        width: -moz-fit-content;
-        width: fit-content;
     }
 
     li
@@ -493,13 +533,13 @@
     dt::before
     {
         display: block;
+        content: " ";
         background-image: url(res/dt-o-u.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
         width: 100%;
         height: 5px;
-        content: " ";
         opacity: calc(var(--bg_opacity) - .1);
 
         position: relative;
@@ -597,18 +637,18 @@
 
     code
     {
-        font-family: "Monospace";
-        font-size: calc(var(--p_font-size) - 2pt);
-        background-color: rgba(50, 50, 50, .20);
-        border: solid 2px rgba(50, 50, 50 , .10);
+        font-family: "CMU Typewriter Text";
+        font-size: calc(var(--p_font-size) - 1pt);
+        background-color: rgba(100, 100, 100, .1);
+        border: solid 2px rgba(100, 100, 100, .1);
         border-radius: 2px;
         padding: 0px 2px;
     }
 
     .sourceCode
     {
-        font-family: "Monospace";
-        font-size: calc(var(--p_font-size) - 2pt);
+        font-family: "CMU Typewriter Text";
+        font-size: calc(var(--p_font-size) - 1pt);
         background: rgba(0, 0, 0, 0);
         border: rgba(0, 0, 0, 0);
     }
@@ -620,9 +660,9 @@
 
     .syntax
     {
-        border: solid 2px rgba(100, 100, 100 , .8);
-        background: rgba(50, 50, 50, .20);
-        border-left: solid 12px lime;
+        border: solid 2px rgba(100, 100, 100 , .1);
+        background: rgba(100, 100, 100, .1);
+        border-left: solid 12px rgba(0, 255, 0, .8);
         padding: 8px 18px;
     }
 
@@ -632,12 +672,31 @@
         border: none;
     }
 
+    .block
+    {
+        position:relative;
+    }
+
+    .block::before
+    {
+        content: "";
+        background-image: url(res/blockquote-o.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.3;
+        position: absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        width:auto;
+        height:auto;
+        z-index: -3;
+    }
+
     blockquote
     {
-        background-image: url(res/blockquote-o.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
         margin: 16px 0;
-        padding: 16px 40px;
+        padding: 30px 50px;
     }
 }

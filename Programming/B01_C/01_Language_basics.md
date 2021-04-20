@@ -1,5 +1,5 @@
 ---
-title: Language basics
+title: LANGUAGE BASICS
 toc-title: Table of contents
 ---
 
@@ -59,6 +59,7 @@ rest_of_file1
 
 The `#define` directive is used to define macros. Macros are code that replaces other code, so macros can be used as variables, or as functions. By convention, macros are named using uppercase letters.
 
+::: block
 > Macro as a variable
 >
 > ``` {.C .syntax}
@@ -72,13 +73,13 @@ The `#define` directive is used to define macros. Macros are code that replaces 
 > ```
 >
 > This macro defines `FIRST_NUMBER` as a variable, but given that macros can't be changed in the code, `FIRST_NUMBER` is effectively a constant.
-
+>
 > Macro as a function
 >
 > ``` {.C .syntax}
 > #define MACRO1(arg1, arg2)
 > ```
-
+:::
 
 The `#include` directive is used to include headers. Headers are files that declare or define variables, functions, and macros, so that they can be used in C source code. This is useful for example, to include functions defined in other files, so that it is not necessary to create those functions from scratch.
 
