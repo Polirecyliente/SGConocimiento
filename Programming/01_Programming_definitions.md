@@ -273,6 +273,21 @@ flowchart TB
 
 This diagram shows the interactions between the operating system parts and the hardware. The diagram does not imply location, only relationship, because for example the kernel is stored in storage, and is loaded in memory when the computer is turned on.
 
+::: term
+**Standard input**
+  : A file that reads the keystrokes from the keyboard that are typed in a shell. This file is used by programs that use the shell, to obtain input from the keyboard. This file is also called 'stdin'.
+:::
+
+::: term
+**Standard output**
+  : A file that writes character output to the shell, to print that output in the screen. This file is used by programs that use the shell, to print output in the screen. This file is also called 'stdout'.
+:::
+
+::: term
+**Standard error**
+  : A file that writes errors as output to the shell, to print those errors in the screen. This file is used by programs that use the shell, to print errors in the screen. This file is also called 'stderr'.
+:::
+
 # SOFTWARE CONCEPTS
 
 ::: term
@@ -299,6 +314,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Keyword**
+  : Words in a programming language that have a reserved meaning. Keywords provide a given feature or features of the programming language. For example a keyword `keyword1` could convert the next word into a variable that can only hold integer values.
+:::
+
+::: term
 **Data types**
   : In computers, data in memory is hold as binary numbers. Programming languages can represent those binary numbers in different forms, they can represent words, numbers, logical values (true or false), or composite data (data that contains other data).
 :::
@@ -309,6 +329,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Constant**
+  : A variable whose value does not change during the execution of the program. In most programming languages, trying to change the value of a constant throws an error.
+:::
+
+::: term
 **String data type**
   : A data type to hold characters. In many programming languages, strings are created by writing characters inside double quotes or inside single quotes, for example "first string" and 'second string'.
 :::
@@ -316,6 +341,13 @@ Programming languages have several features, like:
 ::: term
 **Integer data type**
   : A data type to hold integer numbers. In many programming languages, integers are created by writing the number directly, for example 5.
+:::
+
+::: term
+**Signed and unsigned integers**
+  : Some programming languages support a distinction between signed and unsigned integers. Signed integers are integers that can be positive or negative because they have a sign. Unsigned integers can only be positive because they have no sign. 
+  \
+  This distinction is important to know how big can be an integer, because currently it's not possible to hold infinitely large integers in memory. A signed integer variable can hold about half the absolute values of a corresponding unsigned integer, because half of the values will be positive and the other half negative.
 :::
 
 ::: term
@@ -344,6 +376,11 @@ Programming languages have several features, like:
 ::: term
 **Statement**
   : The minimum amount of code that is a complete instruction. Statements in the source code are converted into instructions in the binary code.
+:::
+
+::: term
+**Block of code**
+  : A set of statements that are grouped together. Each programming language has its own way to show where a block starts and where it ends.
 :::
 
 ::: term
@@ -394,3 +431,27 @@ Programming languages have several features, like:
 **Declaration and definition**
   : Some programming languages allow to differentiate between declaring a variable or function, and defining a variable or function. Declaring a variable or function means stating that it exists (without giving it a value). Defining a variable or function means stating that it exists and giving it a value.
 :::
+
+::: term
+**Undefined behavior**
+  : Behavior of code, that is not designed to occur in its programming language. A given code can have correct syntax in its programming language, and yet produce results that are not meant to happen.
+  \
+  A traditional example, is accessing an element of an array, such that the element is out of the bounds of the array. There are programming languages that don't throw an error when accessing an array outside its bounds.
+  \
+  Arrays are stored in memory, so accessing an array out of bounds means accessing other memory in the program that is outside the array. This is undefined behavior, because the programming language can't predict what would be the result of that array access out of bounds.
+:::
+
+### Types of programming languages
+
+::: term
+**Statically typed language**
+  : A programming language in which variables must be defined with a given data type. The data type of the variable can't be changed after defined.
+:::
+
+::: term
+**Dynamically typed language**
+  : A programming language in which variables don't have a data type, so they can have any data type. The data type of the variable can be changed after defined.
+:::
+
+# BINARY NUMBERS
+

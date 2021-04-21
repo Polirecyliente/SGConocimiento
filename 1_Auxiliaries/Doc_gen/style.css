@@ -294,7 +294,7 @@
         font-family: "CMU Typewriter Text";
         font-size: calc(var(--p_font-size) - 1pt);
         background-color: rgba(100, 100, 100, .1);
-        border: solid 2px rgba(100, 100, 100, .1);
+        border: solid 3px rgba(100, 100, 100, .1);
         border-radius: 2px;
         padding: 0px 2px;
     }
@@ -312,6 +312,11 @@
         color: rgb(177, 30, 120);
     }
 
+    code span.er /* styles errors */
+    {
+        color: black;
+    }
+
     .syntax
     {
         border: solid 2px rgba(100, 100, 100 , .1);
@@ -324,6 +329,16 @@
     {
         background-color: rgba(0, 0, 0, 0);
         border: none;
+    }
+
+    .output
+    {
+        display: block;
+        color: rgb(59, 245, 59);
+        background-color:rgb(63, 12, 48);
+        border: solid 2px black;
+        border-radius: 2px;
+        padding: 0px 4px;
     }
 
     .block
@@ -658,6 +673,11 @@
         color: rgb(177, 30, 120);
     }
 
+    code span.er /* styles errors */
+    {
+        color: black;
+    }
+
     .syntax
     {
         border: solid 2px rgba(100, 100, 100 , .1);
@@ -670,6 +690,16 @@
     {
         background-color: rgba(0, 0, 0, 0);
         border: none;
+    }
+
+    .output
+    {
+        display: block;
+        color: rgb(59, 245, 59);
+        background-color:rgb(63, 12, 48);
+        border: solid 3px black;
+        border-radius: 2px;
+        padding: 0px 4px;
     }
 
     .block
