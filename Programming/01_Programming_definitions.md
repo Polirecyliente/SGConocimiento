@@ -22,23 +22,23 @@ The directory that contains this file is called 'Programming', in this context t
 ::: term
 **Computer**
   : A device that can do computations.
-  \
+\\\
   For a user to make use of a computer, the user needs a way to let the computer know the computations that should be carried out, this is called **input**. On the other hand, the computer needs a way to let the user know the results of the computations, this is called **output**. Depending on the output, the user sends new input to the computer, and the computer sends to the user the results of the computations as new output. This establishes a cycle of interactions between the user and the computer.
-  \
+\\\
   For this cycle of interactions to take place, the computer needs to have **peripherics**. The computer must have peripherics that receive the input from the user. The computer interprets this input to know which computations must be carried out. The computer must also have peripherics that send the output to the user. After the computations are carried out, the computer sends the output using these peripherics.
 :::
 
 ::: term
 **Input peripherics**
   : Devices connected to a computer, used by the user to send input to the computer. Input peripherics can be made into parts of the computer itself.
-  \
+\\\
   The most common input peripherics are: the **mouse** and the **keyboard**. The mouse is used as a pointing device, the input consists of pointing to different points in space. The keyboard is used to send character input to the computer, to be able to write, and to send in band signaling (which means sending instructions via a sequence of characters, instead of sending the characters themselves).
 :::
 
 ::: term
 **Output peripherics**
   : Devices connected to a computer, used by the computer to send output to the user. Output peripherics can be made into parts of the computer itself.
-  \
+\\\
   The most common output peripherics are: the **monitor** and the **printer**. The monitor is used to display output from computations. The printer is used to print documents.
 :::
 
@@ -90,7 +90,7 @@ The directory that contains this file is called 'Programming', in this context t
 ::: term
 **Intermediate code**
   : Code that is produced as an intermediate step between source code and binary code.
-  \
+\\\
   A common intermediate code is **maching code** also called **assembly**.
 :::
 
@@ -137,25 +137,25 @@ As shown in the diagram, the interaction between computer and user forms a loop.
 ::: term
 **Processor**
   : The part of a computer dedicated to process instructions, by fetching each instruction from a given program, decoding the instruction into a computation, and executing the computation. This is called **Fetch-Decode-Execute cycle**.
-  \
+\\\
   For a computer to execute a program, each instruction of the program is fetched, decoded, and executed in the order they appear in the program.
-  \
+\\\
   The processor is commonly called CPU, it stands for Central Processing Unit.
 :::
 
 ::: term
 **Memory**
   : The part of a computer dedicated to hold programs retrieved from **storage**, and to feed the instructions of a program to the **processor**.
-  \
+\\\
   The memory is also dedicated to hold computer data, be it data read from storage, or be it data that is the result of a computation.
-  \
+\\\
   A common form of memory, when this was written, is RAM, which stands for Random Access Memory.
 :::
 
 ::: term
 **Storage**
   : The part of a computer dedicated to store programs and computer data.
-  \
+\\\
   A common form of storage, when this was written, are hard drives.
 :::
 
@@ -166,14 +166,14 @@ In a future it may be possible for memory and storage to be a single entity, tha
 ::: term
 **Operating system**
   : A program designed to coordinate the parts of a computer, including its attached peripherics. The operating system coordinates the feeding of instructions from memory to processor. It coordinates the retrieval of programs and data from storage into memory. It coordinates the reception of input from the keyboard. It coordinates the output to the monitor.
-  \
+\\\
   Computer data is stored in storage, and it's organized in a **file system hierarchy**. The operating system coordinates the file system hierarchy, it grants or denies access to data, so that a program that instructs the computer to read a given data, may be denied from doing that reading operation by the operating system.
 :::
 
 ::: term
 **File system hierarchy**
   : The way data is organized in a computer. A common way to define a file system hierarchy is with directories and files, where there is a single root directory that contains all other directories and files.
-  \
+\\\
   Both files and directories are forms of computer data. In this paradigm, a directory contains files and other directories, but a directory can't contain itself as a subdirectory, which leads to a tree structure with a single root node.
 :::
 
@@ -201,14 +201,14 @@ In a computer, programs access files and directories in the file system hierarch
 ::: term
 **File extension**
   : A file that is not a directory can have a file extension. The extension is written at the end of the file name, it serves to give information about the format of the file, which in turn gives information about the programs that may be able to read, use, and modify the file.
-  \
+\\\
   The file extension is written at the end of the file name after a dot, for example `file1.fmt` is a file with extension `fmt`. It can also be said that `fmt` is the format of the file.
 :::
 
 ::: term
 **Plain text format**
   : A file format that consists of only text. In a file with a plain text format, the data is stored as text.
-  \
+\\\
   Programs that read plain text files can render them in different ways. For example the SVG format stands for Scalable Vector Graphics. SVG is a plain text format for images, so a program could render SVG as text, and another program could render SVG as an image.
 :::
 
@@ -234,14 +234,14 @@ An operating system can be divided into a few main parts: the **kernel**, the **
 ::: term
 **Shell**
   : An interpreter that can receive input from the keyboard, to receive instructions from the user. Instructions in a shell are called **commands**. The shell sends the commands to the **kernel**, to have them executed by the computer.
-  \
+\\\
   The shell can also be called 'terminal', because shells are commonly designed to look like terminal screens.
 :::
 
 ::: term
 **GUI**
   : GUI stands for Graphical User Interface. The GUI of an operating system is a set of programs that provide a graphical interface for the user, so that the user can see and interact with the contents of the monitor.
-  \
+\\\
   Through the GUI, the user can see the programs installed on the computer and start them. GUIs commonly come with a file explorer that displays the file system hierarchy to the user, with the posibility to create, move, copy, and delete files and directories.
 :::
 
@@ -334,8 +334,32 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Character data type**
+  : A data type to hold a single character. A character is any single letter, number, symbol, whitespace that can be written in a computer.
+:::
+
+::: term
 **String data type**
   : A data type to hold characters. In many programming languages, strings are created by writing characters inside double quotes or inside single quotes, for example "first string" and 'second string'.
+:::
+
+::: term
+**Escaping a character**
+  : Make a character mean something different, in the programming language in which its written.
+:::
+
+::: term
+**Escaped character**
+  : In a given programming language, a character that acts as an operator must be escaped to become the literal character and not the operator.
+\\\
+  In most programming languages the backslash `\` is an operator, which is the operator to escape the next character, so to obtain a literal backslash, it must be escaped as `\\`.
+:::
+
+::: term
+**Escape sequence**
+  : A literal character (that does not act as an operator), that when escaped becomes an operator. The escape sequence is the literal character being escaped. It is an operator in the sense that it provides a given functionality.
+\\\
+  In many programming languages the character 'n' is a regular letter, the letter 'n'. The escape sequence `\n` means "introduce a newline here", which places a newline, or a linebreak at that position. For example, the string `"Line1\nLine2" when parsed creates two lines instead of one.
 :::
 
 ::: term
@@ -346,7 +370,7 @@ Programming languages have several features, like:
 ::: term
 **Signed and unsigned integers**
   : Some programming languages support a distinction between signed and unsigned integers. Signed integers are integers that can be positive or negative because they have a sign. Unsigned integers can only be positive because they have no sign. 
-  \
+\\\
   This distinction is important to know how big can be an integer, because currently it's not possible to hold infinitely large integers in memory. A signed integer variable can hold about half the absolute values of a corresponding unsigned integer, because half of the values will be positive and the other half negative.
 :::
 
@@ -358,18 +382,18 @@ Programming languages have several features, like:
 ::: term
 **Composite data type**
   : A data type that can hold other data types, including other composite data types. The two main composite data types are: arrays and associative arrays.
-  \
+\\\
   Arrays hold data in increasing numeric positions, starting at position 0 in most programming languages. For example, an array could be written as ['pos0', 'pos1', 'pos2'], which is an array of strings. Data is accessed knowing the position of the data, this position is also called index.
-  \
+\\\
   Associative arrays hold data using strings to name positions (instead of using numbers as do arrays). The string that names a position is called 'key', and the data being hold in that position is called 'value', so an associative array is created as a set of key value pairs. For example, an associative array could be written as {'first key': 'first value', 'second key': 25}, in it, the first key holds a string, and the second holds an integer.
-  \
+\\\
   Data in general, even outside the realm of programming, is commonly placed in composite data types.
 :::
 
 ::: term
 **Operator**
   : Character used to operate over variables and over data types.
-  \
+\\\
   In most programming languages, the addition operator is `+`, and the assignment operator is `=`, so two variables could be added as `var1 = var2 + var3`.
 :::
 
@@ -386,32 +410,32 @@ Programming languages have several features, like:
 ::: term
 **Control flow structures**
   : Code that allows controlling the flow of execution of code. The normal flow of execution is execute line by line in order, from the first line of code to the last line of code.
-  \
+\\\
   Most programming languages have two control flow structures, one to skip over lines of code if a condition is not met, commonly created with the `if` keyword. The other control flow structure is used to repeat a set of lines of code, they are called 'loops'.
 :::
 
 ::: term
 **Function**
   : Code enveloped in a variable. In some programming languages, functions are treated as variables (functions that are variables are called 'first class citizen' functions).
-  \
+\\\
   Functions are like variables that point to code, instead of pointing to data. To reuse the code being pointed by a function, the function is called. When a function is called, the code that the function points to gets executed.
-  \
+\\\
   Functions can receive arguments and return a return value. Arguments are varibles or data types that the function can use inside the code it envelops. The return value is a variable or data type that the function can return to the place where it was called, meaning that the return value can be hold in a variable, and used as a variable without calling the function again.
-  \
+\\\
   A function `func1` has a **function signature**. The signature of the function is `type1 func1(arg1, arg2)`, which is the data type of the return value, the name of the function, and its arguments. Most programming languages enclose the arguments in parentheses.
 :::
 
 ::: term
 **Subroutine**
   : A function that takes no arguments and returns no return value, so a subroutine is a function that only envelops code without taking input in its arguments nor giving output in its return value.
-  \
+\\\
   This is useful to abbreviate lines of code that are repeated multiple times. Placing the repeating lines of code in a subroutine makes the code easier to read and maintain.
 :::
 
 ::: term
 **Package**
   : The organization of code in a hierarchy. In most programming languages, the hierarchy created by packages is equivalent to the **file system hierarchy**.
-  \
+\\\
   Packages allow storing and accessing code in directories and subdirectories. In some programming languages, this is done using dot notation. For example a path to a given source code file in the file system hierarchy could be `path/to/source_code1.fmt`, the same path in a package would be written as `path.to.source_code1`, using dots instead of slashes, and commonly without the file extension at the end.
 :::
 
@@ -423,7 +447,7 @@ Programming languages have several features, like:
 ::: term
 **Directive**
   : Some programming languages support directives. Directives are used to change the way that code is parsed. They serve as a metadata of sorts inside the source code itself, but given that they can modify how the source code is parsed, they are not really metadata.
-  \
+\\\
   Directives are also called 'pragmas'.
 :::
 
@@ -435,9 +459,9 @@ Programming languages have several features, like:
 ::: term
 **Undefined behavior**
   : Behavior of code, that is not designed to occur in its programming language. A given code can have correct syntax in its programming language, and yet produce results that are not meant to happen.
-  \
+\\\
   A traditional example, is accessing an element of an array, such that the element is out of the bounds of the array. There are programming languages that don't throw an error when accessing an array outside its bounds.
-  \
+\\\
   Arrays are stored in memory, so accessing an array out of bounds means accessing other memory in the program that is outside the array. This is undefined behavior, because the programming language can't predict what would be the result of that array access out of bounds.
 :::
 
@@ -453,5 +477,88 @@ Programming languages have several features, like:
   : A programming language in which variables don't have a data type, so they can have any data type. The data type of the variable can be changed after defined.
 :::
 
-# BINARY NUMBERS
+# BINARY, OCTAL, AND HEXADECIMAL NUMBERS
 
+Binary numbers are the numbers that arise from creating a place value system with only two symbols for the numbers. Those two symbols can be anything, but they are commonly $0$ and $1$.
+
+By using the place value system logic to get a sequence of consecutive numbers, the first binary numbers are: $0$, $1$, $10$, $11$, $100$, $101$, $110$, etcetera.
+
+Binary numbers are used by computers for storing or holding data, and for doing computations. In a computer, data is composed of binary numbers, for example the number $110110000100$ could represent and orange tone color, this orange color would be stored as data with the number $110110000100$.
+
+The computations that a computer can do are also binary numbers, for example the number $0100$ could mean the computation of adding two numbers. The number $0100$ is sent as a signal to the CPU and the CPU then adds two given numbers.
+
+Octal numbers and hexadecimal numbers are used as ways to make binary numbers more human readable. Decimal numbers are not used because converting binary numbers to decimal numbers (and vice versa) is not an straightforward process, whereas converting binary numbers to octal or hexadecimal numbers (and vice versa) is straightforward.
+
+Octal numbers use eight symbols to create numbers, the symbols are: $0$, $1$, $2$, $3$, $4$, $5$, $6$, and $7$. One octal digit is always equivalent to three binary digits, so two octal digits are equivalent to six binary digits, and so on. The following table shows the equivalencies for one octal digit to three binary digits.
+
+: Octal digit to binary equivalencies
+
++-------+---------+
+| Octal | Binary  |
++:=====:+:=======:+
+|   0   |   000   |
++-------+---------+
+|   1   |   001   |
++-------+---------+
+|   2   |   010   |
++-------+---------+
+|   3   |   011   |
++-------+---------+
+|   4   |   100   |
++-------+---------+
+|   5   |   101   |
++-------+---------+
+|   6   |   110   |
++-------+---------+
+|   7   |   111   |
++-------+---------+
+
+An octal number is converted to a binary number by directly replacing each octal digit for its equivalent three binary digits. For example the octal number $374$ has the same value as the binary number $011 111 100$ (spaces are added for clarity, the binary number itself is $011111100$).
+
+A binary number is converted to an octal number by directly replacing each group of three binary digits for its equivalent octal digit. The groups of three binary digits are created from right to left. If there are not enough digits to form a group of three, then the group is filled with zeros to the left. For example the binary number $10100$, in groups of three is the same as $010 100$, note that one $0$ had to be added to the left of the number, to form a group of three digits. The number $010 100$ is the octal number $24$.
+
+The conversion between hexadecimal and binary numbers follows the same process.
+
+Hexadecimal numbers use sixteen symbols to create numbers, the symbols are: $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$, $9$, $A$, $B$, $C$, $D$, $E$, and $F$. One hexadecimal digit is always equivalent to four binary digits, so two hexadecimal digits are equivalent to eight binary digits, and so on. The following table shows the equivalencies for one hexadecimal digit to four binary digits.
+
+: Hexadecimal digit to binary equivalencies
+
++-------------+--------+
+| Hexadecimal | Binary |
++:===========:+:======:+
+|      0      |  0000  |
++-------------+--------+
+|      1      |  0001  |
++-------------+--------+
+|      2      |  0010  |
++-------------+--------+
+|      3      |  0011  |
++-------------+--------+
+|      4      |  0100  |
++-------------+--------+
+|      5      |  0101  |
++-------------+--------+
+|      6      |  0110  |
++-------------+--------+
+|      7      |  0111  |
++-------------+--------+
+|      8      |  1000  |
++-------------+--------+
+|      9      |  1001  |
++-------------+--------+
+|      A      |  1010  |
++-------------+--------+
+|      B      |  1011  |
++-------------+--------+
+|      C      |  1100  |
++-------------+--------+
+|      D      |  1101  |
++-------------+--------+
+|      E      |  1110  |
++-------------+--------+
+|      F      |  1111  |
++-------------+--------+
+
+An hexadecimal number is converted to a binary number by directly replacing each hexadecimal digit for its equivalent four binary digits. For example the hexadecimal number $B9$ has the same value as the binary number $1011 1001$ (spaces are added for clarity, the binary number itself is $10111001$).
+
+A binary number is converted to a hexadecimal number by directly replacing each group of four binary digits for its equivalent hexadecimal digit. The groups of four binary digits are created from right to left. If there are not enough digits to form a group of four, then the group is filled with zeros to the left. For example the binary number $10100$, in groups of four is the same as $0001 0100$, note that three $0$ had to be added to the left of the number, to form a group of four digits. The number $0001 0100$ is the hexadecimal number $14$.

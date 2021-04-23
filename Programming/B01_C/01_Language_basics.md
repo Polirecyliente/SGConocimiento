@@ -1,6 +1,6 @@
 ---
 title: LANGUAGE BASICS
-toc-title: Table of contents
+toc-title: Table of Contents
 ---
 
 # INTRODUCTION
@@ -106,6 +106,15 @@ To print characters to standard output, use the `printf` function. This function
 printf("This text will be printed to standard output");
 ```
 
+To print a given variable do:
+
+``` {.C .syntax}
+int var1 = value1;
+printf("%d", var1);
+```
+
+`int var1 = value1` creates a variable `var1` of data type `int` (for integer) with a value of `value1`. `%d` is called a format specifier. Variables, data types, and format specifiers are explained in this document. This is placed here because it's the minimum required to use the `printf` function to print the value of an integer variable.
+
 ::: block
 > **Example code to print to standard output**
 >
@@ -123,21 +132,28 @@ printf("This text will be printed to standard output");
 >
 > Compiling and executing this program in a shell outputs:
 >
-> `string1`{.output}
+> ``` {.output}
+> string1
+> ```
+>
+> The following program prints an integer variable to standard output.
+>
+> ``` C
+> #include <stdio.h>
+>
+> int main()
+> {
+>     int var1 = 5;
+>	  printf("%d", var1);
+>	  return 0;
+> }
+> ```
+> Compiling and executing this program in a shell outputs:
+>
+> ``` {.output}
+> 5
+> ```
 :::
-
-To print a given variable do:
-
-``` {.C .syntax}
-int a = 5;
-printf("%d", a);
-```
-
-This outputs:
-
-`5`{.output}
-
-`int a = 5` creates a variable `a` of data type `int` (for integer) with a value of `5`. `%d` is called a format specifier. Variables, data types, and format specifiers are explained in this document. This is placed here because it's the minimum required to use the `printf` function to print the value of an integer variable.
 
 To read data from standard input, use the `scanf` function.
 
@@ -170,23 +186,29 @@ The `&` in `&a` is the address operator, `&a` is the address of the variable `a`
 > After inputting an integer number, this program prints that integer and exits. Inputting text makes the program print numbers that change. Even when inputting the same text, the printed output number varies because doing so is undefined behavior.
 :::
 
-# Data types
+# DATA TYPES
 
 C is a statically typed language, so to create a variable, the data type of the variable must be specified. In order to achieve this, the C language has keywords for the data types.
 
 A variable is created by writing the keyword of its data type and then the name of the variable.
 
-`data_type1 var1;`{.syntax}
+``` {.syntax}
+data_type1 var1;
+```
 
 `var1` is the name of the variable, and `data_type1` is a keyword of the data type of `var1`.
 
 Several variables of the same data type can be declared in a single statement, separating the variables by comma.
 
-`data_type1 var1, var2, varN;`{.syntax}
+``` {.syntax}
+data_type1 var1, var2, varN;
+```
 
 The equal sign '=' is used as an assignment operator to assign a value to a variable.
 
-`data_type1 var1 = value1;`{.syntax}
+``` {.syntax}
+data_type1 var1 = value1;
+```
 
 `value1` must be of the same data type as `data_type1`, otherwise it's undefined behavior.
 
@@ -194,29 +216,154 @@ The equal sign '=' is used as an assignment operator to assign a value to a vari
 
 The `int` keyword is used to create variables of integer data type.
 
-`int var1 = 5;`{.syntax}
+``` {.C .syntax}
+int var1 = num1;
+```
+
+For example:
+
+``` C
+int var1 = 5;
+```
 
 Hexadecimal integers can be written by prefixing the number with `0x`, for example the hexadecimal number '5A' would be written as `0x5A`.
 
-`int var1 = 0x5A;`{.syntax}
+``` C
+int var1 = 0x5A;
+```
 
 Octal integers can be written by prefixing the number with `0`, for example the octal number '11' would be written as `011`.
 
-`int var1 = 011;`{.syntax}
+``` C
+int var1 = 011;
+```
 
-Integers can be signed or unsigned.
+Binary integers can be written by prefixing the number with `0b`, for example the binary number '10100' woud be written as `0b10100`.
 
+``` C
+int var1 = 0b10100;
+```
 
+Integers can be signed or unsigned. By default, integers are signed.
 
+``` C
+int var1 = -20000;
+```
 
-<!--
-//T// u
-	a = 0x5p-2,b = 03u;
+The `unsigned` keyword makes the number unsigned.
 
-//T// escapes \n
--->
+``` C
+unsigned int var1 = 50000
+```
 
-## Constant variables
+The `signed` keyword makes the number signed.
+
+``` C
+signed int var1 = -20000
+```
+
+### Suffixes for numeric data types
+
+Numbers can have suffixes.
+
+There are suffixes that act as keywords, for example the `u` or `U` suffix is used to make an unsigned number.
+
+``` {.C .syntax}
+int var1 = num1u;
+int var2 = num1U;
+```
+
+For example:
+
+``` C
+int var1 = 50000u;
+```
+
+This makes `var1` an unsigned integer variable.
+
+The `p` or `P` suffix is used to multiply a hexadecimal number by a power of 2. This suffix is necessary to create floating hexadecimals.
+
+``` {.C .syntax}
+float var1 = num1pint1;
+float var2 = num2Pint2;
+```
+
+`int1` and `int2` can be positive or negative integers.
+
+For example:
+
+``` C
+float var1 = 0x5.1p0;
+```
+
+Printing `var1` outputs:
+
+``` {.output}
+5.062500
+```
+
+An example with an exponent different from 0:
+
+``` C
+float var1 = 0x5.1p4;
+```
+
+Printing `var1` outputs:
+
+``` {.output}
+81.000000
+```
+
+The decimal number 81 is equivalent to the hexadecimal 0x51.
+
+## String data types
+
+In C the basic string data type is the character data type.
+
+The `char` keyword is used to create variables of character data type.
+
+``` {.C .syntax}
+char var1 = 'char1';
+```
+
+Note that `'char1'` must be enclosed in single quotes. Single quotes are used to enclose single characters.
+
+For example:
+
+``` C
+char var1 = 'n';
+```
+
+A string is created with a pointer to a character. Pointers are explained in this document.
+
+``` {.C .syntax}
+char *var1 = "string1";
+```
+
+The asterisk '*' means that `*var1` is a pointer to a character. Note that `"string1"` must be enclosed in double quotes. Double quotes are used to enclose strings.
+
+### Escaped characters and escape sequences
+
+Characters and strings may be composed of escaped characters and escape sequences.
+In the following tables, the output is the output of printing the variable in the example of the same table row.
+
+: Escaped characters
+
+   Escaped character            Example                 Output
+  ------------------- ---------------------------- ----------------
+        `'\\'`         `char *var1 = "A\\B";`{.C}   `A\B`{.output}
+
+: Escape sequences
+
+  -------------------------------------------------------------------
+   Escape sequence            Example                   Output
+  ----------------- ---------------------------- --------------------
+        `\n`         `char *var1 = "A\nB";`{.C}     `A`{.output}\
+                                                    `B`{.output}
+
+  -------------------------------------------------------------------
+
+## Constants
 
 <!--
 //T// const keyword
@@ -225,7 +372,7 @@ Integers can be signed or unsigned.
 
 ## Composite types
 
-# Operators
+# OPERATORS
 
 <!--
 c = a + b;

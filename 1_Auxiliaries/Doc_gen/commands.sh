@@ -10,7 +10,7 @@ k=/usr/lib/nodejs/katex/dist/
 cp SGConocimiento/1_Auxiliaries/Doc_gen/.mermaid-config.json .
 
 # Generate Markdown
-pandoc $m -o $m -s --toc --number-sections --template $t
+pandoc $m -o $m -s --toc --number-sections --template $t --columns 78
 
 # Generate HTML from Markdown
 pandoc $m -o file1.html -s -c $c --lua-filter $f --filter mermaid-filter --citeproc --bibliography $b --katex=$k

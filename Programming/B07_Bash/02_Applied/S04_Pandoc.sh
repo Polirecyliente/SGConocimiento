@@ -93,6 +93,12 @@ pandoc file1.md -s -c file1.css -o file1.html
 pandoc file1.md -s -c file1.css -t html -o file1.pdf
 
 #T# the --self-contained flag is used to output an HTML file with its content embedded in the HTML file itself, such as images, stylesheets, scripts, etc, so the resulting HTML file does not need references to external files
+
+#T# The --columns option is used to set the number of characters per line, after which the line is wrapped. This is commonly used to output Markdown files with the lines wrapped to a given width automaticaly.
+pandoc file1.md -o file1.md --columns 78
+
+#T# The --wrap option is used to set the way of wrapping lines. It's value can be 'auto' which is the default, 'none' to not wrap lines. This is commonly used to output Markdown files without wrapping the lines.
+pandoc file1.md -o file.md --wrap none
 # |-------------------------------------------------------------
 
 #C# Inserting resources

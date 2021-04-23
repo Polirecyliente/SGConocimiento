@@ -303,6 +303,10 @@
     {
         font-family: "CMU Typewriter Text";
         font-size: calc(var(--p_font-size) - 1pt);
+    }
+
+    .syntax .sourceCode
+    {
         background: rgba(0, 0, 0, 0);
         border: rgba(0, 0, 0, 0);
     }
@@ -333,12 +337,17 @@
 
     .output
     {
-        display: block;
         color: rgb(59, 245, 59);
         background-color:rgb(63, 12, 48);
         border: solid 2px black;
         border-radius: 2px;
         padding: 0px 4px;
+    }
+
+    .output code
+    {
+        background-color: inherit;
+        border-style: none;
     }
 
     .block
@@ -367,6 +376,56 @@
     {
         margin: 16px 0;
         padding: 30px 50px;
+    }
+
+    table
+    {
+        margin: 30px auto;
+        border-collapse: collapse;
+    }
+
+    th
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        padding: 5px 13px;
+        padding-bottom: 11px;
+        border-top: solid 3px;
+        border-bottom: solid 3px;
+        border-left: solid 1px;
+    }
+
+    th:nth-child(1)
+    {
+        border-left: none;
+    }
+
+    td
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        border-bottom: solid 1px;
+        border-left: solid 1px;
+        padding: 5px 13px;
+        padding-bottom: 11px;
+    }
+
+    td:nth-child(1)
+    {
+        border-left: none;
+    }
+
+    tr:nth-last-child(1)
+    {
+        border-bottom: solid 3px;
+    }
+
+    caption
+    {
+        font-family: var(--p_font-family);
+        font-size: calc(var(--p_font-size) + 3pt);
+        margin-bottom: 15px;
+        text-decoration: underline double;
     }
 }
 
@@ -664,6 +723,10 @@
     {
         font-family: "CMU Typewriter Text";
         font-size: calc(var(--p_font-size) - 1pt);
+    }
+
+    .syntax .sourceCode
+    {
         background: rgba(0, 0, 0, 0);
         border: rgba(0, 0, 0, 0);
     }
@@ -694,12 +757,17 @@
 
     .output
     {
-        display: block;
         color: rgb(59, 245, 59);
         background-color:rgb(63, 12, 48);
         border: solid 3px black;
         border-radius: 2px;
         padding: 0px 4px;
+    }
+
+    .output code
+    {
+        background-color: inherit;
+        border-style: none;
     }
 
     .block
@@ -728,5 +796,55 @@
     {
         margin: 16px 0;
         padding: 30px 50px;
+    }
+
+    table
+    {
+        margin: 30px auto;
+        border-collapse: collapse;
+    }
+
+    th
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        padding: 5px 13px;
+        padding-bottom: 11px;
+        border-top: solid 3px;
+        border-bottom: solid 3px;
+        border-left: solid 1px;
+    }
+
+    th:nth-child(1)
+    {
+        border-left: none;
+    }
+
+    td
+    {
+        font-family: var(--p_font-family);
+        font-size: var(--p_font-size);
+        border-bottom: solid 1px;
+        border-left: solid 1px;
+        padding: 5px 13px;
+        padding-bottom: 11px;
+    }
+
+    td:nth-child(1)
+    {
+        border-left: none;
+    }
+
+    tr:nth-last-child(1)
+    {
+        border-bottom: solid 3px;
+    }
+
+    caption
+    {
+        font-family: var(--p_font-family);
+        font-size: calc(var(--p_font-size) + 3pt);
+        margin-bottom: 15px;
+        text-decoration: underline double;
     }
 }

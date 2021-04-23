@@ -121,8 +121,6 @@ end
 -- # |-----
 -- #T# the type of an element is one of the pandoc types, the pandoc types make the set of possible elements with which filters can work
 
--- #T# the basic types are the Inlines type and the Blocks type
-
 -- #T# the Inlines filter takes an Inlines type as argument, this argument is the list of inlines inside a given filtered block of the input document
 function Inlines(inlines1)
     print(inlines1[1].text)
@@ -136,6 +134,28 @@ function Blocks(blocks1)
     return blocks1
 end
 -- #| this filter prints the text of the first content of the block number 6
+
+-- #T# Lists are a type of element, Inlines are a type of List, so the List methods can be used with Inlines
+
+-- #T# the insert method of Lists is used to insert an element at a given index in a list
+
+-- # SYNTAX List1:insert(int1, value1)
+-- #T# value1 is inserted at position int1 from List1
+
+-- #T# the remove method of Lists is used to remove the element at a given index in a list
+
+-- # SYNTAX List1:remove(int1)
+-- #T# the element at position int1 from List1 is removed
+
+function Inlines(inlines1)
+    if (inlines1[1].text == "A" and inlines1[2].tag == "Space") then
+        inlines1:remove(1)
+        inlines1:insert(1, pandoc.Str("B"))
+    end
+    return inlines1
+end
+
+-- #T# This filter replaces any string "A " that starts a block, for "B "
 
 -- #T# the Str type is the basic inline type, it represents a string, for example 'word1' in Markdown
 

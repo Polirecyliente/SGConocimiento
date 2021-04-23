@@ -418,6 +418,10 @@ p {color: initial;}
 p {color: unset;}
 
 /* #T# values can be prefixed to work with a given browser. The `-moz-` vendor prefix is used for values with the Firefox browser, the `-webkit-` vendor prefix is used with the Chrome browser, the `-ms-` vendor prefix is used with the Edge browser */
+
+/* #T# The all property is used to set the value for all the properties of a given element being styled */
+/* #T#     The predefined values of the all property are: inherit, initial, unset */
+p {all: initial;}
 /* # |------------------------------------------------------------- */
 
 /* #C# Color properties */
@@ -735,6 +739,10 @@ p {text-shadow: 3px -3px rgb(10,60,10);}
 /* #T# the overflow property is a string that sets what to do when the contents of an element overflow the element (which is when the contents of an element extend beyond the limits of the element) */
 /* #T#     the predefined values of the overflow property are, visible, hidden, scroll (puts scrollbars on the element to scroll its contents), auto (puts scrollbars only when necessary) */
 p {overflow: scroll;}
+
+/* #T# The border-collapse property is used with the <table> tag. It's used to style how to collapse the internal borders of a table. */
+/* #T#     the predefined values of the border-collapse property are: separate (the default) to put each table cell border separate from the other, collapse (to collapse the cell borders) */
+td {border-collapse: collapse;}
 
 /* #C# - Positioning properties */
 

@@ -121,7 +121,7 @@ num1 = ((3 + 4) * 5) + 1 -- # 36 #| ((7) * 5) + 1 == 35 + 1
 -- #C# Length of array operator
 
 -- # |-------------------------------------------------------------
--- #T# the length of array operator is the hash # operator
+-- #T# the hash # operator is used to find the length or size of an array
 str1 = 'chars6'
 int1 = #str1 -- # 6
 

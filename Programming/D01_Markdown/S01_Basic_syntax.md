@@ -338,7 +338,7 @@ second_cell_string1 |
 -------------------------
  Center     Right Left
 -------- -------- -------
- text1      text2 text3
+ text1\     text2 text3
  text1
 
  textA      textB textC
