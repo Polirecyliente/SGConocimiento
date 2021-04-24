@@ -13,10 +13,6 @@ AST: Abstract Syntax Tree, a tree diagram to show the syntactic elements in a gi
 
 DOM: Document Object Model, in a markup language, the DOM is the set of tags and their hierarchical structure.
 
-GPL: General Purpose Language, a programming language capable of creating programs of any kind.
-
-DSL: Domain Specific Language, a language used with a particular purpose, that doesn't work for creating programs of any kind.
-
 SQL: Structured Query Language, a DSL used to query and manage databases.
 
 SGML: Standard Generalized Markup Language, a standard to define markup languages. For example, HTML and XML comply with this standard.

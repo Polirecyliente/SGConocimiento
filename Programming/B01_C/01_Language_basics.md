@@ -196,7 +196,7 @@ A variable is created by writing the keyword of its data type and then the name 
 data_type1 var1;
 ```
 
-`var1` is the name of the variable, and `data_type1` is a keyword of the data type of `var1`.
+`var1` is the name of the variable, and `data_type1` is a keyword of the data type of `var1`. This syntax is for the declaration of `var1`.
 
 Several variables of the same data type can be declared in a single statement, separating the variables by comma.
 
@@ -210,7 +210,26 @@ The equal sign '=' is used as an assignment operator to assign a value to a vari
 data_type1 var1 = value1;
 ```
 
-`value1` must be of the same data type as `data_type1`, otherwise it's undefined behavior.
+`value1` must be of the same data type as `data_type1`, otherwise it's undefined behavior. This syntax is for the definition of `var1`.
+
+Several variables of the same data type can be defined in a single statement, separating the variables by comma.
+
+``` {.syntax}
+data_type1 var1 = value1, var2 = value2, varN = valueN;
+```
+
+Declarations and definitions in a single statement can be mixed.
+
+``` {.syntax}
+data_type1 var1, var2 = value2;
+```
+
+`var1` can be declared on one statement, and defined on another statement.
+
+``` {.syntax}
+data_type1 var1;
+var1 = value1;
+```
 
 ## Numeric data types
 
@@ -365,29 +384,52 @@ In the following tables, the output is the output of printing the variable in th
 
 ## Constants
 
-<!--
-//T// const keyword
-    const int LENGTH2 = 5;
--->
+Constants can be created with the `const` keyword placed before the data type in a variable declaration or definition.
+
+``` {.syntax}
+const data_type1 CONSTANT1 = value1;
+```
+
+The name of constants is written in uppercase by convention. For example:
+
+``` C
+const int NUMBER = 8;
+```
 
 ## Composite types
 
 # OPERATORS
 
-<!--
-c = a + b;
--->
+The addition operator is the plus sign `+`
 
-# Control flow
+``` {.syntax}
+var1 = var2 + var3;
+```
 
-# Functions
+For example:
 
-<!--
-//T// return keyword
-	return 0;
--->
+``` C
+int var1, var2 = 5, var3 = 3;
+var1 = var2 + var3;
+```
 
-# Packages
+Printing `var1` outputs:
+
+``` {.output}
+8
+```
+
+# CONTROL FLOW
+
+# FUNCTIONS
+
+The `return` keyword must be followed by the return value of the function.
+
+``` {.syntax}
+return return_value1;
+```
+
+# PACKAGES
 
 # HEADERS
 
@@ -419,7 +461,18 @@ The `#define` directive is used to define macros. Macros are code that replaces 
 > This macro defines `FIRST_NUMBER` as a variable, but given that macros can't be changed in the code, `FIRST_NUMBER` is effectively a constant.
 :::
 
-<!-- line continuation for defined string variables -->
+To create a macro as a variable, that holds a multiline string, use the following syntax.
+
+``` {.C .syntax}
+#define STRING1 "string on line1"\
+                " continuation on line2"
+```
+
+Printing `STRING1` outputs:
+
+``` {.output}
+string on line1 continuation on line2
+```
 
 ::: block
 > **Macro as a function**
@@ -437,26 +490,36 @@ The `#define` directive is used to define macros. Macros are code that replaces 
 
 The `#include` directive is used to include headers. Headers are files that declare or define variables, functions, and macros, so that they can be used in C source code. This is useful for example, to include functions defined in other files, so that it is not necessary to create those functions from scratch.
 
-# Error and exception handling
+# ERROR AND EXCEPTION HANDLING
 
-# Object oriented programming
+# OBJECT ORIENTED PROGRAMMING
 
-# Command line interface
+# COMMAND LINE INTERFACE
 
-# Debugging
+# DEBBUGING
 
-# System calls
+# SYSTEM CALLS
 
-# Building a project
+# BUILDING A PROJECT
 
-# Standard library
+# STANDARD LIBRARY
+
+## The `printf` function
+
+The `printf` function deserves its own section in the standard library. This function is used as a basic interaction between the programmer and the programs being created by them in C. It is used as a basic debugging function, to print the value of a variable in the program, and check if the variable has an expected value or not.
+
+After creating and debugging a program, the amount of calls to the `printf` function may be reduced, compared to the amount of calls during development. This depends on the type of program being made. A program that uses the GUI of the operating system, could need the `printf` function less than a program that uses the CLI of the operating system. In theory, a purely GUI program would never need to call the `printf` function, but in practice, most GUI programs can be started from the CLI, and GUI programs print to standard output about their execution.
+
+It may happen that a program does not call `printf` directly, but rather calls a modified `printf` function.
+
+
 
 <!--
-//T// printf, format specifiers and modifiers %d
+//T// format specifiers and modifiers %d
     printf("Hello World!\nNum:%d\n",c);
 -->
 
-# Bibliography
+# BIBLIOGRAPHY
 
 ---
 nocite: |

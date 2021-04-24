@@ -47,6 +47,8 @@ def func1 (param1, param2 = 5, *varargs_tuple1):
 # SYNTAX return_value1 = func1(param1 = arg1, arg2, arg3, arg4)
 #T# as in the definition, arg1 is obligatory and is a keyword argument (kwarg), arg2 is optional and overrides the default value, arg3, and arg4 are varargs, return_value1 is a variable that stores the return value from func1
 
+#T# varargs stands for variable arguments
+
 arg1 = 6
 ret1 = func1(arg1, 5, 3) # 20.0
 # |-------------------------------------------------------------

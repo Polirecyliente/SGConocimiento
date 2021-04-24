@@ -235,7 +235,7 @@ An operating system can be divided into a few main parts: the **kernel**, the **
 **Shell**
   : An interpreter that can receive input from the keyboard, to receive instructions from the user. Instructions in a shell are called **commands**. The shell sends the commands to the **kernel**, to have them executed by the computer.
 \\\
-  The shell can also be called 'terminal', because shells are commonly designed to look like terminal screens.
+  The shell can also be called 'terminal', because shells are commonly designed to look like terminal screens. The shell is also called the Command Line Interface (acronymized as CLI), because the shell acts as an interface between the computer and the user, in which the user can input commands in the shell, and like any interpreter, one command is inputted per line.
 :::
 
 ::: term
@@ -295,13 +295,18 @@ This diagram shows the interactions between the operating system parts and the h
   : Software whose source code is open to be obtained by any person at no monetary charge.
 :::
 
+::: term
+**Verbose output**
+  : In a program that uses the CLI of the operating system, the program can output detailed information about its execution. This is called verbose output, because the program prints more information than normal.
+:::
+
 ## Features of a programming language
 
 Programming languages have several features, like:
-  
+
   - **Syntax**, the way to write all of the following points.
   - **Data types** to hold data in memory and do calculations with it.
-  - **Operators** to operate over data types.
+  - **Operators** to operate over data type values.
   - **Control flow structures** to skip or repeat code.
   - **Functions** and **subroutines** to reuse pieces of code.
   - **Packages** to give hierarchy to the code and organize it.
@@ -392,9 +397,11 @@ Programming languages have several features, like:
 
 ::: term
 **Operator**
-  : Character used to operate over variables and over data types.
+  : Character used to operate over variables and over data type values. Operators have operands, which are the variables being operated with. Operators return a result of the operation.
 \\\
   In most programming languages, the addition operator is `+`, and the assignment operator is `=`, so two variables could be added as `var1 = var2 + var3`.
+\\\
+  Operators are functions in practice, because the take arguments which are the operands, and they return a value which is the result of the operation. For example, the operation `A + B` could be written as a function `add(A, B)`.
 :::
 
 ::: term
@@ -408,6 +415,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Scope**
+  : The possibility to access and change variables. In many programming languages, variables that are created inside a block of code are local to the block of code, so their scope is the block of code, which means that those variables can only be accessed and changed from within the block of code.
+:::
+
+::: term
 **Control flow structures**
   : Code that allows controlling the flow of execution of code. The normal flow of execution is execute line by line in order, from the first line of code to the last line of code.
 \\\
@@ -418,18 +430,11 @@ Programming languages have several features, like:
 **Function**
   : Code enveloped in a variable. In some programming languages, functions are treated as variables (functions that are variables are called 'first class citizen' functions).
 \\\
-  Functions are like variables that point to code, instead of pointing to data. To reuse the code being pointed by a function, the function is called. When a function is called, the code that the function points to gets executed.
+  Functions are like variables that point to code, instead of pointing to data. To reuse the code being pointed by a function, the function is called (this is called a 'function call'). When a function is called, the code that the function points to gets executed.
 \\\
-  Functions can receive arguments and return a return value. Arguments are varibles or data types that the function can use inside the code it envelops. The return value is a variable or data type that the function can return to the place where it was called, meaning that the return value can be hold in a variable, and used as a variable without calling the function again.
+  Functions are created with parameters and a return value. Parameters are variables or data types values that the function can use inside the code it envelops. The return value is a variable or data type value that the function returns to the place where it is called, meaning that the return value can be hold in a variable, and used as a variable without calling the function again.
 \\\
-  A function `func1` has a **function signature**. The signature of the function is `type1 func1(arg1, arg2)`, which is the data type of the return value, the name of the function, and its arguments. Most programming languages enclose the arguments in parentheses.
-:::
-
-::: term
-**Subroutine**
-  : A function that takes no arguments and returns no return value, so a subroutine is a function that only envelops code without taking input in its arguments nor giving output in its return value.
-\\\
-  This is useful to abbreviate lines of code that are repeated multiple times. Placing the repeating lines of code in a subroutine makes the code easier to read and maintain.
+  Function calls are passed arguments, one per paramenter, so arguments mean the same as parameters, but parameters are the variables used in the function definition, while arguments are the variables used in a given function call. A function can be called with different sets of arguments. The saying 'passing arguments to a function' means doing a function call with those arguments.
 :::
 
 ::: term
@@ -465,7 +470,79 @@ Programming languages have several features, like:
   Arrays are stored in memory, so accessing an array out of bounds means accessing other memory in the program that is outside the array. This is undefined behavior, because the programming language can't predict what would be the result of that array access out of bounds.
 :::
 
+### Features of functions
+
+Functions can come with several different features, depending on how they are written. Many features are not supported by all programming languages.
+
+::: term
+**Function signature**
+  : In a given function `func1`, the signature of the function is `type1 func1(arg1, arg2)`, which is the data type of the return value, the name of the function, and its arguments. Most programming languages enclose the arguments in parentheses.
+\\\
+  `type1 func1(arg1, arg2)` is the function signature of the function `func1`, because it serves to identify `func1` and differentiate it from other functions, even from other functions that may have the same name but different arguments or different data type of the return value.
+:::
+
+::: term
+**Subroutine**
+  : A function that takes no arguments and returns no return value, so a subroutine is a function that only envelops code without taking input in its arguments nor giving output in its return value.
+\\\
+  This is useful, for example, to abbreviate lines of code that are repeated multiple times. Placing the repeating lines of code in a subroutine makes the code easier to read and maintain.
+:::
+
+::: term
+**Function overloading**
+  : The process of creating functions with the same name but different function signatures.
+:::
+
+::: term
+**Function overriding**
+  : In object oriented languages, function overriding is the process of inheriting methods with the same name and signature as the methods from the parent.
+:::
+
 ### Types of programming languages
+
+::: term
+**Programming paradigms**
+  : Styles with which different programming languages have been designed. Many different paradigms can be mixed and used with each other to design a programming language.
+:::
+
+::: term
+**GPL**
+  : GPL stands for General Purpose Language, which is a programming language capable of creating programs of any kind, from operating systems, CLI programs, GUI programs, to simple programs that add two numbers for example.
+:::
+
+::: term
+**DSL**
+  : DSL stands for Domain Specific Language, which is a language designed for specific purposes, for example a programming language to prove mathematical theorems, or a language to manage databases, or a language to create slideshow presentations, etcetera.
+:::
+
+::: term
+**Imperative language**
+  : A programming language designed on writing statements to be executed one after the other. This includes the possibility of writing statements to jump to previous or future statements (this is called a 'GOTO' statement). The 'GOTO' statement is considered the main characteristic of imperative languages, because derived paradigms resign the use of the 'GOTO' statement.
+:::
+
+::: term
+**Declarative language**
+  : A programming language designed on writing the intended outcome of the program. This is fairly aligned with the concept of a DSL, and so many DSL are also declarative languages. For example, a language to prove theorems, it's a DSL in which the inteded outcome is written (the intended outcome can be to prove a theorem). Not every declarative language is a DSL and also not every DSL has to be declarative.
+\\\
+  A programming language can have declarative features and imperative features. A given feature can be written in an imperative manner and also in a declarative manner, in the same programming language. What matters is that declarative code shows the intended outcome, while imperative code shows the step by step statements that lead to that outcome.
+\\\
+  This difference between imperative and declarative implies an overlap between the two concepts. A set of step by step statements can be considered to show the intended outcome. A single line with the intended outcome can be considered as a single step statement. In this sense imperative and declarative are just different ways to perceive and interpret code, in which imperative means steps without caring to show intended outcome, and declarative means steps that directly show the intended outcome.
+:::
+
+::: term
+**Structured language**
+  : An imperative language in which the use of 'GOTO' statements is forbidden. Control flow structures are used instead of 'GOTO', to make the execution jump to a different line of code.
+:::
+
+::: term
+**Object oriented language**
+  : An imperative language in which objects can be created. Objects are composite data types that can store both variables (here called attributes) and functions (here called methods).
+:::
+
+::: term
+**Functional programming language**
+  : A declarative language in which functions are forbidden from changing variables outside their scope, and they have to always produce the same return value given the same arguments.
+:::
 
 ::: term
 **Statically typed language**
@@ -474,7 +551,7 @@ Programming languages have several features, like:
 
 ::: term
 **Dynamically typed language**
-  : A programming language in which variables don't have a data type, so they can have any data type. The data type of the variable can be changed after defined.
+  : A programming language in which variables are not defined with a given data type, so they can have any data type. The data type of the variable can be changed after defined.
 :::
 
 # BINARY, OCTAL, AND HEXADECIMAL NUMBERS
