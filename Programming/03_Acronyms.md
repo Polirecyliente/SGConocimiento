@@ -3,6 +3,8 @@ title: ACRONYMS
 toc-title: Table of Contents
 ---
 
+<!-- #T# TODO Languages, TPTP, Vampire, Geometry_book1, SVG -->
+
 # INTRODUCTION
 
 This document contains acronyms related to computer programming.

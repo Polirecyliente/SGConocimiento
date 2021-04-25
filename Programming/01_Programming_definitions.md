@@ -536,7 +536,7 @@ Functions can come with several different features, depending on how they are wr
 
 ::: term
 **Object oriented language**
-  : An imperative language in which objects can be created. Objects are composite data types that can store both variables (here called attributes) and functions (here called methods).
+  : An structured language in which objects can be created. Objects are composite data types that can store both variables (here called attributes) and functions (here called methods).
 :::
 
 ::: term
