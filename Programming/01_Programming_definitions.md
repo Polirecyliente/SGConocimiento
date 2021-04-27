@@ -43,6 +43,16 @@ The directory that contains this file is called 'Programming', in this context t
 :::
 
 ::: term
+**Read**
+  : In this context, to read is the act of doing an input operation.
+:::
+
+::: term
+**Write**
+  : In this context, to write is the act of doing an output operation
+:::
+
+::: term
 **Computer instruction**
   : The antecedent of a **computation**. An instruction instructs the computer to carry out a given computation.
 :::
@@ -64,7 +74,7 @@ The directory that contains this file is called 'Programming', in this context t
 
 ::: term
 **Binary code**
-  : A way to write **computer programs**. Binary code uses only two symbols: "off" and "on", or $0$ and $1$.
+  : A way to write **computer programs**. Binary code uses only two symbols: "off" and "on", or 0 and 1.
 :::
 
 ::: term
@@ -339,6 +349,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Type casting**
+  : Converting the data type of a variable, from its data type to another data type.
+:::
+
+::: term
 **Character data type**
   : A data type to hold a single character. A character is any single letter, number, symbol, whitespace that can be written in a computer.
 :::
@@ -405,6 +420,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Expression**
+  : A combination of variables and operators that is syntactically correct. For example, in most programming languages `var1 + var2 - var3` is an expression, but `var1 var2 +` is not (in other languages `var1 var2 +` could be a way to write the sum of `var1` and `var2`).
+:::
+
+::: term
 **Statement**
   : The minimum amount of code that is a complete instruction. Statements in the source code are converted into instructions in the binary code.
 :::
@@ -432,9 +452,11 @@ Programming languages have several features, like:
 \\\
   Functions are like variables that point to code, instead of pointing to data. To reuse the code being pointed by a function, the function is called (this is called a 'function call'). When a function is called, the code that the function points to gets executed.
 \\\
-  Functions are created with parameters and a return value. Parameters are variables or data types values that the function can use inside the code it envelops. The return value is a variable or data type value that the function returns to the place where it is called, meaning that the return value can be hold in a variable, and used as a variable without calling the function again.
+  The syntax to write a function in a programming language could be like this: `func1(param1, param2){ statements1; return value1 }`.
 \\\
-  Function calls are passed arguments, one per paramenter, so arguments mean the same as parameters, but parameters are the variables used in the function definition, while arguments are the variables used in a given function call. A function can be called with different sets of arguments. The saying 'passing arguments to a function' means doing a function call with those arguments.
+  Functions are created with parameters, statements, and a return value. Parameters, `param1` and `param2` in the example, are variables or data type values that the function can use in `statements1`. The return value, `value1` in the example, is a variable or data type value that the function returns when called (see below).
+\\\
+  When doing a function call, the parameters are now called arguments, for example, `var1 = func1(arg1, arg2)`, this calls `func1` with arguments `arg1` and `arg2`, the return value is hold in `var1`. The saying 'passing the arguments to a function' means doing a function call with those arguments.
 :::
 
 ::: term
@@ -556,17 +578,17 @@ Functions can come with several different features, depending on how they are wr
 
 # BINARY, OCTAL, AND HEXADECIMAL NUMBERS
 
-Binary numbers are the numbers that arise from creating a place value system with only two symbols for the numbers. Those two symbols can be anything, but they are commonly $0$ and $1$.
+Binary numbers are the numbers that arise from creating a place value system with only two symbols for the numbers. Those two symbols can be anything, but they are commonly 0 and 1.
 
-By using the place value system logic to get a sequence of consecutive numbers, the first binary numbers are: $0$, $1$, $10$, $11$, $100$, $101$, $110$, etcetera.
+By using the place value system logic to get a sequence of consecutive numbers, the first binary numbers are: 0, 1, 10, 11, 100, 101, 110, etcetera.
 
-Binary numbers are used by computers for storing or holding data, and for doing computations. In a computer, data is composed of binary numbers, for example the number $110110000100$ could represent and orange tone color, this orange color would be stored as data with the number $110110000100$.
+Binary numbers are used by computers for storing or holding data, and for giving instructions to the CPU. In a computer, data is composed of binary numbers, for example the number 110110000100 could represent and orange tone color, this orange color would be stored as data with the number 110110000100.
 
-The computations that a computer can do are also binary numbers, for example the number $0100$ could mean the computation of adding two numbers. The number $0100$ is sent as a signal to the CPU and the CPU then adds two given numbers.
+The instructions that a computer can execute are also binary numbers, for example the number 0100 could mean the instruction of adding two numbers. The number 0100 is sent as a signal to the CPU and the CPU then adds two given numbers.
 
 Octal numbers and hexadecimal numbers are used as ways to make binary numbers more human readable. Decimal numbers are not used because converting binary numbers to decimal numbers (and vice versa) is not an straightforward process, whereas converting binary numbers to octal or hexadecimal numbers (and vice versa) is straightforward.
 
-Octal numbers use eight symbols to create numbers, the symbols are: $0$, $1$, $2$, $3$, $4$, $5$, $6$, and $7$. One octal digit is always equivalent to three binary digits, so two octal digits are equivalent to six binary digits, and so on. The following table shows the equivalencies for one octal digit to three binary digits.
+Octal numbers use eight symbols to create numbers, the symbols are: 0, 1, 2, 3, 4, 5, 6, and 7. One octal digit is always equivalent to three binary digits, so two octal digits are equivalent to six binary digits, and so on. The following table shows the equivalencies for one octal digit to three binary digits.
 
 : Octal digit to binary equivalencies
 
@@ -590,52 +612,113 @@ Octal numbers use eight symbols to create numbers, the symbols are: $0$, $1$, $2
 |   7   |   111   |
 +-------+---------+
 
-An octal number is converted to a binary number by directly replacing each octal digit for its equivalent three binary digits. For example the octal number $374$ has the same value as the binary number $011 111 100$ (spaces are added for clarity, the binary number itself is $011111100$).
+An octal number is converted to a binary number by directly replacing each octal digit for its equivalent three binary digits. For example the octal number 374 has the same value as the binary number 011 111 100 (spaces are added for clarity, the binary number itself is 011111100).
 
-A binary number is converted to an octal number by directly replacing each group of three binary digits for its equivalent octal digit. The groups of three binary digits are created from right to left. If there are not enough digits to form a group of three, then the group is filled with zeros to the left. For example the binary number $10100$, in groups of three is the same as $010 100$, note that one $0$ had to be added to the left of the number, to form a group of three digits. The number $010 100$ is the octal number $24$.
+A binary number is converted to an octal number by directly replacing each group of three binary digits for its equivalent octal digit. The groups of three binary digits are created from right to left. If there are not enough digits to form a group of three, then the group is filled with zeros to the left. For example the binary number 10100, in groups of three is the same as 010 100, note that one 0 had to be added to the left of the number, to form a group of three digits. The number 010 100 is the octal number 24.
 
 The conversion between hexadecimal and binary numbers follows the same process.
 
-Hexadecimal numbers use sixteen symbols to create numbers, the symbols are: $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$, $9$, $A$, $B$, $C$, $D$, $E$, and $F$. One hexadecimal digit is always equivalent to four binary digits, so two hexadecimal digits are equivalent to eight binary digits, and so on. The following table shows the equivalencies for one hexadecimal digit to four binary digits.
+Hexadecimal numbers use sixteen symbols to create numbers, the symbols are: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. One hexadecimal digit is always equivalent to four binary digits, so two hexadecimal digits are equivalent to eight binary digits, and so on. The following table shows the equivalencies for one hexadecimal digit to four binary digits.
 
 : Hexadecimal digit to binary equivalencies
 
 +-------------+--------+
 | Hexadecimal | Binary |
 +:===========:+:======:+
-|      0      |  0000  |
+|    0        |  0000  |
 +-------------+--------+
-|      1      |  0001  |
+|    1        |  0001  |
 +-------------+--------+
-|      2      |  0010  |
+|    2        |  0010  |
 +-------------+--------+
-|      3      |  0011  |
+|    3        |  0011  |
 +-------------+--------+
-|      4      |  0100  |
+|    4        |  0100  |
 +-------------+--------+
-|      5      |  0101  |
+|    5        |  0101  |
 +-------------+--------+
-|      6      |  0110  |
+|    6        |  0110  |
 +-------------+--------+
-|      7      |  0111  |
+|    7        |  0111  |
 +-------------+--------+
-|      8      |  1000  |
+|    8        |  1000  |
 +-------------+--------+
-|      9      |  1001  |
+|    9        |  1001  |
 +-------------+--------+
-|      A      |  1010  |
+|    A        |  1010  |
 +-------------+--------+
-|      B      |  1011  |
+|    B        |  1011  |
 +-------------+--------+
-|      C      |  1100  |
+|    C        |  1100  |
 +-------------+--------+
-|      D      |  1101  |
+|    D        |  1101  |
 +-------------+--------+
-|      E      |  1110  |
+|    E        |  1110  |
 +-------------+--------+
-|      F      |  1111  |
+|    F        |  1111  |
 +-------------+--------+
 
-An hexadecimal number is converted to a binary number by directly replacing each hexadecimal digit for its equivalent four binary digits. For example the hexadecimal number $B9$ has the same value as the binary number $1011 1001$ (spaces are added for clarity, the binary number itself is $10111001$).
+An hexadecimal number is converted to a binary number by directly replacing each hexadecimal digit for its equivalent four binary digits. For example the hexadecimal number B9 has the same value as the binary number 1011 1001 (spaces are added for clarity, the binary number itself is 10111001).
 
-A binary number is converted to a hexadecimal number by directly replacing each group of four binary digits for its equivalent hexadecimal digit. The groups of four binary digits are created from right to left. If there are not enough digits to form a group of four, then the group is filled with zeros to the left. For example the binary number $10100$, in groups of four is the same as $0001 0100$, note that three $0$ had to be added to the left of the number, to form a group of four digits. The number $0001 0100$ is the hexadecimal number $14$.
+A binary number is converted to a hexadecimal number by directly replacing each group of four binary digits for its equivalent hexadecimal digit. The groups of four binary digits are created from right to left. If there are not enough digits to form a group of four, then the group is filled with zeros to the left. For example the binary number 10100, in groups of four is the same as 0001 0100, note that three 0 had to be added to the left of the number, to form a group of four digits. The number 0001 0100 is the hexadecimal number 14.
+
+## Measuring binary number sizes in bytes
+
+In computers, data and instructions are represented in binary numbers, and given that memory and storage have limited capacity to hold and store data and instructions, and the CPU has a limited instruction size, it's necessary to measure the sizes of binary numbers.
+
+::: term
+**Bit**
+  : The smallest possible binary number size, so it is the size of a single binary number, be it 0 or 1. For example, the number 01001 has 5 bits. The amount of bits of a binary number is the same as the amount of its digits.
+:::
+
+::: term
+**Byte**
+  : A binary number of 8 bits. If a binary number has less than 8 digits, it can be represented as a byte by placing zeros to the left of the number until reaching 8 bits. For example the number 10010 can be represented as a byte by placing three zeros to the left: 00010010.
+\\\
+  Every byte can be written as two hexadecimal digits, because one hexadecimal digit is equivalent to four binary digits. For example the binary number 00010010 is the hexadecimal number 12.
+\\\
+  Bytes can also be called 'octets', because they are made of eight bits (octo means eight in Latin).
+:::
+
+::: term
+**Kilobyte**
+  : 1000 bytes.
+:::
+
+::: term
+**Kibibyte**
+  : 2^10^ bytes, which is 1024 bytes.
+:::
+
+::: term
+**Megabyte**
+  : 1000 Kilobytes, the same as 1 000 000 bytes.
+:::
+
+::: term
+**Mebibyte**
+  : 2^10^ Kibibytes, which is 1024 Kibibytes, the same as 1 048 576 bytes.
+:::
+
+::: term
+**Gigabyte**
+  : 1000 Megabytes, the same as 1 000 000 000 bytes.
+:::
+
+::: term
+**Gibibyte**
+  : 2^10^ Mebibytes, which is 1024 Mebibytes, the same as 1 073 742 000 bytes.
+:::
+
+::: term
+**Terabyte**
+  : 1000 Gigabytes, the same as 1 000 000 000 000 bytes.
+:::
+
+::: term
+**Tebibyte**
+  : 2^10^ Gibibytes, which is 1024 Gibibytes, the same as 1 099 511 627 776 bytes.
+:::
+
+## Character encoding
+

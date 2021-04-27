@@ -148,7 +148,7 @@ int main()
 
 Compiling and executing this program in a shell outputs:
 
-``` {.output}
+``` output
 string1
 ```
 
@@ -166,7 +166,7 @@ int main()
 
 Compiling and executing this program in a shell outputs:
 
-``` {.output}
+``` output
 5
 ```
 
@@ -209,7 +209,7 @@ C is a statically typed language, so to create a variable, the data type of the 
 
 A variable is created by writing the keyword of its data type and then the name of the variable.
 
-``` {.syntax}
+``` {.C .syntax}
 data_type1 var1;
 ```
 
@@ -220,7 +220,7 @@ data_type1 var1;
 
 Several variables of the same data type can be declared in a single statement, separating the variables by comma.
 
-``` {.syntax}
+``` {.C .syntax}
 data_type1 var1, var2, varN;
 ```
 
@@ -229,7 +229,7 @@ data_type1 var1, var2, varN;
 
 The equal sign '=' is used as an assignment operator to assign a value to a variable.
 
-``` {.syntax}
+``` {.C .syntax}
 data_type1 var1 = value1;
 ```
 
@@ -240,7 +240,7 @@ data_type1 var1 = value1;
 
 Several variables of the same data type can be defined in a single statement, separating the variables by comma.
 
-``` {.syntax}
+``` {.C .syntax}
 data_type1 var1 = value1, var2 = value2, varN = valueN;
 ```
 
@@ -249,7 +249,7 @@ data_type1 var1 = value1, var2 = value2, varN = valueN;
 
 Declarations and definitions in a single statement can be mixed.
 
-``` {.syntax}
+``` {.C .syntax}
 data_type1 var1, var2 = value2;
 ```
 
@@ -258,10 +258,15 @@ data_type1 var1, var2 = value2;
 
 `var1` can be declared on one statement, and defined on another statement.
 
-``` {.syntax}
+``` {.C .syntax}
 data_type1 var1;
 var1 = value1;
 ```
+
+
+----
+
+The `void` keyword represents the lack of data type, it's used in functions and in type casting.
 
 ## Numeric data types
 
@@ -370,7 +375,7 @@ float var1 = 0x5.1p0;
 
 Printing `var1` outputs:
 
-``` {.output}
+``` output
 5.062500
 ```
 
@@ -382,7 +387,7 @@ float var1 = 0x5.1p4;
 
 Printing `var1` outputs:
 
-``` {.output}
+``` output
 81.000000
 ```
 
@@ -405,6 +410,41 @@ For example:
 ``` C
 char var1 = 'n';
 ```
+
+
+----
+
+The `char` data type is an integer, so integers can be used to create characters, for example:
+
+``` C
+char var1 = 65;
+```
+
+Printing `var1` as a character outputs:
+
+``` output
+A
+```
+
+
+----
+
+Not any arbitrary character can be created with the `char` data type, only the first 127 ASCII characters.
+
+``` C
+char var1 = 128;
+```
+
+Printing `var1` as a character outputs:
+
+``` output
+�
+```
+
+
+----
+
+A `char` data type can be made unsigned, so that it holds values as big as 255, but this does not mean that up to 255 characters are supported, only the same first 127 ASCII characters are supported with the `unsigned char` data type.
 
 
 ----
@@ -448,7 +488,7 @@ In the following tables, the output is the output of printing the variable in th
 
 Constants can be created with the `const` keyword placed before the data type in a variable declaration or definition.
 
-``` {.syntax}
+``` {.C .syntax}
 const data_type1 CONSTANT1 = value1;
 ```
 
@@ -460,11 +500,43 @@ const int NUMBER = 8;
 
 ## Composite types
 
+## Type casting
+
+Type casting is done with the following syntax
+
+``` {.C .syntax}
+(data_type1) expression1;
+```
+
+`expression1` can be an expression or variable.
+
+For example
+
+``` C
+int var1 = 5, var2 = 3;
+double var3;
+var3 = (double) var1/var2;
+```
+
+Printing `var3` outputs:
+
+``` output
+1.666667
+```
+
+Without the `(double)` type casting, printing `var3` outputs:
+
+``` output
+1.000000
+```
+
+Casting to `(double)` is necessary in this case to let the operation `var1/var2` result in a floating point number.
+
 # OPERATORS
 
 The addition operator is the plus sign `+`
 
-``` {.syntax}
+``` {.C .syntax}
 var1 = var2 + var3;
 ```
 
@@ -477,7 +549,7 @@ var1 = var2 + var3;
 
 Printing `var1` outputs:
 
-``` {.output}
+``` output
 8
 ```
 
@@ -485,9 +557,45 @@ Printing `var1` outputs:
 
 # FUNCTIONS
 
+The `void` keyword can be used in functions. Using the `void` keyword as the data type of the return value of a function, means that the function returns nothing.
+
+``` {.C .syntax}
+void func1()
+{
+    statements1;
+}
+```
+
+Note that `func1` has no return statement.
+
+
+----
+
+The `void` keyword is used to make a function take no arguments.
+
+``` {.C .syntax}
+data_type1 func1(void)
+{
+    statements1;
+    return ret_val1;
+}
+```
+
+For example:
+
+``` C
+int func1(void)
+{
+    return 5;
+}
+```
+
+
+----
+
 The `return` keyword must be followed by the return value of the function.
 
-``` {.syntax}
+``` {.C .syntax}
 return return_value1;
 ```
 
@@ -533,14 +641,14 @@ This macro defines `FIRST_NUMBER` as a variable, but given that macros can't be 
 To create a macro as a variable, that holds a multiline string, use the following syntax.
 
 ``` {.C .syntax}
-#define STRING1 "string on line1"\
-                " continuation on line2"
+#define STRING1 "string starts"\
+                " and continues"
 ```
 
 Printing `STRING1` outputs:
 
-``` {.output}
-string on line1 continuation on line2
+``` output
+string starts and continues
 ```
 
 
@@ -652,12 +760,15 @@ As can be seen, the format modifiers and the specifier at the end are written to
 
 : Format specifiers
 
+  ------------------------------------------------------------
    Format specifier           Example               Output
   ------------------ -------------------------- --------------
          `%d`           `int var1 = 5;`{.C}      `5`{.output}
-                      `print("%d", var1);`{.C}  
+                      `print("%d", var1);`{.C}
 
-In the format specifier `%d`, the 'd' stands for digit. It's used to format variables of data type `ìnt` as regular digits.
+  ------------------------------------------------------------
+
+In the format specifier `%d`, the 'd' stands for digit. It's used to format variables of data type `int` as regular digits.
 
 # BIBLIOGRAPHY
 

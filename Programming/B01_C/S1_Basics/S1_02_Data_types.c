@@ -1,16 +1,7 @@
-/*
-    Data types
-*/
-
 #include <stdio.h>
-
-//T// void keyword
-void fvoid1(){}
 
 int main ()
 {
-//T// char, it can be unsigned but defaults to signed
-    char c1 = 128;
 
 //T// unsigned modifier
     unsigned char c2 = 128;
