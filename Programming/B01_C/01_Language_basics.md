@@ -357,7 +357,7 @@ The `short` keyword modifies an `int` data type, making a `short int` data type 
 short int var1 = value1;
 ```
 
-Given that the `short` keyword modifies the `int` keyword, the `int` keyword can be removed.
+Using the `short` keyword alone, means the same as `short int`.
 
 ``` {.C .syntax}
 short var1 = value1;
@@ -369,7 +369,7 @@ The `long` keyword modifies an `int` data type, making a `long int` data type ha
 long int var1 = value1;
 ```
 
-Given that the `long` keyword modifies the `int` keyword, the `int` keyword can be removed.
+Using the `long` keyword alone, means the same as `long int`.
 
 ``` {.C .syntax}
 long var1 = value1;
@@ -381,7 +381,7 @@ The `long long` keyword modifies an `int` data type, making a `long long int` da
 long long var1 = value1;
 ```
 
-Given that the `long long` keyword modifies the `int` keyword, the `int` keyword can be removed.
+Using the `long long` keyword alone, means the same as `long long int`.
 
 ``` {.C .syntax}
 long long var1 = value1;
@@ -389,22 +389,61 @@ long long var1 = value1;
 
 : Integer data types and their minimum memory allocations
 
-   Data type     Minimum memory
---------------- ----------------
-  short int         2 bytes
-     int            2 bytes
-  long int          4 bytes
- long long int      8 bytes
+     Data type     Minimum memory
+  --------------- ----------------
+     short int        2 bytes
+        int           2 bytes
+     long int         4 bytes
+   long long int      8 bytes
 
 As the table shows, each data type has a minimum memory allocation, but there is no maximum, so a compiler could allocate 8 bytes for all data types and that would be valid C.
 
 The memory allocation of each of these data types is less than or equal the memory allocation of the next bigger data type. This means that `sizeof(short int)` $\le$ `sizeof(int)` $\le$ `sizeof(long int)` $\le$ `sizeof(long long int)`.
 
+
+----
+
+The `float` keyword is used to create variables that hold floating point numbers.
+
+``` {.C .syntax}
+float var1 = value1;
+```
+
+For example:
+
+``` C
+float var1 = 5.18;
+```
+
+
+----
+
+The `double` keyword is used like the `float` keyword, but a variable of data type `double` is allocated in double the amount of memory of a `float` data type.
+
+``` {.C .syntax}
+double var1 = value1;
+```
+
+For example:
+
+``` C
+double var1 = 50000.9815;
+```
+
+
+----
+
+The `long` keyword can be used to modify the `double` keyword. A `long double` data type is allocated more (or equal) memory than a `double` data type.
+
+``` {.C .syntax}
+long double var1 = value1;
+```
+
 ### Suffixes for numeric data types
 
 Numbers can have suffixes.
 
-There are suffixes that act as keywords, for example the `u` or `U` suffix is used to make an unsigned number.
+There are suffixes that act as keywords, for example the `u` or `U` suffix are used to make an unsigned number.
 
 ``` {.C .syntax}
 int var1 = num1u;

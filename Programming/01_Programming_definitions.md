@@ -406,7 +406,7 @@ Programming languages have several features, like:
 
 ::: term
 **Float data type**
-  : A data type to hold floating point numbers, which are decimal numbers. In many programming languages, floats are created by writing the number directly, for example 14.8. Some programming languages also have a 'double' data type, which is a float data type that allocates double the memory for the float number.
+  : A data type to hold floating point numbers, which are numbers with decimals. In many programming languages, floats are created by writing the number directly, for example 14.8. Some programming languages also have a 'double' data type, which is a float data type that allocates double the memory for the float number.
 :::
 
 ::: term
