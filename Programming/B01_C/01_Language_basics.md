@@ -266,11 +266,23 @@ var1 = value1;
 
 ----
 
+In C, each data type is allocated a given amount of bytes in memory, during the program execution. To know this amount of bytes for a given data type, the `sizeof` function is used.
+
+``` {.C .syntax}
+int var1;
+var1 = sizeof(data_type1);
+```
+
+`var1` holds the amount of bytes allocated to a variable of data type data_type1.
+
+
+----
+
 The `void` keyword represents the lack of data type, it's used in functions and in type casting.
 
 ## Numeric data types
 
-The `int` keyword is used to create variables of integer data type.
+The `int` keyword is used to create variables of integer data type. An `int` is a data type that has at least 2 bytes of memory allocated to it. An `int` can have 4 bytes of memory allocated to it by the compiler.
 
 ``` {.C .syntax}
 int var1 = num1;
@@ -335,6 +347,58 @@ The `signed` keyword makes the number signed.
 ``` C
 signed int var1 = -20000
 ```
+
+
+----
+
+The `short` keyword modifies an `int` data type, making a `short int` data type have less (or equal) memory allocated than an `int` data type. See below for details.
+
+``` {.C .syntax}
+short int var1 = value1;
+```
+
+Given that the `short` keyword modifies the `int` keyword, the `int` keyword can be removed.
+
+``` {.C .syntax}
+short var1 = value1;
+```
+
+The `long` keyword modifies an `int` data type, making a `long int` data type have more (or equal) memory allocated than an `int` data type. See below for details.
+
+``` {.C .syntax}
+long int var1 = value1;
+```
+
+Given that the `long` keyword modifies the `int` keyword, the `int` keyword can be removed.
+
+``` {.C .syntax}
+long var1 = value1;
+```
+
+The `long long` keyword modifies an `int` data type, making a `long long int` data type have more (or equal) memory allocated than a `long int` data type. See below for details.
+
+``` {.C .syntax}
+long long var1 = value1;
+```
+
+Given that the `long long` keyword modifies the `int` keyword, the `int` keyword can be removed.
+
+``` {.C .syntax}
+long long var1 = value1;
+```
+
+: Integer data types and their minimum memory allocations
+
+   Data type     Minimum memory
+--------------- ----------------
+  short int         2 bytes
+     int            2 bytes
+  long int          4 bytes
+ long long int      8 bytes
+
+As the table shows, each data type has a minimum memory allocation, but there is no maximum, so a compiler could allocate 8 bytes for all data types and that would be valid C.
+
+The memory allocation of each of these data types is less than or equal the memory allocation of the next bigger data type. This means that `sizeof(short int)` $\le$ `sizeof(int)` $\le$ `sizeof(long int)` $\le$ `sizeof(long long int)`.
 
 ### Suffixes for numeric data types
 
@@ -476,13 +540,22 @@ In the following tables, the output is the output of printing the variable in th
 
 : Escape sequences
 
-  -------------------------------------------------------------------
-   Escape sequence            Example                   Output
-  ----------------- ---------------------------- --------------------
-        `\n`         `char *var1 = "A\nB";`{.C}     `A`{.output}\
-                                                    `B`{.output}
+  ------------------------------------------------------------------------
+   Escape sequence            Example                    Output
+  ----------------- --------------------------------- --------------------
+        `\n`            `char *var1 = "A\nB";`{.C}       `A`{.output}\
+                                                         `B`{.output}
 
-  -------------------------------------------------------------------
+      `\uXXXX`         `char *var1 = "\uA888";`{.C}      `ꢈ`{.output}
+
+    `\UXXXXXXXX`     `char *var1 = "\U0001F39B";`{.C}    `🎛`{.output}
+  ------------------------------------------------------------------------
+
+In the escape sequence `\n`, the 'n' stands for newline. This escape sequence introduces a newline in its location.
+
+In the escape sequence `\uXXXX`, the 'u' stands for Unicode, the 'XXXX' represents a hexadecimal number of four digits, with the code point of an UTF-8 character.
+
+In the escape sequence `\UXXXXXXXX`, the 'U' stands for Unicode, the 'XXXXXXXX' represents a hexadecimal number of eight digits, with the code point of an UTF-8 character.
 
 ## Constants
 

@@ -169,6 +169,11 @@ As shown in the diagram, the interaction between computer and user forms a loop.
   A common form of storage, when this was written, are hard drives.
 :::
 
+::: term
+**Allocate**
+  : In this context, to allocate is the act of preparing memory or storage for holding or storing a given amount of data.
+:::
+
 **About memory and storage**: It could be conceived that memory and storage are one and the same thing, because both hold (memory) or store (storage) programs and computer data. The reason why this distinction is necessary when this was written, is that hard drives are slower than RAM to feed the processor with instructions, and RAM loses its contents when disconnected from electric power. This two conditions make it necessary to have storage to store programs and data when the computer is powered off, and they make it necessary to have memory to feed instructions to the processor as fast as possible.
 
 In a future it may be possible for memory and storage to be a single entity, that quickly feeds instructions to the processor, and can store as much data and programs as needed.
@@ -336,6 +341,11 @@ Programming languages have several features, like:
 ::: term
 **Data types**
   : In computers, data in memory is hold as binary numbers. Programming languages can represent those binary numbers in different forms, they can represent words, numbers, logical values (true or false), or composite data (data that contains other data).
+:::
+
+::: term
+**Data type memory allocation**
+  : In statically typed languages, each data type is allocated a given amount of memory, commonly measured in bytes. The amount of memory allocated is determined by the compiler or interpreter of the language, based on the hardware limitations of the computer.
 :::
 
 ::: term
@@ -720,5 +730,36 @@ In computers, data and instructions are represented in binary numbers, and given
   : 2^10^ Gibibytes, which is 1024 Gibibytes, the same as 1 099 511 627 776 bytes.
 :::
 
+**About the size of a byte**: a byte does not have to be 8 bits, it could be any other amount of bits. One advantage of 8 bits per byte is that 8 is a power of 2, 8 is 2^3^. Also, 8 is the next power of 2 after 7, and 7 bits is the amount of bits necessary for the ASCII character encoding, which is a character encoding with a minimum amount of characters for basic purposes.
+
 ## Character encoding
 
+The character encoding is the way that letters, numbers, and symbols (characters in general) are represented as bytes and vice versa. Character encodings are necessary to have characters in a computer, so it is only possible to write these words in the first place, because of a character encoding.
+
+A character encoding can hold each character in a constant amount of bytes, or in a given amount of bytes that differs from the amount to hold other characters. This is specified as part of the character encoding.
+
+::: term
+**Character set**
+  : A set of characters. A character set can have several different character encodings, so the character encodings are akin to implementations of the character set. For example, the Latin letters form a character set, the letters, numbers, and punctuation marks form another character set. The Latin character set can have different encodings to represent each character as a byte.
+:::
+
+::: term
+**Code point**
+  : The number that identifies a given character in a character set. This number is commonly expressed as a hexadecimal number that accommodates as many bytes as specified by the character encoding. When expressed as a binary number, the code point shows the data with which its character is represented in a computer.
+\\\
+  For example, in many character encodings, the letter 'A' is encoded with the decimal number 65, which is the same as the hexadecimal number 41, or the binary number 101001. In a computer in which text is being encoded with one of those character encodings, the letter 'A' is hold or stored as the binary number 101001. If the character encoding allocates 1 byte per character, then the data to hold or store the letter 'A' is 00101001.
+:::
+
+::: term
+**ASCII character encoding**
+  : A basic character encoding that encodes 128 characters, using the numbers from 0 to 127, which requires allocating 7 bits per character (from 000 0000 to 111 1111). This encoding includes the Latin alphabet without diacritics, in uppercase and lowercase forms, numbers, punctuation marks, symbols, whitespace characters, and a few control characters (which serve to control the display of other characters, for example the 'backspace' character, with code point 000 1000, deletes the previous character when displayed).
+:::
+
+::: term
+**Unicode character set**
+  : A character set that aims to contain all symbols in all written languages of humanity.
+\\\
+  There are three main character encodings that implement the Unicode character set, they are UTF-8, UTF-16, and UTF-32. UTF stands for Unicode Transformation Format. The number indicates the amount of bits used per character, so UTF-8 allocates 8 bits per character, and when more characters are needed, UTF-8 allocates a second set of 8 bits per character. UTF-16 allocates 16 bits per character. UTF-32 allocates 32 bits per character, which uses more memory or storage than the other two character encodings to hold the same characters.
+\\\
+  UTF-8 is the most used to write in English because it uses the least amount of memory or storage for writing in English and other languages that use the Latin alphabet.
+:::
