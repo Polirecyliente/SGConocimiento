@@ -350,7 +350,7 @@ Programming languages have several features, like:
 
 ::: term
 **Variable**
-  : A form of naming data. In most programming languages data is hold in memory, and variables are made to point to that data in memory. Calculations can be done with variables, the results can be hold in variables.
+  : A form of naming data. In most programming languages data is hold in memory, and variables are made to point to that data in memory. Calculations can be done with variables, the results can be hold in variables. The data being hold by a variable is called the 'value' of the variable.
 :::
 
 ::: term
@@ -361,6 +361,28 @@ Programming languages have several features, like:
 ::: term
 **Type casting**
   : Converting the data type of a variable, from its data type to another data type.
+:::
+
+::: term
+**Integer data type**
+  : A data type to hold integer numbers. In many programming languages, integers are created by writing the number directly, for example 5.
+:::
+
+::: term
+**Signed and unsigned integers**
+  : Some programming languages support a distinction between signed and unsigned integers. Signed integers are integers that can be positive or negative because they have a sign. Unsigned integers can only be positive because they have no sign. 
+\\\
+  This distinction is important to know how big can be an integer, because currently it's not possible to hold infinitely large integers in memory. A signed integer variable can hold about half the absolute values of a corresponding unsigned integer, because half of the values will be positive and the other half negative.
+:::
+
+::: term
+**Float data type**
+  : A data type to hold floating point numbers, which are numbers with decimals. In many programming languages, floats are created by writing the number directly, for example 14.8. Some programming languages also have a 'double' data type, which is a float data type that allocates double the memory for the float number.
+:::
+
+::: term
+**Boolean data type**
+  : A data type to hold truth values. The truth values are: true and false. In most programming languages, the truth values are written as 1 and 0 (for true and false), or True and False, On and Off, Yes and No, etcetera. The truth values are also called boolean values.
 :::
 
 ::: term
@@ -393,23 +415,6 @@ Programming languages have several features, like:
 :::
 
 ::: term
-**Integer data type**
-  : A data type to hold integer numbers. In many programming languages, integers are created by writing the number directly, for example 5.
-:::
-
-::: term
-**Signed and unsigned integers**
-  : Some programming languages support a distinction between signed and unsigned integers. Signed integers are integers that can be positive or negative because they have a sign. Unsigned integers can only be positive because they have no sign. 
-\\\
-  This distinction is important to know how big can be an integer, because currently it's not possible to hold infinitely large integers in memory. A signed integer variable can hold about half the absolute values of a corresponding unsigned integer, because half of the values will be positive and the other half negative.
-:::
-
-::: term
-**Float data type**
-  : A data type to hold floating point numbers, which are numbers with decimals. In many programming languages, floats are created by writing the number directly, for example 14.8. Some programming languages also have a 'double' data type, which is a float data type that allocates double the memory for the float number.
-:::
-
-::: term
 **Composite data type**
   : A data type that can hold other data types, including other composite data types. The two main composite data types are: arrays and associative arrays.
 \\\
@@ -427,6 +432,58 @@ Programming languages have several features, like:
   In most programming languages, the addition operator is `+`, and the assignment operator is `=`, so two variables could be added as `var1 = var2 + var3`.
 \\\
   Operators are functions in practice, because the take arguments which are the operands, and they return a value which is the result of the operation. For example, the operation `A + B` could be written as a function `add(A, B)`.
+:::
+
+::: term
+**Evaluation order**
+  : The order in which operators operate over their operands. This is necessary to define because when several different operators are used in an expression, the program needs a way to decide which operator to apply first, and which later.
+:::
+
+::: term
+**Grouping operators**
+  : Operators used to group operations and explicitly set their evaluation order, because expressions inside grouping operators are evaluated first. In most programming languages, the only grouping operator is the parentheses pair. For example, in `(operand1 op1 operand2) op2 operand3` where `op1` and `op2` are operators, `operand1` and `operand2` are operated first, then the result is operated with `operand3`.
+:::
+
+::: term
+**Arithmetic operators**
+  : Operators to make arithmetic operations with numbers. Most programming languages have operators for: addition, subtraction, multiplication, division, exponentiation, modulo, etcetera.
+:::
+
+::: term
+**Relational operators**
+  : Operators to compare variables. Most programming languages have operators to check if two variables are: equal, different, one greater than the other, one less than the other, one greater than or equal to the other, one less than or equal to the other, etcetera.
+:::
+
+::: term
+**Logical operators**
+  : Operators to make logical operations with boolean values. Most programming languages have operators for:
+
+    - The AND operation: to check if two boolean values are both true.
+    - The OR operation: to check if either one or both of two boolean values are true.
+    - The NOT operation: to change the value of a single boolean value.
+    - Etcetera.
+:::
+
+::: term
+**Bitwise operators**
+  : Operators to make bitwise operations with binary numbers. Most programming languages have operators for:
+
+    - The AND operation: to check the positions in two sets of bits, where the bits in both positions are 1.
+    - The OR operation: to check the positions in two sets of bits, where the bits in either one or both positions are 1.
+    - The XOR operation: to check the positions in two sets of bits, where one bit is 1 and the other is 0.
+    - The NOT operation: to flip the value of a the bits in a set of bits.
+    - The left shift operation: to shift the bits in a set of bits, to the left a given amount of positions.
+    - The right shift operation: to shift the bits in a set of bits, to the right a given amount of positions.
+:::
+
+::: term
+**Assignment operators**
+  : Operators to assign values to variables. Most programming language use the equal sign '=' as the basic assignment operator. Some programming languages support other assignment operators, commonly by mixing arithmetic operators with the equal sign (which do the arithmetic operation and then assign the result to the variable being assigned to).
+:::
+
+::: term
+**Ternary operators**
+  : Operator to make an if else statement. In the programming languages that support the ternary operators, the ternary operators are commonly two: one to specify the if statement, and one to specify the else statement.
 :::
 
 ::: term

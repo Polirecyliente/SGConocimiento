@@ -301,9 +301,13 @@
 
     .sourceCode
     {
-        display: block;
         font-family: "CMU Typewriter Text";
         font-size: calc(var(--p_font-size) - 1pt);
+    }
+
+    pre code
+    {
+        padding: 8px 18px;
     }
 
     .syntax .sourceCode
@@ -327,7 +331,6 @@
         border: solid 2px rgba(100, 100, 100 , .1);
         background: rgba(100, 100, 100, .1);
         border-left: solid 12px rgba(0, 255, 0, .8);
-        padding: 8px 18px;
     }
 
     .syntax code
@@ -729,16 +732,15 @@
 
     .sourceCode
     {
-        display: block;
         font-family: "CMU Typewriter Text";
         font-size: calc(var(--p_font-size) - 1pt);
     }
 
-    .syntax .sourceCode
+    pre code.sourceCode
     {
         background: rgba(0, 0, 0, 0);
         border: rgba(0, 0, 0, 0);
-    }
+    } */
 
     code span.pp /* styles preprocessor directives in C */
     {
@@ -750,12 +752,18 @@
         color: black;
     }
 
-    .syntax
+    pre.sourceCode
+    {
+        background-color: rgba(100, 100, 100, .1);
+        border: solid 2px rgba(100, 100, 100, .1);
+        padding: 4px 18px;
+    }
+
+    pre.syntax
     {
         border: solid 2px rgba(100, 100, 100 , .1);
         background: rgba(100, 100, 100, .1);
         border-left: solid 12px rgba(0, 255, 0, .8);
-        padding: 8px 18px;
     }
 
     .syntax code
@@ -770,12 +778,12 @@
         background-color:rgb(63, 12, 48);
         border: solid 3px black;
         border-radius: 2px;
-        padding: 0px 4px;
+        padding: 4px 18px;
     }
 
     .output code
     {
-        background-color: inherit;
+        background-color: rgba(0, 0, 0, 0);
         border-style: none;
     }
 

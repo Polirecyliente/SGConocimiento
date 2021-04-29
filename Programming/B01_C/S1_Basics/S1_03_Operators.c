@@ -1,25 +1,4 @@
-/*
-    Operators
-*/
-
-#include <stdio.h>
-
-int main()
-{   
-    int A = 10, B = 20, C;
-//T// arithmetic operators: +, -, *, /, %, ++, --
-    C = A + B;
-    C = A - B;
-    C = A * B;
-    C = B / A;
-    C = B % A;
-    C = A++;
-    C = A--;
-
-//T// _Bool type
-    _Bool p;
 //T// relational operators: ==, !=, >, <, >=, <=
-    p = (A == B);
     p = (A != B);
     p = (A > B);
     p = (A < B);
@@ -57,4 +36,3 @@ int main()
 
 //T// ternary operator: ?, :
     A = p ? 12 : -12;
-}

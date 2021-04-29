@@ -54,7 +54,7 @@ int main()
 
 Statements in C must be terminated with a semicolon, `statement1;`.
 
-Blocks of code in C are enclosed in curly braces, `{ block_of_code1 }`.
+Blocks of code in C are enclosed in braces, `{ block_of_code1 }`.
 
 
 ----
@@ -290,7 +290,7 @@ int var1 = num1;
 
 For example:
 
-``` C
+``` {.C}
 int var1 = 5;
 ```
 
@@ -398,7 +398,7 @@ long long var1 = value1;
 
 As the table shows, each data type has a minimum memory allocation, but there is no maximum, so a compiler could allocate 8 bytes for all data types and that would be valid C.
 
-The memory allocation of each of these data types is less than or equal the memory allocation of the next bigger data type. This means that `sizeof(short int)` $\le$ `sizeof(int)` $\le$ `sizeof(long int)` $\le$ `sizeof(long long int)`.
+The memory allocation of each of these data types is less than or equal the memory allocation of the next bigger data type. This means that `sizeof(short int)`{.C} $\le$ `sizeof(int)`{.C} $\le$ `sizeof(long int)`{.C} $\le$ `sizeof(long long int)`{.C}.
 
 
 ----
@@ -495,6 +495,54 @@ Printing `var1` outputs:
 ```
 
 The decimal number 81 is equivalent to the hexadecimal 0x51.
+
+## Boolean data type
+
+The `bool` keyword is used to create variables of boolean data type. To use the `bool` keyword, the `stdbool.h` header must be included.
+
+``` {.C .syntax}
+#include <stdbool.h>
+bool var1 = value1;
+```
+
+`value1` can only have one of the two truth values: `true` or `false`.
+
+For example:
+
+``` C
+#include <stdbool.h>
+bool var1 = true, var2 = false;
+```
+
+Printing `var1` and `var2` outputs:
+
+``` output
+var1: 1
+var2: 0
+```
+
+This shows that the boolean value `true` is treated as the integer 1, and the boolean value `false` is treated as the integer 0.
+
+
+----
+
+A boolean variable can be assigned to any value, not only to a boolean value. The only two ways to make a boolean variable `false` are: using the `false` keyword like regular, or making the boolean variable equal to 0. For example:
+
+``` C
+#include <stdbool.h>
+bool var1, var2, var3;
+var1 = 587.2;
+var2 = "string1";
+var3 = 0;
+```
+
+Printing `var1`, `var2` and `var3` outputs:
+
+``` output
+var1: 1
+var2: 1
+var3: 0
+```
 
 ## String data types
 
@@ -646,7 +694,40 @@ Casting to `(double)` is necessary in this case to let the operation `var1/var2`
 
 # OPERATORS
 
-The addition operator is the plus sign `+`
+C supports several kinds of operators:
+
+  - Grouping operator.
+  - Arithmetic operators.
+  - Relational operators.
+  - Logical operators.
+  - Bitwise operators.
+  - Assignment operators.
+  - Ternary operators.
+
+## Grouping operator
+
+The parentheses pair is the grouping operator.
+
+``` {.C .syntax}
+var1 = (var2 operator1 var3);
+```
+
+`operator1` is an operator, like the `+` operator that adds numbers (the `+` operator is explained in this document), for example:
+
+``` C
+int var1, var2 = 4, var3 = 5;
+var1 = (var2 + var3);
+```
+
+Printing `var1` outputs:
+
+``` output
+9
+```
+
+## Arithmetic operators
+
+The addition operator is the plus sign `+`.
 
 ``` {.C .syntax}
 var1 = var2 + var3;
@@ -664,6 +745,234 @@ Printing `var1` outputs:
 ``` output
 8
 ```
+
+
+----
+
+The subtraction operator is the minus sign `-`.
+
+``` {.C .syntax}
+var1 = var2 - var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 5, var3 = 3;
+var1 = var2 - var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+2
+```
+
+
+----
+
+The multiplication operator is the asterisk `*`.
+
+``` {.C .syntax}
+var1 = var2*var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 5, var3 = 3;
+var1 = var2*var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+15
+```
+
+
+----
+
+The division operator is the slash `/`.
+
+``` {.C .syntax}
+var1 = var2/var3;
+```
+
+For example:
+
+``` C
+float var1, var2 = 5, var3 = 3;
+var1 = var2/var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1.666667
+```
+
+
+----
+
+The modulo operator is the percent sign `%`.
+
+``` {.C .syntax}
+var1 = var2%var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 5, var3 = 3;
+var1 = var2%var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+2
+```
+
+
+----
+
+The increment operator is `++`.
+
+The increment operator can be used after a variable.
+
+``` {.C .syntax}
+var1 = var2++;
+```
+
+Placing `++` after `var2`, assigns to `var1` the value of `var2`, and then increments `var2` by 1.
+
+For example:
+
+``` C
+int var1, var2 = 5;
+var1 = var2++;
+```
+
+Printing `var1` and `var2` outputs:
+
+``` output
+var1: 5
+var2: 6
+```
+
+
+----
+
+The increment operator can also be used before a variable.
+
+``` {.C .syntax}
+var1 = ++var2;
+```
+
+Placing `++` before `var2`, increments `var2` by 1, and then assigns to `var1` the value of `var2`.
+
+For example:
+
+``` C
+int var1, var2 = 5;
+var1 = ++var2;
+```
+
+Printing `var1` and `var2` outputs:
+
+``` output
+var1: 6
+var2: 6
+```
+
+
+----
+
+The decrement operator is `--`.
+
+The decrement operator can be used after a variable.
+
+``` {.C .syntax}
+var1 = var2--;
+```
+
+Placing `--` after `var2`, assigns to `var1` the value of `var2`, and then decrements `var2` by 1.
+
+For example:
+
+``` C
+int var1, var2 = 5;
+var1 = var2--;
+```
+
+Printing `var1` and `var2` outputs:
+
+``` output
+var1: 5
+var2: 4
+```
+
+
+----
+
+The decrement operator can also be used before a variable.
+
+``` {.C .syntax}
+var1 = --var2;
+```
+
+Placing `--` before `var2`, decrements `var2` by 1, and then assigns to `var1` the value of `var2`.
+
+For example:
+
+``` C
+int var1, var2 = 5;
+var1 = --var2;
+```
+
+Printing `var1` and `var2` outputs:
+
+``` output
+var1: 4
+var2: 4
+```
+
+## Relational operators.
+
+The equals operator is `==`. It's used to check if two variables have equal values.
+
+``` {.C .syntax}
+bool var1;
+var1 = var2 == var3;
+```
+
+The equals operator returns a boolean value, so this value is hold in a boolean variable. For example:
+
+``` C
+bool var1;
+int var2 = 5, var3 = 5;
+var1 = var2 == var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
+
+
+----
+
+The not equals operator is `!=`.
+
+## Logical operators.
+
+## Bitwise operators.
+
+## Assignment operators.
+
+## Ternary operators.
 
 # CONTROL FLOW
 
