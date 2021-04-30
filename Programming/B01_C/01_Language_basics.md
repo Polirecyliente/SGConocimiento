@@ -940,7 +940,7 @@ var2: 4
 
 ## Relational operators.
 
-The equals operator is `==`. It's used to check if two variables have equal values.
+The equals operator is `==`. It's used to check if two values are equal.
 
 ``` {.C .syntax}
 bool var1;
@@ -964,11 +964,340 @@ Printing `var1` outputs:
 
 ----
 
-The not equals operator is `!=`.
+The not equals operator is `!=`. It's used to check if two values are different.
+
+``` {.C .syntax}
+bool var1;
+var1 = var2 != var3;
+```
+
+The not equals operator returns a boolean value, so this value is hold in a boolean variable. For example:
+
+``` C
+bool var1;
+int var2 = 5, var3 = 5;
+var1 = var2 != var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0
+```
+
+
+----
+
+The greater than operator is the greater than sign `>`. It's used to check if a value is greater than another.
+
+``` {.C .syntax}
+bool var1;
+var1 = var2 > var3;
+```
+
+The greater than operator returns a boolean value, so this value is hold in a boolean variable. For example:
+
+``` C
+bool var1;
+int var2 = 7, var3 = 4;
+var1 = var2 > var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
+
+
+----
+
+The greater than or equal to operator is `>=`. It's used to check if a value is greater than or equal to another.
+
+``` {.C .syntax}
+bool var1;
+var1 = var2 >= var3;
+```
+
+The greater than or equal to operator returns a boolean value, so this value is hold in a boolean variable. For example:
+
+``` C
+bool var1;
+int var2 = 5, var3 = 5;
+var1 = var2 >= var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
+
+
+----
+
+The less than operator is the less than sign `<`. It's used to check if a value is less than another.
+
+``` {.C .syntax}
+bool var1;
+var1 = var2 < var3;
+```
+
+The less than operator returns a boolean value, so this value is hold in a boolean variable. For example:
+
+``` C
+bool var1;
+int var2 = 4, var3 = 7;
+var1 = var2 < var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
+
+
+----
+
+The less than or equal to operator is `<=`. It's used to check if a value is less than or equal to another.
+
+``` {.C .syntax}
+bool var1;
+var1 = var2 <= var3;
+```
+
+The less than or equal to operator returns a boolean value, so this value is hold in a boolean variable. For example:
+
+``` C
+bool var1;
+int var2 = 5, var3 = 5;
+var1 = var2 <= var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
 
 ## Logical operators.
 
+The logical AND operator is `&&`. It's used to check if two boolean values are both true, so that the value one AND the value two are true.
+
+``` {.C .syntax}
+bool var1, var2 = value2, var3 = value3;
+var1 = var2 && var3;
+```
+
+For example:
+
+``` C
+bool var1, var2 = true, var3 = false;
+var1 = var2 && var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0
+```
+
+
+----
+
+The logical OR operator is `||`. It's used to check if two boolean values are either one or both true, so that the value one OR the value two are true.
+
+``` {.C .syntax}
+bool var1, var2 = value2, var3 = value3;
+var1 = var2 || var3;
+```
+
+For example:
+
+``` C
+bool var1, var2 = true, var3 = false;
+var1 = var2 || var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
+
+
+----
+
+The logical NOT operator is the exclamation mark `!`. It's used to flip a boolean value, from `true` to `false`, or from `false` to `true`.
+
+``` {.C .syntax}
+bool var1, var2 = value2;
+var1 = !var2;
+```
+
+For example:
+
+``` C
+bool var1, var2 = true;
+var1 = !var2;
+```
+
+Printing `var1` and `var2` outputs:
+
+``` output
+var1: 0
+var2: 1
+```
+
 ## Bitwise operators.
+
+The bitwise AND operator is the ampersand `&`. It's used to AND the digits of two binary numbers, as shown below.
+
+``` {.C .syntax}
+int var1, var2 = value2, var3 = value3;
+var1 = var2 & var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 0xA, var3 = 0x3;
+var1 = var2 & var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x2
+```
+
+As can be seen (after converting these hexadecimal numbers into binary numbers), only in the places where both binary numbers have a 1, there is a 1 in the result.
+
+
+----
+
+The bitwise OR operator is the vertical bar `|`. It's used to OR the digits of two binary numbers, as shown below.
+
+``` {.C .syntax}
+int var1, var2 = value2, var3 = value3;
+var1 = var2 | var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 0xA, var3 = 0x3;
+var1 = var2 | var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0xB
+```
+
+As can be seen (after converting these hexadecimal numbers into binary numbers), in the places where either one or both binary numbers have a 1, there is a 1 in the result.
+
+
+----
+
+The bitwise XOR operator is the caret `^`. It's used to XOR the digits of two binary numbers, as shown below.
+
+``` {.C .syntax}
+int var1, var2 = value2, var3 = value3;
+var1 = var2 ^ var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 0xA, var3 = 0x3;
+var1 = var2 ^ var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x9
+```
+
+As can be seen (after converting these hexadecimal numbers into binary numbers), in the places where one but not both binary numbers have a 1, there is a 1 in the result.
+
+
+----
+
+The bitwise NOT operator is the tilde `~`. It's used to NOT the digits of a binary number, as shown below.
+
+``` {.C .syntax}
+int var1, var2 = value2;
+var1 = ~var2;
+```
+
+For example:
+
+``` C
+int var1, var2 = 0xA;
+var1 = ~var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+0xFFFFFFF5
+```
+
+As can be seen (after converting these hexadecimal numbers into binary numbers), the NOT operation is the result of flipping each digit from 1 to 0, or from 0 to 1. Flipping only the number 0xA results in the number 0x5, but the output shows the number 0xFFFFFFF5, because an `int` in this case has 4 bytes, with two hexadecimal digits per byte, so the number 0xA expressed as an `int` is the number 0x0000000A, which after the NOT operation results in the number 0xFFFFFFF5.
+
+
+----
+
+The bitwise left shift operator is `<<`. It's used to shift the digits of a binary number to the left.
+
+``` {.C .syntax}
+int var1, var2 = value2, var3 = value3;
+var1 = var2 << var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 0x3, var3 = 1;
+var1 = var2 << var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x6
+```
+
+As can be seen (after converting these hexadecimal numbers into binary numbers), each binary digit is moved to the left 1 time, which creates a new digit. A 0 is placed in each new digit needed.
+
+
+----
+
+The bitwise right shift operator is `>>`. It's used to shift the digits of a binary number to the right.
+
+``` {.C .syntax}
+int var1, var2 = value2, var3 = value3;
+var1 = var2 >> var3;
+```
+
+For example:
+
+``` C
+int var1, var2 = 0xE, var3 = 1;
+var1 = var2 >> var3;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x7
+```
+
+As can be seen (after converting these hexadecimal numbers into binary numbers), each binary digit is moved to the right 1 time, which deletes the first digit. Shifting a binary number to the right a given amount of times, deletes that amount of digits at the right side of the number.
 
 ## Assignment operators.
 

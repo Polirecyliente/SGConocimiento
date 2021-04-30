@@ -470,7 +470,7 @@ Programming languages have several features, like:
 
     - The AND operation: to check the positions in two sets of bits, where the bits in both positions are 1.
     - The OR operation: to check the positions in two sets of bits, where the bits in either one or both positions are 1.
-    - The XOR operation: to check the positions in two sets of bits, where one bit is 1 and the other is 0.
+    - The XOR operation: to check the positions in two sets of bits, where one bit is 1 and the other is 0. XOR stands for eXclusive OR.
     - The NOT operation: to flip the value of a the bits in a set of bits.
     - The left shift operation: to shift the bits in a set of bits, to the left a given amount of positions.
     - The right shift operation: to shift the bits in a set of bits, to the right a given amount of positions.
