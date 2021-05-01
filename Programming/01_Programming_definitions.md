@@ -415,6 +415,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Pointer**
+  : A data type to hold the address in memory of a given variable. Variables are hold in memory, each at a given address. This address itself can be hold in a variable, of pointer data type.
+:::
+
+::: term
 **Composite data type**
   : A data type that can hold other data types, including other composite data types. The two main composite data types are: arrays and associative arrays.
 \\\
@@ -423,6 +428,11 @@ Programming languages have several features, like:
   Associative arrays hold data using strings to name positions (instead of using numbers as do arrays). The string that names a position is called 'key', and the data being hold in that position is called 'value', so an associative array is created as a set of key value pairs. For example, an associative array could be written as {'first key': 'first value', 'second key': 25}, in it, the first key holds a string, and the second holds an integer.
 \\\
   Data in general, even outside the realm of programming, is commonly placed in composite data types.
+:::
+
+::: term
+**Array indexing**
+  : The act of accessing an element from an array, via its index in the array.
 :::
 
 ::: term
@@ -488,7 +498,7 @@ Programming languages have several features, like:
 
 ::: term
 **Expression**
-  : A combination of variables and operators that is syntactically correct. For example, in most programming languages `var1 + var2 - var3` is an expression, but `var1 var2 +` is not (in other languages `var1 var2 +` could be a way to write the sum of `var1` and `var2`).
+  : A combination of variables and operators that is syntactically correct. For example, in most programming languages `var1 + var2 - var3` is an expression, but `var1 var2 +` is not (in other languages `var1 var2 +` could be a way to write the sum of `var1` and `var2`). Evaluating an expression means doing the operations within the expression, to determine its value.
 :::
 
 ::: term
@@ -539,6 +549,11 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**NULL value**
+  : A special value that means no value. Most programming languages have a keyword for the NULL value.
+:::
+
+::: term
 **Directive**
   : Some programming languages support directives. Directives are used to change the way that code is parsed. They serve as a metadata of sorts inside the source code itself, but given that they can modify how the source code is parsed, they are not really metadata.
 \\\
@@ -546,8 +561,8 @@ Programming languages have several features, like:
 :::
 
 ::: term
-**Declaration and definition**
-  : Some programming languages allow to differentiate between declaring a variable or function, and defining a variable or function. Declaring a variable or function means stating that it exists (without giving it a value). Defining a variable or function means stating that it exists and giving it a value.
+**Declaration, definition, and initialization**
+  : Some programming languages allow declaring and defining a variable or function, and initializing a variable. Declaring a variable or function means stating that it exists (without allocating memory for it, which is then done in a different moment). Defining a variable or function means stating that it exists and allocating memory for it. Initializing a variable means giving it an initial value.
 :::
 
 ::: term

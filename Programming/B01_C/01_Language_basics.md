@@ -280,6 +280,8 @@ var1 = sizeof(data_type1);
 
 The `void` keyword represents the lack of data type, it's used in functions and in type casting.
 
+The `NULL` keyword represents a NULL value.
+
 ## Numeric data types
 
 The `int` keyword is used to create variables of integer data type. An `int` is a data type that has at least 2 bytes of memory allocated to it. An `int` can have 4 bytes of memory allocated to it by the compiler.
@@ -600,7 +602,36 @@ A `char` data type can be made unsigned, so that it holds values as big as 255, 
 
 ----
 
-A string is created with a pointer to a character. Pointers are explained in this document.
+A string can be created as an array of characters. Arrays are explained in this document.
+
+``` {.C .syntax}
+char var1[int1] = "string1";
+```
+
+`int1` must be big enough to accommodate for "string1", otherwise "string1" will be truncated to the size given by `int1`.
+
+It's possible to create the string without `int1` so that the size of the array is automatically calculated.
+
+``` {.C .syntax}
+char var1[] = "string1";
+```
+
+For example:
+
+``` C
+char var1[] = "string1";
+```
+
+Printing `var1` outputs:
+
+``` output
+string1
+```
+
+
+----
+
+A string can be created with a pointer to a character. Pointers are explained in this document.
 
 ``` {.C .syntax}
 char *var1 = "string1";
@@ -658,7 +689,153 @@ The name of constants is written in uppercase by convention. For example:
 const int NUMBER = 8;
 ```
 
+## Pointers
+
 ## Composite types
+
+Arrays are the basic composite type in C.
+
+There are a few ways to define an array.
+
+``` {.C .syntax}
+data_type1 array1[int1] = {value1, value2, valueN};
+
+data_type2 array2[] = {value1, value2, valueN};
+```
+
+In C, the array elements are indexed starting with index 0, which means that value1 is at index 0, value2 is at index 1, valueN is at index N - 1, etcetera.
+
+For example:
+
+``` C
+int array1[3] = {4, 7, 6};
+
+int array2[] = {4, 7, 6};
+```
+
+
+----
+
+Array indexing is done with the following syntax.
+
+``` {.C .syntax}
+var1 = array1[int1];
+```
+
+This assings to `var1` the value of the element at index `int1` from `array1`.
+
+For example:
+
+``` C
+int var1;
+int array1[3] = {4, 7, 6};
+
+var1 = array1[2];
+```
+
+Printing `var1` outputs:
+
+``` output
+6
+```
+
+
+----
+
+Array indexing is also used to set or change the value of an element from an array.
+
+``` {.C .syntax}
+array1[int1] = value1;
+```
+
+This assigns `value1` to the element at index `int1` from `array1`.
+
+For example:
+
+``` C
+int array1[3] = {4, 7, 6};
+array1[2] = 55;
+```
+
+Printing `array1[2]` outputs:
+
+``` output
+55
+```
+
+
+----
+
+An array can be declared with the following syntax.
+
+``` {.C .syntax}
+data_type1 array1[int1];
+```
+
+Its elements can be filled via array indexing. For example:
+
+``` C
+int array1[2];
+array1[0] = 13;
+array1[1] = 24;
+```
+
+`array1[0]` holds the value 13, and `array1[1]` holds the value 24.
+
+
+----
+
+Arrays can have their elements initialized by default. Numeric arrays have their elements initialized to 0 by default. String arrays have their elements initialized to `NULL` by default. For example:
+
+``` C
+int array1[3] = {7};
+char *array2[3] = {"string1"};
+```
+
+Printing all the elements from the arrays `array1` and `array2` outputs:
+
+``` output
+array1[0]: 7
+array1[1]: 0
+array1[2]: 0
+
+array2[0]: string1
+array2[1]: (null)
+array2[2]: (null)
+```
+
+`(null)` is the way the `NULL` value is printed on the machine this code was tested.
+
+
+----
+
+Multidimensional arrays can be created by appending square bracket pairs to an array, one per dimension.
+
+``` {.C .syntax}
+data_type1 array1[][int1][intN] = {{{value1, value2}, {value1, value2}}, {{value1, value2}, {value1, value2}}};
+```
+
+The multidimensional array `{{{value1, value2}, {value1, value2}}, {{value1, value2}, {value1, value2}}}` is only placed there to show the syntax.
+
+`intN` is the size of the innermost dimension, `int1` is the size of the second inner dimension, and so on when there are more square brackets. The outermost dimension can be left blank, to calculate its required size automatically, but this outermost dimension can also be specified like the others. For example:
+
+``` C
+int array1[3][2] = {{1, 1}, {2, 2}, {3, 3}};
+```
+
+This shows that a multidimensional array is indexed like a regular array, but with more square brackets.
+
+Printing `array1[2][0]` outputs:
+
+``` output
+array1[2][0]: 3
+```
+
+The previous array could be placed into an array. For example:
+
+``` C
+int array1[2][3][2] = {{{1, 1}, {2, 2}, {3, 3}}, {{1, 1}, {2, 2}, {3, 3}}};
+```
 
 ## Type casting
 
@@ -938,7 +1115,7 @@ var1: 4
 var2: 4
 ```
 
-## Relational operators.
+## Relational operators
 
 The equals operator is `==`. It's used to check if two values are equal.
 
@@ -1081,7 +1258,7 @@ Printing `var1` outputs:
 1
 ```
 
-## Logical operators.
+## Logical operators
 
 The logical AND operator is `&&`. It's used to check if two boolean values are both true, so that the value one AND the value two are true.
 
@@ -1150,7 +1327,7 @@ var1: 0
 var2: 1
 ```
 
-## Bitwise operators.
+## Bitwise operators
 
 The bitwise AND operator is the ampersand `&`. It's used to AND the digits of two binary numbers, as shown below.
 
@@ -1299,9 +1476,289 @@ Printing `var1` outputs:
 
 As can be seen (after converting these hexadecimal numbers into binary numbers), each binary digit is moved to the right 1 time, which deletes the first digit. Shifting a binary number to the right a given amount of times, deletes that amount of digits at the right side of the number.
 
-## Assignment operators.
+## Assignment operators
 
-## Ternary operators.
+The basic assignment operator is the equal sign `=`. It assigns the value in its right side, to the variable in its left side.
+
+``` {.C .syntax}
+var1 = var2;
+```
+
+This assigns the value of var2 to var1. For example:
+
+``` C
+int var1, var2 = 13;
+var1 = var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+13
+```
+
+
+----
+
+Given that the assignment operator `=` works by assigning the value in its right side to the variable in its left side, it is possible to change the value of a variable and then assign that changed value to the variable itself. For example:
+
+``` C
+int var1 = 10;
+var1 = var1 + 1;
+```
+
+In the right side of the `=` the value of `var1` is 10, which is then added to 1, and that results in 11. The value 11 is assigned to `var1`. This shows that in an assignment operation, the right side is evaluated first, and then the result is assigned to the left side.
+
+Printing `var1` outputs:
+
+``` output
+11
+```
+
+
+----
+
+The addition assignment operator is `+=`. It adds a value to a variable, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 += var2;
+```
+
+This is equivalent to the statement `var1 = var1 + var2;`. For example:
+
+``` C
+int var1 = 5, var2 = 4;
+var1 += var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+9
+```
+
+
+----
+
+The subtraction assignment operator is `-=`. It subtracts a value from a variable, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 -= var2;
+```
+
+This is equivalent to the statement `var1 = var1 - var2;`. For example:
+
+``` C
+int var1 = 5, var2 = 4;
+var1 -= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+1
+```
+
+
+----
+
+The multiplication assignment operator is `*=`. It multiplies a value by a variable, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 *= var2;
+```
+
+This is equivalent to the statement `var1 = var1*var2;`. For example:
+
+``` C
+int var1 = 5, var2 = 4;
+var1 *= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+20
+```
+
+
+----
+
+The division assignment operator is `/=`. It divides a variable by a value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 /= var2;
+```
+
+This is equivalent to the statement `var1 = var1/var2;`. For example:
+
+``` C
+int var1 = 20, var2 = 2;
+var1 /= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+10
+```
+
+
+----
+
+The modulo assignment operator is `%=`. It takes the modulo of a variable over a value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 %= var2;
+```
+
+This is equivalent to the statement `var1 = var1%var2;`. For example:
+
+``` C
+int var1 = 5, var2 = 3;
+var1 %= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+2
+```
+
+
+----
+
+The bitwise AND assignment operator is `&=`. It does the bitwise AND operation with a variable and a value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 &= var2;
+```
+
+This is equivalent to the statement `var1 = var1 & var2;`. For example:
+
+``` C
+int var1 = 0xA, var2 = 0x3;
+var1 &= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x2
+```
+
+
+----
+
+The bitwise OR assignment operator is `|=`. It does the bitwise OR operation with a variable and a value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 |= var2;
+```
+
+This is equivalent to the statement `var1 = var1 | var2;`. For example:
+
+``` C
+int var1 = 0xA, var2 = 0x3;
+var1 |= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+0xB
+```
+
+
+----
+
+The bitwise XOR assignment operator is `^`. It does the bitwise XOR operation with a variable and a value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 ^= var2;
+```
+
+This is equivalent to the statement `var1 = var1 ^ var2;`. For example:
+
+``` C
+int var1 = 0xA, var2 = 0x3;
+var1 ^= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x9
+```
+
+
+----
+
+The bitwise left shift assignment operator is `<<=`. It does the bitwise left shift operation, shifting a variable by a given value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 <<= var2;
+```
+
+This is equivalent to the statement `var1 = var1 << var2;`. For example:
+
+``` C
+int var1 = 0x3, var2 = 1;
+var1 <<= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x6
+```
+
+
+----
+
+The bitwise right shift assignment operator is `>>=`. It does the bitwise right shift operation, shifting a variable by a given value, and then assigns the result to that same variable.
+
+``` {.C .syntax}
+var1 >>= var2;
+```
+
+This is equivalent to the statement `var1 = var1 >> var2;`. For example:
+
+``` C
+int var1 = 0xE, var2 = 1;
+var1 >>= var2;
+```
+
+Printing `var1` outputs:
+
+``` output
+0x7
+```
+
+## Ternary operators
+
+The ternary operators serve to make an if else statement, but using operators.
+
+In the ternary operators, the if operator is the question mark `?`, and the else operator is the colon `:`. They must be used together, so the if operator `?` can't be used without the else operator `:`.
+
+``` {.C .syntax}
+bool var2;
+var1 = var2 ? value_if1 : value_else1;
+```
+
+If `var2` is `true`, then this assigns `value_if1` to `var1`. Else, if `var2` is `false`, then this assigns `value_else1` to `var1`. For example:
+
+``` C
+int var1;
+bool var2 = false;
+var1 = var2 ? 12 : -9;
+```
+
+Printing `var1` outputs:
+
+``` output
+-9
+```
 
 # CONTROL FLOW
 
@@ -1519,6 +1976,21 @@ As can be seen, the format modifiers and the specifier at the end are written to
   ------------------------------------------------------------
 
 In the format specifier `%d`, the 'd' stands for digit. It's used to format variables of data type `int` as regular digits.
+
+## String functions
+
+C has several string manipulation functions to operate over strings. Many of these functions are defined by including the `string.h` header.
+
+``` {.C .syntax}
+#include <string.h>
+```
+
+
+----
+
+The `strcpy` function copies a string into another. This function is necessary because an array can't be assigned to another array, unlike non-array variables. For example, an `int` variable can be assigned to another `int` variable, which is a way of copying the first `int` variable into the second.
+
+
 
 # BIBLIOGRAPHY
 

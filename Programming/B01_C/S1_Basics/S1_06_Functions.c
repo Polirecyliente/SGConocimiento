@@ -82,3 +82,5 @@ char chpint(char *c, int i)
     *c = 'H';
     return ret;
 }
+
+// functions can be declared and called, before being defined
