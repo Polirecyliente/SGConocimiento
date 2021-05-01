@@ -608,7 +608,7 @@ A string can be created as an array of characters. Arrays are explained in this 
 char var1[int1] = "string1";
 ```
 
-`int1` must be big enough to accommodate for "string1", otherwise "string1" will be truncated to the size given by `int1`.
+`int1` must be big enough to accommodate for `"string1"`, otherwise `"string1"` will be truncated to the size given by `int1`.
 
 It's possible to create the string without `int1` so that the size of the array is automatically calculated.
 
@@ -639,6 +639,11 @@ char *var1 = "string1";
 
 The asterisk '*' means that `*var1` is a pointer to a character. Note that `"string1"` must be enclosed in double quotes. Double quotes are used to enclose strings.
 
+
+----
+
+A valid C string must be terminated with a null character. The null character is '\0'.
+
 ### Escaped characters and escape sequences
 
 Characters and strings may be composed of escaped characters and escape sequences.
@@ -667,6 +672,8 @@ In the following tables, the output is the output of printing the variable in th
       `\uXXXX`         `char *var1 = "\uA888";`{.C}      `ꢈ`{.output}
 
     `\UXXXXXXXX`     `char *var1 = "\U0001F39B";`{.C}    `🎛`{.output}
+
+        `\0`         `char *var1 = "str\0TRUNC";`{.C}    `str`{.output}
   ------------------------------------------------------------------------
 
 In the escape sequence `\n`, the 'n' stands for newline. This escape sequence introduces a newline in its location.
@@ -674,6 +681,8 @@ In the escape sequence `\n`, the 'n' stands for newline. This escape sequence in
 In the escape sequence `\uXXXX`, the 'u' stands for Unicode, the 'XXXX' represents a hexadecimal number of four digits, with the code point of an UTF-8 character.
 
 In the escape sequence `\UXXXXXXXX`, the 'U' stands for Unicode, the 'XXXXXXXX' represents a hexadecimal number of eight digits, with the code point of an UTF-8 character.
+
+The escape sequence `\0` is the null character, in C it's used to terminate strings, so when printing the string `"str\0TRUNC"`, the `TRUNC` part is truncated because it's after the character `\0`.
 
 ## Constants
 
@@ -690,6 +699,21 @@ const int NUMBER = 8;
 ```
 
 ## Pointers
+
+Array names behave like pointers, except `sizeof` of the array name returns the size of the array, whereas the `sizeof` of the pointer returns the size of the pointer. For example:
+
+``` C
+int array1[10];
+int *ptr1;
+ptr1 = array1;
+```
+
+Printing `sizeof(array1)` and `sizeof(ptr1)` outputs:
+
+``` output
+sizeof(array1): 40
+sizeof(ptr1):    8
+```
 
 ## Composite types
 
@@ -1806,6 +1830,57 @@ The `return` keyword must be followed by the return value of the function.
 return return_value1;
 ```
 
+
+----
+
+In C, the signature of a function is written with the following syntax.
+
+``` {.C .syntax}
+return_data_type1 func1(param_data_type1, param_data_typeN);
+```
+
+For example:
+
+``` C
+int func1(char, char*);
+```
+
+`func1` returns an `int` data type, and it takes two arguments, a `char` data type, and then a `char*` data type.
+
+
+----
+
+Arrays can be passed as arguments to functions, and returned as return values of functions.
+
+The function signature of a function that takes arrays as arguments, and returns an array, has the following syntax.
+
+``` {.C .syntax}
+return_data_type1 * func1(param_data_type1 *, param_data_typeN *)
+```
+
+As can be seen, arrays are passed and returned via pointers. For example:
+
+``` C
+int * func1(int *);
+```
+
+`func1` takes an `int` pointer, which can be the name of an `int` array, and returns an `int` pointer, which can be the name of another `int` array.
+
+An example definition for `func1` is the following:
+
+``` C
+int * func1(int *param_array1)
+{
+    static int return_array1[3];
+    return_array1[1] = param_array1[1]*2;
+    return return_array1;
+}
+```
+
+`return_array1` is made `static` because otherwise it's allocated memory may be overwritten. The `static` keyword in this case ensures that the memory allocated for `return_array1` is still allocated after the function call finishes.
+
+`func1` in this case doesn't really do anything useful, it assigns to its second element, twice the second element of `param_array1`. It's just for demonstration.
+
 # PACKAGES
 
 # HEADERS
@@ -1990,11 +2065,165 @@ C has several string manipulation functions to operate over strings. Many of the
 
 The `strcpy` function copies a string into another. This function is necessary because an array can't be assigned to another array, unlike non-array variables. For example, an `int` variable can be assigned to another `int` variable, which is a way of copying the first `int` variable into the second.
 
+``` {.C .syntax}
+#include <string.h>
+char *source_string1 = "string1";
+char destination_string1[int];
+strcpy(destination_string1, source_string1);
+```
 
+This copies `source_string1` into `destination_string1`, replacing the contents of `destination_string1`. This means that `int1` must be big enough to accommodate for `"string1"`.
+
+`int1` is the array size of `destination_string1`, it must be explicitly known, to ensure that copying a string into it, does not attempt to overwrite other memory from the program. For example:
+
+``` C
+#include <string.h>
+char *source_string1 = "string1";
+char destination_string1[7];
+strcpy(destination_string1, source_string1);
+```
+
+Printing `destination_string1` outputs:
+
+``` output
+string1
+```
+
+
+----
+
+The `strcat` function concatenates two strings.
+
+``` {.C .syntax}
+#include <string.h>
+char string1[int1] = "start";
+char *appended_string1 = "_end";
+strcat(string1, appended_string1);
+```
+
+This appends `appended_string1` to `string1`, thus modifying `string1`, so `int1` must be big enough to accommodate both `string1` and `appended_string1`. For example:
+
+``` C
+#include <string.h>
+char string1[9] = "start";
+char *appended_string1 = "_end";
+strcat(string1, appended_string1);
+```
+
+Printing both `string1` and `appended_string1` outputs:
+
+``` output
+string1:          start_end
+appended_string1: _end
+```
+
+
+----
+
+The `strlen` function returns the amount of bytes of a string, before the string termination character `\0` (see the null character).
+
+``` C
+#include <string.h>
+int var1;
+char *var2 = "stríng1";
+var1 = strlen(var2);
+```
+
+`"stríng1"` has a `\0` automatically placed at its end.
+
+Printing `var1` outputs:
+
+``` output
+8
+```
+
+`"string1"` has 7 characters, with 1 byte per character it's the same as 7 bytes. But the `"í"` in `"stríng1"` counts as two bytes because of the diacritic, so the total count is 8 bytes.
+
+
+----
+
+The `strcmp` function is used to compare two strings lexicographically. It returns the lexicographical difference between the first differing characters of the two strings, or 0 if both strings have all the same characters. For example:
+
+``` C
+#include <string.h>
+int var1;
+char *var2 = "sar";
+char *var3 = "scr";
+var1 = strcmp(var2, var3);
+```
+
+Printing `var1` outputs:
+
+``` output
+-2
+```
+
+This is because the lexicographical difference between 'a' and 'c' is -2.
+
+Another example:
+
+``` C
+#include <string.h>
+int var1;
+char *var2 = "Ă";
+char *var3 = "Ċ";
+var1 = strcmp(var2, var3);
+```
+
+Printing `var1` outputs:
+
+``` output
+-8
+```
+
+This shows that the lexicographical order of the `strcmp` function, uses (or complies with) the Unicode UTF-8 character encoding. This is because the characters 'Ă' and 'Ċ' are both outside the ASCII character encoding, and their lexicographical difference in UTF-8 is exactly -8, meaning that 'Ċ' is 8 characters after 'Ă' in the lexicographical order given by UTF-8.
+
+
+----
+
+The `strchr` function finds the first occurrence of a given character in a given string, and returns a substring that starts at that occurrence, and goes until the end of the given string. For example:
+
+``` C
+char char1 = 'c';
+char *var1 = "stricng1";
+char *var2;
+
+var2 = strchr(var1, char1);
+```
+
+This finds the first occurrence of `char1` (which is `'c'`) in the string `var1`. `var2` is the substring starting from `'c'` to the end of `var1`. If `char1` is not found in `var1`, then the `strchr` function returns a `NULL` value.
+
+Printing `var2` outputs:
+
+``` output
+cng1
+```
+
+
+----
+
+The `strstr` function finds the first occurrence of a given substring in a given string, and returns a substring that starts at that occurrence, and goes until the end of the given string. For example:
+
+``` C
+char *str1 = "sub";
+char *var1 = "strisubng1";
+char *var2;
+
+var2 = strstr(var1, str1);
+```
+
+This finds the first occurrence of `str1` (which is `"sub"`) in the string `var1`. `var2` is the substring starting from `"sub"` to the end of `var1`. If `str1` is not found in `var1`, then the `strstr` function returns a `NULL` value.
+
+Printing `var2` outputs
+
+``` output
+subng1
+```
 
 # BIBLIOGRAPHY
 
 ---
 nocite: |
   @C_main_tutorial
+  @C_reference_manual
 ---

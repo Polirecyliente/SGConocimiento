@@ -4,4 +4,9 @@ references:
   title: C Programming Tutorial
   author: Tutorialspoint
   publisher: "<https://www.tutorialspoint.com/cprogramming/>"
+
+- id: C_reference_manual
+  title: C Reference Manual
+  author: Cppreference
+  publisher: "<https://en.cppreference.com/w/c>"
 ---

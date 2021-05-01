@@ -415,6 +415,15 @@ Programming languages have several features, like:
 :::
 
 ::: term
+**Lexicographical order**
+  : The rules to decide the order of a set of characters. Given two characters, these rules allow saying which character comes first and which one comes after. For example, in most lexicographical orders that use the Latin alphabet, the character 'a' comes before 'b', so in this sense 'a' is less than 'b', or 'b' is greater than 'a', because 'b' comes after 'a'.
+\\\
+  The lexicographical difference between two characters, is the amount of characters to get from the second character to the first one. For example, the lexicographical difference between 'a' and 'c' is -2, and the lexicographical difference between 'c' and 'a' is 2 (in most lexicographical orders).
+\\\
+  The lexicographical order is a superset of the alphabetical order, because it also includes the order for numbers and symbols.
+:::
+
+::: term
 **Pointer**
   : A data type to hold the address in memory of a given variable. Variables are hold in memory, each at a given address. This address itself can be hold in a variable, of pointer data type.
 :::

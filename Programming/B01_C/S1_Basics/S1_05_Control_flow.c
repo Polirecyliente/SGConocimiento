@@ -1,18 +1,3 @@
-/*
-    Control flow
-*/
-
-//T// Contents
-//T// Decision making
-//T// Loops
-
-#include <stdio.h>
-
-int main()
-{
-
-//T// Decision making
-
     int a = 20;
 //T// if, else if, else
     if (a < 20)
@@ -66,6 +51,3 @@ int main()
             printf("i in for costs %1$i\n",i);   
         }
     } while (i <= 9);
-
-    return 0;
-}
