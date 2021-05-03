@@ -47,10 +47,9 @@ int main()
 
 `int` and `return` are keywords, they are explained in this document.
 
+`statements1` represents the statements of the code. The smallest possible C program that does nothing is produced by deleting the `statements1;` line.
 
-----
-
-`statements1` represents the statements of the code. The smallest possible C program that does nothing is produced by deleting the `statements1` line.
+## Statements and blocks of code
 
 Statements in C must be terminated with a semicolon, `statement1;`.
 
@@ -59,7 +58,7 @@ Blocks of code in C are enclosed in braces, `{ block_of_code1 }`.
 
 ----
 
-C ignores whitespace and so it does not require indentation, so the following is a valid C program.
+C ignores whitespace and so it does not require indentation, so the following is valid C syntax.
 
 ``` {.C .syntax}
 int main() { statement1; return 0; }
@@ -100,8 +99,7 @@ main
 }
 ```
 
-
-----
+## Basic input and output
 
 To use basic functionality, like read keyboard input from standard input, and printing character output to standard output, the `stdio.h` header is used. The `stdio.h` header is included with the `#include` directive. Headers and directives are explained in this document.
 
@@ -204,21 +202,18 @@ After inputting an integer number, this program prints that integer and exits. I
 
 C is a statically typed language, so to create a variable, the data type of the variable must be specified. In order to achieve this, the C language has keywords for the data types.
 
-
-----
-
-A variable is created by writing the keyword of its data type and then the name of the variable.
+A variable is defined by writing the keyword of its data type and then the name of the variable.
 
 ``` {.C .syntax}
 data_type1 var1;
 ```
 
-`var1` is the name of the variable, and `data_type1` is a keyword of the data type of `var1`. This syntax is for the declaration of `var1`.
+`var1` is the name of the variable, and `data_type1` is a keyword of the data type of `var1`. This syntax is for the definition of `var1`.
 
 
 ----
 
-Several variables of the same data type can be declared in a single statement, separating the variables by comma.
+Several variables of the same data type can be defined in a single statement, separating the variables by comma.
 
 ``` {.C .syntax}
 data_type1 var1, var2, varN;
@@ -247,7 +242,7 @@ data_type1 var1 = value1, var2 = value2, varN = valueN;
 
 ----
 
-Declarations and definitions in a single statement can be mixed.
+Definitions and initialization of variables, can be mixed in a single statement.
 
 ``` {.C .syntax}
 data_type1 var1, var2 = value2;
@@ -256,7 +251,7 @@ data_type1 var1, var2 = value2;
 
 ----
 
-`var1` can be declared on one statement, and defined on another statement.
+`var1` can be defined on one statement, and initialized on another statement.
 
 ``` {.C .syntax}
 data_type1 var1;
@@ -282,7 +277,26 @@ The `void` keyword represents the lack of data type, it's used in functions and 
 
 The `NULL` keyword represents a NULL value.
 
+
+----
+
+Constants can be created with the `const` keyword placed before the data type in a variable declaration or definition.
+
+``` {.C .syntax}
+const data_type1 CONSTANT1 = value1;
+```
+
+The name of constants is written in uppercase by convention. For example:
+
+``` C
+const int NUMBER = 8;
+```
+
 ## Numeric data types
+
+C has numeric data types for integer numbers, and for numbers with decimals (also known as floating point numbers).
+
+### Integer data types
 
 The `int` keyword is used to create variables of integer data type. An `int` is a data type that has at least 2 bytes of memory allocated to it. An `int` can have 4 bytes of memory allocated to it by the compiler.
 
@@ -402,8 +416,7 @@ As the table shows, each data type has a minimum memory allocation, but there is
 
 The memory allocation of each of these data types is less than or equal the memory allocation of the next bigger data type. This means that `sizeof(short int)`{.C} $\le$ `sizeof(int)`{.C} $\le$ `sizeof(long int)`{.C} $\le$ `sizeof(long long int)`{.C}.
 
-
-----
+### Floating point data types
 
 The `float` keyword is used to create variables that hold floating point numbers.
 
@@ -548,6 +561,10 @@ var3: 0
 
 ## String data types
 
+C has string data types for individual characters, and for strings in general.
+
+### Character data type
+
 In C the basic string data type is the character data type.
 
 The `char` keyword is used to create variables of character data type.
@@ -599,8 +616,7 @@ Printing `var1` as a character outputs:
 
 A `char` data type can be made unsigned, so that it holds values as big as 255, but this does not mean that up to 255 characters are supported, only the same first 127 ASCII characters are supported with the `unsigned char` data type.
 
-
-----
+### Strings as arrays
 
 A string can be created as an array of characters. Arrays are explained in this document.
 
@@ -683,20 +699,6 @@ In the escape sequence `\uXXXX`, the 'u' stands for Unicode, the 'XXXX' represen
 In the escape sequence `\UXXXXXXXX`, the 'U' stands for Unicode, the 'XXXXXXXX' represents a hexadecimal number of eight digits, with the code point of an UTF-8 character.
 
 The escape sequence `\0` is the null character, in C it's used to terminate strings, so when printing the string `"str\0TRUNC"`, the `TRUNC` part is truncated because it's after the character `\0`.
-
-## Constants
-
-Constants can be created with the `const` keyword placed before the data type in a variable declaration or definition.
-
-``` {.C .syntax}
-const data_type1 CONSTANT1 = value1;
-```
-
-The name of constants is written in uppercase by convention. For example:
-
-``` C
-const int NUMBER = 8;
-```
 
 ## Pointers
 
@@ -790,7 +792,7 @@ Printing `array1[2]` outputs:
 
 ----
 
-An array can be declared with the following syntax.
+An array can be defined with the following syntax.
 
 ``` {.C .syntax}
 data_type1 array1[int1];
@@ -830,8 +832,7 @@ array2[2]: (null)
 
 `(null)` is the way the `NULL` value is printed on the machine this code was tested.
 
-
-----
+### Multidimensional arrays
 
 Multidimensional arrays can be created by appending square bracket pairs to an array, one per dimension.
 
@@ -928,6 +929,10 @@ Printing `var1` outputs:
 
 ## Arithmetic operators
 
+There are several arithmetic operators for different arithmetic operations.
+
+### Addition operator
+
 The addition operator is the plus sign `+`.
 
 ``` {.C .syntax}
@@ -947,8 +952,7 @@ Printing `var1` outputs:
 8
 ```
 
-
-----
+### Subtraction operator
 
 The subtraction operator is the minus sign `-`.
 
@@ -969,8 +973,7 @@ Printing `var1` outputs:
 2
 ```
 
-
-----
+### Multiplication operator
 
 The multiplication operator is the asterisk `*`.
 
@@ -991,8 +994,7 @@ Printing `var1` outputs:
 15
 ```
 
-
-----
+### Division operator
 
 The division operator is the slash `/`.
 
@@ -1013,8 +1015,7 @@ Printing `var1` outputs:
 1.666667
 ```
 
-
-----
+### Modulo operator
 
 The modulo operator is the percent sign `%`.
 
@@ -1035,8 +1036,7 @@ Printing `var1` outputs:
 2
 ```
 
-
-----
+### Increment operator
 
 The increment operator is `++`.
 
@@ -1087,8 +1087,7 @@ var1: 6
 var2: 6
 ```
 
-
-----
+### Decrement operator
 
 The decrement operator is `--`.
 
@@ -1141,6 +1140,10 @@ var2: 4
 
 ## Relational operators
 
+There are several relational operators for different comparisons between values.
+
+### Equals operator
+
 The equals operator is `==`. It's used to check if two values are equal.
 
 ``` {.C .syntax}
@@ -1162,8 +1165,7 @@ Printing `var1` outputs:
 1
 ```
 
-
-----
+### Not equals operator
 
 The not equals operator is `!=`. It's used to check if two values are different.
 
@@ -1186,8 +1188,7 @@ Printing `var1` outputs:
 0
 ```
 
-
-----
+### Greater than operator
 
 The greater than operator is the greater than sign `>`. It's used to check if a value is greater than another.
 
@@ -1210,8 +1211,7 @@ Printing `var1` outputs:
 1
 ```
 
-
-----
+### Greater than or equal to operator
 
 The greater than or equal to operator is `>=`. It's used to check if a value is greater than or equal to another.
 
@@ -1234,8 +1234,7 @@ Printing `var1` outputs:
 1
 ```
 
-
-----
+### Less than operator
 
 The less than operator is the less than sign `<`. It's used to check if a value is less than another.
 
@@ -1258,8 +1257,7 @@ Printing `var1` outputs:
 1
 ```
 
-
-----
+### Less than or equal to operator
 
 The less than or equal to operator is `<=`. It's used to check if a value is less than or equal to another.
 
@@ -1284,6 +1282,10 @@ Printing `var1` outputs:
 
 ## Logical operators
 
+There are several logical operators for different logical operations.
+
+### Logical AND operator
+
 The logical AND operator is `&&`. It's used to check if two boolean values are both true, so that the value one AND the value two are true.
 
 ``` {.C .syntax}
@@ -1304,8 +1306,7 @@ Printing `var1` outputs:
 0
 ```
 
-
-----
+### Logical OR operator
 
 The logical OR operator is `||`. It's used to check if two boolean values are either one or both true, so that the value one OR the value two are true.
 
@@ -1327,8 +1328,7 @@ Printing `var1` outputs:
 1
 ```
 
-
-----
+### Logical NOT operator
 
 The logical NOT operator is the exclamation mark `!`. It's used to flip a boolean value, from `true` to `false`, or from `false` to `true`.
 
@@ -1353,6 +1353,10 @@ var2: 1
 
 ## Bitwise operators
 
+There are several bitwise operators for different bitwise operations.
+
+### Bitwise AND operator
+
 The bitwise AND operator is the ampersand `&`. It's used to AND the digits of two binary numbers, as shown below.
 
 ``` {.C .syntax}
@@ -1375,8 +1379,7 @@ Printing `var1` outputs:
 
 As can be seen (after converting these hexadecimal numbers into binary numbers), only in the places where both binary numbers have a 1, there is a 1 in the result.
 
-
-----
+### Bitwise OR operator
 
 The bitwise OR operator is the vertical bar `|`. It's used to OR the digits of two binary numbers, as shown below.
 
@@ -1400,8 +1403,7 @@ Printing `var1` outputs:
 
 As can be seen (after converting these hexadecimal numbers into binary numbers), in the places where either one or both binary numbers have a 1, there is a 1 in the result.
 
-
-----
+### Bitwise XOR operator
 
 The bitwise XOR operator is the caret `^`. It's used to XOR the digits of two binary numbers, as shown below.
 
@@ -1425,8 +1427,7 @@ Printing `var1` outputs:
 
 As can be seen (after converting these hexadecimal numbers into binary numbers), in the places where one but not both binary numbers have a 1, there is a 1 in the result.
 
-
-----
+### Bitwise NOT operator
 
 The bitwise NOT operator is the tilde `~`. It's used to NOT the digits of a binary number, as shown below.
 
@@ -1450,8 +1451,7 @@ Printing `var1` outputs:
 
 As can be seen (after converting these hexadecimal numbers into binary numbers), the NOT operation is the result of flipping each digit from 1 to 0, or from 0 to 1. Flipping only the number 0xA results in the number 0x5, but the output shows the number 0xFFFFFFF5, because an `int` in this case has 4 bytes, with two hexadecimal digits per byte, so the number 0xA expressed as an `int` is the number 0x0000000A, which after the NOT operation results in the number 0xFFFFFFF5.
 
-
-----
+### Bitwise left shift operator
 
 The bitwise left shift operator is `<<`. It's used to shift the digits of a binary number to the left.
 
@@ -1475,8 +1475,7 @@ Printing `var1` outputs:
 
 As can be seen (after converting these hexadecimal numbers into binary numbers), each binary digit is moved to the left 1 time, which creates a new digit. A 0 is placed in each new digit needed.
 
-
-----
+### Bitwise right shift operator
 
 The bitwise right shift operator is `>>`. It's used to shift the digits of a binary number to the right.
 
@@ -1539,8 +1538,7 @@ Printing `var1` outputs:
 11
 ```
 
-
-----
+### Addition assignment operator
 
 The addition assignment operator is `+=`. It adds a value to a variable, and then assigns the result to that same variable.
 
@@ -1561,8 +1559,7 @@ Printing `var1` outputs:
 9
 ```
 
-
-----
+### Subtraction assignment operator
 
 The subtraction assignment operator is `-=`. It subtracts a value from a variable, and then assigns the result to that same variable.
 
@@ -1583,8 +1580,7 @@ Printing `var1` outputs:
 1
 ```
 
-
-----
+### Multiplication assignment operator
 
 The multiplication assignment operator is `*=`. It multiplies a value by a variable, and then assigns the result to that same variable.
 
@@ -1605,8 +1601,7 @@ Printing `var1` outputs:
 20
 ```
 
-
-----
+### Division assignment operator
 
 The division assignment operator is `/=`. It divides a variable by a value, and then assigns the result to that same variable.
 
@@ -1627,8 +1622,7 @@ Printing `var1` outputs:
 10
 ```
 
-
-----
+### Modulo assignment operator
 
 The modulo assignment operator is `%=`. It takes the modulo of a variable over a value, and then assigns the result to that same variable.
 
@@ -1649,8 +1643,7 @@ Printing `var1` outputs:
 2
 ```
 
-
-----
+### Bitwise AND assignment operator
 
 The bitwise AND assignment operator is `&=`. It does the bitwise AND operation with a variable and a value, and then assigns the result to that same variable.
 
@@ -1671,8 +1664,7 @@ Printing `var1` outputs:
 0x2
 ```
 
-
-----
+### Bitwise OR assignment operator
 
 The bitwise OR assignment operator is `|=`. It does the bitwise OR operation with a variable and a value, and then assigns the result to that same variable.
 
@@ -1693,8 +1685,7 @@ Printing `var1` outputs:
 0xB
 ```
 
-
-----
+### Bitwise XOR assignment operator
 
 The bitwise XOR assignment operator is `^`. It does the bitwise XOR operation with a variable and a value, and then assigns the result to that same variable.
 
@@ -1715,8 +1706,7 @@ Printing `var1` outputs:
 0x9
 ```
 
-
-----
+### Bitwise left shift assignment operator
 
 The bitwise left shift assignment operator is `<<=`. It does the bitwise left shift operation, shifting a variable by a given value, and then assigns the result to that same variable.
 
@@ -1737,8 +1727,7 @@ Printing `var1` outputs:
 0x6
 ```
 
-
-----
+### Bitwise right shift assignment operator
 
 The bitwise right shift assignment operator is `>>=`. It does the bitwise right shift operation, shifting a variable by a given value, and then assigns the result to that same variable.
 
@@ -1786,7 +1775,496 @@ Printing `var1` outputs:
 
 # CONTROL FLOW
 
+In C, there are three kinds of control flow structures: goto statements, conditional statements, and loops.
+
+## Goto statements
+
+Goto statements make the execution go to a labeled line of code. The `goto` keyword is used for this.
+
+``` {.C .syntax}
+label1:;
+
+statements1;
+
+goto label1;
+```
+
+The `label1:;` statement is ignored, then `statements1` are executed, and then the `goto label1;` statement makes the execution go to the `label1:` label. `statements1` are executed again, so this particular syntax creates an infinite loop in which `statements1` are executed for as long as the program is running.
+
+``` {.C .syntax}
+goto label2;
+
+statements2;
+
+label2:;
+```
+
+`statements2` are never executed, because the `goto label2;` statement makes the execution go to the `label2:` label, skipping `statements2`.
+
+As can be seen, labels are created like any valid C name, ended with a colon (and then the statement ended with a semicolon as regular). The goto statement can be placed before or after its label.
+
+## Conditional statements
+
+### If-else conditional statement
+
+The `if` keyword is used to make a basic conditional statement.
+
+``` {.C .syntax}
+if (condition1)
+{
+    statements1;
+}
+```
+
+`condition1` is any expression that evaluates to a boolean value. Any valid C expression can be seen as a boolean value, so in reality any expression can be used as `condition1`. The values 0 and `false` make `condition1` false, other values make `condition1` true.
+
+Note that `condition1` must be enclosed in parentheses. `statements1` are executed when `condition1` evaluates to true. For example:
+
+``` C
+if (25)
+{
+    printf("This always executes");
+}
+```
+
+Given that `(25)` evaluates to true, the statement with the `printf` function always executes when running this code.
+
+
+----
+
+A conditional statement can have more conditions, one after the other, so that if one condition is false, a next condition may be true and execute that code. These other conditions are created with the `else if` keyword.
+
+``` {.C .syntax}
+if (condition1)
+{
+    statements1;
+}
+else if (condition2)
+{
+    statements2;
+}
+else if (conditionN)
+{
+    statementsN;
+}
+```
+
+Each condition is checked once, and if true then its statements are executed, and none of the other conditions are checked, so only the first condition to be true (if any) has its statements executed. For example:
+
+``` C
+int var1 = 20;
+if (var1 < 20)
+{
+    printf("var1 is less than 20\n");
+}
+else if (var1 == 20)
+{
+    printf("var1 is 20\n");
+}
+```
+
+The condition `(var1 < 20)` is evaluated, and it's false because of the statement `int var1 = 20;`. Next the condition `(var1 == 20)` is evaluated and it's true, so the statement `printf("var1 is 20\n");` is executed.
+
+
+----
+
+In a conditional, if all the conditions are false, then a set of statements can be executed. This is done with the `else` keyword.
+
+``` {.C .syntax}
+if (condition1)
+{
+    statements1;
+}
+else if (conditionN)
+{
+    statementsN;
+}
+else
+{
+    statementsN+1;
+}
+```
+
+If all the conditions are false, from `condition1` to `conditionN`, then `statementsN+1` are executed. For example:
+
+``` C
+int var1 = 21;
+if (var1 < 20)
+{
+    printf("var1 is less than 20\n");
+}
+else if (var1 == 20)
+{
+    printf("var1 is 20\n");
+}
+else
+{
+    printf("Other\n");
+}
+```
+
+In this example, the statement `int var1 = 21;` makes all conditions false, so the statement `printf("Other\n");` is executed.
+
+
+----
+
+`if`, `else if`, and `else` statements can be nested inside each other. For example:
+
+``` C
+if (condition1)
+{
+    statements1;
+    if (condition2)
+    {
+        statements2;
+    }
+    else if (condition3)
+    {
+        statements3;
+        if (condition4)
+        {
+            statements4;
+        }
+    }
+}
+```
+
+
+----
+
+Conditional statements can be written in a single line.
+
+``` C
+if (condition1) statement1; else if (condition2) statement2; else statement3;
+```
+
+### Switch-case conditional statement
+
+Instead of using a conditional statement with several `else if`, `else if`, `else if`, that check for several possible values of an integer variable, a `switch` statement can be used.
+
+``` {.C .syntax}
+switch (var1)
+{
+    case value1 :
+        statements1;
+        break;
+    case value2 :
+        statements2;
+        break;
+    case valueN :
+        statementsN;
+        break;
+    default :
+        statementsN+1;
+}
+```
+
+A `switch` statement only works if `var1` is an integer type, so it can be a `char`, `int`, or any of their modified types (such as `short` for example).
+
+`value1` through `valueN` are the possible values of `var1` that are tested, so that if the value of `var1` is equal to one values in the list of values from `value1` to `valueN`, then its corresponding statements are executed. For example, if tha value of `var1` is equal to `valueN` then statementsN are executed. The rest of statements are not executed.
+
+Each value from `value1` to `valueN` is preceded by the `case` keyword, and is followed by a colon. The `break` keyword is necessary because when omitted, all the following statements will be executed, until a `break` keyword is found, or until the end of the `switch` statement.
+
+The `default` keyword is used for the case in which none of the values matches the value of `var1`. In this case, `statementsN+1` are executed.
+
+When `var1` is a `char`, it can only accept one of the 128 values possible in a `char` type. When `var1` is an `int` it can accept any integer number that can be hold by an `int` variable.
+
+For example:
+
+``` C
+int var1 = 100;
+switch (var1)
+{
+    case 10 :
+        printf("var1 is 10\n");
+        break;
+    case 100 :
+        printf("var1 is 100\n");
+        break;
+    case 1000 :
+        printf("var1 is 1000\n");
+        break;
+    default :
+        printf("var1 is another value\n");
+}
+```
+
+This executes the `printf("var1 is 100\n");` statement. Deleting the `break;` statement under, would also result in the execution of the `printf("var1 is 1000\n");` statement.
+
+`switch` statements can also be nested if needed.
+
+## Loops
+
+C has `for`, `while`, and `do while` loops.
+
+### For loop
+
+The basic loop is made with the `for` keyword. A `for` loop executes its statements a counted amount of times (or iterations).
+
+``` {.C .syntax}
+for (start_statement1; condition1; statementN)
+{
+    statements1;
+}
+```
+
+`start_statement1` is a statement that is executed only once at the start of the loop, before executing `statements1` for the first iteration. 
+
+`condition1` can be any condition, the `statements1` keep being executed for as long as `condition1` evaluates to true. `condition1` is commonly used to check the value of the iterator.
+
+`statementN` is a statement that is executed at the very end of each iteration, commonly used to change the value of the iterator, which is usually the last step of an iteration.
+
+Given these definitions, a possible `for` loop example is the following:
+
+``` C
+int it1 = 5;
+for (printf("Start of loop\n"); it1 < 20; printf("End of iteration\n"))
+{
+    it1 *= 2;
+}
+```
+
+Executing this example code outputs:
+
+``` output
+Start of loop
+End of iteration
+End of iteration
+```
+
+'End of iteration' appears twice because this loop is repeated two times. Initially `it1` is 5, then the statement `it1 *= 2;` duplicates `it1`, so at the end of the first iteration `it1` is 10. In the second iteration `it1` is 20, so when the third iteration would start, the condition `it1 < 20` is false, and the `for` loop ends.
+
+A more common way to write a `for` loop in C, is to use the iterator `it1` in the three parts of the parentheses of the `for` loop. For example:
+
+``` C
+for (int it1 = 0; it1 < 3; it1++)
+{
+    printf("it1: %d\n", it1);
+}
+```
+
+This is more common because it shows the count of iterations that the `for` loop will do, in this case, three iterations (because `it1` starts at 0 and ends at 2).
+
+Executing this example code outputs:
+
+```
+it1: 0
+it1: 1
+it1: 2
+```
+
+### While loop
+
+There is the `while` loop in C, which is a loop that iterates while a given condition evaluates to true.
+
+``` {.C .syntax}
+while (condition1)
+{
+    statements1
+}
+```
+
+`condition1` is checked at the start of each iteration (including the first iteration), and if it's true then `statements1` are executed, otherwise the loop ends, so `statements1` must include a way to modify `condition1` so that eventually it evaluates to false (unless an infinite loop is desired). For example
+
+``` C
+int it1 = 0;
+while (it1 < 3)
+{
+    printf("it1: %d\n", it1);
+    it1 += 1;
+}
+```
+
+The statement `it1 += 1;` modifies `it1` inside the `while` loop, because otherwise `it1` does not change and the `while` loop becomes an infinite loop.
+
+Executing this example code outputs:
+
+``` output
+it1: 0
+it1: 1
+it1: 2
+```
+
+### Do while loop
+
+C also has the `do while` loop, which used the `do` and the `while` keywords.
+
+``` {.C .syntax}
+do
+{
+    statements1
+} while (condition1);
+```
+
+This works the same as the regular `while` loop, except that `condition1` is checked at the end of each iteration, which means that `statements1` will be executed at least once, even when `condition1` evaluates to false. For example:
+
+``` C
+int it1 = 0;
+do
+{
+    printf("Do while loop\n");
+} while (it1 != 0);
+```
+
+The condition `(it1 != 0)` is false because `it1` is 0, so this loop executes the statement `printf("Do while loop\n");` only once.
+
+### Break out of a loop
+
+A loop can be stopped with the `break` keyword.
+
+``` {.C .syntax}
+loop1
+{
+    if (condition1) break;
+    statements1;
+}
+```
+
+`loop1` is ended if `condition1` evaluates to true in any iteration. For example:
+
+``` C
+int it1 = 0;
+while (it1 < 3)
+{
+    if (it1 == 1) break;
+    printf("it1: %d\n", it1);
+    it1++;
+}
+```
+
+Executing this example code outputs:
+
+``` output
+it1: 0
+```
+
+### Continue at the next iteration of a loop
+
+The current iteration of a loop can be stopped with the `continue` keyword. Execution continues at the start of the next iteration.
+
+``` {.C .syntax}
+loop1
+{
+    if (condition1) continue;
+    statements1;
+}
+```
+
+If `condition1` evaluates to true in any iteration, `statements1` are skipped in that iteration, and the loop continues at the next iteration. For example:
+
+``` C
+int it1 = 0;
+while (it1 < 3)
+{
+    if (it1 == 1) { it1++; continue; }
+    printf("it1: %d\n", it1);
+    it1++;
+}
+```
+
+In `if (it1 == 1) { it1++; continue; }` it's necessary to add the `it1++;` statement, otherwise `it1` remains being 1, and the loop becomes infinite.
+
+Executing this example code outputs:
+
+``` output
+it1: 0
+it1: 2
+```
+
 # FUNCTIONS
+
+Functions are defined with the following syntax.
+
+``` {.C .syntax}
+return_data_type1 func1(data_type1 param1, data_typeN paramN)
+{
+    statements1;
+    return value1;
+}
+```
+
+`func1` is the name of the function. `param1` through `paramN` are the parameters of the function, commonly used in `statements1` to calculate `value1`. `value1` must have the data type `return_data_type1`, and it must be placed after the `return` keyword.
+
+## Function signature
+
+In C, the signature of a function is written with the following syntax.
+
+``` {.C .syntax}
+return_data_type1 func1(param_data_type1, param_data_typeN);
+```
+
+For example:
+
+``` C
+int func1(char, char*);
+```
+
+`func1` returns an `int` data type, and it takes two arguments, a `char` data type, and then a `char*` data type.
+
+Writing the function signature alone is the function declaration (so, it must be defined elsewhere in the code, or in an included header).
+
+## Function call
+
+A function is called with the following syntax.
+
+``` {.C .syntax}
+var1 = func1(arg1, argN);
+```
+
+`var1` is a variable of the same data type as the return value of `func1`, because `var1` holds the return value of `func1`. `arg1` through `argN` are the arguments passed to the function. The arguments replace the parameters inside the function, so there is one argument per parameter (unless the parameters are optional, of course).
+
+
+----
+
+By default, an argument is passed to a function by value.
+
+``` C
+// Before the `main` function:
+void func1(int arg1)
+{
+    arg1 = 55;
+}
+
+// Inside the `main` function:
+int var1 = 11;
+func1(var1);
+```
+
+Printing `var1` after calling `func1(var1)` outputs:
+
+``` output
+11
+```
+
+This shows that `var1` was not modified by `func1`, because `var1` was passed by value.
+
+
+----
+
+An argument can be passed by reference to a function. Pointers are used to pass by reference.
+
+``` {.C .syntax}
+// Before the `main` function:
+void func1(int *arg1)
+{
+    arg1[0] = 55;
+}
+
+// Inside the `main` function:
+int var1 = 11;
+int *ptr1 = &var1;
+func1(ptr1);
+```
+
+`ptr1` is a pointer to `var1`.
+
+Printing `var1` after calling `func1(ptr1)` outputs
+
+``` output
+55
+```
+
+## The `void` keyword
 
 The `void` keyword can be used in functions. Using the `void` keyword as the data type of the return value of a function, means that the function returns nothing.
 
@@ -1821,34 +2299,7 @@ int func1(void)
 }
 ```
 
-
-----
-
-The `return` keyword must be followed by the return value of the function.
-
-``` {.C .syntax}
-return return_value1;
-```
-
-
-----
-
-In C, the signature of a function is written with the following syntax.
-
-``` {.C .syntax}
-return_data_type1 func1(param_data_type1, param_data_typeN);
-```
-
-For example:
-
-``` C
-int func1(char, char*);
-```
-
-`func1` returns an `int` data type, and it takes two arguments, a `char` data type, and then a `char*` data type.
-
-
-----
+## Arrays in functions
 
 Arrays can be passed as arguments to functions, and returned as return values of functions.
 
@@ -1880,6 +2331,14 @@ int * func1(int *param_array1)
 `return_array1` is made `static` because otherwise it's allocated memory may be overwritten. The `static` keyword in this case ensures that the memory allocated for `return_array1` is still allocated after the function call finishes.
 
 `func1` in this case doesn't really do anything useful, it assigns to its second element, twice the second element of `param_array1`. It's just for demonstration.
+
+## Recursion
+
+Func
+
+## Variable arguments
+
+
 
 # PACKAGES
 

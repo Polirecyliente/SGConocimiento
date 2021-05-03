@@ -450,7 +450,7 @@ Programming languages have several features, like:
 \\\
   In most programming languages, the addition operator is `+`, and the assignment operator is `=`, so two variables could be added as `var1 = var2 + var3`.
 \\\
-  Operators are functions in practice, because the take arguments which are the operands, and they return a value which is the result of the operation. For example, the operation `A + B` could be written as a function `add(A, B)`.
+  Operators are functions in practice, because they take arguments (which are the operands), and they return a value which is the result of the operation. For example, the operation `A + B` could be written as a function `add(A, B)`.
 :::
 
 ::: term
@@ -527,9 +527,16 @@ Programming languages have several features, like:
 
 ::: term
 **Control flow structures**
-  : Code that allows controlling the flow of execution of code. The normal flow of execution is execute line by line in order, from the first line of code to the last line of code.
+  : Code that allows controlling the flow of execution of code. The normal flow of execution is executing line by line in order, from the first line of code to the last line of code.
 \\\
-  Most programming languages have two control flow structures, one to skip over lines of code if a condition is not met, commonly created with the `if` keyword. The other control flow structure is used to repeat a set of lines of code, they are called 'loops'.
+  Most programming languages have two control flow structures, one to skip over lines of code if a condition is not met, commonly created with the `if` keyword, and called a 'conditional statement'. The other control flow structure is used to repeat a set of lines of code, this kind of control flow structure is called a 'loop'.
+\\\
+  Some programming languages have a control flow structure called 'goto', which is used to make the execution go to a given labeled line of code.
+:::
+
+::: term
+**Iteration**
+  : In a loop, an iteration is each one of the times that the statements of the loop are repeated. Iterations commonly have an iterator, which is a variable that changes along with the iterations. The iterator can be an integer number that increases or decreases with each iteration, or it can be a value from a list of values so that the iterator takes each of these values in each iteration.
 :::
 
 ::: term
@@ -555,6 +562,11 @@ Programming languages have several features, like:
 ::: term
 **Error and exception handling**
   : Syntax used to handle errors in case they occur during execution.
+:::
+
+::: term
+**Name**
+  : In this context, a name is the string that identifies a variable, function, package, etcetera. In most programming languages, valid names are not keywords, do not start with a number, do not contain spaces, and only contain letters, numbers, the underscore _, and the hyphen -. For example, in a variable `var1`, the string 'var1' itself is the name of the variable.
 :::
 
 ::: term
@@ -609,6 +621,21 @@ Functions can come with several different features, depending on how they are wr
 ::: term
 **Function overriding**
   : In object oriented languages, function overriding is the process of inheriting methods with the same name and signature as the methods from the parent.
+:::
+
+::: term
+**Passing an argument by value**
+  : The act of passing an argument by value, which means that when using a variable as the argument, a copy of the variable is passed to the function, so that modifying the argument does not modify the variable outside of the function. This is the default in most programming languages.
+:::
+
+::: term
+**Passing an argument by reference**
+  : The act of passing an argument by reference, which means that when using a variable as the argument, the variable itself (or a reference to it) is passed to the function, so that modifying the argument does modify the variable outside of the function.
+:::
+
+::: term
+**Function recursion**
+  : The act of calling a function from within itself. By this definition, recursion can lead to a situation in which function calls itself indefinitely. To avoid this, the function must provide a way to return without recursing.
 :::
 
 ### Types of programming languages

@@ -1,18 +1,5 @@
-/*
-    Functions
-*/
-
-//T// Contents
-//T// Functions
-//T// varargs
-//T// Recursion
-
 //T// include the stdarg.h header to be able to use list of args
 #include <stdarg.h>
-#include <stdio.h>
-
-//T// function declaration
-char chpint(char *, int);
 
 //T// varargs
 
@@ -74,13 +61,3 @@ int main()
 
     return 0;
 }
-
-//T// function definition, call by ref, by val
-char chpint(char *c, int i)
-{
-    char ret = *c + i;
-    *c = 'H';
-    return ret;
-}
-
-// functions can be declared and called, before being defined
