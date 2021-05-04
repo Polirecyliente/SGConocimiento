@@ -2334,11 +2334,162 @@ int * func1(int *param_array1)
 
 ## Recursion
 
-Func
+Function recursion can be done with the following syntax.
+
+``` {.C .syntax}
+return_data_type1 func1(params1)
+{
+    statements1;
+
+    if (condition1) return value1;
+
+    var1 = expression1_with_func1(args1);
+
+    statements2;
+
+    return var1;
+}
+```
+
+`statements1` are executed before the recursion, and `statements2` are executed after the recursion. The conditional statement `if (condition1) return value1;` ensures that the function has a way to stop recursion, so this conditional statement should be placed before calling `func1` inside itself.
+
+`value1` is the value returned when recursion stops, so it is the initial value that will be used by all the previous recursions made.
+
+`expression1_with_func1(args1)` is an expression that uses `func1(args1)`. It's necessary to modify `func1(args1)`, because in the case that `var1 = func1(args1)` it happens that `var1 = value1` in all the recursions, so the idea is to modify `value1` to change `var1`. This expression can give the logic or intention of the recursion.
+
+A common basic example of recursion, is a function that calculates the factorial of a positive integer. The following is a full code example:
+
+``` C
+#include <stdio.h>
+
+int func1(int param1)
+{
+    printf("Statements before recursion\n");
+
+    if (param1 <= 1) { printf("First statement after recursion\n"); return 1; }
+
+    int var1;
+    var1 = param1 * func1(param1 - 1);
+
+    printf("Value of var1 in this recursion call: %d\n", var1);
+    
+    return var1;
+}
+
+int main()
+{
+
+    int num1;
+    num1 = func1(5);
+    printf("\nThe factorial of 5 is: %d\n", num1);
+
+    return 0;
+}
+```
+
+Executing this example code outputs:
+
+``` output
+Statements before recursion
+Statements before recursion
+Statements before recursion
+Statements before recursion
+Statements before recursion
+First statement after recursion
+Value of var1 in this recursion call: 2
+Value of var1 in this recursion call: 6
+Value of var1 in this recursion call: 24
+Value of var1 in this recursion call: 120
+
+The factorial of 5 is: 120
+```
+
+As can be seen from this output, the statements before the recursion are executed first, until recursion stops. In this case the argument is 5 because the factorial of 5 is being calculated, so the first 5 lines of output say 'Statements before recursion'. The next 5 lines of output come from the statements after recursion.
 
 ## Variable arguments
 
+To use variable arguments, the `<stdarg.h>` header must be included.
 
+``` {.C .syntax}
+#include <stdarg.h>
+```
+
+The following syntax shows how to write functions that make use of variable arguments.
+
+``` {.C .syntax}
+return_data_type1 func1(param1, paramN, ...)
+{
+    statements1;
+
+    va_list args1;
+
+    va_start(args1, paramN);
+
+    statement1_with_va_arg(args1, data_type1);
+    statementM_with_va_arg(args1, data_typeM);
+
+    va_end(args1);
+
+    return value1;
+}
+```
+
+This syntax shows the various parts of the `<stdarg.h>` header, that are used to manage variable arguments.
+
+`param1` through `paramN` are the obligatory, non-variable, regular parameters. The last parameter of `func1` is the ellipsis `...`, this indicates that the function receives a variable amount of arguments, placed after `paramN`.
+
+Inside `func1`, a few names starting with `va_` can be observed. These names are defined in the `<stdarg.h>` header. `va_list` is a data type for the list of variable arguments, so `args1` is a variable that holds the list of variable arguments.
+
+The `va_start(args1, paramN)` function, starts the use of `args1` (so that the `va_arg` function works, see below). `paramN` is the second argument in `va_start(args1, paramN)`, because `paramN` is supposed to contain information about the data types of the variable arguments, so `func1` should have information about these data types, and this is commonly passed to `func1` via `paramN`.
+
+The `va_arg(args1, data_typeM)` function, takes the `M` argument in `args1` and treats it as if it was a `data_typeM`. The next time that `va_arg` is called, it has the form `va_arg(args1, data_typeM+1)`, which takes the `M+1` argument in `args1` and treats it as if it was a `data_typeM+1`. So the `va_arg` function takes each individual variable argument, sequentially. The next time `va_arg` is called, it takes the next variable argument, and so on. It's common to use a loop, to loop through all the variable arguments.
+
+The `va_end` function, ends the use of `args1`. `va_start` can be called again, after having called `va_end`, to process the variable arguments again if needed.
+
+An example function definition using variable arguments is the following.
+
+``` C
+// At the start of the file:
+#include <stdarg.h>
+
+// Definition of the function with variable arguments, placed before the `main` function:
+void func1(int index1, ...)
+{
+    va_list args1;
+    
+    va_start(args1, index1);
+
+    if (index1 == 1)
+    {
+        int arg1 = va_arg(args1, int);
+        printf("arg is: %d\n", arg1);
+    }
+    else if (index1 == 2)
+    {
+        double arg1 = va_arg(args1, double);
+        int arg2 = va_arg(args1, int);
+        printf("arg1 is: %f\narg2 is: %d\n", arg1, arg2);
+    }
+
+    va_end(args1);
+}
+
+// Inside the `main` function:
+func1(1, 60);
+printf("\n");
+func1(2, 9.877, 130);
+```
+
+Executing this example code outputs:
+
+``` output
+arg is: 60
+
+arg1 is: 9.877000
+arg2 is: 130
+```
+
+The `index1` parameter of the `func1` function determines the amount of variable arguments that will be parsed, and the data type of each variable argument. This means that the user of `func1` should know how `func1` parses the variable arguments, otherwise it could produce undefined behavior. This happens with the `printf` function, the user of the `printf` function must know how to pass information about the data types of the arguments to the function, because the `printf` function uses variable arguments.
 
 # PACKAGES
 
@@ -2501,15 +2652,19 @@ As can be seen, the format modifiers and the specifier at the end are written to
 
 : Format specifiers
 
-  ------------------------------------------------------------
-   Format specifier           Example               Output
-  ------------------ -------------------------- --------------
+  -------------------------------------------------------------
+   Format specifier            Example               Output
+  ------------------ --------------------------- --------------
          `%d`           `int var1 = 5;`{.C}      `5`{.output}
-                      `print("%d", var1);`{.C}
+                      `printf("%d", var1);`{.C}
 
-  ------------------------------------------------------------
+         `%f`          `float var1 = 7.3`{.C}    `7.3`{.output}
+                      `printf("%f", var1);`{.C}
+  -------------------------------------------------------------
 
-In the format specifier `%d`, the 'd' stands for digit. It's used to format variables of data type `int` as regular digits.
+In `%d`, the 'd' stands for digit. It's used to format variables of data type `int` as regular digits.
+
+In `%f`, the 'f' stands for float. It's used to format variables of data type `float` or `double`.
 
 ## String functions
 

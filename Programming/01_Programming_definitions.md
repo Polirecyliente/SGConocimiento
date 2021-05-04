@@ -636,6 +636,13 @@ Functions can come with several different features, depending on how they are wr
 ::: term
 **Function recursion**
   : The act of calling a function from within itself. By this definition, recursion can lead to a situation in which function calls itself indefinitely. To avoid this, the function must provide a way to return without recursing.
+\\\
+  A function that calls itself, has a set of statements before doing the recursion call, and a set of statements after the recursion call, and they relate to each other like nested parentheses. For example, a function that calls itself, and then calls itself, and then again, 5 times in total, could be shown as (1(2(3(4(5 5)4)3)2)1), where (1, (2, (3, (4, and (5 represent the statements before recursion, and 5), 4), 3), 2), and 1) represent the statements after recursion. Recursion stops in the parentheses 5, then the parentheses 4 is closed, then parentheses 3, parentheses 2, and parentheses 1. To guarantee that recursion stops at parentheses 5, the function must return before doing the recursion call to parentheses 6.
+:::
+
+::: term
+**Variable arguments**
+  : The possibility for a function to accept a variable amount of arguments, so that it can be called with a different amount of arguments each time.
 :::
 
 ### Types of programming languages
