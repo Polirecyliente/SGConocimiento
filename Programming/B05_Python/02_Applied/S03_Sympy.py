@@ -47,6 +47,13 @@ tuple1 = sympy.symbols('9:11:3') # (90, 91, 92, 100, 101, 102) #| only 9:11 has 
 tuple1 = sympy.symbols('a:c:b')  # (aa, ab, ba, bb, ca, cb) #| with characters, the fist colon is interpreted as a:c, the second is :b which is the same as a:b
 tuple1 = sympy.symbols('a:cd:f') # (ad, ae, af, bd, be, bf, cd, ce, cf) #| here two ranges are interpreted, a:c and d:f
 
+#T# A symbol with several subscripts and superscripts can be created with the following syntax.
+
+# SYNTAX sympy.symbols('symbol1^superscript1_subscript1^superscript2_subscript2')
+
+tuple1 = sympy.symbols('var_1:5_1:3') # (var_1_1, var_1_2, var_2_1, var_2_2, var_3_1, var_3_2, var_4_1, var_4_2)
+tuple1 = sympy.symbols('var_1:5^1:3') # (var_1^1, var_1^2, var_2^1, var_2^2, var_3^1, var_3^2, var_4^1, var_4^2)
+
 #T# the subs function is used to substitute symbols and expressions for other symbols and expressions
 
 # SYNTAX expr1.subs(expr2, expr3)

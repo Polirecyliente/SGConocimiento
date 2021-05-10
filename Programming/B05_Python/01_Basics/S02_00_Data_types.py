@@ -150,6 +150,9 @@ list1 = [3, 5, 2, "s1"]
 list1 = ['elem1', 2, 'elem3']
 int1 = list1[1] # 2
 list1[1] = 5 # list1 == ['elem1', 5, 'elem3']
+
+#T# a list with a given size can be created with list comprehension
+list1 = [[None for it1 in [1, 2, 3]] for it2 in [1, 2]] # [[None, None, None], [None, None, None]]
 # |-----
 
 #C# - Tuples

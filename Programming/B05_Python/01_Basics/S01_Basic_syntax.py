@@ -12,6 +12,7 @@
 #C# Statements
 #C# Multiline statements
 #C# Multistatement lines
+#C# Metadata
 
 #T# Beginning of content
 
@@ -158,4 +159,11 @@ list1 = ['Mon', 'Wed'
 # |-------------------------------------------------------------
 #T# multiple statements in the same line are separated with a semicolon
 int1 = 9; int2 = 7; int3 = 0
+# |-------------------------------------------------------------
+
+#C# Metadata
+
+# |-------------------------------------------------------------
+#T# the character encoding of a python file can be declared with the `coding` metadata placed at the start of the file, for example:
+# coding=utf-8
 # |-------------------------------------------------------------

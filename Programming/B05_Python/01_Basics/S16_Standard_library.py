@@ -525,6 +525,39 @@ dict1.setdefault('key2', 'val2') # 85
 list1 = [1, 3, 5]
 list2 = ['a', 'c', 'e']
 dict1 = dict(zip(list1, list2)) # {1: 'a', 3: 'c', 5: 'e'} #| the return of the zip function must be casted to dictionary because the zip function returns a zip object
+
+#T# Sort a dictionary with the `sorted` function.
+
+# SYNTAX sorted(dict1, kwargs1)
+#T# the kwargs1 are optional
+
+dict1 = {'c': 5, 'a': 7, 'b': 1}
+list1 = sorted(dict1) # ['a', 'b', 'c']
+
+#T# The `sorted` function returns a list.
+
+#T# the `key` kwarg sets the sorting function, so the sorting is made according to the return value of that function
+
+dict1 = {'cc': 5, 'aaa': 7, 'b': 1}
+list1 = sorted(dict1, key = len) # ['b', 'cc', 'aaa']
+
+#T# As can be seen, the function in the `key` kwarg, takes the individual list elements being sorted as its argument, this explains the syntaxes for sorting a dictionary by its keys and by its values.
+
+#T# To get the dictionary, sorted by its keys use the following syntax.
+
+# SYNTAX dict(sorted(dict1.items(), key = lambda arg: arg[0]))
+
+dict1 = {'c': 5, 'a': 7, 'b': 1}
+dict2 = dict(sorted(dict1.items(), key = lambda arg: arg[0]))
+# {'a': 7, 'b': 1, 'c': 5}
+
+#T# To get the dictionary, sorted by its values use the following syntax.
+
+# SYNTAX dict(sorted(dict1.items(), key = lambda arg: arg[1]))
+
+dict1 = {'c': 5, 'a': 7, 'b': 1}
+dict2 = dict(sorted(dict1.items(), key = lambda arg: arg[1]))
+# {'b': 1, 'c': 5, 'a': 7}
 # |-------------------------------------------------------------
 
 #C# Datetime functions

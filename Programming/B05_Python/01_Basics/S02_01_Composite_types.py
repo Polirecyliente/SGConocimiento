@@ -178,6 +178,8 @@ list1.append("append_elem") # list1 == ['elem1', 2, 'elem3', 'append_elem']
 list1 = ['elem1', 2, 'elem3', 'append_elem']
 list1.remove('elem3') # list1 == ['elem1', 2, 'append_elem']
 
+#T# if a list has repeated elements, and one of them is removed, then the first repetition is removed
+
 #T# extend a list, appending all elements from another
 
 # SYNTAX list1.extend(list2)
@@ -203,6 +205,33 @@ list1.insert(4, 'inserted_elem') # list1 == ['elem1', 2, 'append_elem', 'a', 'in
 list1 = ['elem1', 2, 'append_elem', 'a', 'inserted_elem', 'b']
 list1.pop(-4) # 'append_elem'
 # list1 == ['elem1', 2, 'a', 'inserted_elem', 'b']
+
+#T# Copy a list with the `copy` function.
+
+# SYNTAX list2 = list1.copy()
+
+#C# - List comprehension
+
+# |-----
+#T# create a list with a for using a list comprehension statement
+list1 = [i1*i1 for i1 in range(5) if i1%2 == 0] # [0, 4, 16]
+
+#T# List comprehension can be used to create multidimensional arrays
+list1 = [[['a', 'b'], ['c', 'd'], ['e', 'f']], [['g', 'h'], ['i', 'j'], ['k', 'l']]]
+
+list2 = = [[[list1[it1][it2][it3] for it1 in [0, 1]] for it2 in [0, 2]] for it3 in [0, 1]]
+# [[['a', 'g'], ['e', 'k']], [['b', 'h'], ['f', 'l']]]
+#T# The new multidimensional array is built from the innermost list and then outwards, so `it1` varies first, then `it2`, and then `it3`. Initially `it1, it2, it3 = [0, 0, 0]`, then `it1, it2, it3 = [1, 0, 0]`, `it1, it2, it3 = [0, 2, 0]`, `it1, it2, it3 = [1, 2, 0]`, `it1, it2, it3 = [0, 0, 1]`, `it1, it2, it3 = [1, 0, 1]`, `it1, it2, it3 = [0, 2, 1]`, and lastly `it1, it2, it3 = [1, 2, 1]`.
+
+#T# Each dimension of the list has as many elements as its iterator, if `it2` had three elements then its corresponding list would have three elements.
+
+#T# The iterators can be placed in any order, for example:
+
+list1 = [[['a', 'b'], ['c', 'd'], ['e', 'f']], [['g', 'h'], ['i', 'j'], ['k', 'l']]]
+list2 = [[[list1[it1][it2][it3] for it2 in [0, 2]] for it3 in [0, 1]] for it1 in [0]]
+# [[['a', 'e'], ['b', 'f']]]
+# |-----
+
 # |-------------------------------------------------------------
 
 #C# Tuples

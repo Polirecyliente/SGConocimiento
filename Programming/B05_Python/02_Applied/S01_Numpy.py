@@ -196,6 +196,16 @@ arr1 = np.array([1, 2, 2, 3, 4, 2])
 tuple1 = np.where(arr1 == 2) # (array([1, 2, 5]),)
 tuple1 = np.where(arr1 > 2)  # (array([3, 4]),)
 
+#T# The `argmin` function returns the index of the first minimum element from an array
+
+list1 = [5, 4, 2, 6, 7, 7]
+int1 = np.argmin(list1) # 2
+
+#T# The `argmax` function returns the index of the first maximum element from an array
+
+list1 = [5, 4, 2, 6, 7, 7]
+int1 = np.argmax(list1) # 4
+
 #T# the searchsorted function performs a binary search on sorted arrays from smallest to largest, it doesn't return an index where a match is found, but rather an index where the searched number should be inserted to maintain sorting
 
 # SYNTAX np.searchsorted(array1, num1)
@@ -417,6 +427,15 @@ int1 = np.random.choice(np.array([1, 2, 3, 4])) # 2 #| or other
 #C# - Arithmetic
 
 # |-----
+#T# The `sum` function sums the elements of a single array
+arr1 = np.array([[1, 2, 3, 4], [3, 4, 5, 6]])
+int1 = np.sum(arr1) # 28
+
+#T# The `sum` function can sum the elements of an array in a given axis
+arr1 = np.array([[1, 2, 3, 4], [3, 4, 5, 6]])
+arr2 = np.sum(arr1, axis = 0) # array([ 4,  6,  8, 10])
+arr3 = np.sum(arr1, axis = 1) # array([10, 18])
+
 #T# the add function adds two arrays element-wise, it supports array broadcasting
 arr1 = np.array([[1, 2, 3, 4], [3, 4, 5, 6]])
 arr2 = np.array([4, 3, 2, 1])
