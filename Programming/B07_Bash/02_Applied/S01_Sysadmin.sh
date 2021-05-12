@@ -216,11 +216,11 @@ dpkg-query -L jfsutils
 #T# get the package that installed a given file with dpkg -S file
 dpkg -S $(which ls)
 
-#T# get the packages that contain and will install a given file
+#T# get the packages that contain and will install a given file with the `apt-file` program (this can be installed with `sudo apt install apt-file`)
 # SYNTAX apt-file search file
 #T# but first update the cache
-# SYNTAX apt-file update
-apt-file update
+# SYNTAX sudo apt-file update
+sudo apt-file update
 apt-file search reiserfsck
 
 #T# check the dependencies of a package

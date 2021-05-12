@@ -315,6 +315,41 @@ This diagram shows the interactions between the operating system parts and the h
   : In a program that uses the CLI of the operating system, the program can output detailed information about its execution. This is called verbose output, because the program prints more information than normal.
 :::
 
+::: term
+**Application**
+  : A type of program that is intended to be used by an user (as opposed to programs used by the computer, like the operating system). Applications are commonly used as tools by the user. Most applications have a GUI, so CLI applications are more often called programs or commands.
+:::
+
+::: term
+**Web application**
+  : An application that is used via a web browser.
+:::
+
+::: term
+**Frontend**
+  : In web applications, the frontend is the user interface shown in the browser.
+:::
+
+::: term
+**Backend**
+  : In web applications, the backend is the server, database, APIs, programs, etcetera, that handle the requests made by the user in the frontend.
+:::
+
+::: term
+**Code library**
+  : A set of code that is organized for given purposes or uses. Code from a library can be used from code written by the user, by importing the library. This is used so that the code of the library does not need to be rewritten each time, but rather it's written once in the library, and reused as many times as needed in code written by the user.
+:::
+
+::: term
+**API**
+  : API stands for Application Programming Interface. An API is a set of code like a library, but this code calls other code outside of itself. For code written by the user, an API is used the same as a library (an API can be imported, for example), but the difference is that the API calls code that runs outside of itself, so the API acts as an interface between the code written by the user, and the code that the API calls. In a sense an API is a library that calls another library or libraries to work.
+:::
+
+::: term
+**Framework**
+  : A set of code that calls code written by the user, to achieve a given purpose. This concept is opposite, in a sense, to the concept of a library. In a library, the code written by the user, calls code from the library. In a framework, the framework calls code written by the user, so the roles are inverted. This loss of control from the user, is useful for creating applications that are very similar to each other, that only differ in a small amount of code, that can then be written by the user.
+:::
+
 ## Features of a programming language
 
 Programming languages have several features, like:

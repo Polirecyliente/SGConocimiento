@@ -9,13 +9,19 @@ This document is about the C programming language and its features.
 
 The C language is a compiled language, which means that a compiler is needed to convert C source code into binary code.
 
+This project uses the `gcc` compiler to compile C source code files into binary code files. GCC stands for GNU Compiler Collection. GNU stands for GNU is Not Unix, GNU is a free and open source software project.
+
+To install the `gcc` compiler, the following command can be used, in an Ubuntu machine.
+
+``` bash
+sudo apt install build-essential
+```
+
 The concepts used here are defined in [Programming definitions](../01_Programming_definitions.md).
 
 # BASIC USAGE
 
 Source code files of the C language have the file extension `.c` and they are written in a plain text format.
-
-This project uses the `gcc` compiler to compile C source code files into binary code files. GCC stands for GNU Compiler Collection. GNU stands for GNU is Not Unix, GNU is a free and open source software project.
 
 Compile a C source code file `/path/to/file1.c` into a binary code file `/path/to/bin1`, by using the following command in a shell.
 
