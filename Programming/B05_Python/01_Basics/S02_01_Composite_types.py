@@ -17,6 +17,7 @@
 #C# Sets
 #C# - Comparisons between sets
 #C# Multidimensional composite types
+#C# Comprehensions
 
 #T# Beginning of content
 
@@ -210,28 +211,9 @@ list1.pop(-4) # 'append_elem'
 
 # SYNTAX list2 = list1.copy()
 
-#C# - List comprehension
+#T# Elements in a list can be swapped (or switched) with the following syntax
 
-# |-----
-#T# create a list with a for using a list comprehension statement
-list1 = [i1*i1 for i1 in range(5) if i1%2 == 0] # [0, 4, 16]
-
-#T# List comprehension can be used to create multidimensional arrays
-list1 = [[['a', 'b'], ['c', 'd'], ['e', 'f']], [['g', 'h'], ['i', 'j'], ['k', 'l']]]
-
-list2 = = [[[list1[it1][it2][it3] for it1 in [0, 1]] for it2 in [0, 2]] for it3 in [0, 1]]
-# [[['a', 'g'], ['e', 'k']], [['b', 'h'], ['f', 'l']]]
-#T# The new multidimensional array is built from the innermost list and then outwards, so `it1` varies first, then `it2`, and then `it3`. Initially `it1, it2, it3 = [0, 0, 0]`, then `it1, it2, it3 = [1, 0, 0]`, `it1, it2, it3 = [0, 2, 0]`, `it1, it2, it3 = [1, 2, 0]`, `it1, it2, it3 = [0, 0, 1]`, `it1, it2, it3 = [1, 0, 1]`, `it1, it2, it3 = [0, 2, 1]`, and lastly `it1, it2, it3 = [1, 2, 1]`.
-
-#T# Each dimension of the list has as many elements as its iterator, if `it2` had three elements then its corresponding list would have three elements.
-
-#T# The iterators can be placed in any order, for example:
-
-list1 = [[['a', 'b'], ['c', 'd'], ['e', 'f']], [['g', 'h'], ['i', 'j'], ['k', 'l']]]
-list2 = [[[list1[it1][it2][it3] for it2 in [0, 2]] for it3 in [0, 1]] for it1 in [0]]
-# [[['a', 'e'], ['b', 'f']]]
-# |-----
-
+# SYNTAX list1[elem1], list1[elem2] = list1[elem2], list1[elem1]
 # |-------------------------------------------------------------
 
 #C# Tuples
@@ -409,4 +391,44 @@ for dim1 in arr1:
 # 10
 # 11
 # 12
+# |-------------------------------------------------------------
+
+#C# Comprehensions
+
+# |-------------------------------------------------------------
+#T# Comprehensions are a way to create composite types.
+
+#T# create a list with a for using a list comprehension statement
+list1 = [it1*it1 for it1 in range(5) if it1%2 == 0] # [0, 4, 16]
+
+#T# A list comprehension can be mixed with the ternary operator to create a list of values depending on a condition.
+
+# SYNTAX [(ternary_operation1) for iterator1]
+#T# the ternary_operation1 can use the iterator index from iterator1
+
+list1 = [(2*it1 if it1%2 == 0 else 7) for it1 in range(5)] # [0, 7, 4, 7, 8]
+
+#T# List comprehension can be used to create multidimensional arrays
+list1 = [[['a', 'b'], ['c', 'd'], ['e', 'f']], [['g', 'h'], ['i', 'j'], ['k', 'l']]]
+
+list2 = [[[list1[it1][it2][it3] for it1 in [0, 1]] for it2 in [0, 2]] for it3 in [0, 1]]
+# [[['a', 'g'], ['e', 'k']], [['b', 'h'], ['f', 'l']]]
+#T# The new multidimensional array is built from the innermost list and then outwards, so `it1` varies first, then `it2`, and then `it3`. Initially `it1, it2, it3 = [0, 0, 0]`, then `it1, it2, it3 = [1, 0, 0]`, `it1, it2, it3 = [0, 2, 0]`, `it1, it2, it3 = [1, 2, 0]`, `it1, it2, it3 = [0, 0, 1]`, `it1, it2, it3 = [1, 0, 1]`, `it1, it2, it3 = [0, 2, 1]`, and lastly `it1, it2, it3 = [1, 2, 1]`.
+
+#T# Each dimension of the list has as many elements as its iterator, if `it2` had three elements then its corresponding list would have three elements.
+
+#T# The iterators can be placed in any order, for example:
+
+list1 = [[['a', 'b'], ['c', 'd'], ['e', 'f']], [['g', 'h'], ['i', 'j'], ['k', 'l']]]
+list2 = [[[list1[it1][it2][it3] for it2 in [0, 2]] for it3 in [0, 1]] for it1 in [0]]
+# [[['a', 'e'], ['b', 'f']]]
+
+#T# set comprehensions are made with the same syntax as list comprehensions
+set1 = {it1 for it1 in range(5)} # {0, 1, 2, 3, 4}
+
+#T# dictionary comprehensions are made with the following syntax
+
+# SYNTAX { key1: value1 for key1, value1 in [('k1', 'v1'), ('kN', 'vN')] }
+
+dict1 = { key1: value1 for key1, value1 in [('k1', 5), ('k2', 9)] } # {'k1': 5, 'k2': 9}
 # |-------------------------------------------------------------

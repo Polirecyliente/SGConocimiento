@@ -58,6 +58,20 @@ list1 = [-11, 3, -25]
 map1 = map(abs, list1)
 list2 = list(map1) # [11, 3, 25]
 
+#T# if the function being mapped has several arguments, they can be used too
+
+# SYNTAX map(func1, arr1, arr2, arrN)
+#T# `arr1`, `arr2`, `arrN` are arrays of arguments, in this case `func1` has the arguments `arg1`, `arg2`, `argN` respectively.
+
+#T# The sizes of of `arr1` through `arrN` do not need to be equal. `func1` will be mapped to the arrays of arguments using the minimum of their sizes.
+
+def f1(a1, a2, a3):
+    return a1 + 2*a2 + 3*a3
+
+list1 = list(map(f1, [1, 2, 3], [1, 2], [1])) # [6]
+
+list1 = list(map(f1, [1, 2, 3], [1, 2], [1, 2])) # [6, 12]
+
 #T# the filter function uses a given function to filter the elements of an array and returns a filter object that can be cast as an array
 
 # SYNTAX filter(func1, arr1)
