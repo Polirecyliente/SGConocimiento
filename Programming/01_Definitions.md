@@ -179,6 +179,27 @@ As shown in the diagram, the interaction between computer and user forms a loop.
 In a future it may be possible for memory and storage to be a single entity, that quickly feeds instructions to the processor, and can store as much data and programs as needed.
 
 ::: term
+**Plain text format**
+  : A file format that consists of only text. In a file with a plain text format, the data is stored as text.
+\\\
+  Programs that read plain text files can render them in different ways. For example the SVG format stands for Scalable Vector Graphics. SVG is a plain text format for images, so a program could render SVG as text, and another program could render SVG as an image.
+:::
+
+::: term
+**Software**
+  : Programs, including their source code, their binary code, and any intermediate code.
+:::
+
+::: term
+**Hardware**
+  : The physical parts of a computer, like the monitor, the CPU, etcetera.
+:::
+
+## Operating system
+
+An operating system is a program, it can be divided into a few main parts: the **kernel**, the **shell**, the **GUI**, and the **system programs**.
+
+::: term
 **Operating system**
   : A program designed to coordinate the parts of a computer, including its attached peripherics. The operating system coordinates the feeding of instructions from memory to processor. It coordinates the retrieval of programs and data from storage into memory. It coordinates the reception of input from the keyboard. It coordinates the output to the monitor.
 \\\
@@ -221,27 +242,6 @@ In a computer, programs access files and directories in the file system hierarch
 :::
 
 ::: term
-**Plain text format**
-  : A file format that consists of only text. In a file with a plain text format, the data is stored as text.
-\\\
-  Programs that read plain text files can render them in different ways. For example the SVG format stands for Scalable Vector Graphics. SVG is a plain text format for images, so a program could render SVG as text, and another program could render SVG as an image.
-:::
-
-::: term
-**Software**
-  : Programs, including their source code, their binary code, and any intermediate code.
-:::
-
-::: term
-**Hardware**
-  : The physical parts of a computer, like the monitor, the CPU, etcetera.
-:::
-
-## Parts of an operating system
-
-An operating system can be divided into a few main parts: the **kernel**, the **shell**, the **GUI**, and the **system programs**.
-
-::: term
 **Kernel**
   : A program that acts as the coordinator between the parts of the computer, so the kernel fulfills the main purpose of the operating system.
 :::
@@ -251,6 +251,11 @@ An operating system can be divided into a few main parts: the **kernel**, the **
   : An interpreter that can receive input from the keyboard, to receive instructions from the user. Instructions in a shell are called **commands**. The shell sends the commands to the **kernel**, to have them executed by the computer.
 \\\
   The shell can also be called 'terminal', because shells are commonly designed to look like terminal screens. The shell is also called the Command Line Interface (acronymized as CLI), because the shell acts as an interface between the computer and the user, in which the user can input commands in the shell, and like any interpreter, one command is inputted per line.
+:::
+
+::: term
+**Shell prompt**
+  : The text in a the shell, before the cursor, that starts every new line. Common prompts contain the name of the computer, the user, and the current directory (some prompts may show the datetime, or other information). The prompt can be edited.
 :::
 
 ::: term
@@ -287,6 +292,20 @@ flowchart TB
 ```
 
 This diagram shows the interactions between the operating system parts and the hardware. The diagram does not imply location, only relationship, because for example the kernel is stored in storage, and is loaded in memory when the computer is turned on.
+
+::: term
+**Environment variable**
+  : A variable created by the operating system. Environment variables are used to store values that can be used by programs. A program can be written to read the value of an environment variable, and change its execution according to said value.
+\\\
+  One of the most common environment variables, is called 'PATH'. The PATH environment variable stores a list of directories where the shell searches for programs. For example, when executing `program1` in a shell, the shell searches for a program called 'program1' in each of the directories listed in the PATH environment variable.
+:::
+
+::: term
+**Virtual environment**
+  : A shell with modified environment variables.
+\\\
+  A common use of virtual environments, is to modify the PATH environment variable. This allows installing programs in one environment, that are not visible in any other environment, by making the PATH to include the directory where those programs are installed. Other environments do not have this directory in their PATH environment variable, and so other environments can't access those programs, unless the whole path to them is specified.
+:::
 
 ::: term
 **Standard input**
@@ -912,4 +931,85 @@ A character encoding can hold each character in a constant amount of bytes, or i
   There are three main character encodings that implement the Unicode character set, they are UTF-8, UTF-16, and UTF-32. UTF stands for Unicode Transformation Format. The number indicates the amount of bits used per character, so UTF-8 allocates 8 bits per character, and when more characters are needed, UTF-8 allocates a second set of 8 bits per character. UTF-16 allocates 16 bits per character. UTF-32 allocates 32 bits per character, which uses more memory or storage than the other two character encodings to hold the same characters.
 \\\
   UTF-8 is the most used to write in English because it uses the least amount of memory or storage for writing in English and other languages that use the Latin alphabet.
+:::
+
+# DATABASES
+
+A database is a place used to store data. The idea of making a database is to organize the stored data or information.
+
+::: term
+**Relational database**
+  : The most common kind of database when this was written. A relational database is made with tables, each table is called a relation. The data is measured or collected, each measurement is called a **record**. Each record has a set of attributes, when creating a record, the value of each attribute is measured or collected. The tables are made such that each row is a record, and each column is an attribute of the records (called a **field**). The name of each field acts as a column header. There are no row headers.
+:::
+
+::: term
+**Record**
+  : In a relational database, a record is a particular data measurement. Each record is a set of measured fields.
+:::
+
+::: term
+**Field**
+  : In a relational database, a field is also called an attribute, because each field represents a measurable attribute of each record.
+:::
+
+The following shows the structure of a relational database.
+
+: Relation1
+
+|     Field1     |     Field2     |     FieldN     |
+| :------------: | :------------: | :------------: |
+| Record1_Field1 | Record1_Field2 | Record1_FieldN |
+| Record2_Field1 | Record2_Field2 | Record2_FieldN |
+| RecordM_Field1 | RecordM_Field2 | RecordM_FieldN |
+
+
+: RelationZ
+
+|     Field1     |     Field2     |     FieldQ     |
+| :------------: | :------------: | :------------: |
+| Record1_Field1 | Record1_Field2 | Record1_FieldQ |
+| Record2_Field1 | Record2_Field2 | Record2_FieldQ |
+| RecordP_Field1 | RecordP_Field2 | RecordP_FieldQ |
+
+This database contains the relations from Relation1 to RelationZ. Relation1 has the fields from Field1 to FieldN, with M records. RelationZ has the fields from Field1 to FieldQ, with P records.
+
+To populate Relation1, then Record1, Record2, RecordM, are measured or collected. Measuring RecordM, means measuring the specific values RecordM_Field1, RecordM_Field2, RecordM_FieldN.
+
+Here is a small example of a possible database.
+
+: Data about people
+
+| Name    | Age |
+| :-----: | :-: |
+| Person1 | 752 |
+| Person2 |  88 |
+
+::: term
+**RDMS**
+  : RDMS stands for Relational Database Management System. It can be a software program that allows managing a relational database, like creating new databases, new tables, new fields, or deleting them, among other managing operations.
+:::
+
+::: term
+**CRUD**
+  : CRUD stands for Create Read Update Delete. There are the basic four managing operations in a system of databases.
+\\\
+  The create operations allow creating new databases, new users that can access the database, etcetera.
+\\\
+  The read operations allow reading and retrieving records from the databases.
+\\\
+  The update operations allow changing parts of the databases, like their names, or the names of the fields, or update the records, etcetera.
+\\\
+  The delete operations allow deleting parts of the databases, like users of the databases, records, fields, tables, etcetera.
+:::
+
+::: term
+**SQL**
+  : SQL stands for Structured Query Language. An SQL is any Domain Specific Language that allows doing the CRUD operations on a system of databases, by following an specification called the SQL specification (which states how to write the CRUD operations).
+\\\
+  An example of an SQL is MySQL, which is a language that allows the CRUD operations, from creating new databases, to maintaining and deleting them and all their parts.
+:::
+
+::: term
+**Database driver**
+  : An API between a system of databases and a programming language. A database driver is used to do the CRUD operations by writing them in a given programming language. If a database is managed with an SQL, then the database driver is an API between the SQL and a programming language, and so SQL instructions can be written in the programming language, instead of writing them in SQL.
 :::

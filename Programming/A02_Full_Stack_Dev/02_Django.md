@@ -7,11 +7,13 @@ toc-title: Table of Contents
 
 Django is a framework to create the backend of web applications.
 
-Django can be installed in a virtual environment using the `pipenv` program
+Django can be installed as follows.
 
 ``` bash
-pipenv install django
+pip3 install Django
 ```
+
+Django is commonly installed in a virtual environment (which can be created, for example, with `venv`).
 
 # BASIC USAGE
 

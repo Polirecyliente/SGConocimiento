@@ -8,6 +8,7 @@
 #C# File manipulation
 #C# Signal handling
 #C# Multithreading
+#C# Virtual environments
 
 #T# Beginning of content
 
@@ -252,4 +253,44 @@ thread4 = threading.main_thread() # <_MainThread(MainThread, started 14026301888
 
 #T# the main thread (this script) waits for a thread to end with the join function
 thread1.join() #| this script only continues after thread1 has finished
+# |-------------------------------------------------------------
+
+#C# Virtual environments
+
+# |-------------------------------------------------------------
+#T# To create virtual environments with Python, the `python3-venv` package should be installed.
+
+# ``` bash
+# sudo apt install python3-venv
+# ```
+
+
+# ----
+
+#T# Create a virtual environment doing:
+
+# ``` bash
+# python3 -m venv environment1
+# ```
+
+#T# This creates a new directory named `environment1` in the current directory.
+
+
+# ----
+
+#T# A virtual environment must be activated to start it
+
+# ``` bash
+# source /path/to/environment1/bin/activate
+# ```
+
+
+# ----
+
+#T# To finish a virtual environment and go back to the previous environment do:
+
+# ``` bash
+# deactivate
+# ```
+
 # |-------------------------------------------------------------

@@ -100,6 +100,11 @@ bool1 = "g" in str1 # True
 
 str1 = "string: %s, digit: %d" %("S1", 514) # 'string: S1, digit: 514'
 
+#T# the syntax of the format modifiers and format specifiers is
+# SYNTAX %flags1width1.precision1type1
+
+str1 = "number: %9.5f" %(12.889) # 'number:  12.88900'
+
 #T# similar format can be done using the format function
 
 # SYNTAX 'str1 {} str2 {} str3'.format(var1, var2)
