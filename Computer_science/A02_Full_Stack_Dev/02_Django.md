@@ -7,6 +7,8 @@ toc-title: Table of Contents
 
 Django is a framework to create the backend of web applications.
 
+# INSTALLATION
+
 Django can be installed as follows.
 
 ``` bash

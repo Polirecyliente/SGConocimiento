@@ -1,5 +1,5 @@
 ---
-title: PROGRAMMING DEFINITIONS
+title: DEFINITIONS
 toc-title: Table of Contents
 ---
 
@@ -13,11 +13,14 @@ toc-title: Table of Contents
 
 # INTRODUCTION
 
-This document contains the definitions needed to understand computer programming.
-
-The directory that contains this file is called 'Programming', in this context the word 'programming' means 'computer programming'.
+This document contains the definitions needed to understand computer science.
 
 # BASIC CONCEPTS {.break-before-class}
+
+::: term
+**Device**
+  : Anything built using electronic circuits as part of it, that fulfills a purpose. For example, computers, cellphones, toasters, etcetera.
+:::
 
 ::: term
 **Computer**
@@ -197,8 +200,6 @@ In a future it may be possible for memory and storage to be a single entity, tha
 
 ## Operating system
 
-An operating system is a program, it can be divided into a few main parts: the **kernel**, the **shell**, the **GUI**, and the **system programs**.
-
 ::: term
 **Operating system**
   : A program designed to coordinate the parts of a computer, including its attached peripherics. The operating system coordinates the feeding of instructions from memory to processor. It coordinates the retrieval of programs and data from storage into memory. It coordinates the reception of input from the keyboard. It coordinates the output to the monitor.
@@ -240,6 +241,8 @@ In a computer, programs access files and directories in the file system hierarch
 \\\
   The file extension is written at the end of the file name after a dot, for example `file1.fmt` is a file with extension `fmt`. It can also be said that `fmt` is the format of the file.
 :::
+
+An operating system can be divided into a few main parts: the **kernel**, the **shell**, the **GUI**, and the **system programs**.
 
 ::: term
 **Kernel**
@@ -1012,4 +1015,43 @@ Here is a small example of a possible database.
 ::: term
 **Database driver**
   : An API between a system of databases and a programming language. A database driver is used to do the CRUD operations by writing them in a given programming language. If a database is managed with an SQL, then the database driver is an API between the SQL and a programming language, and so SQL instructions can be written in the programming language, instead of writing them in SQL.
+:::
+
+# NETWORKS
+
+::: term
+**Protocol**
+  : The same as a standard, but for networks.
+:::
+
+::: term
+**Computer network**
+  : A set of computers that can communicate with each other. This communication is possible when the computers follow a given protocol or set of protocols, so that they understand the data sent by other computers, and can send data understandable by the other computers in the network.
+:::
+
+::: term
+**Network**
+  : In a more general sense, a network can connect devices, not only computers. For this to happen, the devices must be able to connect to a network.
+:::
+
+::: term
+**Internet**
+  : A network, to which all computers and devices in the planet can be connected. The Internet makes it possible to connect any two devices in the planet Earth.
+:::
+
+::: term
+**Network topology**
+  : A particular way to connect the devices in a network.
+\\\
+  Many different ways to connect devices can be conceived. For example, in a computer network, there can be a central device, that communicates with all computers, and computers don't communicate with each other, but rather they communicate only with the central device, and then the central device routes the communications to and from the computers. Other possibility is for computers to be connected directly to each other, and so on.
+:::
+
+::: term
+**Client-server topology**
+  : One of the most common network topologies when this was written. In this topology, a server serves files, and there can be one or many clients that request those files. The communication would go like this: the client sends a request for a file to the server, then the server sends the file to the client. The file can be plain text, an image, or any kind of file.
+:::
+
+::: term
+**CDN**
+  : CDN stands for Content Distribution Network. A CDN is a server that can cache (store) some of the contents of a given server, so that when a client sends a request to the given server for that content, the client can be served by the nearest server. This reduces the necessary time to serve the client.
 :::
