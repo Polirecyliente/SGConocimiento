@@ -53,3 +53,7 @@ DROP USER IF EXISTS renamed1@localhost;
 
 --T-- DROP ROLE [IF EXISTS] role1@host1
 DROP ROLE IF EXISTS midPriviRole1@localhost, role2@localhost;
+
+--T-- An anonymous user is an user that can log into a MySQL server without having a username, the idea of this is to make it easier to do tests, with the risk of anyone logging in, so after testing the anonymous user option should be turned off, this can be done by following the instructions of this command:
+
+-- `sudo mysql_secure_installation`bash

@@ -515,6 +515,9 @@ cat tarDebug.tar | tar xf -
 #T# extract the files from a gzip file with tar xzf file.tar.gz
 tar xzf file.tar.gz
 
+#T# extract a .tgz file
+tar xzf file.tgz
+
 #T# extract the files from a bzip2 file with tar xjf file.tar.bz2
 tar xjf file.tar.bz2
 

@@ -74,7 +74,7 @@
     <body>
 
 <!-- #T# the <a> tag is the anchor tag, it's used to link to another location -->
-<!-- #T#     the href attribute of the <a> tag stores the location being linked to, when linking to local files, an absolute path (like /path/to/file1), or a relative path (like ../../dir1/file1), can be given, the relative path is resolved from the directory of this HTML file  -->
+<!-- #T#     the href attribute of the <a> tag stores the location being linked to, when linking to local files, an absolute path (like /path/to/file1), or a relative path (like ../../dir1/file1), can be given, the relative path is resolved from the directory of the HTML file  -->
 <!-- #T#     the tabindex attribute is a string number that sets the order in which the tab key focused the link -->
 <!-- #T#     the title attribute is a string that is shown in browsers when hovering the mouse over this tag  -->
 <!-- #T#     the accesskey is a string that sets a given key 'key1', so that when pressing Alt+'key1' or Alt+Shift+'key1' the link is accessed -->
@@ -117,7 +117,7 @@
 <!-- #T# the <head> tag is used to place most of the metadata of an HTML file, the <head> tag must be placed before the <body> tag -->
     <head>
 
-<!-- #T# the <title> tag is used to store the metadata title of the HTML file, this is commonly used by browsers as the name of the tab displaying this HTML file -->
+<!-- #T# the <title> tag is used to store the metadata title of the HTML file, this is commonly used by browsers as the name of the tab displaying the HTML file -->
         <title>
             Title of the HTML file
         </title>
@@ -127,14 +127,18 @@
 <!-- #T#     the name attribute and the content attribute are used together, the name attribute is a string that sets the name of the metadata, the content attribute is a string that sets the value of the metadata -->
         <meta charset="utf8">
         <meta name="author" content="Polirecyliente1">
-        <meta name="description" content="Metadata of this HTML file">
+        <meta name="description" content="Metadata of the HTML file">
         <meta name="keywords" content="html, metadata">
         <meta http-equiv="refresh" content="60"> <!-- #| this refreshes the page every 60 seconds automatically -->
 
-<!-- #T# the <link> tag is used to link this HTML file to external resources it needs, like for example a CSS file with the style to be applied to this HTML file -->
+<!-- #T# the <link> tag is used to link external resources to an HTML file, like for example a CSS file with the style to be applied to the HTML file -->
 <!-- #T#     the href attribute is the same as in the <a> tag -->
-<!-- #T#     the rel attribute is a string that sets the relationship between this HTML file and the external resource being linked -->
+<!-- #T#     the rel attribute is a string that sets the relationship between the HTML file and the external resource being linked to -->
         <link rel="stylesheet" href="/path/to/file1.css">
+
+<!-- #T# The <script> tag is used to include JavaScript code into the HTML file, the code is the content inside the tags, or alternatively, the `src` attribute points to a JavaScript file -->
+        <script src="/path/to/file1.js"></script>
+        <script>var var1 = 5;</script>
     </head>
     <body>
         Content
@@ -583,6 +587,25 @@
             <p>Time: <input type="time" name="timeVal"></p>
             <p>Datetime: <input type="datetime" name="dtVal"></p>
             <p>Colorpicker: <input type="color" name="colorVal"></p>
+
+<!-- #T# the <button> tag is the basic UI tag, it's used to create buttons -->
+<!-- #T#     the type attribute is the type of button, it can be: "reset" which resets the parent form, "submit" works as an <input> of type "submit", "button" to make a regular button -->
+<!-- #T#     the onclick attribute is used with the attribute `type="button"`, it specifies a JavaScript callback function that is called on the event of a click on the button -->
+            <button type="button" onclick="func1()">Button1 press here</button>
+            <script>function func1(){ alert("Button pressed"); }</script>
+
+<!-- #T#     Note that the onclick attribute does not work if the callback function is imported from a module. To use an imported function, as the callback function for an event, place it as the callback function of an `addEventListener` function in JavaScript, for example: -->
+
+            <script type="module" src="./module1.js"></script>
+            <button id="b1" type="button">Button1 press here</button>
+
+<!-- #T#     In the JavaScript module called module1.js: -->
+<!--
+import {func1} from "./file1.js";
+document.getElementById('b1').addEventListener("click", func1, false);
+-->
+
+<!-- #T#     Where `file1.js` defines and exports `func1` and is in the same directory as `module1.js` (they can be in different directories, for that just modify the paths accordingly) -->
 
 <!-- #T# the <textarea> tag is used to create a textarea -->
 <!-- #T#     the name attribute is the same as in the <input> tag -->

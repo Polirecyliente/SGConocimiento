@@ -1048,7 +1048,7 @@ Here is a small example of a possible database.
 
 ::: term
 **Client-server topology**
-  : One of the most common network topologies when this was written. In this topology, a server serves files, and there can be one or many clients that request those files. The communication would go like this: the client sends a request for a file to the server, then the server sends the file to the client. The file can be plain text, an image, or any kind of file.
+  : One of the most common network topologies when this was written. In this topology, a server serves files, and there can be one or many clients that request those files. The communication would go like this: the client sends a request for a file to the server, then the server serves the file (by sending it) to the client. The file can be plain text, an image, or any kind of file.
 :::
 
 ::: term

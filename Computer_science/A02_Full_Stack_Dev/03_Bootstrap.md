@@ -5,7 +5,7 @@ toc-title: Table of Contents
 
 # INTRODUCTION
 
-
+A framework that combines HTML, CSS and JavaScript, designed to create web pages to be viewed in mobile devices.
 
 # INSTALLATION
 
