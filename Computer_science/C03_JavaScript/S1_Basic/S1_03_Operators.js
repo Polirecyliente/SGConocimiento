@@ -24,3 +24,10 @@ res1 = (b > a);
 res1 = (b < a);
 res1 = (b >= a);
 res1 = (b <= a);
+
+//T// The difference between the operators `==` (called 'abstract comparison operator') and `===` (called 'strict comparison operator'), is that `==` checks if the values it compares, are equal, and `===` checks if the values it compares, are equal and their types are equal too. In this sense, `==` is more abstract than `===`.
+
+bool1 = (1 == "1")  // true
+bool1 = (1 === "1") // false
+
+//T// Although the values 1 and "1" are equal, their types are not.

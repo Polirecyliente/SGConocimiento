@@ -58,6 +58,27 @@ FROM
 WHERE
     buyPrice BETWEEN 20 AND 100;
 
+--T-- The falues for the BETWEEN clause can be strings too, in that case, the collation order is used
+
+SELECT * FROM db1.table1;
+
++--------+--------+--------+
+| field1 | field2 | field3 |
++--------+--------+--------+
+|     12 | bcde   |     54 |
+|     17 | mno    |    107 |
+|     28 | vwxyz  |    500 |
++--------+--------+--------+
+
+SELECT * FROM db1.table1 WHERE field2 BETWEEN 'ghi' AND 'qrst';
+
++--------+--------+--------+
+| field1 | field2 | field3 |
++--------+--------+--------+
+|     17 | mno    |    107 |
++--------+--------+--------+
+
+
 --T-- WHERE field LIKE '%ending'; the percent % acts as a regex quantifier
 SELECT
     employeeNumber,

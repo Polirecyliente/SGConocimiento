@@ -35,3 +35,10 @@ obj1.nestedObj =
         alert("In nested object");
     }
 };
+
+//T// Object Oriented Programming
+
+//T
+
+
+//T// The `prototype` property 

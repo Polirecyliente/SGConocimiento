@@ -77,10 +77,14 @@ str2="second str'ing"
 # SYNTAX \char1
 #T# an escape starts with a backslash \ and is followed by char1 which is other character or characters, most commonly char1 is a single character
 
-echo -e "Line1\n\$Line2" #| the -e flag is to enable the use of escaped characters inside a double quoted string
+echo -e "Line1\n\$Line2" #| the -e flag is to enable the use of escape sequences inside a double quoted string
 #T# the former prints
 # Line1
 # $Line2
+
+#T# The escaped characters are:
+#T#     \$, a literal dollar sign
+#T#     \", a literal double quote
 # |-------------------------------------------------------------
 
 #C# Expressions

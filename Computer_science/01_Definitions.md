@@ -19,7 +19,7 @@ This document contains the definitions needed to understand computer science.
 
 ::: term
 **Device**
-  : Anything built using electronic circuits as part of it, that fulfills a purpose. For example, computers, cellphones, toasters, etcetera.
+  : Anything built using electronic circuits as part of it, that fulfills a purpose. For example, computers, mobiles (like cellphones), toasters, etcetera.
 :::
 
 ::: term
@@ -115,6 +115,16 @@ This document contains the definitions needed to understand computer science.
 ::: term
 **Machine code**
   : Code written in assembly language. Assembly is a type of programming language in which the instructions are written directly, using words and numbers instead of only binary numbers.
+:::
+
+::: term
+**Software project**
+  : A set of source code files that are meant to create a single program file.
+:::
+
+::: term
+**Build a project**
+  : The process of converting a software project into a single program file. The build is created by compiling all the different files of the software project, into the program itself.
 :::
 
 # PARTS OF A COMPUTER
@@ -370,6 +380,18 @@ This diagram shows the interactions between the operating system parts and the h
 ::: term
 **Framework**
   : A set of code that calls code written by the user, to achieve a given purpose. This concept is opposite, in a sense, to the concept of a library. In a library, the code written by the user, calls code from the library. In a framework, the framework calls code written by the user, so the roles are inverted. This loss of control from the user, is useful for creating applications that are very similar to each other, that only differ in a small amount of code, that can then be written by the user.
+:::
+
+::: term
+**Computing platform**
+  : The environment in which a program is designed to be executed. For an application, the computing platform is the hardware plus the operating system, for a web application, the computing platform is the browser.
+:::
+
+::: term
+**SDK**
+  : SDK stands for Software Development Kit. An SDK is a set of tools meant to help in software development, so an SDK is commonly composed of documentation, tutorials, APIs and libraries, compilers, etcetera.
+\\\
+  SDKs are commonly of two types: SDKs to develop code in a particular language, and SDKs to develop code for a particular computing platform.
 :::
 
 ## Features of a programming language
@@ -652,6 +674,11 @@ Programming languages have several features, like:
   Arrays are stored in memory, so accessing an array out of bounds means accessing other memory in the program that is outside the array. This is undefined behavior, because the programming language can't predict what would be the result of that array access out of bounds.
 :::
 
+::: term
+**Builtin**
+  : The set of names that come predefined in a programming language. A programming language can have builtins like functions, constants, classes, etcetera. They can be used without importing any external package or library, because they come built in.
+:::
+
 ### Features of functions
 
 Functions can come with several different features, depending on how they are written. Many features are not supported by all programming languages.
@@ -741,6 +768,8 @@ Functions can come with several different features, depending on how they are wr
 ::: term
 **Object oriented language**
   : An structured language in which objects can be created. Objects are composite data types that can store both variables (here called attributes) and functions (here called methods).
+\\\
+  Objects can also have properties, which are attributes accessed via methods. The methods that write the value of a property are called 'setters', and the methods that read the value of a property are called 'getters'.
 :::
 
 ::: term
@@ -1052,6 +1081,43 @@ Here is a small example of a possible database.
 :::
 
 ::: term
+**Internet address**
+  : A number that uniquely identifies a server on the Internet. There are two versions of this number: IPv4 and IPv6 (IP stands for Internet Protocol).
+:::
+
+::: term
+**Internet domain**
+  : A string of characters that represent an Internet address. The idea of using Internet domains, is to use words instead of numbers, to interact with servers.
+\\\
+  An internet domain has at least two parts, separated by a dot, like this: 'domain1.ccTLD1'. ccTLD stands for country code Top-Level Domain, it's a two letter string that identifies the country where the Internet domain is registered. The reason that the ccTLD is called the top level domain, is because the level of the domain increases from left to right. This allows creating subdomains, for example: 'subdomainN.subdomain1.domain1.ccTLD1', in here 'domain1' has N subdomains. Subdomains have a lower level than the domain, in the sense that subdomains are contained in the domain.
+:::
+
+::: term
+**DNS**
+  : DNS stands for Domain Name System, it's a system in charge of converting Internet addresses into Internet domains and vice versa. When a new server is born, and the owners of the server want to give it an Internet domain, they rent or buy from the DNS, the name that will be the Internet domain for the server. For example, a server with Internet address 98.89.90.NN can have an Internet domain 'domain1.cc1'. The DNS stores this information, and with it is able to map the Internet address to the Internet domain, and vice versa.
+:::
+
+::: term
 **CDN**
   : CDN stands for Content Distribution Network. A CDN is a server that can cache (store) some of the contents of a given server, so that when a client sends a request to the given server for that content, the client can be served by the nearest server. This reduces the necessary time to serve the client.
+:::
+
+::: term
+**Webpage**
+  : The basic type of file that is served by servers to clients. Webpages are commonly HTML files, with .html extension, and they are served by the server to the client, using the HTTP protocol. Webpages can contain multimedia files like images, audios, videos, etcetera, this way the server can serve multimedia files to clients.
+:::
+
+::: term
+**Browser**
+  : An application that can display webpages. When a server serves a webpage to a client, the application that receives the webpage is the browser. This is why browsers are also called user agents, because browsers act as agents to represent the user before the server.
+:::
+
+::: term
+**Web component**
+  : A set of code that generates a specific part of a webpage. The idea of creating web components, is to reuse them, with programmed changes, so that repeating a web component becomes easier.
+:::
+
+::: term
+**Website**
+  : The set of webpages that are served when browsing a given Internet domain and its subdomains.
 :::

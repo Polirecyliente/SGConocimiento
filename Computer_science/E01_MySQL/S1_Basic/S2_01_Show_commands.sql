@@ -17,11 +17,17 @@ SHOW GLOBAL STATUS;
 --T-- SHOW DATABASES|SCHEMAS
 SHOW SCHEMAS;
 
+--T-- Show the tables from a database.
+SHOW TABLES FROM database1;
+
 --T-- SHOW FULL TABLES FROM db1
 SHOW FULL TABLES FROM testdb;
 
 --T-- DESCRIBE db1.table1
 DESCRIBE classicmodels.orders;
+
+--T-- Show the columns from a table
+SHOW COLUMNS FROM db1.table1;
 
 --T-- SHOW FULL COLUMNS FROM db1.table1
 SHOW FULL COLUMNS FROM classicmodels.employees;

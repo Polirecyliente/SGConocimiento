@@ -97,4 +97,15 @@ function func1()
     statements1;
 }
 
-//T// This 
+
+//T// In JavaScript, semicolons ; at the end of a line are optional.
+
+//T// The `typeof` keyword is used to get the type of a given name
+
+// typeof(name1)
+
+//T// The `instanceof` keyword is used to check if a given name is an instance of a given class
+
+// name1 instanceof constructor1
+
+//T// This returns a boolean value, `true` if `name1` is an object created with `constructor1`, otherwise `false`.

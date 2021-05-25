@@ -4,7 +4,7 @@
 
 USE testdb;
 
---T-- INSERT INTO table1(field1,field2,field3) VALUES ('val1field1','val1field2','val1field3'), ('val2field1','val2field2','val2field3')
+--T-- INSERT INTO db1.table1(field1,field2,field3) VALUES ('val1field1','val1field2','val1field3'), ('val2field1','val2field2','val2field3');
 INSERT INTO
     sales(product_id,store_id,quantity,sales_date)
 VALUES
