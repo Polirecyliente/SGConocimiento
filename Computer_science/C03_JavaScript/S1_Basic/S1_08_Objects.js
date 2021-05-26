@@ -2,7 +2,7 @@
     Objects
 */
 
-//T// object definition
+//T// object definition, this is an object literal (as opposed to an object instantiated from a class)
 var obj1 = 
 {
 //T// object's properties
@@ -27,7 +27,7 @@ obj1.newMeth = function()
 };
 
 //T// nested object
-obj1.nestedObj =
+obj1.nestedObj = 
 {
     nestedProp: 2.6,
     nestedMeth: function()
@@ -36,9 +36,19 @@ obj1.nestedObj =
     }
 };
 
-//T// Object Oriented Programming
+//T// members of an object can also be accessed using bracket notation.
 
-//T
+obj1 =
+{
+    sub_obj1 :
+    {
+        sub_prop1: 5
+    },
+    prop1: 9
+}
 
+var1 = obj1['sub_obj1']['sub_prop1']
 
-//T// The `prototype` property 
+``` output
+5
+```

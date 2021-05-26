@@ -767,9 +767,15 @@ Functions can come with several different features, depending on how they are wr
 
 ::: term
 **Object oriented language**
-  : An structured language in which objects can be created. Objects are composite data types that can store both variables (here called attributes) and functions (here called methods).
+  : An structured language in which objects can be created. **Objects** are composite data types that can store both variables (here called **attributes**) and functions (here called **methods**). Object Oriented Programming is acronymized as OOP.
 \\\
-  Objects can also have properties, which are attributes accessed via methods. The methods that write the value of a property are called 'setters', and the methods that read the value of a property are called 'getters'.
+  Objects can also have **properties**, which are attributes accessed via methods. The methods that write the value of a property are called **setters**, and the methods that read the value of a property are called **getters**. Attributes, properties, and methods, are called **members** in general. Objects are **instances** of a class, a **class** is what defines the members, and then the particular object instances can have each member with different values.
+\\\
+  New object instances are created with a special method of the class, called the **constructor**. Object instances are deleted from memory with a special method of the class, called the **destructor**.
+\\\
+  OOP has four main features: inheritance, polymorphism, abstraction, and encapsulation. **Inheritance** is the possibility that a class inherits the members from another, parent class. **Polymorphism** is the possibility of overriding the methods of the parent class. **Abstraction** is the possibility of creating classes with empty methods, so that the methods are implemented by the child classes. **Encapsulation** is the possibility of applying access modifiers to the members, the **access modifiers** are: **public** (accessible outside the class), **private** (accessible only inside the class), or **protected** (accessible by the class and its children).
+\\\
+  A **static** member is a member of the class, and not of each object. This means that the value of a static member is the same for all intances.
 :::
 
 ::: term

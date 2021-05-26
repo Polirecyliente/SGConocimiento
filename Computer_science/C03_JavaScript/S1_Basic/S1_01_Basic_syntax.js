@@ -31,7 +31,7 @@ varN = names1.nameN
 
 //T// names1 is an object containing all the names in the file `/path/to/file1.js`.
 
-//T// A name can only be imported if it is exported from a JavaScript file.
+//T// A name can only be imported if it is exported from another JavaScript file.
 
 //T// An export statement exposes names so they can be imported from other files.
 export {name1, name2, nameN}
@@ -43,6 +43,16 @@ export {name1 as var1, name2 as var2, nameN as varN}
 export * from "/path/to/file1.js"
 
 //T// This exports everything exported from `/path/to/file1.js`
+
+//T// There can be a default export, so that it can be imported without curly braces.
+
+//T// In the file that exports `file1.js`
+export default name1
+
+//T// In the file that imports
+import new_name1 from "relative/path/to/file1.js"
+
+//T// Commonly, `new_name1` is the same as `name1`. The `default` keyword can only be used once per module.
 
 //T// Several modules can be loaded asynchronously, using the RequireJS module loader.
 
@@ -109,3 +119,38 @@ function func1()
 // name1 instanceof constructor1
 
 //T// This returns a boolean value, `true` if `name1` is an object created with `constructor1`, otherwise `false`.
+
+//T// Strings are created within single quotes or double quotes.
+
+var str1 = 'string one'
+var str1 = "string one"
+
+//T// String interpolation is done with backticks. A string created within backticks is called a 'template literal' in JavaScript.
+
+var var1 = 103
+var str1 = `string ${var1}`
+
+//T// Printing `var1` outputs:
+
+``` output
+string 103
+```
+
+//T// The spread operator is the ellipsis ..., it's used to unpack an array into a set of arguments.
+
+var array1 = ['elem1', 'elem2', 'elemN']
+func1(...array1)
+
+//T// This syntax passes `'elem1'` through `'elemN'` as arguments to `func1`. For example:
+
+func1 = (a1, a2, a3) => a1 + 2*a2 + 3*a3
+var array1 = [4, 5, 1]
+var var1 = func1(...array1)
+
+``` output
+17
+```
+
+//T// A constant is created with the `const` keyword.
+
+const constant1 = value1

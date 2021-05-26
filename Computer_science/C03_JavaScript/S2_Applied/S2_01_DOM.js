@@ -4,6 +4,8 @@
 
 //T// DOM stands for Document Object Model
 
+//T// A `document` object is created for each webpage that the browser visits. This allows manipulating the webpages, via this `document` object.
+
 //T// document object, getElementById()
 var headerModif = document.getElementById("header1ID");
 
@@ -23,3 +25,17 @@ var str1 = document.getElementById("id1").innerText
 //T// the functions that returns a set of elements can be accessed as an array
 var paragraphModif = document.getElementsByTagName('p');
 console.log(paragraphModif[0].innerText)
+
+//T// Create an HTML element.
+
+const elem1 = document.createElement('tag1')
+
+//T// For example:
+
+const elem1 = document.createElement('div')
+
+//T// This creates a `div` element in the console.
+
+//T// A system notification can be fired, using the `Notification` constructor.
+
+const notif1 = new Notification('Notification message')
