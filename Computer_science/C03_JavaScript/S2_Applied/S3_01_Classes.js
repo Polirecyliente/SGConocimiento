@@ -48,6 +48,13 @@ Constructor1.static_member1 = value1
 //T// object accessing
 obj1.method1()
 
+//T// A method can also be created with the following syntax.
+
+obj1.new_method1 = function(params1)
+{
+    statements1
+}
+
 //T// The `Object` constructor can be used to create references to objects.
 var obj1 = new Object(object_o1)
 

@@ -491,4 +491,7 @@ env # output too large
 #T# to add an environment variable to the current shell session, the export command is used
 export var1=75
 #T# now var1 appears in the output of the env command
+
+#T# The `clear` command clears the shell screen.
+clear
 # |-------------------------------------------------------------

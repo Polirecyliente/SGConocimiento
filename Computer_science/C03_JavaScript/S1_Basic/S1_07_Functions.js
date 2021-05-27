@@ -11,6 +11,13 @@ var adder = function(a,b)
 //T// function call
 var res1 = adder(5,3);
 
+//T// A function can also be defined with the following syntax.
+
+function func1(params1)
+{
+    statements1
+}
+
 //T// A function can be defined in a one liner with the arrow function syntax.
 
 func1 = (params1) => return_value1

@@ -2,6 +2,44 @@
     jQuery AJAX
 */
 
+//T// The basic usage of AJAX is done with the `XMLHttpRequest` constructor.
+
+function func1()
+{
+    var XHRequest1 = new XMLHttpRequest()
+    XHRequest1.onreadystatechange = function()
+    {
+        if (this.readyState == 4 && this.status == 200)
+        {
+            document.getElementsByTagName("p")[0].innerHTML = this.responseText;
+        }
+    }
+    XHRequest1.open("GET", "file1.html")
+    XHRequest1.send()
+}
+
+//T// In this case, `func1` should be used as a callback function, for example as the callback for the event of clicking a button. `func1` exchanges the `innerHTML` of the first `<p>` element, for the contents of `file1.html`.
+
+//T// `XMLHttpRequest` objects have:
+//T// - A `readyState` property (explained below).
+//T// - An `status` property, which is a number with the HTTP response status code.
+//T// - A `responseText` property, with the text of the HTTP response (which is the text acquired through the `open` function).
+
+//T// The `readyState` property is a number that represents the ready state of the request, it's value can be:
+//T// - 0, which means the UNSENT state, where the `open` function has not been called.
+//T// - 1, which means the OPENED state, where the `open` function has just been called.
+//T// - 2, which means the HEADERS_RECEIVED state, where the `send` function has just been called.
+//T// - 3, which means the LOADING state, where the `responseText` property is being loaded with the data from the server, that results from the URL in the `open` function.
+//T// - 4, which means the DONE state, where the request and response are completed.
+
+//T// The `open` function attempts to asynchronously open an URL, using a given HTTP method, its syntax is:
+
+XMLHttpRequest_object1.open("HTTP_method1", "URL")
+
+//T// The `send` function sends the request to the server.
+
+// <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 $(document).ready(function(){});
 
 //T// $.ajax({url:, method, success: })

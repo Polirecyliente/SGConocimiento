@@ -645,7 +645,7 @@ Programming languages have several features, like:
 
 ::: term
 **Name**
-  : In this context, a name is the string that identifies a variable, function, package, etcetera. In most programming languages, valid names are not keywords, do not start with a number, do not contain spaces, and only contain letters, numbers, the underscore _, and the hyphen -. For example, in a variable `var1`, the string 'var1' itself is the name of the variable.
+  : In this context, a name is the string that identifies a variable, function, package, etcetera. In most programming languages, valid names are not keywords, do not start with a number, do not contain spaces, and only contain letters, numbers, the underscore _, and the hyphen -. For example, in a variable `var1`, the string 'var1' itself is the name of the variable. The set of names of a particular **scope**, is called the **namespace** of that scope.
 :::
 
 ::: term
@@ -1126,4 +1126,25 @@ Here is a small example of a possible database.
 ::: term
 **Website**
   : The set of webpages that are served when browsing a given Internet domain and its subdomains.
+:::
+
+## Open Systems Interconnection model
+
+::: term
+**OSI model**
+  : OSI model stands for Open Systems Interconnection model. It's a set of protocols to define communications between devices. This model divides the protocols into seven differente layers.
+:::
+
+::: term
+**Port**
+  : In two devices connected, each connects to the other from an application or program. In turn, each program connects to the other from a port. The port is a number assigned to the application, to communicate with the other application. For example, app1 has port1, and app2 has port2, app1 sends messages to port2 from app2, and app2 sends messages to port1 from app1. Commonly, an application asks the operating system to have a port number, and if available, the operating system grants that port number to the application.
+:::
+
+::: term
+**HTTP**
+  : HTTP stands for HyperText Transfer Protocol. It's a protocol to send and receive hypertext documents, to and from nodes in a network. **Hypertext** documents are plain text files that contain hyperlinks. A **hyperlink** is also called a **link**, which is a pointer to another file. The idea is that following (clicking, tapping, etcetera) a link, leads to another file. Commonly, the file being pointed to by a link, is another hypertext document. The most common file format to write hypertext documents, is '.html'.
+\\\
+  HTTP is used in a network, like this: a node1 sends an **HTTP request** to a node2. If the node2 is listening for HTTP requests, it sends an **HTTP response** to node1. HTTP requests and responses commonly involve hypertext documents.
+\\\  
+  The status of an HTTP response depends on the success or not of the HTTP request. This generates an **HTTP response status code**, which is a number representing the status of the HTTP response.
 :::
