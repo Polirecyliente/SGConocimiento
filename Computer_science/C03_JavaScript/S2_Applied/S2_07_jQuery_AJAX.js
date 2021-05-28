@@ -38,6 +38,33 @@ XMLHttpRequest_object1.open("HTTP_method1", "URL")
 
 //T// The `send` function sends the request to the server.
 
+//T// Asynchronous calls can also be made with 'promises'. In JavaScript, a promise is an asynchronous call, that if it succeeds then a success callback is called, and if it fails then a fail callback is called. This is necessary because it's impossible to predict whether or not an asynchronous call will be successful or not (for that, it would need to be synchronous).
+
+//T// In a JavaScript promise, the success callback is placed inside the `then` function, and the fail callback is placed inside the `catch` function.
+
+function promise1()
+{
+    return new Promise((resolve, reject) => {
+    statements1
+    resolve()
+    })
+}
+
+promise1().then(() => {
+    statements2
+})
+.then(() => {
+    statementsN
+})
+.catch(() => {
+    fail_statements1
+})
+.then(() => {
+    after_fail_statements1
+});
+
+//T// Note that the `promise1` function returns a `Promise` object, whose constructor takes a `resolve` and a `reject` functions as arguments. The `resolve` function must be called (even if it's empty), for the promise chain to take place.
+
 // <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 $(document).ready(function(){});
