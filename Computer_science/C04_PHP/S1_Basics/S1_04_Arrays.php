@@ -12,6 +12,8 @@
     $arr1[2] = "str2";
     foreach ($arr1 as $el) echo "array element: $el<br/>";
 
+//T// The double arrow operator `=>` is used in associative arrays to associate a key to its value
+
 //T// associative arrays or hashes
     $arr2 = array("key1" => "val1","key2" => 8,"key3" => "sV");
     $arr2["key3"] = "ThirdValue";

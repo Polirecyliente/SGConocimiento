@@ -121,6 +121,27 @@ git push --set-upstream origin master
 #T# see the differences between two branches
 # SYNTAX git diff remote1/branch1 branch2
 git diff master origin/master
+
+#T# Check out a particular commit, so the directory structure and files revert to how they were in that commit.
+git checkout 'commit_hash1'
+
+#T# 'commit_hash1' is a string with at least the first four characters of a commit's hash. A commit's hash can be seen with `git log`, commonly in orange color, for example 'commit 4c7bae4b36c21f88c9ba1bf8b24be3a5927c8fbd', the hash appears in from of the word 'commit'
+
+#T# Create a new branch and check it out.
+git branch new_branch1
+git checkout new_branch1
+
+#T# Merge two branches together.
+git checkout branch1
+git merge branch2
+
+#T# This merges the commits from both branches, and places the result as a new commit on top of `branch1`
+
+#T# Rebase a branch on top of its base branch. A rebase applies the commits of a branch, on top of its base branch.
+git rebase base1 branch1
+
+#T# This is commonly done to reapply the commits of a branch, on top of the master branch
+git rebase master branch1
 # |-------------------------------------------------------------
 
 #C# Submodules

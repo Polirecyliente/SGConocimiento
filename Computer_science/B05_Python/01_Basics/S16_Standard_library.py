@@ -471,6 +471,17 @@ str1 = "t string t"
 str1 = str1.replace("t", "67", 2) # '67 s67ring t'
 # |-----
 
+#T# Convert a string into a Python data type.
+
+#T# A string can be converted into a Python data type, using the Abstract Syntax Tree module (the `ast` module).
+import ast
+var1 = ast.literal_eval(str1)
+
+#T# For example:
+
+str1 = '[[5, 9, 14], [27, 12, 8]]'
+var1 = ast.literal_eval(str1) # [[5, 9, 14], [27, 12, 8]]
+var1[0] # [5, 9, 14]
 # |-------------------------------------------------------------
 
 #C# List functions

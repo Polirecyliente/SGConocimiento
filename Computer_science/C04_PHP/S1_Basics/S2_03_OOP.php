@@ -21,6 +21,8 @@
 //T// make a class member protected to give access only to childs and package
             protected $attr3 = "protectedStr";
 
+//T// The object operator `->` is used to access the members of an object.
+
 //T// define class methods
             function setAttr1($newA1)
             {
@@ -106,7 +108,7 @@
             function func1(){return 1;}
             function interfFun1(){return 2*25;}
         }
-        
+
 //T// create abstract classes with the abstract keyword
         abstract class AbstClass
         {
@@ -115,9 +117,60 @@
             abstract function abstFun();
         }
 
-//T// access static members with ::
+//T// access static members with the operator ::
         print("StaticTest: ".FirstClass::$attr4."<br/>");
 
     ?>
     </body>
 </html>
+
+Traits are a way to do multiple inheritance. A trait can contain members like attributes, properties, and methods. A trait can be used by different classes, thereby doing multiple inheritance.
+
+A trait is defined with the `trait` keyword. Inside a class, use a trait with the `use` keyword.
+
+in file1.php
+<?php
+trait trait1
+{
+    public $var1 = 'value1';
+    public function method1()
+    {
+        print("In method1\n");
+    }
+}
+
+class class1
+{
+    use trait1;
+}
+
+$obj1 = new class1();
+echo $obj1->var1, "\n";
+$obj1->method1();
+?>
+
+Executing `php file1.php` in a shell, outputs:
+
+``` output
+value1
+In method1
+```
+
+Several traits can be used, separated by comma.
+
+<?php
+trait trait1
+{
+    members1
+}
+
+trait trait2
+{
+    members2
+}
+
+class class1
+{
+    use trait1, trait2;
+}
+?>
