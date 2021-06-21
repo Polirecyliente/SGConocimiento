@@ -766,19 +766,6 @@ Functions can come with several different features, depending on how they are wr
 :::
 
 ::: term
-**Object oriented language**
-  : An structured language in which objects can be created. **Objects** are composite data types that can store both variables (here called **attributes**) and functions (here called **methods**). Object Oriented Programming is acronymized as OOP.
-\\\
-  Objects can also have **properties**, which are attributes accessed via methods. The methods that write the value of a property are called **setters**, and the methods that read the value of a property are called **getters**. Attributes, properties, and methods, are called **members** in general. Objects are **instances** of a class, a **class** is what defines the members, and then the particular object instances can have each member with different values.
-\\\
-  New object instances are created with a special method of the class, called the **constructor**. Object instances are deleted from memory with a special method of the class, called the **destructor**.
-\\\
-  OOP has four main features: inheritance, polymorphism, abstraction, and encapsulation. **Inheritance** is the possibility that a class inherits the members from another, parent class. **Polymorphism** is the possibility of overriding the methods of the parent class. **Abstraction** is the possibility of creating classes with empty methods, so that the methods are implemented by the child classes. **Encapsulation** is the possibility of applying access modifiers to the members, the **access modifiers** are: **public** (accessible outside the class), **private** (accessible only inside the class), or **protected** (accessible by the class and its children).
-\\\
-  A **static** member is a member of the class, and not of each object. This means that the value of a static member is the same for all intances.
-:::
-
-::: term
 **Functional programming language**
   : A declarative language in which functions are forbidden from changing variables outside their scope, and they have to always produce the same return value given the same arguments.
 :::
@@ -792,6 +779,25 @@ Functions can come with several different features, depending on how they are wr
 **Dynamically typed language**
   : A programming language in which variables are not defined with a given data type, so they can have any data type. The data type of the variable can be changed after defined.
 :::
+
+#### Object oriented language
+
+::: term
+**Object oriented language**
+  : An structured language in which objects can be created. **Objects** are composite data types that can store both variables (here called **attributes**) and functions (here called **methods**). Object Oriented Programming is acronymized as OOP.
+:::
+
+Objects can also have **properties**, which are attributes accessed via methods. The methods that write the value of a property are called **setters**, and the methods that read the value of a property are called **getters**. Attributes, properties, and methods, are called **members** in general. Objects are **instances** of a class, a **class** is what defines the members, and then the particular object instances can have each member with different values.
+
+New object instances are created with a special method of the class, called the **constructor**. Object instances are deleted from memory with a special method of the class, called the **destructor**.
+
+OOP has four main features: inheritance, polymorphism, abstraction, and encapsulation. **Inheritance** is the possibility that a class inherits the members from another, parent class. **Polymorphism** is the possibility of overriding the methods of the parent class. **Abstraction** is the possibility of creating classes with empty methods, so that the methods are implemented by the child classes. **Encapsulation** is the possibility of applying access modifiers to the members, the **access modifiers** are: **package** (accessible only inside the package, this is commonly the default), **public** (accessible outside the class and the package), **private** (accessible only inside the class), or **protected** (accessible by the class and its children).
+
+A **static** member is a member of the class, and not of each object. This means that the value of a static member is the same for all intances.
+
+Classes can use **templates**, also known as **generic types**. Generic types are classes that can be used inside other classes. A common syntax for this is `class class1<template_class1>`. Here `class1` uses `template_class1`. A reason to do this is to use an object of `class1` as a container for objects of `template_class1`. This is called a 'template' or a 'generic' type, because `template_class1` is treated as a template or as a generic type, inside `class1`, because `class1` has no way to know the specific class that `template_class1` will take.
+
+In inheritance, the process of creating a class from its children classes is called **generalization**, and the process of creating a children class from its parent is called **specialization**. With interfaces, the process of implementing an interface is called **realization**.
 
 # BINARY, OCTAL, AND HEXADECIMAL NUMBERS
 
@@ -1143,8 +1149,18 @@ Here is a small example of a possible database.
 ::: term
 **HTTP**
   : HTTP stands for HyperText Transfer Protocol. It's a protocol to send and receive hypertext documents, to and from nodes in a network. **Hypertext** documents are plain text files that contain hyperlinks. A **hyperlink** is also called a **link**, which is a pointer to another file. The idea is that following (clicking, tapping, etcetera) a link, leads to another file. Commonly, the file being pointed to by a link, is another hypertext document. The most common file format to write hypertext documents, is '.html'.
-\\\
-  HTTP is used in a network, like this: a node1 sends an **HTTP request** to a node2. If the node2 is listening for HTTP requests, it sends an **HTTP response** to node1. HTTP requests and responses commonly involve hypertext documents.
-\\\  
-  The status of an HTTP response depends on the success or not of the HTTP request. This generates an **HTTP response status code**, which is a number representing the status of the HTTP response.
 :::
+
+HTTP is used in a network, like this: a node1 sends an **HTTP request** to a node2. If the node2 is listening for HTTP requests, it sends an **HTTP response** to node1. HTTP requests and responses commonly involve hypertext documents.
+
+The status of an HTTP response depends on the success or not of the HTTP request. This generates an **HTTP response status code**, which is a number representing the status of the HTTP response.
+
+# UML
+
+::: term
+**UML**
+  : UML stands for Unified Modeling Language. UML is an specification, it defines a set of diagrams that can be used to model systems. UML diagrams can be used to model systems in general, not only software systems.
+:::
+
+## Class diagram
+

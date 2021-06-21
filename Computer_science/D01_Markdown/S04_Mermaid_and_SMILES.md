@@ -142,6 +142,149 @@ flowchart LR
   end
   node3 --> node1
 
+## Class diagrams
+
+Class diagrams are created in Mermaid using the `classDiagram` keyword.
+
+``` {.mermaid .syntax}
+classDiagram
+  diagram_elements1
+```
+
+The main elements of a class diagram are: classes and their connections.
+
+
+----
+
+Create a class by using the `class` keyword.
+
+``` {.mermaid .syntax}
+class class1
+```
+
+
+----
+
+Create two classes by connecting their names.
+
+``` {.mermaid .syntax}
+class1 --> class2
+```
+
+`class1` and `class2` are created as classes, no need to use the `class` keyword.
+
+
+----
+
+Create members of a class by enclosing them in braces. Notice that the opening brace must be on the same line as the `class` keyword.
+
+``` {.mermaid .syntax}
+class class1 {
+  type1 attribute1
+  method1(args1) ret_type1
+}
+```
+
+
+----
+
+Create members of a class individually.
+
+``` {.mermaid .syntax}
+class class1
+class1 : type1 attribute1
+class1 : method1(args1) ret_type1
+```
+
+
+----
+
+The visibility or access modifier of a member, can be set as the first symbol of a member. `+` means a public member, `#` means a protected member, `~` means a package member, and `-` means a private member.
+
+``` {.mermaid .syntax}
+class class1 {
+  +type1 member1
+  #type2 member2
+}
+class1 : ~type3 member3
+class1 : -type4 member4
+```
+
+
+----
+
+A method can be made abstract *, or static $ (the symbol is placed after the parentheses of the method).
+
+``` {.mermaid .syntax}
+class class1 {
+  abstract_method1(args1)* ret_type1
+  static_method1(args1)$ ret_type1
+}
+```
+
+
+----
+
+Templates or generic types can be created by enclosing the generic type within tildes.
+
+``` {.mermaid .syntax}
+class class1~template_class1~
+class1 : -List~type1~ container1
+```
+
+
+----
+
+A relationship between two classes can be created with the following syntax.
+
+``` {.mermaid .syntax}
+class1 relationship1 class2 : relationship_label1
+```
+
+`relationship1` is an arrow representing the relationship between `class1` and `class2`. `relationship_label1` is a label placed on the arrow. The following shows the possible values of `relationship1`.
+
+``` {.mermaid in="in file1.mmd"}
+classDiagram
+  class1 --|> class2 : Inheritance
+  class3 --* class4 : Composition
+  class5 --o class6 : Aggregation
+  class7 --> class8 : Association
+  class9 -- class10 : Association
+  class11 ..> class12 : Dependency
+  class13 .. class14 : Dependency
+  class15 ..|> class16 : Realization
+```
+
+
+----
+
+A class can have multiple instances of another class. This multiplicity or cardinality can be set with the following syntax.
+
+``` {.mermaid .syntax}
+class1 "multiplicity1" relationship1 "multiplicity2" class2
+```
+
+`"multiplicity1"` and `"multiplicity2"`, are placed as strings that represent the multiplicities (they should be written as regular UML, but they can be written as almost any desired string, except for values like "none").
+
+For example:
+
+``` {.mermaid .syntax}
+class1 "only one" --> "1..*" class2
+```
+
+This means that there is "only one" instance of `class1` per instance of `class2`, and there is "1..*" (one to many) instances of `class2` per instance of `class1`.
+
+
+----
+
+To specify different kinds of classes, like abstract classes and interfaces, an annotation is used. The annotation of a class is placed within double angular brackets.
+
+``` {.mermaid .syntax}
+class class1 {
+  <<class_annotation1>>
+}
+```
+
 <!-- #C# - Styling -->
 
 <!-- # |----- -->

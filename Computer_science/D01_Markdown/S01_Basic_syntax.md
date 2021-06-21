@@ -588,6 +588,31 @@ Inline $x = 3$ equation
 
 <!-- #T# an equation block is enclosed in double dollar signs, the equation numbering can be set in parentheses after the double dollar signs -->
 $$\alpha A\pm\sqrt{x} \over y^{2}$$ (1)
+
+To be able to reference equations, the `pandoc-eqnos` filter can be used.
+
+Install the `pandoc-eqnos` filter
+
+``` {.bash in="in CLI"}
+pip3 install pandoc-eqnos
+```
+
+Create a numbered equation, and reference it after.
+
+``` {.markdown .syntax}
+text text
+
+$$equation1$$ {#eq:label1}
+
+text @eq:label1 text
+```
+
+Compile a Markdown file, that uses numbered equations, with `pandoc`.
+
+``` {.bash in="in CLI"}
+pandoc file1.md --filter pandoc-eqnos
+```
+
 <!-- # |----- -->
 
 <!-- # |------------------------------------------------------------- -->

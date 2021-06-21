@@ -16,7 +16,7 @@ This document contains the definitions needed to understand concepts that are ge
 
 ::: term
 **Idea**
-  : An structured thought (structured by an intention).
+  : A structured thought (structured by an intention).
 :::
 
 ::: term
@@ -85,4 +85,9 @@ The arrows represent the interactions between the elements of the system.
   : Rules and steps that are intended to do something. The idea of a standard, is that by following those rules and steps, the something that results from it, is always the same. This means that by following a standard, the result can be predicted.
 \\\
   According to this definition, any process can be standardized, which means that each step of the process is always done in the same way (the way defined in the standard). The processes whose result is random, can have their randomness predicted and measured.
+:::
+
+::: term
+**Specification**
+  : A standard that has more specific requirements. For example, a standard could say that a variable must have its value between 'a' and 'b', and a specification could say that the variable must have the specific value 'c'.
 :::
