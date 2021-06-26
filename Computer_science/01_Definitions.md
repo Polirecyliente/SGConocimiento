@@ -394,7 +394,7 @@ This diagram shows the interactions between the operating system parts and the h
   SDKs are commonly of two types: SDKs to develop code in a particular language, and SDKs to develop code for a particular computing platform.
 :::
 
-## Features of a programming language
+# PROGRAMMING LANGUAGES
 
 Programming languages have several features, like:
 
@@ -679,7 +679,7 @@ Programming languages have several features, like:
   : The set of names that come predefined in a programming language. A programming language can have builtins like functions, constants, classes, etcetera. They can be used without importing any external package or library, because they come built in.
 :::
 
-### Features of functions
+## Features of functions
 
 Functions can come with several different features, depending on how they are written. Many features are not supported by all programming languages.
 
@@ -729,7 +729,7 @@ Functions can come with several different features, depending on how they are wr
   : The possibility for a function to accept a variable amount of arguments, so that it can be called with a different amount of arguments each time.
 :::
 
-### Types of programming languages
+## Types of programming languages
 
 ::: term
 **Programming paradigms**
@@ -780,7 +780,9 @@ Functions can come with several different features, depending on how they are wr
   : A programming language in which variables are not defined with a given data type, so they can have any data type. The data type of the variable can be changed after defined.
 :::
 
-#### Object oriented language
+## Object oriented languages
+
+This is also a type of programming language, but it's big enough that it's separated in its own section here.
 
 ::: term
 **Object oriented language**
@@ -798,6 +800,115 @@ A **static** member is a member of the class, and not of each object. This means
 Classes can use **templates**, also known as **generic types**. Generic types are classes that can be used inside other classes. A common syntax for this is `class class1<template_class1>`. Here `class1` uses `template_class1`. A reason to do this is to use an object of `class1` as a container for objects of `template_class1`. This is called a 'template' or a 'generic' type, because `template_class1` is treated as a template or as a generic type, inside `class1`, because `class1` has no way to know the specific class that `template_class1` will take.
 
 In inheritance, the process of creating a class from its children classes is called **generalization**, and the process of creating a children class from its parent is called **specialization**. With interfaces, the process of implementing an interface is called **realization**.
+
+In the relationship between two classes, an **association** is when a class has an attribute that is an instance of the other class. An **aggregation** is when a class passes an instance of the other class, to its constructor. A **composition** is when a class uses instances of the other class, inside its constructor (without passing them to the constructor). A **dependency** is when a class uses an instance of the other class, but in any way different from association, aggregation, and composition, for example, when a class uses an intance of the other inside a method.
+
+
+----
+
+In object oriented languages, objects can undergo **serialization** and **deserialization**. Serialization means converting the object into a stream of bytes which can be saved to a file (for example, for easier transmission over a network), and deserialization means converting a stream of bytes into an object.
+
+
+----
+
+When it comes to object instantiation, there can be **eager instantiation** and **lazy instantiation**. Eager instantiation means that objects are instantiated and stored in memory as soon as the are defined. Lazy instantiation means that objects are instantiated and stored in memory when they are needed by other code.
+
+### Design patterns
+
+Programs can be created using object oriented languages. For this purpose, there are several different design patterns, that can be used to design entire programs, or parts of them.
+
+Design patterns are commonly divided into three kinds: creational design patterns, structural design patterns, and behavioral design patterns.
+
+#### Creational design patterns
+
+Creational design patterns are design patterns that define ways to create objects.
+
+
+----
+
+The 'singleton' design pattern, is a creational design pattern. It is shown below in a class diagram.
+
+``` {.mermaid caption="Singleton design pattern" format="svg"}
+classDiagram
+  class class1 {
+    +main()$ void
+  }
+
+  class singleton_class1 {
+    -static__singleton_class1 instance1
+    +type1 attribute1
+
+    -singleton_class1()
+    +get_instance1()$ : singleton_class1
+    +method1()
+  }
+
+
+  class1 --> singleton_class1
+```
+
+Both `attribute1` and `method1` represent generic attributes and methods that the `singleton_class1` class could make use of, but they are not integral part of the singleton design pattern.
+
+To create a singleton design pattern, the minimum required parts are: a private static `singleton_class1` instance, here called `instance1`. A private constructor `singleton_class1()`. A public static method that returns `instance1`, here called `get_instance1`.
+
+In a singleton design pattern, the main characteristic is that the constructor `singleton_class1()` is private, this ensures that the single instance is created inside the class itself. `instance1` must be private and static, because it will only be accessed and returned by the static method `get_instance1`. In turn, `get_instance1` must be static because the constructor is private, so there is no way to create an instance with which to access `get_instance1`, and so `get_instance1` must be accessed in a static manner.
+
+The following is a code template for the singleton design pattern. It's written in Java, but it can be written in any other object oriented language.
+
+``` {.java in="in class1.java"}
+class class1
+{
+    public static void main(String[] args)
+    {
+        singleton_class1 obj1 = singleton_class1.get_instance1();
+        obj1.method1();
+    }
+}
+```
+
+``` {.java in="in singleton_class1.java"}
+class singleton_class1
+{
+    private static singleton_class1 instance1 = new singleton_class1();
+
+    public int attribute1 = 5;
+
+
+    private singleton_class1() {}
+
+    public static singleton_class1 get_instance1()
+    {
+        return singleton_class1.instance1;
+    }
+
+    public void method1()
+    {
+        System.out.println("Printing from singleton instance, " + this.attribute1);
+    }
+}
+```
+
+Compile this program.
+
+``` {.bash in="in CLI"}
+javac class1.java singleton_class1.java
+```
+
+Execute this program.
+
+``` {.bash in="in CLI"}
+java class1
+```
+
+This outputs:
+
+``` output
+Printing from singleton instance
+```
+
+The singleton desing pattern should be used when the same code is called many times (this repeating code could then be placed in a method of the singleton class), and there is no need to differentiate the object owner of this repeating code, so a single object could own the repeating code and that would be enough.
+
+A real life use of the singleton design pattern, could be a printer, because a single printer can carry out many printing jobs. This printer class could have a print method that takes the string to be printed as argument, and then a single instance of this printer class should be enough to print any string.
 
 # BINARY, OCTAL, AND HEXADECIMAL NUMBERS
 
@@ -1164,3 +1275,66 @@ The status of an HTTP response depends on the success or not of the HTTP request
 
 ## Class diagram
 
+A class diagram shows the structural relations between classes. The parts and symbols of a class diagram, are shown below.
+
+``` {.mermaid caption="Class diagram parts and symbols1" format="svg"}
+classDiagram
+
+  class class1 {
+    type1 property1
+    method1(args1) ret_type1
+  }
+  class1 "1" <|-- "1..*" class2 : Inheritance
+
+
+  class class3 {
+    +type1 public_property1
+    abstract_method1(args1)*
+  }
+
+  class class4 {
+    -type1 private_property1
+    static_method1(args1)$
+  }
+
+  class3 *-- class4 : Composition
+```
+
+``` {.mermaid caption="Class diagram parts and symbols2" format="svg"}
+classDiagram
+
+  class class5 {
+    #type1 protected_property1
+    ~type1 package_property1
+  }
+
+  class class6 {
+    List~template_class1~ property1
+  }
+
+  class5 o-- class6 : Aggregation
+  
+
+  class class7 {
+    <<Abstract>>
+  }
+
+  class7 <-- class8 : Association
+
+  class9 <.. class10 : Dependency
+
+
+  class class11 {
+    <<Interface>>
+  }
+
+  class11 <|.. class12 : Realization
+```
+
+In these class diagrams, a class is each one of the rectangles. Inside a class, there are three subrectangles, the top one contains the name of the class, the middle one contains the attributes and properties of the class, and the bottom one contains the methods of the class.
+
+The visibility or access modifier of a member, is the first symbol of a member. `+` means a public member, `#` means a protected member, `~` means a package member, and `-` means a private member. An abstract method is shown with italics, and an static member is shown underlined. A template class is shown inside angular brackets.
+
+The relationships between the classes can be, as shown, inheritance, composition, aggregation, association, dependency, and realization.
+
+When modeling an actual program, commonly there is one class that contains a `main` method. The class diagram is read, starting from the `main` method, because the `main` method represents the entry point of the program, the place where execution of code starts.

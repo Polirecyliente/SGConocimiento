@@ -1,5 +1,6 @@
 # Variables
 m=markdown_file
+o=output_file
 b=SGConocimiento/1_Auxiliaries/Doc_gen/bibliography.yaml
 c=SGConocimiento/1_Auxiliaries/Doc_gen/style.css
 f=SGConocimiento/1_Auxiliaries/Doc_gen/filter.lua
@@ -13,10 +14,10 @@ cp SGConocimiento/1_Auxiliaries/Doc_gen/.mermaid-config.json .
 pandoc $m -o $m -s --toc --number-sections --template $t --columns 78
 
 # Generate HTML from Markdown
-pandoc $m -o file1.html -s -c $c --lua-filter $f --filter mermaid-filter --citeproc --bibliography $b --katex=$k
+pandoc $m -o $o -s -c $c --lua-filter $f --filter mermaid-filter --citeproc --bibliography $b --katex=$k
 
 # Generate PDF from HTML
-chromium --headless --print-to-pdf-no-header --print-to-pdf="file1.pdf" file1.html --user-data-dir=~/.config/google-chrome/ --disable-gpu
+chromium --headless --print-to-pdf-no-header --print-to-pdf="file1.pdf" $o --user-data-dir=~/.config/google-chrome/ --disable-gpu
 
 # Get dependencies
 npm install --global mermaid-filter

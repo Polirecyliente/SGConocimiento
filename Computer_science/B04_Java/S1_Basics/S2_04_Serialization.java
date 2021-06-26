@@ -33,7 +33,7 @@ public class Section2_4
         o1.i2 = 599;
 
         String fName1;
-        fName1 = "/home/jul/PolirecylBases/"
+        fName1 = "PolirecylBases/"
         +"tutos/Java/Section2/Section2_4Aux.ser";
 
         try
@@ -45,7 +45,7 @@ public class Section2_4
 //T// write the serialized object to disk with writeObject()
             objWr1.writeObject(o1);
 
-//T// close output objects with close()
+//T// close output streams with close()
             objWr1.close();
             fileWr1.close();
         }

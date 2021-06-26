@@ -6,6 +6,14 @@
 //T// Basic syntax
 //T// Variables, constants, literals
 
+# INSTALLATION
+
+Install the JDK (Java Development Kit), which contains programs like `java` and `javac`.
+
+``` {.bash in="in CLI"}
+sudo apt install default-jdk
+```
+
 //T// compile any Java file /path/to/file1.java in a terminal with
 // javac /path/to/file1.java
 //T// the executable is called /path/to/file1.class

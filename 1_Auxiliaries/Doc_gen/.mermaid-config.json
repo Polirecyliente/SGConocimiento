@@ -1,1 +1,12 @@
-{ "theme": "base", "themeVariables": { "fontFamily": "Latin Modern Roman", "fontSize": "16pt", "primaryColor": "transparent", "titleColor": "black", "nodeBorder": "black", "clusterBkg": "transparent", "clusterBorder": "transparent" } }
+{ "theme": "base",
+  "themeVariables":
+  {
+    "fontFamily": "Latin Modern Roman",
+    "fontSize": "16pt",
+    "primaryColor": "transparent",
+    "titleColor": "black",
+    "nodeBorder": "black",
+    "clusterBkg": "transparent",
+    "clusterBorder": "transparent"
+  }
+}
